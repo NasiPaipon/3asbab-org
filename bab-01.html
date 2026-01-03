@@ -1,273 +1,269 @@
-<!-- =========================
-BAB 1.1 — PEMBUNUHAN FAHAMAN ASBAB LAMA
-Style: Bab 0 (🟥 blocks, anchors, footnotes, collapsibles)
-========================= -->
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bab 1 — [TAJUK BAB 1] | 3asbab.org</title>
+  <style>
+    :root{
+      --max: 900px;
+      --pad: 16px;
+      --border: #e6e6e6;
+      --bg: #ffffff;
+      --muted: #666;
+      --soft: #f6f6f6;
+      --accent: #0b6; /* hijau ringkas */
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      background: var(--bg);
+      color:#111;
+    }
+    a{color:inherit}
+    a:hover{color:var(--accent)}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
+    .topbar{
+      background: var(--soft);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar nav{
+      display:flex; gap:14px; align-items:center;
+      padding: 12px 0;
+      flex-wrap:wrap;
+    }
+    .topbar a{ text-decoration:none }
+    .brand{font-weight:700}
+    header{
+      padding: 18px 0 8px 0;
+    }
+    h1{
+      margin: 8px 0 6px 0;
+      line-height:1.25;
+      font-size: clamp(22px, 3vw, 30px);
+    }
+    .meta{
+      color:var(--muted);
+      font-size: 14px;
+    }
 
-<style>
-  :root{
-    --k3a-red:#c1121f;
-    --k3a-dark:#111827;
-    --k3a-muted:#6b7280;
-    --k3a-line:#e5e7eb;
-    --k3a-soft:#fff5f5;
-  }
-  .k3a-wrap{max-width:980px;margin:0 auto;padding:18px;line-height:1.65;color:var(--k3a-dark);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;}
-  .k3a-badge{display:inline-block;background:var(--k3a-red);color:#fff;padding:6px 10px;border-radius:10px;font-weight:700;font-size:13px;letter-spacing:.2px}
-  .k3a-h1{margin:10px 0 0;font-size:28px;line-height:1.25}
-  .k3a-h2{margin:18px 0 8px;font-size:20px}
-  .k3a-h3{margin:14px 0 8px;font-size:16px}
-  .k3a-sub{color:var(--k3a-muted);margin-top:6px}
-  .k3a-block{border:1px solid var(--k3a-line);border-left:6px solid var(--k3a-red);background:var(--k3a-soft);padding:14px 14px 12px;border-radius:12px;margin:14px 0}
-  .k3a-quote{border-left:4px solid var(--k3a-red);padding:10px 12px;margin:10px 0;background:#fff;border-radius:10px}
-  .k3a-ar{font-family: "Amiri", "Scheherazade New", serif;font-size:22px;direction:rtl;text-align:right;margin:6px 0 4px}
-  .k3a-tr{color:var(--k3a-muted);margin:0 0 6px}
-  .k3a-list{margin:8px 0 8px 18px}
-  .k3a-sep{height:1px;background:var(--k3a-line);margin:14px 0}
-  details.k3a-details{border:1px solid var(--k3a-line);border-radius:12px;padding:10px 12px;background:#fff;margin:10px 0}
-  details.k3a-details summary{cursor:pointer;font-weight:700}
-  .k3a-table{width:100%;border-collapse:separate;border-spacing:0;margin:10px 0;border:1px solid var(--k3a-line);border-radius:12px;overflow:hidden}
-  .k3a-table th,.k3a-table td{padding:10px 12px;border-bottom:1px solid var(--k3a-line);vertical-align:top}
-  .k3a-table th{background:#f9fafb;text-align:left}
-  .k3a-table tr:last-child td{border-bottom:none}
-  .k3a-footnotes{margin-top:18px;border-top:2px solid var(--k3a-line);padding-top:12px}
-  .k3a-fn-title{font-weight:800;margin-bottom:8px}
-  .k3a-fn{margin:6px 0;color:#111}
-  .k3a-fn small{color:var(--k3a-muted)}
-  a.k3a-ref{color:var(--k3a-red);text-decoration:none;font-weight:700}
-  a.k3a-ref:hover{text-decoration:underline}
-</style>
+    /* Lompat ke... */
+    .jump{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(246,246,246,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(6px);
+    }
+    .jump .inner{
+      padding: 10px 0;
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      font-size: 14px;
+    }
+    .jump a{
+      text-decoration:none;
+      padding: 4px 8px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background:#fff;
+    }
 
-<div class="k3a-wrap" id="bab-1-1">
+    main{padding: 14px 0 40px 0;}
+    article{
+      font-size: 16px;
+    }
+    .badge{
+      display:inline-block;
+      font-weight:700;
+      color:#b00;
+      letter-spacing:.2px;
+      margin: 10px 0 2px 0;
+    }
+    h2{
+      margin: 22px 0 10px 0;
+      padding-top: 6px;
+      font-size: 20px;
+      line-height:1.25;
+    }
+    h3{
+      margin: 14px 0 8px 0;
+      font-size: 17px;
+    }
+    p{margin: 10px 0}
+    ul{margin: 8px 0 10px 22px}
+    li{margin: 4px 0}
+    ol{margin: 8px 0 10px 22px}
+    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
+    blockquote{
+      margin: 12px 0;
+      padding: 10px 14px;
+      border-left: 4px solid var(--accent);
+      background: #f8fffb;
+    }
+    .arab{
+      font-size: 20px;
+      line-height: 1.9;
+      direction: rtl;
+      unicode-bidi: isolate;
+      font-family: "Noto Naskh Arabic","Amiri",serif;
+    }
+    .section{
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 14px 12px 14px;
+      margin: 14px 0;
+      background:#fff;
+    }
+    .toplink{
+      display:inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration:none;
+    }
+    footer{
+      border-top: 1px solid var(--border);
+      padding: 18px 0 26px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a{color:inherit}
+  </style>
+</head>
 
-  <span class="k3a-badge">🟥 BAB 1.1</span>
-  <h1 class="k3a-h1">Pembunuhan Fahaman Asbab Lama</h1>
-  <p class="k3a-sub">1.1 Pengenalan: Mengapa Fahaman Asbab Lama Perlu Dihapus</p>
+<body>
 
-  <div class="k3a-block" id="bab-1-1-1">
-    <div class="k3a-h2">1.1.1 Tujuan Pembunuhan Fahaman Asbab Lama</div>
-
-    <p>Setiap zaman memiliki “tuhan” yang disembah tanpa disedari.</p>
-    <ul class="k3a-list">
-      <li>Di zaman Firaun, yang diagungkan ialah kuasa manusia.</li>
-      <li>Di zaman moden, yang diagungkan ialah <b>Asbab Fitrah</b> dan <b>Asbab Zulumat</b> — iaitu sebab-sebab duniawi yang kelihatan kuat di mata manusia.</li>
-    </ul>
-
-    <p>Manusia hari ini tidak sujud kepada patung, tetapi mereka sujud kepada:</p>
-    <ul class="k3a-list">
-      <li>modal,</li>
-      <li>strategi,</li>
-      <li>sistem,</li>
-      <li>data,</li>
-      <li>pengaruh,</li>
-      <li>formula kejayaan.</li>
-    </ul>
-
-    <p>Keadaan ini berlaku apabila hati menetapkan kuasa memberi kesan pada Asbab Fitrah dan Asbab Zulumat, bukan pada Allah.</p>
-
-    <div class="k3a-quote">
-      <div class="k3a-ar">﴿ اللَّهُ خَالِقُ كُلِّ شَيْءٍ ﴾</div>
-      <div class="k3a-tr">“Allah menciptakan segala sesuatu.” (Az-Zumar 39:62) <a class="k3a-ref" href="#fn-1">【1】</a></div>
+  <!-- Top nav -->
+  <div class="topbar">
+    <div class="wrap">
+      <nav>
+        <span class="brand">3asbab.org</span>
+        <a href="index.html">🏠 Home</a>
+        <a href="bab-0.html">Prev ←</a>
+        <a href="bab-1.html">Bab ini</a>
+        <a href="bab-2.html">Next →</a>
+      </nav>
     </div>
-
-    <p>Namun dalam praktik hidup, hati manusia lebih yakin bahawa:</p>
-    <ul class="k3a-list">
-      <li>usaha memberi kejayaan, bukan izin Allah;</li>
-      <li>modal membuka rezeki, bukan barakah;</li>
-      <li>strategi menentukan natijah, bukan janji Allah;</li>
-      <li>sistem memberi kestabilan, bukan ketaatan.</li>
-    </ul>
-
-    <p>Inilah yang dinamakan <b>Fahaman Asbab Lama</b> — iaitu Asbab Fitrah dan Asbab Zulumat apabila dinaikkan sebagai pusat pergantungan, lalu diiktikadkan mempunyai kuasa memberi kesan.</p>
-
-    <p>Fahaman ini mesti dibunuh terlebih dahulu sebelum iman dapat hidup, sebagaimana tauhid tidak dapat tumbuh di atas tanah yang masih dipenuhi berhala keyakinan.</p>
   </div>
 
-  <div class="k3a-block" id="bab-1-1-2">
-    <div class="k3a-h2">1.1.2 Dua Pusat Pergantungan: Allah atau Asbab</div>
+  <!-- Page title -->
+  <header class="wrap" id="top">
+    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
+    <h1>Bab 1 — [TAJUK BAB 1]</h1>
+  </header>
 
-    <p>Hati manusia hanya mampu memiliki <b>satu</b> pusat pergantungan:</p>
-    <ul class="k3a-list">
-      <li>Bila hati berpaut kepada Allah, Asbab Fitrah dan Asbab Zulumat tunduk.</li>
-      <li>Bila hati berpaut kepada Asbab Fitrah dan Asbab Zulumat, pertolongan Allah disembunyikan.</li>
-    </ul>
-
-    <div class="k3a-quote">
-      <div class="k3a-ar">﴿ وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ ﴾</div>
-      <div class="k3a-tr">“Barang siapa bertawakkal kepada Allah, Allah mencukupi baginya.” (At-Ṭalāq 65:3) <a class="k3a-ref" href="#fn-2">【2】</a></div>
+  <!-- Jump links -->
+  <div class="jump">
+    <div class="wrap">
+      <div class="inner">
+        <strong>Lompat ke:</strong>
+        <a href="#1-1">1.1</a>
+        <a href="#1-2">1.2</a>
+        <a href="#1-3">1.3</a>
+        <a href="#1-4">1.4</a>
+        <a href="#1-5">1.5</a>
+        <a href="#1-6">1.6</a>
+        <a href="#1-7">1.7</a>
+        <a href="#1-8">1.8</a>
+      </div>
     </div>
-
-    <p>Namun apabila hati berkata:</p>
-    <ul class="k3a-list">
-      <li>“Kalau aku tiada modal, aku tidak boleh maju,”</li>
-      <li>“Kalau orang tidak sokong, projek ini pasti gagal,”</li>
-    </ul>
-
-    <p>maka makna <i>lā ilāha illā Allāh</i> telah rosak — bukan pada lafaz, tetapi pada arah keyakinan, kerana kuasa memberi kesan telah disandarkan kepada makhluk dan sistem.</p>
-
-    <p>Amal masih dilakukan, doa masih dibaca, tetapi pusat keyakinan telah berpindah.</p>
   </div>
 
-  <div class="k3a-block" id="bab-1-1-3">
-    <div class="k3a-h2">1.1.3 Kesalahan Tersembunyi: Amal Tanpa Nafy dan Isbat</div>
+  <main class="wrap">
+    <article>
+      <div class="section">
+        <div class="badge">🟥 BAB 1 – [TAJUK BAB 1 (CAPS OPTIONAL)]</div>
+        <p><strong>([SUBTITLE / TAGLINE BAB 1])</strong></p>
+      </div>
 
-    <p>Ramai manusia beramal tanpa disiplin <b>Nafy</b> dan <b>Isbat</b>. Mereka bekerja, berdoa dan berdakwah — tetapi:</p>
-    <ul class="k3a-list">
-      <li>tidak menafikan kuasa memberi kesan pada Asbab Fitrah dan Asbab Zulumat (Nafy),</li>
-      <li>tidak menetapkan bahawa hanya Allah memberi kesan melalui janji-Nya (Isbat).</li>
-    </ul>
+      <!-- 1.1 -->
+      <section class="section" id="1-1">
+        <h2>1.1 [Tajuk Seksyen 1.1]</h2>
 
-    <p>Akibatnya, amal menjadi kering dan tidak menarik nusrah.</p>
+        <!-- Paste isi 1.1 di sini -->
 
-    <div class="k3a-quote">
-      <div class="k3a-ar">﴿ وَمَن يُشْرِكْ بِاللَّهِ فَقَدْ ضَلَّ ضَلَالًا بَعِيدًا ﴾</div>
-      <div class="k3a-tr">“Sesiapa yang mensyirikkan Allah, maka sesungguhnya dia telah tersesat sejauh-jauhnya.” (An-Nisāʾ 4:116) <a class="k3a-ref" href="#fn-3">【3】</a></div>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- 1.2 -->
+      <section class="section" id="1-2">
+        <h2>1.2 [Tajuk Seksyen 1.2]</h2>
+
+        <!-- Paste isi 1.2 di sini -->
+
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- 1.3 -->
+      <section class="section" id="1-3">
+        <h2>1.3 [Tajuk Seksyen 1.3]</h2>
+
+        <!-- Paste isi 1.3 di sini -->
+
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- 1.4 -->
+      <section class="section" id="1-4">
+        <h2>1.4 [Tajuk Seksyen 1.4]</h2>
+
+        <!-- Paste isi 1.4 di sini -->
+
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- 1.5 -->
+      <section class="section" id="1-5">
+        <h2>1.5 [Tajuk Seksyen 1.5]</h2>
+
+        <!-- Paste isi 1.5 di sini -->
+
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- 1.6 -->
+      <section class="section" id="1-6">
+        <h2>1.6 [Tajuk Seksyen 1.6]</h2>
+
+        <!-- Paste isi 1.6 di sini -->
+
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- 1.7 -->
+      <section class="section" id="1-7">
+        <h2>1.7 [Tajuk Seksyen 1.7]</h2>
+
+        <!-- Paste isi 1.7 di sini -->
+
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- 1.8 -->
+      <section class="section" id="1-8">
+        <h2>1.8 [Tajuk Seksyen 1.8]</h2>
+
+        <!-- Paste isi 1.8 di sini -->
+
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <a href="index.html">Home</a> ·
+        <a href="bab-0.html">Bab 0</a> ·
+        <a href="bab-2.html">Bab 2</a>
+      </div>
+      <div class="meta" style="margin-top:8px">Nota: Laman ini arkib baca sahaja.</div>
     </div>
+  </footer>
 
-    <p>Syirik halus bukan menyembah patung, tetapi memberi kuasa memberi kesan kepada Asbab Fitrah dan Asbab Zulumat.</p>
-
-    <details class="k3a-details">
-      <summary>Hadith: “I‘qilhā wa tawakkal.” (buka)</summary>
-      <p>Hadith ini bukan membahagi kuasa antara usaha dan Allah, tetapi menetapkan tertib Tauhidi:</p>
-      <ul class="k3a-list">
-        <li>Ambil sebab sebagai alat (tanpa kuasa).</li>
-        <li>Serahkan kesan sepenuhnya kepada Allah.</li>
-      </ul>
-      <p><a class="k3a-ref" href="#fn-4">【4】</a></p>
-    </details>
-
-    <div class="k3a-sep"></div>
-
-    <p><b>Definisi Tawakkal menurut Kerangka 3 Asbab:</b><br/>
-      Mengambil sebab yang dibenarkan syarak mengikut tertib Rasulullah ﷺ, sambil menafikan kuasa memberi kesan pada Asbab Fitrah dan Asbab Zulumat, serta menetapkan bahawa hanya Allah memberi kesan melalui janji-Nya, dan redha terhadap keputusan Allah.
-    </p>
-  </div>
-
-  <div class="k3a-block" id="bab-1-1-4">
-    <div class="k3a-h2">1.1.4 Sirah Laut Merah: Pembunuhan Fahaman Asbab Lama Melalui Amal</div>
-
-    <p>Di tepi Laut Merah, Nabi Musa عليه السلام tidak diberikan teori — baginda diberikan perintah amal yang menyalahi logik Asbab Fitrah.</p>
-
-    <div class="k3a-quote">
-      <div class="k3a-ar">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ فَٱنفَلَقَ ﴾</div>
-      <div class="k3a-tr">“Lalu Kami wahyukan kepada Musa: Pukullah laut itu dengan tongkatmu, maka terbelahlah ia.” (Asy-Syuʿarāʾ 26:63) <a class="k3a-ref" href="#fn-5">【5】</a></div>
-    </div>
-
-    <ul class="k3a-list">
-      <li>Tongkat bukan sumber kuasa.</li>
-      <li>Laut bukan penentu nasib.</li>
-      <li>Firaun bukan pemilik keputusan.</li>
-    </ul>
-
-    <p><b>Yang memberi kesan hanyalah Allah</b> — tetapi janji Allah dizahirkan selepas amal, bukan sebelum.</p>
-
-    <details class="k3a-details">
-      <summary>Tertib Tauhidi (buka)</summary>
-      <ul class="k3a-list">
-        <li><b>Nafy</b> — menafikan kuasa memberi kesan pada Asbab Fitrah (laut) dan Asbab Zulumat (Firaun).</li>
-        <li><b>Isbat</b> — menetapkan hanya Allah memberi kesan.</li>
-        <li><b>Amal</b> — melaksanakan perintah walau bertentangan logik.</li>
-        <li><b>Nusrah Allah</b> — turun selepas amal.</li>
-      </ul>
-    </details>
-
-    <p>Nabi Musa memukul laut bukan kerana percaya kepada tongkat, tetapi kerana yakin kepada janji Allah.</p>
-  </div>
-
-  <div class="k3a-block" id="bab-1-1-5">
-    <div class="k3a-h2">1.1.5 Umat Akhir Zaman: Hidup Dalam Fahaman Asbab Lama</div>
-
-    <p>Hari ini, Firaun telah mati, tetapi falsafah Firaun hidup dalam sistem.</p>
-    <ul class="k3a-list">
-      <li>Dahulu: “Aku tuhan kamu yang paling tinggi.”</li>
-      <li>Kini: “Manusia menentukan masa depannya sendiri.”</li>
-    </ul>
-
-    <p>Asbab Zulumat tampil dalam bentuk baharu: data, KPI, formula, branding, dominasi ekonomi, pemikiran “self-made”.</p>
-
-    <div class="k3a-quote">
-      <div class="k3a-ar">﴿ أَفَرَءَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَىٰهُ ﴾</div>
-      <div class="k3a-tr">“Tidakkah engkau melihat orang yang menjadikan hawa nafsunya sebagai tuhannya?” (Al-Jāthiyah 45:23) <a class="k3a-ref" href="#fn-6">【6】</a></div>
-    </div>
-
-    <p>Selagi hati percaya bahawa kejayaan datang daripada strategi, bukan ketaatan, selagi itu iman tidak menjadi pusat.</p>
-  </div>
-
-  <div class="k3a-block" id="bab-1-1-6">
-    <div class="k3a-h2">1.1.6 Peranan Dakwah dalam Membunuh Fahaman Asbab Lama</div>
-
-    <p>Tiada ilmu yang mampu membunuh Fahaman Asbab Lama melainkan <b>Asbab Mutlak Asli</b>, iaitu <b>dakwah</b>.</p>
-
-    <div class="k3a-quote">
-      <div class="k3a-ar">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
-      <div class="k3a-tr">“Siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah?” (Fuṣṣilat 41:33) <a class="k3a-ref" href="#fn-7">【7】</a></div>
-    </div>
-
-    <p>Dakwah ialah Asbab Mutlak Asli — ia membawa janji Allah yang:</p>
-    <ul class="k3a-list">
-      <li>memecahkan pergantungan kepada makhluk,</li>
-      <li>menghidupkan rasa iman,</li>
-      <li>memindahkan pusat kebergantungan kepada Allah.</li>
-    </ul>
-
-    <p>Dakwah bukan kerja pendakwah; dakwah ialah mekanisme Allah untuk memecahkan kebergantungan hati kepada sebab.</p>
-  </div>
-
-  <div class="k3a-block" id="bab-1-1-7">
-    <div class="k3a-h2">1.1.7 Analisis Tauhidi</div>
-
-    <table class="k3a-table">
-      <thead>
-        <tr>
-          <th>Komponen</th>
-          <th>Penjelasan</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><b>Fahaman Asbab Lama</b></td>
-          <td>Asbab Fitrah dan Asbab Zulumat yang diiktikadkan memberi kesan</td>
-        </tr>
-        <tr>
-          <td><b>Akar Masalah</b></td>
-          <td>Amal tanpa Nafy dan Isbat</td>
-        </tr>
-        <tr>
-          <td><b>Akibat</b></td>
-          <td>Janji Allah tidak dizahirkan; hati dikawal sebab</td>
-        </tr>
-        <tr>
-          <td><b>Penyelesaian</b></td>
-          <td>Mengambil Asbab Mutlak Asli (dakwah) dengan disiplin Nafy–Isbat</td>
-        </tr>
-        <tr>
-          <td><b>Tanda Kesembuhan</b></td>
-          <td>Amal ringan, hati tenang, sebab tunduk</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="k3a-block" id="bab-1-1-8">
-    <div class="k3a-h2">1.1.8 Kesimpulan Tauhidi Bab 1.1</div>
-
-    <p><b>“Fahaman Asbab Lama tidak mati dengan hujah, tetapi mati apabila seseorang mengambil Asbab Mutlak Asli dengan hati yang melakukan Nafy dan Isbat.”</b></p>
-
-    <p>Fungsi Bab 1 ialah membunuh ‘tuhan kecil’ dalam hati — iaitu kepercayaan bahawa manusia, sistem atau formula boleh memberi kesan tanpa izin Allah.</p>
-
-    <p>Selepas pembunuhan ini, barulah iman boleh ditanam, dan seluruh Kerangka 3 Asbab dapat berdiri dengan selamat.</p>
-  </div>
-
-  <!-- Footnotes -->
-  <div class="k3a-footnotes" id="nota-kaki">
-    <div class="k3a-fn-title">Nota Kaki</div>
-
-    <div class="k3a-fn" id="fn-1"><b>【1】</b> Az-Zumar 39:62 — <small>Semua sebab adalah makhluk, bukan pemilik kuasa.</small></div>
-    <div class="k3a-fn" id="fn-2"><b>【2】</b> At-Ṭalāq 65:3 — <small>Janji Allah kepada orang yang bertawakkal.</small></div>
-    <div class="k3a-fn" id="fn-3"><b>【3】</b> An-Nisāʾ 4:116 — <small>Syirik halus ialah menetapkan sebab sebagai penentu kesan.</small></div>
-    <div class="k3a-fn" id="fn-4"><b>【4】</b> Riwayat at-Tirmiżī — <small>Tertib Tauhidi: guna sebab tanpa memberi kuasa.</small></div>
-    <div class="k3a-fn" id="fn-5"><b>【5】</b> Asy-Syuʿarāʾ 26:63 — <small>Nusrah Allah turun selepas amal.</small></div>
-    <div class="k3a-fn" id="fn-6"><b>【6】</b> Al-Jāthiyah 45:23 — <small>Nafsu dan sistem boleh menjadi “tuhan” moden.</small></div>
-    <div class="k3a-fn" id="fn-7"><b>【7】</b> Fuṣṣilat 41:33 — <small>Dakwah sebagai Asbab Mutlak Asli.</small></div>
-  </div>
-
-</div>
+</body>
+</html>
