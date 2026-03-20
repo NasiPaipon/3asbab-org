@@ -1,3 +1,4 @@
+
 ```html
 <!DOCTYPE html>
 <html lang="ms">
@@ -161,11 +162,333 @@
       <!-- 23 SUB TAJUK (GOLONGAN) MULAI DI SINI -->
       <!-- Setiap section menggunakan id g1 hingga g23, dan mempunyai heading serta penerangan ringkas. -->
 
-      <section class="section" id="g1">
-        <span class="gol-num">Golongan 1</span>
-        <h2>Salafiyyah ‘Ilmiyyah</h2>
-        <p>Berpegang kepada manhaj salaf dalam akidah dan fiqh, menekankan hadith dan athar. <strong>Audit:</strong> Tauhid sangat kukuh, asbab dakwah melalui penulisan dan pengajian, tertib dakwah cenderung kepada tazkiyah individu. Skor tauhid: 5/5, asbab: 4/5, tertib: 3/5.</p>
-        <a class="toplink" href="#top">↑ ke atas</a>
+```html
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>K3A-AUD-01 – Audit Pendekatan Literalist | 3asbab.org</title>
+  <style>
+    :root{
+      --max: 900px;
+      --pad: 16px;
+      --border: #e6e6e6;
+      --bg: #ffffff;
+      --muted: #666;
+      --soft: #f6f6f6;
+      --accent: #0b6; /* hijau ringkas */
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      background: var(--bg);
+      color:#111;
+    }
+    a{color:inherit}
+    a:hover{color:var(--accent)}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
+    .topbar{
+      background: var(--soft);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar nav{
+      display:flex; gap:14px; align-items:center;
+      padding: 12px 0;
+      flex-wrap:wrap;
+    }
+    .topbar a{ text-decoration:none }
+    .brand{font-weight:700}
+    header{
+      padding: 18px 0 8px 0;
+    }
+    h1{
+      margin: 8px 0 6px 0;
+      line-height:1.25;
+      font-size: clamp(22px, 3vw, 30px);
+    }
+    .meta{
+      color:var(--muted);
+      font-size: 14px;
+    }
+    .jump{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(246,246,246,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(6px);
+    }
+    .jump .inner{
+      padding: 10px 0;
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      font-size: 14px;
+    }
+    .jump a{
+      text-decoration:none;
+      padding: 4px 8px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background:#fff;
+    }
+    main{padding: 14px 0 40px 0;}
+    article{
+      font-size: 16px;
+    }
+    .badge{
+      display:inline-block;
+      font-weight:700;
+      color:#b00;
+      letter-spacing:.2px;
+      margin: 10px 0 2px 0;
+    }
+    h2{
+      margin: 22px 0 10px 0;
+      padding-top: 6px;
+      font-size: 20px;
+      line-height:1.25;
+    }
+    h3{
+      margin: 14px 0 8px 0;
+      font-size: 17px;
+    }
+    p{margin: 10px 0}
+    ul{margin: 8px 0 10px 22px}
+    li{margin: 4px 0}
+    ol{margin: 8px 0 10px 22px}
+    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
+    blockquote{
+      margin: 12px 0;
+      padding: 10px 14px;
+      border-left: 4px solid var(--accent);
+      background: #f8fffb;
+    }
+    .arab{
+      font-size: 20px;
+      line-height: 1.9;
+      direction: rtl;
+      unicode-bidi: isolate;
+      font-family: "Noto Naskh Arabic","Amiri",serif;
+    }
+    .section{
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 14px 12px 14px;
+      margin: 14px 0;
+      background:#fff;
+    }
+    .toplink{
+      display:inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration:none;
+    }
+    footer{
+      border-top: 1px solid var(--border);
+      padding: 18px 0 26px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a{color:inherit}
+    /* Gaya jadual */
+    .scorecard-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    .scorecard-table th {
+      background: var(--soft);
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 6px;
+      border: 1px solid var(--border);
+    }
+    .scorecard-table td {
+      padding: 8px 6px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .risk-low { color: #080; font-weight:600; }
+    .risk-medium { color: #b90; font-weight:600; }
+    .risk-high { color: #b00; font-weight:600; }
+    .footnote{
+      font-size:13px;
+      color:var(--muted);
+      border-top:1px dashed var(--border);
+      margin-top:20px;
+      padding-top:10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top nav -->
+  <div class="topbar">
+    <div class="wrap">
+      <nav>
+        <span class="brand">3asbab.org</span>
+        <a href="index.html">🏠 Home</a>
+        <a href="audit.html">Audit</a>
+        <a href="k3a-aud-01.html">K3A‑AUD‑01</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Page title -->
+  <header class="wrap" id="top">
+    <div class="meta">Kerangka 3 Asbab – Laporan Audit</div>
+    <h1>K3A-AUD-01</h1>
+    <p style="font-size:1.2rem; color:var(--accent);">Entiti Diaudit: Pendekatan Literalist <span style="color:var(--muted); font-size:0.9rem;">(sering dikaitkan dengan Wahabi)</span></p>
+  </header>
+
+  <!-- Jump links -->
+  <div class="jump">
+    <div class="wrap">
+      <div class="inner">
+        <strong>Lompat ke:</strong>
+        <a href="#criteria">1. Kriteria</a>
+        <a href="#evidence">2. Evidence</a>
+        <a href="#scorecard">3. Scorecard</a>
+        <a href="#total">4. Total</a>
+        <a href="#interpretasi">5. Interpretasi</a>
+        <a href="#risk">6. Risiko</a>
+        <a href="#corrective">7. Cadangan</a>
+        <a href="#limitasi">8. Limitasi</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <article>
+
+      <!-- ===== 1. KRITERIA ===== -->
+      <section class="section" id="criteria">
+        <h2>1. Audit Criteria <span style="font-size:0.9rem; color:var(--muted);">(Standard Rujukan)</span></h2>
+        <p>Audit ini menggunakan standard Kerangka 3 Asbab:</p>
+        <ul>
+          <li><strong>Standard 1 — Tauhid (Nafy–Isbat)</strong> – Rujuk Bab 4.2 Kerangka 3 Asbab.</li>
+          <li><strong>Standard 2 — Asbab Mutlak</strong> – Rujuk Bab 4.3 Kerangka 3 Asbab.</li>
+          <li><strong>Standard 3 — Tertib Rasulullah ﷺ</strong> – Rujuk Bab 29 (Tertib Amal Tauhidi).</li>
+        </ul>
+        <p>Dalil:</p>
+        <div class="arab">وَعَلَى اللَّهِ فَلْيَتَوَكَّلِ الْمُؤْمِنُونَ</div>
+        <p>“Dan kepada Allah hendaklah orang-orang beriman bertawakkal.”<br>— Āli ‘Imrān 3:122</p>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- ===== 2. EVIDENCE ===== -->
+      <section class="section" id="evidence">
+        <h2>2. Audit Evidence <span style="font-size:0.9rem; color:var(--muted);">(Bukti Pemerhatian)</span></h2>
+        <p>Pendekatan literalist menekankan pemurnian tauhid daripada syirik dan bid‘ah.</p>
+        <p>Pendekatan ini dapat dilihat dalam karya Syeikh Muhammad bin Abdul Wahhab, seperti:</p>
+        <ul>
+          <li><em>Kitab al-Tawhid</em></li>
+          <li><em>Kashf al-Shubuhat</em></li>
+        </ul>
+        <p>Ciri metodologi yang sering diperhatikan:</p>
+        <ul>
+          <li>penekanan kuat kepada tauhid uluhiyyah</li>
+          <li>penolakan amalan yang dianggap bid‘ah</li>
+          <li>dakwah melalui pengajaran akidah dan hukum.</li>
+        </ul>
+        <p>Pendekatan ini telah memberi sumbangan besar dalam meningkatkan kesedaran umat tentang bahaya syirik.</p>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- ===== 3. PERFORMANCE SCORECARD ===== -->
+      <section class="section" id="scorecard">
+        <h2>3. Performance Scorecard</h2>
+        <table class="scorecard-table">
+          <tr><th>Komponen Audit</th><th>Skor</th><th>Penjelasan</th></tr>
+          <tr><td>Tauhid Orientation</td><td style="text-align:center;">5</td><td>Penekanan sangat kuat kepada pemurnian tauhid</td></tr>
+          <tr><td>Asbab Mutlak Implementation</td><td style="text-align:center;">3</td><td>Dakwah wujud tetapi tidak selalu melalui mujahadah dan jamaah</td></tr>
+          <tr><td>Tertib Rasulullah Alignment</td><td style="text-align:center;">3</td><td>Sebahagian tertib dakwah Nabi diikuti tetapi tidak menyeluruh</td></tr>
+          <tr><td>Pembinaan Jamaah</td><td style="text-align:center;">2</td><td>Pendekatan lebih menumpukan individu berbanding pembinaan jamaah dakwah</td></tr>
+          <tr><td>Keseimbangan Dunia–Akhirat</td><td style="text-align:center;">4</td><td>Dunia tidak dijadikan matlamat utama</td></tr>
+          <tr><td>Pewarisan Iman</td><td style="text-align:center;">3</td><td>Ilmu boleh diwariskan tetapi metodologi pembinaan iman tidak sentiasa kuat</td></tr>
+        </table>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- ===== 4. TOTAL SCORE ===== -->
+      <section class="section" id="total">
+        <h2>4. Total Score</h2>
+        <p style="font-size:2rem; font-weight:bold; color:var(--accent);">20 / 30</p>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- ===== 5. INTERPRETASI SKOR ===== -->
+      <section class="section" id="interpretasi">
+        <h2>5. Interpretasi Skor</h2>
+        <table class="scorecard-table">
+          <tr><th>Julat Skor</th><th>Penilaian</th></tr>
+          <tr><td>26–30</td><td>Sangat Selari dengan Tertib Tauhidi</td></tr>
+          <tr><td>20–25</td><td><strong>Sebahagian Besar Selari</strong></td></tr>
+          <tr><td>14–19</td><td>Ketidakseimbangan Metodologi</td></tr>
+          <tr><td>8–13</td><td>Lemah</td></tr>
+          <tr><td>0–7</td><td>Penyimpangan Struktur</td></tr>
+        </table>
+        <p style="margin-top:10px;"><strong>Kategori:</strong> Sebahagian Besar Selari</p>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- ===== 6. RISK LEVEL ===== -->
+      <section class="section" id="risk">
+        <h2>6. Risk Level</h2>
+        <table class="scorecard-table">
+          <tr><th>Risiko</th><th>Maksud</th></tr>
+          <tr><td>Low</td><td>Risiko kecil terhadap tauhid</td></tr>
+          <tr><td><span class="risk-medium">Medium</span></td><td>Ketidakseimbangan metodologi</td></tr>
+          <tr><td>High</td><td>Pergantungan kepada makhluk</td></tr>
+        </table>
+        <p><strong>Risk Level: <span class="risk-medium">Medium</span></strong></p>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- ===== 7. CORRECTIVE DIRECTION ===== -->
+      <section class="section" id="corrective">
+        <h2>7. Corrective Direction</h2>
+        <p>Pendekatan ini boleh diperkuat dengan:</p>
+        <ul>
+          <li>memperluaskan dakwah lapangan</li>
+          <li>menghidupkan mujahadah dalam dakwah</li>
+          <li>membina jamaah dakwah yang aktif.</li>
+        </ul>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- ===== 8. LIMITASI AUDIT ===== -->
+      <section class="section" id="limitasi">
+        <h2>8. Limitasi Audit</h2>
+        <p>Audit ini:</p>
+        <ul>
+          <li>berdasarkan pemerhatian umum terhadap metodologi pendekatan literalist</li>
+          <li>tidak merangkumi semua variasi dalam pendekatan tersebut</li>
+          <li>tidak menilai individu atau organisasi tertentu.</li>
+        </ul>
+        <p>Tujuannya adalah muhasabah dan penambahbaikan, bukan penghukuman.</p>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- Footer dalam article -->
+      <div class="footnote">
+        <p>Laporan ini berdasarkan Kerangka 3 Asbab dan bertujuan untuk analisis metodologi.</p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="wrap">
+    <p>© 3asbab.org — Audit K3A‑AUD‑01 | <a href="index.html">Kembali ke halaman utama</a></p>
+  </footer>
+
+</body>
+</html>
+```
+
       </section>
 
       <section class="section" id="g2">
