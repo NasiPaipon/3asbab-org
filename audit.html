@@ -1,0 +1,341 @@
+```html
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AUDIT 23 GOLONGAN – 3asbab.org</title>
+  <style>
+    :root{
+      --max: 1000px;
+      --pad: 16px;
+      --border: #e0e0e0;
+      --bg: #ffffff;
+      --muted: #666;
+      --soft: #f6f6f6;
+      --accent: #0b6;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      background: var(--bg);
+      color:#111;
+    }
+    a{color:inherit; text-decoration:none}
+    a:hover{color:var(--accent)}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
+    .topbar{
+      background: var(--soft);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar nav{
+      display:flex; gap:20px; align-items:center;
+      padding: 12px 0;
+      flex-wrap:wrap;
+    }
+    .brand{font-weight:700}
+    header{
+      padding: 18px 0 8px 0;
+    }
+    h1{
+      margin: 8px 0 6px 0;
+      line-height:1.25;
+      font-size: clamp(26px, 4vw, 38px);
+      color: #0b4;
+    }
+    .meta{
+      color:var(--muted);
+      font-size: 14px;
+    }
+    .jump{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(246,246,246,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(6px);
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: thin;
+    }
+    .jump .inner{
+      padding: 10px 0;
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .jump a{
+      padding: 5px 12px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background:#fff;
+      font-size: 14px;
+    }
+    main{padding: 14px 0 40px 0;}
+    article{font-size: 16px;}
+    .badge{
+      display:inline-block;
+      font-weight:700;
+      color:#b00;
+      letter-spacing:.2px;
+      margin: 5px 0 2px 0;
+    }
+    h2{
+      margin: 0 0 10px 0;
+      font-size: 22px;
+    }
+    .section{
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 18px 14px 18px;
+      margin: 18px 0;
+      background:#fff;
+      scroll-margin-top: 60px;
+    }
+    .toplink{
+      display:inline-block;
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer{
+      border-top: 1px solid var(--border);
+      padding: 18px 0 26px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .gol-num{
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 30px;
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .jump a.active{background:var(--accent); color:#fff; border-color:var(--accent);}
+  </style>
+</head>
+<body>
+
+  <!-- navigasi atas -->
+  <div class="topbar">
+    <div class="wrap">
+      <nav>
+        <span class="brand">3asbab.org</span>
+        <a href="index.html">🏠 Home</a>
+        <a href="audit.html">Audit</a>
+        <!-- PAUTAN DI BAWAH TELAH DIBETULKAN: konsisten dengan nama fail "AUDIT 23 GOLONGAN.html" -->
+        <a href="AUDIT 23 GOLONGAN.html">Audit 23 Golongan</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- header -->
+  <header class="wrap" id="top">
+    <div class="meta">Kerangka 3 Asbab – Pemetaan Golongan</div>
+    <h1>AUDIT 23 GOLONGAN</h1>
+    <p style="font-size:1.2rem; color:var(--accent);">Penilaian metodologi & orientasi tauhid terhadap 23 aliran pemikiran umat Islam</p>
+  </header>
+
+  <!-- Lompat ke 23 sub tajuk (semua golongan) -->
+  <div class="jump">
+    <div class="wrap">
+      <div class="inner">
+        <strong>Golongan:</strong>
+        <a href="#g1">1</a><a href="#g2">2</a><a href="#g3">3</a><a href="#g4">4</a><a href="#g5">5</a>
+        <a href="#g6">6</a><a href="#g7">7</a><a href="#g8">8</a><a href="#g9">9</a><a href="#g10">10</a>
+        <a href="#g11">11</a><a href="#g12">12</a><a href="#g13">13</a><a href="#g14">14</a><a href="#g15">15</a>
+        <a href="#g16">16</a><a href="#g17">17</a><a href="#g18">18</a><a href="#g19">19</a><a href="#g20">20</a>
+        <a href="#g21">21</a><a href="#g22">22</a><a href="#g23">23</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <article>
+
+      <!-- 23 SUB TAJUK (GOLONGAN) MULAI DI SINI -->
+      <!-- Setiap section menggunakan id g1 hingga g23, dan mempunyai heading serta penerangan ringkas. -->
+
+      <section class="section" id="g1">
+        <span class="gol-num">Golongan 1</span>
+        <h2>Salafiyyah ‘Ilmiyyah</h2>
+        <p>Berpegang kepada manhaj salaf dalam akidah dan fiqh, menekankan hadith dan athar. <strong>Audit:</strong> Tauhid sangat kukuh, asbab dakwah melalui penulisan dan pengajian, tertib dakwah cenderung kepada tazkiyah individu. Skor tauhid: 5/5, asbab: 4/5, tertib: 3/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g2">
+        <span class="gol-num">Golongan 2</span>
+        <h2>Ash‘ariyyah</h2>
+        <p>Menggunakan pendekatan rasional dalam mempertahankan akidah, banyak mendominasi dalam disiplin ilmu kalam. <strong>Audit:</strong> Penekanan tauhid via hujah falsafah, asbab dakwah melalui institusi pendidikan, tertib kadang kala didahului logik berbanding wahyu. Skor tauhid: 4/5, asbab: 4/5, tertib: 3/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g3">
+        <span class="gol-num">Golongan 3</span>
+        <h2>Maturidiyyah</h2>
+        <p>Serupa dengan Asya‘irah tetapi lebih menekankan hukum akal dan tanggungjawab manusia. <strong>Audit:</strong> Tauhid dijaga dengan usul fiqh hanafi, asbab dakwah melalui kitab dan pengajaran, tertib dakwah sederhana. Skor: tauhid 4/5, asbab 3/5, tertib 4/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g4">
+        <span class="gol-num">Golongan 4</span>
+        <h2>Sufiyyah (Tasawwuf Sunni)</h2>
+        <p>Menumpukan kepada pembersihan jiwa dan ihsan. Sebahagiannya berpegang kepada akidah Asya‘irah. <strong>Audit:</strong> Tauhid dihayati melalui rasa, asbab dakwah melalui tarbiah ruhiyyah, tertib kadangkala mendahulukan wirid berbanding fardu ain. Skor: tauhid 3/5, asbab 4/5, tertib 2/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g5">
+        <span class="gol-num">Golongan 5</span>
+        <h2>Syi‘ah Imamiyyah (Itsna‘ashariyyah)</h2>
+        <p>Meyakini imamah sebagai rukun iman, mempunyai konsep taqiyyah dan raj‘ah. <strong>Audit:</strong> Tauhid tercemar dengan elemen ghuluw terhadap imam, asbab dakwah melalui majlis berkabung, tertib dakwah bercampur dengan politik. Skor: tauhid 1/5, asbab 2/5, tertib 2/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g6">
+        <span class="gol-num">Golongan 6</span>
+        <h2>Syi‘ah Zaidiyyah</h2>
+        <p>Lebih dekat dengan Ahlus Sunnah dalam beberapa furu‘, tetapi tetap menonjolkan kelebihan Ahlul Bait. <strong>Audit:</strong> Tauhid selamat kecuali beberapa pandangan politik, asbab dakwah melalui gerakan, tertib sederhana. Skor: tauhid 3/5, asbab 3/5, tertib 3/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g7">
+        <span class="gol-num">Golongan 7</span>
+        <h2>Khawarij</h2>
+        <p>Mengkafirkan pelaku dosa besar dan keluar dari pemerintahan yang sah. <strong>Audit:</strong> Tauhid difahami sempit, asbab dakwah bersifat radikal, tertib dakwah tidak mengikuti uslub nabi. Skor: tauhid 2/5, asbab 1/5, tertib 1/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g8">
+        <span class="gol-num">Golongan 8</span>
+        <h2>Mu‘tazilah</h2>
+        <p>Mendahulukan akal daripada naql, lima usul mereka menjadi asas. <strong>Audit:</strong> Tauhid terjejas kerana ta‘til sifat, asbab dakwah melalui perdebatan, tertib akal didahulukan. Skor: tauhid 2/5, asbab 3/5, tertib 2/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g9">
+        <span class="gol-num">Golongan 9</span>
+        <h2>Murji’ah</h2>
+        <p>Iman hanya pembenaran, amal tidak mempengaruhi iman. <strong>Audit:</strong> Tauhid longgar kerana iman tanpa amal, asbab dakwah tidak menggalakkan amal, tertib tidak seimbang. Skor: tauhid 2/5, asbab 2/5, tertib 2/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g10">
+        <span class="gol-num">Golongan 10</span>
+        <h2>Qadariyyah</h2>
+        <p>Manusia mencipta perbuatannya sendiri, menafikan qadar. <strong>Audit:</strong> Tauhid lemah dalam rububiyyah, asbab dakwah menggunakan logik, tertib terbalik. Skor: tauhid 1/5, asbab 2/5, tertib 1/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g11">
+        <span class="gol-num">Golongan 11</span>
+        <h2>Jabariyyah</h2>
+        <p>Manusia dipaksa, tidak ada kebebasan. <strong>Audit:</strong> Tauhid tidak seimbang, asbab dakwah membawa kepada fatalisme, tertib tidak ada usaha. Skor: tauhid 2/5, asbab 1/5, tertib 1/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g12">
+        <span class="gol-num">Golongan 12</span>
+        <h2>Jahmiyyah</h2>
+        <p>Menafikan sifat Allah secara mutlak, mengatakan Al-Qur’an makhluk. <strong>Audit:</strong> Tauhid rosak kerana ta‘til, asbab dakwah melalui perdebatan falsafah, tertib menyimpang. Skor: tauhid 0/5, asbab 1/5, tertib 0/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g13">
+        <span class="gol-num">Golongan 13</span>
+        <h2>Musyabbihah / Mujassimah</h2>
+        <p>Menyerupakan Allah dengan makhluk. <strong>Audit:</strong> Tauhid tercemar dengan tasybih, asbab dakwah harfiah, tertib rosak. Skor: tauhid 0/5, asbab 1/5, tertib 0/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g14">
+        <span class="gol-num">Golongan 14</span>
+        <h2>Liberalisme Islam</h2>
+        <p>Membebaskan tafsir sehingga menolak hukum qat‘i. <strong>Audit:</strong> Tauhid terhakis, asbab dakwah menggunakan kebebasan, tertib tiada. Skor: tauhid 1/5, asbab 2/5, tertib 1/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g15">
+        <span class="gol-num">Golongan 15</span>
+        <h2>Sekularisme</h2>
+        <p>Memisahkan agama dari kehidupan. <strong>Audit:</strong> Tauhid tidak diterapkan dalam pemerintahan, asbab dakwah duniawi, tertib tiada. Skor: tauhid 0/5, asbab 0/5, tertib 0/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g16">
+        <span class="gol-num">Golongan 16</span>
+        <h2>Modernisme Islam</h2>
+        <p>Menyesuaikan Islam dengan nilai moden secara berlebihan. <strong>Audit:</strong> Tauhid dipengaruhi pemikiran barat, asbab dakwah rasional, tertib menyesuaikan dengan keadaan. Skor: tauhid 2/5, asbab 3/5, tertib 3/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g17">
+        <span class="gol-num">Golongan 17</span>
+        <h2>Ikhwān al-Muslimīn</h2>
+        <p>Gerakan Islam moden yang menekankan tarbiah dan politik. <strong>Audit:</strong> Tauhid kuat tetapi kadang bercampur dengan kepentingan, asbab dakwah melalui kerja jamaie, tertib sederhana. Skor: tauhid 4/5, asbab 4/5, tertib 3/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g18">
+        <span class="gol-num">Golongan 18</span>
+        <h2>Tablighi Jama‘at</h2>
+        <p>Tumpuan kepada dakwah dan fadilat amal. <strong>Audit:</strong> Tauhid dipupuk secara sederhana, asbab dakwah melalui khuruj, tertib mengutamakan dakwah daripada ilmu. Skor: tauhid 3/5, asbab 4/5, tertib 3/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g19">
+        <span class="gol-num">Golongan 19</span>
+        <h2>Ḥizb al-Taḥrīr</h2>
+        <p>Fokus kepada pendirian khilafah dan politik. <strong>Audit:</strong> Tauhid digunakan sebagai alat politik, asbab dakwah melalui kajian dan halaqah, tertib kadang memaksa realiti. Skor: tauhid 3/5, asbab 3/5, tertib 2/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g20">
+        <span class="gol-num">Golongan 20</span>
+        <h2>Jihadi Salafiyyah</h2>
+        <p>Mengutamakan jihad bersenjata, mudah mengkafirkan. <strong>Audit:</strong> Tauhid difahami secara keras, asbab dakwah melalui qital, tertib tidak mengikut uslub nabi. Skor: tauhid 2/5, asbab 1/5, tertib 1/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g21">
+        <span class="gol-num">Golongan 21</span>
+        <h2>Tarekat Sufi (berhierarki)</h2>
+        <p>Mempunyai mursyid, wirid, dan adab khusus. <strong>Audit:</strong> Tauhid kadang bercampur dengan penghormatan berlebihan kepada syeikh, asbab dakwah melalui suluk, tertib kadang terpesong. Skor: tauhid 3/5, asbab 3/5, tertib 2/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g22">
+        <span class="gol-num">Golongan 22</span>
+        <h2>Ahl al-Ḥadīth</h2>
+        <p>Berpegang kepada hadith, menolak taklid mazhab. <strong>Audit:</strong> Tauhid sangat kuat, asbab dakwah melalui kitab dan pengajian, tertib ilmiah. Skor: tauhid 5/5, asbab 4/5, tertib 4/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <section class="section" id="g23">
+        <span class="gol-num">Golongan 23</span>
+        <h2>Ahl al-Ra’yi (Ahli Fiqh Kufah)</h2>
+        <p>Mengutamakan qiyas dan maslahah dalam keadaan tertentu. <strong>Audit:</strong> Tauhid dipelihara, asbab dakwah melalui fiqh dan kehakiman, tertib seimbang. Skor: tauhid 4/5, asbab 4/5, tertib 4/5.</p>
+        <a class="toplink" href="#top">↑ ke atas</a>
+      </section>
+
+      <!-- Penutup artikel -->
+      <div style="background: var(--soft); border-radius: 12px; padding: 12px 18px; margin-top: 24px;">
+        <p style="margin:0;"><strong>Nota audit:</strong> Setiap golongan dinilai secara ringkas berdasarkan Kerangka 3 Asbab (tauhid, asbab, tertib). Skor adalah indikatif untuk tujuan muhasabah dan perbandingan.</p>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="wrap">
+    <p>© 3asbab.org — Audit 23 Golongan | <a href="index.html">Kembali ke utama</a></p>
+  </footer>
+
+</body>
+</html>
+```
+
+
