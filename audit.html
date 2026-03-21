@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Audit 23 Golongan – Kerangka 3 Asbab | 3asbab.org</title>
+  <title>Audit 23 Golongan | 3asbab.org</title>
   <style>
     * {
       margin: 0;
@@ -11,15 +11,20 @@
       box-sizing: border-box;
     }
 
+    :root {
+      color-scheme: light dark;
+    }
+
     body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background: #f8fafc;
       color: #0f172a;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .wrap {
       width: 100%;
+      max-width: 1100px;
       padding: 0 1.5rem;
       margin: 0 auto;
     }
@@ -31,31 +36,28 @@
     }
 
     .topbar {
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.96);
       border-bottom: 1px solid #e2e8f0;
       position: sticky;
       top: 0;
       z-index: 30;
       backdrop-filter: blur(8px);
-      background-color: rgba(255, 255, 255, 0.96);
     }
 
     .topbar nav {
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       align-items: center;
-      padding: 0.8rem 0;
+      padding: 0.9rem 0;
       flex-wrap: wrap;
       font-weight: 500;
     }
 
     .brand {
       font-weight: 700;
-      font-size: 1.2rem;
-      background: #0b6;
-      color: white;
-      padding: 0.2rem 0.8rem;
-      border-radius: 40px;
+      font-size: 1.05rem;
+      color: #0f172a;
+      text-decoration: none;
     }
 
     .topbar a {
@@ -66,46 +68,42 @@
 
     .topbar a:hover {
       color: #0b6;
+      text-decoration: underline;
     }
 
     header {
       padding: 2rem 0 1rem 0;
     }
 
+    .eyebrow {
+      font-size: 0.92rem;
+      color: #475569;
+      margin-bottom: 0.5rem;
+    }
+
     h1 {
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 700;
       letter-spacing: -0.02em;
-      background: linear-gradient(135deg, #0b6, #0a5);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      margin: 0.5rem 0;
-    }
-
-    .meta {
-      color: #475569;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      margin: 0 0 0.5rem;
+      color: #0f172a;
     }
 
     .subhead {
-      font-size: 1.2rem;
-      color: #2c3e4e;
-      border-left: 3px solid #0b6;
-      padding-left: 1rem;
-      margin: 1rem 0 1.5rem;
+      font-size: 1.05rem;
+      color: #334155;
+      max-width: 850px;
     }
 
     .jump {
       position: sticky;
-      top: 60px;
+      top: 58px;
       z-index: 25;
-      background: #ffffffcc;
-      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid #f1f5f9;
       border-bottom: 1px solid #e2e8f0;
-      padding: 0.6rem 0;
+      padding: 0.7rem 0;
       overflow-x: auto;
       white-space: nowrap;
       scrollbar-width: thin;
@@ -117,16 +115,22 @@
       align-items: center;
     }
 
+    .jump strong {
+      margin-right: 0.35rem;
+      color: #334155;
+      font-size: 0.95rem;
+    }
+
     .jump a {
       display: inline-block;
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
       background: #f1f5f9;
       color: #1e293b;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       font-weight: 500;
       text-decoration: none;
-      transition: all 0.2s;
+      transition: all 0.2s ease;
       border: 1px solid #e2e8f0;
     }
 
@@ -142,13 +146,12 @@
 
     .audit-card {
       background: white;
-      border-radius: 1.5rem;
+      border-radius: 1.25rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.05);
-      margin-bottom: 2.5rem;
-      padding: 1.8rem;
+      margin-bottom: 2rem;
+      padding: 1.6rem;
       border: 1px solid #eef2f6;
-      transition: box-shadow 0.2s;
-      scroll-margin-top: 100px;
+      scroll-margin-top: 120px;
     }
 
     .audit-card:hover {
@@ -159,44 +162,36 @@
       background: #0b6;
       color: white;
       font-weight: 700;
-      padding: 0.2rem 1rem;
-      border-radius: 40px;
+      padding: 0.25rem 0.9rem;
+      border-radius: 999px;
       font-size: 0.85rem;
       display: inline-block;
       margin-bottom: 1rem;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.2px;
     }
 
     .audit-title {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      margin: 0.5rem 0 0.75rem;
+      margin: 0 0 0.65rem;
       line-height: 1.2;
-      color: #0a2b2e;
+      color: #0f172a;
     }
 
     .audit-sub {
       color: #2c6e5c;
       font-weight: 500;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
       border-left: 3px solid #0b6;
       padding-left: 0.75rem;
     }
 
+    h2.section-title,
     h3 {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 600;
-      margin: 1.5rem 0 0.75rem;
+      margin: 1.4rem 0 0.75rem;
       color: #0f172a;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    h3::before {
-      content: "▍";
-      color: #0b6;
-      font-weight: 400;
     }
 
     .score-table {
@@ -206,7 +201,7 @@
       background: #ffffff;
       border-radius: 1rem;
       overflow: hidden;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
 
     .score-table th {
@@ -224,20 +219,20 @@
     }
 
     .total-score {
-      font-size: 2.2rem;
+      font-size: 2rem;
       font-weight: 800;
       background: #0b6;
       color: white;
       display: inline-block;
-      padding: 0.2rem 1.5rem;
-      border-radius: 60px;
+      padding: 0.2rem 1.25rem;
+      border-radius: 999px;
       margin: 0.5rem 0;
     }
 
     .risk-badge {
       display: inline-block;
       padding: 0.25rem 1rem;
-      border-radius: 40px;
+      border-radius: 999px;
       font-weight: 700;
       font-size: 0.85rem;
     }
@@ -259,8 +254,8 @@
 
     .toplink {
       display: inline-block;
-      margin-top: 1.2rem;
-      font-size: 0.8rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
       color: #0b6;
       text-decoration: none;
       font-weight: 500;
@@ -271,12 +266,16 @@
     }
 
     footer {
+      margin-top: 2rem;
       border-top: 1px solid #e2e8f0;
       padding: 2rem 0;
-      text-align: center;
       color: #64748b;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       background: #ffffff;
+    }
+
+    footer p {
+      margin: 0;
     }
 
     @media (max-width: 700px) {
@@ -290,46 +289,156 @@
 
       .score-table th,
       .score-table td {
-        padding: 0.5rem;
+        padding: 0.55rem;
       }
     }
   </style>
 </head>
 <body id="top">
 
-<div class="topbar">
-  <div class="wrap">
-    <nav>
-      <span class="brand">3asbab.org</span>
-      <a href="index.html">🏠 Home</a>
-      <a href="bab-29.html">Bab 29</a>
-      <a href="bab-30.html">Bab 30</a>
-      <a href="audit-23-golongan.html">Audit 23 Golongan</a>
-    </nav>
-  </div>
-</div>
-
-<header class="wrap">
-  <div class="meta">Kerangka 3 Asbab – Bab Tambahan: Pemetaan & Penilaian</div>
-  <h1>Audit 23 Golongan</h1>
-  <div class="subhead">
-    Penilaian metodologi & orientasi tauhid terhadap 23 aliran pemikiran dalam sejarah & kontemporari umat Islam
-  </div>
-</header>
-
-<div class="jump">
-  <div class="wrap">
-    <div class="inner">
-      <strong>Lompat ke golongan:</strong>
-      <a href="#g1">1</a><a href="#g2">2</a><a href="#g3">3</a><a href="#g4">4</a><a href="#g5">5</a>
-      <a href="#g6">6</a><a href="#g7">7</a><a href="#g8">8</a><a href="#g9">9</a><a href="#g10">10</a>
-      <a href="#g11">11</a><a href="#g12">12</a><a href="#g13">13</a><a href="#g14">14</a><a href="#g15">15</a>
-      <a href="#g16">16</a><a href="#g17">17</a><a href="#g18">18</a><a href="#g19">19</a><a href="#g20">20</a>
-      <a href="#g21">21</a><a href="#g22">22</a><a href="#g23">23</a>
+  <div class="topbar">
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="index.html">3asbab.org</a>
+        <a href="index.html">Home</a>
+        <a href="bab-25.html">Bab 25</a>
+        <a href="bab-26.html">Bab 26</a>
+        <a href="AUDIT.html" aria-current="page">Audit 23 Golongan</a>
+        <a href="GLOSSARY.html">Glossary</a>
+      </nav>
     </div>
   </div>
-</div>
 
+  <header class="wrap">
+    <p class="eyebrow">Kerangka 3 Asbab · Arkib Baca Sahaja</p>
+    <h1>Audit 23 Golongan</h1>
+    <p class="subhead">
+      Penilaian pendekatan, orientasi keyakinan, dan metodologi beberapa aliran pemikiran
+      dalam masyarakat Muslim menurut neraca Kerangka 3 Asbab.
+    </p>
+  </header>
+
+  <div class="jump">
+    <div class="wrap">
+      <div class="inner">
+        <strong>Lompat ke golongan:</strong>
+        <a href="#g1">1</a><a href="#g2">2</a><a href="#g3">3</a><a href="#g4">4</a><a href="#g5">5</a>
+        <a href="#g6">6</a><a href="#g7">7</a><a href="#g8">8</a><a href="#g9">9</a><a href="#g10">10</a>
+        <a href="#g11">11</a><a href="#g12">12</a><a href="#g13">13</a><a href="#g14">14</a><a href="#g15">15</a>
+        <a href="#g16">16</a><a href="#g17">17</a><a href="#g18">18</a><a href="#g19">19</a><a href="#g20">20</a>
+        <a href="#g21">21</a><a href="#g22">22</a><a href="#g23">23</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+
+    <section class="audit-card" id="g1">
+      <span class="gol-num">Golongan 1</span>
+      <h2 class="audit-title">[Tajuk Golongan 1]</h2>
+      <div class="audit-sub">[Subtajuk / ringkasan pendekatan]</div>
+
+      <h3>Rumusan Audit</h3>
+      <p>
+        Letakkan rumusan audit di sini.
+      </p>
+
+      <h3>Skor Penilaian</h3>
+      <table class="score-table">
+        <thead>
+          <tr>
+            <th>Kriteria</th>
+            <th>Skor</th>
+            <th>Catatan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tauhid</td>
+            <td>—</td>
+            <td>Isi kemudian</td>
+          </tr>
+          <tr>
+            <td>Iman & Amal</td>
+            <td>—</td>
+            <td>Isi kemudian</td>
+          </tr>
+          <tr>
+            <td>Jemaah & Suasana</td>
+            <td>—</td>
+            <td>Isi kemudian</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="total-score">— / 5</div>
+      <div class="risk-badge risk-medium">Tahap Risiko: Sederhana</div>
+
+      <br />
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <section class="audit-card" id="g2">
+      <span class="gol-num">Golongan 2</span>
+      <h2 class="audit-title">[Tajuk Golongan 2]</h2>
+      <div class="audit-sub">[Subtajuk / ringkasan pendekatan]</div>
+      <p>Masukkan kandungan audit di sini.</p>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <section class="audit-card" id="g3">
+      <span class="gol-num">Golongan 3</span>
+      <h2 class="audit-title">[Tajuk Golongan 3]</h2>
+      <div class="audit-sub">[Subtajuk / ringkasan pendekatan]</div>
+      <p>Masukkan kandungan audit di sini.</p>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <section class="audit-card" id="g4">
+      <span class="gol-num">Golongan 4</span>
+      <h2 class="audit-title">[Tajuk Golongan 4]</h2>
+      <div class="audit-sub">[Subtajuk / ringkasan pendekatan]</div>
+      <p>Masukkan kandungan audit di sini.</p>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <section class="audit-card" id="g5">
+      <span class="gol-num">Golongan 5</span>
+      <h2 class="audit-title">[Tajuk Golongan 5]</h2>
+      <div class="audit-sub">[Subtajuk / ringkasan pendekatan]</div>
+      <p>Masukkan kandungan audit di sini.</p>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <section class="audit-card" id="g6"><span class="gol-num">Golongan 6</span><h2 class="audit-title">[Tajuk Golongan 6]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g7"><span class="gol-num">Golongan 7</span><h2 class="audit-title">[Tajuk Golongan 7]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g8"><span class="gol-num">Golongan 8</span><h2 class="audit-title">[Tajuk Golongan 8]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g9"><span class="gol-num">Golongan 9</span><h2 class="audit-title">[Tajuk Golongan 9]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g10"><span class="gol-num">Golongan 10</span><h2 class="audit-title">[Tajuk Golongan 10]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g11"><span class="gol-num">Golongan 11</span><h2 class="audit-title">[Tajuk Golongan 11]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g12"><span class="gol-num">Golongan 12</span><h2 class="audit-title">[Tajuk Golongan 12]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g13"><span class="gol-num">Golongan 13</span><h2 class="audit-title">[Tajuk Golongan 13]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g14"><span class="gol-num">Golongan 14</span><h2 class="audit-title">[Tajuk Golongan 14]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g15"><span class="gol-num">Golongan 15</span><h2 class="audit-title">[Tajuk Golongan 15]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g16"><span class="gol-num">Golongan 16</span><h2 class="audit-title">[Tajuk Golongan 16]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g17"><span class="gol-num">Golongan 17</span><h2 class="audit-title">[Tajuk Golongan 17]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g18"><span class="gol-num">Golongan 18</span><h2 class="audit-title">[Tajuk Golongan 18]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g19"><span class="gol-num">Golongan 19</span><h2 class="audit-title">[Tajuk Golongan 19]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g20"><span class="gol-num">Golongan 20</span><h2 class="audit-title">[Tajuk Golongan 20]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g21"><span class="gol-num">Golongan 21</span><h2 class="audit-title">[Tajuk Golongan 21]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g22"><span class="gol-num">Golongan 22</span><h2 class="audit-title">[Tajuk Golongan 22]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+    <section class="audit-card" id="g23"><span class="gol-num">Golongan 23</span><h2 class="audit-title">[Tajuk Golongan 23]</h2><div class="audit-sub">[Subtajuk]</div><p>Masukkan kandungan audit di sini.</p><a class="toplink" href="#top">↑ Kembali ke atas</a></section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Nota: Laman ini arkib baca sahaja. Kembali ke <strong><a href="index.html">Home</a></strong> untuk senarai bab.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
 <main class="wrap">
 <div class="audit-card" id="g1">
   <span class="gol-num">Golongan 1</span>
