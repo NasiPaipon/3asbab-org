@@ -33,7 +33,6 @@
       margin: 0 auto;
       padding: 0 var(--pad);
     }
-    /* topbar */
     .topbar {
       background: var(--bg-soft);
       border-bottom: 1px solid var(--border-light);
@@ -53,6 +52,7 @@
     .topbar a {
       text-decoration: none;
       font-size: 0.9rem;
+      color: var(--text-dark);
     }
     .brand {
       font-weight: 700;
@@ -98,6 +98,7 @@
       text-decoration: none;
       font-weight: 500;
       transition: 0.1s ease;
+      color: var(--text-dark);
     }
     .jump a:hover {
       border-color: var(--accent);
@@ -162,7 +163,7 @@
       margin: 1rem 0;
       font-style: normal;
     }
-    .insight-box, .insight {
+    .insight-box {
       background: #f1f5f9;
       padding: 0.8rem 1.2rem;
       border-radius: 1rem;
@@ -190,7 +191,7 @@
       height: 1px;
       background: var(--border-light);
     }
-    .footnote, .footnote-block {
+    .footnote {
       font-size: 0.8rem;
       color: var(--muted);
       margin-top: 1.5rem;
@@ -209,27 +210,8 @@
       margin-top: 0.5rem;
       display: inline-block;
     }
-    .badge-section, .badge-sub {
-      display: inline-block;
-      font-weight: 700;
-      font-size: 0.75rem;
-      background: #eef2ea;
-      color: #2b5e42;
-      padding: 0.2rem 0.8rem;
-      border-radius: 30px;
-      margin-bottom: 0.6rem;
-      letter-spacing: 0.3px;
-    }
-    .card {
-      background: var(--bg-soft);
-      border-radius: 1.2rem;
-      padding: 1.2rem 1.4rem;
-      margin: 1.2rem 0;
-      border: 1px solid var(--border-light);
-      box-shadow: var(--shadow-sm);
-    }
     @media (max-width: 640px) {
-      .section-card, .card {
+      .section-card {
         padding: 1rem;
       }
       .arabic {
@@ -352,105 +334,131 @@
     </div>
   </section>
 
-  <!-- 9.4 MEKANISME IMAN -->
+  <!-- ================= 9.4 MEKANISME IMAN ================= -->
   <section id="9-4">
-    <div class="badge-section">🟪 9.4 — MEKANISME IMAN: DAKWAH → MUJAHADAH → SABAR</div>
-    <div class="card">
+    <div class="badge-chapter">🟪 9.4 — MEKANISME IMAN: DAKWAH → MUJAHADAH → SABAR</div>
+    <div class="section-card">
       <h3>📌 9.4.1 — Iman Tidak Terhasil Secara Teoritik</h3>
       <div class="arabic">﴿ أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ ﴾</div>
       <div class="translation">“Apakah manusia menyangka mereka akan dibiarkan hanya dengan berkata: ‘Kami beriman,’ sedangkan mereka tidak diuji?” — <strong>Al-‘Ankabūt 29:2</strong></div>
       <p>Iman bukan sekadar dakwaan atau maklumat, tetapi hasil proses yang Allah tetapkan: <strong>Dakwah → Mujahadah → Sabar → (Allah memasukkan iman)</strong>. Ini jalan hidup para nabi dan sahabat.</p>
+      
       <h3>🟥 9.4.3 — Dakwah: Pembuka Hati</h3>
       <div class="arabic">﴿ قُلْ هَٰذِهِۦ سَبِيلِىٓ أَدْعُوٓا۟ إِلَى ٱللَّهِ عَلَىٰ بَصِيرَةٍ ﴾</div>
       <div class="translation">“Katakanlah: Inilah jalanku; aku menyeru kepada Allah dengan penuh kesedaran.” — <strong>Yūsuf 12:108</strong></div>
       <p>Dakwah mengalihkan hati daripada makhluk kepada Allah, membuka kesedaran tauhid, dan menjadi pintu pertama iman.</p>
+
       <h3>🟥 9.4.4 — Mujahadah: Pengorbanan yang Menghidupkan Iman</h3>
       <div class="arabic">﴿ وَجَـٰهِدُوا۟ بِأَمْوَٰلِكُمْ وَأَنفُسِكُمْ فِى سَبِيلِ ٱللَّهِ ﴾</div>
       <div class="translation">“Berjihadlah dengan harta dan diri kamu di jalan Allah.” — <strong>At-Tawbah 9:41</strong></div>
       <p><strong>Empat medium mujahadah:</strong> dakwah, taklim, ibadat, khidmat. Setiap satu menundukkan nafs dan membuka qalb.</p>
-      <ul><li><strong>Dakwah</strong> — jihad terbesar (Al-Furqān 25:52)</li><li><strong>Taklim</strong> — kefahaman agama (Al-Jumu‘ah 62:2)</li><li><strong>Ibadat</strong> — membina hubungan langsung (Al-Ḥijr 15:99)</li><li><strong>Khidmat</strong> — mematahkan ego (Al-Ḥashr 59:9)</li></ul>
+      <ul>
+        <li><strong>Dakwah</strong> — jihad terbesar (Al-Furqān 25:52)</li>
+        <li><strong>Taklim</strong> — kefahaman agama (Al-Jumu‘ah 62:2)</li>
+        <li><strong>Ibadat</strong> — membina hubungan langsung (Al-Ḥijr 15:99)</li>
+        <li><strong>Khidmat</strong> — mematahkan ego (Al-Ḥashr 59:9)</li>
+      </ul>
+
       <h3>🟥 9.4.5 — Sabar: Kekuatan Bertahan</h3>
       <div class="arabic">﴿ وَلَنَبْلُوَنَّكُمْ حَتَّىٰ نَعْلَمَ ٱلْمُجَٰهِدِينَ مِنكُمْ وَٱلصَّـٰبِرِينَ ﴾</div>
       <div class="translation">“Kami akan menguji kamu sehingga nyata siapa yang bermujahadah dan bersabar.” — <strong>Muḥammad 47:31</strong></div>
       <p>Sabar ialah kemampuan terus bermujahadah dalam semua keadaan hingga akhir hayat. Natijahnya: <strong>iman adalah pemberian Allah</strong> (Al-Ḥujurāt 49:7).</p>
-      <div class="insight">🔒 <strong>Formulasi muktamad:</strong> Dakwah membuka hati → Mujahadah (pengorbanan harta & diri) → Sabar (istiqamah) → Allah memasukkan iman ke dalam qalb.</div>
+      <div class="insight-box">🔒 <strong>Formulasi muktamad:</strong> Dakwah membuka hati → Mujahadah (pengorbanan harta & diri) → Sabar (istiqamah) → Allah memasukkan iman ke dalam qalb.</div>
     </div>
   </section>
 
-  <!-- 9.5 DAKWAH -->
+  <!-- ================= 9.5 DAKWAH ================= -->
   <section id="9-5">
-    <div class="badge-section">🟪 9.5 — DAKWAH: PINTU MASUK IMAN KE HATI</div>
-    <div class="card">
+    <div class="badge-chapter">🟪 9.5 — DAKWAH: PINTU MASUK IMAN KE HATI</div>
+    <div class="section-card">
       <div class="arabic">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى ٱللَّهِ وَعَمِلَ صَـٰلِحًا ﴾</div>
       <div class="translation">“Dan siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah, beramal soleh?” — <strong>Fussilat 41:33</strong></div>
       <p>Dakwah memperkenalkan Allah melalui wahyu, memutuskan pergantungan hati kepada makhluk. Ia adalah <strong>asbab mutlak asli</strong> yang melahirkan mujahadah. Tanpa dakwah, hati tidak akan terbuka untuk menerima iman.</p>
       <p>Allah berfirman: <strong>﴿ يَـٰٓأَيُّهَا ٱلْمُدَّثِّرُ قُمْ فَأَنذِرْ ﴾</strong> (Al-Muddaththir 74:1-2) — perintah dakwah di awal wahyu menunjukkan bahawa dakwah <em>membina iman</em>, bukan sekadar hasil iman matang.</p>
-      <div class="insight">✨ Dakwah bukan sekadar menyampaikan maklumat, tetapi menafikan pergantungan kepada makhluk dan menetapkan hati hanya kepada Allah. Gerbang utama yang membuka hati manusia untuk menerima iman daripada Allah.</div>
+      <div class="insight-box">✨ Dakwah bukan sekadar menyampaikan maklumat, tetapi menafikan pergantungan kepada makhluk dan menetapkan hati hanya kepada Allah. Gerbang utama yang membuka hati manusia untuk menerima iman daripada Allah.</div>
     </div>
   </section>
 
-  <!-- 9.6 MUJAHADAH -->
+  <!-- ================= 9.6 MUJAHADAH ================= -->
   <section id="9-6">
-    <div class="badge-section">🟪 9.6 — MUJAHADAH: PEMBERAT IMAN DALAM PEMBENTUKAN QALB</div>
-    <div class="card">
+    <div class="badge-chapter">🟪 9.6 — MUJAHADAH: PEMBERAT IMAN DALAM PEMBENTUKAN QALB</div>
+    <div class="section-card">
       <div class="arabic">﴿ إِنَّمَا ٱلْمُؤْمِنُونَ ٱلَّذِينَ ءَامَنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ ثُمَّ لَمْ يَرْتَابُوا۟ وَجَـٰهَدُوا۟ بِأَمْوَٰلِهِمْ وَأَنفُسِهِمْ ﴾</div>
       <div class="translation">“Sesungguhnya orang-orang beriman itu hanyalah mereka yang beriman kepada Allah dan Rasul-Nya, kemudian tidak ragu-ragu, dan berjihad dengan harta dan diri mereka.” — <strong>Al-Ḥujurāt 49:15</strong></div>
       <p><strong>Definisi muktamad:</strong> Mujahadah ialah pengorbanan harta dan diri yang lahir daripada dakwah, dilaksanakan melalui dakwah, taklim, ibadat dan khidmat, untuk menundukkan nafs dan membuka qalb kepada Allah.</p>
       <h3>Empat saluran utama:</h3>
-      <ul><li><strong>Dakwah</strong> — melatih lidah & keberanian (41:33)</li><li><strong>Taklim</strong> — menundukkan akal kepada wahyu (62:2)</li><li><strong>Ibadat</strong> — membina hubungan langsung (15:99, 29:45)</li><li><strong>Khidmat</strong> — memecahkan ego, melatih memberi (59:9)</li></ul>
+      <ul>
+        <li><strong>Dakwah</strong> — melatih lidah & keberanian (41:33)</li>
+        <li><strong>Taklim</strong> — menundukkan akal kepada wahyu (62:2)</li>
+        <li><strong>Ibadat</strong> — membina hubungan langsung (15:99, 29:45)</li>
+        <li><strong>Khidmat</strong> — memecahkan ego, melatih memberi (59:9)</li>
+      </ul>
       <p>📌 <strong>Prinsip kritikal:</strong> Harta tanpa diri melahirkan kibir; diri tanpa harta melahirkan pergantungan kepada makhluk. Hanya gabungan keduanya mematahkan cinta dunia dan ego.</p>
       <div class="arabic">﴿ وَٱلَّذِينَ جَـٰهَدُوا۟ فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
       <div class="translation">“Dan orang-orang yang bermujahadah pada jalan Kami, pasti Kami akan tunjukkan kepada mereka jalan-jalan Kami.” — <strong>Al-‘Ankabūt 29:69</strong></div>
-      <div class="insight">🔹 Mujahadah = pemberat Tauhidi yang menundukkan nafs melalui pengorbanan, menjadikan qalb layak menerima iman daripada Allah.</div>
+      <div class="insight-box">🔹 Mujahadah = pemberat Tauhidi yang menundukkan nafs melalui pengorbanan, menjadikan qalb layak menerima iman daripada Allah.</div>
     </div>
   </section>
 
-  <!-- 9.7 SABAR -->
+  <!-- ================= 9.7 SABAR ================= -->
   <section id="9-7">
-    <div class="badge-section">🟪 9.7 — SABAR: MEKANISME PENGUNCI IMAN DALAM QALB</div>
-    <div class="card">
+    <div class="badge-chapter">🟪 9.7 — SABAR: MEKANISME PENGUNCI IMAN DALAM QALB</div>
+    <div class="section-card">
       <div class="arabic">﴿ وَلَنَبْلُوَنَّكُم بِشَىْءٍۢ مِّنَ ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍۢ مِّنَ ٱلْأَمْوَٰلِ وَٱلْأَنفُسِ وَٱلثَّمَرَٰتِ ۗ وَبَشِّرِ ٱلصَّـٰبِرِينَ ﴾</div>
       <div class="translation">“Dan Kami pasti akan menguji kamu dengan sedikit ketakutan, kelaparan, kekurangan harta, jiwa dan hasil; berilah khabar gembira kepada orang-orang yang sabar.” — <strong>Al-Baqarah 2:155</strong></div>
       <p><strong>Definisi sabar (versi dikunci):</strong> Aktiviti hati yang terus memilih ketaatan kepada Allah dalam keadaan tekanan, tanpa berhenti daripada amal hingga akhir hayat. Sabar ialah mujahadah yang berterusan dalam dimensi masa.</p>
       <h3>Tiga dimensi sabar:</h3>
-      <ul><li><strong>Sabar dalam ketaatan</strong> — terus beramal walaupun letih, tanpa ganjaran dunia (Al-Ḥijr 15:99).</li><li><strong>Sabar meninggalkan maksiat</strong> — menahan diri ketika peluang terbuka.</li><li><strong>Sabar menghadapi ujian</strong> — tekanan, kata-kata manusia, kehilangan (Al-Muzzammil 73:10).</li></ul>
+      <ul>
+        <li><strong>Sabar dalam ketaatan</strong> — terus beramal walaupun letih, tanpa ganjaran dunia (Al-Ḥijr 15:99).</li>
+        <li><strong>Sabar meninggalkan maksiat</strong> — menahan diri ketika peluang terbuka.</li>
+        <li><strong>Sabar menghadapi ujian</strong> — tekanan, kata-kata manusia, kehilangan (Al-Muzzammil 73:10).</li>
+      </ul>
       <div class="arabic">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ ﴾</div>
       <div class="translation">“Jika kamu menolong agama Allah, nescaya Dia akan menolong kamu dan meneguhkan kedudukan kamu.” — <strong>Muḥammad 47:7</strong></div>
       <p>Rasulullah ﷺ bersabda: <em>“Sesungguhnya seorang lelaki beramal dengan amalan ahli syurga pada pandangan manusia, namun dia dari ahli neraka…”</em> (Bukhari-Muslim). Amal tanpa sabar boleh gugur. Sabar dipelihara melalui jamaah: <strong>﴿ وَتَوَاصَوْا۟ بِٱلصَّبْرِ ﴾</strong> (Al-‘Asr 103:3).</p>
-      <div class="insight">🔒 Sabar = pengunci iman. Mujahadah membuka qalb, sabar memastikan ia kekal terbuka sehingga iman stabil dan nusrah Allah tiba.</div>
+      <div class="insight-box">🔒 Sabar = pengunci iman. Mujahadah membuka qalb, sabar memastikan ia kekal terbuka sehingga iman stabil dan nusrah Allah tiba.</div>
     </div>
   </section>
 
-  <!-- 9.8 ATHAR IMAN -->
+  <!-- ================= 9.8 ATHAR IMAN ================= -->
   <section id="9-8">
-    <div class="badge-section">🟪 9.8 — ATHAR IMAN: KUALITI KEHIDUPAN</div>
-    <div class="card">
+    <div class="badge-chapter">🟪 9.8 — ATHAR IMAN: KUALITI KEHIDUPAN</div>
+    <div class="section-card">
       <div class="arabic">﴿ قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ ٱلَّذِينَ هُمْ فِى صَلَاتِهِمْ خَـٰشِعُونَ ﴾</div>
       <div class="translation">“Sesungguhnya berjayalah orang-orang yang beriman, iaitu mereka yang khusyuk dalam solat mereka.” — <strong>Al-Mu’minūn 23:1-2</strong></div>
       <p><strong>Athar iman</strong> ialah kesan iman dalam qalb yang membentuk kualiti kepada seluruh amal kehidupan. Bukan amal itu sendiri, tetapi <em>bagaimana</em> amal itu dilakukan. Masalah umat bukan ketiadaan amal, tetapi ketiadaan kualiti (khusyuk, amanah, ikhlas, adil).</p>
-      <table><thead><tr><th>Bidang</th><th>Tanpa Iman (rutin)</th><th>Dengan Iman (athar)</th></tr></thead><tbody><tr><td>Solat</td><td>gerak tanpa rasa</td><td>khusyuk, hadir hati</td></tr><tr><td>Muamalat</td><td>tipu daya</td><td>jujur, amanah</td></tr><tr><td>Syariat</td><td>formaliti</td><td>taat walaupun susah</td></tr><tr><td>Akhlaq</td><td>reaktif, ego</td><td>stabil, tawadhu’</td></tr><tr><td>Siasah</td><td>zalim, kuasa</td><td>adil, amanah</td></tr></tbody></table>
+      <table>
+        <thead><tr><th>Bidang</th><th>Tanpa Iman (rutin)</th><th>Dengan Iman (athar)</th></tr></thead>
+        <tbody>
+          <tr><td>Solat</td><td>gerak tanpa rasa</td><td>khusyuk, hadir hati</td></tr>
+          <tr><td>Muamalat</td><td>tipu daya</td><td>jujur, amanah</td></tr>
+          <tr><td>Syariat</td><td>formaliti</td><td>taat walaupun susah</td></tr>
+          <tr><td>Akhlaq</td><td>reaktif, ego</td><td>stabil, tawadhu’</td></tr>
+          <tr><td>Siasah</td><td>zalim, kuasa</td><td>adil, amanah</td></tr>
+        </tbody>
+      </table>
       <p>⚠️ <strong>Penting:</strong> cinta, takut, tawakkal (Bab 9.1) adalah inti iman, bukan athar. Athar ialah bagaimana rasa itu mengalir ke dalam kehidupan. Iman mengubah cara, bukan sekadar menambah amal.</p>
       <div class="arabic">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ ﴾</div>
       <div class="translation">“Jika kamu menolong agama Allah, nescaya Dia akan menolong kamu.” — <strong>Muḥammad 47:7</strong></div>
-      <div class="insight">🌟 Rantaian Tauhidi: Qalb (iman hidup) → lidah & anggota (amal) → kehidupan berkualiti → mengundang nusrah Allah. Kehidupan yang baik adalah hasil iman yang hidup.</div>
+      <div class="insight-box">🌟 Rantaian Tauhidi: Qalb (iman hidup) → lidah & anggota (amal) → kehidupan berkualiti → mengundang nusrah Allah. Kehidupan yang baik adalah hasil iman yang hidup.</div>
     </div>
   </section>
 
-  <!-- 9.9 IMAN MELAHIRKAN KETAATAN -->
+  <!-- ================= 9.9 IMAN MELAHIRKAN KETAATAN ================= -->
   <section id="9-9">
-    <div class="badge-sub">🟪 9.9 — IMAN MELAHIRKAN KETAATAN</div>
-    <div class="card">
+    <div class="badge-chapter">🟪 9.9 — IMAN MELAHIRKAN KETAATAN</div>
+    <div class="section-card">
       <div class="arabic">﴿ إِنَّمَا ٱلْمُؤْمِنُونَ ٱلَّذِينَ ءَامَنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ ثُمَّ لَمْ يَرْتَابُوا۟ وَجَـٰهَدُوا۟ بِأَمْوَٰلِهِمْ وَأَنفُسِهِمْ فِى سَبِيلِ ٱللَّهِ ۚ أُو۟لَـٰٓئِكَ هُمُ ٱلصَّـٰدِقُونَ ﴾</div>
       <div class="translation">“Sesungguhnya orang-orang yang beriman itu hanyalah mereka yang beriman kepada Allah dan Rasul-Nya, kemudian tidak ragu-ragu, dan berjihad dengan harta dan diri mereka di jalan Allah; mereka itulah orang-orang yang benar.” — <strong>Al-Ḥujurāt 49:15</strong></div>
       <p>Iman yang hidup pasti melahirkan ketaatan. Iman bukan sekadar rasa dalam hati, tetapi kekuatan yang menggerakkan anggota untuk taat. <strong>Ketaatan bukan dipaksa dari luar, tetapi lahir daripada iman dalam qalb.</strong> Perbezaan kritikal: amal tanpa ketaatan (kerana kebiasaan/tekanan) vs amal dalam ketaatan (kerana Allah, mengikut Rasulullah).</p>
-      <div class="insight">✨ Ketaatan meliputi seluruh kehidupan: ibadat, muamalat, syariat, akhlaq, siasah. Dan ia membawa ganjaran dan nusrah Allah (An-Nisā’ 4:13).</div>
+      <div class="insight-box">✨ Ketaatan meliputi seluruh kehidupan: ibadat, muamalat, syariat, akhlaq, siasah. Dan ia membawa ganjaran dan nusrah Allah (An-Nisā’ 4:13).</div>
     </div>
   </section>
 
-  <!-- 9.10 KETAATAN MEMBUKA KEFAHAMAN -->
+  <!-- ================= 9.10 KETAATAN MEMBUKA KEFAHAMAN ================= -->
   <section id="9-10">
-    <div class="badge-sub">🟪 9.10 — KETAATAN MEMBUKA KEFAHAMAN AGAMA</div>
-    <div class="card">
+    <div class="badge-chapter">🟪 9.10 — KETAATAN MEMBUKA KEFAHAMAN AGAMA</div>
+    <div class="section-card">
       <div class="arabic">﴿ وَٱلَّذِينَ جَـٰهَدُوا۟ فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
       <div class="translation">“Dan orang-orang yang bermujahadah di jalan Kami, pasti Kami akan tunjukkan kepada mereka jalan-jalan Kami.” — <strong>Al-‘Ankabūt 29:69</strong></div>
       <p>Kefahaman bukan permulaan, tetapi natijah ketaatan. Ramai terperangkap dengan “faham dahulu baru amal”, sedangkan jalan sebenar: <strong>iman → taat → Allah beri kefahaman</strong>. Taqwa melahirkan furqan (Al-Anfāl 8:29). Kisah Umar r.a. dalam Perjanjian Hudaibiyah: beliau taat walaupun belum faham, kemudian Allah buka kefahaman dan turunkan <em>“inna fataḥnā laka fatḥan mubīnā”</em> (Al-Fatḥ 48:1).</p>
@@ -458,22 +466,22 @@
     </div>
   </section>
 
-  <!-- 9.11 SUASANA IMAN: MASJID & RUMAH -->
+  <!-- ================= 9.11 SUASANA IMAN ================= -->
   <section id="9-11">
-    <div class="badge-sub">🟪 9.11 — SUASANA IMAN: MASJID DAN RUMAH</div>
-    <div class="card">
+    <div class="badge-chapter">🟪 9.11 — SUASANA IMAN: MASJID DAN RUMAH</div>
+    <div class="section-card">
       <div class="arabic">﴿ فِى بُيُوتٍ أَذِنَ ٱللَّهُ أَن تُرْفَعَ وَيُذْكَرَ فِيهَا ٱسْمُهُ يُسَبِّحُ لَهُۥ فِيهَا بِٱلْغُدُوِّ وَٱلْآصَالِ ﴾</div>
       <div class="translation">“Di rumah-rumah yang Allah izinkan untuk dimuliakan dan disebut nama-Nya di dalamnya…” — <strong>An-Nūr 24:36</strong></div>
       <p>Iman tidak hidup dalam kekosongan. Ia memerlukan <strong>suasana</strong>: masjid sebagai pusat pembinaan iman secara jemaah, rumah sebagai sambungan yang mengekalkan iman. Hadith: <em>“Perumpamaan rumah yang disebut nama Allah dan yang tidak seperti yang hidup dan yang mati”</em> (Bukhari-Muslim).</p>
       <p><strong>Pelajaran dari sirah:</strong> Ahlus Suffah hidup dalam suasana masjid, hati lembut dan mudah berkorban. Delegasi Bani Thaqif ditempatkan di Masjid Nabawi — tanpa perdebatan panjang, hati menjadi lembut kerana suasana yang dipenuhi malaikat. Suasana iman adalah <strong>Asbab Mutlak Asli</strong>.</p>
-      <div class="insight">🏛️ Masjid → membina iman. 🏠 Rumah → mengekalkan iman. Tanpa keduanya, iman sukar stabil.</div>
+      <div class="insight-box">🏛️ Masjid → membina iman. 🏠 Rumah → mengekalkan iman. Tanpa keduanya, iman sukar stabil.</div>
     </div>
   </section>
 
-  <!-- 9.12 STANDARD MUHAJIRIN & ANSAR -->
+  <!-- ================= 9.12 STANDARD MUHAJIRIN & ANSAR ================= -->
   <section id="9-12">
-    <div class="badge-sub">🟪 9.12 — STANDARD MUHAJIRIN DAN ANSAR</div>
-    <div class="card">
+    <div class="badge-chapter">🟪 9.12 — STANDARD MUHAJIRIN DAN ANSAR</div>
+    <div class="section-card">
       <div class="arabic">﴿ وَٱلسَّـٰبِقُونَ ٱلْأَوَّلُونَ مِنَ ٱلْمُهَـٰجِرِينَ وَٱلْأَنصَارِ وَٱلَّذِينَ ٱتَّبَعُوهُم بِإِحْسَـٰنٍۢ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ﴾</div>
       <div class="translation">“Orang-orang yang terdahulu lagi yang pertama dari Muhajirin dan Ansar… Allah reda kepada mereka dan mereka reda kepada-Nya.” — <strong>At-Taubah 9:100</strong></div>
       <div class="arabic">﴿ وَٱلَّذِينَ ءَامَنُوا۟ وَهَاجَرُوا۟ وَجَـٰهَدُوا۟ فِى سَبِيلِ ٱللَّهِ وَٱلَّذِينَ ءَاوَوا۟ وَّنَصَرُوٓا۟ أُو۟لَـٰٓئِكَ هُمُ ٱلْمُؤْمِنُونَ حَقًّۭا ﴾</div>
@@ -482,48 +490,64 @@
     </div>
   </section>
 
-  <!-- 9.13 RINGKASAN: AMANAH DAKWAH -->
+  <!-- ================= 9.13 RINGKASAN ================= -->
   <section id="9-13">
-    <div class="badge-sub">🟪 9.13 — RINGKASAN: AMANAH DAKWAH DAN JALAN HIDUPNYA IMAN</div>
-    <div class="card">
+    <div class="badge-chapter">🟪 9.13 — RINGKASAN: AMANAH DAKWAH DAN JALAN HIDUPNYA IMAN</div>
+    <div class="section-card">
       <div class="arabic">﴿ وَمَنْ أَحْسَنُ قَوْلًۭا مِّمَّن دَعَا إِلَى ٱللَّهِ وَعَمِلَ صَـٰلِحًۭا وَقَالَ إِنَّنِى مِنَ ٱلْمُسْلِمِينَ ﴾</div>
       <div class="translation">“Siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah, beramal soleh, dan berkata: sesungguhnya aku dari kalangan orang Islam.” — <strong>Fussilat 41:33</strong></div>
       <p>Iman tidak datang dengan sendiri. Jalan iman: <strong>Dakwah → Mujahadah → Sabar → Allah memasukkan iman</strong>. Tanpa dakwah, hati kembali bergantung kepada makhluk dan syirik tersembunyi (Yūsuf 12:106). Sirah sahabat (Abu Bakr, Umar, Muhajirin-Ansar) menunjukkan dakwah mengubah pergantungan hati kepada Allah. Dakwah bukan pilihan, tetapi jalan hidup iman.</p>
-      <div class="insight">🌟 “Dakwah tidak memusnahkan dunia, tetapi menjadikan dunia alat untuk akhirat.” Apabila dakwah ditinggalkan, pintu syirik terbuka tanpa disedari.</div>
+      <div class="insight-box">🌟 “Dakwah tidak memusnahkan dunia, tetapi menjadikan dunia alat untuk akhirat.” Apabila dakwah ditinggalkan, pintu syirik terbuka tanpa disedari.</div>
     </div>
   </section>
 
-  <!-- 9.14 RUMUSAN IMAN: TEMPAT, PINTU, ZAHIR -->
+  <!-- ================= 9.14 RUMUSAN ================= -->
   <section id="9-14">
-    <div class="badge-sub">🟪 9.14 — RUMUSAN IMAN: TEMPAT, PINTU DAN ZAHIRNYA</div>
-    <div class="card">
+    <div class="badge-chapter">🟪 9.14 — RUMUSAN IMAN: TEMPAT, PINTU DAN ZAHIRNYA</div>
+    <div class="section-card">
       <p>Hadith 70 cabang iman (riwayat Bukhari & Muslim): <em>“Iman itu lebih 70 cabang, yang tertinggi ucapan Lā ilāha illallāh, yang terendah mengalihkan gangguan dari jalan.”</em></p>
       <p><strong>Struktur iman yang lengkap:</strong></p>
-      <ul><li><strong>Tempat iman</strong> → qalb (hati) — hakikat hidup yang ditetapkan Allah.</li><li><strong>Pintu iman</strong> → lidah (tauhid, dakwah, iqrar).</li><li><strong>Zahir iman</strong> → anggota (amal, akhlaq, ketaatan menyeluruh).</li></ul>
+      <ul>
+        <li><strong>Tempat iman</strong> → qalb (hati) — hakikat hidup yang ditetapkan Allah.</li>
+        <li><strong>Pintu iman</strong> → lidah (tauhid, dakwah, iqrar).</li>
+        <li><strong>Zahir iman</strong> → anggota (amal, akhlaq, ketaatan menyeluruh).</li>
+      </ul>
       <div class="arabic">﴿ وَلَـٰكِنَّ ٱللَّهَ حَبَّبَ إِلَيْكُمُ ٱلْإِيمَـٰنَ وَزَيَّنَهُۥ فِى قُلُوبِكُمْ ﴾</div>
       <div class="translation">“Allah menjadikan iman itu dicintai oleh kamu dan menghiasinya di dalam hati kamu.” — <strong>Al-Ḥujurāt 49:7</strong></div>
       <p>📌 <strong>Kesimpulan Muktamad Bab 9:</strong> Iman berada dalam qalb, pintunya lidah, zahirnya anggota. Iman yang hidup melahirkan ketaatan, membuka kefahaman, dipelihara dalam suasana masjid & rumah, dan standardnya adalah mengikuti jejak Muhajirin dan Ansar dalam jamaah. Agama tanpa iman yang hidup hanya tinggal kulit. Namun apabila iman hidup, seluruh kehidupan berubah menuju redha Allah.</p>
-      <div class="insight">🔒 <strong>Iman tempatnya dalam qalb, pintunya lidah, dan dizahirkan melalui anggota dalam bentuk amal sebagai kualiti kehidupan.</strong></div>
+      <div class="insight-box">🔒 <strong>Iman tempatnya dalam qalb, pintunya lidah, dan dizahirkan melalui anggota dalam bentuk amal sebagai kualiti kehidupan.</strong></div>
     </div>
   </section>
 
   <hr />
-  <div id="nota" class="footnote-block">
-    <h3 style="font-size: 1rem; margin-bottom: 0.4rem;">📎 Rujukan & Nota Kaki (9.0 – 9.14)</h3>
-    <p><strong>9.0-9.3:</strong> ① Al-Jumu‘ah 62:5 ② Al-Ḥujurāt 49:7 ③ Al-Mujādilah 58:22 ④ Al-Anfāl 8:2-3 ⑤ Al-Ḥadīd 57:16 ⑥ Al-‘Ankabūt 29:2.<br>
-    <strong>9.4-9.8:</strong> ① Al-‘Ankabūt 29:2 ② Yūsuf 12:108 ③ At-Tawbah 9:41 ④ Al-Furqān 25:52 ⑤ Al-Jumu‘ah 62:2 ⑥ Al-Ḥijr 15:99 ⑦ Al-‘Ankabūt 29:45 ⑧ Al-Ḥashr 59:9 ⑨ Muḥammad 47:31 ⑩ Al-Ḥujurāt 49:7 ⑪ Al-Baqarah 2:155 ⑫ Al-Mu’minūn 23:1-2.<br>
-    <strong>9.9-9.14:</strong> ① Al-Ḥujurāt 49:15 ② An-Nisā’ 4:13 ③ Al-‘Ankabūt 29:69 ④ Al-Anfāl 8:29 ⑤ Al-Fatḥ 48:1 ⑥ An-Nūr 24:36 ⑦ At-Taubah 9:18 ⑧ Al-Aḥzāb 33:34 ⑨ At-Taubah 9:100 ⑩ Al-Anfāl 8:74 ⑪ Āli ‘Imrān 3:103 ⑫ Yūsuf 12:106 ⑬ At-Taubah 9:40. Hadith riwayat Bukhari & Muslim.</p>
-    <p>📖 Semua terjemahan berdasarkan maksud ayat. Kerangka 3 Asbab — selaras dengan manhaj Ahl al-Sunnah wa al-Jamā‘ah.</p>
+  <div id="footnotes" class="footnote">
+    <h3 style="font-size:1.1rem;">📎 Nota Kaki & Rujukan</h3>
+    <p><strong>9.0:</strong> ① Al-Jumu‘ah 62:5 ② Al-Ḥujurāt 49:7 ③ Al-Mujādilah 58:22 ④ Al-Anfāl 8:2 ⑤ Al-Ḥadīd 57:16 ⑥ Al-‘Ankabūt 29:2</p>
+    <p><strong>9.1:</strong> ① Al-Mujādilah 58:22 ② Al-Ḥujurāt 49:7 ③ Al-Anfāl 8:2–3 ④ Al-Baqarah 2:165 ⑤ Āli ‘Imrān 3:175 ⑥ Ar-Ra‘d 13:28 ⑦ Musnad Aḥmad.</p>
+    <p><strong>9.2:</strong> ① Yūsuf 12:108 ② Muḥammad 47:19 ③ al-‘Ankabūt 29:69 ④ Al-Anfāl 8:2–3 ⑤ Ṣaḥīḥ Bukhari & Muslim ⑥ Ṣaḥīḥ Muslim (cabang iman) ⑦ Al-Ḥujurāt 49:7.</p>
+    <p><strong>9.3:</strong> ① Al-Anfāl 8:2 ② Hadith Jibril (Muslim) ③ Al-Jumu‘ah 62:5 ④ Yūnus 10:31 ⑤ Adh-Dhāriyāt 51:56 ⑥ Al-A‘rāf 7:180 ⑦ Al-Ḥadīd 57:16 ⑧ Al-Mujādilah 58:22.</p>
+    <p><strong>9.4:</strong> ① Al-‘Ankabūt 29:2 ② Yūsuf 12:108 ③ At-Tawbah 9:41 ④ Al-Furqān 25:52 ⑤ Al-Jumu‘ah 62:2 ⑥ Al-Ḥijr 15:99 ⑦ Al-‘Ankabūt 29:45 ⑧ Al-Ḥashr 59:9 ⑨ Muḥammad 47:31 ⑩ Al-Ḥujurāt 49:7.</p>
+    <p><strong>9.5:</strong> ① Fussilat 41:33 ② Yūnus 10:31 ③ Al-Baqarah 2:255 ④ Al-Furqān 25:52 ⑤ Al-‘Ankabūt 29:69 ⑥ Al-Muddaththir 74:1-2 ⑦ Al-Ḥujurāt 49:7.</p>
+    <p><strong>9.6:</strong> ① Al-‘Ankabūt 29:2 ② Al-Ḥujurāt 49:15 ③ Al-‘Ankabūt 29:69 ④ Fussilat 41:33 ⑤ Al-Jumu‘ah 62:2 ⑥ Al-Ḥijr 15:99 ⑦ Al-‘Ankabūt 29:45 ⑧ Al-Ḥashr 59:9.</p>
+    <p><strong>9.7:</strong> ① Al-Baqarah 2:155 ② Muḥammad 47:31 ③ Al-Ḥijr 15:99 ④ Al-Muzzammil 73:10 ⑤ Al-‘Ankabūt 29:69 ⑥ Hadith riwayat Bukhari & Muslim ⑦ Al-‘Asr 103:3.</p>
+    <p><strong>9.8:</strong> ① Al-Mu’minūn 23:1-2 ② Muḥammad 47:7.</p>
+    <p><strong>9.9:</strong> ① Al-Ḥujurāt 49:15 ② An-Nisā’ 4:13.</p>
+    <p><strong>9.10:</strong> ① Al-‘Ankabūt 29:69 ② Al-Anfāl 8:29 ③ Al-Fatḥ 48:1.</p>
+    <p><strong>9.11:</strong> ① An-Nūr 24:36 ② At-Taubah 9:18 ③ Al-Aḥzāb 33:34 ④ Hadith riwayat Bukhari & Muslim.</p>
+    <p><strong>9.12:</strong> ① At-Taubah 9:100 ② Al-Anfāl 8:74 ③ Al-Ḥashr 59:9 ④ Āli ‘Imrān 3:103.</p>
+    <p><strong>9.13:</strong> ① Al-Jumu‘ah 62:5 ② Fussilat 41:33 ③ Al-‘Ankabūt 29:69 ④ Yūsuf 12:106 ⑤ At-Taubah 9:40 ⑥ Al-Ḥashr 59:9 ⑦ At-Taubah 9:100.</p>
+    <p><strong>9.14:</strong> ① Hadith 70 cabang iman (Bukhari & Muslim) ② Al-Ḥujurāt 49:7.</p>
+    <p>📌 Semua terjemahan berdasarkan maksud ayat. Kerangka 3 Asbab — selaras dengan Ahl al-Sunnah wa al-Jamā‘ah.</p>
   </div>
 
   <div style="margin: 1.8rem 0 0.5rem; text-align: right;">
-    <a href="#top" style="background: var(--accent-light); padding: 0.3rem 1rem; border-radius: 50px; text-decoration: none; font-size: 0.8rem;">↑ Kembali ke atas ↑</a>
+    <a href="#top" class="toplink" style="text-decoration: none; background: var(--accent-light); padding: 0.3rem 1rem; border-radius: 50px;">↑ Kembali ke atas ↑</a>
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>© 3asbab.org — Arkib bacaan sahaja. Bab 9: Iman sebagai rasa & pembinaan hati. “Sesungguhnya orang-orang beriman itu hanyalah mereka yang hatinya bergetar apabila disebut nama Allah.” (Al-Anfāl 8:2)</p>
+    <p>© 3asbab.org — Arkib bacaan sahaja. Iman: rasa & pembinaan hati berdasarkan al-Qur’an dan sunnah. “Sesungguhnya orang-orang beriman itu hanyalah mereka yang hatinya bergetar apabila disebut nama Allah.” (Al-Anfāl 8:2)</p>
   </div>
 </footer>
 
