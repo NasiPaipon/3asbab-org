@@ -431,5 +431,52 @@
     </div>
   </footer>
 
+        <p>📌 Semua terjemahan berdasarkan maksud ayat. Kerangka 3 Asbab — selaras dengan Ahl al-Sunnah wa al-Jamā‘ah.</p>
+      </div>
+
+      <div style="margin: 1.8rem 0 0.5rem; text-align: right;">
+        <a href="#top" class="toplink" style="text-decoration: none; background: var(--accent-light); padding: 0.3rem 1rem; border-radius: 50px;">↑ Kembali ke atas ↑</a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>© 3asbab.org — Arkib bacaan sahaja. "Sesungguhnya pertolongan Allah itu dekat." (Al-Baqarah 2:214)</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Fungsi download PDF menggunakan window.print() - lebih stabil
+    function downloadPDF() {
+      // Tukar button text
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+      
+      // Sediakan meta untuk PDF
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+
+      if (coverTitle) coverTitle.innerHTML = 'Bab 0 — MUKADIMAH: LAUT MERAH DAN RESET TAUHIDI';
+      if (coverSubtitle) coverSubtitle.textContent = 'Pemahaman Tauhidi Berasaskan al-Qur\'an dan Sunnah';
+      if (metaTitle) metaTitle.textContent = 'Bab 0 — MUKADIMAH: LAUT MERAH DAN RESET TAUHIDI';
+      
+      // Trigger print (yang akan membuka dialog Save as PDF)
+      setTimeout(() => {
+        window.print();
+        
+        // Kembalikan button selepas print dialog ditutup
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 100);
+    }
+  </script>
 </body>
 </html>
+```
