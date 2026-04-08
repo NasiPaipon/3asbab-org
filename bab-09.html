@@ -28,6 +28,7 @@
       --pdf-muted: #5b6573;
       --pdf-paper: #fffefb;
     }
+
     body {
       font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
       background: white;
@@ -35,11 +36,13 @@
       line-height: 1.7;
       scroll-behavior: smooth;
     }
+
     .wrap {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 var(--pad);
     }
+
     .topbar {
       background: var(--bg-soft);
       border-bottom: 1px solid var(--border-light);
@@ -49,6 +52,7 @@
       background: rgba(255,255,255,0.96);
       backdrop-filter: blur(6px);
     }
+
     .topbar nav {
       display: flex;
       gap: 1rem;
@@ -56,31 +60,37 @@
       align-items: center;
       padding: 0.75rem 0;
     }
+
     .topbar a {
       text-decoration: none;
       font-size: 0.9rem;
       color: var(--text-dark);
     }
+
     .brand {
       font-weight: 700;
       letter-spacing: -0.2px;
       margin-right: 0.5rem;
     }
+
     header {
       padding: 1.5rem 0 0.5rem 0;
     }
+
     h1 {
       font-size: clamp(1.8rem, 4vw, 2.4rem);
       line-height: 1.25;
       margin: 0.25rem 0 0.5rem;
       letter-spacing: -0.01em;
     }
+
     .meta {
       color: var(--muted);
       font-size: 0.85rem;
       border-left: 3px solid var(--accent);
       padding-left: 0.75rem;
     }
+
     .jump {
       background: #ffffff;
       border-bottom: 1px solid var(--border-light);
@@ -89,6 +99,7 @@
       z-index: 15;
       background: rgba(255,255,255,0.98);
     }
+
     .jump-inner {
       display: flex;
       flex-wrap: wrap;
@@ -97,6 +108,7 @@
       align-items: center;
       font-size: 0.8rem;
     }
+
     .jump a {
       padding: 0.2rem 0.7rem;
       border-radius: 40px;
@@ -107,13 +119,16 @@
       transition: 0.1s ease;
       color: var(--text-dark);
     }
+
     .jump a:hover {
       border-color: var(--accent);
       background: var(--accent-light);
     }
+
     main {
       padding: 1.2rem 0 3rem;
     }
+
     .badge-chapter {
       display: inline-block;
       font-weight: 700;
@@ -124,6 +139,7 @@
       border-radius: 30px;
       margin-bottom: 0.8rem;
     }
+
     h2 {
       font-size: 1.6rem;
       margin: 1.8rem 0 0.75rem;
@@ -131,12 +147,14 @@
       padding-left: 0.9rem;
       font-weight: 600;
     }
+
     h3 {
       font-size: 1.25rem;
       margin: 1.2rem 0 0.5rem;
       font-weight: 600;
       color: #0b3b2a;
     }
+
     .section-card {
       background: var(--bg-soft);
       border-radius: 1.2rem;
@@ -145,6 +163,7 @@
       border: 1px solid var(--border-light);
       box-shadow: var(--shadow-sm);
     }
+
     .arabic {
       font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
       font-size: 1.6rem;
@@ -154,6 +173,7 @@
       margin: 0.8rem 0;
       color: #1e293b;
     }
+
     .translation {
       font-style: normal;
       background: #f8fafc;
@@ -163,6 +183,7 @@
       border-left: 3px solid var(--accent);
       font-size: 0.95rem;
     }
+
     blockquote {
       background: var(--accent-light);
       border-radius: 0.8rem;
@@ -170,34 +191,40 @@
       margin: 1rem 0;
       font-style: normal;
     }
+
     .insight-box {
       background: #f1f5f9;
       padding: 0.8rem 1.2rem;
       border-radius: 1rem;
       margin: 1rem 0;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 1rem 0;
       font-size: 0.9rem;
     }
+
     th, td {
       border: 1px solid var(--border-light);
       padding: 0.6rem;
       text-align: left;
       vertical-align: top;
     }
+
     th {
       background: #f1f5f9;
       font-weight: 600;
     }
+
     hr {
       margin: 2rem 0;
       border: 0;
       height: 1px;
       background: var(--border-light);
     }
+
     .footnote {
       font-size: 0.8rem;
       color: var(--muted);
@@ -205,6 +232,7 @@
       border-top: 1px dashed var(--border-light);
       padding-top: 1rem;
     }
+
     footer {
       border-top: 1px solid var(--border-light);
       padding: 1.5rem 0;
@@ -212,6 +240,7 @@
       font-size: 0.8rem;
       margin-top: 1rem;
     }
+
     .toplink {
       font-size: 0.75rem;
       margin-top: 0.5rem;
@@ -1963,7 +1992,7 @@ cinta kepada Allah, yakin kepada Allah dan janji-Nya, takut kepada Allah, tawakk
     <p>© 3asbab.org — Arkib bacaan sahaja. Iman: rasa & pembinaan hati berdasarkan al-Qur’an dan sunnah. “Sesungguhnya orang-orang beriman itu hanyalah mereka yang hatinya bergetar apabila disebut nama Allah.” (Al-Anfāl 8:2)</p>
   </div>
 </footer>
-    </main>
+       </main>
 
     <footer>
       <div class="wrap">
@@ -1991,17 +2020,19 @@ cinta kepada Allah, yakin kepada Allah dan janji-Nya, takut kepada Allah, tawakk
       if (metaTitle) metaTitle.textContent = PDF_CONFIG.title;
     }
 
-    function enablePrintKitabMode() {
+    function enablePDFExportMode() {
+      document.body.classList.add('pdf-exporting');
       document.body.classList.add('pdf-print-mode');
     }
 
-    function disablePrintKitabMode() {
+    function disablePDFExportMode() {
+      document.body.classList.remove('pdf-exporting');
       document.body.classList.remove('pdf-print-mode');
     }
 
     function downloadPDF() {
       preparePDFMeta();
-      enablePrintKitabMode();
+      enablePDFExportMode();
 
       const element = document.getElementById('pdf-shell');
 
@@ -2012,7 +2043,8 @@ cinta kepada Allah, yakin kepada Allah dan janji-Nya, takut kepada Allah, tawakk
         html2canvas: {
           scale: 2,
           useCORS: true,
-          scrollY: 0
+          scrollY: 0,
+          backgroundColor: '#ffffff'
         },
         jsPDF: {
           unit: 'mm',
@@ -2024,19 +2056,20 @@ cinta kepada Allah, yakin kepada Allah dan janji-Nya, takut kepada Allah, tawakk
         }
       };
 
-      html2pdf()
-        .set(opt)
-        .from(element)
-        .save()
-        .then(() => {
-          disablePrintKitabMode();
-        })
-        .catch(() => {
-          disablePrintKitabMode();
-        });
+      setTimeout(() => {
+        html2pdf()
+          .set(opt)
+          .from(element)
+          .save()
+          .then(() => {
+            disablePDFExportMode();
+          })
+          .catch((err) => {
+            console.error(err);
+            disablePDFExportMode();
+          });
+      }, 150);
     }
   </script>
-</body>
-</html>
 </body>
 </html>
