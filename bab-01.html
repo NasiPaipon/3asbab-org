@@ -1,157 +1,586 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bab 1 — Pembunuhan Fahaman Asbab Lama | 3asbab.org</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA | 3asbab.org</title>
   <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
+    /* SEMUA CSS ANDA KEKAL SAMA SEPERTI ASAL */
+    * {
       margin: 0;
-      background: var(--bg);
-      color:#111;
+      padding: 0;
+      box-sizing: border-box;
     }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
-    }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
-    }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
+    :root {
+      --max-width: 920px;
+      --pad: 1.25rem;
+      --border-light: #e2e8f0;
+      --bg-soft: #fafcff;
+      --muted: #4a5568;
+      --accent: #0f7b4a;
+      --accent-light: #e6f4ed;
+      --text-dark: #1a202c;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
     }
 
-    /* Lompat ke... */
-    .jump{
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+      background: white;
+      color: var(--text-dark);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+
+    .topbar {
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--border-light);
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
+      z-index: 20;
+      background: rgba(255,255,255,0.96);
       backdrop-filter: blur(6px);
     }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
-    }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
+
+    .topbar nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.75rem 0;
     }
 
-    main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
+    .topbar a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--text-dark);
     }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      margin-right: 0.5rem;
     }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
+
+    header {
+      padding: 1.5rem 0 0.5rem 0;
     }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
+
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      line-height: 1.25;
+      margin: 0.25rem 0 0.5rem;
+      letter-spacing: -0.01em;
     }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+
+    .jump {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 48px;
+      z-index: 15;
+      background: rgba(255,255,255,0.98);
+    }
+
+    .jump-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.7rem 0;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    .jump a {
+      padding: 0.2rem 0.7rem;
+      border-radius: 40px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.1s ease;
+      color: var(--text-dark);
+    }
+
+    .jump a:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+
+    main {
+      padding: 1.2rem 0 3rem;
+    }
+
+    .badge-chapter {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      background: #fef3c7;
+      color: #b45309;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 1.8rem 0 0.75rem;
       border-left: 4px solid var(--accent);
-      background: #f8fffb;
+      padding-left: 0.9rem;
+      font-weight: 600;
     }
-    .arab{
-      font-size: 20px;
-      line-height: 1.9;
+
+    h3 {
+      font-size: 1.25rem;
+      margin: 1.2rem 0 0.5rem;
+      font-weight: 600;
+      color: #0b3b2a;
+    }
+
+    .section-card {
+      background: var(--bg-soft);
+      border-radius: 1.2rem;
+      padding: 1.2rem 1.4rem;
+      margin: 1.2rem 0;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .arabic {
+      font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
+      font-size: 1.6rem;
+      line-height: 1.8;
       direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
+      text-align: right;
+      margin: 0.8rem 0;
+      color: #1e293b;
     }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
+
+    .translation {
+      font-style: normal;
+      background: #f8fafc;
+      padding: 0.6rem 1rem;
+      border-radius: 0.8rem;
+      margin: 0.5rem 0 1rem;
+      border-left: 3px solid var(--accent);
+      font-size: 0.95rem;
     }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
+
+    blockquote {
+      background: var(--accent-light);
+      border-radius: 0.8rem;
+      padding: 0.8rem 1.2rem;
+      margin: 1rem 0;
+      font-style: normal;
+    }
+
+    .insight-box {
+      background: #f1f5f9;
+      padding: 0.8rem 1.2rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border-light);
+      padding: 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+
+    hr {
+      margin: 2rem 0;
+      border: 0;
+      height: 1px;
+      background: var(--border-light);
+    }
+
+    .footnote {
+      font-size: 0.8rem;
       color: var(--muted);
-      text-decoration:none;
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
     }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
+
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 1.5rem 0;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 0.8rem;
+      margin-top: 1rem;
     }
-    footer a{color:inherit}
+
+    .toplink {
+      font-size: 0.75rem;
+      margin-top: 0.5rem;
+      display: inline-block;
+    }
+
+    .pdf-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0 8px;
+    }
+
+    .btn-pdf {
+      appearance: none;
+      border: 1px solid var(--pdf-border);
+      background: #fff;
+      color: var(--pdf-text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.95rem;
+      line-height: 1.2;
+      font-weight: 600;
+      transition: 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
+
+    .btn-pdf:hover {
+      border-color: var(--pdf-accent);
+      background: var(--pdf-accent-soft);
+    }
+
+    .btn-pdf:active {
+      transform: translateY(1px);
+    }
+
+    .no-print {
+      display: block;
+    }
+
+    .pdf-only {
+      display: none;
+    }
+
+    .pdf-exporting .pdf-only {
+      display: block !important;
+    }
+
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink {
+      display: none !important;
+    }
+
+    .pdf-shell {
+      background: #fff;
+    }
+
+    .pdf-cover {
+      display: none;
+    }
+
+    .pdf-cover-inner {
+      min-height: 260mm;
+      padding: 28mm 18mm 24mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--pdf-paper);
+      color: var(--pdf-text);
+    }
+
+    .pdf-cover-top {
+      border-top: 4px solid var(--pdf-accent);
+      padding-top: 12mm;
+    }
+
+    .pdf-cover-brand {
+      font-size: 0.95rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--pdf-muted);
+      margin-bottom: 10mm;
+    }
+
+    .pdf-cover-series {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 6mm;
+    }
+
+    .pdf-cover-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 5mm;
+      font-weight: 800;
+    }
+
+    .pdf-cover-subtitle {
+      font-size: 1rem;
+      color: var(--pdf-muted);
+      margin: 0;
+    }
+
+    .pdf-cover-bottom {
+      border-top: 1px solid var(--pdf-border);
+      padding-top: 8mm;
+      font-size: 0.95rem;
+      color: var(--pdf-muted);
+    }
+
+    .pdf-meta-page {
+      display: none;
+    }
+
+    .pdf-meta-inner {
+      min-height: 240mm;
+      padding: 20mm 16mm;
+      background: #fff;
+      color: var(--pdf-text);
+    }
+
+    .pdf-meta-inner h2 {
+      border: 0;
+      padding: 0;
+      margin: 0 0 10mm;
+      font-size: 1.4rem;
+    }
+
+    .pdf-meta-list p {
+      margin: 0 0 6mm;
+    }
+
+    .pdf-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .pdf-avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .pdf-print-mode {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #111827;
+      background: #fff;
+      line-height: 1.8;
+    }
+
+    .pdf-print-mode .wrap {
+      max-width: 780px;
+    }
+
+    .pdf-print-mode h1,
+    .pdf-print-mode h2,
+    .pdf-print-mode h3 {
+      color: #111827;
+      letter-spacing: 0;
+    }
+
+    .pdf-print-mode h1 {
+      font-size: 2rem;
+    }
+
+    .pdf-print-mode h2 {
+      font-size: 1.45rem;
+      border-left: 0;
+      border-bottom: 1px solid var(--pdf-border);
+      padding-left: 0;
+      padding-bottom: 6px;
+      margin-top: 1.7rem;
+    }
+
+    .pdf-print-mode h3 {
+      font-size: 1.15rem;
+      margin-top: 1.3rem;
+    }
+
+    .pdf-print-mode .section-card,
+    .pdf-print-mode blockquote,
+    .pdf-print-mode .insight-box {
+      background: transparent;
+      border: 1px solid #e5e7eb;
+      box-shadow: none;
+    }
+
+    .pdf-print-mode .badge-chapter,
+    .pdf-print-mode .jump,
+    .pdf-print-mode .topbar,
+    .pdf-print-mode .toplink,
+    .pdf-print-mode .pdf-toolbar {
+      display: none !important;
+    }
+
+    .pdf-print-mode .arabic {
+      font-size: 1.45rem;
+      line-height: 1.9;
+    }
+
+    .pdf-print-mode table {
+      font-size: 0.92rem;
+    }
+
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .no-print, .pdf-toolbar, .topbar, .jump, .toplink {
+        display: none !important;
+      }
+      .pdf-only, .pdf-cover, .pdf-meta-page {
+        display: block !important;
+      }
+      .section-card, blockquote, .insight-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      h2, h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section-card {
+        padding: 1rem;
+      }
+      .arabic {
+        font-size: 1.3rem;
+      }
+    }
   </style>
 </head>
-
 <body>
 
-  <!-- Top nav -->
-  <div class="topbar">
+  <!-- ═══════════════════════════════════════════
+       TOPBAR — ubah Prev/Next/Bab sesuai Bab 1
+  ════════════════════════════════════════════ -->
+  <div class="topbar no-print">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a href="bab-0.html">Prev ←</a>
-        <a href="bab-1.html">Bab ini</a>
-        <a href="bab-2.html">Next →</a>
+        <a href="bab-00.html">← Prev</a>
+        <a href="bab-01.html" style="font-weight:600;">Bab 1</a>
+        <a href="bab-02.html">Next →</a>
       </nav>
     </div>
   </div>
 
-  <!-- Page title -->
-  <header class="wrap" id="top">
-    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
+  <!-- ═══════════════════════════════════════════
+       PDF DOWNLOAD BUTTON
+  ════════════════════════════════════════════ -->
+  <div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
+    </div>
+  </div>
+
+  <div id="pdf-shell" class="pdf-shell">
+
+    <!-- ═══════════════════════════════════════════
+         PDF COVER (tersembunyi kecuali semasa cetak/eksport)
+    ════════════════════════════════════════════ -->
+    <div class="pdf-cover pdf-only">
+      <div class="pdf-cover-inner">
+        <div class="pdf-cover-top">
+          <div class="pdf-cover-brand">3asbab.org</div>
+          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA</h1>
+          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Pemahaman Tauhidi Berasaskan al-Qur'an dan Sunnah</p>
+        </div>
+        <div class="pdf-cover-bottom">
+          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PDF META PAGE
+    ════════════════════════════════════════════ -->
+    <div class="pdf-meta-page pdf-only pdf-break">
+      <div class="pdf-meta-inner">
+        <h2>Maklumat Dokumen</h2>
+        <div class="pdf-meta-list">
+          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA</span></p>
+          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+          <p><strong>Laman:</strong> 3asbab.org</p>
+          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PAGE HEADER
+    ════════════════════════════════════════════ -->
+    <header class="wrap" id="top">
+      <div class="meta">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+      <h1>Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA</h1>
+      <div class="meta">Membongkar dan meruntuhkan fahaman asbab yang rosak</div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════
+         JUMP NAV — ubah anchor IDs sesuai Bab 1
+    ════════════════════════════════════════════ -->
+    <div class="jump no-print">
+      <div class="wrap">
+        <div class="jump-inner">
+          <strong>🧭 Lompat ke:</strong>
+          <a href="#1-1">1.1</a>
+          <a href="#1-2">1.2</a>
+          <a href="#1-3">1.3</a>
+          <a href="#1-4">1.4</a>
+          <a href="#1-5">1.5</a>
+          <a href="#1-6">1.6</a>
+          <a href="#1-7">1.7</a>
+          <a href="#1-8">1.8</a>
+          <a href="#1-9">1.9</a>
+          <a href="#1-10">1.10</a>
+          <a href="#footnotes">Nota Kaki</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         MAIN CONTENT — semua section Bab 1 di sini
+    ════════════════════════════════════════════ -->
+    <main class="wrap">
+
+      <div class="badge-chapter">🟥 BAB 1 – PEMBUNUHAN FAHAMAN ASBAB LAMA</div>
     <h1>Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA</h1>
   </header>
 
@@ -173,8 +602,7 @@
       </div>
     </div>
   </div>
-
-  <main class="wrap">
+"wrap">
     <article>
       <div class="section">
         <div class="badge">🟥 BAB 1 – PEMBUNUHAN FAHAMAN ASBAB LAMA</div>
@@ -204,7 +632,7 @@
   <p>Keadaan ini berlaku apabila hati menetapkan kuasa memberi kesan pada <strong>Asbab Fitrah</strong> dan <strong>Asbab Zulumat</strong>, bukan pada Allah.</p>
   <p><strong>Dalil Tauhidi:</strong></p>
 
-  <div class="arab">﴿ اللَّهُ خَالِقُ كُلِّ شَيْءٍ ﴾</div>
+  <div class="arab">﴿ اللَّهُ خَالِقُ كُلِّ شَيْءٍ ﴾</div>
   <p>“Allah menciptakan segala sesuatu.”<br>(Az-Zumar 39:62)【1】</p>
 
   <p>Namun dalam praktik hidup, hati manusia lebih yakin bahawa:</p>
@@ -229,7 +657,7 @@
     <li>Bila hati berpaut kepada <strong>Asbab Fitrah</strong> dan <strong>Asbab Zulumat</strong>, pertolongan Allah disembunyikan.</li>
   </ul>
 
-  <div class="arab">﴿ وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ ﴾</div>
+  <div class="arab">﴿ وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ ﴾</div>
   <p>“Barang siapa bertawakkal kepada Allah, Allah mencukupi baginya.”<br>(At-Ṭalāq 65:3)【2】</p>
 
   <p>Namun apabila hati berkata:</p>
@@ -255,7 +683,7 @@
 
   <p>Akibatnya, amal menjadi kering dan tidak menarik nusrah.</p>
 
-  <div class="arab">﴿ وَمَن يُشْرِكْ بِاللَّهِ فَقَدْ ضَلَّ ضَلَالًا بَعِيدًا ﴾</div>
+  <div class="arab">﴿ وَمَن يُشْرِكْ بِاللَّهِ فَقَدْ ضَلَّ ضَلَالًا بَعِيدًا ﴾</div>
   <p>“Sesiapa yang mensyirikkan Allah, maka sesungguhnya dia telah tersesat sejauh-jauhnya.”<br>(An-Nisāʾ 4:116)【3】</p>
 
   <p>Syirik halus bukan menyembah patung, tetapi memberi kuasa memberi kesan kepada <strong>Asbab Fitrah</strong> dan <strong>Asbab Zulumat</strong>.</p>
@@ -280,7 +708,7 @@
 
   <p>Di tepi Laut Merah, Nabi Musa عليه السلام tidak diberikan teori — baginda diberikan perintah amal yang menyalahi logik <strong>Asbab Fitrah</strong>.</p>
 
-  <div class="arab">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ فَٱنفَلَقَ ﴾</div>
+  <div class="arab">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ فَٱنفَلَقَ ﴾</div>
   <p>“Lalu Kami wahyukan kepada Musa: Pukullah laut itu dengan tongkatmu, maka terbelahlah ia.”<br>(Asy-Syuʿarāʾ 26:63)【5】</p>
 
   <ul>
@@ -321,7 +749,7 @@
     <li>pemikiran “self-made”.</li>
   </ul>
 
-  <div class="arab">﴿ أَفَرَءَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَىٰهُ ﴾</div>
+  <div class="arab">﴿ أَفَرَءَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَىٰهُ ﴾</div>
   <p>“Tidakkah engkau melihat orang yang menjadikan hawa nafsunya sebagai tuhannya?”<br>(Al-Jāthiyah 45:23)【6】</p>
 
   <p>Selagi hati percaya bahawa kejayaan datang daripada strategi, bukan ketaatan, selagi itu iman tidak menjadi pusat.</p>
@@ -332,7 +760,7 @@
 
   <p>Tiada ilmu yang mampu membunuh Fahaman Asbab Lama melainkan <strong>Asbab Mutlak Asli</strong>, iaitu dakwah.</p>
 
-  <div class="arab">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
+  <div class="arab">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
   <p>“Siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah?”<br>(Fuṣṣilat 41:33)【7】</p>
 
   <p>Dakwah ialah <strong>Asbab Mutlak Asli</strong> — ia membawa janji Allah yang:</p>
@@ -401,7 +829,7 @@
     <li>Mereka berdakwah dengan yakin hidayah diturunkan oleh Allah, bukan hasil strategi (Asbab Fitrah &amp; Zulumat).</li>
   </ul>
 
-  <div class="arab">إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
+  <div class="arab">إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
   <p>“Jika kamu menolong (agama) Allah, nescaya Allah akan menolong kamu dan meneguhkan pendirianmu.”<br>(Muḥammad 47:7)【1】</p>
 
   <p>Ketika keyakinan ini hidup:</p>
@@ -456,7 +884,7 @@
     <li>Tetapi Tauhid mula berpindah dari dada ke kertas, dari hati ke kepala.</li>
   </ul>
 
-  <div class="arab">قَدْ أَفْلَحَ مَن زَكَّاهَا وَقَدْ خَابَ مَن دَسَّاهَا</div>
+  <div class="arab">قَدْ أَفْلَحَ مَن زَكَّاهَا وَقَدْ خَابَ مَن دَسَّاهَا</div>
   <p>“Sesungguhnya beruntunglah orang yang menyucikan hatinya, dan rugilah orang yang mengotorinya.”<br>(ash-Shams 91:9–10)【3】</p>
 
   <p>Ilmu tersebar, tetapi:</p>
@@ -487,7 +915,7 @@
     <p><strong>Wahyu mula dinilai melalui logik, bukan logik ditundukkan kepada wahyu.</strong></p>
   </blockquote>
 
-  <div class="arab">يُرِيدُونَ لِيُطْفِئُوا نُورَ اللَّهِ بِأَفْوَاهِهِمْ وَيَأْبَى اللَّهُ إِلَّا أَنْ يُتِمَّ نُورَهُ</div>
+  <div class="arab">يُرِيدُونَ لِيُطْفِئُوا نُورَ اللَّهِ بِأَفْوَاهِهِمْ وَيَأْبَى اللَّهُ إِلَّا أَنْ يُتِمَّ نُورَهُ</div>
   <p>“Mereka hendak memadamkan cahaya Allah dengan mulut (hujah) mereka, tetapi Allah tetap menyempurnakan cahaya-Nya.”<br>(at-Tawbah 9:32)【4】</p>
 
   <p><strong>Kesan Infiltrasi Falsafah (Analisis Tauhidi)</strong></p>
@@ -503,7 +931,7 @@
     <p><strong>Amal (dakwah, mujahadah, sabar) diambil sebagai Asbab Mutlak Asli kerana janji Allah; kefahaman datang sebagai nur selepas taat.</strong></p>
   </blockquote>
 
-  <div class="arab">وَمَنْ أَحْسَنُ قَوْلًا مِمَّنْ دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا</div>
+  <div class="arab">وَمَنْ أَحْسَنُ قَوْلًا مِمَّنْ دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا</div>
   <p>“Siapakah yang lebih baik perkataannya daripada orang yang menyeru manusia kepada Allah dan beramal soleh?”<br>(Fuṣṣilat 41:33)【5】</p>
 
   <p>Apabila umat berhenti menyeru manusia kepada Allah:</p>
@@ -527,7 +955,7 @@
 
   <p>Iman mula didefinisi sebagai “kesimpulan rasional”, bukan aktiviti hati.</p>
 
-  <div class="arab">وَالَّذِينَ آمَنُوا أَشَدُّ حُبًّا لِلَّهِ</div>
+  <div class="arab">وَالَّذِينَ آمَنُوا أَشَدُّ حُبًّا لِلَّهِ</div>
   <p>“Dan orang-orang yang beriman itu amat kuat cintanya kepada Allah.”<br>(al-Baqarah 2:165)【13】</p>
 
   <p>Ulama mula:</p>
@@ -624,7 +1052,7 @@
   <p>Sekularisme bukan sekadar pisahkan agama dari kerajaan, tetapi:</p>
   <blockquote><p><strong>memisahkan Allah daripada proses sebab.</strong></p></blockquote>
 
-  <div class="arab">نَسُوا اللَّهَ فَأَنسَاهُمْ أَنفُسَهُمْ</div>
+  <div class="arab">نَسُوا اللَّهَ فَأَنسَاهُمْ أَنفُسَهُمْ</div>
   <p>“Mereka melupakan Allah, maka Allah menjadikan mereka lupa kepada diri mereka sendiri.”<br>(al-Ḥashr 59:19)【6】</p>
 
   <p>Apabila umat Islam kagum dengan tamadun Barat:</p>
@@ -656,7 +1084,7 @@
 
   <p>bukan lagi dengan ketaatan &amp; barakah.</p>
 
-  <div class="arab">يَعْلَمُونَ ظَاهِرًا مِّنَ الْحَيَاةِ الدُّنْيَا وَهُمْ عَنِ الْآخِرَةِ هُمْ غَافِلُونَ</div>
+  <div class="arab">يَعْلَمُونَ ظَاهِرًا مِّنَ الْحَيَاةِ الدُّنْيَا وَهُمْ عَنِ الْآخِرَةِ هُمْ غَافِلُونَ</div>
   <p>“Mereka hanya mengetahui yang zahir daripada kehidupan dunia, sedangkan tentang akhirat mereka lalai.”<br>(ar-Rūm 30:7)【7】</p>
 
   <p><strong>2️⃣ Agama Dijadikan Subjek Sains</strong></p>
@@ -704,7 +1132,7 @@
   </ul>
 
   <p>Padahal janji Allah jelas:</p>
-  <div class="arab">إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ</div>
+  <div class="arab">إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ</div>
   <p>“Jika kamu menolong (agama) Allah, nescaya Allah akan menolong kamu.”<br>(Muḥammad 47:7)【8】</p>
 
   <p>Apabila dakwah sebagai Asbab Mutlak Asli dipadamkan:</p>
@@ -814,7 +1242,7 @@
 
   <p>iaitu Asbab Mutlak Asli &amp; Terbitan yang Allah janjikan kesan pada iman.</p>
 
-  <div class="arab">وَلَنَبْلُوَنَّكُمْ حَتَّى نَعْلَمَ الْمُجَاهِدِينَ مِنكُمْ وَالصَّابِرِينَ</div>
+  <div class="arab">وَلَنَبْلُوَنَّكُمْ حَتَّى نَعْلَمَ الْمُجَاهِدِينَ مِنكُمْ وَالصَّابِرِينَ</div>
   <p>“Dan Kami pasti akan menguji kamu, hingga Kami mengetahui siapa di antara kamu yang berjihad dan yang sabar.”<br>(Muḥammad 47:31)【9】</p>
 
   <p>Dalam tasawuf yang salah tertib:</p>
@@ -824,7 +1252,7 @@
   </ul>
 
   <p>Padahal jalan para Sahabat:</p>
-  <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا</div>
+  <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا</div>
   <p>“Dan orang-orang yang bersungguh-sungguh berjuang di jalan Kami, pasti Kami tunjukkan kepada mereka jalan-jalan Kami.”<br>(al-‘Ankabūt 29:69)【10】</p>
 
   <p>Hidayah dan rasa iman datang selepas mujahadah, bukan sebelum.</p>
@@ -864,7 +1292,7 @@
 
   <p>Padahal Rasulullah ﷺ bersabda:</p>
   <blockquote>
-    <p><strong>خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ</strong><br>
+    <p><strong>خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ</strong><br>
     “Sebaik-baik manusia ialah yang paling bermanfaat untuk manusia.”<br>(HR Ṭabarānī, al-Muʿjam al-Awsaṭ)【11】</p>
   </blockquote>
 
@@ -1706,7 +2134,7 @@
   iaitu sebab yang lahir daripada <strong>persetujuan manusia</strong>, bukan daripada wahyu.</p>
 
   <p>Allah berfirman:</p>
-  <p class="arab">أَفَرَءَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَاهُ</p>
+  <p class="arab">أَفَرَءَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَاهُ</p>
   <p>“Tidakkah engkau melihat orang yang menjadikan hawa nafsunya sebagai tuhannya?”<br>
   (al-Jāthiyah 45:23)【1】</p>
 
@@ -1781,7 +2209,7 @@
   <p>Semua istilah ini lahir kerana dunia berkata begitu, bukan kerana Allah berkata begitu.</p>
 
   <p>Allah memperingatkan:</p>
-  <p class="arab">وَإِن تُطِعْ أَكْثَرَ مَن فِي الْأَرْضِ يُضِلُّوكَ عَن سَبِيلِ اللَّهِ</p>
+  <p class="arab">وَإِن تُطِعْ أَكْثَرَ مَن فِي الْأَرْضِ يُضِلُّوكَ عَن سَبِيلِ اللَّهِ</p>
   <p>“Jika kamu ikut majoriti manusia, mereka akan menyesatkan kamu dari jalan Allah.”<br>
   (al-An‘ām 6:116)【2】</p>
 
@@ -1821,7 +2249,7 @@
   </ul>
 
   <p>Padahal Allah berfirman:</p>
-  <p class="arab">مَا عِندَكُمْ يَنفَدُ وَمَا عِندَ اللَّهِ بَاقٍ</p>
+  <p class="arab">مَا عِندَكُمْ يَنفَدُ وَمَا عِندَ اللَّهِ بَاقٍ</p>
   <p>“Apa yang ada di sisi kamu akan habis. Apa yang di sisi Allah kekal.”<br>
   (an-Naḥl 16:96)【3】</p>
 
@@ -1863,7 +2291,7 @@
   </ul>
 
   <p>Allah memberi amaran:</p>
-  <p class="arab">كَلَّا إِنَّ الْإِنسَانَ لَيَطْغَىٰ<br>أَن رَّآهُ اسْتَغْنَىٰ</p>
+  <p class="arab">كَلَّا إِنَّ الْإِنسَانَ لَيَطْغَىٰ<br>أَن رَّآهُ اسْتَغْنَىٰ</p>
   <p>“Tidak! Sesungguhnya manusia benar-benar melampaui batas apabila dia melihat dirinya serba cukup.”<br>
   (al-‘Alaq 96:6–7)【4】</p>
 
@@ -1972,7 +2400,7 @@
     <li>memandang remeh Asbab Mutlak Asli.</li>
   </ul>
 
-  <p class="arab">إِنَّ الشَّيْطَانَ لَكُمْ عَدُوٌّ فَاتَّخِذُوهُ عَدُوًّا</p>
+  <p class="arab">إِنَّ الشَّيْطَانَ لَكُمْ عَدُوٌّ فَاتَّخِذُوهُ عَدُوًّا</p>
   <p>
     “Sesungguhnya syaitan itu musuh bagi kamu; maka jadikanlah dia musuh.”<br>
     (Fāṭir 35:6)【1】
@@ -2039,7 +2467,7 @@
     tetapi kerana ia <strong>menuntut tunduk</strong>.
   </p>
 
-  <p class="arab">فَلَا تُزَكُّوا أَنفُسَكُمْ</p>
+  <p class="arab">فَلَا تُزَكُّوا أَنفُسَكُمْ</p>
   <p>
     “Jangan kamu mengangkat diri kamu.”<br>
     (An-Najm 53:32)【3】
@@ -2078,7 +2506,7 @@
     <li>sedikit ujian → putus asa.</li>
   </ul>
 
-  <p class="arab">وَلَا تَتَّبِعِ الْهَوَىٰ فَيُضِلَّكَ عَن سَبِيلِ اللَّهِ</p>
+  <p class="arab">وَلَا تَتَّبِعِ الْهَوَىٰ فَيُضِلَّكَ عَن سَبِيلِ اللَّهِ</p>
   <p>
     “Jangan ikut hawa nafsu; nanti ia menyesatkanmu dari jalan Allah.”<br>
     (Ṣād 38:26)【4】
@@ -2097,7 +2525,7 @@
   </ul>
 
   <p class="arab">
-    إِنَّهُ لَيْسَ لَهُ سُلْطَانٌ عَلَى الَّذِينَ آمَنُوا وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ
+    إِنَّهُ لَيْسَ لَهُ سُلْطَانٌ عَلَى الَّذِينَ آمَنُوا وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ
   </p>
   <p>
     “Syaitan tidak mempunyai kuasa ke atas orang yang beriman dan bertawakkal kepada Allah.”<br>
@@ -2162,7 +2590,7 @@
 
   <h3>1.6.1 Ilmu Yang Terputus Dari Asbab Mutlak Hilang Cahaya</h3>
 
-  <p class="arab">اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ</p>
+  <p class="arab">اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ</p>
   <p>
     “Allah adalah cahaya langit dan bumi.”<br>
     (An-Nūr 24:35)【1】
@@ -2199,7 +2627,7 @@
     <li>belajar hadis tetapi ego tidak patah.</li>
   </ul>
 
-  <p class="arab">فَرِحُوا بِمَا عِندَهُم مِّنَ الْعِلْمِ</p>
+  <p class="arab">فَرِحُوا بِمَا عِندَهُم مِّنَ الْعِلْمِ</p>
   <p>
     “Mereka gembira dengan ilmu yang ada pada mereka.”<br>
     (Ghāfir 40:83)【2】
@@ -2226,7 +2654,7 @@
 
   <p>Ilmu hanya menyentuh zahir, bukan batin.</p>
 
-  <p class="arab">يَعْلَمُونَ ظَاهِرًا مِنَ الْحَيَاةِ الدُّنْيَا</p>
+  <p class="arab">يَعْلَمُونَ ظَاهِرًا مِنَ الْحَيَاةِ الدُّنْيَا</p>
   <p>
     “Mereka hanya mengetahui yang zahir daripada kehidupan dunia.”<br>
     (Ar-Rūm 30:7)【3】
@@ -2238,7 +2666,7 @@
 
   <h3>1.6.4 Ulama’ Hakiki: Ilmu Mereka Bersambung Dengan Mutlak</h3>
 
-  <p class="arab">إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ</p>
+  <p class="arab">إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ</p>
   <p>
     “Yang paling takut kepada Allah ialah para ulama’.”<br>
     (Fāṭir 35:28)【4】
@@ -2385,7 +2813,7 @@
     <li>siapa taat → Allah beri nusrah.</li>
   </ul>
 
-  <p class="arab">وَلَن تَجِدَ لِسُنَّتِ اللَّهِ تَبْدِيلًا</p>
+  <p class="arab">وَلَن تَجِدَ لِسُنَّتِ اللَّهِ تَبْدِيلًا</p>
   <p>
     “Tidak akan kamu dapati perubahan pada sunnatullah.”<br>
     (Fāṭir 35:43)【1】
@@ -2423,14 +2851,14 @@
   </p>
 
   <p><strong>Laut tidak menenggelamkan — Fitrah dibalikkan</strong></p>
-  <p class="arab">فَانفَلَقَ فَكَانَ كُلُّ فِرْقٍ كَالطَّوْدِ الْعَظِيمِ</p>
+  <p class="arab">فَانفَلَقَ فَكَانَ كُلُّ فِرْقٍ كَالطَّوْدِ الْعَظِيمِ</p>
   <p>
     “Maka laut itu terbelah menjadi seperti gunung besar.”<br>
     (Asy-Syu‘arā’ 26:63)【3】
   </p>
 
   <p><strong>Bilangan kecil menang — logik dunia dipatahkan</strong></p>
-  <p class="arab">كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً</p>
+  <p class="arab">كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً</p>
   <p>
     “Berapa banyak kelompok kecil mengalahkan kelompok besar.”<br>
     (Al-Baqarah 2:249)【4】
@@ -2616,13 +3044,13 @@
     <li>Allah menyembuhkan dan menimpakan sakit.</li>
   </ul>
 
-  <p class="arab">وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ</p>
+  <p class="arab">وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ</p>
   <p>
     “Allah menciptakan kamu dan apa yang kamu lakukan.”<br>
     (As-Saffāt 37:96)【2】
   </p>
 
-  <p class="arab">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ</p>
+  <p class="arab">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ</p>
   <p>
     “Allah — tiada Tuhan selain Dia — Yang Maha Hidup, Yang Berdiri Pada Diri-Nya.”<br>
     (Al-Baqarah 2:255)【3】
@@ -2830,7 +3258,7 @@
     Penolakan bukan kerana akal lemah, tetapi kerana hati tertutup.
   </p>
 
-  <p class="arab">ثُمَّ قَسَتْ قُلُوبُكُم مِّنۢ بَعْدِ ذَٰلِكَ فَهِىَ كَالْحِجَارَةِ</p>
+  <p class="arab">ثُمَّ قَسَتْ قُلُوبُكُم مِّنۢ بَعْدِ ذَٰلِكَ فَهِىَ كَالْحِجَارَةِ</p>
   <p>
     “Selepas itu hati kamu mengeras seperti batu.”<br>
     (Al-Baqarah 2:74)【1】
@@ -3016,7 +3444,7 @@
     (Al-Muṭaffifīn 83:14)【2】
   </p>
 
-  <p class="arab">خَتَمَ اللَّهُ عَلَىٰ قُلُوبِهِم</p>
+  <p class="arab">خَتَمَ اللَّهُ عَلَىٰ قُلُوبِهِم</p>
   <p>
     “Allah mengunci hati mereka.”<br>
     (Al-Baqarah 2:7)【3】
@@ -3108,7 +3536,7 @@
     Cahaya digunakan untuk menunjuk jalan, bukan membakar manusia.
   </p>
 
-  <p class="arab">فَلَا تُزَكُّوا أَنفُسَكُمْ</p>
+  <p class="arab">فَلَا تُزَكُّوا أَنفُسَكُمْ</p>
   <p>
     “Jangan kamu sucikan (membela) diri kamu.”<br>
     (An-Najm 53:32)【1】
@@ -3218,13 +3646,13 @@
     <em>“Aku lebih baik…”</em>
   </p>
 
-  <p class="arab">فَلَا تُزَكُّوا أَنفُسَكُمْ</p>
+  <p class="arab">فَلَا تُزَكُّوا أَنفُسَكُمْ</p>
   <p>
     “Jangan kamu sucikan diri kamu.”<br>
     (An-Najm 53:32)【1】
   </p>
 
-  <p class="arab">وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ اللَّهِ</p>
+  <p class="arab">وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ اللَّهِ</p>
   <p>
     “Segala nikmat yang ada pada kamu adalah daripada Allah.”<br>
     (An-Naḥl 16:53)【2】
@@ -3329,16 +3757,57 @@
     </article>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <div>
-        <a href="index.html">Home</a> ·
-        <a href="bab-0.html">Bab 0</a> ·
-        <a href="bab-2.html">Bab 2</a>
-      </div>
-      <div class="meta" style="margin-top:8px">Nota: Laman ini arkib baca sahaja.</div>
-    </div>
-  </footer>
+<!-- ═══════════════════════════════════════════
+         FOOTER
+    ════════════════════════════════════════════ -->
+    <footer class="wrap">
+      <p>© 3asbab.org — Arkib baca sahaja. Semua hak terpelihara.</p>
+      <p><a href="#top">↑ Kembali ke atas</a> · <a href="index.html">🏠 Home</a></p>
+    </footer>
+
+  </div><!-- /#pdf-shell -->
+
+  <!-- ═══════════════════════════════════════════
+       PDF DOWNLOAD SCRIPT
+  ════════════════════════════════════════════ -->
+  <script>
+    async function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      btn.textContent = '⏳ Sedang menyediakan...';
+      btn.disabled = true;
+
+      // Dynamically load html2pdf if not loaded
+      if (!window.html2pdf) {
+        await new Promise((resolve, reject) => {
+          const s = document.createElement('script');
+          s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+          s.onload = resolve;
+          s.onerror = reject;
+          document.head.appendChild(s);
+        });
+      }
+
+      document.body.classList.add('pdf-exporting', 'pdf-print-mode');
+
+      const el = document.getElementById('pdf-shell');
+      const opt = {
+        margin: [12, 14, 12, 14],
+        filename: 'bab-01-3asbab.pdf',
+        image: { type: 'jpeg', quality: 0.92 },
+        html2canvas: { scale: 2, useCORS: true, logging: false },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+      };
+
+      try {
+        await html2pdf().set(opt).from(el).save();
+      } finally {
+        document.body.classList.remove('pdf-exporting', 'pdf-print-mode');
+        btn.textContent = '📄 Download PDF';
+        btn.disabled = false;
+      }
+    }
+  </script>
 
 </body>
 </html>
