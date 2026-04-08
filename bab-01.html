@@ -581,7 +581,7 @@
     <main class="wrap">
 
       <div class="badge-chapter">🟥 BAB 1 – PEMBUNUHAN FAHAMAN ASBAB LAMA</div>
-    <h1>Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA</h1>
+    
   </header>
 
   <!-- Jump links -->
@@ -3757,57 +3757,16 @@
     </article>
   </main>
 
-<!-- ═══════════════════════════════════════════
-         FOOTER
-    ════════════════════════════════════════════ -->
-    <footer class="wrap">
-      <p>© 3asbab.org — Arkib baca sahaja. Semua hak terpelihara.</p>
-      <p><a href="#top">↑ Kembali ke atas</a> · <a href="index.html">🏠 Home</a></p>
-    </footer>
-
-  </div><!-- /#pdf-shell -->
-
-  <!-- ═══════════════════════════════════════════
-       PDF DOWNLOAD SCRIPT
-  ════════════════════════════════════════════ -->
-  <script>
-    async function downloadPDF() {
-      const btn = document.querySelector('.btn-pdf');
-      btn.textContent = '⏳ Sedang menyediakan...';
-      btn.disabled = true;
-
-      // Dynamically load html2pdf if not loaded
-      if (!window.html2pdf) {
-        await new Promise((resolve, reject) => {
-          const s = document.createElement('script');
-          s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
-          s.onload = resolve;
-          s.onerror = reject;
-          document.head.appendChild(s);
-        });
-      }
-
-      document.body.classList.add('pdf-exporting', 'pdf-print-mode');
-
-      const el = document.getElementById('pdf-shell');
-      const opt = {
-        margin: [12, 14, 12, 14],
-        filename: 'bab-01-3asbab.pdf',
-        image: { type: 'jpeg', quality: 0.92 },
-        html2canvas: { scale: 2, useCORS: true, logging: false },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-      };
-
-      try {
-        await html2pdf().set(opt).from(el).save();
-      } finally {
-        document.body.classList.remove('pdf-exporting', 'pdf-print-mode');
-        btn.textContent = '📄 Download PDF';
-        btn.disabled = false;
-      }
-    }
-  </script>
+  <footer>
+    <div class="wrap">
+      <div>
+        <a href="index.html">Home</a> ·
+        <a href="bab-0.html">Bab 0</a> ·
+        <a href="bab-2.html">Bab 2</a>
+      </div>
+      <div class="meta" style="margin-top:8px">Nota: Laman ini arkib baca sahaja.</div>
+    </div>
+  </footer>
 
 </body>
 </html>
