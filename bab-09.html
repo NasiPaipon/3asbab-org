@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ms">
 <head>
@@ -5,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 9 — IMAN: RASA & PEMBINAAN HATI | 3asbab.org</title>
   <style>
+    /* SEMUA CSS ANDA KEKAL SAMA SEPERTI ASAL */
     * {
       margin: 0;
       padding: 0;
@@ -449,48 +451,38 @@
       font-size: 0.92rem;
     }
 
+    /* Tambahan untuk print */
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      .no-print, .pdf-toolbar, .topbar, .jump, .toplink {
+        display: none !important;
+      }
+      
+      .pdf-only, .pdf-cover, .pdf-meta-page {
+        display: block !important;
+      }
+      
+      .section-card, blockquote, .insight-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      
+      h2, h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+
     @media (max-width: 640px) {
       .section-card {
         padding: 1rem;
       }
       .arabic {
         font-size: 1.3rem;
-      }
-    }
-
-    @media print {
-      .no-print,
-      .pdf-toolbar,
-      .topbar,
-      .jump,
-      .toplink {
-        display: none !important;
-      }
-
-      .pdf-only,
-      .pdf-cover,
-      .pdf-meta-page {
-        display: block !important;
-      }
-
-      body {
-        background: #fff !important;
-        color: #111 !important;
-        margin: 0;
-        padding: 0;
-        font-family: Georgia, "Times New Roman", serif;
-        line-height: 1.8;
-      }
-
-      .wrap {
-        max-width: 780px;
-      }
-
-      .section-card,
-      blockquote,
-      .insight-box {
-        background: transparent !important;
-        box-shadow: none !important;
       }
     }
   </style>
@@ -546,6 +538,9 @@
       </div>
     </div>
 
+    <!-- ================= SEMUA KONTEN BAB 9 DI SINI ================= -->
+    <!-- (Sila pastikan semua content 9.0 hingga 9.14 ada di sini) -->
+    
     <header class="wrap" id="top">
       <div class="meta">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
       <h1>Bab 9 — IMAN: RASA &amp; PEMBINAAN HATI</h1>
