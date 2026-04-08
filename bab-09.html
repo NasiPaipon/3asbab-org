@@ -20,6 +20,13 @@
       --accent-light: #e6f4ed;
       --text-dark: #1a202c;
       --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
     }
     body {
       font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
@@ -210,12 +217,239 @@
       margin-top: 0.5rem;
       display: inline-block;
     }
+
+    .pdf-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0 8px;
+    }
+
+    .btn-pdf {
+      appearance: none;
+      border: 1px solid var(--pdf-border);
+      background: #fff;
+      color: var(--pdf-text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.95rem;
+      line-height: 1.2;
+      font-weight: 600;
+      transition: 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
+
+    .btn-pdf:hover {
+      border-color: var(--pdf-accent);
+      background: var(--pdf-accent-soft);
+    }
+
+    .btn-pdf:active {
+      transform: translateY(1px);
+    }
+
+    .no-print {
+      display: block;
+    }
+
+    .pdf-only {
+      display: none;
+    }
+
+    .pdf-shell {
+      background: #fff;
+    }
+
+    .pdf-cover {
+      display: none;
+    }
+
+    .pdf-cover-inner {
+      min-height: 260mm;
+      padding: 28mm 18mm 24mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--pdf-paper);
+      color: var(--pdf-text);
+    }
+
+    .pdf-cover-top {
+      border-top: 4px solid var(--pdf-accent);
+      padding-top: 12mm;
+    }
+
+    .pdf-cover-brand {
+      font-size: 0.95rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--pdf-muted);
+      margin-bottom: 10mm;
+    }
+
+    .pdf-cover-series {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 6mm;
+    }
+
+    .pdf-cover-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 5mm;
+      font-weight: 800;
+    }
+
+    .pdf-cover-subtitle {
+      font-size: 1rem;
+      color: var(--pdf-muted);
+      margin: 0;
+    }
+
+    .pdf-cover-bottom {
+      border-top: 1px solid var(--pdf-border);
+      padding-top: 8mm;
+      font-size: 0.95rem;
+      color: var(--pdf-muted);
+    }
+
+    .pdf-meta-page {
+      display: none;
+    }
+
+    .pdf-meta-inner {
+      min-height: 240mm;
+      padding: 20mm 16mm;
+      background: #fff;
+      color: var(--pdf-text);
+    }
+
+    .pdf-meta-inner h2 {
+      border: 0;
+      padding: 0;
+      margin: 0 0 10mm;
+      font-size: 1.4rem;
+    }
+
+    .pdf-meta-list p {
+      margin: 0 0 6mm;
+    }
+
+    .pdf-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .pdf-avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .pdf-print-mode {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #111827;
+      background: #fff;
+      line-height: 1.8;
+    }
+
+    .pdf-print-mode .wrap {
+      max-width: 780px;
+    }
+
+    .pdf-print-mode h1,
+    .pdf-print-mode h2,
+    .pdf-print-mode h3 {
+      color: #111827;
+      letter-spacing: 0;
+    }
+
+    .pdf-print-mode h1 {
+      font-size: 2rem;
+    }
+
+    .pdf-print-mode h2 {
+      font-size: 1.45rem;
+      border-left: 0;
+      border-bottom: 1px solid var(--pdf-border);
+      padding-left: 0;
+      padding-bottom: 6px;
+      margin-top: 1.7rem;
+    }
+
+    .pdf-print-mode h3 {
+      font-size: 1.15rem;
+      margin-top: 1.3rem;
+    }
+
+    .pdf-print-mode .section-card,
+    .pdf-print-mode blockquote,
+    .pdf-print-mode .insight-box {
+      background: transparent;
+      border: 1px solid #e5e7eb;
+      box-shadow: none;
+    }
+
+    .pdf-print-mode .badge-chapter,
+    .pdf-print-mode .jump,
+    .pdf-print-mode .topbar,
+    .pdf-print-mode .toplink,
+    .pdf-print-mode .pdf-toolbar {
+      display: none !important;
+    }
+
+    .pdf-print-mode .arabic {
+      font-size: 1.45rem;
+      line-height: 1.9;
+    }
+
+    .pdf-print-mode table {
+      font-size: 0.92rem;
+    }
+
     @media (max-width: 640px) {
       .section-card {
         padding: 1rem;
       }
       .arabic {
         font-size: 1.3rem;
+      }
+    }
+
+    @media print {
+      .no-print,
+      .pdf-toolbar,
+      .topbar,
+      .jump,
+      .toplink {
+        display: none !important;
+      }
+
+      .pdf-only,
+      .pdf-cover,
+      .pdf-meta-page {
+        display: block !important;
+      }
+
+      body {
+        background: #fff !important;
+        color: #111 !important;
+        margin: 0;
+        padding: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.8;
+      }
+
+      .wrap {
+        max-width: 780px;
+      }
+
+      .section-card,
+      blockquote,
+      .insight-box {
+        background: transparent !important;
+        box-shadow: none !important;
       }
     }
   </style>
