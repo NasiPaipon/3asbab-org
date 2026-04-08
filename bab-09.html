@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ms">
 <head>
@@ -1987,7 +1986,8 @@ cinta kepada Allah, yakin kepada Allah dan janji-Nya, takut kepada Allah, tawakk
     <p>© 3asbab.org — Arkib bacaan sahaja. Iman: rasa & pembinaan hati berdasarkan al-Qur’an dan sunnah. “Sesungguhnya orang-orang beriman itu hanyalah mereka yang hatinya bergetar apabila disebut nama Allah.” (Al-Anfāl 8:2)</p>
   </div>
 </footer>
-       </main>
+
+    </main>
 
     <footer>
       <div class="wrap">
@@ -1997,73 +1997,34 @@ cinta kepada Allah, yakin kepada Allah dan janji-Nya, takut kepada Allah, tawakk
 
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
-    const PDF_CONFIG = {
-      title: 'Bab 9 — IMAN: RASA & PEMBINAAN HATI',
-      subtitle: 'Pemahaman Tauhidi Berasaskan al-Qur’an dan Sunnah',
-      filename: 'bab-09-iman-rasa-pembinaan-hati.pdf'
-    };
-
-    function preparePDFMeta() {
+    // Fungsi download PDF menggunakan window.print() - lebih stabil
+    function downloadPDF() {
+      // Tukar button text
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+      
+      // Sediakan meta untuk PDF
       const coverTitle = document.getElementById('pdf-cover-title');
       const coverSubtitle = document.getElementById('pdf-cover-subtitle');
       const metaTitle = document.getElementById('pdf-meta-title');
 
-      if (coverTitle) coverTitle.innerHTML = PDF_CONFIG.title;
-      if (coverSubtitle) coverSubtitle.textContent = PDF_CONFIG.subtitle;
-      if (metaTitle) metaTitle.textContent = PDF_CONFIG.title;
-    }
-
-    function enablePDFExportMode() {
-      document.body.classList.add('pdf-exporting');
-      document.body.classList.add('pdf-print-mode');
-    }
-
-    function disablePDFExportMode() {
-      document.body.classList.remove('pdf-exporting');
-      document.body.classList.remove('pdf-print-mode');
-    }
-
-    function downloadPDF() {
-      preparePDFMeta();
-      enablePDFExportMode();
-
-      const element = document.getElementById('pdf-shell');
-
-      const opt = {
-        margin: [8, 8, 10, 8],
-        filename: PDF_CONFIG.filename,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: {
-          scale: 2,
-          useCORS: true,
-          scrollY: 0,
-          backgroundColor: '#ffffff'
-        },
-        jsPDF: {
-          unit: 'mm',
-          format: 'a4',
-          orientation: 'portrait'
-        },
-        pagebreak: {
-          mode: ['css', 'legacy']
-        }
-      };
-
+      if (coverTitle) coverTitle.innerHTML = 'Bab 9 — IMAN: RASA & PEMBINAAN HATI';
+      if (coverSubtitle) coverSubtitle.textContent = 'Pemahaman Tauhidi Berasaskan al-Qur\'an dan Sunnah';
+      if (metaTitle) metaTitle.textContent = 'Bab 9 — IMAN: RASA & PEMBINAAN HATI';
+      
+      // Trigger print (yang akan membuka dialog Save as PDF)
       setTimeout(() => {
-        html2pdf()
-          .set(opt)
-          .from(element)
-          .save()
-          .then(() => {
-            disablePDFExportMode();
-          })
-          .catch((err) => {
-            console.error(err);
-            disablePDFExportMode();
-          });
-      }, 150);
+        window.print();
+        
+        // Kembalikan button selepas print dialog ditutup
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 100);
     }
   </script>
 </body>
