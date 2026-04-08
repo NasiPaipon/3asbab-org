@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Bab 2 — PENGENALAN KEPADA TIGA JENIS ASBAB | 3asbab.org</title>
+  <title>Bab 2 — PENGENALAN KEPADA 3 JENIS ASBAB | 3asbab.org</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     :root {
       --max-width: 920px;
       --pad: 1.25rem;
@@ -40,7 +41,7 @@
     .wrap {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 clamp(1.1rem, 4.8vw, 1.8rem);
+      padding: 0 clamp(1.2rem, 4vw, 1.8rem);
     }
 
     .topbar {
@@ -475,23 +476,9 @@
     }
 
     @media (max-width: 640px) {
-      .wrap {
-        padding-left: 1.15rem;
-        padding-right: 1.15rem;
-      }
-
       .section-card {
-        padding: 1rem 1rem;
-        border-radius: 1rem;
+        padding: 1rem;
       }
-
-      .translation,
-      blockquote,
-      .insight-box {
-        padding-left: 0.95rem;
-        padding-right: 0.95rem;
-      }
-
       .arabic {
         font-size: 1.3rem;
       }
@@ -525,7 +512,7 @@
         <div class="pdf-cover-top">
           <div class="pdf-cover-brand">3asbab.org</div>
           <div class="pdf-cover-series">Kerangka 3 Asbab</div>
-          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 2 — PENGENALAN KEPADA TIGA JENIS ASBAB</h1>
+          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 2 — PENGENALAN KEPADA 3 JENIS ASBAB</h1>
           <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Pemahaman Tauhidi tentang Asbab Fitrah, Asbab Zulumat dan Asbab Mutlak</p>
         </div>
 
@@ -540,7 +527,7 @@
       <div class="pdf-meta-inner">
         <h2>Maklumat Dokumen</h2>
         <div class="pdf-meta-list">
-          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 2 — PENGENALAN KEPADA TIGA JENIS ASBAB</span></p>
+          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 2 — PENGENALAN KEPADA 3 JENIS ASBAB</span></p>
           <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
           <p><strong>Laman:</strong> 3asbab.org</p>
           <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
@@ -551,7 +538,7 @@
 
     <header class="wrap" id="top">
       <div class="meta">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
-      <h1>Bab 2 — PENGENALAN KEPADA TIGA JENIS ASBAB</h1>
+      <h1>Bab 2 — PENGENALAN KEPADA 3 JENIS ASBAB</h1>
       <div class="meta">Asas Tauhidi memahami Asbab Fitrah, Asbab Zulumat dan Asbab Mutlak</div>
     </header>
 
@@ -576,11 +563,13 @@
     </div>
 
     <main class="wrap">
-      <div class="section-card">
+      <section class="section-card">
         <div class="badge-chapter">🟥 BAB 2</div>
-        <p><strong>PENGENALAN KEPADA TIGA JENIS ASBAB</strong></p>
-      </div>
+        <p><strong>PENGENALAN KEPADA 3 JENIS ASBAB</strong></p>
+        <p>Bab ini mempunyai 12 sub bab.</p>
+      </section>
 
+      
       <!-- ================= SEMUA KONTEN BAB 2 DI SINI ================= -->
       <!-- Tampal semua seksyen 2.1 hingga 2.12 di sini -->
 
@@ -3152,14 +3141,17 @@
     </article>
   </main>
 
+<!-- ================= TEMPLATE SEKSYEN BAB 2 ================= -->
+
+
       <footer>
-        <p>© 3asbab.org — Arkib bacaan sahaja. Pengenalan kepada Tiga Jenis Asbab: memahami Asbab Fitrah, Asbab Zulumat, dan Asbab Mutlak dalam neraca Tauhid.</p>
+        <p>© 3asbab.org — Arkib bacaan sahaja. Pengenalan kepada 3 Jenis Asbab: memahami Asbab Fitrah, Asbab Zulumat, dan Asbab Mutlak dalam neraca Tauhid.</p>
       </footer>
     </main>
 
     <footer>
       <div class="wrap">
-        <p>© 3asbab.org — Arkib bacaan sahaja. Pengenalan kepada Tiga Jenis Asbab.</p>
+        <p>© 3asbab.org — Arkib bacaan sahaja. Pengenalan kepada 3 Jenis Asbab.</p>
       </div>
     </footer>
 
@@ -3176,9 +3168,9 @@
       const coverSubtitle = document.getElementById('pdf-cover-subtitle');
       const metaTitle = document.getElementById('pdf-meta-title');
 
-      if (coverTitle) coverTitle.innerHTML = 'Bab 2 — PENGENALAN KEPADA TIGA JENIS ASBAB';
+      if (coverTitle) coverTitle.innerHTML = 'Bab 2 — PENGENALAN KEPADA 3 JENIS ASBAB';
       if (coverSubtitle) coverSubtitle.textContent = 'Pemahaman Tauhidi tentang Asbab Fitrah, Asbab Zulumat dan Asbab Mutlak';
-      if (metaTitle) metaTitle.textContent = 'Bab 2 — PENGENALAN KEPADA TIGA JENIS ASBAB';
+      if (metaTitle) metaTitle.textContent = 'Bab 2 — PENGENALAN KEPADA 3 JENIS ASBAB';
 
       setTimeout(() => {
         window.print();
@@ -3192,3 +3184,4 @@
   </script>
 </body>
 </html>
+
