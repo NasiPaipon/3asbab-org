@@ -39,10 +39,29 @@
     }
 
     .wrap {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 clamp(1.15rem, 4.8vw, 1.9rem);
-    }
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(1.15rem, 4.8vw, 1.9rem);
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .section-card {
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+  }
+
+  .translation,
+  blockquote,
+  .insight-box {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
     .topbar {
       background: var(--bg-soft);
