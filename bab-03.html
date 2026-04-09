@@ -163,70 +163,7 @@
 
       <section class="section-card" id="3-1">
         <div class="badge-chapter">🟥 BAB 3.1</div>
-        <h2>3.1 — [TAJUK SUB BAB 3.1]</h2>
-        <p>Isi sub bab 3.1 di sini.</p>
-        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
-      </section>
 
-      <section class="section-card" id="3-2">
-        <div class="badge-chapter">🟥 BAB 3.2</div>
-        <h2>3.2 — [TAJUK SUB BAB 3.2]</h2>
-        <p>Isi sub bab 3.2 di sini.</p>
-        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
-      </section>
-
-      <section class="section-card" id="3-3">
-        <div class="badge-chapter">🟥 BAB 3.3</div>
-        <h2>3.3 — [TAJUK SUB BAB 3.3]</h2>
-        <p>Isi sub bab 3.3 di sini.</p>
-        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
-      </section>
-
-      <section class="section-card" id="3-4">
-        <div class="badge-chapter">🟥 BAB 3.4</div>
-        <h2>3.4 — [TAJUK SUB BAB 3.4]</h2>
-        <p>Isi sub bab 3.4 di sini.</p>
-        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
-      </section>
-
-      <section class="section-card" id="3-5">
-        <div class="badge-chapter">🟥 BAB 3.5</div>
-        <h2>3.5 — [TAJUK SUB BAB 3.5]</h2>
-        <p>Isi sub bab 3.5 di sini.</p>
-        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
-      </section>
-
-    </main>
-
-    <footer>
-      <div class="wrap">
-        <p>© 3asbab.org — Arkib bacaan sahaja. Sirah Tauhidi: 3 Asbab dalam kisah para Nabi.</p>
-      </div>
-    </footer>
-
-  </div>
-
-  <script>
-    function downloadPDF() {
-      const btn = document.querySelector('.btn-pdf');
-      const originalText = btn.innerHTML;
-      btn.innerHTML = '⏳ Menyediakan PDF...';
-      btn.disabled = true;
-      const coverTitle = document.getElementById('pdf-cover-title');
-      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
-      const metaTitle = document.getElementById('pdf-meta-title');
-      if (coverTitle) coverTitle.innerHTML = 'Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI';
-      if (coverSubtitle) coverSubtitle.textContent = 'Membaca kisah para Nabi melalui lensa Tauhidi dan 3 jenis Asbab';
-      if (metaTitle) metaTitle.textContent = 'Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI';
-      setTimeout(() => {
-        window.print();
-        setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 500);
-      }, 100);
-    }
-  </script>
-
-</body>
-</html>
         
 
 
