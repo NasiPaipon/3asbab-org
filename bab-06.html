@@ -5,15 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 6 — PELANGGARAN ASBAB | 3asbab.org</title>
   <style>
-    /* SEMUA CSS KEKAL SAMA SEPERTI ASAL */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --max-width: 920px;
-      --pad: 1.25rem;
       --border-light: #e2e8f0;
       --bg-soft: #fafcff;
       --muted: #4a5568;
@@ -28,220 +22,49 @@
       --pdf-muted: #5b6573;
       --pdf-paper: #fffefb;
     }
-    body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
-      background: white;
-      color: var(--text-dark);
-      line-height: 1.7;
-      scroll-behavior: smooth;
-    }
-    .wrap {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 clamp(1.2rem, 4vw, 1.8rem);
-    }
-    .topbar {
-      border-bottom: 1px solid var(--border-light);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(6px);
-    }
-    .topbar nav {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-      padding: 0.75rem 0;
-    }
-    .topbar a {
-      text-decoration: none;
-      font-size: 0.9rem;
-      color: var(--text-dark);
-    }
-    .brand {
-      font-weight: 700;
-      letter-spacing: -0.2px;
-      margin-right: 0.5rem;
-    }
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif; background: white; color: var(--text-dark); line-height: 1.7; scroll-behavior: smooth; }
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 clamp(1.2rem, 4vw, 1.8rem); }
+    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
+    .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.75rem 0; }
+    .topbar a { text-decoration: none; font-size: 0.9rem; color: var(--text-dark); }
+    .brand { font-weight: 700; margin-right: 0.5rem; }
     header { padding: 1.5rem 0 0.5rem 0; }
-    h1 {
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      line-height: 1.25;
-      margin: 0.25rem 0 0.5rem;
-      letter-spacing: -0.01em;
-    }
-    .meta {
-      color: var(--muted);
-      font-size: 0.85rem;
-      border-left: 3px solid var(--accent);
-      padding-left: 0.75rem;
-    }
-    .jump {
-      background: #ffffff;
-      border-bottom: 1px solid var(--border-light);
-      position: sticky;
-      top: 48px;
-      z-index: 15;
-      background: rgba(255,255,255,0.98);
-    }
-    .jump-inner {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      padding: 0.7rem 0;
-      align-items: center;
-      font-size: 0.8rem;
-    }
-    .jump a {
-      padding: 0.2rem 0.7rem;
-      border-radius: 40px;
-      background: var(--bg-soft);
-      border: 1px solid var(--border-light);
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.1s ease;
-      color: var(--text-dark);
-    }
-    .jump a:hover {
-      border-color: var(--accent);
-      background: var(--accent-light);
-    }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.25; margin: 0.25rem 0 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; }
+    .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 48px; z-index: 15; background: rgba(255,255,255,0.98); }
+    .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.7rem 0; align-items: center; font-size: 0.8rem; }
+    .jump a { padding: 0.2rem 0.7rem; border-radius: 40px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.1s ease; color: var(--text-dark); }
+    .jump a:hover { border-color: var(--accent); background: var(--accent-light); }
     main { padding: 1.2rem 0 3rem; }
-    .badge-chapter {
-      display: inline-block;
-      font-weight: 700;
-      font-size: 0.8rem;
-      background: #fef3c7;
-      color: #b45309;
-      padding: 0.2rem 0.8rem;
-      border-radius: 30px;
-      margin-bottom: 0.8rem;
-    }
-    h2 {
-      font-size: 1.6rem;
-      margin: 1.8rem 0 0.75rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 0.9rem;
-      font-weight: 600;
-    }
-    h3 {
-      font-size: 1.25rem;
-      margin: 1.2rem 0 0.5rem;
-      font-weight: 600;
-      color: #0b3b2a;
-    }
-    .section-card {
-      background: var(--bg-soft);
-      border-radius: 1.2rem;
-      padding: 1.2rem 1.4rem;
-      margin: 1.2rem 0;
-      border: 1px solid var(--border-light);
-      box-shadow: var(--shadow-sm);
-    }
-    .arabic {
-      font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
-      font-size: 1.6rem;
-      line-height: 1.8;
-      direction: rtl;
-      text-align: right;
-      margin: 0.8rem 0;
-      color: #1e293b;
-    }
-    .translation {
-      font-style: normal;
-      background: #f8fafc;
-      padding: 0.6rem 1rem;
-      border-radius: 0.8rem;
-      margin: 0.5rem 0 1rem;
-      border-left: 3px solid var(--accent);
-      font-size: 0.95rem;
-    }
-    blockquote {
-      background: var(--accent-light);
-      border-radius: 0.8rem;
-      padding: 0.8rem 1.2rem;
-      margin: 1rem 0;
-      font-style: normal;
-    }
-    .insight-box {
-      background: #f1f5f9;
-      padding: 0.8rem 1.2rem;
-      border-radius: 1rem;
-      margin: 1rem 0;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-      font-size: 0.9rem;
-    }
-    th, td {
-      border: 1px solid var(--border-light);
-      padding: 0.6rem;
-      text-align: left;
-      vertical-align: top;
-    }
+    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.2rem 0.8rem; border-radius: 30px; margin-bottom: 0.8rem; }
+    h2 { font-size: 1.6rem; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 600; }
+    h3 { font-size: 1.25rem; margin: 1.2rem 0 0.5rem; font-weight: 600; color: #0b3b2a; }
+    p { margin: 0.6rem 0; }
+    ul, ol { margin: 0.5rem 0 0.8rem 1.4rem; }
+    li { margin: 0.3rem 0; }
+    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.2rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
+    .arabic { font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif; font-size: 1.6rem; line-height: 1.8; direction: rtl; text-align: right; margin: 0.8rem 0; color: #1e293b; }
+    .translation { background: #f8fafc; padding: 0.6rem 1rem; border-radius: 0.8rem; margin: 0.5rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.95rem; }
+    blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.8rem 1.2rem; margin: 1rem 0; font-style: normal; }
+    .insight-box { background: #f1f5f9; padding: 0.8rem 1.2rem; border-radius: 1rem; margin: 1rem 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    th, td { border: 1px solid var(--border-light); padding: 0.6rem; text-align: left; vertical-align: top; }
     th { background: #f1f5f9; font-weight: 600; }
-    hr { margin: 2rem 0; border: 0; height: 1px; background: var(--border-light); }
-    .footnote {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 1.5rem;
-      border-top: 1px dashed var(--border-light);
-      padding-top: 1rem;
-    }
-    footer {
-      border-top: 1px solid var(--border-light);
-      padding: 1.5rem 0;
-      color: var(--muted);
-      font-size: 0.8rem;
-      margin-top: 1rem;
-    }
-    .toplink { font-size: 0.75rem; margin-top: 0.5rem; display: inline-block; }
-    .pdf-toolbar {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      margin: 14px 0 8px;
-    }
-    .btn-pdf {
-      appearance: none;
-      border: 1px solid var(--pdf-border);
-      background: #fff;
-      color: var(--pdf-text);
-      padding: 10px 14px;
-      border-radius: 999px;
-      cursor: pointer;
-      font: inherit;
-      font-size: 0.95rem;
-      line-height: 1.2;
-      font-weight: 600;
-      transition: 0.15s ease;
-      box-shadow: 0 1px 2px rgba(0,0,0,.04);
-    }
+    hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
+    .footnote { font-size: 0.8rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
+    .toplink { font-size: 0.75rem; margin-top: 0.8rem; display: inline-block; }
+    footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.8rem; margin-top: 1rem; }
+    .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
+    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
     .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
     .btn-pdf:active { transform: translateY(1px); }
     .no-print { display: block; }
     .pdf-only { display: none; }
     .pdf-exporting .pdf-only { display: block !important; }
-    .pdf-exporting .no-print,
-    .pdf-exporting .pdf-toolbar,
-    .pdf-exporting .topbar,
-    .pdf-exporting .jump,
-    .pdf-exporting .toplink { display: none !important; }
+    .pdf-exporting .no-print, .pdf-exporting .pdf-toolbar, .pdf-exporting .topbar, .pdf-exporting .jump, .pdf-exporting .toplink { display: none !important; }
     .pdf-shell { background: #fff; }
     .pdf-cover { display: none; }
-    .pdf-cover-inner {
-      min-height: 260mm;
-      padding: 28mm 18mm 24mm;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: var(--pdf-paper);
-      color: var(--pdf-text);
-    }
+    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
     .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
     .pdf-cover-brand { font-size: 0.95rem; letter-spacing: .12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
     .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
@@ -254,16 +77,6 @@
     .pdf-meta-list p { margin: 0 0 6mm; }
     .pdf-break { break-before: page; page-break-before: always; }
     .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
-    .pdf-print-mode { font-family: Georgia, "Times New Roman", serif; color: #111827; background: #fff; line-height: 1.8; }
-    .pdf-print-mode .wrap { max-width: 780px; }
-    .pdf-print-mode h1, .pdf-print-mode h2, .pdf-print-mode h3 { color: #111827; letter-spacing: 0; }
-    .pdf-print-mode h1 { font-size: 2rem; }
-    .pdf-print-mode h2 { font-size: 1.45rem; border-left: 0; border-bottom: 1px solid var(--pdf-border); padding-left: 0; padding-bottom: 6px; margin-top: 1.7rem; }
-    .pdf-print-mode h3 { font-size: 1.15rem; margin-top: 1.3rem; }
-    .pdf-print-mode .section-card, .pdf-print-mode blockquote, .pdf-print-mode .insight-box { background: transparent; border: 1px solid #e5e7eb; box-shadow: none; }
-    .pdf-print-mode .badge-chapter, .pdf-print-mode .jump, .pdf-print-mode .topbar, .pdf-print-mode .toplink, .pdf-print-mode .pdf-toolbar { display: none !important; }
-    .pdf-print-mode .arabic { font-size: 1.45rem; line-height: 1.9; }
-    .pdf-print-mode table { font-size: 0.92rem; }
     @media print {
       body { margin: 0; padding: 0; }
       .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
@@ -354,2364 +167,930 @@
 
     <main class="wrap">
 
+      <!-- ============================== BAB 6.1 ============================== -->
       <section class="section-card" id="6-1">
         <div class="badge-chapter">🟥 BAB 6.1</div>
+        <h2>6.1 – MUKADIMAH PELANGGARAN ASBAB</h2>
+        <p><em>(Mengapa Pelanggaran Asbab hanya dibentang selepas Transformasi &amp; Mutlak Asli/Terbitan)</em></p>
 
-     <!-- === SECTION 6.1 START === -->
-<section class="section" id="6-1">
-  <h2>6.1 – MUKADIMAH PELANGGARAN ASBAB</h2>
-  <p><em>(Mengapa Pelanggaran Asbab hanya dibentang selepas Transformasi & Mutlak Asli/Terbitan)</em></p>
+        <h3>6.1.1 Pelanggaran Asbab adalah Perbuatan Allah — bukan usaha manusia</h3>
+        <p>Pelanggaran Asbab ialah fi'l Allah, bukan fi'l makhluk.<br>
+        Tidak boleh dirancang, direka, dicipta, atau dimanipulasi oleh manusia.</p>
+        <p>Allah berfirman:</p>
+        <div class="arabic">﴿ إِنِ الْحُكْمُ إِلَّا لِلَّهِ ﴾</div>
+        <div class="translation">"Segala ketentuan hanyalah milik Allah." — Surah Yusuf 12:40</div>
+        <p>Manusia beramal menurut sunnah. Tetapi pelanggaran berlaku hanya apabila Allah berkehendak.</p>
+        <p>Tiada siapa boleh memaksa.<br>Tiada siapa boleh mengundang.<br>Tiada siapa boleh mendakwa ia terjadi kerana dirinya.</p>
 
-  <h3>6.1.1 Pelanggaran Asbab adalah Perbuatan Allah — bukan usaha manusia</h3>
+        <hr>
 
-  <p>Pelanggaran Asbab ialah fi‘l Allah, bukan fi‘l makhluk.<br>
-  Tidak boleh dirancang, direka, dicipta, atau dimanipulasi oleh manusia.</p>
+        <h3>6.1.2 Pelanggaran Asbab hanya difahami oleh hati yang telah dibersihkan daripada kebergantungan kepada makhluk</h3>
+        <p>Inilah prinsip tauhidi yang mesti menjadi asas seluruh Bab 6:</p>
+        <blockquote>"Pelanggaran Asbab hanya boleh difahami oleh hati yang telah dibersihkan daripada kebergantungan kepada makhluk."</blockquote>
+        <p>Selagi hati bergantung kepada manusia, imej, sistem, atau bilangan — maka pelanggaran Asbab akan kelihatan mustahil.</p>
+        <p>Hanya hati yang telah melalui Nafy &amp; Isbat akan melihat bahawa makhluk tiada kuasa, sebab tiada kesan, hanya Allah memberi kesan.</p>
+        <p>Allah berfirman:</p>
+        <div class="arabic">﴿ وَعَلَى اللَّهِ فَتَوَكَّلُوا إِن كُنتُم مُّؤْمِنِينَ ﴾</div>
+        <div class="translation">"Dan hanya kepada Allah kamu bertawakkal, jika kamu benar-benar beriman." — Surah Al-Ma'idah 5:23</div>
 
-  <p>Allah berfirman:</p>
-  <div class="arab">﴿ إِنِ الْحُكْمُ إِلَّا لِلَّهِ ﴾</div>
-  <p>“Segala ketentuan hanyalah milik Allah.”【1】</p>
+        <hr>
 
-  <p>Manusia beramal menurut sunnah.<br>
-  Tetapi pelanggaran berlaku hanya apabila Allah berkehendak.</p>
+        <h3>6.1.3 Mengapa Bab Pelanggaran Asbab datang selepas Transformasi &amp; Mutlak</h3>
+        <p>Dalam Kerangka 3 Asbab, tertib bukan akademik — ia tertib Rasulullah ﷺ.</p>
+        <p>Pelanggaran Asbab tidak boleh dibentang sebelum manusia memahami:</p>
+        <ol>
+          <li><p><strong>Kategori asbab (Mutlak – Fitrah – Zulumat)</strong><br>tanpa memahami jenis sebab, manusia akan salah tafsir semua perkara luar biasa sebagai "mukjizat".</p></li>
+          <li><p><strong>Nafy → Isbat → Ittiba' (tertib pembersihan hati dan amal)</strong><br>tanpa pembinaan aqidah ini, pelanggaran asbab akan disalahguna sebagai alasan untuk malas atau lari daripada usaha.</p></li>
+          <li><p><strong>Transformasi Asbab</strong><br>tanpa faham transformasi, orang akan cuba transformasi yang haram, atau cuba ambil semua sebab tanpa ditapis.</p></li>
+          <li><p><strong>Mutlak Asli &amp; Mutlak Terbitan</strong><br>baru manusia faham siapa yang memberi kesan sebenar.</p></li>
+        </ol>
+        <p>Hanya setelah seluruh binaan tauhidi ini tegak, barulah seseorang layak memahami Pelanggaran Asbab.</p>
 
-  <p>Tiada siapa boleh memaksa.<br>
-  Tiada siapa boleh mengundang.<br>
-  Tiada siapa boleh mendakwa ia terjadi kerana dirinya.</p>
+        <hr>
 
-  <hr>
+        <h3>6.1.4 Pelanggaran Asbab berlaku hanya apabila semua sebab manusiawi telah tuntas</h3>
+        <p>Ini sunnah semua Nabi. Pelanggaran berlaku hanya setelah semua usaha yang disyariatkan ditunaikan.</p>
+        <p><strong>Contoh Musa عليه السلام</strong> — Selepas membawa Bani Israil keluar, bergerak malam hari, memilih laluan tertentu, melakukan strategi, barulah Allah berfirman:</p>
+        <div class="arabic">﴿ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
+        <div class="translation">"Pukulkanlah tongkatmu kepada laut." — Surah Ash-Shu'arā 26:63</div>
+        <p><strong>Contoh Ibrahim عليه السلام</strong> — Setelah ditangkap, dibicarakan, diseret ke tapak pembakaran, barulah Allah berfirman:</p>
+        <div class="arabic">﴿ يَا نَارُ كُونِي بَرْدًا وَسَلَامًا ﴾</div>
+        <div class="translation">"Wahai api, jadilah engkau dingin dan selamat ke atas Ibrahim." — Surah Al-Anbiya' 21:69</div>
+        <p><strong>Contoh Rasulullah ﷺ di Gua Thur</strong> — Setelah menyusun strategi hijrah, menyediakan unta, melantik penunjuk arah, bersembunyi mengikut pelan, barulah Allah turunkan ketenangan:</p>
+        <div class="arabic">﴿ لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا ﴾</div>
+        <div class="translation">"Jangan takut — sesungguhnya Allah bersama kita." — Surah At-Tawbah 9:40</div>
 
-  <h3>6.1.2 Pelanggaran Asbab hanya difahami oleh hati yang telah dibersihkan daripada kebergantungan kepada makhluk</h3>
+        <hr>
 
-  <p>Inilah prinsip tauhidi yang mesti menjadi asas seluruh Bab 6:</p>
+        <h3>6.1.5 Pelanggaran Asbab bukan tindakan manusia — tetapi pilihan Allah</h3>
+        <p>Manusia hanya beramal dengan Mutlak Asli, membersihkan hati, berittiba' kepada sunnah, ikhlas mencari redha Allah, dan memenuhi syarak pada setiap langkah.</p>
+        <p>Setelah semua Asbab Fitrah ditunaikan, semua Asbab Zulumat ditinggalkan, semua Asbab yang boleh ditransformasikan telah ditransformasikan, dan tiada lagi apa yang boleh diambil atau ditolak — barulah Allah membuka jalan kerana Allah berkehendak.</p>
+        <div class="arabic">﴿ وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا ﴾</div>
+        <div class="translation">"Sesiapa bertaqwa kepada Allah, Allah akan buatkan BAGINYA jalan keluar." — Surah At-Talaq 65:2</div>
+        <p>Ini bukan kerana sebab. Ini bukan kerana usaha. Ini bukan kerana hebat. Ini semata-mata kerana Allah mahu memuliakan hamba-Nya.</p>
 
-  <blockquote>
-    <p>“Pelanggaran Asbab hanya boleh difahami oleh hati yang telah dibersihkan daripada kebergantungan kepada makhluk.”</p>
-  </blockquote>
+        <hr>
 
-  <p>Selagi hati:</p>
-  <ul>
-    <li>bergantung kepada manusia,</li>
-    <li>bergantung kepada imej,</li>
-    <li>bergantung kepada sistem,</li>
-    <li>bergantung kepada bilangan,</li>
-  </ul>
+        <h3>6.1.6 Rumusan Mukadimah Tauhidi</h3>
+        <ol>
+          <li>Pelanggaran Asbab adalah fi'l Allah, bukan fi'l makhluk.</li>
+          <li>Ia hanya difahami oleh hati yang bersih daripada kebergantungan kepada makhluk.</li>
+          <li>Kerana itu ia dibentang selepas Transformasi &amp; Mutlak Asli/Terbitan.</li>
+          <li>Ia berlaku hanya setelah semua tertib sunnah ditunaikan.</li>
+          <li>Ia muncul semata-mata kerana Allah berkehendak, bukan kerana makhluk.</li>
+          <li>Ia adalah kemuliaan yang Allah anugerahkan kepada hamba yang taat.</li>
+        </ol>
 
-  <p>maka pelanggaran Asbab akan kelihatan mustahil.</p>
+        <div class="footnote">
+          <strong>Nota Kaki:</strong><br>
+          【1】 Surah Yusuf 12:40 &nbsp;|&nbsp; 【2】 Surah Al-Ma'idah 5:23 &nbsp;|&nbsp; 【3】 Surah Ash-Shu'arā 26:63<br>
+          【4】 Surah Al-Anbiya' 21:69 &nbsp;|&nbsp; 【5】 Surah At-Tawbah 9:40 &nbsp;|&nbsp; 【6】 Surah At-Talaq 65:2
+        </div>
 
-  <p>Hanya hati yang telah melalui Nafy & Isbat akan melihat bahawa:</p>
-  <ul>
-    <li>makhluk tiada kuasa,</li>
-    <li>sebab tiada kesan,</li>
-    <li>hanya Allah memberi kesan.</li>
-  </ul>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+      <!-- ============================== /BAB 6.1 ============================== -->
 
-  <p>Allah berfirman:</p>
-  <div class="arab">﴿ وَعَلَى اللَّهِ فَتَوَكَّلُوا إِن كُنتُم مُّؤْمِنِينَ ﴾</div>
-  <p>“Dan hanya kepada Allah kamu bertawakkal, jika kamu benar-benar beriman.”【2】</p>
-
-  <hr>
-
-  <h3>6.1.3 Mengapa Bab Pelanggaran Asbab datang selepas Transformasi & Mutlak</h3>
-
-  <p>Dalam Kerangka 3 Asbab, tertib bukan akademik — ia tertib Rasulullah ﷺ.</p>
-
-  <p>Pelanggaran Asbab tidak boleh dibentang sebelum manusia memahami:</p>
-
-  <ol>
-    <li>
-      <p><strong>Kategori asbab (Mutlak – Fitrah – Zulumat)</strong></p>
-      <p>tanpa memahami jenis sebab, manusia akan salah tafsir semua perkara luar biasa sebagai “mukjizat”.</p>
-    </li>
-    <li>
-      <p><strong>Nafy → Isbat → Ittiba’ (tertib pembersihan hati dan amal)</strong></p>
-      <p>tanpa pembinaan aqidah ini, pelanggaran asbab akan disalahguna sebagai alasan untuk malas atau lari daripada usaha.</p>
-    </li>
-    <li>
-      <p><strong>Transformasi Asbab</strong></p>
-      <p>tanpa faham transformasi:</p>
-      <ul>
-        <li>orang akan cuba transformasi yang haram,</li>
-        <li>atau cuba ambil semua sebab tanpa ditapis.</li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Mutlak Asli & Mutlak Terbitan</strong></p>
-      <p>baru manusia faham siapa yang memberi kesan sebenar.</p>
-    </li>
-  </ol>
-
-  <p>Hanya setelah seluruh binaan tauhidi ini tegak, barulah seseorang layak memahami Pelanggaran Asbab.</p>
-
-  <hr>
-
-  <h3>6.1.4 Pelanggaran Asbab berlaku hanya apabila semua sebab manusiawi telah tuntas</h3>
-
-  <p>Ini sunnah semua Nabi.<br>
-  Pelanggaran berlaku hanya setelah semua usaha yang disyariatkan ditunaikan.</p>
-
-  <p><strong>Contoh Musa عليه السلام</strong></p>
-  <p>Selepas:</p>
-  <ul>
-    <li>membawa Bani Israil keluar,</li>
-    <li>bergerak malam hari,</li>
-    <li>memilih laluan tertentu,</li>
-    <li>melakukan strategi,</li>
-  </ul>
-  <p>barulah Allah berfirman:</p>
-  <div class="arab">﴿ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
-  <p>“Pukulkanlah tongkatmu kepada laut.”【3】</p>
-  <p>Itulah pelanggaran Asbab.</p>
-
-  <p><strong>Contoh Ibrahim عليه السلام</strong></p>
-  <p>Setelah:</p>
-  <ul>
-    <li>ditangkap,</li>
-    <li>dibicarakan,</li>
-    <li>diseret ke tapak pembakaran,</li>
-  </ul>
-  <p>barulah Allah berfirman:</p>
-  <div class="arab">﴿ يَا نَارُ كُونِي بَرْدًا وَسَلَامًا ﴾</div>
-  <p>“Wahai api, jadilah engkau dingin dan selamat ke atas Ibrahim.”【4】</p>
-  <p>Itulah pelanggaran Asbab.</p>
-
-  <p><strong>Contoh Rasulullah ﷺ di Gua Thur</strong></p>
-  <p>Setelah:</p>
-  <ul>
-    <li>menyusun strategi hijrah,</li>
-    <li>menyediakan unta,</li>
-    <li>melantik penunjuk arah,</li>
-    <li>bersembunyi mengikut pelan,</li>
-  </ul>
-  <p>barulah Allah turunkan ketenangan:</p>
-  <div class="arab">﴿ لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا ﴾</div>
-  <p>“Jangan takut — sesungguhnya Allah bersama kita.”【5】</p>
-  <p>Itulah pelanggaran Asbab.</p>
-
-  <hr>
-
-  <h3>6.1.5 Pelanggaran Asbab bukan tindakan manusia — tetapi pilihan Allah</h3>
-
-  <p>Manusia hanya:</p>
-  <ul>
-    <li>beramal dengan Mutlak Asli (dakwah, sabar, mujahadah, syura),</li>
-    <li>membersihkan hati (nafy & isbat),</li>
-    <li>berittiba’ kepada sunnah Rasulullah ﷺ,</li>
-    <li>ikhlas mencari redha Allah,</li>
-    <li>memenuhi syarak pada setiap langkah.</li>
-  </ul>
-
-  <p>Setelah:</p>
-  <ul>
-    <li>semua Asbab Fitrah ditunaikan,</li>
-    <li>semua Asbab Zulumat ditinggalkan,</li>
-    <li>semua Asbab yang boleh ditransformasikan telah ditransformasikan,</li>
-    <li>dan tiada lagi apa yang boleh diambil atau ditolak,</li>
-  </ul>
-
-  <p>barulah Allah membuka jalan — kerana Allah berkehendak.</p>
-
-  <p>Firman-Nya:</p>
-  <div class="arab">﴿ وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا ﴾</div>
-  <p>“Sesiapa bertaqwa kepada Allah, Allah akan buatkan BAGINYA jalan keluar.”【6】</p>
-
-  <p>Ini bukan kerana sebab.<br>
-  Ini bukan kerana usaha.<br>
-  Ini bukan kerana hebat.</p>
-
-  <p>Ini semata-mata karena Allah mahu memuliakan hamba-Nya.</p>
-
-  <hr>
-
-  <h3>6.1.6 Rumusan Mukadimah Tauhidi</h3>
-  <ol>
-    <li>Pelanggaran Asbab adalah fi‘l Allah, bukan fi‘l makhluk.</li>
-    <li>Ia hanya difahami oleh hati yang bersih daripada kebergantungan kepada makhluk.</li>
-    <li>Kerana itu ia dibentang selepas Transformasi & Mutlak Asli/Terbitan.</li>
-    <li>Ia berlaku hanya setelah semua tertib sunnah ditunaikan.</li>
-    <li>Ia muncul semata-mata kerana Allah berkehendak, bukan kerana makhluk.</li>
-    <li>Ia adalah kemuliaan yang Allah anugerahkan kepada hamba yang taat.</li>
-  </ol>
-
-  <hr>
-
-  <h3>NOTA KAKI (Versi Akademik)</h3>
-  <ul>
-    <li>【1】 Surah Yusuf 12:40</li>
-    <li>【2】 Surah Al-Ma’idah 5:23</li>
-    <li>【3】 Surah Ash-Shu‘arā 26:63</li>
-    <li>【4】 Surah Al-Anbiya’ 21:69</li>
-    <li>【5】 Surah At-Tawbah 9:40</li>
-    <li>【6】 Surah At-Talaq 65:2</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 6.1 END === -->
-              <section class="section-card" id="6-2">
+      <!-- ============================== BAB 6.2 ============================== -->
+      <section class="section-card" id="6-2">
         <div class="badge-chapter">🟥 BAB 6.2</div>
+        <h2>6.2 — PRINSIP MUKTAMAD PELANGGARAN</h2>
 
-     <!-- === SECTION 6.2 START === -->
-<section class="section" id="6-2">
-  <h2>6.2 — PRINSIP MUKTAMAD PELANGGARAN</h2>
+        <p>Prinsip Pelanggaran Asbab adalah prinsip paling tinggi dalam keseluruhan Kerangka 3 Asbab. Ia bukan prinsip strategi, bukan prinsip logik, bukan prinsip kebiasaan alam.</p>
+        <p>Ia adalah prinsip Tauhid: bagaimana Allah memperlakukan hamba-Nya apabila semua tertib telah ditunaikan.</p>
+        <p>Pelanggaran Asbab adalah kemuliaan, bukan mekanisme. Ia adalah pengesahan, bukan alat.</p>
 
-  <p>Prinsip Pelanggaran Asbab adalah prinsip paling tinggi dalam keseluruhan Kerangka 3 Asbab.<br>
-  Ia bukan prinsip strategi.<br>
-  Ia bukan prinsip logik.<br>
-  Ia bukan prinsip kebiasaan alam.</p>
+        <hr>
 
-  <p>Ia adalah prinsip Tauhid: bagaimana Allah memperlakukan hamba-Nya apabila semua tertib telah ditunaikan.</p>
+        <h3>6.2.1 Pelanggaran Asbab adalah Hak Allah sepenuhnya</h3>
+        <p>Tiada sesiapa boleh mengundang, memaksa, merancang, atau meniru pelanggaran Asbab.</p>
+        <div class="arabic">﴿ وَاللَّهُ يَفْعَلُ مَا يَشَاءُ ﴾</div>
+        <div class="translation">"Allah melakukan apa yang Dia kehendaki." — Yunus 10:99</div>
+        <div class="arabic">﴿ إِنَّ رَبَّكَ فَعَّالٌ لِمَا يُرِيدُ ﴾</div>
+        <div class="translation">"Sesungguhnya Tuhanmu Maha Melakukan apa yang Dia kehendaki." — Hud 11:107</div>
+        <p>Makhluk berusaha — tetapi Allah yang menentukan.</p>
 
-  <p>Pelanggaran Asbab adalah kemuliaan, bukan mekanisme.<br>
-  Ia adalah pengesahan, bukan alat.</p>
+        <hr>
 
-  <hr>
+        <h3>6.2.2 Pelanggaran Asbab berlaku HANYA setelah seluruh tertib sunnah ditunaikan</h3>
+        <p>Inilah sunnah para Nabi عليهم السلام.</p>
+        <p><strong>Contoh Musa عليه السلام</strong> — Setelah hijrah, strategi, syura, gerak malam, dan seluruh usaha dilakukan. Barulah Allah memerintahkan:</p>
+        <div class="arabic">﴿ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
+        <div class="translation">"Pukulkanlah tongkatmu ke laut." — Ash-Shu'arā 26:63</div>
+        <p><strong>Contoh Ibrahim عليه السلام</strong> — Setelah seluruh proses dakwah, sabar, hijrah, dan ditangkap, diikat, dicampakkan. Barulah Allah berfirman:</p>
+        <div class="arabic">﴿ يَا نَارُ كُونِي بَرْدًا وَسَلَامًا ﴾</div>
+        <div class="translation">"Wahai api, jadilah dingin dan selamat." — Al-Anbiya' 21:69</div>
+        <p><strong>Contoh Rasulullah ﷺ</strong> — Setelah strategi hijrah disempurnakan, baru Allah menurunkan ketenangan:</p>
+        <div class="arabic">﴿ لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا ﴾</div>
+        <div class="translation">"Jangan takut; sesungguhnya Allah bersama kita." — At-Tawbah 9:40</div>
+        <p><strong>Kesimpulan:</strong> Pelanggaran datang selepas tertib, bukan sebelum tertib.</p>
 
-  <h3>6.2.1 Pelanggaran Asbab adalah Hak Allah sepenuhnya</h3>
+        <hr>
 
-  <p>Tiada sesiapa boleh mengundang, memaksa, merancang, atau meniru pelanggaran Asbab.</p>
+        <h3>6.2.3 Pelanggaran Asbab bukan hasil sebab — tetapi hasil Qudrah Allah</h3>
+        <p>Ia bukan hasil logik, bukan produk strategi, bukan fungsi bilangan, bukan kesan sebab-sebab fizikal. Ia adalah perbuatan Allah (fi'l Allah) tanpa perantaraan sebab.</p>
+        <div class="arabic">﴿ إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَنْ يَقُولَ لَهُ كُنْ فَيَكُونُ ﴾</div>
+        <div class="translation">"Perintah-Nya apabila Dia menghendaki sesuatu hanyalah berkata: Jadi! Maka jadilah ia." — Yasin 36:82</div>
+        <p>Makhluk bergerak — tetapi Allah yang memberi kesan.</p>
 
-  <p>Allah berfirman:</p>
-  <div class="arab">﴿ وَاللَّهُ يَفْعَلُ مَا يَشَاءُ ﴾</div>
-  <p>“Allah melakukan apa yang Dia kehendaki.”【1】</p>
+        <hr>
 
-  <p>Dan:</p>
-  <div class="arab">﴿ إِنَّ رَبَّكَ فَعَّالٌ لِمَا يُرِيدُ ﴾</div>
-  <p>“Sesungguhnya Tuhanmu Maha Melakukan apa yang Dia kehendaki.”【2】</p>
+        <h3>6.2.4 Pelanggaran Asbab terjadi apabila semua asbab telah ditransformasikan</h3>
+        <p>Ini adalah penemuan besar dalam KERANGKA 3 ASBAB. Pelanggaran hanya terjadi apabila:</p>
+        <ol>
+          <li>Asbab Fitrah yang boleh diambil → telah diambil &amp; ditransformasikan</li>
+          <li>Asbab Zulumat yang boleh dibuang → telah dibuang</li>
+          <li>Asbab yang boleh jadi Mutlak Terbitan → telah ditransformasikan</li>
+          <li>Tiada lagi sebab lain yang diperlukan menurut syarak</li>
+          <li>Hati telah tuntas dengan Nafy–Isbat–Ittiba'</li>
+          <li>Semua syarat syarak &amp; sunnah telah dipenuhi</li>
+        </ol>
+        <p>Barulah Allah membuka jalan.</p>
+        <div class="arabic">﴿ وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا ﴾</div>
+        <div class="translation">"Barangsiapa bertaqwa kepada Allah, Allah buatkan baginya jalan keluar." — At-Talaq 65:2</div>
+        <p>Tidak disebut bagaimana. Tidak disebut dengan apa. Tidak disebut melalui siapa. Kerana jalan keluar itu fi'l Allah, bukan fi'l sebab.</p>
 
-  <p>Makhluk berusaha — tetapi Allah yang menentukan.</p>
+        <hr>
 
-  <hr>
+        <h3>6.2.5 Pelanggaran Asbab bukan hak para wali — tetapi hak Allah ke atas hati yang diterima</h3>
+        <p>Pelanggaran Asbab bukan milik wali, alim, strategis, pemimpin, da'i, atau mana-mana individu. Ia milik Allah. Allah memilih siapa yang Dia kehendaki.</p>
+        <div class="arabic">﴿ ذَٰلِكَ فَضْلُ اللَّهِ يُؤْتِيهِ مَن يَشَاءُ ﴾</div>
+        <div class="translation">"Itulah kurnia Allah; Dia memberikannya kepada siapa yang Dia kehendaki." — Al-Jumu'ah 62:4</div>
 
-  <h3>6.2.2 Pelanggaran Asbab berlaku HANYA setelah seluruh tertib sunnah ditunaikan</h3>
+        <hr>
 
-  <p>Inilah sunnah para Nabi عليهم السلام.</p>
+        <h3>6.2.6 Pelanggaran Asbab adalah pengesahan bahawa tertib Rasulullah ﷺ telah diikuti</h3>
+        <p>Inilah maksud sebenar "Nusrah Allah".</p>
+        <div class="arabic">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ ﴾</div>
+        <div class="translation">"Jika kamu menolong agama Allah, Allah akan menolong kamu." — Muhammad 47:7</div>
+        <p>Ini bukan hubungan sebab–akibat duniawi. Ini hubungan janji–makhluk. Apabila tertib Rasulullah ﷺ diikuti — dakwah, mujahadah, sabar, syura, tawakkal, amal jama'i — maka Allah memberi nusrah tanpa sebab.</p>
 
-  <p><strong>Contoh Musa عليه السلام</strong><br>
-  — Setelah hijrah, strategi, syura, gerak malam, dan seluruh usaha dilakukan.<br>
-  Barulah Allah memerintahkan:</p>
-  <div class="arab">﴿ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
-  <p>“Pukulkanlah tongkatmu ke laut.”【3】</p>
+        <hr>
 
-  <p><strong>Contoh Ibrahim عليه السلام</strong><br>
-  — Setelah seluruh proses dakwah, sabar, hijrah, dan ditangkap, diikat, dicampakkan.<br>
-  Barulah Allah berfirman:</p>
-  <div class="arab">﴿ يَا نَارُ كُونِي بَرْدًا وَسَلَامًا ﴾</div>
-  <p>“Wahai api, jadilah dingin dan selamat.”【4】</p>
+        <h3>6.2.7 Pelanggaran Asbab tidak memberi kedudukan — tetapi menzahirkan penerimaan Allah</h3>
+        <p>Pelanggaran Asbab bukan puncak kemuliaan. Pelanggaran Asbab adalah tanda penerimaan.</p>
+        <p>Penerimaan Allah ≠ kejayaan dunia. Penerimaan Allah = redha Allah.</p>
+        <div class="arabic">﴿ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ ﴾</div>
+        <div class="translation">"Allah redha terhadap mereka, dan mereka redha terhadap-Nya." — Al-Bayyinah 98:8</div>
 
-  <p><strong>Contoh Rasulullah ﷺ</strong><br>
-  — Setelah strategi hijrah disempurnakan, baru Allah menurunkan ketenangan:</p>
-  <div class="arab">﴿ لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا ﴾</div>
-  <p>“Jangan takut; sesungguhnya Allah bersama kita.”【5】</p>
+        <hr>
 
-  <p><strong>Kesimpulan:</strong><br>
-  Pelanggaran datang selepas tertib, bukan sebelum tertib.</p>
+        <h3>6.2.8 Rumusan Muktamad Prinsip Pelanggaran</h3>
+        <ol>
+          <li>Pelanggaran Asbab adalah fi'l Allah — bukan fi'l manusia.</li>
+          <li>Ia berlaku selepas semua tertib sunnah disempurnakan.</li>
+          <li>Ia hanya muncul apabila semua asbab telah ditransformasikan atau tiada lagi asbab yang tinggal.</li>
+          <li>Ia adalah kurnia Allah, bukan hasil sebab.</li>
+          <li>Pelanggaran adalah pengesahan iman &amp; amal, bukan alat strategi.</li>
+          <li>Ia adalah nur penerimaan Allah, bukan mekanisme kejayaan.</li>
+        </ol>
 
-  <hr>
+        <div class="footnote">
+          <strong>Nota Kaki:</strong><br>
+          【1】 Yunus 10:99 &nbsp;|&nbsp; 【2】 Hud 11:107 &nbsp;|&nbsp; 【3】 Ash-Shu'arā 26:63 &nbsp;|&nbsp; 【4】 Al-Anbiya' 21:69<br>
+          【5】 At-Tawbah 9:40 &nbsp;|&nbsp; 【6】 Yasin 36:82 &nbsp;|&nbsp; 【7】 At-Talaq 65:2 &nbsp;|&nbsp; 【8】 Al-Jumu'ah 62:4<br>
+          【9】 Muhammad 47:7 &nbsp;|&nbsp; 【10】 Al-Bayyinah 98:8
+        </div>
 
-  <h3>6.2.3 Pelanggaran Asbab bukan hasil sebab — tetapi hasil Qudrah Allah</h3>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+      <!-- ============================== /BAB 6.2 ============================== -->
 
-  <p>Ia bukan hasil logik.<br>
-  Ia bukan produk strategi.<br>
-  Ia bukan fungsi bilangan.<br>
-  Ia bukan kesan sebab-sebab fizikal.</p>
-
-  <p>Ia adalah perbuatan Allah (fi‘l Allah) tanpa perantaraan sebab.</p>
-
-  <p>Allah berfirman:</p>
-  <div class="arab">﴿ إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَنْ يَقُولَ لَهُ كُنْ فَيَكُونُ ﴾</div>
-  <p>“Perintah-Nya apabila Dia menghendaki sesuatu hanyalah berkata: Jadi! Maka jadilah ia.”【6】</p>
-
-  <p>Makhluk bergerak — tetapi Allah yang memberi kesan.</p>
-
-  <hr>
-
-  <h3>6.2.4 Pelanggaran Asbab terjadi apabila semua asbab telah ditransformasikan</h3>
-
-  <p>Ini adalah penemuan besar dalam KERANGKA 3 ASBAB:</p>
-
-  <p>Pelanggaran hanya terjadi apabila:</p>
-  <ol>
-    <li>Asbab Fitrah yang boleh diambil → telah diambil & ditransformasikan</li>
-    <li>Asbab Zulumat yang boleh dibuang → telah dibuang</li>
-    <li>Asbab yang boleh jadi Mutlak Terbitan → telah ditransformasikan</li>
-    <li>Tiada lagi sebab lain yang diperlukan menurut syarak</li>
-    <li>Hati telah tuntas dengan Nafy–Isbat–Ittiba’</li>
-    <li>Semua syarat syarak & sunnah telah dipenuhi</li>
-  </ol>
-
-  <p>Barulah Allah membuka jalan.</p>
-
-  <p>Firman Allah:</p>
-  <div class="arab">﴿ وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا ﴾</div>
-  <p>“Barangsiapa bertaqwa kepada Allah, Allah buatkan baginya jalan keluar.”【7】</p>
-
-  <p>Tidak disebut bagaimana.<br>
-  Tidak disebut dengan apa.<br>
-  Tidak disebut melalui siapa.</p>
-
-  <p>Kerana jalan keluar itu fi‘l Allah, bukan fi‘l sebab.</p>
-
-  <hr>
-
-  <h3>6.2.5 Pelanggaran Asbab bukan hak para wali — tetapi hak Allah ke atas hati yang diterima</h3>
-
-  <p>Pelanggaran Asbab bukan milik:</p>
-  <ul>
-    <li>wali,</li>
-    <li>alim,</li>
-    <li>strategis,</li>
-    <li>pemimpin,</li>
-    <li>da‘i,</li>
-    <li>mana-mana individu.</li>
-  </ul>
-
-  <p>Ia milik Allah.</p>
-
-  <p>Allah memilih siapa yang Dia kehendaki.</p>
-
-  <div class="arab">﴿ ذَٰلِكَ فَضْلُ اللَّهِ يُؤْتِيهِ مَن يَشَاءُ ﴾</div>
-  <p>“Itulah kurnia Allah; Dia memberikannya kepada siapa yang Dia kehendaki.”【8】</p>
-
-  <p>Jika Allah mahu memuliakan seseorang, Allah akan lakukan tanpa sebab.</p>
-
-  <hr>
-
-  <h3>6.2.6 Pelanggaran Asbab adalah pengesahan bahawa tertib Rasulullah ﷺ telah diikuti</h3>
-
-  <p>Inilah maksud sebenar “Nusrah Allah”.</p>
-
-  <p>Allah berfirman:</p>
-  <div class="arab">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ ﴾</div>
-  <p>“Jika kamu menolong agama Allah, Allah akan menolong kamu.”【9】</p>
-
-  <p>Ini bukan hubungan sebab–akibat duniawi.<br>
-  Ini hubungan janji–makhluk.</p>
-
-  <p>Apabila tertib Rasulullah ﷺ diikuti:</p>
-  <ul>
-    <li>dakwah,</li>
-    <li>mujahadah,</li>
-    <li>sabar,</li>
-    <li>syura,</li>
-    <li>tawakkal,</li>
-    <li>amal jama‘i,</li>
-  </ul>
-
-  <p>maka Allah memberi nusrah tanpa sebab.</p>
-
-  <hr>
-
-  <h3>6.2.7 Pelanggaran Asbab tidak memberi kedudukan — tetapi menzahirkan penerimaan Allah</h3>
-
-  <p>Dalam Kerangka 3 Asbab:</p>
-  <ul>
-    <li>Pelanggaran Asbab bukan puncak kemuliaan</li>
-    <li>Pelanggaran Asbab adalah tanda penerimaan</li>
-  </ul>
-
-  <p>Penerimaan Allah ≠ kejayaan dunia<br>
-  Penerimaan Allah = redha Allah</p>
-
-  <p>Firman Allah:</p>
-  <div class="arab">﴿ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ ﴾</div>
-  <p>“Allah redha terhadap mereka, dan mereka redha terhadap-Nya.”【10】</p>
-
-  <hr>
-
-  <h3>6.2.8 Rumusan Muktamad Prinsip Pelanggaran</h3>
-  <ol>
-    <li>Pelanggaran Asbab adalah fi‘l Allah — bukan fi‘l manusia.</li>
-    <li>Ia berlaku selepas semua tertib sunnah disempurnakan.</li>
-    <li>Ia hanya muncul apabila semua asbab telah ditransformasikan atau tiada lagi asbab yang tinggal.</li>
-    <li>Ia adalah kurnia Allah, bukan hasil sebab.</li>
-    <li>Pelanggaran adalah pengesahan iman & amal, bukan alat strategi.</li>
-    <li>Ia adalah nur penerimaan Allah, bukan mekanisme kejayaan.</li>
-  </ol>
-
-  <hr>
-
-  <h3>NOTA KAKI (Versi Akademik)</h3>
-  <ul>
-    <li>【1】 Yunus 10:99</li>
-    <li>【2】 Hud 11:107</li>
-    <li>【3】 Ash-Shu‘arā 26:63</li>
-    <li>【4】 Al-Anbiya’ 21:69</li>
-    <li>【5】 At-Tawbah 9:40</li>
-    <li>【6】 Yasin 36:82</li>
-    <li>【7】 At-Talaq 65:2</li>
-    <li>【8】 Al-Jumu‘ah 62:4</li>
-    <li>【9】 Muhammad 47:7</li>
-    <li>【10】 Al-Bayyinah 98:8</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 6.2 END === -->
-                      <section class="section-card" id="6-3">
+      <!-- ============================== BAB 6.3 ============================== -->
+      <section class="section-card" id="6-3">
         <div class="badge-chapter">🟥 BAB 6.3</div>
+        <h2>6.3 — KEFAHAMAN &amp; KETAHANAN: DUA SAYAP PARA NABI</h2>
 
-<!-- === SECTION 6.3 START === -->
-<section class="section" id="6-3">
-  <h2>6.3 — KEFAHAMAN & KETAHANAN: DUA SAYAP PARA NABI</h2>
+        <h3>6.3.1 Mukadimah: Mengapa Dua Sayap Ini Wajib?</h3>
+        <p>Dalam seluruh perjalanan para Nabi عليهم السلام dan para Sahabat رضي الله عنهم, Allah menanam dua kekuatan besar:</p>
+        <ol>
+          <li><strong>Kefahaman (al-fahm)</strong> → melihat batas syarak, batas transformasi, batas usaha, batas asbab.</li>
+          <li><strong>Ketahanan (as-sabr / ar-ribath)</strong> → bertahan sehingga saat Allah membuka jalan-Nya.</li>
+        </ol>
+        <p>Tanpa kedua-duanya, manusia akan tersesat — ada kefahaman tanpa ketahanan (ilmuwan panik), ada ketahanan tanpa kefahaman (semangat salah arah), tiada kedua-duanya (tunduk kepada asbab dunia). Ada kedua-duanya — menjadi pewaris jalan Nabi ﷺ. Inilah "dua sayap Tauhidi".</p>
 
-  <hr>
+        <hr>
 
-  <h3>6.3.1 Mukadimah: Mengapa Dua Sayap Ini Wajib?</h3>
+        <h3>6.3.2 KEFAHAMAN — Melihat Batas Asbab &amp; Tertib</h3>
+        <p>Kefahaman adalah cahaya yang Allah letakkan dalam hati, agar manusia mengenal tiga kategori asbab, mengenal apa boleh transform, apa tidak boleh disentuh, apa mesti dibuang, apa mesti ditransformasikan menjadi Mutlak Terbitan, dan apa yang akan Allah hancurkan jika manusia mengambilnya.</p>
+        <div class="arabic">﴿ قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا يَعْلَمُونَ ﴾</div>
+        <div class="translation">"Adakah sama orang yang mengetahui dengan orang yang tidak mengetahui?" — Az-Zumar 39:9</div>
+        <p><strong>Contoh kefahaman para Nabi:</strong> Musa عليه السلام tahu memukul laut bukan strategi logik tetapi perintah Mutlak. Ibrahim عليه السلام tahu api membakar tetapi yakin Allah Maha Berkuasa. Rasulullah ﷺ tahu bila bersabar, bila berhijrah, bila berstrategi, bila berperang, bila berdamai.</p>
 
-  <p>Dalam seluruh perjalanan para Nabi عليهم السلام dan para Sahabat رضي الله عنهم,<br>
-  Allah menanam dua kekuatan besar:</p>
-  <ol>
-    <li><strong>Kefahaman (al-fahm)</strong><br>
-    → melihat batas syarak, batas transformasi, batas usaha, batas asbab.</li>
-    <li><strong>Ketahanan (as-sabr / ar-ribath)</strong><br>
-    → bertahan sehingga saat Allah membuka jalan-Nya.</li>
-  </ol>
+        <hr>
 
-  <p>Kedua-duanya diperlukan supaya:</p>
-  <ul>
-    <li>manusia tidak menyalahguna Pelanggaran Asbab,</li>
-    <li>tidak tersilap meletakkan sebab di atas Mutlak,</li>
-    <li>tidak berhenti sebelum tiba saat Nusrah Allah,</li>
-    <li>dan tidak menyalahi tertib Rasulullah ﷺ.</li>
-  </ul>
+        <h3>6.3.3 KETAHANAN — Bertahan Hingga Saat Allah Membuka Jalan</h3>
+        <p>Jika kefahaman ialah cahaya akal, ketahanan ialah kekuatan hati. Tanpa ketahanan, syura ditinggalkan, dakwah ditinggalkan, sabar terputus, dan pertolongan Allah tidak turun.</p>
+        <div class="arabic">﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا اصْبِرُوا وَصَابِرُوا وَرَابِطُوا ﴾</div>
+        <div class="translation">"Wahai orang beriman, bersabarlah, kuatkan kesabaran, dan teguhkan pendirian." — Ali 'Imran 3:200</div>
+        <p><strong>Musa عليه السلام di laut:</strong></p>
+        <div class="arabic">﴿ كَلَّا إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ ﴾</div>
+        <div class="translation">"Tidak! Sesungguhnya Tuhanku bersama aku; Dia pasti memberi petunjuk." — Ash-Shu'arā 26:62</div>
+        <p>Umat panik. Musa عليه السلام tenang. Ketahanan ini menarik pertolongan Allah.</p>
+        <p><strong>Ibrahim عليه السلام dicampak ke dalam api:</strong> حَسْبِيَ اللَّهُ وَنِعْمَ الْوَكِيلُ — "Cukuplah Allah bagiku, Dia sebaik-baik Pelindung."</p>
+        <p><strong>Rasulullah ﷺ di Gua Thur:</strong></p>
+        <div class="arabic">﴿ لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا ﴾</div>
+        <div class="translation">"Jangan sedih; sesungguhnya Allah bersama kita." — At-Tawbah 9:40</div>
 
-  <p>Tanpa kedua-duanya, manusia akan tersesat:</p>
-  <ul>
-    <li>ada kefahaman tanpa ketahanan → ilmuwan panik,</li>
-    <li>ada ketahanan tanpa kefahaman → semangat salah arah,</li>
-    <li>tiada kedua-duanya → tunduk kepada asbab dunia,</li>
-    <li>ada kedua-duanya → menjadi pewaris jalan Nabi ﷺ.</li>
-  </ul>
+        <hr>
 
-  <p>Inilah “dua sayap Tauhidi”.</p>
+        <h3>6.3.4 Hubungan KEFAHAMAN + KETAHANAN dalam Kerangka 3 Asbab</h3>
+        <p><strong>Kefahaman</strong> mengawal tindakan — apakah asbab yang boleh diambil, apakah wajib buang, apakah boleh ditransformasikan, apakah haram disentuh.</p>
+        <p><strong>Ketahanan</strong> mengawal hati — bagaimana bertahan sampai Asbab Mutlak mengambil alih, bagaimana tidak panik bila semua sebab tertutup, bagaimana yakin kepada janji Allah.</p>
+        <div class="arabic">﴿ وَجَعَلْنَا مِنْهُمْ أَئِمَّةً… لَمَّا صَبَرُوا وَكَانُوا بِآيَاتِنَا يُوقِنُونَ ﴾</div>
+        <div class="translation">"Kami jadikan mereka pemimpin ketika mereka SABAR dan mereka YAKIN." — As-Sajdah 32:24</div>
+        <p>Sabar = ketahanan. Yakin = kefahaman.</p>
 
-  <hr>
+        <hr>
 
-  <h3>6.3.2 KEFAHAMAN — Melihat Batas Asbab & Tertib</h3>
+        <h3>6.3.5 Dua Sayap dalam Realiti Moden</h3>
+        <ol>
+          <li><strong>Krisis Ekonomi</strong> — Kefahaman: mana gerak pasaran, mana janji Allah. Ketahanan: sabar, syura, dakwah, infak tanpa panik.</li>
+          <li><strong>Media &amp; crowd</strong> — Kefahaman: tahu media hanyalah asbab Fitrah. Ketahanan: tidak goyah bila difitnah, tidak tunduk pada crowd.</li>
+          <li><strong>Dunia korporat</strong> — Kefahaman: tahu strategi boleh diambil. Ketahanan: rela rugi demi redha Allah.</li>
+          <li><strong>Kerja dakwah</strong> — Kefahaman: tahu tertib dakwah Rasulullah ﷺ. Ketahanan: sabar menghadapi penolakan.</li>
+        </ol>
 
-  <p>Kefahaman adalah cahaya yang Allah letakkan dalam hati, agar manusia:</p>
-  <ul>
-    <li>mengenal tiga kategori asbab (Mutlak, Fitrah, Zulumat),</li>
-    <li>mengenal apa boleh transform,</li>
-    <li>mengenal apa tidak boleh disentuh,</li>
-    <li>mengenal apa mesti dibuang,</li>
-    <li>mengenal apa mesti ditransformasikan menjadi Mutlak Terbitan,</li>
-    <li>mengenal apa tidak akan pernah menjadi ibadah,</li>
-    <li>mengenal apa yang akan Allah hancurkan jika manusia mengambilnya.</li>
-  </ul>
+        <hr>
 
-  <p><strong>Dalil utama:</strong></p>
-  <div class="arab">﴿ قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا يَعْلَمُونَ ﴾</div>
-  <p>“Adakah sama orang yang mengetahui dengan orang yang tidak mengetahui?”【1】</p>
+        <h3>6.3.6 Rumusan Tauhidi: Dua Sayap Menuju Redha Allah</h3>
+        <ul>
+          <li><strong>Kefahaman</strong> = melihat batas transformasi asbab</li>
+          <li><strong>Ketahanan</strong> = bertahan sehingga Allah membuka jalan</li>
+        </ul>
+        <p>Gabungan keduanya melahirkan keberanian Musa عليه السلام, ketenangan Ibrahim عليه السلام, kebijaksanaan Rasulullah ﷺ, dan keteguhan para Sahabat رضي الله عنهم. Tanpa salah satu → manusia tidak terbang menuju redha Allah.</p>
 
-  <p>Kefahaman membina:</p>
-  <ul>
-    <li>batas,</li>
-    <li>tertib,</li>
-    <li>pilihan yang betul,</li>
-    <li>penggunaan asbab yang tidak syirik,</li>
-    <li>jalan yang tidak menyalahi syariat.</li>
-  </ul>
+        <div class="footnote">
+          <strong>Nota Kaki:</strong><br>
+          【1】 Az-Zumar 39:9 &nbsp;|&nbsp; 【2】 Ali 'Imran 3:200 &nbsp;|&nbsp; 【3】 Ash-Shu'arā 26:62<br>
+          【4】 Sahih Bukhari &nbsp;|&nbsp; 【5】 At-Tawbah 9:40 &nbsp;|&nbsp; 【6】 As-Sajdah 32:24
+        </div>
 
-  <p><strong>Contoh Kefahaman para Nabi عليهم السلام</strong></p>
-  <ul>
-    <li><strong>Musa عليه السلام</strong><br>
-    Tahu memukul laut bukan strategi logik, tetapi perintah Mutlak.</li>
-    <li><strong>Ibrahim عليه السلام</strong><br>
-    Tahu api membakar, tetapi yakin Allah Maha Berkuasa.</li>
-    <li><strong>Rasulullah ﷺ</strong><br>
-    Tahu bila bersabar, bila berhijrah, bila berstrategi, bila sembunyi, bila berperang, bila berdamai.</li>
-  </ul>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+      <!-- ============================== /BAB 6.3 ============================== -->
 
-  <p>Kefahaman para Nabi ≠ logik dunia.<br>
-  Kefahaman mereka = melihat asbab sebagaimana wahyu mahu kita lihat.</p>
-
-  <hr>
-
-  <h3>6.3.3 KETAHANAN — Bertahan Hingga Saat Allah Membuka Jalan</h3>
-
-  <p>Jika kefahaman ialah cahaya akal,<br>
-  ketahanan ialah kekuatan hati.</p>
-
-  <p>Tanpa ketahanan:</p>
-  <ul>
-    <li>seseorang akan goyah,</li>
-    <li>syura ditinggalkan,</li>
-    <li>dakwah ditinggalkan,</li>
-    <li>sabar terputus,</li>
-    <li>strategi lumpuh,</li>
-    <li>pertolongan Allah tidak turun.</li>
-  </ul>
-
-  <p><strong>Dalil utama:</strong></p>
-  <div class="arab">﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا اصْبِرُوا وَصَابِرُوا وَرَابِطُوا ﴾</div>
-  <p>“Wahai orang beriman, bersabarlah, kuatkan kesabaran, dan teguhkan pendirian.”【2】</p>
-
-  <p><strong>Contoh Ketahanan Para Nabi عليهم السلام</strong></p>
-
-  <ol>
-    <li>
-      <p><strong>Musa عليه السلام di laut</strong></p>
-      <div class="arab">﴿ كَلَّا إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ ﴾</div>
-      <p>“Tidak! Sesungguhnya Tuhanku bersama aku; Dia pasti memberi petunjuk.”【3】</p>
-      <p>Umat panik.<br>
-      Musa عليه السلام tenang.<br>
-      Ketahanan ini menarik pertolongan Allah.</p>
-    </li>
-    <li>
-      <p><strong>Ibrahim عليه السلام dicampak ke dalam api</strong></p>
-      <p>حَسْبِيَ اللَّهُ وَنِعْمَ الْوَكِيلُ<br>
-      “Cukuplah Allah bagiku, Dia sebaik-baik Pelindung.”【4】</p>
-      <p>Ketahanan ini membuka pintu mukjizat.</p>
-    </li>
-    <li>
-      <p><strong>Rasulullah ﷺ di Gua Thur</strong></p>
-      <div class="arab">﴿ لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا ﴾</div>
-      <p>“Jangan sedih; sesungguhnya Allah bersama kita.”【5】</p>
-      <p>Ketahanan → ketenangan → nusrah.</p>
-    </li>
-  </ol>
-
-  <p>Ketahanan adalah nafkah iman:<br>
-  Tanpa ketahanan, hati jatuh sebelum pertolongan tiba.</p>
-
-  <hr>
-
-  <h3>6.3.4 Hubungan KEFAHAMAN + KETAHANAN dalam Kerangka 3 Asbab</h3>
-
-  <p>Dalam struktur Tauhidi:</p>
-  <ul>
-    <li><strong>Kefahaman</strong> mengawal tindakan<br>
-    → apakah asbab yang boleh diambil<br>
-    → apakah wajib buang<br>
-    → apakah boleh ditransformasikan<br>
-    → apakah haram disentuh</li>
-    <li><strong>Ketahanan</strong> mengawal hati<br>
-    → bagaimana bertahan sampai Asbab Mutlak mengambil alih<br>
-    → bagaimana tidak panik bila semua sebab tertutup<br>
-    → bagaimana yakin kepada janji Allah</li>
-  </ul>
-
-  <p>Gabungan kedua-duanya menghasilkan insan yang selari dengan tertib Rasulullah ﷺ.</p>
-
-  <p>Jika hanya ada kefahaman (tanpa ketahanan)</p>
-  <ul>
-    <li>ilmuwan panik,</li>
-    <li>bijiak strategi tetapi lemah hati,</li>
-    <li>jatuh bila ditentang,</li>
-    <li>strategi tinggal strategi — Nusrah tidak turun.</li>
-  </ul>
-
-  <p>Jika hanya ada ketahanan (tanpa kefahaman)</p>
-  <ul>
-    <li>semangat tanpa tertib,</li>
-    <li>sabar tanpa syura,</li>
-    <li>yakin tanpa sunnah,</li>
-    <li>usaha tanpa arah,</li>
-    <li>dakwah tanpa ilmu.</li>
-  </ul>
-
-  <p>Kedua-duanya merosakkan tertib.</p>
-
-  <p><strong>Dalil gabungan:</strong></p>
-  <div class="arab">﴿ وَجَعَلْنَا مِنْهُمْ أَئِمَّةً… لَمَّا صَبَرُوا وَكَانُوا بِآيَاتِنَا يُوقِنُونَ ﴾</div>
-  <p>“Kami jadikan mereka pemimpin ketika mereka SABAR dan mereka YAKIN.”【6】</p>
-
-  <p>Sabar = ketahanan<br>
-  Yakin = kefahaman</p>
-
-  <hr>
-
-  <h3>6.3.5 Dua Sayap dalam Realiti Moden</h3>
-
-  <ol>
-    <li>
-      <p><strong>Krisis Ekonomi</strong></p>
-      <ul>
-        <li>Kefahaman → mana gerak pasaran, mana janji Allah.</li>
-        <li>Ketahanan → sabar, syura, dakwah, infak tanpa panik.</li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Media & crowd</strong></p>
-      <ul>
-        <li>Kefahaman → tahu media hanyalah asbab Fitrah.</li>
-        <li>Ketahanan → tidak goyah bila difitnah, tidak tunduk pada crowd.</li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Dunia korporat</strong></p>
-      <ul>
-        <li>Kefahaman → tahu strategi boleh diambil.</li>
-        <li>Ketahanan → rela rugi demi redha Allah.</li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Kerja dakwah</strong></p>
-      <ul>
-        <li>Kefahaman → tahu tertib dakwah Rasulullah ﷺ.</li>
-        <li>Ketahanan → sabar menghadapi penolakan.</li>
-      </ul>
-    </li>
-  </ol>
-
-  <hr>
-
-  <h3>6.3.6 Rumusan Tauhidi: Dua Sayap Menuju Redha Allah</h3>
-
-  <ul>
-    <li><strong>Kefahaman</strong> = melihat batas transformasi asbab</li>
-    <li><strong>Ketahanan</strong> = bertahan sehingga Allah membuka jalan</li>
-  </ul>
-
-  <p>Gabungan keduanya melahirkan:</p>
-  <ul>
-    <li>keberanian Musa عليه السلام</li>
-    <li>ketenangan Ibrahim عليه السلام</li>
-    <li>kebijaksanaan Rasulullah ﷺ</li>
-    <li>keteguhan para Sahabat رضي الله عنهم</li>
-  </ul>
-
-  <p>Tanpa salah satu → manusia tidak terbang menuju redha Allah.</p>
-
-  <hr>
-
-  <h3>NOTA KAKI BAB 6.3</h3>
-  <ul>
-    <li>【1】 Az-Zumar 39:9</li>
-    <li>【2】 Ali ‘Imran 3:200</li>
-    <li>【3】 Ash-Shu‘arā 26:62</li>
-    <li>【4】 Sahih Bukhari</li>
-    <li>【5】 At-Tawbah 9:40</li>
-    <li>【6】 As-Sajdah 32:24</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 6.3 END === -->
-                              <section class="section-card" id="6-4">
+      <!-- ============================== BAB 6.4 ============================== -->
+      <section class="section-card" id="6-4">
         <div class="badge-chapter">🟥 BAB 6.4</div>
+        <h2>6.4 — ASBAB YANG TIDAK BOLEH DITRANSFORMASIKAN</h2>
+        <p><em>(Versi Muktamad Kerangka 3 Asbab)</em></p>
 
-     <!-- === SECTION 6.4 START === -->
-<section class="section" id="6-4">
-  <h2>6.4 — ASBAB YANG TIDAK BOLEH DITRANSFORMASIKAN</h2>
-  <p><em>(Versi Muktamad Kerangka 3 Asbab)</em></p>
+        <h3>6.4.0 Mukadimah</h3>
+        <p>Tidak semua asbab boleh ditransformasikan menjadi Asbab Mutlak Terbitan. Kerana syarak menetapkan sempadan keras:</p>
+        <ol>
+          <li>Ada asbab yang boleh digunakan (kategori 1 &amp; 2)</li>
+          <li>Ada asbab yang boleh dibersihkan &amp; ditransformasikan (kategori 1 &amp; 2)</li>
+          <li>Ada asbab yang tidak boleh disentuh langsung (kategori 3 &amp; 4)</li>
+          <li>Ada asbab yang akan dihancurkan oleh Haq jika manusia mengambilnya</li>
+        </ol>
+        <div class="arabic">﴿ بَلْ نَقْذِفُ بِالْحَقِّ عَلَى الْبَاطِلِ فَيَدْمَغُهُ ﴾</div>
+        <div class="translation">"Kami lontarkan kebenaran ke atas kebatilan, lalu ia menghancurkannya." — Al-Anbiyā' 21:18</div>
+        <p>Batil tidak boleh diislah. Batil hanya boleh dihancurkan oleh Haq.</p>
 
-  <h3>6.4.0 Mukadimah</h3>
+        <hr>
 
-  <p>Tidak semua asbab boleh ditransformasikan menjadi Asbab Mutlak Terbitan.</p>
+        <h3>6.4.1 Empat Kategori Asbab dalam Batas Syarak</h3>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr><th>Kategori</th><th>Nama</th><th>Status Syarak</th><th>Transformasi?</th><th>Contoh</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Asbab Fitrah</td><td>Neutral, tabi'i</td><td>✔ boleh transform</td><td>teknologi, modal, strategi, angka, senjata, logistik</td></tr>
+              <tr><td>2</td><td>Asbab Zulumat</td><td>Neutral budaya</td><td>✔ boleh transform jika melalui nafy–isbat–ittiba'–ikhlas–syarak</td><td>adat neutral, struktur organisasi, sistem politik neutral, media (sebagai khadam)</td></tr>
+              <tr><td>3</td><td>Asbab Haram</td><td>Haram zatnya kerana maksiat batin</td><td>✘ tidak boleh transform</td><td>pembohongan, nifaq, hasad, riya', fake professionalism</td></tr>
+              <tr><td>4</td><td>Asbab Haram Qat'i</td><td>Haram secara muktamad</td><td>✘ tidak boleh transform</td><td>babi, arak, zina, riba, sihir, judi, syirik</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Kategori 1 &amp; 2 sahaja yang boleh menjadi Asbab Mutlak Terbitan, selepas proses transformasi Tauhidi: <strong>NAFY → ISBAT → ITTIBA' → IKHLAS → SYARAK</strong></p>
+        <p>Kategori 3 &amp; 4 tidak akan pernah menjadi ibadah. Malah jika manusia mengambilnya, mereka sedang membuka pintu kehancuran.</p>
 
-  <p>Kerana syarak menetapkan sempadan keras, bahawa:</p>
+        <hr>
 
-  <ol>
-    <li>Ada asbab yang boleh digunakan (kategori 1 & 2)</li>
-    <li>Ada asbab yang boleh dibersihkan & ditransformasikan (kategori 1 & 2)</li>
-    <li>Ada asbab yang tidak boleh disentuh langsung (kategori 3 & 4)</li>
-    <li>Ada asbab yang akan dihancurkan oleh Haq jika manusia mengambilnya</li>
-  </ol>
+        <h3>6.4.2 Kategori 1 — Asbab Fitrah (Boleh Ditransformasi)</h3>
+        <p>Asbab Fitrah menjadi Mutlak Terbitan hanya bila melalui <strong>NAFY–ISBAT–ITTIBA'–IKHLAS–SYARAK</strong>.</p>
+        <div class="arabic">﴿ هُوَ الَّذِي خَلَقَ لَكُمْ مَا فِي الْأَرْضِ جَمِيعًا ﴾</div>
+        <div class="translation">"Dia yang menciptakan untuk kamu apa yang di bumi semuanya." — Al-Baqarah 2:29</div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Asbab Fitrah</th><th>Transformasi</th><th>Mutlak Terbitan</th></tr></thead>
+            <tbody>
+              <tr><td>Kayu (tongkat Musa عليه السلام)</td><td>Nafy–Isbat–Perintah Mutlak</td><td>Memecahkan laut</td></tr>
+              <tr><td>Parit Khandaq</td><td>Strategi + Ittiba'</td><td>Menyelamatkan Madinah</td></tr>
+              <tr><td>Baju besi Rasulullah ﷺ</td><td>Fitrah → Tawakkal</td><td>Alat yang taat</td></tr>
+              <tr><td>Air, kurma, gandum</td><td>Ikhlas + Ittiba'</td><td>Sedekah</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-  <p>Allah berfirman:</p>
-  <div class="arab">﴿ بَلْ نَقْذِفُ بِالْحَقِّ عَلَى الْبَاطِلِ فَيَدْمَغُهُ ﴾</div>
-  <p>“Kami lontarkan kebenaran ke atas kebatilan, lalu ia menghancurkannya.”<br>
-  Al-Anbiyā’ 21:18【1】</p>
+        <hr>
 
-  <p>Batil tidak boleh diislah.<br>
-  Batil hanya boleh dihancurkan oleh Haq.</p>
+        <h3>6.4.3 Kategori 2 — Asbab Zulumat (Yang Boleh Ditransformasi)</h3>
+        <p>Asbab Zulumat ialah asbab yang lahir daripada persetujuan manusia. Tidak haram zatnya, tetapi tidak bernilai di sisi Allah melainkan disucikan dengan Nafy–Isbat, dipandu dengan Ittiba', dan diluruskan dengan syarak.</p>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Asbab Zulumat</th><th>Transformasi</th><th>Hasil Tauhidi</th></tr></thead>
+            <tbody>
+              <tr><td>Sistem syura Arab</td><td>Ittiba' Rasulullah ﷺ</td><td>Majlis Syura Islam</td></tr>
+              <tr><td>Budaya tetamu Arab</td><td>Niat ikhlas + sunnah</td><td>Islah akhlak</td></tr>
+              <tr><td>Media</td><td>Khadam suasana dakwah</td><td>Menguatkan majlis iman</td></tr>
+              <tr><td>Sistem pentadbiran</td><td>Disucikan dgn syarak</td><td>Tadbir amanah</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-  <p>Maka kategori 3 & 4 adalah bukaan pintu pelanggaran asbab, bukan pintu transformasi.</p>
+        <hr>
 
-  <hr>
+        <h3>6.4.4 Kategori 3 — Asbab Haram (Tidak Boleh Transform)</h3>
+        <p>Asbab Haram ialah maksiat batin: nifaq, pembohongan, riya', hasad, fake professionalism, manipulasi, penipuan, propaganda. Ia bukan haram zat material, tetapi haram kerana ia membunuh iman.</p>
+        <div class="arabic">﴿ يُخَادِعُونَ اللَّهَ وَالَّذِينَ آمَنُوا… ﴾</div>
+        <div class="translation">"Mereka memperdaya Allah dan orang beriman…" — Al-Baqarah 2:9</div>
+        <p>Nifaq tidak boleh disucikan. Bohong tidak boleh dijadikan alat dakwah. Fake professionalism = nifaq moden.</p>
 
-  <h3>6.4.1 EMPAT KATEGORI ASBAB DALAM BATAS SYARAK</h3>
+        <hr>
 
-  <p>Ini versi muktamad—tiada penambahan istilah baharu:</p>
+        <h3>6.4.5 Kategori 4 — Asbab Haram Qat'i (Tidak Boleh Transform)</h3>
+        <p>Kategori ini adalah haram muktamad — tidak boleh disentuh, tidak boleh diislah, tidak boleh dijadikan alat, tidak boleh ditransformasikan. Jika manusia mengambilnya → Allah sendiri akan menghancurkannya.</p>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Asbab Haram Qat'i</th><th>Dalil</th></tr></thead>
+            <tbody>
+              <tr><td>Babi</td><td>Al-An'am 6:145</td></tr>
+              <tr><td>Arak</td><td>Al-Ma'idah 5:90–91</td></tr>
+              <tr><td>Zina</td><td>Al-Isra' 17:32</td></tr>
+              <tr><td>Riba</td><td>Al-Baqarah 2:279</td></tr>
+              <tr><td>Sihir</td><td>Al-Baqarah 2:102</td></tr>
+              <tr><td>Judi</td><td>Al-Ma'idah 5:90</td></tr>
+              <tr><td>Syirik</td><td>An-Nisa' 4:48</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-  <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; margin:10px 0;">
-      <thead>
-        <tr>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Kategori</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Nama</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Status Syarak</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Transformasi?</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Contoh</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">1</td>
-          <td style="border:1px solid var(--border); padding:8px;">Asbab Fitrah</td>
-          <td style="border:1px solid var(--border); padding:8px;">Neutral, tabi‘i</td>
-          <td style="border:1px solid var(--border); padding:8px;">✔ boleh transform</td>
-          <td style="border:1px solid var(--border); padding:8px;">teknologi, modal, strategi, angka, senjata, logistik</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">2</td>
-          <td style="border:1px solid var(--border); padding:8px;">Asbab Zulumat</td>
-          <td style="border:1px solid var(--border); padding:8px;">Neutral budaya tetapi berasal dari persetujuan masyarakat</td>
-          <td style="border:1px solid var(--border); padding:8px;">✔ boleh transform jika melalui nafy–isbat–ittiba’–ikhlas–syarak</td>
-          <td style="border:1px solid var(--border); padding:8px;">adat neutral, struktur organisasi, sistem politik neutral, media (sebagai khadam)</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">3</td>
-          <td style="border:1px solid var(--border); padding:8px;">Asbab Haram</td>
-          <td style="border:1px solid var(--border); padding:8px;">Haram zatnya kerana maksiat batin</td>
-          <td style="border:1px solid var(--border); padding:8px;">✘ tidak boleh transform</td>
-          <td style="border:1px solid var(--border); padding:8px;">pembohongan, nifaq, hasad, riya’, fake professionalism</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">4</td>
-          <td style="border:1px solid var(--border); padding:8px;">Asbab Haram Qat‘i</td>
-          <td style="border:1px solid var(--border); padding:8px;">Haram secara muktamad</td>
-          <td style="border:1px solid var(--border); padding:8px;">✘ tidak boleh transform</td>
-          <td style="border:1px solid var(--border); padding:8px;">babi, arak, zina, riba, sihir, judi, syirik</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+        <hr>
 
-  <p>Kategori 1 & 2 sahaja yang boleh menjadi Asbab Mutlak Terbitan,<br>
-  selepas proses transformasi Tauhidi:</p>
+        <h3>6.4.6 Prinsip Tauhidi Muktamad bagi Batas Transformasi</h3>
+        <ol>
+          <li>Asbab Fitrah → boleh ditransformasi</li>
+          <li>Asbab Zulumat → boleh ditransformasi</li>
+          <li>Asbab Haram → tidak boleh disentuh</li>
+          <li>Asbab Haram Qat'i → tidak boleh disentuh selamanya</li>
+          <li>Bila Haq turun → Batil akan hancur serta-merta</li>
+        </ol>
+        <div class="arabic">﴿ فَأَمَّا الزَّبَدُ فَيَذْهَبُ جُفَاءً ﴾</div>
+        <div class="translation">"Adapun buih (batil), ia pasti hilang lenyap." — Ar-Ra'd 13:17</div>
 
-  <p><strong>NAFY → ISBAT → ITTIBA’ → IKHLAS → SYARAK</strong></p>
+        <div class="footnote">
+          <strong>Nota Kaki:</strong><br>
+          Al-Anbiyā' 21:18 &nbsp;|&nbsp; Al-Baqarah 2:29 &nbsp;|&nbsp; Ar-Ra'd 13:11 &nbsp;|&nbsp; Al-Baqarah 2:9<br>
+          Al-An'am 6:145 &nbsp;|&nbsp; Al-Ma'idah 5:90–91 &nbsp;|&nbsp; Al-Isra' 17:32 &nbsp;|&nbsp; Al-Baqarah 2:279<br>
+          Al-Baqarah 2:102 &nbsp;|&nbsp; Al-Ma'idah 5:90 &nbsp;|&nbsp; An-Nisa' 4:48 &nbsp;|&nbsp; Ar-Ra'd 13:17
+        </div>
 
-  <p>Kategori 3 & 4 tidak akan pernah menjadi ibadah.</p>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+      <!-- ============================== /BAB 6.4 ============================== -->
 
-  <p>Malah, jika manusia mengambilnya, mereka sedang membuka pintu kehancuran.</p>
-
-  <hr>
-
-  <h3>6.4.2 KATEGORI 1 — ASBAB FITRAH (BOLEH DITRANSFORMASI)</h3>
-
-  <p>Asbab Fitrah ialah asbab tabi‘i yang Allah ciptakan sebagai alat:</p>
-  <ul>
-    <li>teknologi</li>
-    <li>modal</li>
-    <li>strategi perang</li>
-    <li>perancangan</li>
-    <li>angka</li>
-    <li>logistik</li>
-    <li>kajian</li>
-    <li>data</li>
-    <li>media (hanya sebagai khadam, bukan dakwah)</li>
-  </ul>
-
-  <p>Asbab Fitrah menjadi Mutlak Terbitan hanya bila melalui <strong>NAFY–ISBAT–ITTIBA’–IKHLAS–SYARAK</strong>.</p>
-
-  <p><strong>Dalil</strong></p>
-  <div class="arab">﴿ هُوَ الَّذِي خَلَقَ لَكُمْ مَا فِي الْأَرْضِ جَمِيعًا ﴾</div>
-  <p>“Dia yang menciptakan untuk kamu apa yang di bumi semuanya.”<br>
-  Al-Baqarah 2:29【2】</p>
-
-  <p>Allah menciptakan benda dunia untuk digunakan, bukan disembah.</p>
-
-  <p><strong>Contoh Transformasi Asbab Fitrah</strong></p>
-  <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; margin:10px 0;">
-      <thead>
-        <tr>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Asbab Fitrah</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Transformasi</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Mutlak Terbitan</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Kayu (tongkat Musa عليه السلام)</td>
-          <td style="border:1px solid var(--border); padding:8px;">Nafy–Isbat–Perintah Mutlak</td>
-          <td style="border:1px solid var(--border); padding:8px;">Memecahkan laut</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Parit Khandaq</td>
-          <td style="border:1px solid var(--border); padding:8px;">Strategi + Ittiba’</td>
-          <td style="border:1px solid var(--border); padding:8px;">Menyelamatkan Madinah</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Baju besi Rasulullah ﷺ</td>
-          <td style="border:1px solid var(--border); padding:8px;">Fitrah → Tawakkal</td>
-          <td style="border:1px solid var(--border); padding:8px;">Alat yang taat</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Air, kurma, gandum</td>
-          <td style="border:1px solid var(--border); padding:8px;">Ikhlas + Ittiba’</td>
-          <td style="border:1px solid var(--border); padding:8px;">Sedekah</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <hr>
-
-  <h3>6.4.3 KATEGORI 2 — ASBAB ZULUMAT (YANG BOLEH DITRANSFORMASI)</h3>
-
-  <p>Asbab Zulumat ialah asbab yang lahir daripada persetujuan manusia.<br>
-  Tidak haram zatnya, tetapi tidak bernilai di sisi Allah melainkan:</p>
-  <ul>
-    <li>disucikan dengan Nafy–Isbat,</li>
-    <li>dipandu dengan Ittiba’,</li>
-    <li>diluruskan dengan syarak.</li>
-  </ul>
-
-  <p><strong>Dalil umum</strong></p>
-  <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ… ﴾</div>
-  <p>“Allah tidak mengubah sesuatu kaum…”<br>
-  Ar-Ra‘d 13:11【3】</p>
-
-  <p>Perubahan masyarakat → melalui islah, bukan meninggalkan asbab.</p>
-
-  <p><strong>Contoh Asbab Zulumat yang boleh ditransformasikan</strong></p>
-  <ul>
-    <li>adat masyarakat</li>
-    <li>budaya kerja</li>
-    <li>sistem organisasi</li>
-    <li>struktur pimpinan</li>
-    <li>sistem politik neutral</li>
-    <li>media (sebagai khadam)</li>
-    <li>protokol, disiplin, SOP, piawaian</li>
-  </ul>
-
-  <p><strong>Contoh Transformasi</strong></p>
-  <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; margin:10px 0;">
-      <thead>
-        <tr>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Asbab Zulumat</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Transformasi</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Hasil Tauhidi</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Sistem syura Arab</td>
-          <td style="border:1px solid var(--border); padding:8px;">Ittiba’ Rasulullah ﷺ</td>
-          <td style="border:1px solid var(--border); padding:8px;">Majlis Syura Islam</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Budaya tetamu Arab</td>
-          <td style="border:1px solid var(--border); padding:8px;">Niat ikhlas + sunnah</td>
-          <td style="border:1px solid var(--border); padding:8px;">Islah akhlak</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Media</td>
-          <td style="border:1px solid var(--border); padding:8px;">Khadam suasana dakwah</td>
-          <td style="border:1px solid var(--border); padding:8px;">Menguatkan majlis iman</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Sistem pentadbiran</td>
-          <td style="border:1px solid var(--border); padding:8px;">Disucikan dgn syarak</td>
-          <td style="border:1px solid var(--border); padding:8px;">Tadbir amanah</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <hr>
-
-  <h3>6.4.4 KATEGORI 3 — ASBAB HARAM (TIDAK BOLEH TRANSFORM)</h3>
-
-  <p>Asbab Haram ialah maksiat batin:</p>
-  <ul>
-    <li>nifaq</li>
-    <li>pembohongan</li>
-    <li>riya’</li>
-    <li>hasad</li>
-    <li>fake professionalism</li>
-    <li>manipulasi</li>
-    <li>penipuan</li>
-    <li>propaganda</li>
-  </ul>
-
-  <p>Ia bukan haram zat material, tetapi haram kerana ia membunuh iman.</p>
-
-  <p><strong>Dalil</strong></p>
-  <div class="arab">﴿ يُخَادِعُونَ اللَّهَ وَالَّذِينَ آمَنُوا… ﴾</div>
-  <p>“Mereka memperdaya Allah dan orang beriman…”<br>
-  Al-Baqarah 2:9【4】</p>
-
-  <p>Nifaq tidak boleh disucikan.<br>
-  Bohong tidak boleh dijadikan alat dakwah.<br>
-  Fake professionalism = nifaq moden.</p>
-
-  <hr>
-
-  <h3>6.4.5 KATEGORI 4 — ASBAB HARAM QAT‘I (TIDAK BOLEH TRANSFORM)</h3>
-
-  <p>Kategori ini adalah haram muktamad,<br>
-  tidak boleh disentuh,<br>
-  tidak boleh diislah,<br>
-  tidak boleh dijadikan alat,<br>
-  tidak boleh ditransformasikan.</p>
-
-  <p>Jika manusia mengambilnya → Allah sendiri akan menghancurkannya.</p>
-
-  <p><strong>Contoh lengkap</strong></p>
-  <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; margin:10px 0;">
-      <thead>
-        <tr>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Asbab Haram Qat‘i</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Dalil</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Babi</td>
-          <td style="border:1px solid var(--border); padding:8px;">Al-An‘am 6:145【5】</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Arak</td>
-          <td style="border:1px solid var(--border); padding:8px;">Al-Ma’idah 5:90–91【6】</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Zina</td>
-          <td style="border:1px solid var(--border); padding:8px;">Al-Isra’ 17:32【7】</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Riba</td>
-          <td style="border:1px solid var(--border); padding:8px;">Al-Baqarah 2:279【8】</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Sihir</td>
-          <td style="border:1px solid var(--border); padding:8px;">Al-Baqarah 2:102【9】</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Judi</td>
-          <td style="border:1px solid var(--border); padding:8px;">Al-Ma’idah 5:90【10】</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Syirik</td>
-          <td style="border:1px solid var(--border); padding:8px;">An-Nisa’ 4:48【11】</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <ul>
-    <li>Haram zat.</li>
-    <li>Haram niat.</li>
-    <li>Haram tujuan.</li>
-    <li>Haram keadaan.</li>
-    <li>Tidak menerima transformasi.</li>
-  </ul>
-
-  <p>Kategori 4 adalah “batu besar Batil”.<br>
-  Apabila bertembung dengan Haq → Allah hancurkan.</p>
-
-  <hr>
-
-  <h3>6.4.6 PRINSIP TAUHIDI MUKTAMAD BAGI BATAS TRANSFORMASI</h3>
-  <ol>
-    <li>Asbab Fitrah → boleh ditransformasi</li>
-    <li>Asbab Zulumat → boleh ditransformasi</li>
-    <li>Asbab Haram → tidak boleh disentuh</li>
-    <li>Asbab Haram Qat‘i → tidak boleh disentuh selamanya</li>
-    <li>Bila Haq turun → Batil akan hancur serta-merta</li>
-  </ol>
-
-  <p><strong>Dalil pemutus:</strong></p>
-  <div class="arab">﴿ فَأَمَّا الزَّبَدُ فَيَذْهَبُ جُفَاءً ﴾</div>
-  <p>“Adapun buih (batil), ia pasti hilang lenyap.”<br>
-  Ar-Ra‘d 13:17【12】</p>
-
-  <hr>
-
-  <h3>6.4.7 RUMUSAN MUKTAMAD</h3>
-  <ul>
-    <li>Hanya Kategori 1 & 2 boleh disucikan dan ditransformasikan.</li>
-    <li>Kategori 3 & 4: haram mutlak, tidak boleh disentuh.</li>
-    <li>Transformasi mesti melalui Nafy–Isbat–Ittiba’–Ikhlas–Syarak.</li>
-    <li>Mana-mana penggunaan asbab tanpa Nafy → jatuh kepada syirik asbab.</li>
-    <li>Mana-mana penggunaan asbab tanpa Ittiba’ → jatuh kepada bid‘ah.</li>
-    <li>Mana-mana asbab haram → akan dihancurkan oleh Haq.</li>
-  </ul>
-
-  <p>Ini ialah sempadan keras dalam Kerangka 3 Asbab.</p>
-
-  <hr>
-
-  <h3>NOTA KAKI BAB 6.4</h3>
-  <ul>
-    <li>【1】 Al-Anbiyā’ 21:18</li>
-    <li>【2】 Al-Baqarah 2:29</li>
-    <li>【3】 Ar-Ra‘d 13:11</li>
-    <li>【4】 Al-Baqarah 2:9</li>
-    <li>【5】 Al-An‘am 6:145</li>
-    <li>【6】 Al-Ma’idah 5:90–91</li>
-    <li>【7】 Al-Isra’ 17:32</li>
-    <li>【8】 Al-Baqarah 2:279</li>
-    <li>【9】 Al-Baqarah 2:102</li>
-    <li>【10】 Al-Ma’idah 5:90</li>
-    <li>【11】 An-Nisa’ 4:48</li>
-    <li>【12】 Ar-Ra‘d 13:17</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 6.4 END === -->
-                                      <section class="section-card" id="6-5">
+      <!-- ============================== BAB 6.5 ============================== -->
+      <section class="section-card" id="6-5">
         <div class="badge-chapter">🟥 BAB 6.5</div>
+        <h2>6.5 — PERLANGGARAN ASBAB FITRAH VS ASBAB ZULUMAT</h2>
 
-     <!-- === SECTION 6.5 START === -->
-<section class="section" id="6-5">
-  <h2>6.5 — PERLANGGARAN ASBAB FITRAH VS ASBAB ZULUMAT</h2>
+        <h3>6.5.1 Mukadimah</h3>
+        <p>Asbab Fitrah = fakta ciptaan Allah. Asbab Zulumat = persepsi ciptaan manusia.</p>
+        <p>Apabila Haq muncul, kedua-duanya ditundukkan — Fitrah ditundukkan, Zulumat dihancurkan.</p>
+        <div class="arabic">﴿ قُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ ۚ إِنَّ الْبَاطِلَ كَانَ زَهُوقًا ﴾</div>
+        <div class="translation">"Telah datang Haq, dan batallah Batil. Sesungguhnya Batil itu pasti lenyap." — Al-Isra' 17:81</div>
 
-  <h3>6.5.1 Mukadimah</h3>
+        <hr>
 
-  <p>Asbab Fitrah dan Asbab Zulumat tidak sama sifatnya:</p>
-  <ul>
-    <li>Asbab Fitrah = fakta ciptaan Allah</li>
-    <li>Asbab Zulumat = persepsi ciptaan manusia</li>
-  </ul>
+        <h3>6.5.2 Asbab Fitrah = Fakta (Neutral &amp; Objektif)</h3>
+        <p>Asbab Fitrah ialah realiti objektif yang Allah cipta: data sebenar, angka jualan, COGS, kos operasi, masa, tenaga, jarak, teknologi, hukum tabi'i, sunnah alam, sebab-akibat empirikal. Fitrah = fakta, tidak menipu.</p>
+        <div class="arabic">﴿ كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً بِإِذْنِ اللَّهِ ﴾</div>
+        <div class="translation">"Kumpulan kecil mengalahkan kumpulan besar dengan izin Allah." — Al-Baqarah 2:249</div>
 
-  <p>Apabila Haq muncul, kedua-duanya ditundukkan —<br>
-  Fitrah ditundukkan, Zulumat dihancurkan.</p>
+        <hr>
 
-  <p>Dalil pemutus:</p>
-  <div class="arab">﴿ قُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ ۚ إِنَّ الْبَاطِلَ كَانَ زَهُوقًا ﴾</div>
-  <p>“Telah datang Haq, dan batallah Batil.<br>
-  Sesungguhnya Batil itu pasti lenyap.”<br>
-  (Al-Isra’ 17:81)【1】</p>
+        <h3>6.5.3 Asbab Zulumat = Persepsi (Manipulatif &amp; Tidak Objektif)</h3>
+        <p>Asbab Zulumat ialah realiti ciptaan manusia: propaganda, viral tanpa fakta, hype media, review palsu, label ciptaan manusia, buzz words tanpa kajian, drama media, fake professionalism, naratif tiktoker. Zulumat = persepsi, bukan fakta.</p>
+        <div class="arabic">﴿ وَإِن تُطِعْ أَكْثَرَ مَن فِي الْأَرْضِ يُضِلُّوكَ عَن سَبِيلِ اللَّهِ ﴾</div>
+        <div class="translation">"Jika engkau ikut majoriti manusia, mereka akan menyesatkanmu." — Al-An'am 6:116</div>
+        <p>Majoriti ≠ Haq. Viral ≠ Haq.</p>
 
-  <hr>
+        <hr>
 
-  <h3>6.5.2 Asbab Fitrah = Fakta (Neutral & Objektif)</h3>
+        <h3>6.5.4 Perlanggaran Fitrah vs Zulumat</h3>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Dimensi</th><th>Asbab Fitrah (Fakta)</th><th>Asbab Zulumat (Persepsi)</th></tr></thead>
+            <tbody>
+              <tr><td>Sumber</td><td>Allah cipta</td><td>Manusia cipta</td></tr>
+              <tr><td>Sifat</td><td>Objektif, boleh diukur</td><td>Subjektif, manipulatif</td></tr>
+              <tr><td>Nilai</td><td>Neutral</td><td>Neutral → atau Batil</td></tr>
+              <tr><td>Bila Haq muncul</td><td>Tunduk</td><td>Pecah &amp; lenyap</td></tr>
+              <tr><td>Modus</td><td>Realiti sebenar</td><td>Realiti palsu</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Fitrah tunduk → kerana ia dicipta untuk tunduk. Zulumat musnah → kerana ia tidak mempunyai realiti.</p>
 
-  <p>Asbab Fitrah ialah realiti objektif yang Allah cipta:</p>
-  <ul>
-    <li>data sebenar</li>
-    <li>angka jualan</li>
-    <li>COGS</li>
-    <li>kos operasi</li>
-    <li>masa, tenaga, jarak</li>
-    <li>teknologi</li>
-    <li>hukum tabi‘i</li>
-    <li>sunnah alam</li>
-    <li>sebab-akibat empirikal</li>
-  </ul>
+        <hr>
 
-  <p>Fitrah = fakta, tidak menipu.</p>
+        <h3>6.5.5 Contoh Moden: Data vs Propaganda</h3>
+        <p><strong>A. Asbab Fitrah = Data (Realiti Bisnes):</strong> sales sebenar, retention, repeat purchase, cost structure, queue time, kitchen flow, inventory audit, SOP yang sah, kajian universiti, rating standardised. Semua ini fakta.</p>
+        <p><strong>B. Asbab Zulumat = Propaganda (Hype Media):</strong> tiktoker menipu fakta, review manipulatif, clickbait, "rasa santan" walaupun tiada santan, "overpriced" tanpa kira kos, editing yang menipu, naratif palsu, crowd bias, reaction video tanpa ilmu. Semua ini persepsi, bukan realiti.</p>
 
-  <p>Contoh Qur’an:</p>
-  <div class="arab">﴿ كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً بِإِذْنِ اللَّهِ ﴾</div>
-  <p>“Kumpulan kecil mengalahkan kumpulan besar dengan izin Allah.”<br>
-  (Al-Baqarah 2:249)【2】</p>
+        <hr>
 
-  <p>Fitrah (angka kecil) tunduk apabila Haq muncul.</p>
+        <h3>6.5.6 Bagaimana Haq Melanggar Kedua-duanya</h3>
+        <p><strong>1) Haq melanggar Fitrah (mengatasi fakta):</strong> Badar (313 mengatasi 1000), Laut Merah (tongkat memecahkan laut), Hijrah (jaring labah-labah mengalahkan strategi Quraisy), Khandaq (parit mengalahkan pakatan Ahzab). Fakta tunduk kepada Haq apabila Allah berkehendak.</p>
+        <p><strong>2) Haq menghancurkan Zulumat (memecahkan persepsi):</strong> Firaun tenggelam (hilang propaganda "tuhan"), Bani Thaqif lembut hati (hancur sombong), Pembukaan Mekah (naratif Quraisy runtuh), Islam tumbang empayar Parsi (propaganda 1000 tahun hancur). Zulumat bukan dikalahkan dengan hujah — tetapi dengan cahaya Haq.</p>
 
-  <hr>
+        <hr>
 
-  <h3>6.5.3 Asbab Zulumat = Persepsi (Manipulatif & Tidak Objektif)</h3>
+        <h3>6.5.7 Rumusan Muktamad</h3>
+        <ol>
+          <li>Asbab Fitrah = Fakta → boleh ditransformasi → tunduk bila Haq muncul</li>
+          <li>Asbab Zulumat = Persepsi → mesti disucikan → hancur bila Haq turun</li>
+          <li>Haq bukan bergantung kepada fakta → tetapi fakta tunduk kepada Haq</li>
+          <li>Haq tidak berdialog dengan persepsi → Haq menghancurkan persepsi</li>
+          <li>Contoh moden: Data bisnes = Fitrah | Hype media = Zulumat | Integriti = Haq</li>
+        </ol>
 
-  <p>Asbab Zulumat ialah realiti ciptaan manusia:</p>
-  <ul>
-    <li>propaganda</li>
-    <li>viral tanpa fakta</li>
-    <li>hype media</li>
-    <li>review palsu</li>
-    <li>label ciptaan manusia</li>
-    <li>“overrated” tanpa standard</li>
-    <li>buzz words tanpa kajian</li>
-    <li>drama media</li>
-    <li>fake professionalism</li>
-    <li>naratif tiktoker</li>
-  </ul>
+        <div class="footnote">
+          <strong>Nota Kaki:</strong><br>
+          【1】 Al-Isra' 17:81 &nbsp;|&nbsp; 【2】 Al-Baqarah 2:249 &nbsp;|&nbsp; 【3】 Al-An'am 6:116
+        </div>
 
-  <p>Zulumat = persepsi, bukan fakta.</p>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+      <!-- ============================== /BAB 6.5 ============================== -->
 
-  <p>Dalil:</p>
-  <div class="arab">﴿ وَإِن تُطِعْ أَكْثَرَ مَن فِي الْأَرْضِ يُضِلُّوكَ عَن سَبِيلِ اللَّهِ ﴾</div>
-  <p>“Jika engkau ikut majoriti manusia, mereka akan menyesatkanmu.”<br>
-  (Al-An‘am 6:116)【3】</p>
-
-  <p>Majoriti ≠ Haq.<br>
-  Viral ≠ Haq.</p>
-
-  <hr>
-
-  <h3>6.5.4 Perlanggaran Fitrah vs Zulumat</h3>
-  <p><em>(Fakta vs Persepsi)</em></p>
-
-  <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; margin:10px 0;">
-      <thead>
-        <tr>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Dimensi</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Asbab Fitrah (Fakta)</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Asbab Zulumat (Persepsi)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Sumber</td>
-          <td style="border:1px solid var(--border); padding:8px;">Allah cipta</td>
-          <td style="border:1px solid var(--border); padding:8px;">Manusia cipta</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Sifat</td>
-          <td style="border:1px solid var(--border); padding:8px;">Objektif, boleh diukur</td>
-          <td style="border:1px solid var(--border); padding:8px;">Subjektif, manipulatif</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Nilai</td>
-          <td style="border:1px solid var(--border); padding:8px;">Neutral</td>
-          <td style="border:1px solid var(--border); padding:8px;">Neutral → atau Batil</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Bila Haq muncul</td>
-          <td style="border:1px solid var(--border); padding:8px;">Tunduk</td>
-          <td style="border:1px solid var(--border); padding:8px;">Pecah & lenyap</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">Modus</td>
-          <td style="border:1px solid var(--border); padding:8px;">Realiti sebenar</td>
-          <td style="border:1px solid var(--border); padding:8px;">Realiti palsu</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p>Fitrah tunduk → kerana ia dicipta untuk tunduk.<br>
-  Zulumat musnah → kerana ia tidak mempunyai realiti.</p>
-
-  <hr>
-
-  <h3>6.5.5 Contoh Moden: Data vs Propaganda</h3>
-
-  <p><strong>A. Asbab Fitrah = Data (Realiti Bisnes)</strong></p>
-  <ul>
-    <li>sales sebenar</li>
-    <li>retention</li>
-    <li>repeat purchase</li>
-    <li>cost structure</li>
-    <li>queue time</li>
-    <li>kitchen flow</li>
-    <li>inventory audit</li>
-    <li>SOP yang sah</li>
-    <li>kajian universiti</li>
-    <li>rating standardised</li>
-  </ul>
-  <p>Semua ini fakta.</p>
-
-  <p><strong>B. Asbab Zulumat = Propaganda (Hype Media)</strong></p>
-  <ul>
-    <li>tiktoker menipu fakta</li>
-    <li>review manipulatif</li>
-    <li>clickbait</li>
-    <li>“rasa santan” walaupun tiada santan</li>
-    <li>“overpriced” tanpa kira kos</li>
-    <li>editing yang menipu</li>
-    <li>naratif palsu</li>
-    <li>crowd bias</li>
-    <li>reaction video tanpa ilmu</li>
-    <li>hype → bukan realiti</li>
-  </ul>
-  <p>Semua ini persepsi, bukan realiti.</p>
-
-  <hr>
-
-  <h3>6.5.6 Bagaimana Haq Melanggar Kedua-duanya</h3>
-
-  <p><strong>1) Haq melanggar Fitrah (mengatasi fakta)</strong></p>
-  <p>Contoh dalam sirah:</p>
-  <ul>
-    <li>Badar: 313 mengatasi 1000</li>
-    <li>Laut Merah: tongkat memecahkan laut</li>
-    <li>Hijrah: jaring labah-labah mengalahkan strategi Quraisy</li>
-    <li>Khandaq: parit mengalahkan pakatan Ahzab</li>
-  </ul>
-  <p>Fakta tunduk kepada Haq apabila Allah berkehendak.</p>
-
-  <p><strong>2) Haq menghancurkan Zulumat (memecahkan persepsi)</strong></p>
-  <p>Contoh dalam sirah:</p>
-  <ul>
-    <li>Firaun tenggelam → hilang propaganda “tuhan”</li>
-    <li>Bani Thaqif lembut hati 3 hari → hancur sombong</li>
-    <li>Pembukaan Mekah → naratif Quraisy runtuh</li>
-    <li>Islam tumbang empayar Parsi → propaganda 1000 tahun hancur</li>
-  </ul>
-  <p>Zulumat bukan dikalahkan dengan hujah —<br>
-  tetapi dengan cahaya Haq.</p>
-
-  <hr>
-
-  <h3>6.5.7 Rumusan Muktamad</h3>
-  <ol>
-    <li>Asbab Fitrah = Fakta<br>
-    → boleh ditransformasi<br>
-    → tunduk bila Haq muncul</li>
-    <li>Asbab Zulumat = Persepsi<br>
-    → mesti disucikan<br>
-    → hancur bila Haq turun</li>
-    <li>Haq bukan bergantung kepada fakta<br>
-    → tetapi fakta tunduk kepada Haq</li>
-    <li>Haq tidak berdialog dengan persepsi<br>
-    → Haq menghancurkan persepsi</li>
-    <li>Contoh moden<br>
-    → Data bisnes = Fitrah<br>
-    → Hype media = Zulumat<br>
-    → Integriti = Haq</li>
-  </ol>
-
-  <hr>
-
-  <h3>Nota Kaki 6.5</h3>
-  <ul>
-    <li>【1】 Al-Isra’ 17:81</li>
-    <li>【2】 Al-Baqarah 2:249</li>
-    <li>【3】 Al-An‘am 6:116</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 6.5 END === -->
-              <section class="section-card" id="6-6">
+      <!-- ============================== BAB 6.6 ============================== -->
+      <section class="section-card" id="6-6">
         <div class="badge-chapter">🟥 BAB 6.6</div>
+        <h2>6.6 — PERLANGGARAN ASBAB FITRAH vs ASBAB MUTLAK</h2>
+        <p><em>(Logik ciptaan Allah vs Janji Allah)</em></p>
 
-     <!-- === SECTION 6.6 START === -->
-<section class="section" id="6-6">
-  <h2>6.6 — PERLANGGARAN ASBAB FITRAH vs ASBAB MUTLAK</h2>
-  <p><em>(Logik ciptaan Allah vs Janji Allah)</em></p>
+        <h3>6.6.1 Mukadimah</h3>
+        <p>Asbab Fitrah ialah hukum tabi'i yang Allah cipta supaya manusia beramal dengan ikhtiar, mengambil sebab, berfikir, dan merasakan kekurangan diri. Namun ia bukan penentu hasil.</p>
+        <p>Asbab Mutlak ialah janji Allah — janji yang tidak tunduk kepada logik tabi'i. Apabila kedua-duanya bertembung, janji Allah mengatasi hukum tabi'i.</p>
+        <div class="arabic">﴿ وَكَانَ حَقًّا عَلَيْنَا نَصْرُ الْمُؤْمِنِينَ ﴾</div>
+        <div class="translation">"Menjadi ketetapan atas Kami untuk menolong orang-orang beriman." — Ar-Rum 30:47</div>
 
-  <h3>6.6.1 Mukadimah</h3>
+        <hr>
 
-  <p>Asbab Fitrah ialah hukum tabi‘i yang Allah cipta supaya manusia beramal dengan ikhtiar, mengambil sebab, berfikir, dan merasakan kekurangan diri.<br>
-  Namun ia bukan penentu hasil.</p>
+        <h3>6.6.2 Asbab Fitrah = Logik Tabi'i Ciptaan Allah</h3>
+        <p>Asbab fitrah memberikan angka, kebarangkalian, kebolehan fizikal, hukum sains, kekuatan tentera, rasional strategi, sebab-akibat biasa, dan pengalaman manusia. Semua ini benar, tetapi tidak muktamad. Ia hanya alat, bukan penentu.</p>
+        <div class="arabic">﴿ وَمَا أُوتِيتُم مِّنَ الْعِلْمِ إِلَّا قَلِيلًا ﴾</div>
+        <div class="translation">"Kamu tidak diberi ilmu melainkan sedikit." — Al-Isra' 17:85</div>
 
-  <p>Asbab Mutlak ialah janji Allah —<br>
-  janji yang tidak tunduk kepada logik tabi‘i.</p>
+        <hr>
 
-  <p>Apabila kedua-duanya bertembung,<br>
-  janji Allah mengatasi hukum tabi‘i,<br>
-  Asbab Mutlak mengatasi Asbab Fitrah,<br>
-  Haq mengatasi fitrah,<br>
-  seperti firman Allah:</p>
+        <h3>6.6.3 Asbab Mutlak = Janji Allah</h3>
+        <p>Asbab Mutlak ialah segala amal yang Allah sendiri sambungkan kepada janji-Nya: dakwah, mujahadah, sabar, solat, tawakkal, doa, syura, infak, hijrah, amar makruf nahi mungkar. Semua ini membawa hasil kerana janji Allah, bukan kerana kekuatan manusia.</p>
+        <div class="arabic">﴿ وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا • وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ﴾</div>
+        <div class="translation">"Sesiapa bertaqwa kepada Allah, Allah buatkan jalan keluar baginya, dan Allah beri rezeki dari arah yang tidak disangka." — At-Talaq 65:2–3</div>
 
-  <div class="arab">﴿ وَكَانَ حَقًّا عَلَيْنَا نَصْرُ الْمُؤْمِنِينَ ﴾</div>
-  <p>“Menjadi ketetapan atas Kami untuk menolong orang-orang beriman.”<br>
-  (Ar-Rum 30:47)【1】</p>
+        <hr>
 
-  <hr>
+        <h3>6.6.4 Apabila Fitrah Bertembung Dengan Mutlak</h3>
+        <p>Prinsip pemutus: Logik tidak menentukan — janji Allah yang menentukan. Fitrah tunduk — Mutlak naik. Hasil hanya datang kerana Allah berkehendak. Pelanggaran berlaku apabila tertib Rasulullah ﷺ dipenuhi.</p>
+        <div class="arabic">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ ﴾</div>
+        <div class="translation">"Jika kamu menolong agama Allah, Allah akan menolong kamu." — Muhammad 47:7</div>
 
-  <h3>6.6.2 Asbab Fitrah = Logik Tabi‘i Ciptaan Allah</h3>
+        <hr>
 
-  <p>Asbab fitrah memberikan:</p>
-  <ul>
-    <li>angka,</li>
-    <li>kebarangkalian,</li>
-    <li>kebolehan fizikal,</li>
-    <li>hukum sains,</li>
-    <li>kekuatan tentera,</li>
-    <li>rasional strategi,</li>
-    <li>sebab-akibat biasa,</li>
-    <li>pengalaman manusia.</li>
-  </ul>
+        <h3>6.6.5 Contoh Agung — Perang Badar</h3>
+        <p><strong>Asbab Fitrah:</strong> 313 vs 1000, kurang senjata, kurang kuda, tiada persediaan perang besar. Secara fitrah: kalah.</p>
+        <p><strong>Asbab Mutlak:</strong> doa Rasulullah ﷺ, syura, sabar, jihad, ittiba', tawakkal penuh.</p>
+        <div class="arabic">﴿ أَنِّي مُمِدُّكُم بِأَلْفٍ مِّنَ الْمَلَائِكَةِ مُرْدِفِينَ ﴾</div>
+        <div class="translation">"Aku menolong kamu dengan seribu malaikat." — Al-Anfal 8:9</div>
+        <p>Fitrah tunduk kepada Mutlak. Haq mengatasi hukum tabi'i.</p>
 
-  <p>Semua ini benar, tetapi tidak muktamad.<br>
-  Ia hanya alat, bukan penentu.</p>
+        <hr>
 
-  <p>Firman Allah:</p>
-  <div class="arab">﴿ وَمَا أُوتِيتُم مِّنَ الْعِلْمِ إِلَّا قَلِيلًا ﴾</div>
-  <p>“Kamu tidak diberi ilmu melainkan sedikit.”<br>
-  (Al-Isra’ 17:85)【2】</p>
+        <h3>6.6.6 Contoh Agung — Hijrah Nabi ﷺ</h3>
+        <p><strong>Asbab Fitrah:</strong> gua kecil, dua orang sahaja, musuh menjejak, peluang ditangkap sangat besar.</p>
+        <p><strong>Asbab Mutlak:</strong> usaha ikut sunnah, strategi Nabi ﷺ, tawakkal sempurna, sabar, doa, hijrah kerana agama.</p>
+        <div class="arabic">﴿ لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا ﴾</div>
+        <div class="translation">"Jangan bersedih — sesungguhnya Allah bersama kita." — At-Tawbah 9:40</div>
+        <p>Mutlak mengatasi fitrah. Musyrikin gagal, walau logik memihak kepada mereka.</p>
 
-  <p>Logik benar, tetapi tidak lengkap.</p>
+        <hr>
 
-  <hr>
+        <h3>6.6.7 Contoh Agung — Rezeki "min ḥaythu lā yaḥtasib"</h3>
+        <p>Ini adalah pelanggaran fitrah paling jelas: rezeki tanpa logik, tanpa sebab yang dapat dihitung manusia.</p>
+        <div class="arabic">﴿ وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ﴾</div>
+        <div class="translation">"Dan Allah memberinya rezeki dari arah yang tidak disangka." — At-Talaq 65:3</div>
+        <p>Apabila hati nafy &amp; isbat, amal ikut sunnah, ikhlas, syura, dakwah, mujahadah, sabar — maka Allah memberi rezeki tanpa tertakluk kepada hukum logik.</p>
 
-  <h3>6.6.3 Asbab Mutlak = Janji Allah</h3>
+        <hr>
 
-  <p>Asbab Mutlak ialah segala amal yang Allah sendiri sambungkan kepada janji-Nya:</p>
-  <ul>
-    <li>dakwah</li>
-    <li>mujahadah</li>
-    <li>sabar</li>
-    <li>solat</li>
-    <li>tawakkal</li>
-    <li>doa</li>
-    <li>syura</li>
-    <li>infak</li>
-    <li>hijrah</li>
-    <li>amar makruf nahi mungkar</li>
-  </ul>
+        <h3>6.6.8 Rumusan Tauhidi Muktamad</h3>
+        <ol>
+          <li>Asbab Fitrah = logik ciptaan Allah → benar, tetapi bukan penentu.</li>
+          <li>Asbab Mutlak = janji Allah → penentu muktamad segala hasil.</li>
+          <li>Pelanggaran berlaku apabila tertib Nabi ﷺ dipenuhi.</li>
+          <li>Haq (Mutlak) mengatasi Fitrah.</li>
+          <li>Pertolongan Allah turun kerana Allah berkehendak — bukan kerana sebab dunia.</li>
+        </ol>
 
-  <p>Semua ini membawa hasil kerana janji Allah,<br>
-  bukan kerana kekuatan manusia.</p>
+        <div class="footnote">
+          <strong>Nota Kaki:</strong><br>
+          【1】 Ar-Rum 30:47 &nbsp;|&nbsp; 【2】 Al-Isra' 17:85 &nbsp;|&nbsp; 【3】 At-Talaq 65:2–3 &nbsp;|&nbsp; 【4】 Muhammad 47:7<br>
+          【5】 Al-Anfal 8:9 &nbsp;|&nbsp; 【6】 At-Tawbah 9:40 &nbsp;|&nbsp; 【7】 At-Talaq 65:3
+        </div>
 
-  <p>Dalil:</p>
-  <div class="arab">﴿ وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا • وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ﴾</div>
-  <p>“Sesiapa bertaqwa kepada Allah, Allah buatkan jalan keluar baginya,<br>
-  dan Allah beri rezeki dari arah yang tidak disangka.”<br>
-  (At-Talaq 65:2–3)【3】</p>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+      <!-- ============================== /BAB 6.6 ============================== -->
 
-  <hr>
-
-  <h3>6.6.4 Apabila Fitrah Bertembung Dengan Mutlak</h3>
-
-  <p><strong>Prinsip pemutus:</strong></p>
-
-  <ol>
-    <li>Logik tidak menentukan — janji Allah yang menentukan.</li>
-    <li>Fitrah tunduk — Mutlak naik.</li>
-    <li>Hasil hanya datang kerana Allah berkehendak.</li>
-    <li>Pelanggaran berlaku apabila tertib Rasulullah ﷺ dipenuhi.</li>
-  </ol>
-
-  <p>Dalil:</p>
-  <div class="arab">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ ﴾</div>
-  <p>“Jika kamu menolong agama Allah, Allah akan menolong kamu.”<br>
-  (Muhammad 47:7)【4】</p>
-
-  <hr>
-
-  <h3>6.6.5 Contoh Agung — Perang Badar</h3>
-
-  <p><strong>Asbab Fitrah (Logik):</strong></p>
-  <ul>
-    <li>313 vs 1000</li>
-    <li>kurang senjata</li>
-    <li>kurang kuda</li>
-    <li>tiada persediaan perang besar</li>
-  </ul>
-  <p>Secara fitrah: kalah.</p>
-
-  <p><strong>Asbab Mutlak (Janji Allah):</strong></p>
-  <ul>
-    <li>doa Rasulullah ﷺ</li>
-    <li>syura</li>
-    <li>sabar</li>
-    <li>jihad</li>
-    <li>ittiba’</li>
-    <li>tawakkal penuh</li>
-  </ul>
-
-  <p>Janji Allah turun:</p>
-  <div class="arab">﴿ أَنِّي مُمِدُّكُم بِأَلْفٍ مِّنَ الْمَلَائِكَةِ مُرْدِفِينَ ﴾</div>
-  <p>“Aku menolong kamu dengan seribu malaikat.”<br>
-  (Al-Anfal 8:9)【5】</p>
-
-  <p><strong>Hasil:</strong><br>
-  Fitrah tunduk kepada Mutlak.<br>
-  Haq mengatasi hukum tabi‘i.</p>
-
-  <hr>
-
-  <h3>6.6.6 Contoh Agung — Hijrah Nabi ﷺ</h3>
-
-  <p><strong>Asbab Fitrah (Logik):</strong></p>
-  <ul>
-    <li>gua kecil</li>
-    <li>dua orang sahaja</li>
-    <li>musuh menjejak</li>
-    <li>peluang ditangkap sangat besar</li>
-  </ul>
-
-  <p><strong>Asbab Mutlak (Janji Allah):</strong></p>
-  <ul>
-    <li>usaha ikut sunnah</li>
-    <li>strategi Nabi ﷺ</li>
-    <li>tawakkal sempurna</li>
-    <li>sabar</li>
-    <li>doa</li>
-    <li>hijrah kerana agama</li>
-  </ul>
-
-  <p>Allah memberi ketenangan dan nusrah:</p>
-  <div class="arab">﴿ لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا ﴾</div>
-  <p>“Jangan bersedih — sesungguhnya Allah bersama kita.”<br>
-  (At-Tawbah 9:40)【6】</p>
-
-  <p><strong>Hasil:</strong><br>
-  Mutlak mengatasi fitrah.<br>
-  Musyrikin gagal, walau logik memihak kepada mereka.</p>
-
-  <hr>
-
-  <h3>6.6.7 Contoh Agung — Rezeki “min ḥaythu lā yaḥtasib”</h3>
-
-  <p>Ini adalah pelanggaran fitrah paling jelas:<br>
-  rezeki tanpa logik, tanpa sebab yang dapat dihitung manusia.</p>
-
-  <p>Dalil:</p>
-  <div class="arab">﴿ وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ﴾</div>
-  <p>“Dan Allah memberinya rezeki dari arah yang tidak disangka.”<br>
-  (At-Talaq 65:3)【7】</p>
-
-  <p>Apabila:</p>
-  <ul>
-    <li>hati nafy & isbat,</li>
-    <li>amal ikut sunnah,</li>
-    <li>ikhlas,</li>
-    <li>syura,</li>
-    <li>dakwah,</li>
-    <li>mujahadah,</li>
-    <li>sabar,</li>
-  </ul>
-  <p>maka Allah memberi rezeki tanpa tertakluk kepada hukum logik.</p>
-
-  <hr>
-
-  <h3>6.6.8 Rumusan Tauhidi Muktamad</h3>
-  <ol>
-    <li>Asbab Fitrah = logik ciptaan Allah.<br>
-    → benar, tetapi bukan penentu.</li>
-    <li>Asbab Mutlak = janji Allah.<br>
-    → penentu muktamad segala hasil.</li>
-    <li>Pelanggaran berlaku apabila tertib Nabi ﷺ dipenuhi.</li>
-    <li>Haq (Mutlak) mengatasi Fitrah.</li>
-    <li>Pertolongan Allah turun kerana Allah berkehendak — bukan kerana sebab dunia.</li>
-  </ol>
-
-  <hr>
-
-  <h3>Nota Kaki 6.6</h3>
-  <ul>
-    <li>【1】 Ar-Rum 30:47</li>
-    <li>【2】 Al-Isra’ 17:85</li>
-    <li>【3】 At-Talaq 65:2–3</li>
-    <li>【4】 Muhammad 47:7</li>
-    <li>【5】 Al-Anfal 8:9</li>
-    <li>【6】 At-Tawbah 9:40</li>
-    <li>【7】 At-Talaq 65:3</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 6.6 END === -->
-                      <section class="section-card" id="6-7">
+      <!-- ============================== BAB 6.7 ============================== -->
+      <section class="section-card" id="6-7">
         <div class="badge-chapter">🟥 BAB 6.7</div>
+        <h2>6.7 — Dalil Qur'an &amp; Sirah</h2>
 
-     <!-- === SECTION 6.7 START === -->
-<section class="section" id="6-7">
-  <h2>6.7 Dalil Qur’an & Sirah</h2>
+        <p>Bahagian ini menghimpunkan dalil al-Qur'an dan peristiwa sirah yang menunjukkan bahawa apabila Asbab Mutlak ditegakkan, Allah boleh melanggar Asbab Fitrah, atau menghancurkan Asbab Zulumat. Peristiwa-peristiwa ini bukan sekadar mukjizat sejarah — ia adalah bukti sunnah Allah terhadap Asbab Mutlak.</p>
 
-  <p>Bahagian ini menghimpunkan dalil al-Qur’an dan peristiwa sirah yang menunjukkan bahawa apabila Asbab Mutlak ditegakkan, Allah boleh:</p>
-  <ol>
-    <li>melanggar Asbab Fitrah, atau</li>
-    <li>menghancurkan Asbab Zulumat.</li>
-  </ol>
+        <hr>
 
-  <p>Peristiwa-peristiwa ini bukan sekadar mukjizat sejarah.<br>
-  Ia adalah bukti sunnah Allah terhadap Asbab Mutlak — bahawa kuasa sebenar tidak terletak pada sebab dunia, tetapi pada iman dan amal soleh yang Allah ikat dengan janji-Nya.</p>
+        <h3>1. Nabi Ibrahim عليه السلام dan Api</h3>
+        <div class="arabic">قُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا عَلَىٰ إِبْرَاهِيمَ</div>
+        <div class="translation">"Kami berfirman: Wahai api! Jadilah engkau sejuk dan selamat ke atas Ibrahim." — Al-Anbiyaʾ 21:69</div>
+        <p>Dalam Asbab Fitrah, api membakar. Namun apabila Nabi Ibrahim menegakkan tauhid, dakwah, tawakkal, dan sabar — Allah menggantung kesan biasa api.</p>
+        <blockquote>Asbab Fitrah tidak mempunyai kuasa sendiri. Kesan berlaku kerana kehendak Allah.</blockquote>
 
-  <hr>
+        <hr>
 
-  <h3>1. Nabi Ibrahim عليه السلام dan Api</h3>
+        <h3>2. Nabi Musa عليه السلام dan Laut Merah</h3>
+        <div class="arabic">فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ فَانفَلَقَ</div>
+        <div class="translation">Ash-Shu'ara 26:63</div>
+        <p>Menurut Asbab Fitrah, laut tidak terbelah. Namun apabila Nabi Musa berdakwah, bersabar, dan memimpin umat atas iman — Allah membuka jalan di laut.</p>
+        <blockquote>Apabila Asbab Mutlak ditegakkan, Allah boleh melanggar batas Asbab Fitrah.</blockquote>
 
-  <p><strong>Dalil Qur’an</strong></p>
-  <div class="arab">قُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا عَلَىٰ إِبْرَاهِيمَ</div>
-  <p>“Kami berfirman: Wahai api! Jadilah engkau sejuk dan selamat ke atas Ibrahim.”<br>
-  (al-Anbiyaʾ 21:69)</p>
+        <hr>
 
-  <p><strong>Analisis Tauhidi</strong></p>
-  <p>Dalam Asbab Fitrah, api membakar.</p>
-  <p>Namun apabila Nabi Ibrahim menegakkan Asbab Mutlak:</p>
-  <ul>
-    <li>tauhid</li>
-    <li>dakwah</li>
-    <li>tawakkal</li>
-    <li>sabar</li>
-  </ul>
-  <p>Allah menggantung kesan biasa api.</p>
-  <p>Ini menunjukkan:</p>
-  <blockquote>Asbab Fitrah tidak mempunyai kuasa sendiri.<br>Kesan berlaku kerana kehendak Allah.</blockquote>
+        <h3>3. Perang Badar</h3>
+        <div class="arabic">كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً بِإِذْنِ اللَّهِ</div>
+        <div class="translation">Al-Baqarah 2:249</div>
+        <div class="arabic">وَلَقَدْ نَصَرَكُمُ اللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌ</div>
+        <div class="translation">Ali 'Imran 3:123</div>
+        <p>Tentera Islam sedikit, Quraisy jauh lebih ramai. Kemenangan berlaku kerana iman, doa, pengorbanan, dan tawakkal.</p>
+        <blockquote>Asbab Mutlak boleh mengatasi logik kekuatan dunia.</blockquote>
 
-  <hr>
+        <hr>
 
-  <h3>2. Nabi Musa عليه السلام dan Laut Merah</h3>
+        <h3>4. Delegasi Bani Thaqif</h3>
+        <p>Bani Thaqif datang ke Madinah, ditempatkan di Masjid Nabawi, menyaksikan suasana iman dan amal sahabat — akhirnya hati mereka menerima Islam tanpa paksaan, propaganda, atau strategi politik.</p>
+        <blockquote>Asbab Mutlak mampu mengalahkan pengaruh Asbab Zulumat tanpa paksaan.</blockquote>
 
-  <p><strong>Dalil Qur’an</strong></p>
-  <div class="arab">فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ فَانفَلَقَ</div>
-  <p>(ash-Shu‘ara 26:63)</p>
+        <hr>
 
-  <p><strong>Analisis Tauhidi</strong></p>
-  <p>Menurut Asbab Fitrah, laut tidak terbelah.</p>
-  <p>Namun apabila Nabi Musa:</p>
-  <ul>
-    <li>berdakwah</li>
-    <li>bersabar</li>
-    <li>memimpin umat atas iman</li>
-  </ul>
-  <p>Allah membuka jalan di laut.</p>
-  <p>Peristiwa ini menunjukkan bahawa:</p>
-  <blockquote>Apabila Asbab Mutlak ditegakkan, Allah boleh melanggar batas Asbab Fitrah.</blockquote>
+        <h3>5. Pengharaman dan Kehancuran Riba</h3>
+        <div class="arabic">يَمْحَقُ اللَّهُ الرِّبَا وَيُرْبِي الصَّدَقَاتِ</div>
+        <div class="translation">Al-Baqarah 2:276</div>
+        <p>Riba kelihatan rasional, stabil, dan menguntungkan dalam Asbab Zulumat. Namun Allah menyatakan bahawa riba akan dimusnahkan.</p>
+        <blockquote>Sistem yang bertentangan dengan wahyu tidak dapat bertahan apabila berhadapan dengan Asbab Mutlak.</blockquote>
 
-  <hr>
+        <hr>
 
-  <h3>3. Perang Badar</h3>
+        <h3>6. Maryam dan Kelahiran Nabi Isa</h3>
+        <div class="arabic">قَالَتْ أَنَّىٰ يَكُونُ لِي غُلَامٌ وَلَمْ يَمْسَسْنِي بَشَرٌ</div>
+        <div class="translation">Ali 'Imran 3:47</div>
+        <blockquote>Allah tidak terikat dengan hukum Asbab Fitrah.</blockquote>
 
-  <p><strong>Dalil Qur’an</strong></p>
-  <div class="arab">كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً بِإِذْنِ اللَّهِ</div>
-  <p>(al-Baqarah 2:249)</p>
-  <div class="arab">وَلَقَدْ نَصَرَكُمُ اللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌ</div>
-  <p>(Ali ‘Imran 3:123)</p>
+        <hr>
 
-  <p><strong>Analisis Tauhidi</strong></p>
-  <p>Dalam Asbab Fitrah, tentera yang ramai biasanya menang.</p>
-  <p>Namun dalam Badar:</p>
-  <ul>
-    <li>tentera Islam sedikit</li>
-    <li>tentera Quraisy jauh lebih ramai</li>
-  </ul>
-  <p>Kemenangan berlaku kerana:</p>
-  <ul>
-    <li>iman</li>
-    <li>doa</li>
-    <li>pengorbanan</li>
-    <li>tawakkal</li>
-  </ul>
-  <p>Ini menunjukkan bahawa:</p>
-  <blockquote>Asbab Mutlak boleh mengatasi logik kekuatan dunia.</blockquote>
+        <h3>7. Ashabul Kahfi</h3>
+        <div class="arabic">وَلَبِثُوا فِي كَهْفِهِمْ ثَلَاثَ مِائَةٍ سِنِينَ وَازْدَادُوا تِسْعًا</div>
+        <div class="translation">Al-Kahfi 18:25</div>
+        <blockquote>Allah boleh menggantung hukum Asbab Fitrah demi menjaga iman.</blockquote>
 
-  <hr>
+        <hr>
 
-  <h3>4. Delegasi Bani Thaqif</h3>
+        <h3>8. Peristiwa Hunain</h3>
+        <div class="arabic">وَيَوْمَ حُنَيْنٍ إِذْ أَعْجَبَتْكُمْ كَثْرَتُكُمْ فَلَمْ تُغْنِ عَنكُمْ شَيْئًا</div>
+        <div class="translation">At-Taubah 9:25</div>
+        <p>Tentera Islam sangat ramai tetapi hampir kalah kerana bergantung kepada bilangan, bukan kepada Asbab Mutlak.</p>
+        <blockquote>Asbab Mutlak tidak bergantung kepada kuantiti atau kekuatan zahir.</blockquote>
 
-  <p>Bani Thaqif datang ke Madinah dalam keadaan belum menerima Islam.</p>
-  <p>Rasulullah ﷺ tidak memaksa mereka.</p>
-  <p>Sebaliknya mereka:</p>
-  <ul>
-    <li>ditempatkan di Masjid Nabawi</li>
-    <li>melihat suasana iman</li>
-    <li>menyaksikan amal sahabat</li>
-  </ul>
-  <p>Akhirnya hati mereka menerima Islam.</p>
+        <hr>
 
-  <p><strong>Analisis Tauhidi</strong></p>
-  <p>Perubahan ini bukan kerana:</p>
-  <ul>
-    <li>propaganda</li>
-    <li>strategi politik</li>
-  </ul>
-  <p>Tetapi kerana Asbab Mutlak:</p>
-  <ul>
-    <li>dakwah</li>
-    <li>suasana iman</li>
-    <li>amal masjid</li>
-  </ul>
-  <p>Ini menunjukkan bahawa:</p>
-  <blockquote>Asbab Mutlak mampu mengalahkan pengaruh Asbab Zulumat tanpa paksaan.</blockquote>
+        <h3>Pola Tauhidi Pelanggaran Asbab</h3>
+        <p>Semua peristiwa ini mengikuti empat langkah yang sama:</p>
+        <ol>
+          <li><strong>Manusia bergantung kepada Asbab Fitrah atau Zulumat</strong> — api membakar, laut tidak terbelah, tentera ramai menang.</li>
+          <li><strong>Para Nabi menegakkan Asbab Mutlak</strong> — iman, dakwah, sabar, tawakkal.</li>
+          <li><strong>Berlaku pertembungan</strong> — Ibrahim vs api, Musa vs laut, Badar vs kekuatan Quraisy.</li>
+          <li><strong>Allah menzahirkan kesan</strong> — kesan biasa Asbab Fitrah berubah, sistem Asbab Zulumat runtuh.</li>
+        </ol>
 
-  <hr>
+        <h3>Kesimpulan</h3>
+        <blockquote>Pelanggaran Asbab bukan peristiwa rawak, tetapi sunnah Allah yang berulang dalam sejarah para Nabi.</blockquote>
+        <ol>
+          <li>Asbab Fitrah boleh dilanggar oleh kehendak Allah.</li>
+          <li>Asbab Zulumat boleh dihancurkan oleh kehendak Allah.</li>
+          <li>Asbab Mutlak adalah sebab yang Allah ikat dengan janji-Nya.</li>
+        </ol>
+        <div class="arabic">مِنْ حَيْثُ لَا يَحْتَسِبُ</div>
+        <div class="translation">"Dari arah yang tidak disangka-sangka." — At-Talaq 65:3</div>
 
-  <h3>5. Pengharaman dan Kehancuran Riba</h3>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+      <!-- ============================== /BAB 6.7 ============================== -->
 
-  <p><strong>Dalil Qur’an</strong></p>
-  <div class="arab">يَمْحَقُ اللَّهُ الرِّبَا وَيُرْبِي الصَّدَقَاتِ</div>
-  <p>(al-Baqarah 2:276)</p>
-
-  <p><strong>Analisis Tauhidi</strong></p>
-  <p>Dalam Asbab Zulumat, riba kelihatan:</p>
-  <ul>
-    <li>rasional</li>
-    <li>stabil</li>
-    <li>menguntungkan</li>
-  </ul>
-  <p>Namun Allah menyatakan bahawa riba akan dimusnahkan.</p>
-  <p>Ini menunjukkan bahawa:</p>
-  <blockquote>Sistem yang bertentangan dengan wahyu tidak dapat bertahan apabila berhadapan dengan Asbab Mutlak.</blockquote>
-
-  <hr>
-
-  <h3>6. Maryam dan Kelahiran Nabi Isa</h3>
-
-  <p><strong>Dalil Qur’an</strong></p>
-  <div class="arab">قَالَتْ أَنَّىٰ يَكُونُ لِي غُلَامٌ وَلَمْ يَمْسَسْنِي بَشَرٌ</div>
-  <p>(Ali ‘Imran 3:47)</p>
-
-  <p><strong>Analisis Tauhidi</strong></p>
-  <p>Menurut Asbab Fitrah, kelahiran memerlukan bapa.</p>
-  <p>Namun Allah menciptakan Nabi Isa tanpa bapa.</p>
-  <p>Ini menunjukkan bahawa:</p>
-  <blockquote>Allah tidak terikat dengan hukum Asbab Fitrah.</blockquote>
-
-  <hr>
-
-  <h3>7. Ashabul Kahfi</h3>
-
-  <p><strong>Dalil Qur’an</strong></p>
-  <div class="arab">وَلَبِثُوا فِي كَهْفِهِمْ ثَلَاثَ مِائَةٍ سِنِينَ وَازْدَادُوا تِسْعًا</div>
-  <p>(al-Kahfi 18:25)</p>
-
-  <p><strong>Analisis Tauhidi</strong></p>
-  <p>Menurut Asbab Fitrah, manusia tidak boleh hidup ratusan tahun tanpa makan.</p>
-  <p>Namun Allah menjaga mereka selama 309 tahun.</p>
-  <p>Ini menunjukkan bahawa:</p>
-  <blockquote>Allah boleh menggantung hukum Asbab Fitrah demi menjaga iman.</blockquote>
-
-  <hr>
-
-  <h3>8. Peristiwa Hunain</h3>
-
-  <p><strong>Dalil Qur’an</strong></p>
-  <div class="arab">وَيَوْمَ حُنَيْنٍ إِذْ أَعْجَبَتْكُمْ كَثْرَتُكُمْ فَلَمْ تُغْنِ عَنكُمْ شَيْئًا</div>
-  <p>(at-Taubah 9:25)</p>
-
-  <p><strong>Analisis Tauhidi</strong></p>
-  <p>Dalam Hunain:</p>
-  <ul>
-    <li>tentera Islam sangat ramai</li>
-    <li>mereka merasa kuat dengan jumlah tersebut</li>
-  </ul>
-  <p>Namun mereka hampir kalah.</p>
-  <p>Ini menunjukkan bahawa:</p>
-  <blockquote>Asbab Mutlak tidak bergantung kepada kuantiti atau kekuatan zahir.</blockquote>
-
-  <hr>
-
-  <h3>Pola Tauhidi Pelanggaran Asbab</h3>
-
-  <p>Apabila semua dalil ini dilihat bersama, muncul satu pola sunnah Allah yang konsisten.</p>
-  <p>Semua peristiwa ini mengikuti empat langkah yang sama.</p>
-
-  <p><strong>Langkah 1 — Manusia bergantung kepada Asbab Fitrah atau Asbab Zulumat</strong></p>
-  <p>Contohnya:</p>
-  <ul>
-    <li>api membakar</li>
-    <li>laut tidak terbelah</li>
-    <li>tentera ramai menang</li>
-    <li>sistem riba kelihatan stabil</li>
-  </ul>
-  <p>Ini ialah logik dunia.</p>
-
-  <p><strong>Langkah 2 — Para Nabi menegakkan Asbab Mutlak</strong></p>
-  <p>Para Nabi menegakkan:</p>
-  <ul>
-    <li>iman</li>
-    <li>dakwah</li>
-    <li>sabar</li>
-    <li>tawakkal</li>
-  </ul>
-  <p>Mereka tidak bergantung kepada sebab dunia.</p>
-
-  <p><strong>Langkah 3 — Berlaku pertembungan</strong></p>
-  <p>Pada titik ini berlaku pertembungan antara:</p>
-  <p>Asbab Mutlak<br>dengan<br>Asbab Fitrah atau Asbab Zulumat</p>
-  <p>Contohnya:</p>
-  <ul>
-    <li>Ibrahim vs api</li>
-    <li>Musa vs laut</li>
-    <li>Badar vs kekuatan Quraisy</li>
-    <li>Islam vs sistem riba</li>
-  </ul>
-
-  <p><strong>Langkah 4 — Allah menzahirkan kesan</strong></p>
-  <p>Pada saat ini:</p>
-  <ul>
-    <li>kesan biasa Asbab Fitrah boleh berubah</li>
-    <li>sistem Asbab Zulumat boleh runtuh</li>
-  </ul>
-  <p>Kerana kuasa sebenar datang daripada Allah.</p>
-
-  <hr>
-
-  <h3>Kesimpulan Metodologi</h3>
-
-  <p>Semua kisah dalam al-Qur’an menunjukkan hukum yang sama:</p>
-  <blockquote>Asbab Mutlak ditegakkan → berlaku pertembungan → Allah menzahirkan kesan yang melampaui sebab dunia.</blockquote>
-  <p>Ini menunjukkan bahawa:</p>
-  <blockquote>Pelanggaran Asbab bukan peristiwa rawak, tetapi sunnah Allah yang berulang dalam sejarah para Nabi.</blockquote>
-
-  <hr>
-
-  <h3>Rumusan Tauhidi</h3>
-
-  <p>Dalil Qur’an dan sirah ini menunjukkan tiga hakikat besar:</p>
-  <ol>
-    <li>Asbab Fitrah boleh dilanggar oleh kehendak Allah.</li>
-    <li>Asbab Zulumat boleh dihancurkan oleh kehendak Allah.</li>
-    <li>Asbab Mutlak adalah sebab yang Allah ikat dengan janji-Nya.</li>
-  </ol>
-
-  <p>Oleh itu apabila manusia menegakkan:</p>
-  <ul>
-    <li>iman</li>
-    <li>dakwah</li>
-    <li>sabar</li>
-    <li>pengorbanan</li>
-  </ul>
-
-  <p>Allah membuka jalan:</p>
-  <div class="arab">مِنْ حَيْثُ لَا يَحْتَسِبُ</div>
-  <p>“Dari arah yang tidak disangka-sangka.”<br>
-  (at-Talaq 65:3)</p>
-
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 6.7 END === -->
-           <section class="section-card" id="6-8">
+      <!-- ============================== BAB 6.8 ============================== -->
+      <section class="section-card" id="6-8">
         <div class="badge-chapter">🟥 BAB 6.8</div>
+        <h2>6.8 — Dalil Qur'an &amp; Sirah: Pelanggaran Asbab dalam Tertib Allah</h2>
 
-<!-- === SECTION 6.8 START === -->
-<section class="section" id="6-8">
-  <h2>6.8 DALIL QUR’AN & SIRAH — PELANGGARAN ASBAB DALAM TERTIB ALLAH</h2>
+        <p>Bab pelanggaran asbab tidak boleh berdiri tanpa dalil Qur'an dan Sirah. Setiap peristiwa di bawah menunjukkan tiga syarat pelanggaran Asbab:</p>
+        <ol>
+          <li>Asbab Mutlak Asli berada pada puncaknya — dakwah, sabar, tawakkal, hijrah, doa, syura.</li>
+          <li>Semua asbab lain (kategori 1 &amp; 2) telah digunakan dengan tertib wahyu.</li>
+          <li>Tiada lagi ruang transformasi — maka Allah yang membuka jalan, bukan makhluk.</li>
+        </ol>
 
-  <p>Bab pelanggaran asbab tidak boleh berdiri tanpa dalil Qur’an dan Sirah.<br>
-  Setiap peristiwa di bawah menunjukkan tiga syarat pelanggaran Asbab yang sudah diterangkan sebelumnya:</p>
-  <ol>
-    <li>Asbab Mutlak Asli berada pada puncaknya — dakwah, sabar, tawakkal, hijrah, doa, syura.</li>
-    <li>Semua asbab lain (kategori 1 & 2) telah digunakan dengan tertib wahyu.</li>
-    <li>Tiada lagi ruang transformasi — maka Allah yang membuka jalan, bukan makhluk.</li>
-  </ol>
+        <hr>
 
-  <p>Peristiwa-peristiwa ini menjadi asas bagi memahami bahawa pelanggaran asbab adalah keputusan Allah, bukan tindakan manusia.</p>
+        <h3>6.8.1 Nabi Ibrahim عليه السلام &amp; Api Namrud</h3>
+        <p>Api (asbab fitrah) = membakar. Sistem kekuasaan Namrud (asbab zulumat rosak) = menindas. Tiada ruang transformasi.</p>
+        <div class="arabic">﴿ قُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا عَلَىٰ إِبْرَاهِيمَ ﴾</div>
+        <div class="translation">"Wahai api, jadilah engkau sejuk dan selamat ke atas Ibrahim." — Al-Anbiya' 21:69</div>
+        <p>Api tunduk kepada Haq. Asbab alam tidak dapat melawan perintah Allah.</p>
 
-  <hr>
+        <hr>
 
-  <h3>6.8.1 Nabi Ibrahim عليه السلام & Api Namrud</h3>
+        <h3>6.8.2 Nabi Musa عليه السلام &amp; Laut Merah</h3>
+        <p>Laut (kategori 1) = tidak boleh ditembusi. Tentera Firaun (kategori 2 rosak) = mengejar. Semua usaha manusia telah habis.</p>
+        <div class="arabic">﴿ كَلَّا إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ ﴾</div>
+        <div class="translation">"Tidak! Sesungguhnya Tuhanku bersama aku; Dia pasti memberi petunjuk kepadaku." — Ash-Shu'arā 26:62</div>
+        <div class="arabic">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
+        <div class="translation">"Kami wahyukan kepada Musa: Pukullah laut itu dengan tongkatmu." — Ash-Shu'arā 26:63</div>
+        <p>Tongkat tidak berkuasa. Laut tidak berkuasa. Hanya Allah yang berkehendak → Nusrah muncul.</p>
 
-  <p><strong>Keadaan Asbab</strong></p>
-  <ul>
-    <li>Api (asbab fitrah kategori 1) = membakar.</li>
-    <li>Sistem kekuasaan Namrud (asbab zulumat kategori 2 rosak) = menindas.</li>
-    <li>Tiada ruang transformasi — perintah Allah mendahului hukum dunia.</li>
-  </ul>
+        <hr>
 
-  <p><strong>Peristiwa</strong></p>
-  <p>Namrud melemparkan Nabi Ibrahim عليه السلام ke dalam api yang besar.</p>
+        <h3>6.8.3 Badar — Tanda Haq Melanggar Logik Dunia</h3>
+        <p>313 mukmin vs 1000 Quraisy. Senjata tidak cukup. Keletihan, lapar, tiada kelebihan dunia.</p>
+        <div class="arabic">﴿ وَلَقَدْ نَصَرَكُمُ اللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌ ﴾</div>
+        <div class="translation">"Sesungguhnya Allah telah menolong kamu di Badar sedangkan kamu dalam keadaan lemah." — Ali 'Imran 3:123</div>
+        <div class="arabic">﴿ إِذْ تَسْتَغِيثُونَ رَبَّكُمْ فَاسْتَجَابَ لَكُمْ ﴾</div>
+        <div class="translation">"Ketika kamu memohon pertolongan kepada Tuhanmu, lalu Dia memperkenankan kamu." — Al-Anfal 8:9</div>
+        <p>Pertolongan Allah muncul setelah seluruh tertib diambil. Hampir tiada asbab dunia yang tinggal.</p>
 
-  <p><strong>Janji Allah muncul</strong></p>
-  <p>Allah menzahirkan keputusan-Nya tanpa syarat makhluk.</p>
+        <hr>
 
-  <p>Allah berfirman:</p>
-  <div class="arab">﴿ قُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا عَلَىٰ إِبْرَاهِيمَ ﴾</div>
-  <p>“Wahai api, jadilah engkau sejuk dan selamat ke atas Ibrahim.”【1】</p>
+        <h3>6.8.4 Bani Thaqif — Suasana Iman Menundukkan Zulumat</h3>
+        <p>Bani Thaqif terkenal keras dan anti-Islam. Rasulullah ﷺ menempatkan mereka di Masjid Nabawi selama tiga hari tanpa hujah, debat, atau tekanan. Lalu hati mereka lembut sendiri dan mereka masuk Islam.</p>
+        <p>Suasana iman (Asbab Mutlak Asli) lebih kuat daripada propaganda, adat, dan crowd perception.</p>
 
-  <p>Api tunduk kepada Haq.<br>
-  Asbab alam tidak dapat melawan perintah Allah.</p>
+        <hr>
 
-  <p><strong>Prinsip Tauhidi</strong></p>
-  <ul>
-    <li>Asbab fitrah bukan berkuasa.</li>
-    <li>Asbab zulumat tidak kekal.</li>
-    <li>Haq menundukkan batil tanpa bantuan dunia.</li>
-  </ul>
+        <h3>6.8.5 Riba — Contoh Asbab Haram Qat'i yang Dihancurkan Allah</h3>
+        <p>Riba = Batil Murni, haram qat'i, tidak boleh transform, tidak boleh islah.</p>
+        <div class="arabic">﴿ يَمْحَقُ اللَّهُ الرِّبَا ﴾</div>
+        <div class="translation">"Allah menghancurkan riba." — Al-Baqarah 2:276</div>
+        <div class="arabic">﴿ فَأْذَنُوا بِحَرْبٍ مِنَ اللَّهِ وَرَسُولِهِ ﴾</div>
+        <div class="translation">"Isytiharkanlah perang dengan Allah dan Rasul-Nya." — Al-Baqarah 2:279</div>
+        <p>Riba hanya tunduk kepada penghancuran. Bila riba bertembung dengan Asbab Mutlak → Haq menghancurkan batil.</p>
 
-  <hr>
+        <hr>
 
-  <h3>6.8.2 Nabi Musa عليه السلام & Laut Merah</h3>
+        <h3>Rumusan Tauhidi Bab 6.8</h3>
+        <ol>
+          <li>Asbab Mutlak Asli mesti diamalkan dahulu.</li>
+          <li>Semua asbab fitrah &amp; zulumat (kategori 1 &amp; 2) mesti ditransformasi dahulu.</li>
+          <li>Bila tiada lagi asbab yang tinggal, barulah janji Allah muncul.</li>
+          <li>Pertolongan Allah berlaku tanpa syarat dunia.</li>
+          <li>Haq sentiasa menghancurkan batil apabila bertembung.</li>
+        </ol>
+        <p>Ini adalah sunnah pertolongan Allah sepanjang sejarah.</p>
 
-  <p><strong>Keadaan Asbab</strong></p>
-  <ul>
-    <li>Laut (kategori 1) = tidak boleh ditembusi.</li>
-    <li>Tentera Firaun (kategori 2 rosak) = mengejar.</li>
-    <li>Semua usaha manusia telah habis.</li>
-  </ul>
+        <div class="footnote">
+          <strong>Nota Kaki:</strong><br>
+          【1】 Al-Anbiya' 21:69 &nbsp;|&nbsp; 【2】 Ash-Shu'arā 26:62 &nbsp;|&nbsp; 【3】 Ash-Shu'arā 26:63<br>
+          【4】 Ali 'Imran 3:123 &nbsp;|&nbsp; 【5】 Al-Anfal 8:9 &nbsp;|&nbsp; 【6】 Al-Qadr 97:4<br>
+          【7】 Al-Baqarah 2:276 &nbsp;|&nbsp; 【8】 Al-Baqarah 2:279
+        </div>
 
-  <p><strong>Peristiwa</strong></p>
-  <p>Kaum Bani Israil berkata mereka akan binasa.</p>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+      <!-- ============================== /BAB 6.8 ============================== -->
 
-  <p>Nabi Musa عليه السلام menjawab:</p>
-  <div class="arab">﴿ كَلَّا إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ ﴾</div>
-  <p>“Tidak! Sesungguhnya Tuhanku bersama aku; Dia pasti memberi petunjuk kepadaku.”【2】</p>
-
-  <p>Lalu Allah memerintah:</p>
-  <div class="arab">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
-  <p>“Kami wahyukan kepada Musa: Pukullah laut itu dengan tongkatmu.”【3】</p>
-
-  <p>Laut terbelah — perintah Allah menundukkan alam.</p>
-
-  <p><strong>Prinsip Tauhidi</strong></p>
-  <ul>
-    <li>Tongkat tidak berkuasa.</li>
-    <li>Laut tidak berkuasa.</li>
-    <li>Hanya Allah yang berkehendak → Nusrah muncul.</li>
-  </ul>
-
-  <hr>
-
-  <h3>6.8.3 Badar — Tanda Haq Melanggar Logik Dunia</h3>
-
-  <p><strong>Keadaan Asbab</strong></p>
-  <ul>
-    <li>313 mukmin vs 1000 Quraisy.</li>
-    <li>Senjata tidak cukup.</li>
-    <li>Keletihan, lapar, dan tiada kelebihan dunia.</li>
-  </ul>
-
-  <p><strong>Peristiwa</strong></p>
-  <p>Allah berfirman:</p>
-  <div class="arab">﴿ وَلَقَدْ نَصَرَكُمُ اللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌ ﴾</div>
-  <p>“Sesungguhnya Allah telah menolong kamu di Badar sedangkan kamu dalam keadaan lemah.”【4】</p>
-
-  <p>Dan Allah menurunkan malaikat:</p>
-  <div class="arab">﴿ إِذْ تَسْتَغِيثُونَ رَبَّكُمْ فَاسْتَجَابَ لَكُمْ ﴾</div>
-  <p>“Ketika kamu memohon pertolongan kepada Tuhanmu, lalu Dia memperkenankan kamu.”【5】</p>
-
-  <p><strong>Prinsip Tauhidi</strong></p>
-  <ul>
-    <li>Pertolongan Allah muncul setelah seluruh tertib diambil.</li>
-    <li>Hampir tiada asbab dunia yang tinggal.</li>
-  </ul>
-
-  <hr>
-
-  <h3>6.8.4 Bani Thaqif — Suasana Iman Menundukkan Zulumat</h3>
-
-  <p><strong>Keadaan Asbab</strong></p>
-  <ul>
-    <li>Bani Thaqif terkenal keras, degil, dan anti-Islam.</li>
-    <li>Mereka tidak tunduk kepada dakwah luar.</li>
-    <li>Sistem sosial mereka (kategori 2 rosak) sangat kuat.</li>
-  </ul>
-
-  <p><strong>Peristiwa</strong></p>
-  <p>Rasulullah ﷺ menempatkan mereka di Masjid Nabawi selama tiga hari.<br>
-  Mereka tidak diberi hujah, debat, atau tekanan.</p>
-
-  <p>Lalu hati mereka lembut sendiri dan mereka masuk Islam tanpa syarat.</p>
-
-  <p>Dalil umum suasana masjid:</p>
-  <div class="arab">﴿ تَنَزَّلُ الْمَلَائِكَةُ وَالرُّوحُ فِيهَا ﴾</div>
-  <p>“Para malaikat turun…”【6】</p>
-
-  <p><strong>Prinsip Tauhidi</strong></p>
-  <ul>
-    <li>Suasana iman (Asbab Mutlak Asli) lebih kuat daripada propaganda, adat, dan crowd perception.</li>
-    <li>Hati berubah kerana pertolongan Allah, bukan strategi dunia.</li>
-  </ul>
-
-  <hr>
-
-  <h3>6.8.5 Riba — Contoh Asbab Haram Qat‘i yang Dihancurkan Allah</h3>
-
-  <p>Riba bukan “Zulumat” —<br>
-  Riba = Batil Murni, haram qat‘i, tidak boleh transform, tidak boleh islah, tidak boleh dihalalkan.</p>
-
-  <p><strong>Dalil keras</strong></p>
-
-  <p>Allah berfirman:</p>
-  <div class="arab">﴿ يَمْحَقُ اللَّهُ الرِّبَا ﴾</div>
-  <p>“Allah menghancurkan riba.”【7】</p>
-
-  <p>Dan:</p>
-  <div class="arab">﴿ فَأْذَنُوا بِحَرْبٍ مِنَ اللَّهِ وَرَسُولِهِ ﴾</div>
-  <p>“Isytiharkanlah perang dengan Allah dan Rasul-Nya.”【8】</p>
-
-  <p><strong>Prinsip Tauhidi</strong></p>
-  <ul>
-    <li>Riba tidak tunduk kepada transformasi.</li>
-    <li>Riba hanya tunduk kepada penghancuran.</li>
-    <li>Bila riba bertembung dengan Asbab Mutlak → Haq menghancurkan batil.</li>
-  </ul>
-
-  <hr>
-
-  <h3>Rumusan Tauhidi Bab 6.8</h3>
-
-  <p>Semua peristiwa ini menunjukkan:</p>
-
-  <ol>
-    <li>Asbab Mutlak Asli mesti diamalkan dahulu.</li>
-    <li>Semua asbab fitrah & zulumat (kategori 1 & 2) mesti ditransformasi dahulu.</li>
-    <li>Bila tiada lagi asbab yang tinggal, barulah janji Allah muncul.</li>
-    <li>Pertolongan Allah berlaku tanpa syarat dunia.</li>
-    <li>Haq sentiasa menghancurkan batil apabila bertembung.</li>
-  </ol>
-
-  <p>Ini adalah sunnah pertolongan Allah sepanjang sejarah.</p>
-
-  <hr>
-
-  <h3>NOTA KAKI BAB 6.8 (Versi Akademik)</h3>
-  <ul>
-    <li>【1】 Al-Anbiya’ 21:69</li>
-    <li>【2】 Ash-Shu‘arā 26:62</li>
-    <li>【3】 Ash-Shu‘arā 26:63</li>
-    <li>【4】 Ali ‘Imran 3:123</li>
-    <li>【5】 Al-Anfal 8:9</li>
-    <li>【6】 Al-Qadr 97:4 (dalil suasana yang menurunkan malaikat)</li>
-    <li>【7】 Al-Baqarah 2:276</li>
-    <li>【8】 Al-Baqarah 2:279</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 6.8 END === -->
-`      <section class="section-card" id="6-9">
+      <!-- ============================== BAB 6.9 ============================== -->
+      <section class="section-card" id="6-9">
         <div class="badge-chapter">🟥 BAB 6.9</div>
+        <h2>6.9 — Tanda Pelanggaran Asbab dalam Kehidupan Moden</h2>
 
-     <!-- === SECTION 6.9 START === -->
-<section class="section" id="6-9">
-  <h2>6.9 TANDA PELANGGARAN ASBAB DALAM KEHIDUPAN MODEN</h2>
+        <p>Pelanggaran Asbab pada zaman hari ini berlaku dalam bentuk keruntuhan sistem, kepalsuan terbongkar, dan janji Allah menzahirkan Haq.</p>
+        <div class="arabic">﴿ بَلْ نَقْذِفُ بِالْحَقِّ عَلَى الْبَاطِلِ فَيَدْمَغُهُ ﴾</div>
+        <div class="translation">"Bahkan Kami lontarkan Haq ke atas batil, lalu ia menghancurkannya." — Al-Anbiya' 21:18</div>
 
-  <p>Pelanggaran Asbab pada zaman hari ini tidak berlaku dalam bentuk laut terbelah atau api menjadi sejuk,<br>
-  tetapi dalam bentuk keruntuhan sistem, kepalsuan terbongkar, dan janji Allah menzahirkan Haq dalam bentuk yang dapat dilihat oleh umat.</p>
+        <hr>
 
-  <p>Setiap tanda di bawah menunjukkan bahawa Asbab kategori 1 & 2 tidak digunakan dengan tertib,<br>
-  atau Asbab kategori 3 & 4 cuba dihalalkan,<br>
-  atau Haq sedang menghancurkan batil — sebagaimana sunnah Allah di sepanjang sejarah.</p>
+        <h3>6.9.1 Sistem Runtuh — Kerajaan, Institusi &amp; Organisasi</h3>
+        <p>Apabila sistem dibina atas riba, penindasan, kepalsuan, atau fake professionalism — ia akan runtuh dengan sendirinya kerana tiada ruang transformasi.</p>
+        <p><strong>Tanda utama:</strong> institusi hilang kepercayaan, organisasi pecah, negara tidak stabil, pemimpin gagal walau strategi hebat.</p>
+        <div class="arabic">﴿ وَمَا كَانَ رَبُّكَ لِيُهْلِكَ الْقُرَىٰ بِظُلْمٍ وَأَهْلُهَا مُصْلِحُونَ ﴾</div>
+        <div class="translation">"Allah tidak menghancurkan sesuatu negeri selama penduduknya memperbaiki." — Hud 11:117</div>
+        <p>Bila islah tiada, keruntuhan adalah sunnah.</p>
 
-  <p>Allah berfirman:</p>
-  <div class="arab">﴿ بَلْ نَقْذِفُ بِالْحَقِّ عَلَى الْبَاطِلِ فَيَدْمَغُهُ ﴾</div>
-  <p>“Bahkan Kami lontarkan Haq ke atas batil, lalu ia menghancurkannya.”【1】</p>
+        <hr>
 
-  <hr>
+        <h3>6.9.2 Teori Sains Gagal Mengubat Jiwa — Batil Tidak Boleh Menjadi Nur</h3>
+        <p>Sains moden (kategori 1) boleh ditransformasikan. Tetapi apabila ia diangkat menjadi tuhan, ia bertukar menjadi batil.</p>
+        <p>Tanda: krisis mental tidak reda walau teknologi meningkat, terapi moden gagal mengisi jiwa, manusia bertambah gelisah walau data hebat. Jiwa hanya boleh dihidupkan dengan Asbab Mutlak Asli: dakwah, sabar, solat, zikir, Qur'an, suasana iman.</p>
+        <div class="arabic">﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</div>
+        <div class="translation">"Hanya dengan mengingati Allah hati menjadi tenang." — Ar-Ra'd 13:28</div>
 
-  <h3>6.9.1 Sistem Runtuh — Kerajaan, Institusi & Organisasi</h3>
+        <hr>
 
-  <p>Apabila sistem dibina atas:</p>
-  <ul>
-    <li>riba (kategori 4 — haram qat‘i),</li>
-    <li>penindasan (kategori 3 — batil murni),</li>
-    <li>kepalsuan (kategori 3),</li>
-    <li>atau imej palsu (fake professionalism),</li>
-  </ul>
+        <h3>6.9.3 Ekonomi Ribawi Krisis — Allah Memerangi Asbab Haram Qat'i</h3>
+        <p>Riba adalah asbab kategori 4 (haram murni). Ia tidak boleh diislah atau ditransformasikan. Maka krisis akan terus berulang.</p>
+        <div class="arabic">﴿ يَمْحَقُ اللَّهُ الرِّبَا ﴾</div>
+        <div class="translation">"Allah menghancurkan riba." — Al-Baqarah 2:276</div>
+        <p>Setiap krisis ekonomi global ialah tanda penghancuran batil, tanda sistem ribawi tidak diterima, tanda bahawa riba bukan asbab rezeki tetapi asbab kehancuran.</p>
 
-  <p>maka ia akan runtuh dengan sendirinya kerana tiada ruang transformasi.</p>
+        <hr>
 
-  <p><strong>Tanda utama:</strong></p>
-  <ul>
-    <li>institusi hilang kepercayaan,</li>
-    <li>organisasi pecah,</li>
-    <li>negara tidak stabil,</li>
-    <li>pemimpin gagal walau strategi hebat.</li>
-  </ul>
+        <h3>6.9.4 Reputasi Palsu Runtuh — Fake Professionalism Terbongkar</h3>
+        <p>Apabila manusia membina reputasi atas imej palsu, standard palsu, atau moral palsu — maka Allah akan menzahirkan keburukan itu walau mereka cuba menutupnya.</p>
+        <div class="arabic">﴿ يُخَادِعُونَ اللَّهَ وَالَّذِينَ آمَنُوا وَمَا يَخْدَعُونَ إِلَّا أَنْفُسَهُمْ ﴾</div>
+        <div class="translation">"Mereka memperdaya Allah dan orang beriman — mereka hanya memperdaya diri sendiri." — Al-Baqarah 2:9</div>
+        <p>Tanda moden: selebriti runtuh kerana skandal, syarikat runtuh kerana integriti palsu, influencer runtuh kerana menipu. Fake professionalism adalah batil halus, dan batil tidak boleh kekal.</p>
 
-  <p>Dalil:</p>
-  <div class="arab">﴿ وَمَا كَانَ رَبُّكَ لِيُهْلِكَ الْقُرَىٰ بِظُلْمٍ وَأَهْلُهَا مُصْلِحُونَ ﴾</div>
-  <p>“Allah tidak menghancurkan sesuatu negeri selama penduduknya memperbaiki.”【2】</p>
+        <hr>
 
-  <p>Bila islah tiada, keruntuhan adalah sunnah.</p>
+        <h3>6.9.5 Propaganda vs Fakta — Bila Persepsi Tidak Dapat Melawan Haq</h3>
+        <p>Propaganda, hype media, crowd perception, narrative pushing adalah asbab kategori 2 (zulumat gelap) — ia boleh memberi kesan sementara. Tetapi apabila berhadapan Haq, ia akan runtuh.</p>
+        <div class="arabic">﴿ وَقُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ ﴾</div>
+        <div class="translation">"Katakanlah: Telah datang Haq, dan batil itu hancur." — Al-Isra' 17:81</div>
+        <p>Tanda moden: data sebenar mengalahkan persepsi palsu, kebenaran mengalahkan hype, penipuan terbongkar melalui bukti.</p>
 
-  <hr>
+        <hr>
 
-  <h3>6.9.2 Teori Sains Gagal Mengubat Jiwa — Batil Tidak Boleh Menjadi Nur</h3>
+        <h3>Rumusan Tauhidi 6.9</h3>
+        <ol>
+          <li>Haq pasti menundukkan batil.</li>
+          <li>Asbab Mutlak Asli mesti dihidupkan untuk melihat nusrah.</li>
+          <li>Asbab kategori 3 dan 4 tidak boleh ditransformasikan — ia pasti dihancurkan.</li>
+          <li>Asbab kategori 1 &amp; 2 mesti ditransformasi, jika tidak ia menjadi syirik asbab.</li>
+          <li>Pelanggaran Asbab zaman moden berlaku dalam keruntuhan sistem, bukan dalam bentuk mukjizat.</li>
+        </ol>
 
-  <p>Sains moden (kategori 1) boleh ditransformasikan menjadi alat (mutlak terbitan).<br>
-  Tetapi apabila ia diangkat menjadi tuhan, ia bertukar menjadi batil.</p>
+        <div class="footnote">
+          <strong>Nota Kaki:</strong><br>
+          【1】 Al-Anbiya' 21:18 &nbsp;|&nbsp; 【2】 Hud 11:117 &nbsp;|&nbsp; 【3】 Ar-Ra'd 13:28<br>
+          【4】 Al-Baqarah 2:276 &nbsp;|&nbsp; 【5】 Al-Baqarah 2:9 &nbsp;|&nbsp; 【6】 Al-Isra' 17:81
+        </div>
 
-  <p><strong>Tanda-tanda:</strong></p>
-  <ul>
-    <li>krisis mental tidak reda walau teknologi meningkat,</li>
-    <li>terapi moden gagal mengisi jiwa,</li>
-    <li>sains tidak mampu menjelaskan makna hidup,</li>
-    <li>manusia bertambah gelisah walau data hebat.</li>
-  </ul>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+      <!-- ============================== /BAB 6.9 ============================== -->
 
-  <p>Ini tanda bahawa jiwa hanya boleh dihidupkan dengan Asbab Mutlak Asli:<br>
-  dakwah, sabar, solat, zikir, Qur’an, suasana iman.</p>
-
-  <p>Dalil:</p>
-  <div class="arab">﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</div>
-  <p>“Hanya dengan mengingati Allah hati menjadi tenang.”【3】</p>
-
-  <p>Bukan sains, bukan psikologi — Allah.</p>
-
-  <hr>
-
-  <h3>6.9.3 Ekonomi Ribawi Krisis — Allah Memerangi Asbab Haram Qat‘i</h3>
-
-  <p>Riba adalah asbab kategori 4 (haram murni).<br>
-  Ia tidak boleh diislah atau ditransformasikan.</p>
-
-  <p>Maka krisis akan terus berulang.</p>
-
-  <p>Allah berfirman:</p>
-  <div class="arab">﴿ يَمْحَقُ اللَّهُ الرِّبَا ﴾</div>
-  <p>“Allah menghancurkan riba.”【4】</p>
-
-  <p>Setiap krisis ekonomi global ialah:</p>
-  <ul>
-    <li>tanda penghancuran batil,</li>
-    <li>tanda sistem ribawi tidak diterima,</li>
-    <li>tanda bahawa riba bukan asbab rezeki tetapi asbab kehancuran.</li>
-  </ul>
-
-  <p>Ini adalah bentuk pelanggaran asbab yang berlaku pada skala dunia.</p>
-
-  <hr>
-
-  <h3>6.9.4 Reputasi Palsu Runtuh — Fake Professionalism Terbongkar</h3>
-
-  <p>Apabila manusia membina reputasi atas:</p>
-  <ul>
-    <li>imej palsu,</li>
-    <li>standard palsu,</li>
-    <li>moral palsu,</li>
-    <li>“professionalism” palsu yang bertentangan dengan Haq,</li>
-  </ul>
-
-  <p>maka Allah akan menzahirkan keburukan itu walau mereka cuba menutupnya.</p>
-
-  <p>Dalil:</p>
-  <div class="arab">﴿ يُخَادِعُونَ اللَّهَ وَالَّذِينَ آمَنُوا وَمَا يَخْدَعُونَ إِلَّا أَنْفُسَهُمْ ﴾</div>
-  <p>“Mereka memperdaya Allah dan orang beriman — mereka hanya memperdaya diri sendiri.”【5】</p>
-
-  <p><strong>Tanda moden:</strong></p>
-  <ul>
-    <li>selebriti runtuh kerana skandal,</li>
-    <li>syarikat runtuh kerana integriti palsu,</li>
-    <li>influencer runtuh kerana menipu,</li>
-    <li>reviewer runtuh kerana kejahilan,</li>
-    <li>standard palsu runtuh di depan orang ramai.</li>
-  </ul>
-
-  <p>Fake professionalism adalah batil halus, dan batil tidak boleh kekal.</p>
-
-  <hr>
-
-  <h3>6.9.5 Propaganda vs Fakta — Bila Persepsi Tidak Dapat Melawan Haq</h3>
-
-  <p>Dalam dunia moden:</p>
-  <ul>
-    <li>propaganda,</li>
-    <li>hype media,</li>
-    <li>crowd perception,</li>
-    <li>narrative pushing,</li>
-  </ul>
-
-  <p>adalah asbab kategori 2 (zulumat gelap) — ia boleh memberi kesan sementara.</p>
-
-  <p>Tetapi apabila berhadapan Haq, ia akan runtuh.</p>
-
-  <p>Firman Allah:</p>
-  <div class="arab">﴿ وَقُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ ﴾</div>
-  <p>“Katakanlah: Telah datang Haq, dan batil itu hancur.”【6】</p>
-
-  <p><strong>Tanda moden:</strong></p>
-  <ul>
-    <li>data sebenar mengalahkan persepsi palsu,</li>
-    <li>kebenaran mengalahkan hype,</li>
-    <li>penipuan terbongkar melalui bukti,</li>
-    <li>suara Haq mengalahkan crowd yang bising.</li>
-  </ul>
-
-  <hr>
-
-  <h3>Rumusan Tauhidi 6.9</h3>
-
-  <p>Semua tanda di atas adalah mesej daripada Allah bahawa:</p>
-
-  <ol>
-    <li>Haq pasti menundukkan batil.</li>
-    <li>Asbab Mutlak Asli mesti dihidupkan untuk melihat nusrah.</li>
-    <li>Asbab kategori 3 dan 4 tidak boleh ditransformasikan — ia pasti dihancurkan.</li>
-    <li>Asbab kategori 1 & 2 mesti ditransformasi, jika tidak ia menjadi syirik asbab.</li>
-    <li>Pelanggaran Asbab zaman moden berlaku dalam keruntuhan sistem, bukan dalam bentuk mukjizat.</li>
-  </ol>
-
-  <p>Ini semua adalah “ayat Allah” kepada umat supaya kembali kepada amal Rasulullah ﷺ.</p>
-
-  <hr>
-
-  <h3>NOTA KAKI BAB 6.9</h3>
-  <ul>
-    <li>【1】 Al-Anbiya’ 21:18</li>
-    <li>【2】 Hud 11:117</li>
-    <li>【3】 Ar-Ra’d 13:28</li>
-    <li>【4】 Al-Baqarah 2:276</li>
-    <li>【5】 Al-Baqarah 2:9</li>
-    <li>【6】 Al-Isra’ 17:81</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 6.9 END === -->
-        <section class="section-card" id="6-10">
+      <!-- ============================== BAB 6.10 ============================== -->
+      <section class="section-card" id="6-10">
         <div class="badge-chapter">🟥 BAB 6.10</div>
+        <h2>6.10 — Rumusan Tauhidi Pelanggaran</h2>
 
-     <!-- === SECTION 6.10 START === -->
-<section class="section" id="6-10">
-  <h2>6.10 RUMUSAN TAUHIDI PELANGGARAN</h2>
+        <p>Bab Pelanggaran Asbab ialah puncak daripada seluruh binaan Tauhidi. Ia bukan permulaan — ia natijah apabila tertib Rasulullah ﷺ dihidupkan sepenuhnya.</p>
 
-  <p>Bab Pelanggaran Asbab ialah puncak daripada seluruh binaan Tauhidi.<br>
-  Ia bukan permulaan — ia natijah apabila tertib Rasulullah ﷺ dihidupkan sepenuhnya.</p>
+        <hr>
 
-  <p>Berikut adalah rumusan muktamad:</p>
+        <h3>6.10.1 Selagi Asbab Boleh Ditransformasikan → Tiada Pelanggaran</h3>
+        <p>Asbab kategori 1 (Fitrah) dan 2 (Zulumat gelap) boleh ditransformasikan menjadi Asbab Mutlak Terbitan jika dilaksanakan dengan Nafy, Isbat, Ittiba', Ikhlas, dan Syarak. Selama proses ini berjalan → tiada pelanggaran. Yang berlaku hanyalah islah, bukan pembatalan hukum asbab.</p>
+        <div class="arabic">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّى يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</div>
+        <div class="translation">"Allah tidak mengubah sesuatu kaum sehingga mereka mengubah apa yang ada dalam diri mereka." — Ar-Ra'd 13:11</div>
 
-  <hr>
+        <hr>
 
-  <h3>6.10.1 Selagi Asbab Boleh Ditransformasikan → Tiada Pelanggaran</h3>
+        <h3>6.10.2 Bila Asbab Tidak Boleh Ditransformasikan → Allah Mengambil Alih</h3>
+        <p>Jika asbab berada dalam kategori 3 (Haram Batin) atau 4 (Haram Qat'i), maka ia tidak boleh disentuh, diislah, dijadikan strategi, dijadikan alat kebaikan, ditransformasikan, dan tidak akan diterima Allah. Bila manusia tetap berdegil memakainya, Allah campur tangan dan menjatuhkan batil itu dengan cara-Nya.</p>
+        <div class="arabic">﴿ بَلْ نَقْذِفُ بِالْحَقِّ عَلَى الْبَاطِلِ فَيَدْمَغُهُ ﴾</div>
+        <div class="translation">"Kami lontarkan Haq ke atas batil, lalu ia menghancurkannya." — Al-Anbiya' 21:18</div>
 
-  <p>Asbab kategori 1 (Fitrah) dan 2 (Zulumat gelap)<br>
-  → boleh ditransformasikan menjadi Asbab Mutlak Terbitan<br>
-  jika dilaksanakan dengan:</p>
-  <ol>
-    <li><strong>Nafy</strong> – menafikan kuasa asbab</li>
-    <li><strong>Isbat</strong> – menetapkan hanya Allah memberi kesan</li>
-    <li><strong>Ittiba’</strong> – ikut tertib Rasulullah ﷺ</li>
-    <li><strong>Ikhlas</strong> – tujuan hanya redha Allah</li>
-    <li><strong>Syarak</strong> – mengikut garis halal-haram yang sah</li>
-  </ol>
+        <hr>
 
-  <p>Selama proses ini berjalan → tiada pelanggaran.<br>
-  Apa yang berlaku hanyalah islah, bukan pembatalan hukum asbab.</p>
+        <h3>6.10.3 Pelanggaran BUKAN Tindakan Manusia — Tetapi Pilihan Allah</h3>
+        <p>Pelanggaran berlaku bukan kerana manusia luar biasa, tetapi kerana manusia telah menyempurnakan amal Mutlak, membersihkan hati, mengikuti sunnah, dan menghabiskan semua ruang islah — kemudian Allah memilih untuk menzahirkan janji-Nya.</p>
+        <div class="arabic">﴿ إِنَّ اللَّهَ يُدَافِعُ عَنِ الَّذِينَ آمَنُوا ﴾</div>
+        <div class="translation">"Sesungguhnya Allah membela orang-orang yang beriman." — Al-Hajj 22:38</div>
+        <p>Manusia hanya beramal. Allah-lah yang membuka jalan.</p>
 
-  <p>Dalil:</p>
-  <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّى يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</div>
-  <p>“Allah tidak mengubah sesuatu kaum sehingga mereka mengubah apa yang ada dalam diri mereka.”【1】</p>
+        <hr>
 
-  <p>Islah diri → islah asbab → islah hasil.</p>
+        <h3>6.10.4 Pelanggaran Asbab = Hukum Sunnatullah ke atas Batil</h3>
+        <p>Pelanggaran berlaku apabila semua ruang islah tertutup, semua syarat transformasi tidak boleh dilakukan, asbab yang digunakan adalah batil murni, atau manusia sudah berada di jalan yang benar tetapi terhalang oleh batil.</p>
+        <div class="arabic">﴿ وَقُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ ﴾</div>
+        <div class="translation">"Katakanlah: Telah datang Haq, maka batil itu lenyap." — Al-Isra' 17:81</div>
 
-  <hr>
+        <hr>
 
-  <h3>6.10.2 Bila Asbab Tidak Boleh Ditransformasikan → Allah Mengambil Alih</h3>
+        <h3>6.10.5 Tanda Seseorang Sudah Memahami Pelanggaran Asbab</h3>
+        <ol>
+          <li>Dia tidak mengabaikan asbab — dia transformasikan.</li>
+          <li>Dia tidak mengagungkan asbab — dia menafikan kuasanya.</li>
+          <li>Dia meletakkan Allah di pusat segala proses.</li>
+          <li>Dia membezakan kategori 1–4 dengan tepat.</li>
+          <li>Dia memahami bila tugasnya tamat dan bila janji Allah bermula.</li>
+          <li>Dia tidak terburu-buru mahu "hasil luar biasa".</li>
+          <li>Dia sabar dan tetap dalam tertib Rasulullah ﷺ.</li>
+        </ol>
 
-  <p>Jika asbab berada dalam kategori 3 (Haram Batin) atau 4 (Haram Qat‘i),<br>
-  maka:</p>
-  <ul>
-    <li>ia tidak boleh disentuh,</li>
-    <li>tidak boleh diislah,</li>
-    <li>tidak boleh dijadikan strategi,</li>
-    <li>tidak boleh dijadikan alat kebaikan,</li>
-    <li>tidak boleh ditransformasikan,</li>
-    <li>dan tidak akan diterima Allah.</li>
-  </ul>
+        <hr>
 
-  <p>Dalam keadaan ini, bila manusia tetap berdegil memakainya,<br>
-  maka Allah campur tangan dan menjatuhkan batil itu dengan cara-Nya.<br>
-  Inilah yang dinamakan pelanggaran asbab.</p>
+        <h3>6.10.6 Kesimpulan Muktamad Pelanggaran Asbab</h3>
+        <ol>
+          <li><strong>Selagi asbab boleh ditransformasikan → tiada pelanggaran.</strong> Yang ada hanyalah islah, usaha, dan tertib.</li>
+          <li><strong>Bila asbab tidak boleh ditransformasikan → Allah mengambil alih.</strong> Janji-Nya turun sebagai pembela, pembuka jalan, penghancur batil.</li>
+          <li><strong>Pelanggaran bukan hak manusia — ia milik Allah.</strong> Manusia hanya menyempurnakan amal.</li>
+          <li><strong>Haq sentiasa menghancurkan batil bila syarat Nafy–Isbat–Ittiba' sempurna.</strong></li>
+          <li><strong>Kerangka 3 Asbab mengajar manusia membezakan dua peringkat ini.</strong></li>
+        </ol>
 
-  <p>Dalil:</p>
-  <div class="arab">﴿ بَلْ نَقْذِفُ بِالْحَقِّ عَلَى الْبَاطِلِ فَيَدْمَغُهُ ﴾</div>
-  <p>“Kami lontarkan Haq ke atas batil, lalu ia menghancurkannya.”【2】</p>
+        <div class="footnote">
+          <strong>Nota Kaki:</strong><br>
+          【1】 Ar-Ra'd 13:11 &nbsp;|&nbsp; 【2】 Al-Anbiya' 21:18 &nbsp;|&nbsp; 【3】 Al-Hajj 22:38 &nbsp;|&nbsp; 【4】 Al-Isra' 17:81
+        </div>
 
-  <p>Di sini:</p>
-  <ul>
-    <li>Batil = Asbab kategori 3 dan 4</li>
-    <li>Haq = Asbab Mutlak (Asli & Terbitan)</li>
-  </ul>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+      <!-- ============================== /BAB 6.10 ============================== -->
 
-  <p>Haq menghancurkan batil bila ia bertembung.</p>
-
-  <hr>
-
-  <h3>6.10.3 Pelanggaran BUKAN Tindakan Manusia — Tetapi Pilihan Allah</h3>
-
-  <p>Pelanggaran berlaku bukan kerana manusia luar biasa,<br>
-  tetapi kerana:</p>
-  <ul>
-    <li>manusia telah menyempurnakan amal Mutlak,</li>
-    <li>telah membersihkan hati,</li>
-    <li>telah mengikuti sunnah,</li>
-    <li>telah menghabiskan semua ruang islah,</li>
-  </ul>
-
-  <p>kemudian Allah memilih untuk menzahirkan janji-Nya.</p>
-
-  <p>Dalil:</p>
-  <div class="arab">﴿ إِنَّ اللَّهَ يُدَافِعُ عَنِ الَّذِينَ آمَنُوا ﴾</div>
-  <p>“Sesungguhnya Allah membela orang-orang yang beriman.”【3】</p>
-
-  <p>Manusia hanya beramal.<br>
-  Allah-lah yang membuka jalan.</p>
-
-  <hr>
-
-  <h3>6.10.4 Pelanggaran Asbab = Hukum Sunnatullah ke atas Batil</h3>
-
-  <p>Pelanggaran berlaku apabila:</p>
-  <ul>
-    <li>semua ruang islah tertutup,</li>
-    <li>semua syarat transformasi tidak boleh dilakukan,</li>
-    <li>asbab yang digunakan adalah batil murni,</li>
-    <li>atau manusia sudah berada di jalan yang benar tetapi terhalang oleh batil.</li>
-  </ul>
-
-  <p>Pada ketika ini:</p>
-
-  <p>Asbab Mutlak Asli (dakwah, sabar, mujahadah, tawakkal)<br>
-  → berfungsi sebagai pembawa Haq,</p>
-
-  <p>dan batil hancur walau ia kelihatan kuat.</p>
-
-  <p>Dalil:</p>
-  <div class="arab">﴿ وَقُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ ﴾</div>
-  <p>“Katakanlah: Telah datang Haq, maka batil itu lenyap.”【4】</p>
-
-  <hr>
-
-  <h3>6.10.5 Tanda Seseorang Sudah Memahami Pelanggaran Asbab</h3>
-  <ol>
-    <li>Dia tidak mengabaikan asbab — dia transformasikan.</li>
-    <li>Dia tidak mengagungkan asbab — dia menafikan kuasanya.</li>
-    <li>Dia meletakkan Allah di pusat segala proses.</li>
-    <li>Dia membezakan kategori 1–4 dengan tepat.</li>
-    <li>Dia memahami bila tugasnya tamat dan bila janji Allah bermula.</li>
-    <li>Dia tidak terburu-buru mahu “hasil luar biasa”.</li>
-    <li>Dia sabar dan tetap dalam tertib Rasulullah ﷺ.</li>
-  </ol>
-
-  <hr>
-
-  <h3>6.10.6 Kesimpulan Muktamad Pelanggaran Asbab</h3>
-
-  <ol>
-    <li><strong>Selagi asbab boleh ditransformasikan → tiada pelanggaran.</strong><br>
-    Yang ada hanyalah islah, usaha, dan tertib.</li>
-    <li><strong>Bila asbab tidak boleh ditransformasikan → Allah mengambil alih.</strong><br>
-    Janji-Nya turun sebagai pembela, pembuka jalan, penghancur batil.</li>
-    <li><strong>Pelanggaran bukan hak manusia — ia milik Allah.</strong><br>
-    Manusia hanya menyempurnakan amal.</li>
-    <li><strong>Haq sentiasa menghancurkan batil bila syarat Nafy–Isbat–Ittiba’ sempurna.</strong></li>
-    <li><strong>Kerangka 3 Asbab mengajar manusia membezakan dua peringkat ini.</strong></li>
-  </ol>
-
-  <hr>
-
-  <h3>NOTA KAKI BAB 6.10</h3>
-  <ul>
-    <li>【1】 Ar-Ra‘d 13:11</li>
-    <li>【2】 Al-Anbiya’ 21:18</li>
-    <li>【3】 Al-Hajj 22:38</li>
-    <li>【4】 Al-Isra’ 17:81</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 6.10 END === -->
-                <section class="section-card" id="6-11">
+      <!-- ============================== BAB 6.11 ============================== -->
+      <section class="section-card" id="6-11">
         <div class="badge-chapter">🟥 BAB 6.11</div>
+        <h2>6.11 — KESIMPULAN BAB 6</h2>
 
-<!-- === SECTION 6.11 START === -->
-<section class="section" id="6-11">
-  <h2>6.11 — KESIMPULAN BAB 6</h2>
+        <p>Bab 6 menetapkan sempadan Tauhidi antara empat kategori asbab, apakah yang boleh ditransformasikan, apakah yang tidak boleh, dan bilakah Allah mengambil alih dengan Pelanggaran Asbab.</p>
 
-  <p>Bab 6 menetapkan sempadan Tauhidi antara empat kategori asbab, apakah yang boleh ditransformasikan, apakah yang tidak boleh, dan bilakah Allah mengambil alih dengan Pelanggaran Asbab.</p>
+        <hr>
 
-  <p>Ia adalah bab yang menentukan nilai sebenar amal, arah hati, dan peranan kuasa Allah dalam kehidupan.</p>
+        <h3>6.11.1 Semua Asbab Tidak Sama — Dan Tidak Layak Diperlakukan Sama</h3>
+        <p>Kerangka 3 Asbab membahagikan semua sebab kepada empat kategori:</p>
+        <ol>
+          <li><strong>Asbab Fitrah</strong> — Neutral, tidak bernilai secara sendiri. Boleh menjadi ibadah hanya melalui transformasi (Nafy–Isbat–Ittiba'–Ikhlas).</li>
+          <li><strong>Asbab Zulumat</strong> — Sumber persepsi, trend, sistem manusia. Sebahagiannya boleh ditransformasikan, sebahagiannya tidak.</li>
+          <li><strong>Asbab Haram Batin (Batil Halus)</strong> — Nifaq, pembohongan, fake professionalism. Tidak boleh diislah dalam apa keadaan pun.</li>
+          <li><strong>Asbab Haram Qat'i (Batil Terang)</strong> — Babi, arak, zina, riba, sihir. Haram selamanya; tiada ruang transformasi.</li>
+        </ol>
+        <div class="arabic">﴿ لِيَمِيزَ اللَّهُ الْخَبِيثَ مِنَ الطَّيِّبِ ﴾</div>
+        <div class="translation">"Agar Allah memisahkan yang buruk daripada yang baik." — Al-Anfal 8:37</div>
 
-  <hr>
+        <hr>
 
-  <h3>6.11.1 Semua Asbab Tidak Sama — Dan Tidak Layak Diperlakukan Sama</h3>
+        <h3>6.11.2 Transformasi Asbab Hanya Berlaku pada Kategori 1 &amp; 2</h3>
+        <p>Hanya Asbab Fitrah dan Asbab Zulumat (yang tidak haram) boleh diangkat menjadi amal, dengan syarat Nafy, Isbat, Ittiba', Ikhlas, dan Syarak. Jika syarat ini tidak dipenuhi → jadi syirik halus.</p>
+        <div class="arabic">﴿ وَلَا تَلْبِسُوا الْحَقَّ بِالْبَاطِلِ ﴾</div>
+        <div class="translation">"Jangan kamu campur-adukkan Haq dengan batil." — Al-Baqarah 2:42</div>
 
-  <p>Kerangka 3 Asbab membahagikan semua sebab kepada empat kategori:</p>
-  <ol>
-    <li><strong>Asbab Fitrah</strong><br>
-    – Neutral, tidak bernilai secara sendiri<br>
-    – Boleh menjadi ibadah hanya melalui transformasi (Nafy–Isbat–Ittiba’–Ikhlas)</li>
-    <li><strong>Asbab Zulumat</strong><br>
-    – Sumber persepsi, trend, sistem manusia<br>
-    – Sebahagiannya boleh ditransformasikan, sebahagiannya tidak</li>
-    <li><strong>Asbab Haram Batin (Batil Halus)</strong><br>
-    – Nifaq, pembohongan, fake professionalism<br>
-    – Tidak boleh diislah dalam apa keadaan pun</li>
-    <li><strong>Asbab Haram Qat‘i (Batil Terang)</strong><br>
-    – Babi, arak, zina, riba, sihir<br>
-    – Haram selamanya; tiada ruang transformasi</li>
-  </ol>
+        <hr>
 
-  <p>Allah membezakan antara dua alam: yang suci dan yang najis.</p>
+        <h3>6.11.3 Pelanggaran Asbab Bukan Tindakan Manusia Tetapi Keputusan Allah</h3>
+        <p>Setelah semua ruang transformasi digunakan, setelah manusia menghidupkan Mutlak Asli — maka Allah mengambil alih urusan.</p>
+        <div class="arabic">﴿ وَكَفَىٰ بِاللَّهِ وَلِيًّا وَكَفَىٰ بِاللَّهِ نَصِيرًا ﴾</div>
+        <div class="translation">"Cukuplah Allah sebagai Pelindung dan Cukuplah Allah sebagai Penolong." — An-Nisa' 4:45</div>
 
-  <div class="arab">﴿ لِيَمِيزَ اللَّهُ الْخَبِيثَ مِنَ الطَّيِّبِ ﴾</div>
-  <p>“Agar Allah memisahkan yang buruk daripada yang baik.”【1】</p>
+        <hr>
 
-  <p>Tanpa perbezaan kategori ini, manusia akan melakukan kesilapan besar:<br>
-  menjadikan batil sebagai ibadah.</p>
+        <h3>6.11.4 Haq Menghancurkan Batil Bila Syarat Tauhidi Sempurna</h3>
+        <p>Ibrahim vs api → Haq menang. Musa vs Laut Merah → Haq menang. Badar → Haq menang. Bani Thaqif tunduk di masjid → Haq menang. Riba dimusnahkan → Haq menang.</p>
+        <div class="arabic">﴿ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ ﴾</div>
+        <div class="translation">"Telah datang Haq, maka batil pun lenyap." — Al-Isra' 17:81</div>
+        <p>Asbab Mutlak Asli membawa cahaya. Cahaya ini menghancurkan batil tanpa kompromi.</p>
 
-  <hr>
+        <hr>
 
-  <h3>6.11.2 Transformasi Asbab Hanya Berlaku pada Kategori 1 & 2</h3>
+        <h3>6.11.5 Tanpa Bab 6, Manusia Akan Keliru Antara Amal &amp; Keberkatan</h3>
+        <p>Bab 6 menyelamatkan manusia daripada menyangka semua sebab boleh digunakan, menyangka niat baik menghalalkan yang haram, menyangka dunia memberi kesan, menyangka batil boleh dijadikan "alat strategi", atau menyangka usaha tanpa tertib Nabi ﷺ boleh membawa nusrah.</p>
+        <div class="arabic">﴿ وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ ﴾</div>
+        <div class="translation">"Sesiapa bertawakkal kepada Allah, maka cukuplah Allah baginya." — At-Talaq 65:3</div>
+        <p>Amal membawa transformasi. Tawakkal membawa pelanggaran. Kedua-duanya membawa manusia kepada redha Allah.</p>
 
-  <p>Hanya dua kategori boleh diangkat menjadi amal:</p>
-  <ol>
-    <li>Asbab Fitrah</li>
-    <li>Asbab Zulumat (yang tidak haram)</li>
-  </ol>
+        <hr>
 
-  <p>…dengan syarat:</p>
-  <ul>
-    <li>Nafy</li>
-    <li>Isbat</li>
-    <li>Ittiba’</li>
-    <li>Ikhlas</li>
-    <li>Syarak</li>
-  </ul>
+        <div class="insight-box">
+          <h3>📌 Rumusan Akhir Bab 6</h3>
+          <p>Transformasi berlaku melalui amal manusia.<br>
+          Pelanggaran berlaku melalui kehendak Allah.<br>
+          Haq naik apabila Mutlak Asli dihidupkan.<br>
+          Batil runtuh apabila manusia berada pada tertib Rasulullah ﷺ.</p>
+          <p>Bab 7 akan menerangkan bagaimana suasana iman dibina — gelanggang di mana Haq disuburkan sehingga batil tidak lagi mampu bertapak.</p>
+        </div>
 
-  <p>Jika syarat ini tidak dipenuhi → jadi syirik halus, kerana hati bergantung kepada makhluk.</p>
+        <div class="footnote">
+          <strong>Nota Kaki:</strong><br>
+          【1】 Al-Anfāl 8:37 &nbsp;|&nbsp; 【2】 Al-Baqarah 2:42 &nbsp;|&nbsp; 【3】 An-Nisā' 4:45<br>
+          【4】 Al-Isrā' 17:81 &nbsp;|&nbsp; 【5】 At-Talāq 65:3
+        </div>
 
-  <p>Allah melarang pencampuran:</p>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+      <!-- ============================== /BAB 6.11 ============================== -->
 
-  <div class="arab">﴿ وَلَا تَلْبِسُوا الْحَقَّ بِالْبَاطِلِ ﴾</div>
-  <p>“Jangan kamu campur-adukkan Haq dengan batil.”【2】</p>
-
-  <p>Kategori 3 & 4 adalah batil → tidak boleh ditransformasikan sama sekali.</p>
-
-  <hr>
-
-  <h3>6.11.3 Pelanggaran Asbab Bukan Tindakan Manusia Tetapi Keputusan Allah</h3>
-
-  <p>Setelah semua ruang transformasi digunakan,<br>
-  setelah manusia menghidupkan Mutlak Asli (dakwah, sabar, mujahadah, tawakkal),<br>
-  maka:</p>
-
-  <p>Allah mengambil alih urusan.</p>
-
-  <div class="arab">﴿ وَكَفَىٰ بِاللَّهِ وَلِيًّا وَكَفَىٰ بِاللَّهِ نَصِيرًا ﴾</div>
-  <p>“Cukuplah Allah sebagai Pelindung dan Cukuplah Allah sebagai Penolong.”【3】</p>
-
-  <p>Pelanggaran Asbab bukan kehebatan manusia,<br>
-  tetapi pembelaan Allah kepada hamba-Nya yang berada pada tertib Nabi ﷺ.</p>
-
-  <hr>
-
-  <h3>6.11.4 Haq Menghancurkan Batil Bila Syarat Tauhidi Sempurna</h3>
-
-  <p>Bab 6 menunjukkan pola tetap:</p>
-  <ul>
-    <li>Ibrahim vs api → Haq menang</li>
-    <li>Musa vs Laut Merah → Haq menang</li>
-    <li>Badar → Haq menang</li>
-    <li>Bani Thaqif tunduk di masjid → Haq menang</li>
-    <li>Riba dimusnahkan → Haq menang</li>
-  </ul>
-
-  <p>Ini bukan fenomena sejarah semata-mata tetapi sunnah ilahi yang hidup.</p>
-
-  <div class="arab">﴿ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ ﴾</div>
-  <p>“Telah datang Haq, maka batil pun lenyap.”【4】</p>
-
-  <p>Asbab Mutlak Asli membawa cahaya.<br>
-  Cahaya ini menghancurkan batil tanpa kompromi.</p>
-
-  <hr>
-
-  <h3>6.11.5 Tanpa Bab 6, Manusia Akan Keliru Antara Amal & Keberkatan</h3>
-
-  <p>Bab 6 menyelamatkan manusia daripada:</p>
-  <ul>
-    <li>menyangka semua sebab boleh digunakan,</li>
-    <li>menyangka niat baik menghalalkan yang haram,</li>
-    <li>menyangka dunia memberi kesan,</li>
-    <li>menyangka batil boleh dijadikan “alat strategi”,</li>
-    <li>menyangka usaha tanpa tertib Nabi ﷺ boleh membawa nusrah.</li>
-  </ul>
-
-  <p>Bab 6 menetapkan kompas Tauhidi:</p>
-
-  <div class="arab">﴿ وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ ﴾</div>
-  <p>“Sesiapa bertawakkal kepada Allah, maka cukuplah Allah baginya.”【5】</p>
-
-  <p>Amal membawa transformasi.<br>
-  Tawakkal membawa pelanggaran.<br>
-  Kedua-duanya membawa manusia kepada redha Allah.</p>
-
-  <hr>
-
-  <h3>RUMUSAN AKHIR BAB 6</h3>
-
-  <p>Transformasi berlaku melalui amal manusia.<br>
-  Pelanggaran berlaku melalui kehendak Allah.<br>
-  Haq naik apabila Mutlak Asli dihidupkan.<br>
-  Batil runtuh apabila manusia berada pada tertib Rasulullah ﷺ.</p>
-
-  <p>Bab 7 akan menerangkan bagaimana suasana iman dibina — gelanggang di mana Haq disuburkan sehingga batil tidak lagi mampu bertapak.</p>
-
-  <hr>
-
-  <h3>NOTA KAKI</h3>
-  <ul>
-    <li>【1】 Al-Anfāl 8:37 — Dalil pemisahan antara yang baik & buruk.</li>
-    <li>【2】 Al-Baqarah 2:42 — Dalil larangan mencampur-adukkan Haq & batil.</li>
-    <li>【3】 An-Nisā’ 4:45 — Dalil tawakkal: Allah sahaja Pelindung & Penolong.</li>
-    <li>【4】 Al-Isrā’ 17:81 — Dalil kemenangan Haq ke atas batil.</li>
-    <li>【5】 At-Talāq 65:3 — Dalil tawakkal sebagai asbab Mutlak Asli.</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 6.11 END === -->
-    </article>
     </main>
 
     <footer>
@@ -2728,21 +1107,15 @@
       const originalText = btn.innerHTML;
       btn.innerHTML = '⏳ Menyediakan PDF...';
       btn.disabled = true;
-
       const coverTitle = document.getElementById('pdf-cover-title');
       const coverSubtitle = document.getElementById('pdf-cover-subtitle');
       const metaTitle = document.getElementById('pdf-meta-title');
-
       if (coverTitle) coverTitle.innerHTML = 'Bab 6 — PELANGGARAN ASBAB';
       if (coverSubtitle) coverSubtitle.textContent = 'Memahami had dan pelanggaran dalam penggunaan Asbab';
       if (metaTitle) metaTitle.textContent = 'Bab 6 — PELANGGARAN ASBAB';
-
       setTimeout(() => {
         window.print();
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-          btn.disabled = false;
-        }, 500);
+        setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 500);
       }, 100);
     }
   </script>
