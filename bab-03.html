@@ -5,15 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI | 3asbab.org</title>
   <style>
-    /* SEMUA CSS ANDA KEKAL SAMA SEPERTI ASAL */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --max-width: 920px;
-      --pad: 1.25rem;
       --border-light: #e2e8f0;
       --bg-soft: #fafcff;
       --muted: #4a5568;
@@ -21,7 +15,6 @@
       --accent-light: #e6f4ed;
       --text-dark: #1a202c;
       --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
-
       --pdf-accent: #0f7b4a;
       --pdf-accent-soft: #e6f4ed;
       --pdf-border: #d9e2ec;
@@ -29,311 +22,61 @@
       --pdf-muted: #5b6573;
       --pdf-paper: #fffefb;
     }
-
-    body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
-      background: white;
-      color: var(--text-dark);
-      line-height: 1.7;
-      scroll-behavior: smooth;
-    }
-
-    .wrap {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 clamp(1.2rem, 4vw, 1.8rem);
-    }
-
-    .topbar {
-      background: var(--bg-soft);
-      border-bottom: 1px solid var(--border-light);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(6px);
-    }
-
-    .topbar nav {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-      padding: 0.75rem 0;
-    }
-
-    .topbar a {
-      text-decoration: none;
-      font-size: 0.9rem;
-      color: var(--text-dark);
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: -0.2px;
-      margin-right: 0.5rem;
-    }
-
-    header {
-      padding: 1.5rem 0 0.5rem 0;
-    }
-
-    h1 {
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      line-height: 1.25;
-      margin: 0.25rem 0 0.5rem;
-      letter-spacing: -0.01em;
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 0.85rem;
-      border-left: 3px solid var(--accent);
-      padding-left: 0.75rem;
-    }
-
-    .jump {
-      background: #ffffff;
-      border-bottom: 1px solid var(--border-light);
-      position: sticky;
-      top: 48px;
-      z-index: 15;
-      background: rgba(255,255,255,0.98);
-    }
-
-    .jump-inner {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      padding: 0.7rem 0;
-      align-items: center;
-      font-size: 0.8rem;
-    }
-
-    .jump a {
-      padding: 0.2rem 0.7rem;
-      border-radius: 40px;
-      background: var(--bg-soft);
-      border: 1px solid var(--border-light);
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.1s ease;
-      color: var(--text-dark);
-    }
-
-    .jump a:hover {
-      border-color: var(--accent);
-      background: var(--accent-light);
-    }
-
-    main {
-      padding: 1.2rem 0 3rem;
-    }
-
-    .badge-chapter {
-      display: inline-block;
-      font-weight: 700;
-      font-size: 0.8rem;
-      background: #fef3c7;
-      color: #b45309;
-      padding: 0.2rem 0.8rem;
-      border-radius: 30px;
-      margin-bottom: 0.8rem;
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      margin: 1.8rem 0 0.75rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 0.9rem;
-      font-weight: 600;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-      margin: 1.2rem 0 0.5rem;
-      font-weight: 600;
-      color: #0b3b2a;
-    }
-
-    .section-card {
-      background: var(--bg-soft);
-      border-radius: 1.2rem;
-      padding: 1.2rem 1.4rem;
-      margin: 1.2rem 0;
-      border: 1px solid var(--border-light);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .arabic {
-      font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
-      font-size: 1.6rem;
-      line-height: 1.8;
-      direction: rtl;
-      text-align: right;
-      margin: 0.8rem 0;
-      color: #1e293b;
-    }
-
-    .translation {
-      font-style: normal;
-      background: #f8fafc;
-      padding: 0.6rem 1rem;
-      border-radius: 0.8rem;
-      margin: 0.5rem 0 1rem;
-      border-left: 3px solid var(--accent);
-      font-size: 0.95rem;
-    }
-
-    blockquote {
-      background: var(--accent-light);
-      border-radius: 0.8rem;
-      padding: 0.8rem 1.2rem;
-      margin: 1rem 0;
-      font-style: normal;
-    }
-
-    .insight-box {
-      background: #f1f5f9;
-      padding: 0.8rem 1.2rem;
-      border-radius: 1rem;
-      margin: 1rem 0;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-      font-size: 0.9rem;
-    }
-
-    th, td {
-      border: 1px solid var(--border-light);
-      padding: 0.6rem;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th {
-      background: #f1f5f9;
-      font-weight: 600;
-    }
-
-    hr {
-      margin: 2rem 0;
-      border: 0;
-      height: 1px;
-      background: var(--border-light);
-    }
-
-    .footnote {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 1.5rem;
-      border-top: 1px dashed var(--border-light);
-      padding-top: 1rem;
-    }
-
-    footer {
-      border-top: 1px solid var(--border-light);
-      padding: 1.5rem 0;
-      color: var(--muted);
-      font-size: 0.8rem;
-      margin-top: 1rem;
-    }
-
-    .toplink {
-      font-size: 0.75rem;
-      margin-top: 0.5rem;
-      display: inline-block;
-    }
-
-    .pdf-toolbar {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      margin: 14px 0 8px;
-    }
-
-    .btn-pdf {
-      appearance: none;
-      border: 1px solid var(--pdf-border);
-      background: #fff;
-      color: var(--pdf-text);
-      padding: 10px 14px;
-      border-radius: 999px;
-      cursor: pointer;
-      font: inherit;
-      font-size: 0.95rem;
-      line-height: 1.2;
-      font-weight: 600;
-      transition: 0.15s ease;
-      box-shadow: 0 1px 2px rgba(0,0,0,.04);
-    }
-
-    .btn-pdf:hover {
-      border-color: var(--pdf-accent);
-      background: var(--pdf-accent-soft);
-    }
-
-    .btn-pdf:active {
-      transform: translateY(1px);
-    }
-
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif; background: white; color: var(--text-dark); line-height: 1.7; scroll-behavior: smooth; }
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 clamp(1.2rem, 4vw, 1.8rem); }
+    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
+    .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.75rem 0; }
+    .topbar a { text-decoration: none; font-size: 0.9rem; color: var(--text-dark); }
+    .brand { font-weight: 700; margin-right: 0.5rem; }
+    header { padding: 1.5rem 0 0.5rem 0; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.25; margin: 0.25rem 0 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; }
+    .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 48px; z-index: 15; background: rgba(255,255,255,0.98); }
+    .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.7rem 0; align-items: center; font-size: 0.8rem; }
+    .jump a { padding: 0.2rem 0.7rem; border-radius: 40px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.1s ease; color: var(--text-dark); }
+    .jump a:hover { border-color: var(--accent); background: var(--accent-light); }
+    main { padding: 1.2rem 0 3rem; }
+    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.2rem 0.8rem; border-radius: 30px; margin-bottom: 0.8rem; }
+    h2 { font-size: 1.6rem; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 600; }
+    h3 { font-size: 1.25rem; margin: 1.2rem 0 0.5rem; font-weight: 600; color: #0b3b2a; }
+    p { margin: 0.6rem 0; }
+    ul, ol { margin: 0.5rem 0 0.8rem 1.4rem; }
+    li { margin: 0.3rem 0; }
+    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.2rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
+    .arabic { font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif; font-size: 1.6rem; line-height: 1.8; direction: rtl; text-align: right; margin: 0.8rem 0; color: #1e293b; }
+    .translation { background: #f8fafc; padding: 0.6rem 1rem; border-radius: 0.8rem; margin: 0.5rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.95rem; }
+    blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.8rem 1.2rem; margin: 1rem 0; font-style: normal; }
+    .insight-box { background: #f1f5f9; padding: 0.8rem 1.2rem; border-radius: 1rem; margin: 1rem 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    th, td { border: 1px solid var(--border-light); padding: 0.6rem; text-align: left; vertical-align: top; }
+    th { background: #f1f5f9; font-weight: 600; }
+    hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
+    .footnote { font-size: 0.8rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
+    .toplink { font-size: 0.75rem; margin-top: 0.8rem; display: inline-block; }
+    footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.8rem; margin-top: 1rem; }
+    .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
+    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
+    .btn-pdf:active { transform: translateY(1px); }
     .no-print { display: block; }
     .pdf-only { display: none; }
-
     .pdf-exporting .pdf-only { display: block !important; }
-    .pdf-exporting .no-print,
-    .pdf-exporting .pdf-toolbar,
-    .pdf-exporting .topbar,
-    .pdf-exporting .jump,
-    .pdf-exporting .toplink { display: none !important; }
-
+    .pdf-exporting .no-print, .pdf-exporting .pdf-toolbar, .pdf-exporting .topbar, .pdf-exporting .jump, .pdf-exporting .toplink { display: none !important; }
     .pdf-shell { background: #fff; }
     .pdf-cover { display: none; }
-
-    .pdf-cover-inner {
-      min-height: 260mm;
-      padding: 28mm 18mm 24mm;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: var(--pdf-paper);
-      color: var(--pdf-text);
-    }
-
+    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
     .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
     .pdf-cover-brand { font-size: 0.95rem; letter-spacing: .12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
     .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
     .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
     .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
     .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
-
     .pdf-meta-page { display: none; }
     .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
     .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
     .pdf-meta-list p { margin: 0 0 6mm; }
-
     .pdf-break { break-before: page; page-break-before: always; }
     .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
-
-    .pdf-print-mode {
-      font-family: Georgia, "Times New Roman", serif;
-      color: #111827;
-      background: #fff;
-      line-height: 1.8;
-    }
-    .pdf-print-mode .wrap { max-width: 780px; }
-    .pdf-print-mode h1, .pdf-print-mode h2, .pdf-print-mode h3 { color: #111827; letter-spacing: 0; }
-    .pdf-print-mode h1 { font-size: 2rem; }
-    .pdf-print-mode h2 { font-size: 1.45rem; border-left: 0; border-bottom: 1px solid var(--pdf-border); padding-left: 0; padding-bottom: 6px; margin-top: 1.7rem; }
-    .pdf-print-mode h3 { font-size: 1.15rem; margin-top: 1.3rem; }
-    .pdf-print-mode .section-card, .pdf-print-mode blockquote, .pdf-print-mode .insight-box { background: transparent; border: 1px solid #e5e7eb; box-shadow: none; }
-    .pdf-print-mode .badge-chapter, .pdf-print-mode .jump, .pdf-print-mode .topbar, .pdf-print-mode .toplink, .pdf-print-mode .pdf-toolbar { display: none !important; }
-    .pdf-print-mode .arabic { font-size: 1.45rem; line-height: 1.9; }
-    .pdf-print-mode table { font-size: 0.92rem; }
-
     @media print {
       body { margin: 0; padding: 0; }
       .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
@@ -341,7 +84,6 @@
       .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
       h2, h3 { break-after: avoid; page-break-after: avoid; }
     }
-
     @media (max-width: 640px) {
       .section-card { padding: 1rem; }
       .arabic { font-size: 1.3rem; }
@@ -355,9 +97,9 @@
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a href="bab-2.html">← Prev</a>
-        <a href="bab-3.html" style="font-weight:600;">Bab 3</a>
-        <a href="bab-4.html">Next →</a>
+        <a href="bab-02.html">← Prev</a>
+        <a href="bab-03.html" style="font-weight:600;">Bab 3</a>
+        <a href="bab-04.html">Next →</a>
       </nav>
     </div>
   </div>
@@ -376,7 +118,7 @@
           <div class="pdf-cover-brand">3asbab.org</div>
           <div class="pdf-cover-series">Kerangka 3 Asbab</div>
           <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI</h1>
-          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Penelitian Tauhidi melalui sirah para Nabi dan pengajaran tiga jenis Asbab</p>
+          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Membaca kisah para Nabi melalui lensa Tauhidi dan 3 jenis Asbab</p>
         </div>
         <div class="pdf-cover-bottom">
           <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
@@ -401,7 +143,7 @@
     <header class="wrap" id="top">
       <div class="meta">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
       <h1>Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI</h1>
-      <div class="meta">Penelitian Tauhidi melalui sirah para Nabi | Tauhidi &amp; Pembinaan Iman</div>
+      <div class="meta">Sirah Tauhidi dan 3 jenis Asbab | Tauhidi &amp; Pembinaan Iman</div>
     </header>
 
     <div class="jump no-print">
@@ -419,9 +161,72 @@
 
     <main class="wrap">
 
-    <section class="section-card" id="3-1">
-        <div class="badge-chapter">🟦 BAB 3.1</div>
+      <section class="section-card" id="3-1">
+        <div class="badge-chapter">🟥 BAB 3.1</div>
+        <h2>3.1 — [TAJUK SUB BAB 3.1]</h2>
+        <p>Isi sub bab 3.1 di sini.</p>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
 
+      <section class="section-card" id="3-2">
+        <div class="badge-chapter">🟥 BAB 3.2</div>
+        <h2>3.2 — [TAJUK SUB BAB 3.2]</h2>
+        <p>Isi sub bab 3.2 di sini.</p>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+
+      <section class="section-card" id="3-3">
+        <div class="badge-chapter">🟥 BAB 3.3</div>
+        <h2>3.3 — [TAJUK SUB BAB 3.3]</h2>
+        <p>Isi sub bab 3.3 di sini.</p>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+
+      <section class="section-card" id="3-4">
+        <div class="badge-chapter">🟥 BAB 3.4</div>
+        <h2>3.4 — [TAJUK SUB BAB 3.4]</h2>
+        <p>Isi sub bab 3.4 di sini.</p>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+
+      <section class="section-card" id="3-5">
+        <div class="badge-chapter">🟥 BAB 3.5</div>
+        <h2>3.5 — [TAJUK SUB BAB 3.5]</h2>
+        <p>Isi sub bab 3.5 di sini.</p>
+        <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>© 3asbab.org — Arkib bacaan sahaja. Sirah Tauhidi: 3 Asbab dalam kisah para Nabi.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+      if (coverTitle) coverTitle.innerHTML = 'Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI';
+      if (coverSubtitle) coverSubtitle.textContent = 'Membaca kisah para Nabi melalui lensa Tauhidi dan 3 jenis Asbab';
+      if (metaTitle) metaTitle.textContent = 'Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI';
+      setTimeout(() => {
+        window.print();
+        setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 500);
+      }, 100);
+    }
+  </script>
+
+</body>
+</html>
         
 
 
@@ -451,10 +256,7 @@
   <a class="toplink" href="#top">↑ Atas</a>
 </section>
 <!-- === SECTION 3.1 END === -->
-</section>
 
-      <section class="section-card" id="3-2">
-        <div class="badge-chapter">🟪 BAB 3.2</div>
 <!-- === SECTION 3.2 START === -->
 <section class="section" id="3-2">
 <!-- =============================================================== -->
@@ -17564,10 +17366,7 @@
   <a class="toplink" href="#top">↑ Atas</a>
 </section>
 <!-- === SECTION 3.3 END === -->
-</section>
 
-      <section class="section-card" id="3-4">
-        <div class="badge-chapter">🟪 BAB 3.4</div>
 <!-- === SECTION 3.4 START === -->
 <section class="section" id="3-4">
   <h2>3.4 RUMUSAN TAUHIDI SIRAH PARA NABI</h2>
@@ -17583,10 +17382,8 @@
   <a class="toplink" href="#top">↑ Atas</a>
 </section>
 <!-- === SECTION 3.4 END === -->
-</section>
 
-      <section class="section-card" id="3-5">
-        <div class="badge-chapter">🟪 BAB 3.5</div>
+        
 <!-- === SECTION 3.5 START === -->
 <section class="section" id="3-5">
   <h2>3.5 KESIMPULAN BAB 3</h2>
@@ -17629,21 +17426,15 @@
       const originalText = btn.innerHTML;
       btn.innerHTML = '⏳ Menyediakan PDF...';
       btn.disabled = true;
-
       const coverTitle = document.getElementById('pdf-cover-title');
       const coverSubtitle = document.getElementById('pdf-cover-subtitle');
       const metaTitle = document.getElementById('pdf-meta-title');
-
       if (coverTitle) coverTitle.innerHTML = 'Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI';
-      if (coverSubtitle) coverSubtitle.textContent = 'Penelitian Tauhidi melalui sirah para Nabi dan pengajaran tiga jenis Asbab';
+      if (coverSubtitle) coverSubtitle.textContent = 'Membaca kisah para Nabi melalui lensa Tauhidi dan 3 jenis Asbab';
       if (metaTitle) metaTitle.textContent = 'Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI';
-
       setTimeout(() => {
         window.print();
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-          btn.disabled = false;
-        }, 500);
+        setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 500);
       }, 100);
     }
   </script>
