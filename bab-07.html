@@ -1,183 +1,170 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bab 7 — [JUDUL BAB 7] | 3asbab.org</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bab 7 — TAKDIR | 3asbab.org</title>
   <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --max-width: 920px;
+      --border-light: #e2e8f0;
+      --bg-soft: #fafcff;
+      --muted: #4a5568;
+      --accent: #0f7b4a;
+      --accent-light: #e6f4ed;
+      --text-dark: #1a202c;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
     }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      background: var(--bg);
-      color:#111;
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif; background: white; color: var(--text-dark); line-height: 1.7; scroll-behavior: smooth; }
+    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 clamp(1.2rem, 4vw, 1.8rem); }
+    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
+    .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.75rem 0; }
+    .topbar a { text-decoration: none; font-size: 0.9rem; color: var(--text-dark); }
+    .brand { font-weight: 700; margin-right: 0.5rem; }
+    header { padding: 1.5rem 0 0.5rem 0; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.25; margin: 0.25rem 0 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; }
+    .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 48px; z-index: 15; background: rgba(255,255,255,0.98); }
+    .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.7rem 0; align-items: center; font-size: 0.8rem; }
+    .jump a { padding: 0.2rem 0.7rem; border-radius: 40px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.1s ease; color: var(--text-dark); }
+    .jump a:hover { border-color: var(--accent); background: var(--accent-light); }
+    main { padding: 1.2rem 0 3rem; }
+    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.2rem 0.8rem; border-radius: 30px; margin-bottom: 0.8rem; }
+    h2 { font-size: 1.6rem; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 600; }
+    h3 { font-size: 1.25rem; margin: 1.2rem 0 0.5rem; font-weight: 600; color: #0b3b2a; }
+    p { margin: 0.6rem 0; }
+    ul, ol { margin: 0.5rem 0 0.8rem 1.4rem; }
+    li { margin: 0.3rem 0; }
+    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.2rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
+    .arabic { font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif; font-size: 1.6rem; line-height: 1.8; direction: rtl; text-align: right; margin: 0.8rem 0; color: #1e293b; }
+    .translation { background: #f8fafc; padding: 0.6rem 1rem; border-radius: 0.8rem; margin: 0.5rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.95rem; }
+    blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.8rem 1.2rem; margin: 1rem 0; font-style: normal; }
+    .insight-box { background: #f1f5f9; padding: 0.8rem 1.2rem; border-radius: 1rem; margin: 1rem 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    th, td { border: 1px solid var(--border-light); padding: 0.6rem; text-align: left; vertical-align: top; }
+    th { background: #f1f5f9; font-weight: 600; }
+    hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
+    .footnote { font-size: 0.8rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
+    .toplink { font-size: 0.75rem; margin-top: 0.8rem; display: inline-block; }
+    footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.8rem; margin-top: 1rem; }
+    .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
+    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
+    .btn-pdf:active { transform: translateY(1px); }
+    .no-print { display: block; }
+    .pdf-only { display: none; }
+    .pdf-exporting .pdf-only { display: block !important; }
+    .pdf-exporting .no-print, .pdf-exporting .pdf-toolbar, .pdf-exporting .topbar, .pdf-exporting .jump, .pdf-exporting .toplink { display: none !important; }
+    .pdf-shell { background: #fff; }
+    .pdf-cover { display: none; }
+    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
+    .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
+    .pdf-cover-brand { font-size: 0.95rem; letter-spacing: .12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
+    .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
+    .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
+    .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
+    .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
+    .pdf-meta-page { display: none; }
+    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
+    .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
+    .pdf-meta-list p { margin: 0 0 6mm; }
+    .pdf-break { break-before: page; page-break-before: always; }
+    .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
+    @media print {
+      body { margin: 0; padding: 0; }
+      .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
+      .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
+      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
+      h2, h3 { break-after: avoid; page-break-after: avoid; }
     }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
+    @media (max-width: 640px) {
+      .section-card { padding: 1rem; }
+      .arabic { font-size: 1.3rem; }
     }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
-    }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
-    }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
-    }
-
-    /* Lompat ke... */
-    .jump{
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
-    }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
-    }
-
-    main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
-    }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
-    }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
-    }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
-    }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
-      border-left: 4px solid var(--accent);
-      background: #f8fffb;
-    }
-    .arab{
-      font-size: 20px;
-      line-height: 1.9;
-      direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
-    }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
-    }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration:none;
-    }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    footer a{color:inherit}
   </style>
 </head>
-
 <body>
 
-  <!-- Top nav -->
-  <div class="topbar">
+  <div class="topbar no-print">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a href="bab-6.html">Prev ←</a>
-        <a href="bab-7.html">Bab ini</a>
-        <a href="bab-8.html">Next →</a>
+        <a href="bab-06.html">← Prev</a>
+        <a href="bab-07.html" style="font-weight:600;">Bab 7</a>
+        <a href="bab-08.html">Next →</a>
       </nav>
     </div>
   </div>
 
-  <!-- Page title -->
-  <header class="wrap" id="top">
-    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
-    <h1>Bab 7 — TAKDIR</h1>
-  </header>
-
-  <!-- Jump links -->
-  <div class="jump">
-    <div class="wrap">
-      <div class="inner">
-        <strong>Lompat ke:</strong>
-        <a href="#7-1">7.1</a>
-        <a href="#7-2">7.2</a>
-        <a href="#7-3">7.3</a>
-        <a href="#7-4">7.4</a>
-        
-      </div>
+  <div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
     </div>
   </div>
 
-  <main class="wrap">
-    <article>
-      <div class="section">
-        <div class="badge">🟥 BAB 7 – TAKDIR</div>
-        <!-- Ruang untuk pengenalan bab -->
-      </div>
+  <div id="pdf-shell" class="pdf-shell">
 
-     <!-- === SECTION 7.1 START === -->
-<section class="section" id="7-1">
+    <div class="pdf-cover pdf-only">
+      <div class="pdf-cover-inner">
+        <div class="pdf-cover-top">
+          <div class="pdf-cover-brand">3asbab.org</div>
+          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 7 — TAKDIR</h1>
+          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Memahami takdir dalam tertib Tauhidi dan hubungan manusia dengan kehendak Allah</p>
+        </div>
+        <div class="pdf-cover-bottom">
+          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pdf-meta-page pdf-only pdf-break">
+      <div class="pdf-meta-inner">
+        <h2>Maklumat Dokumen</h2>
+        <div class="pdf-meta-list">
+          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 7 — TAKDIR</span></p>
+          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+          <p><strong>Laman:</strong> 3asbab.org</p>
+          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+        </div>
+      </div>
+    </div>
+
+    <header class="wrap" id="top">
+      <div class="meta">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+      <h1>Bab 7 — TAKDIR</h1>
+      <div class="meta">Memahami takdir dalam tertib Tauhidi | Tauhidi &amp; Pembinaan Iman</div>
+    </header>
+
+    <div class="jump no-print">
+      <div class="wrap">
+        <div class="jump-inner">
+          <strong>🧭 Lompat ke:</strong>
+          <a href="#7-1">7.1</a>
+          <a href="#7-2">7.2</a>
+          <a href="#7-3">7.3</a>
+          <a href="#7-4">7.4</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="wrap">
+
+      <!-- ============================== BAB 7.1 ============================== -->
+      <section class="section-card" id="7-1">
+        <div class="badge-chapter">🟥 BAB 7.1</div>
+
+     
   <h2>7.1 MUKADIMAH TAKDIR TAUHIDI</h2>
   <p><em>(Takdir sebagai maqam Tauhid, bukan falsafah)</em></p>
 
@@ -1003,16 +990,36 @@
     </article>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <div>
-        <a href="index.html">Home</a> ·
-        <a href="bab-6.html">Bab 6</a> ·
-        <a href="bab-8.html">Bab 8</a>
+     <footer>
+      <div class="wrap">
+        <p>© 3asbab.org — Arkib bacaan sahaja. Takdir: memahami takdir dalam tertib Tauhidi.</p>
       </div>
-      <div class="meta" style="margin-top:8px">Nota: Laman ini arkib baca sahaja.</div>
-    </div>
-  </footer>
+    </footer>
+
+  </div>
+
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+
+      if (coverTitle) coverTitle.innerHTML = 'Bab 7 — TAKDIR';
+      if (coverSubtitle) coverSubtitle.textContent = 'Memahami takdir dalam tertib Tauhidi dan hubungan manusia dengan kehendak Allah';
+      if (metaTitle) metaTitle.textContent = 'Bab 7 — TAKDIR';
+
+      setTimeout(() => {
+        window.print();
+        setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 500);
+      }, 100);
+    }
+  </script>
 
 </body>
 </html>
+
