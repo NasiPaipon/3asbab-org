@@ -1,197 +1,43 @@
-<!doctype html>
-<html lang="ms">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bab 11 — Syirik | 3asbab.org</title>
-  <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      background: var(--bg);
-      color:#111;
-    }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
-    }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
-    }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
+</article>
+  </main>
+
+  <footer>
+    <p>© 3asbab.org — Arkib bacaan sahaja. Bab 10: Mukadimah Dakwah Tauhid.</p>
+  </footer>
+
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn ? btn.innerHTML : '';
+
+      if (btn) {
+        btn.innerHTML = '⏳ Menyediakan PDF...';
+        btn.disabled = true;
+      }
+
+      setTimeout(() => {
+        window.print();
+
+        setTimeout(() => {
+          if (btn) {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+          }
+        }, 800);
+      }, 200);
     }
 
-/* Lompat ke... */
-    .jump{
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
-    }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
-    }
+    // smooth scroll ke atas
+    document.querySelectorAll('a[href="#top"]').forEach(el => {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
 
-main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
-    }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
-    }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
-    }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
-    }
-    h4{
-      margin: 12px 0 6px 0;
-      font-size: 16px;
-      font-weight:600;
-    }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
-      border-left: 4px solid var(--accent);
-      background: #f8fffb;
-    }
-    .arab{
-      font-size: 20px;
-      line-height: 1.9;
-      direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
-    }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
-    }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration:none;
-    }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    footer a{color:inherit}
-    .footnote-ref{
-      font-size: 0.8em;
-      vertical-align: super;
-      line-height: 0;
-    }
-    .footnotes{
-      margin-top: 20px;
-      padding-top: 10px;
-      border-top: 1px dashed var(--border);
-      font-size: 14px;
-      color: var(--muted);
-    }
-    hr.divider{
-      border:0;
-      border-top:2px solid var(--border);
-      margin:20px 0;
-    }
-  </style>
-</head>
-<body>
-
-<!-- Top nav -->
-<div class="topbar">
-  <div class="wrap">
-    <nav>
-      <span class="brand">3asbab.org</span>
-      <a href="index.html">🏠 Home</a>
-      <a href="bab-10.html">Prev ←</a>
-      <a href="bab-11.html">Bab ini</a>
-      <a href="bab-12.html">Next →</a>
-    </nav>
-  </div>
-</div>
-
-<!-- Page title -->
-<header class="wrap" id="top">
-  <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
-  <h1>Bab 11 — Syirik</h1>
-</header>
-
-<!-- Jump links -->
-<div class="jump">
-  <div class="wrap">
-    <div class="inner">
-      <strong>Lompat ke:</strong>
-      <a href="#11-1">11.1</a>
-      <a href="#11-1-1">11.1.1</a>
-      <a href="#11-1-2">11.1.2</a>
-      <a href="#11-1-3">11.1.3</a>
-      <a href="#11-1-4">11.1.4</a>
-      <a href="#11-1-5">11.1.5</a>
-      <a href="#rumusan-11-1">Rumusan</a>
-    </div>
-  </div>
-</div>
-
+</body>
+</html>
 <main class="wrap">
   <article>
     <div class="section">
@@ -1343,7 +1189,7 @@ main{padding: 14px 0 40px 0;}
     <!-- 11.4.1 -->
     <section class="section" id="11-4-1">
       <h3>11.4.1 — Syirik Tidak Diampun Kerana Ia Merosakkan Asas Iman</h3>
-      <div class="arab">﴿ إِنَّ اللَّهَ لَا يَغْفِرُ أَنْ يُشْرَكَ بِهِ ﴾</div>
+      <div class="arab">﴿ إِنَّ اللَّهَ لَا يَغْفِرُ أَنْ يُشْرَكَ بِهِ ﴾</div>
       <p>“Sesungguhnya Allah tidak mengampunkan dosa syirik.”<br>
       <em>(An-Nisā’ 4:48)</em></p>
       <p>Dosa lain → boleh dibersih di dunia atau di neraka.<br>
@@ -1382,7 +1228,7 @@ main{padding: 14px 0 40px 0;}
     <!-- 11.4.3 -->
     <section class="section" id="11-4-3">
       <h3>11.4.3 — Dalil: Syirik Melahirkan Kekekalan Azab</h3>
-      <div class="arab">﴿ إِنَّهُ مَنْ يُشْرِكْ بِاللَّهِ فَقَدْ حَرَّمَ اللَّهُ عَلَيْهِ الْجَنَّةَ ﴾</div>
+      <div class="arab">﴿ إِنَّهُ مَنْ يُشْرِكْ بِاللَّهِ فَقَدْ حَرَّمَ اللَّهُ عَلَيْهِ الْجَنَّةَ ﴾</div>
       <p>“Barangsiapa mensyirikkan Allah, maka Allah haramkan ke atasnya syurga.”<br>
       <em>(Al-Mā’idah 5:72)</em></p>
       <p>“Haram syurga” =<br>
@@ -1414,7 +1260,7 @@ main{padding: 14px 0 40px 0;}
       <p>Hadith sahih:<br>
       Rasulullah ﷺ menyebut tentang manusia yang akhirnya keluar dari neraka:</p>
       <blockquote>
-        « يُخْرَجُ مِنَ النَّارِ مَنْ كَانَ فِي قَلْبِهِ مِثْقَالُ ذَرَّةٍ مِنْ إِيمَانٍ »
+        « يُخْرَجُ مِنَ النَّارِ مَنْ كَانَ فِي قَلْبِهِ مِثْقَالُ ذَرَّةٍ مِنْ إِيمَانٍ »
       </blockquote>
       <p>“Dikeluarkan dari neraka orang yang dalam hatinya ada sebesar zarrah iman.”<br>
       <em>(Sahih Bukhari & Muslim)</em></p>
@@ -1722,7 +1568,7 @@ main{padding: 14px 0 40px 0;}
         <li>✔ mana pemberi kesan sebenar,</li>
         <li>✘ mana sebab yang tiada kuasa.</li>
       </ul>
-      <div class="arab">﴿ فَإِنَّهَا لَا تَعْمَى الْأَبْصَارُ وَلَٰكِن تَعْمَى الْقُلُوبُ ﴾</div>
+      <div class="arab">﴿ فَإِنَّهَا لَا تَعْمَى الْأَبْصَارُ وَلَٰكِن تَعْمَى الْقُلُوبُ ﴾</div>
       <p>“Bukan mata yang buta, tetapi hati yang buta.”<br>
       <em>(Al-Hajj 22:46)</em></p>
       <p>Syirik → menutup basirah → hati tidak nampak Allah dalam setiap urusan.</p>
@@ -1735,7 +1581,7 @@ main{padding: 14px 0 40px 0;}
     <section class="section" id="11-5-2">
       <h3>11.5.2 — Syirik Menutup Pintu Doa</h3>
       <p>Doa tidak naik bila hati tidak bersandar kepada Allah.</p>
-      <div class="arab">﴿ إِنَّ الَّذِينَ تَدْعُونَ مِنْ دُونِ اللَّهِ لَنْ يَسْتَجِيبُوا ﴾</div>
+      <div class="arab">﴿ إِنَّ الَّذِينَ تَدْعُونَ مِنْ دُونِ اللَّهِ لَنْ يَسْتَجِيبُوا ﴾</div>
       <p>“Yang kamu seru selain Allah tidak akan menjawab.”<br>
       <em>(Fatir 35:14)</em></p>
       <p>Bila hati sandar kepada makhluk:</p>
@@ -1752,7 +1598,7 @@ main{padding: 14px 0 40px 0;}
     <section class="section" id="11-5-3">
       <h3>11.5.3 — Syirik Menutup Pintu Nusrah (Pertolongan Allah)</h3>
       <p>Allah tidak menolong seseorang yang memberi kuasa kepada makhluk.</p>
-      <div class="arab">﴿ ذَٰلِكُم بِأَنَّهُ إِذَا دُعِيَ اللَّهُ وَحْدَهُ كَفَرْتُمْ ﴾</div>
+      <div class="arab">﴿ ذَٰلِكُم بِأَنَّهُ إِذَا دُعِيَ اللَّهُ وَحْدَهُ كَفَرْتُمْ ﴾</div>
       <p>“Itu kerana apabila Allah sahaja diseru, kamu kufur.”<br>
       <em>(Ghafir 40:12)</em></p>
       <p>Bila:</p>
@@ -1770,7 +1616,7 @@ main{padding: 14px 0 40px 0;}
     <!-- 11.5.4 -->
     <section class="section" id="11-5-4">
       <h3>11.5.4 — Syirik Menutup Pintu Hidayah</h3>
-      <div class="arab">﴿ إِنَّ اللَّهَ لَا يَهْدِي الْقَوْمَ الْكَافِرِينَ ﴾</div>
+      <div class="arab">﴿ إِنَّ اللَّهَ لَا يَهْدِي الْقَوْمَ الْكَافِرِينَ ﴾</div>
       <p>“Allah tidak memberi hidayah kepada kaum yang kufur.”<br>
       <em>(Al-Baqarah 2:264)</em></p>
       <p>Kufur di sini termasuk syirik.</p>
@@ -1796,7 +1642,7 @@ main{padding: 14px 0 40px 0;}
         <li>memutuskan arah yakin,</li>
         <li>memutuskan hubungan ruhani.</li>
       </ul>
-      <div class="arab">﴿ ثُمَّ لَمْ يَكُن لَّهُمْ دَعْوَاهُمْ إِلَّا أَن قَالُوا إِنَّا كُنَّا ظَالِمِينَ ﴾</div>
+      <div class="arab">﴿ ثُمَّ لَمْ يَكُن لَّهُمْ دَعْوَاهُمْ إِلَّا أَن قَالُوا إِنَّا كُنَّا ظَالِمِينَ ﴾</div>
       <p>“Mereka tiada seruan melainkan mengakui: kami orang zalim.”<br>
       <em>(Yunus 10:54)</em></p>
       <p>Syirik = kezaliman paling besar<br>
@@ -2078,7 +1924,7 @@ main{padding: 14px 0 40px 0;}
     <!-- 11.6.1 -->
     <section class="section" id="11-6-1">
       <h3>11.6.1 — Dalil Qur’an: Syirik menghasilkan azab yang kekal</h3>
-      <div class="arab">﴿ إِنَّهُ مَن يُشْرِكْ بِاللَّهِ فَقَدْ حَرَّمَ اللَّهُ عَلَيْهِ الْجَنَّةَ ﴾</div>
+      <div class="arab">﴿ إِنَّهُ مَن يُشْرِكْ بِاللَّهِ فَقَدْ حَرَّمَ اللَّهُ عَلَيْهِ الْجَنَّةَ ﴾</div>
       <p>“Sesungguhnya sesiapa yang mensyirikkan Allah, maka Allah haramkan baginya syurga.”<br>
       <em>(Al-Ma’idah 5:72)</em></p>
       <div class="arab">﴿ خَالِدِينَ فِيهَا أَبَدًا ﴾</div>
@@ -2120,7 +1966,7 @@ main{padding: 14px 0 40px 0;}
       <p>Syirik bukan “aksi salah”<br>
       tetapi pendirian hati yang salah.</p>
       <p>Dan pendirian itu kekal sehingga kematian.</p>
-      <div class="arab">﴿ وَلَٰكِن مَّن شَرَحَ بِالْكُفْرِ صَدْرًا ﴾</div>
+      <div class="arab">﴿ وَلَٰكِن مَّن شَرَحَ بِالْكُفْرِ صَدْرًا ﴾</div>
       <p>“Tetapi sesiapa yang melapangkan dadanya untuk kekafiran…”<br>
       <em>(An-Nahl 16:106)</em></p>
       <p>Melapangkan dada = menjadikan kesalahan itu rumah di dalam hati.</p>
@@ -2163,7 +2009,7 @@ main{padding: 14px 0 40px 0;}
         <li>tahun.</li>
       </ul>
       <p>Akhirat tidak begitu.</p>
-      <div class="arab">﴿ تَعُدُّونَ ﴾</div>
+      <div class="arab">﴿ تَعُدُّونَ ﴾</div>
       <p>“(Yang kamu kira/kalkulasi)”<br>
       <em>(Al-Ma’arij 70:4)</em></p>
       <p>Akhirat bukan masa yang “dikira”.<br>
@@ -2187,7 +2033,7 @@ main{padding: 14px 0 40px 0;}
         <li>tiada pintu perubahan,</li>
         <li>tiada “masa tambahan”.</li>
       </ul>
-      <div class="arab">﴿ فَلَن يُقْبَلَ مِنْ أَحَدِهِم مِّلْءُ الْأَرْضِ ذَهَبًا ﴾</div>
+      <div class="arab">﴿ فَلَن يُقْبَلَ مِنْ أَحَدِهِم مِّلْءُ الْأَرْضِ ذَهَبًا ﴾</div>
       <p>“Tidak akan diterima walaupun sepenuh bumi emas.”<br>
       <em>(Ali ‘Imran 3:91)</em></p>
       <p>Dosa lain boleh dibersihkan dengan neraka.<br>
@@ -2474,7 +2320,7 @@ main{padding: 14px 0 40px 0;}
         <li>ia boleh ditaubati,</li>
         <li>ia tidak memutuskan asal hubungan dengan Allah.</li>
       </ol>
-      <div class="arab">﴿ إِنَّ ٱللَّهَ لَا يَغْفِرُ أَن يُشْرَكَ بِهِۦ وَيَغْفِرُ مَا دُونَ ذَٰلِكَ ﴾</div>
+      <div class="arab">﴿ إِنَّ ٱللَّهَ لَا يَغْفِرُ أَن يُشْرَكَ بِهِۦ وَيَغْفِرُ مَا دُونَ ذَٰلِكَ ﴾</div>
       <p>“Allah tidak mengampunkan syirik, dan Dia mengampunkan dosa selain itu.”<br>
       <em>(An-Nisa’ 4:48)</em><sup class="footnote-ref" id="fnref-1"><a href="#fn-1">[1]</a></sup></p>
       <p>“Selain itu” = semua dosa amal.</p>
@@ -2517,7 +2363,7 @@ main{padding: 14px 0 40px 0;}
         <li>keadaan,</li>
         <li>tempat.</li>
       </ul>
-      <div class="arab">﴿ إِنَّهُۥ مَن يُشْرِكْ بِٱللَّهِ فَقَدْ ضَلَّ ضَلَٰلًۭا بَعِيدًۭا ﴾</div>
+      <div class="arab">﴿ إِنَّهُۥ مَن يُشْرِكْ بِٱللَّهِ فَقَدْ ضَلَّ ضَلَٰلًۭا بَعِيدًۭا ﴾</div>
       <p>“Sesiapa mensyirikkan Allah, sesungguhnya dia telah sesat sejauh-jauhnya.”<br>
       <em>(An-Nisa’ 4:116)</em><sup class="footnote-ref" id="fnref-2"><a href="#fn-2">[2]</a></sup></p>
       <p>“Sesat sejauh-jauhnya” = tiada jalan balik selepas mati.</p>
@@ -2880,7 +2726,7 @@ main{padding: 14px 0 40px 0;}
     <!-- 11.8.2 -->
     <section class="section" id="11-8-2">
       <h3>11.8.2 — Dalil Asas Syirik Jali</h3>
-      <div class="arab">﴿ إِنَّ اللَّهَ لَا يَغْفِرُ أَنْ يُشْرَكَ بِهِ وَيَغْفِرُ مَا دُونَ ذَٰلِكَ لِمَنْ يَشَاءُ ﴾</div>
+      <div class="arab">﴿ إِنَّ اللَّهَ لَا يَغْفِرُ أَنْ يُشْرَكَ بِهِ وَيَغْفِرُ مَا دُونَ ذَٰلِكَ لِمَنْ يَشَاءُ ﴾</div>
       <p>“Sesungguhnya Allah tidak mengampuni dosa syirik,<br>
       dan Dia mengampuni dosa selain itu bagi sesiapa yang Dia kehendaki.”<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">[1]</a></sup></p>
       <p>Ayat ini menunjukkan bahawa:</p>
@@ -2934,7 +2780,7 @@ main{padding: 14px 0 40px 0;}
         <li>❌ Menghapuskan semua amal</li>
         <li>❌ Menutup pintu syurga jika tidak bertaubat</li>
       </ul>
-      <div class="arab">﴿ لَئِنْ أَشْرَكْتَ لَيَحْبَطَنَّ عَمَلُكَ ﴾</div>
+      <div class="arab">﴿ لَئِنْ أَشْرَكْتَ لَيَحْبَطَنَّ عَمَلُكَ ﴾</div>
       <p>“Jika kamu melakukan syirik, nescaya akan gugur semua amalanmu.”<sup class="footnote-ref" id="fnref-2"><a href="#fn-2">[2]</a></sup></p>
       <a class="toplink" href="#top">↑ Atas</a>
     </section>
@@ -3255,9 +3101,9 @@ main{padding: 14px 0 40px 0;}
       maka Syirik Khafi halus dalam hati —<br>
       sehingga pelakunya sendiri tidak sedar.</p>
       <p>Rasulullah ﷺ bersabda:</p>
-      <div class="arab">إِنَّ أَخْوَفَ مَا أَخَافُ عَلَيْكُمُ الشِّرْكُ الأَصْغَرُ<br>
-      قَالُوا: وَمَا الشِّرْكُ الأَصْغَرُ يَا رَسُولَ اللَّهِ؟<br>
-      قَالَ: الرِّيَاءُ</div>
+      <div class="arab">إِنَّ أَخْوَفَ مَا أَخَافُ عَلَيْكُمُ الشِّرْكُ الأَصْغَرُ<br>
+      قَالُوا: وَمَا الشِّرْكُ الأَصْغَرُ يَا رَسُولَ اللَّهِ؟<br>
+      قَالَ: الرِّيَاءُ</div>
       <p>“Sesungguhnya perkara yang paling aku takut ke atas kamu ialah syirik kecil.”<br>
       Mereka bertanya: “Apakah syirik kecil itu wahai Rasulullah?”<br>
       Baginda menjawab: “Riya’.”<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">[1]</a></sup></p>
@@ -3679,7 +3525,7 @@ main{padding: 14px 0 40px 0;}
         <li>Sebab tidak menentukan natijah</li>
       </ul>
       <p>➡️ Semua itu milik Allah semata-mata</p>
-      <div class="arab">﴿ وَمَا النَّصْرُ إِلَّا مِنْ عِنْدِ اللَّهِ ﴾</div>
+      <div class="arab">﴿ وَمَا النَّصْرُ إِلَّا مِنْ عِنْدِ اللَّهِ ﴾</div>
       <p>“Dan kemenangan itu tidak datang melainkan daripada Allah.”<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">[1]</a></sup></p>
       <a class="toplink" href="#top">↑ Atas</a>
     </section>
@@ -4528,7 +4374,7 @@ main{padding: 14px 0 40px 0;}
         <li>Sistem tidak menjamin kejayaan</li>
       </ul>
       <p>➡️ Semua itu hanya daripada Allah</p>
-      <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنْفُسِهِمْ ﴾</div>
+      <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنْفُسِهِمْ ﴾</div>
       <p>“Sesungguhnya Allah tidak akan mengubah keadaan sesuatu kaum<br>
       sehingga mereka mengubah apa yang ada pada diri mereka.”<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">[1]</a></sup></p>
       <p>➡️ Perubahan datang daripada Allah,<br>
@@ -4959,7 +4805,7 @@ main{padding: 14px 0 40px 0;}
     <section class="section" id="11-13-2">
       <h3>11.13.2 — Dalil Asas</h3>
       <p>Rasulullah ﷺ bersabda:</p>
-      <div class="arab">إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى</div>
+      <div class="arab">إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى</div>
       <p>“Sesungguhnya setiap amalan itu bergantung kepada niat,<br>
       dan setiap orang akan mendapat apa yang dia niatkan.”<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">[1]</a></sup></p>
       <p>➡️ Nilai amal ditentukan oleh niat,<br>
@@ -5820,7 +5666,7 @@ main{padding: 14px 0 40px 0;}
     <!-- Hakikat 1 -->
     <section class="section" id="hakikat-1">
       <h3>🟥 1. Syirik adalah kesalahan paling besar kerana ia menyentuh hak Allah</h3>
-      <div class="arab">﴿ إِنَّ ٱلشِّرْكَ لَظُلْمٌ عَظِيمٌ ﴾</div>
+      <div class="arab">﴿ إِنَّ ٱلشِّرْكَ لَظُلْمٌ عَظِيمٌ ﴾</div>
       <p>“Sesungguhnya syirik adalah kezaliman yang sangat besar.”<br>
       <em>(Luqman 31:13)</em></p>
       <p>Zulm paling besar = mengambil hak Allah dan memberikannya kepada makhluk.</p>
@@ -5836,7 +5682,7 @@ main{padding: 14px 0 40px 0;}
     <!-- Hakikat 2 -->
     <section class="section" id="hakikat-2">
       <h3>🟥 2. Syirik tidak diampun kerana ia memutuskan hubungan dengan Allah</h3>
-      <div class="arab">﴿ إِنَّ ٱللَّهَ لَا يَغْفِرُ أَن يُشْرَكَ بِهِۦ ﴾</div>
+      <div class="arab">﴿ إِنَّ ٱللَّهَ لَا يَغْفِرُ أَن يُشْرَكَ بِهِۦ ﴾</div>
       <p>“Allah tidak mengampunkan syirik.”<br>
       <em>(An-Nisa’ 4:48)</em></p>
       <p>Bukan kerana Allah keras —<br>
@@ -5893,7 +5739,7 @@ main{padding: 14px 0 40px 0;}
         <li>menolak cara yang Allah tetapkan (Rasulullah ﷺ).</li>
       </ul>
       <p>Inilah “tandingan” yang Allah larang.</p>
-      <div class="arab">﴿ فَلَا تَجْعَلُوا لِلَّهِ أَندَادًا ﴾</div>
+      <div class="arab">﴿ فَلَا تَجْعَلُوا لِلَّهِ أَندَادًا ﴾</div>
       <p>“Jangan kamu jadikan tandingan bagi Allah.”<br>
       <em>(Al-Baqarah 2:22)</em></p>
       <a class="toplink" href="#top">↑ Atas</a>
@@ -5912,7 +5758,7 @@ main{padding: 14px 0 40px 0;}
         <li>sandaran salah.</li>
       </ul>
       <p>Sebab itu syirik dibahasakan oleh Qur’an sebagai penyakit rasa:</p>
-      <div class="arab">﴿ يُحِبُّونَهُمْ كَحُبِّ اللَّهِ ﴾</div>
+      <div class="arab">﴿ يُحِبُّونَهُمْ كَحُبِّ اللَّهِ ﴾</div>
       <p>“Mereka mencintai makhluk seperti mencintai Allah.”<br>
       <em>(Al-Baqarah 2:165)</em></p>
       <a class="toplink" href="#top">↑ Atas</a>
@@ -6341,7 +6187,7 @@ main{padding: 14px 0 40px 0;}
       Inilah jenayah senyap yang membunuh iman.</p>
 
       <h4>B. Dalil Qur’an — Syirik Tanpa Patung</h4>
-      <div class="arab">﴿ يُحِبُّونَهُمْ كَحُبِّ اللَّهِ ﴾</div>
+      <div class="arab">﴿ يُحِبُّونَهُمْ كَحُبِّ اللَّهِ ﴾</div>
       <p>(Al-Baqarah 2:165)<br>
       Mereka mencintai makhluk seperti mencintai Allah — syirik rasa.<br>
       Bid’ah adalah syirik rasa— kerana seseorang merasakan ibadah pada sesuatu yang Allah tidak tetapkan.</p>
@@ -6474,7 +6320,7 @@ main{padding: 14px 0 40px 0;}
       </table>
 
       <h4>🟥 Ayat Penutup (11.16.3)</h4>
-      <div class="arab">﴿ قُلْ إِنَّ صَلَاتِي وَنُسُكِي وَمَحْيَايَ وَمَمَاتِي لِلَّهِ رَبِّ الْعَالَمِينَ • لَا شَرِيكَ لَهُ ﴾</div>
+      <div class="arab">﴿ قُلْ إِنَّ صَلَاتِي وَنُسُكِي وَمَحْيَايَ وَمَمَاتِي لِلَّهِ رَبِّ الْعَالَمِينَ • لَا شَرِيكَ لَهُ ﴾</div>
       <p>(Al-An‘ām 6:162–163)<br>
       Segala ibadah adalah milik Allah — bukan milik rekaan, adat, teknik, atau kreativiti manusia.</p>
       <a class="toplink" href="#top">↑ Atas</a>
@@ -6489,63 +6335,63 @@ main{padding: 14px 0 40px 0;}
       <div class="arab">﴿ فَإِذَا فَرَغْتَ فَانصَبْ ﴾</div>
       <p>“Apabila engkau selesai (satu amal), bersungguh-sungguhlah (pada amal lain).” (Al-Inshirah 94:7)<br>
       Ayat ini mewajibkan masa diisi dengan amal yang Allah tetapkan, bukan amalan ciptaan.</p>
-      <p>Hadith: « مَنْ عَمِلَ عَمَلًا لَيْسَ عَلَيْهِ أَمْرُنَا فَهُوَ رَدٌّ » “Siapa melakukan amalan yang bukan daripada ajaran kami — ia tertolak.” (Sahih Muslim)<br>
+      <p>Hadith: « مَنْ عَمِلَ عَمَلًا لَيْسَ عَلَيْهِ أَمْرُنَا فَهُوَ رَدٌّ » “Siapa melakukan amalan yang bukan daripada ajaran kami — ia tertolak.” (Sahih Muslim)<br>
       Kesan tauhidi: Jika masa dipenuhi amalan yang tertolak, maka masa sunnah hilang.</p>
 
       <h4>🟥 2. Bid’ah Mencuri Ruang Daripada Suasana Iman</h4>
-      <div class="arab">﴿ فِي بُيُوتٍ أَذِنَ ٱللَّهُ أَن تُرْفَعَ ﴾</div>
+      <div class="arab">﴿ فِي بُيُوتٍ أَذِنَ ٱللَّهُ أَن تُرْفَعَ ﴾</div>
       <p>“Di rumah-rumah (masjid) yang Allah izinkan ditinggikan…” (An-Nur 24:36)<br>
       Allah menetapkan bahawa ruang masjid hanya untuk perkara yang Allah izinkan.<br>
       Bid’ah menambah perkara yang Allah tidak izinkan → ia mencuri ruang dari amalan sunnah masjid.<br>
       Dalil Sirah: Masjid Nabi ﷺ hanya hidup dengan dakwah, solat jemaah, taklim, zikir, syura. Semua ini mempunyai dalil. Bid’ah tidak punya dalil.</p>
 
       <h4>🟥 3. Bid’ah Mencuri Rasa Iman Dari Hati</h4>
-      <div class="arab">﴿ وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ ﴾</div>
+      <div class="arab">﴿ وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ ﴾</div>
       <p>“Dan mereka tidak diperintah melainkan untuk beribadah kepada Allah dengan ikhlas.” (Al-Bayyinah 98:5)<br>
       Apabila ibadah dicampur unsur tambahan, ikhlas hilang; kerana hati condong pada bentuk & rekaan.<br>
-      Hadith: « إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ » “Amal bergantung kepada niat.” (Bukhari)<br>
+      Hadith: « إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ » “Amal bergantung kepada niat.” (Bukhari)<br>
       Bid’ah memindahkan niat kepada bentuk yang tidak Allah tetapkan.</p>
 
       <h4>🟥 4. Bid’ah Menghalang Dakwah</h4>
-      <div class="arab">﴿ وَلْتَكُن مِّنكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ ﴾</div>
+      <div class="arab">﴿ وَلْتَكُن مِّنكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ ﴾</div>
       <p>“Hendaklah ada satu umat yang mengajak kepada kebaikan…” (Ali ‘Imran 3:104)<br>
       Jika umat sibuk dengan ritual tambahan, mereka tidak lagi mengajak manusia, membina suasana, memberi masa kepada umat.<br>
       Dakwah mati bila bid’ah hidup.<br>
       Hadis 73 golongan: hanya satu yang selamat — yang kembali kepada agama seperti Nabi dan sahabat. Bid’ah membawa jauh daripada dakwah Nabi.</p>
 
       <h4>🟥 5. Bid’ah Mematikan Mujahadah</h4>
-      <div class="arab">﴿ وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
+      <div class="arab">﴿ وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
       <p>“Dan sesiapa yang bersungguh-sungguh (mujahadah) pada jalan Kami, Kami akan beri hidayah kepada mereka.” (Al-‘Ankabut 29:69)<br>
       Bid’ah memberi rasa palsu “sudah beramal”, tanpa keluar, berjalan, mengajak, memikul susah.<br>
       Maka mujahadah hilang → hidayah terhalang.</p>
 
       <h4>🟥 6. Bid’ah Menyebabkan Sabar Tidak Terbina</h4>
-      <div class="arab">﴿ وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ ﴾</div>
+      <div class="arab">﴿ وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ ﴾</div>
       <p>“Mintalah pertolongan dengan sabar dan solat.” (Al-Baqarah 2:45)<br>
       Sabar terbina hanya melalui kesusahan sunnah, bukan keselesaan ritual buatan.<br>
       Bid’ah memberikan jalan pintas → sabar tidak terbina → pertolongan Allah terhalang.</p>
 
       <h4>🟥 7. Bid’ah Menjadikan Solat Kering Dari Ruh</h4>
-      <div class="arab">﴿ قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ • ٱلَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ ﴾</div>
+      <div class="arab">﴿ قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ • ٱلَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ ﴾</div>
       <p>“Berjayalah orang beriman, yang khusyuk dalam solat mereka.” (Al-Mu’minun 23:1–2)<br>
       Solat hanya hidup dengan khusyuk, dan khusyuk hanya datang dari dakwah, mujahadah, sabar, zikir, suasana masjid.<br>
       Bid’ah tidak melahirkan khusyuk → ia melahirkan bentuk tanpa ruh.</p>
 
       <h4>🟥 8. Bid’ah Mematikan Doa</h4>
-      <div class="arab">﴿ وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ ﴾</div>
+      <div class="arab">﴿ وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ ﴾</div>
       <p>“Tuhanmu berkata: Berdoalah kepada-Ku, Aku perkenankan kamu.” (Ghafir 40:60)<br>
       Bid’ah menambah lafaz yang Nabi tidak ajar, membuat orang yakin kepada rekaan, bukannya doa Nabi.<br>
       Ini memutuskan hubungan langsung dengan Allah.</p>
 
       <h4>🟥 9. Bid’ah Menutup Pintu Nusrah Allah</h4>
-      <div class="arab">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ ﴾</div>
+      <div class="arab">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ ﴾</div>
       <p>“Jika kamu menolong (agama) Allah, Allah akan menolong kamu.” (Muhammad 47:7)<br>
       Allah menolong dakwah, sabar, mujahadah, solat jemaah, suasana masjid.<br>
       Allah tidak menolong rekaan manusia yang diklaim ibadah.<br>
       Bid’ah → mematikan sebab nusrah → nusrah terhenti.</p>
 
       <h4>🟥 10. Bid’ah Menutup Pintu Redha Allah</h4>
-      <div class="arab">﴿ رَّضِيَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ﴾</div>
+      <div class="arab">﴿ رَّضِيَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ﴾</div>
       <p>At-Taubah 9:100 — Redha Allah hanya untuk Muhajirin, Ansar, dan yang mengikuti mereka.<br>
       Bid’ah tidak pernah mengikuti jalan Muhajirin & Ansar, tertib sunnah, tertib dakwah, tertib syura.<br>
       Maka pintu redha tertutup.</p>
@@ -6588,12 +6434,12 @@ main{padding: 14px 0 40px 0;}
       Inilah maksud: “Asbab yang bukan ibadah → dinaikkan menjadi ibadah.”</p>
 
       <h4>🟥 2. Bid’ah = Mengambil Hak Allah Menentukan Jalan Pahala</h4>
-      <div class="arab">﴿ أَمْ لَهُمْ شُرَكَاءُ شَرَعُوا لَهُم مِّنَ ٱلدِّينِ مَا لَمْ يَأْذَنۢ بِهِ ٱللَّهُ ﴾</div>
+      <div class="arab">﴿ أَمْ لَهُمْ شُرَكَاءُ شَرَعُوا لَهُم مِّنَ ٱلدِّينِ مَا لَمْ يَأْذَنۢ بِهِ ٱللَّهُ ﴾</div>
       <p>“Adakah mereka mempunyai sekutu (yang) mensyariatkan bagi mereka apa yang Allah tidak izinkan?” (Ash-Shura 42:21)<br>
       Allah mengecam sesiapa yang membuat “agama baru”: menentukan ritual, menentukan pahala, menentukan jalan ibadah, padahal Allah tidak pernah izinkan. Itulah bid’ah.</p>
 
       <h4>🟥 3. Bid’ah = Menambah Laluan yang Allah Tidak Buka</h4>
-      <div class="arab">« كُلُّ بِدْعَةٍ ضَلَالَةٌ »</div>
+      <div class="arab">« كُلُّ بِدْعَةٍ ضَلَالَةٌ »</div>
       <p>“Setiap bid’ah itu sesat.” (Muslim)<br>
       Sesat = tersasar daripada laluan yang Allah buka.<br>
       Allah buka Asbab Mutlak Asli: dakwah, mujahadah, sabar, solat, tilawah, zikir, suasana masjid, syura, khidmat.<br>
@@ -6607,7 +6453,7 @@ main{padding: 14px 0 40px 0;}
       Inilah penyelewengan transformasi — dan inilah bid’ah yang paling tepat dalam bahasa Tauhidi.</p>
 
       <h4>🟥 5. Bid’ah = Menggantikan Amal Nabi dengan Amal Rekaan</h4>
-      <div class="arab">﴿ فَلْيَحْذَرِ ٱلَّذِينَ يُخَالِفُونَ عَنْ أَمْرِهِ ﴾</div>
+      <div class="arab">﴿ فَلْيَحْذَرِ ٱلَّذِينَ يُخَالِفُونَ عَنْ أَمْرِهِ ﴾</div>
       <p>“Hendaklah beringat orang yang menyelisihi perintah Nabi…” (An-Nur 24:63)<br>
       Bid’ah menambah bentuk ibadah, cara ibadah, jadual ibadah, yang Nabi ﷺ tidak lakukan.<br>
       Apabila bentuk baharu mengambil tempat: dakwah lemah, taklim kering, masjid kosong, mujahadah tamat, sabar hilang. Kerana ruang sunnah ditutup oleh bentuk rekaan.</p>
@@ -6882,7 +6728,7 @@ main{padding: 14px 0 40px 0;}
         <li>Umat hidup dengan Asbab Fitrah (ilmu, sistem, strategi) dan Asbab Zulumat (status, struktur, jawatan), tanpa mengaktifkan Asbab Mutlak Asli.</li>
       </ul>
       <p>Sedangkan al-Qur’an menetapkan dakwah sebagai tugas iman, bukan jawatan sosial:</p>
-      <div class="arab">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
+      <div class="arab">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
       <p>“Dan siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah.”<br>
       <em>(Fuṣṣilat 41:33)</em><sup class="footnote-ref" id="fnref-1"><a href="#fn-1">[1]</a></sup></p>
       <p>Ayat ini tidak ditujukan kepada ulama sahaja, tetapi kepada setiap orang yang beriman.</p>
@@ -6949,25 +6795,43 @@ main{padding: 14px 0 40px 0;}
       </ol>
     </div>
 
-  </article>
-</main>
+</article>
+  </main>
 
-<footer>
-  <div class="wrap">
-    <div>
-      <a href="index.html">Home</a> ·
-      <a href="bab-11-16.html">Bab 11.16</a> ·
-      <a href="bab-12.html">Bab 12</a>
-    </div>
-    <div class="meta" style="margin-top:8px">Nota: Laman ini arkib baca sahaja.</div>
-  </div>
-</footer>
+  <footer>
+    <p>© 3asbab.org — Arkib bacaan sahaja. Bab 10: Mukadimah Dakwah Tauhid.</p>
+  </footer>
+
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn ? btn.innerHTML : '';
+
+      if (btn) {
+        btn.innerHTML = '⏳ Menyediakan PDF...';
+        btn.disabled = true;
+      }
+
+      setTimeout(() => {
+        window.print();
+
+        setTimeout(() => {
+          if (btn) {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+          }
+        }, 800);
+      }, 200);
+    }
+
+    // smooth scroll ke atas
+    document.querySelectorAll('a[href="#top"]').forEach(el => {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
 
 </body>
 </html>
-
-
-
-
-
-
