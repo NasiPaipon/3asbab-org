@@ -1,178 +1,355 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI & TERBITAN | 3asbab.org</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN | 3asbab.org</title>
   <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
+    /* SEMUA CSS KEKAL SAMA SEPERTI ASAL */
+    * {
       margin: 0;
-      background: var(--bg);
-      color:#111;
+      padding: 0;
+      box-sizing: border-box;
     }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
+    :root {
+      --max-width: 920px;
+      --pad: 1.25rem;
+      --border-light: #e2e8f0;
+      --bg-soft: #fafcff;
+      --muted: #4a5568;
+      --accent: #0f7b4a;
+      --accent-light: #e6f4ed;
+      --text-dark: #1a202c;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
     }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+      background: white;
+      color: var(--text-dark);
+      line-height: 1.7;
+      scroll-behavior: smooth;
     }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 clamp(1.2rem, 4vw, 1.8rem);
     }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
-    }
-
-    /* Lompat ke... */
-    .jump{
+    .topbar {
+      border-bottom: 1px solid var(--border-light);
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
+      z-index: 20;
+      background: rgba(255,255,255,0.96);
       backdrop-filter: blur(6px);
     }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
+    .topbar nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.75rem 0;
     }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
+    .topbar a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--text-dark);
     }
-
-    main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
+    .brand {
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      margin-right: 0.5rem;
     }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
+    header { padding: 1.5rem 0 0.5rem 0; }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      line-height: 1.25;
+      margin: 0.25rem 0 0.5rem;
+      letter-spacing: -0.01em;
     }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
+    .meta {
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
     }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
+    .jump {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 48px;
+      z-index: 15;
+      background: rgba(255,255,255,0.98);
     }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
+    .jump-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.7rem 0;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+    .jump a {
+      padding: 0.2rem 0.7rem;
+      border-radius: 40px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.1s ease;
+      color: var(--text-dark);
+    }
+    .jump a:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+    main { padding: 1.2rem 0 3rem; }
+    .badge-chapter {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      background: #fef3c7;
+      color: #b45309;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      margin-bottom: 0.8rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin: 1.8rem 0 0.75rem;
       border-left: 4px solid var(--accent);
-      background: #f8fffb;
+      padding-left: 0.9rem;
+      font-weight: 600;
     }
-    .arab{
-      font-size: 20px;
-      line-height: 1.9;
+    h3 {
+      font-size: 1.25rem;
+      margin: 1.2rem 0 0.5rem;
+      font-weight: 600;
+      color: #0b3b2a;
+    }
+    .section-card {
+      background: var(--bg-soft);
+      border-radius: 1.2rem;
+      padding: 1.2rem 1.4rem;
+      margin: 1.2rem 0;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+    .arabic {
+      font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
+      font-size: 1.6rem;
+      line-height: 1.8;
       direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
+      text-align: right;
+      margin: 0.8rem 0;
+      color: #1e293b;
     }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
+    .translation {
+      font-style: normal;
+      background: #f8fafc;
+      padding: 0.6rem 1rem;
+      border-radius: 0.8rem;
+      margin: 0.5rem 0 1rem;
+      border-left: 3px solid var(--accent);
+      font-size: 0.95rem;
     }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
+    blockquote {
+      background: var(--accent-light);
+      border-radius: 0.8rem;
+      padding: 0.8rem 1.2rem;
+      margin: 1rem 0;
+      font-style: normal;
+    }
+    .insight-box {
+      background: #f1f5f9;
+      padding: 0.8rem 1.2rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid var(--border-light);
+      padding: 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #f1f5f9; font-weight: 600; }
+    hr { margin: 2rem 0; border: 0; height: 1px; background: var(--border-light); }
+    .footnote {
+      font-size: 0.8rem;
       color: var(--muted);
-      text-decoration:none;
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
     }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 1.5rem 0;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 0.8rem;
+      margin-top: 1rem;
     }
-    footer a{color:inherit}
+    .toplink { font-size: 0.75rem; margin-top: 0.5rem; display: inline-block; }
+    .pdf-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0 8px;
+    }
+    .btn-pdf {
+      appearance: none;
+      border: 1px solid var(--pdf-border);
+      background: #fff;
+      color: var(--pdf-text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.95rem;
+      line-height: 1.2;
+      font-weight: 600;
+      transition: 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
+    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
+    .btn-pdf:active { transform: translateY(1px); }
+    .no-print { display: block; }
+    .pdf-only { display: none; }
+    .pdf-exporting .pdf-only { display: block !important; }
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink { display: none !important; }
+    .pdf-shell { background: #fff; }
+    .pdf-cover { display: none; }
+    .pdf-cover-inner {
+      min-height: 260mm;
+      padding: 28mm 18mm 24mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--pdf-paper);
+      color: var(--pdf-text);
+    }
+    .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
+    .pdf-cover-brand { font-size: 0.95rem; letter-spacing: .12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
+    .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
+    .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
+    .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
+    .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
+    .pdf-meta-page { display: none; }
+    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
+    .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
+    .pdf-meta-list p { margin: 0 0 6mm; }
+    .pdf-break { break-before: page; page-break-before: always; }
+    .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
+    .pdf-print-mode { font-family: Georgia, "Times New Roman", serif; color: #111827; background: #fff; line-height: 1.8; }
+    .pdf-print-mode .wrap { max-width: 780px; }
+    .pdf-print-mode h1, .pdf-print-mode h2, .pdf-print-mode h3 { color: #111827; letter-spacing: 0; }
+    .pdf-print-mode h1 { font-size: 2rem; }
+    .pdf-print-mode h2 { font-size: 1.45rem; border-left: 0; border-bottom: 1px solid var(--pdf-border); padding-left: 0; padding-bottom: 6px; margin-top: 1.7rem; }
+    .pdf-print-mode h3 { font-size: 1.15rem; margin-top: 1.3rem; }
+    .pdf-print-mode .section-card, .pdf-print-mode blockquote, .pdf-print-mode .insight-box { background: transparent; border: 1px solid #e5e7eb; box-shadow: none; }
+    .pdf-print-mode .badge-chapter, .pdf-print-mode .jump, .pdf-print-mode .topbar, .pdf-print-mode .toplink, .pdf-print-mode .pdf-toolbar { display: none !important; }
+    .pdf-print-mode .arabic { font-size: 1.45rem; line-height: 1.9; }
+    .pdf-print-mode table { font-size: 0.92rem; }
+    @media print {
+      body { margin: 0; padding: 0; }
+      .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
+      .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
+      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
+      h2, h3 { break-after: avoid; page-break-after: avoid; }
+    }
+    @media (max-width: 640px) {
+      .section-card { padding: 1rem; }
+      .arabic { font-size: 1.3rem; }
+    }
   </style>
 </head>
-
 <body>
 
-  <!-- Top nav -->
-  <div class="topbar">
+  <div class="topbar no-print">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a href="bab-4.html">Prev ←</a>
-        <a href="bab-5.html">Bab ini</a>
-        <a href="bab-6.html">Next →</a>
+        <a href="bab-04.html">← Prev</a>
+        <a href="bab-05.html" style="font-weight:600;">Bab 5</a>
+        <a href="bab-06.html">Next →</a>
       </nav>
     </div>
   </div>
 
-  <!-- Page title -->
-  <header class="wrap" id="top">
-    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
-    <h1>Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN </h1>
-  </header>
-
-  <!-- Jump links -->
-  <div class="jump">
-    <div class="wrap">
-      <div class="inner">
-        <strong>Lompat ke:</strong>
-        <a href="#5-1">5.1</a>
-        <a href="#5-2">5.2</a>
-        <a href="#5-3">5.3</a>
-        <a href="#5-4">5.4</a>
-        <a href="#5-5">5.5</a>
-        <a href="#5-6">5.6</a>
-        <a href="#5-7">5.7</a>
-        <a href="#5-8">5.8</a>
-      </div>
+  <div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
     </div>
   </div>
 
-  <main class="wrap">
+  <div id="pdf-shell" class="pdf-shell">
+
+    <div class="pdf-cover pdf-only">
+      <div class="pdf-cover-inner">
+        <div class="pdf-cover-top">
+          <div class="pdf-cover-brand">3asbab.org</div>
+          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN</h1>
+          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Memahami perbezaan Asbab Mutlak Asli dan Asbab Mutlak Terbitan</p>
+        </div>
+        <div class="pdf-cover-bottom">
+          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pdf-meta-page pdf-only pdf-break">
+      <div class="pdf-meta-inner">
+        <h2>Maklumat Dokumen</h2>
+        <div class="pdf-meta-list">
+          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN</span></p>
+          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+          <p><strong>Laman:</strong> 3asbab.org</p>
+          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+        </div>
+      </div>
+    </div>
+
+    <header class="wrap" id="top">
+      <div class="meta">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+      <h1>Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN</h1>
+      <div class="meta">Asbab Mutlak Asli dan Terbitan | Tauhidi &amp; Pembinaan Iman</div>
+    </header>
+
+    <div class="jump no-print">
+      <div class="wrap">
+        <div class="jump-inner">
+          <strong>🧭 Lompat ke:</strong>
+          <a href="#5-1">5.1</a>
+          <a href="#5-2">5.2</a>
+          <a href="#5-3">5.3</a>
+          <a href="#5-4">5.4</a>
+          <a href="#5-5">5.5</a>
+          <a href="#5-6">5.6</a>
+          <a href="#5-7">5.7</a>
+          <a href="#5-8">5.8</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="wrap">
     <article>
       <div class="section">
         <div class="badge">🟥 BAB 5 – DUA LAPISAN ASBAB ASBAB MUTLAK: ASLI DAN TERBITAN </div>
@@ -193,7 +370,7 @@
 
   <p>Firman Allah:</p>
 
-  <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ قِيلًا ﴾</div>
+  <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ قِيلًا ﴾</div>
   <p>“Siapakah yang lebih benar perkataannya daripada Allah?”<br>
   (An-Nisā’ 4:122)【1】</p>
 
@@ -243,7 +420,7 @@
   </ul>
 
   <p>Dalil:</p>
-  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
+  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
   <p>“Dan bersedialah kamu dengan segala kekuatan yang kamu mampu.”<br>
   (Al-Anfāl 8:60)【2】</p>
 
@@ -260,7 +437,7 @@
   </ul>
 
   <p>Dalil keras:</p>
-  <div class="arab">﴿ وَظَنَنتُمْ ظَنَّ السَّوْءِ ﴾</div>
+  <div class="arab">﴿ وَظَنَنتُمْ ظَنَّ السَّوْءِ ﴾</div>
   <p>“Kamu menyangka sangkaan buruk terhadap Allah.”<br>
   (Al-Fatḥ 48:12)【3】</p>
 
@@ -284,7 +461,7 @@
 
   <p>Hadith besar:</p>
   <blockquote>
-    <p>« اعْقِلْهَا وَتَوَكَّلْ »<br>
+    <p>« اعْقِلْهَا وَتَوَكَّلْ »<br>
     “Ikatlah unta dan bertawakkallah.”<br>
     (Tirmizi)【4】</p>
   </blockquote>
@@ -302,7 +479,7 @@
   <p>Kerana semua asbab dunia hakikatnya tiada kuasa.</p>
 
   <p>Dalil:</p>
-  <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
+  <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
   <p>“Allah mencipta kamu dan apa yang kamu lakukan.”<br>
   (As-Saffāt 37:96)【5】</p>
 
@@ -456,7 +633,7 @@
 
   <p>Firman Allah:</p>
 
-  <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ حَدِيثًا ﴾</div>
+  <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ حَدِيثًا ﴾</div>
   <p>“Siapakah yang lebih benar perkataannya daripada Allah?”<br>
   (An-Nisā’ 4:87)【1】</p>
 
@@ -476,25 +653,25 @@
   Tidak terikat masa, tempat, logik, atau statistik.</p>
 
   <p><strong>(2) Dakwah</strong></p>
-  <div class="arab">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
+  <div class="arab">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
   <p>“Siapa yang lebih baik perkataannya daripada orang yang mengajak kepada Allah?”<br>
   (Fuṣṣilat 41:33)【3】</p>
   <p>Dakwah membuka manusia kerana Allah janji membuka hati manusia melalui amal ini.</p>
 
   <p><strong>(3) Mujahadah</strong></p>
-  <div class="arab">﴿ وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
+  <div class="arab">﴿ وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
   <p>“Dan orang yang bermujahadah pada jalan Kami — pasti Kami beri mereka petunjuk.”<br>
   (Al-‘Ankabūt 29:69)【4】</p>
   <p><em>Lanhdiyannahum</em> = “pasti Kami beri”.</p>
 
   <p><strong>(4) Sabar</strong></p>
-  <div class="arab">﴿ إِنَّ اللَّهَ مَعَ الصَّابِرِينَ ﴾</div>
+  <div class="arab">﴿ إِنَّ اللَّهَ مَعَ الصَّابِرِينَ ﴾</div>
   <p>“Sesungguhnya Allah bersama orang-orang yang sabar.”<br>
   (Al-Baqarah 2:153)【5】</p>
   <p>Jika Allah bersama — kemenangan adalah kepastian, walau dunia menentang.</p>
 
   <p><strong>(5) Solat khusyuk</strong></p>
-  <div class="arab">﴿ قَدْ أَفْلَحَ الْمُؤْمِنُونَ ۝ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ ﴾</div>
+  <div class="arab">﴿ قَدْ أَفْلَحَ الْمُؤْمِنُونَ ۝ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ ﴾</div>
   <p>“Berjayalah orang beriman — iaitu mereka yang khusyuk dalam solat.”<br>
   (Al-Mu’minūn 23:1–2)【6】</p>
   <p>Solat khusyuk → kejayaan.<br>
@@ -519,7 +696,7 @@
   <p>Kerana semua ini datang terus daripada wahyu.</p>
 
   <p><strong>Dalil: Hijrah</strong></p>
-  <div class="arab">﴿ إِنَّ الَّذِينَ آمَنُوا وَالَّذِينَ هَاجَرُوا وَجَاهَدُوا فِي سَبِيلِ اللَّهِ … أُولَٰئِكَ هُمُ الْمُؤْمِنُونَ حَقًّا ﴾</div>
+  <div class="arab">﴿ إِنَّ الَّذِينَ آمَنُوا وَالَّذِينَ هَاجَرُوا وَجَاهَدُوا فِي سَبِيلِ اللَّهِ … أُولَٰئِكَ هُمُ الْمُؤْمِنُونَ حَقًّا ﴾</div>
   <p>“Sesungguhnya orang yang beriman, berhijrah dan berjihad – mereka itulah orang beriman sebenar.”<br>
   (Al-Anfāl 8:74)【7】</p>
 
@@ -530,7 +707,7 @@
   <p>Syura adalah Asbab Mutlak Asli kerana Allah sendiri memerintahkan.</p>
 
   <p><strong>Dalil: Zikir</strong></p>
-  <div class="arab">﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</div>
+  <div class="arab">﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</div>
   <p>“Dengan zikir kepada Allah hati menjadi tenang.”<br>
   (Ar-Ra‘d 13:28)【9】</p>
 
@@ -560,7 +737,7 @@
   <p>= perjalanan hidup Baginda, tertib wahyu, strategi dakwah, sunnah amal.</p>
   <p>Hadith:</p>
   <blockquote>
-    <p>« صَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي »<br>
+    <p>« صَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي »<br>
     “Solatlah kamu seperti kamu melihat aku solat.”<br>
     (Bukhari)【12】</p>
   </blockquote>
@@ -570,7 +747,7 @@
   <p>= keadaan batin Baginda — kasih, takut, harap, yakin, tawadhu’, ikhlas.</p>
   <p>Hadith:</p>
   <blockquote>
-    <p>« أَنَا سَيِّدُ وَلَدِ آدَمَ وَلَا فَخْر »<br>
+    <p>« أَنَا سَيِّدُ وَلَدِ آدَمَ وَلَا فَخْر »<br>
     “Aku pemimpin anak Adam – bukan untuk bermegah.”<br>
     (Muslim)【13】</p>
   </blockquote>
@@ -683,7 +860,7 @@
   </ul>
 
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
+  <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
   <p>“Allah mencipta kamu dan apa yang kamu lakukan.”<br>
   (As-Saffāt 37:96)【1】</p>
 
@@ -722,7 +899,7 @@
     <li>politik tidak menentukan masa depan.</li>
   </ul>
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ قُل لَّا أَمْلِكُ لِنَفْسِي نَفْعًا وَلَا ضَرًّا ﴾</div>
+  <div class="arab">﴿ قُل لَّا أَمْلِكُ لِنَفْسِي نَفْعًا وَلَا ضَرًّا ﴾</div>
   <p>“Katakan: aku tidak memiliki manfaat dan mudarat walau untuk diriku.”<br>
   (Al-A‘rāf 7:188)【2】</p>
   <p>Jika Nabi ﷺ tidak memiliki kuasa —<br>
@@ -730,7 +907,7 @@
 
   <p><strong>(2) ISBAT — menetapkan hanya Allah memberi kesan</strong></p>
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ إِنَّ الْقُوَّةَ لِلَّهِ جَمِيعًا ﴾</div>
+  <div class="arab">﴿ إِنَّ الْقُوَّةَ لِلَّهِ جَمِيعًا ﴾</div>
   <p>“Kekuatan semuanya milik Allah.”<br>
   (Fāṭir 35:10)【3】</p>
 
@@ -745,14 +922,14 @@
     <li>melantik panglima perang</li>
   </ul>
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ لَّقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ ﴾</div>
+  <div class="arab">﴿ لَّقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ ﴾</div>
   <p>“Pada Rasulullah ada contoh terbaik.”<br>
   (Al-Aḥzāb 33:21)【4】</p>
 
   <p><strong>(4) IKHLAS — objektif amal ialah untuk mendapat keredhaan Allah</strong></p>
   <p><strong>Hadith:</strong></p>
   <blockquote>
-    <p>« إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ »<br>
+    <p>« إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ »<br>
     “Sesungguhnya amal bergantung pada niat.”<br>
     (Muttafaq ‘alaih)【5】</p>
   </blockquote>
@@ -768,7 +945,7 @@
     <li>politik zalim</li>
   </ul>
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ قُلْ إِنَّمَا حَرَّمَ رَبِّيَ… ﴾</div>
+  <div class="arab">﴿ قُلْ إِنَّمَا حَرَّمَ رَبِّيَ… ﴾</div>
   <p>“Katakanlah: Tuhanku mengharamkan… (segala dosa).”<br>
   (Al-A‘rāf 7:33)【6】</p>
 
@@ -797,7 +974,7 @@
       → menjadi Asbab Mutlak Terbitan<br>
       → laut terbelah</p>
       <p><strong>Dalil:</strong></p>
-      <div class="arab">﴿ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
+      <div class="arab">﴿ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
       <p>“Pukullah laut dengan tongkatmu.”<br>
       (Ash-Shu‘arā 26:63)【7】</p>
     </li>
@@ -808,7 +985,7 @@
       → menjadi Asbab Mutlak Terbitan<br>
       → Allah turunkan ayat kemenangan</p>
       <p><strong>Dalil:</strong></p>
-      <div class="arab">﴿ إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا ﴾</div>
+      <div class="arab">﴿ إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا ﴾</div>
       <p>“Kami membuka bagimu kemenangan yang nyata.”<br>
       (Al-Fatḥ 48:1)【8】</p>
     </li>
@@ -912,7 +1089,7 @@
   </ul>
 
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ قِيلًا ﴾</div>
+  <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ قِيلًا ﴾</div>
   <p>“Siapa lagi yang lebih benar perkataannya daripada Allah?”<br>
   (An-Nisā’ 4:122)【1】</p>
 
@@ -950,7 +1127,7 @@
   </ul>
 
   <p><strong>Dalil asas:</strong></p>
-  <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
+  <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
   <p>“Allah mencipta kamu dan apa yang kamu lakukan.”<br>
   (As-Saffāt 37:96)【2】</p>
 
@@ -968,7 +1145,7 @@
     <li><strong>Solat (khusyuk)</strong><br>
     → menenangkan hati walaupun miskin, tanpa modal, tanpa teknologi.</li>
   </ul>
-  <div class="arab">﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</div>
+  <div class="arab">﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</div>
   <p>“Ketahuilah, dengan mengingati Allah, hati menjadi tenang.”<br>
   (Ar-Ra‘d 13:28)【3】</p>
 
@@ -978,7 +1155,7 @@
     <li><strong>Sabar</strong><br>
     → mendapat pertolongan Allah terus.</li>
   </ul>
-  <div class="arab">﴿ إِنَّ ٱللَّهَ مَعَ ٱلصَّـٰبِرِینَ ﴾</div>
+  <div class="arab">﴿ إِنَّ ٱللَّهَ مَعَ ٱلصَّـٰبِرِینَ ﴾</div>
   <p>“Sesungguhnya Allah bersama orang-orang yang sabar.”<br>
   (Al-Baqarah 2:153)【4】</p>
 
@@ -995,7 +1172,7 @@
   </ul>
 
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
+  <div class="arab">﴿ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
   <p>“Pukullah laut itu dengan tongkatmu.”<br>
   (Ash-Shu‘arā 26:63)【5】</p>
 
@@ -1020,7 +1197,7 @@
   </ul>
 
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ هُوَ ٱلَّذِیٓ أَنزَلَ ٱلسَّكِینَةَ فِی قُلُوبِ ٱلۡمُؤۡمِنِینَ ﴾</div>
+  <div class="arab">﴿ هُوَ ٱلَّذِیٓ أَنزَلَ ٱلسَّكِینَةَ فِی قُلُوبِ ٱلۡمُؤۡمِنِینَ ﴾</div>
   <p>“Dialah yang menurunkan ketenangan dalam hati orang-orang beriman.”<br>
   (Al-Fatḥ 48:4)【6】</p>
 
@@ -1037,7 +1214,7 @@
   Yang diperlukan hanyalah diri yang sanggup dikorbankan.</p>
 
   <p>Inilah rahsia ayat:</p>
-  <div class="arab">﴿ إِنَّ ٱللَّهَ ٱشۡتَرَىٰ مِنَ ٱلۡمُؤۡمِنِینَ أَنفُسَهُمۡ وَأَمۡوَ ٰلَهُم بِأَنَّ لَهُمُ ٱلۡجَنَّةَ ﴾</div>
+  <div class="arab">﴿ إِنَّ ٱللَّهَ ٱشۡتَرَىٰ مِنَ ٱلۡمُؤۡمِنِینَ أَنفُسَهُمۡ وَأَمۡوَ ٰلَهُم بِأَنَّ لَهُمُ ٱلۡجَنَّةَ ﴾</div>
   <p>“Sesungguhnya Allah telah membeli dari orang-orang beriman, diri-diri mereka dan harta-harta mereka dengan (balasan) syurga untuk mereka.”<br>
   (At-Tawbah 9:111)【7】</p>
 
@@ -1080,7 +1257,7 @@
   <p>…maka harta itu berubah menjadi Asbab Mutlak Terbitan.</p>
 
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ لَن تَنَالُوا۟ ٱلۡبِرَّ حَتَّىٰ تُنفِقُوا۟ مِمَّا تُحِبُّونَ ﴾</div>
+  <div class="arab">﴿ لَن تَنَالُوا۟ ٱلۡبِرَّ حَتَّىٰ تُنفِقُوا۟ مِمَّا تُحِبُّونَ ﴾</div>
   <p>“Kamu tidak akan mencapai kebaikan yang sempurna sehingga kamu menginfakkan apa yang kamu cintai.”<br>
   (Āli ‘Imrān 3:92)【8】</p>
 
@@ -1186,7 +1363,7 @@
   <p>Masa yang dikorbankan, diulang, dan ditekan atas diri — menjadi pemberat iman.</p>
 
   <p>Dan juga hakikat jihad:</p>
-  <div class="arab">﴿ تُؤْمِنُونَ بِاللَّهِ وَرَسُولِهِ وَتُجَاهِدُونَ فِي سَبِيلِ اللَّهِ بِأَمْوَالِكُمْ وَأَنفُسِكُمْ ﴾</div>
+  <div class="arab">﴿ تُؤْمِنُونَ بِاللَّهِ وَرَسُولِهِ وَتُجَاهِدُونَ فِي سَبِيلِ اللَّهِ بِأَمْوَالِكُمْ وَأَنفُسِكُمْ ﴾</div>
   <p>“…kamu beriman kepada Allah dan Rasul-Nya, dan kamu berjihad di jalan Allah dengan harta kamu dan diri kamu…”<br>
   (As-Saff 61:11)【11】</p>
 
@@ -1218,7 +1395,7 @@
 
   <p>Jawapannya hanya satu perkataan:</p>
 
-  <p><strong>MESYUARAT (الشُّورَى)</strong></p>
+  <p><strong>MESYUARAT (الشُّورَى)</strong></p>
 
   <p>Tanpa Asbab Mutlak Asli mesyuarat:</p>
   <ul>
@@ -1282,7 +1459,7 @@
   </ul>
 
   <p><strong>Dalil umum:</strong></p>
-  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
+  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
   <p>“Dan bersedialah untuk mereka dengan segala kekuatan yang kamu mampu.”<br>
   (Al-Anfāl 8:60)【12】</p>
 
@@ -1309,7 +1486,7 @@
   </ul>
 
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ ﴾</div>
+  <div class="arab">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ ﴾</div>
   <p>“Jika kamu menolong agama Allah, Dia akan menolong kamu.”<br>
   (Muhammad 47:7)【13】</p>
 
@@ -1330,7 +1507,7 @@
   </ul>
 
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ وَرَدَّ اللَّهُ الَّذِينَ كَفَرُوا بِغَيْظِهِمْ ﴾</div>
+  <div class="arab">﴿ وَرَدَّ اللَّهُ الَّذِينَ كَفَرُوا بِغَيْظِهِمْ ﴾</div>
   <p>“Dan Allah menghalau orang-orang kafir itu dengan penuh kegeraman mereka (tanpa hasil).”<br>
   (Al-Ahzāb 33:25)【14】</p>
 
@@ -1362,7 +1539,7 @@
   </ul>
 
   <p><strong>Dalil:</strong></p>
-  <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</div>
+  <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</div>
   <p>“Sesungguhnya Allah tidak mengubah apa yang ada pada sesuatu kaum sehingga mereka mengubah apa yang ada pada diri mereka.”<br>
   (Ar-Ra‘d 13:11)【15】</p>
 
@@ -1455,7 +1632,7 @@
 
   <p>Tetapi apabila datang perintah wahyu:</p>
 
-  <div class="arab">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
+  <div class="arab">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
   <p>“Lalu Kami wahyukan kepada Musa: Pukullah laut dengan tongkatmu.”<br>
   (Ash-Shu‘arā 26:63)【2】</p>
 
@@ -1507,7 +1684,7 @@
   <p>Dalil umum tawakkal:</p>
 
   <blockquote>
-    <p>« اِعْقِلْهَا وَتَوَكَّلْ »<br>
+    <p>« اِعْقِلْهَا وَتَوَكَّلْ »<br>
     “Ikatlah unta, kemudian bertawakkallah.”<br>
     (Riwayat at-Tirmiżī)【4】</p>
   </blockquote>
@@ -1556,7 +1733,7 @@
 
   <p>Dalil kemenangan Khandaq:</p>
 
-  <div class="arab">﴿ وَرَدَّ اللَّهُ الَّذِينَ كَفَرُوا بِغَيْظِهِمْ لَمْ يَنَالُوا خَيْرًا ۚ وَكَفَى اللَّهُ الْمُؤْمِنِينَ الْقِتَالَ ۚ ﴾</div>
+  <div class="arab">﴿ وَرَدَّ اللَّهُ الَّذِينَ كَفَرُوا بِغَيْظِهِمْ لَمْ يَنَالُوا خَيْرًا ۚ وَكَفَى اللَّهُ الْمُؤْمِنِينَ الْقِتَالَ ۚ ﴾</div>
   <p>“Dan Allah mengembalikan orang kafir dengan kemarahan (kecewa), mereka tidak mendapat apa-apa kebaikan; dan cukuplah Allah bagi orang beriman daripada (perlu) berperang.”<br>
   (Al-Aḥzāb 33:25)【5】</p>
 
@@ -1603,7 +1780,7 @@
   <p>Rasulullah ﷺ bersabda (antara mafhumnya):</p>
 
   <blockquote>
-    <p>« وَمَا يُدْرِيكَ أَنَّهَا رُقْيَةٌ »<br>
+    <p>« وَمَا يُدْرِيكَ أَنَّهَا رُقْيَةٌ »<br>
     “Bagaimana engkau tahu (al-Fātiḥah) itu adalah ruqyah?”<br>
     (Riwayat al-Bukhārī)【6】</p>
   </blockquote>
@@ -1711,14 +1888,14 @@
 
   <h3>5.6.1 Teks Ayat</h3>
 
-  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ وَمِن رِّبَاطِ الْخَيْلِ تُرْهِبُونَ بِهِ عَدُوَّ اللَّهِ وَعَدُوَّكُمْ ۚ وَآخَرِينَ مِن دُونِهِمْ لَا تَعْلَمُونَهُمُ اللَّهُ يَعْلَمُهُمْ ۚ وَمَا تُنفِقُوا مِن شَيْءٍ فِي سَبِيلِ اللَّهِ يُوَفَّ إِلَيْكُمْ وَأَنتُمْ لَا تُظْلَمُونَ ﴾</div>
+  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ وَمِن رِّبَاطِ الْخَيْلِ تُرْهِبُونَ بِهِ عَدُوَّ اللَّهِ وَعَدُوَّكُمْ ۚ وَآخَرِينَ مِن دُونِهِمْ لَا تَعْلَمُونَهُمُ اللَّهُ يَعْلَمُهُمْ ۚ وَمَا تُنفِقُوا مِن شَيْءٍ فِي سَبِيلِ اللَّهِ يُوَفَّ إِلَيْكُمْ وَأَنتُمْ لَا تُظْلَمُونَ ﴾</div>
   <p>(al-Anfāl 8:60)【1】</p>
 
   <hr>
 
   <h3>5.6.2 Hukum Pertama — ASBAB FITRAH ADALAH PERINTAH ALLAH</h3>
 
-  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
+  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
   <p>“Dan siapkanlah oleh kamu segala bentuk kekuatan yang kamu mampu.”【1】</p>
 
   <p>Ayat ini menunjukkan bahawa:</p>
@@ -1807,7 +1984,7 @@
 
   <h3>5.6.5 Hukum Keempat — JANJI ALLAH HANYA TURUN BILA ASBAB FITRAH TUNDUK WAHYU</h3>
 
-  <div class="arab">﴿ يُوَفَّ إِلَيْكُمْ ﴾</div>
+  <div class="arab">﴿ يُوَفَّ إِلَيْكُمْ ﴾</div>
   <p>“Allah akan menyempurnakannya kepada kamu.”【1】</p>
 
   <p>Makna “menyempurnakan” di sini (tafsir Ibn Kathir, Qurtubi, Tabari):</p>
@@ -1954,7 +2131,7 @@
   <p>Cahaya Mutlak Asli adalah sumber seluruh tamadun Nabi ﷺ.</p>
 
   <p>Dalil:</p>
-  <div class="arab">﴿ يَهْدِي اللَّهُ لِنُورِهِ مَن يَشَاءُ ﴾</div>
+  <div class="arab">﴿ يَهْدِي اللَّهُ لِنُورِهِ مَن يَشَاءُ ﴾</div>
   <p>“Allah memberi petunjuk kepada cahaya-Nya sesiapa yang Dia kehendaki.”<br>
   (An-Nūr 24:35)【1】</p>
 
@@ -2136,7 +2313,7 @@
   <p>Ia membina manusia sebelum membina dunia.</p>
 
   <p>Dalil:</p>
-  <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</div>
+  <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</div>
   <p>“Allah tidak mengubah sesuatu kaum sehingga mereka mengubah apa yang dalam diri mereka.”<br>
   (Ar-Ra‘d 13:11)【1】</p>
 
@@ -2188,7 +2365,7 @@
   <p>Tetapi dunia tidak boleh memberi kesan akhir (hasil yang Allah nilai).</p>
 
   <p>Dalil:</p>
-  <div class="arab">﴿ قُلْ كُلٌّ مِّنْ عِندِ ٱللَّهِ ﴾</div>
+  <div class="arab">﴿ قُلْ كُلٌّ مِّنْ عِندِ ٱللَّهِ ﴾</div>
   <p>“Katakanlah: semuanya dari sisi Allah.”<br>
   (An-Nisā’ 4:78)【2】</p>
 
@@ -2265,16 +2442,40 @@
     </article>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <div>
-        <a href="index.html">Home</a> ·
-        <a href="bab-4.html">Bab 4</a> ·
-        <a href="bab-6.html">Bab 6</a>
+
+    <footer>
+      <div class="wrap">
+        <p>© 3asbab.org — Arkib bacaan sahaja. Dua Lapisan Asbab Mutlak: Asli dan Terbitan.</p>
       </div>
-      <div class="meta" style="margin-top:8px">Nota: Laman ini arkib baca sahaja.</div>
-    </div>
-  </footer>
+    </footer>
+
+  </div>
+
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+
+      if (coverTitle) coverTitle.innerHTML = 'Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN';
+      if (coverSubtitle) coverSubtitle.textContent = 'Memahami perbezaan Asbab Mutlak Asli dan Asbab Mutlak Terbitan';
+      if (metaTitle) metaTitle.textContent = 'Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN';
+
+      setTimeout(() => {
+        window.print();
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 100);
+    }
+  </script>
 
 </body>
 </html>
+
