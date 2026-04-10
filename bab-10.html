@@ -1,754 +1,202 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Bab 10 — MUKADIMAH DAKWAH TAUHID | 3asbab.org</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Bab 10 — MUKADIMAH DAKWAH TAUHID | 3asbab.org</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Lora:wght@400;600;700&family=Source+Serif+4:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    :root {
-      --ink: #1c1917;
-      --ink-soft: #44403c;
-      --ink-muted: #78716c;
-      --ink-faint: #a8a29e;
-      --page: #faf9f7;
-      --page-warm: #f5f0e8;
-      --cream: #ede8df;
-      --rule: #d6cfc4;
-      --rule-light: #e8e3db;
-      --emerald: #065f46;
-      --emerald-mid: #059669;
-      --emerald-light: #d1fae5;
-      --emerald-pale: #ecfdf5;
-      --gold: #92400e;
-      --gold-light: #fef3c7;
-      --shadow: 0 2px 8px rgba(28,25,23,0.06), 0 1px 3px rgba(28,25,23,0.04);
-      --shadow-md: 0 4px 20px rgba(28,25,23,0.08), 0 2px 8px rgba(28,25,23,0.05);
-      --max: 780px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Source Serif 4', 'Lora', Georgia, serif;
-      background: var(--page);
-      color: var(--ink);
-      line-height: 1.8;
-      font-size: 17px;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── TOPBAR ── */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      background: rgba(250,249,247,0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .topbar nav {
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      padding: 0.6rem 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-family: 'Lora', serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--emerald);
-      letter-spacing: 0.02em;
-      margin-right: 0.75rem;
-    }
-
-    .topbar a {
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.82rem;
-      color: var(--ink-soft);
-      text-decoration: none;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      transition: background 0.15s, color 0.15s;
-    }
-
-    .topbar a:hover {
-      background: var(--cream);
-      color: var(--emerald);
-    }
-
-    .topbar a.active {
-      font-weight: 600;
-      color: var(--emerald);
-    }
-
-    /* ── PDF TOOLBAR ── */
-    .pdf-toolbar {
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      padding: 0.8rem 2rem 0;
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .btn-pdf {
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--emerald);
-      background: #fff;
-      border: 1px solid var(--emerald);
-      padding: 0.4rem 1rem;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: 0.15s ease;
-      box-shadow: var(--shadow);
-    }
-
-    .btn-pdf:hover { background: var(--emerald-pale); }
-    .btn-pdf:active { transform: translateY(1px); }
-
-    /* ── PAGE HEADER ── */
-    .page-header {
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      padding: 2.5rem 2rem 1.5rem;
-      border-bottom: 1px solid var(--rule-light);
-    }
-
-    .chapter-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--emerald);
-      margin-bottom: 0.8rem;
-    }
-
-    .chapter-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 18px;
-      height: 2px;
-      background: var(--emerald);
-      border-radius: 1px;
-    }
-
-    .page-title {
-      font-family: 'Lora', serif;
-      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--ink);
-      letter-spacing: -0.02em;
-      margin-bottom: 0.6rem;
-    }
-
-    .page-subtitle {
-      font-size: 0.88rem;
-      color: var(--ink-muted);
-      font-style: italic;
-    }
-
-    /* ── JUMP NAV ── */
-    .jump {
-      position: sticky;
-      top: 44px;
-      z-index: 30;
-      background: rgba(250,249,247,0.97);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid var(--rule-light);
-    }
-
-    .jump-inner {
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      padding: 0.5rem 2rem;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      font-size: 0.78rem;
-    }
-
-    .jump-label {
-      font-weight: 600;
-      color: var(--ink-muted);
-      font-size: 0.75rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-right: 0.3rem;
-    }
-
-    .jump a {
-      padding: 0.18rem 0.65rem;
-      border-radius: 40px;
-      background: white;
-      border: 1px solid var(--rule);
-      text-decoration: none;
-      font-weight: 500;
-      color: var(--ink-soft);
-      transition: 0.1s ease;
-      font-family: 'Source Serif 4', serif;
-    }
-
-    .jump a:hover {
-      border-color: var(--emerald-mid);
-      color: var(--emerald);
-      background: var(--emerald-pale);
-    }
-
-    /* ── MAIN CONTENT ── */
-    main {
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      padding: 0 2rem 4rem;
-    }
-
-    article {
-      width: 100%;
-    }
-
-    /* ── BASIC CONTENT ── */
-    .section {
-  padding: 2.5rem 1.2rem;
+:root{
+  --ink:#1c1917;
+  --ink-soft:#44403c;
+  --ink-muted:#78716c;
+  --ink-faint:#a8a29e;
+  --page:#faf9f7;
+  --page-warm:#f5f0e8;
+  --cream:#ede8df;
+  --rule:#d6cfc4;
+  --rule-light:#e8e3db;
+  --emerald:#065f46;
+  --emerald-mid:#059669;
+  --emerald-pale:#ecfdf5;
+  --gold:#92400e;
+  --gold-light:#fef3c7;
+  --shadow:0 2px 8px rgba(0,0,0,0.05);
+  --max:780px;
 }
-      border-bottom: 1px solid var(--rule-light);
-    }
 
-    .section:last-child {
-      border-bottom: none;
-    }
+html{scroll-behavior:smooth}
 
-    .section-opener {
-      padding-bottom: 1.2rem;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid var(--rule-light);
-    }
+body{
+  font-family:'Source Serif 4','Lora',serif;
+  background:var(--page);
+  color:var(--ink);
+  line-height:1.8;
+  font-size:17px;
+}
 
-    .section-opener p {
-      font-size: 0.92rem;
-      color: var(--ink-soft);
-      font-style: italic;
-    }
+/* ── TOPBAR ── */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:40;
+  background:rgba(250,249,247,0.95);
+  border-bottom:1px solid var(--rule);
+}
+.topbar nav{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:0.6rem 1.4rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.4rem;
+}
+.topbar a{
+  font-size:0.8rem;
+  text-decoration:none;
+  color:var(--ink-soft);
+}
+.topbar a.active{color:var(--emerald);font-weight:600}
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      background: var(--gold-light);
-      color: var(--gold);
-      border: 1px solid #fde68a;
-      padding: 0.25rem 0.85rem;
-      border-radius: 999px;
-      margin-bottom: 1.2rem;
-    }
+/* ── PDF BUTTON ── */
+.pdf-toolbar{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:0.8rem 1.4rem 0;
+  text-align:right;
+}
+.btn-pdf{
+  border:1px solid var(--emerald);
+  padding:0.35rem 0.9rem;
+  border-radius:999px;
+  cursor:pointer;
+  background:#fff;
+  color:var(--emerald);
+}
 
-    h2 {
-      font-family: 'Lora', serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--ink);
-      margin: 0 0 0.3rem;
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-    }
+/* ── HEADER ── */
+.page-header{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:2.2rem 1.4rem 1.4rem;
+  border-bottom:1px solid var(--rule-light);
+}
+.page-title{
+  font-family:'Lora',serif;
+  font-size:2rem;
+  font-weight:700;
+}
+.page-subtitle{
+  font-size:0.85rem;
+  color:var(--ink-muted);
+}
 
-    h3 {
-      font-family: 'Lora', serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--emerald);
-      margin: 2rem 0 0.6rem;
-      letter-spacing: -0.01em;
-      line-height: 1.4;
-    }
+/* ── JUMP NAV ── */
+.jump{
+  position:sticky;
+  top:44px;
+  background:rgba(250,249,247,0.97);
+  border-bottom:1px solid var(--rule-light);
+}
+.jump-inner{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:0.5rem 1.4rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.4rem;
+}
+.jump a{
+  padding:0.2rem 0.6rem;
+  border:1px solid var(--rule);
+  border-radius:20px;
+  font-size:0.75rem;
+  text-decoration:none;
+  color:var(--ink-soft);
+}
 
-    h4 {
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--ink);
-      margin: 1.5rem 0 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
+/* ── MAIN ── */
+main{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:0 1.4rem 3rem;
+}
 
-    p {
-      margin-bottom: 0.85rem;
-    }
+/* ── SECTION ── */
+.section{
+  padding:2.2rem 1.2rem;
+  border-bottom:1px solid var(--rule-light);
+}
 
-    p:last-child {
-      margin-bottom: 0;
-    }
+/* ── TEXT ── */
+p{margin-bottom:0.9rem}
+ul,ol{padding-left:1.4rem;margin-bottom:0.8rem}
 
-    em { color: var(--ink-soft); }
-    strong { font-weight: 700; color: var(--ink); }
+/* ── ARABIC ── */
+.arab{
+  font-family:'Amiri',serif;
+  font-size:1.5rem;
+  direction:rtl;
+  color:var(--emerald);
+  margin:0.8rem 0;
+}
 
-    ul, ol {
-      padding-left: 1.4rem;
-      margin-bottom: 0.85rem;
-    }
+/* ── BLOCKQUOTE ── */
+blockquote{
+  background:var(--page-warm);
+  border-left:3px solid var(--gold);
+  padding:0.8rem 1rem;
+  margin:1rem 0;
+}
 
-    li {
-      margin-bottom: 0.3rem;
-      line-height: 1.7;
-    }
-
-    li > ul, li > ol {
-      margin-top: 0.3rem;
-      margin-bottom: 0;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid var(--rule-light);
-      margin: 1.8rem 0;
-    }
-
-    /* ── ARABIC ── */
-    .arab, .arabic {
-      font-family: 'Amiri', 'Traditional Arabic', serif;
-      font-size: 1.65rem;
-      line-height: 2;
-      direction: rtl;
-      text-align: right;
-      color: var(--emerald);
-      background: linear-gradient(135deg, var(--emerald-pale), #fff);
-      border-right: 3px solid var(--emerald);
-      padding: 0.7rem 1rem 0.7rem 1.5rem;
-      border-radius: 0 0.5rem 0.5rem 0;
-      margin: 1rem 0 0.4rem;
-      display: block;
-    }
-
-    .translation {
-      font-size: 0.88rem;
-      font-style: italic;
-      color: var(--ink-soft);
-      margin: 0 0 1rem;
-      padding-left: 1rem;
-      border-left: 2px solid var(--rule);
-    }
-
-    /* support untuk arab inline dalam p/li */
-    p .arab,
-    li .arab,
-    blockquote p .arab,
-    blockquote li .arab {
-      display: inline;
-      background: none;
-      border: 0;
-      padding: 0;
-      margin: 0;
-      border-radius: 0;
-      color: var(--emerald);
-      font-size: 1.05em;
-      line-height: inherit;
-      direction: rtl;
-      text-align: inherit;
-    }
-
-    /* ── BLOCKQUOTE ── */
-    blockquote {
-      background: var(--page-warm);
-      border-left: 3px solid var(--gold);
-      border-radius: 0 0.6rem 0.6rem 0;
-      padding: 0.8rem 1.2rem;
-      margin: 1rem 0;
+/* ── SPACING FIX ── */
 blockquote,
 .translation,
 .callout,
-.insight-box {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.insight-box{
+  padding-left:1rem;
+  padding-right:1rem;
 }
-      font-size: 0.92rem;
-      color: var(--ink-soft);
-    }
 
-    blockquote .arabic-hadith {
-      font-family: 'Amiri', serif;
-      font-size: 1.2rem;
-      direction: rtl;
-      text-align: right;
-      display: block;
-      color: var(--gold);
-      margin-bottom: 0.3rem;
-    }
-
-    blockquote > div:not(.arab):not(.arabic) {
-      font-size: 0.9rem;
-      font-style: italic;
-      color: var(--ink-soft);
-      margin: 0;
-      padding-left: 0.95rem;
-      border-left: 2px solid var(--rule);
-      line-height: 1.7;
-    }
-
-    /* ── BOXES ── */
-    .callout {
-      background: var(--emerald-pale);
-      border: 1px solid #a7f3d0;
-      border-radius: 0.6rem;
-      padding: 1rem 1.2rem;
-      margin: 1.2rem 0;
-      font-size: 0.92rem;
-    }
-
-    .insight-box {
-      background: var(--page-warm);
-      border: 1px solid var(--rule);
-      border-radius: 0.5rem;
-      padding: 0.9rem 1.1rem;
-      margin: 1rem 0;
-      font-size: 0.9rem;
-    }
-
-    .rumusan {
-      background: var(--page-warm);
-      border: 1px solid var(--rule);
-      border-top: 3px solid var(--emerald);
-      border-radius: 0.6rem;
-      padding: 1.2rem 1.4rem;
-      margin: 1.5rem 0;
-    }
-
-    .rumusan ol, .rumusan ul {
-      margin-bottom: 0;
-    }
-
-    /* auto-style rumusan lama: h3 + ol */
-    .section > h3:last-of-type + ol {
-      background: var(--page-warm);
-      border: 1px solid var(--rule);
-      border-top: 0;
-      border-radius: 0 0 0.6rem 0.6rem;
-      padding: 0.9rem 1.4rem 1.1rem 2.3rem;
-      margin-bottom: 1.4rem;
-    }
-
-    .section > h3:last-of-type {
-      background: var(--page-warm);
-      border: 1px solid var(--rule);
-      border-top: 3px solid var(--emerald);
-      border-radius: 0.6rem 0.6rem 0 0;
-      padding: 1rem 1.2rem 0.8rem;
-      margin-bottom: 0;
-    }
-
-    /* ── TABLE ── */
-    .table-wrap {
-      overflow-x: auto;
-      margin: 1rem 0;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-    }
-
-    th {
-      background: var(--page-warm);
-      border: 1px solid var(--rule);
-      padding: 0.55rem 0.85rem;
-      font-weight: 700;
-      text-align: left;
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-    }
-
-    td {
-      border: 1px solid var(--rule);
-      padding: 0.55rem 0.85rem;
-      vertical-align: top;
-    }
-
-    tr:nth-child(even) td {
-      background: var(--page-warm);
-    }
-
-    /* ── FOOTNOTES ── */
-    .footnotes {
-      margin-top: 1.5rem;
-      padding-top: 1rem;
-      border-top: 1px dashed var(--rule);
-    }
-
-    .footnotes h3,
-    .footnotes h4 {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--ink-muted);
-      font-family: 'Source Serif 4', serif;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-    }
-
-    .footnotes ul,
-    .footnotes ol {
-      font-size: 0.8rem;
-      color: var(--ink-muted);
-      line-height: 1.6;
-      margin-bottom: 0;
-    }
-
-    .footnote-ref {
-      font-style: normal;
-      white-space: nowrap;
-    }
-
-    .footnote-ref a {
-      color: var(--emerald);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .footnote-ref a:hover {
-      text-decoration: underline;
-    }
-
-    /* ── TOPLINK ── */
-    .toplink {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      font-size: 0.78rem;
-      color: var(--ink-faint);
-      text-decoration: none;
-      margin-top: 1.5rem;
-      transition: color 0.15s;
-      font-family: 'Source Serif 4', serif;
-    }
-
-    .toplink:hover {
-      color: var(--emerald);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--rule);
-      padding: 1.5rem 2rem;
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      color: var(--ink-muted);
-      font-size: 0.78rem;
-      font-family: 'Source Serif 4', serif;
-    }
-
-    /* ── PDF / PRINT ── */
-    .no-print { display: block; }
-    .pdf-only { display: none; }
-    .pdf-cover { display: none; }
-    .pdf-meta-page { display: none; }
-
-    .pdf-cover-inner {
-      min-height: 260mm;
-      padding: 28mm 18mm 24mm;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: #fffefb;
-      color: #1f2937;
-    }
-
-    .pdf-cover-top {
-      border-top: 4px solid #065f46;
-      padding-top: 12mm;
-    }
-
-    .pdf-cover-brand {
-      font-size: 0.9rem;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: #6b7280;
-      margin-bottom: 10mm;
-    }
-
-    .pdf-cover-series {
-      font-size: 1rem;
-      font-weight: 700;
-      margin: 0 0 5mm;
-    }
-
-    .pdf-cover-title {
-      font-size: 2rem;
-      line-height: 1.2;
-      margin: 0 0 5mm;
-      font-weight: 800;
-    }
-
-    .pdf-cover-subtitle {
-      font-size: 1rem;
-      color: #6b7280;
-      margin: 0;
-    }
-
-    .pdf-cover-bottom {
-      border-top: 1px solid #d1d5db;
-      padding-top: 8mm;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-
-    .pdf-meta-inner {
-      min-height: 240mm;
-      padding: 20mm 16mm;
-      background: #fff;
-    }
-
-    .pdf-meta-inner h2 {
-      margin: 0 0 10mm;
-      font-size: 1.3rem;
-    }
-
-    .pdf-meta-list p {
-      margin: 0 0 5mm;
-    }
-
-    .pdf-break {
-      break-before: page;
-      page-break-before: always;
-    }
-
-    @media print {
-      .no-print,
-      .pdf-toolbar,
-      .topbar,
-      .jump,
-      .toplink {
-        display: none !important;
-      }
-
-      .pdf-only,
-      .pdf-cover,
-      .pdf-meta-page {
-        display: block !important;
-      }
-
-      body {
-        background: #fff;
-      }
-
-      main {
-        max-width: none;
-        padding: 0;
-      }
-
-      .section {
-        break-inside: avoid;
-        page-break-inside: avoid;
-      }
-
-      h2, h3, h4 {
-        break-after: avoid;
-        page-break-after: avoid;
-      }
-    }
-
-    @media (max-width: 640px) {
-      body { font-size: 16px; }
-.section {
-  padding-left: 1.1rem;
-  padding-right: 1.1rem;
+/* ── FOOTNOTE ── */
+.footnotes{
+  margin-top:1.5rem;
+  border-top:1px dashed var(--rule);
+  padding-top:1rem;
+  font-size:0.8rem;
 }
-      main,
-      .page-header {
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-      }
 
-      .topbar nav,
-      .jump-inner,
-      .pdf-toolbar,
-      footer {
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-      }
+/* ── TOPLINK ── */
+.toplink{
+  display:inline-block;
+  margin-top:1rem;
+  font-size:0.8rem;
+  color:var(--ink-faint);
+}
 
-      .arab, .arabic {
-        font-size: 1.4rem;
-      }
+/* ── FOOTER ── */
+footer{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:1.5rem 1.4rem;
+  border-top:1px solid var(--rule);
+  font-size:0.75rem;
+}
 
-      h2 {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+/* ── PRINT ── */
+@media print{
+  .topbar,.pdf-toolbar,.jump,.toplink{display:none}
+  main{padding:0}
+}
+
+</style>
 </head>
-<body>
-
-  <div class="topbar no-print">
-    <nav>
-      <span class="brand">3asbab.org</span>
-      <a href="index.html">🏠 Home</a>
-      <a href="bab-09.html">← Bab 9</a>
-      <a href="bab-10.html" class="active">Bab 10</a>
-      <a href="bab-11.html">Bab 11 →</a>
-    </nav>
-  </div>
-
-  <div class="pdf-toolbar no-print">
-    <button class="btn-pdf" onclick="downloadPDF()">📄 Muat Turun PDF</button>
-  </div>
-
-  <div class="pdf-cover pdf-only">
-    <div class="pdf-cover-inner">
-      <div class="pdf-cover-top">
-        <div class="pdf-cover-brand">3asbab.org</div>
-        <div class="pdf-cover-series">Kerangka 3 Asbab</div>
-        <h1 class="pdf-cover-title">Bab 10 — MUKADIMAH DAKWAH TAUHID</h1>
-        <p class="pdf-cover-subtitle">Sub-bab 10.1 hingga 10.11</p>
-      </div>
-      <div class="pdf-cover-bottom">
-        <div>Edisi PDF untuk bacaan berfokus dan cetakan</div>
-        <div>© 3asbab.org</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="pdf-meta-page pdf-only pdf-break">
-    <div class="pdf-meta-inner">
-      <h2>Maklumat Dokumen</h2>
-      <div class="pdf-meta-list">
-        <p><strong>Judul:</strong> Bab 10 — MUKADIMAH DAKWAH TAUHID</p>
-        <p><strong>Sub-bab:</strong> 10.1 hingga 10.11</p>
-        <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
-        <p><strong>Laman:</strong> 3asbab.org</p>
-        <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
-      </div>
-    </div>
-  </div>
-
   <div class="page-header" id="top">
     <div class="chapter-eyebrow">Kerangka 3 Asbab — Arkib Baca Sahaja</div>
     <h1 class="page-title">Bab 10 — MUKADIMAH DAKWAH TAUHID</h1>
