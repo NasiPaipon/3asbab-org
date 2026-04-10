@@ -1,195 +1,809 @@
-```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bab 10 — Mukadimah Dakwah Tauhid | 3asbab.org</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bab 10 — MUKADIMAH DAKWAH TAUHID | 3asbab.org</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
+    *, *::before, *::after {
       margin: 0;
-      background: var(--bg);
-      color:#111;
-    }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
-    }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
-    }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* Lompat ke... */
-    .jump{
+    :root {
+      --ink: #1c1917;
+      --ink-soft: #44403c;
+      --ink-muted: #78716c;
+      --ink-faint: #a8a29e;
+      --page: #faf9f7;
+      --page-warm: #f5f0e8;
+      --cream: #ede8df;
+      --rule: #d6cfc4;
+      --rule-light: #e8e3db;
+      --emerald: #065f46;
+      --emerald-mid: #059669;
+      --emerald-light: #d1fae5;
+      --emerald-pale: #ecfdf5;
+      --gold: #92400e;
+      --gold-light: #fef3c7;
+      --shadow: 0 2px 8px rgba(28,25,23,0.06), 0 1px 3px rgba(28,25,23,0.04);
+      --shadow-md: 0 4px 20px rgba(28,25,23,0.08), 0 2px 8px rgba(28,25,23,0.05);
+      --max: 780px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Serif 4', 'Lora', Georgia, serif;
+      background: var(--page);
+      color: var(--ink);
+      line-height: 1.8;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── TOPBAR ── */
+    .topbar {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
-    }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
+      z-index: 40;
+      background: rgba(250,249,247,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
     }
 
-    main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
+    .topbar nav {
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      padding: 0.6rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
     }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
+
+    .brand {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--emerald);
+      letter-spacing: 0.02em;
+      margin-right: 0.75rem;
     }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
+
+    .topbar a {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      text-decoration: none;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      transition: background 0.15s, color 0.15s;
     }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
+
+    .topbar a:hover {
+      background: var(--cream);
+      color: var(--emerald);
     }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
-      border-left: 4px solid var(--accent);
-      background: #f8fffb;
+
+    .topbar a.active {
+      font-weight: 600;
+      color: var(--emerald);
     }
-    .arab{
-      font-size: 20px;
-      line-height: 1.9;
+
+    /* ── PDF TOOLBAR ── */
+    .pdf-toolbar {
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      padding: 0.8rem 2rem 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .btn-pdf {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--emerald);
+      background: #fff;
+      border: 1px solid var(--emerald);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.15s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-pdf:hover { background: var(--emerald-pale); }
+    .btn-pdf:active { transform: translateY(1px); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      padding: 2.5rem 2rem 1.5rem;
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    .chapter-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--emerald);
+      margin-bottom: 0.8rem;
+    }
+
+    .chapter-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 2px;
+      background: var(--emerald);
+      border-radius: 1px;
+    }
+
+    .page-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+    }
+
+    .page-subtitle {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      font-style: italic;
+    }
+
+    /* ── JUMP NAV ── */
+    .jump {
+      position: sticky;
+      top: 44px;
+      z-index: 30;
+      background: rgba(250,249,247,0.97);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    .jump-inner {
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      padding: 0.5rem 2rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+    }
+
+    .jump-label {
+      font-weight: 600;
+      color: var(--ink-muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-right: 0.3rem;
+    }
+
+    .jump a {
+      padding: 0.18rem 0.65rem;
+      border-radius: 40px;
+      background: white;
+      border: 1px solid var(--rule);
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--ink-soft);
+      transition: 0.1s ease;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    .jump a:hover {
+      border-color: var(--emerald-mid);
+      color: var(--emerald);
+      background: var(--emerald-pale);
+    }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    article {
+      width: 100%;
+    }
+
+    /* ── BASIC CONTENT ── */
+    .section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    .section-opener {
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    .section-opener p {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--gold-light);
+      color: var(--gold);
+      border: 1px solid #fde68a;
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 1.2rem;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 0.3rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--emerald);
+      margin: 2rem 0 0.6rem;
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+    }
+
+    h4 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 1.5rem 0 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    p {
+      margin-bottom: 0.85rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    em { color: var(--ink-soft); }
+    strong { font-weight: 700; color: var(--ink); }
+
+    ul, ol {
+      padding-left: 1.4rem;
+      margin-bottom: 0.85rem;
+    }
+
+    li {
+      margin-bottom: 0.3rem;
+      line-height: 1.7;
+    }
+
+    li > ul, li > ol {
+      margin-top: 0.3rem;
+      margin-bottom: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule-light);
+      margin: 1.8rem 0;
+    }
+
+    /* ── ARABIC ── */
+    .arab, .arabic {
+      font-family: 'Amiri', 'Traditional Arabic', serif;
+      font-size: 1.65rem;
+      line-height: 2;
       direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
+      text-align: right;
+      color: var(--emerald);
+      background: linear-gradient(135deg, var(--emerald-pale), #fff);
+      border-right: 3px solid var(--emerald);
+      padding: 0.7rem 1rem 0.7rem 1.5rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+      margin: 1rem 0 0.4rem;
+      display: block;
     }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
+
+    .translation {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin: 0 0 1rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--rule);
     }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration:none;
+
+    /* support untuk arab inline dalam p/li */
+    p .arab,
+    li .arab,
+    blockquote p .arab,
+    blockquote li .arab {
+      display: inline;
+      background: none;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      border-radius: 0;
+      color: var(--emerald);
+      font-size: 1.05em;
+      line-height: inherit;
+      direction: rtl;
+      text-align: inherit;
     }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
-      color: var(--muted);
-      font-size: 14px;
+
+    /* ── BLOCKQUOTE ── */
+    blockquote {
+      background: var(--page-warm);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 0.6rem 0.6rem 0;
+      padding: 0.8rem 1.2rem;
+      margin: 1rem 0;
+      font-size: 0.92rem;
+      color: var(--ink-soft);
     }
-    footer a{color:inherit}
-    .footnote-ref{
-      font-size: 0.8em;
-      vertical-align: super;
-      line-height: 0;
+
+    blockquote .arabic-hadith {
+      font-family: 'Amiri', serif;
+      font-size: 1.2rem;
+      direction: rtl;
+      text-align: right;
+      display: block;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
     }
-    .footnotes{
-      margin-top: 20px;
-      padding-top: 10px;
-      border-top: 1px dashed var(--border);
-      font-size: 14px;
-      color: var(--muted);
+
+    blockquote > div:not(.arab):not(.arabic) {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin: 0;
+      padding-left: 0.95rem;
+      border-left: 2px solid var(--rule);
+      line-height: 1.7;
+    }
+
+    /* ── BOXES ── */
+    .callout {
+      background: var(--emerald-pale);
+      border: 1px solid #a7f3d0;
+      border-radius: 0.6rem;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      font-size: 0.92rem;
+    }
+
+    .insight-box {
+      background: var(--page-warm);
+      border: 1px solid var(--rule);
+      border-radius: 0.5rem;
+      padding: 0.9rem 1.1rem;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    .rumusan {
+      background: var(--page-warm);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--emerald);
+      border-radius: 0.6rem;
+      padding: 1.2rem 1.4rem;
+      margin: 1.5rem 0;
+    }
+
+    .rumusan ol, .rumusan ul {
+      margin-bottom: 0;
+    }
+
+    /* auto-style rumusan lama: h3 + ol */
+    .section > h3:last-of-type + ol {
+      background: var(--page-warm);
+      border: 1px solid var(--rule);
+      border-top: 0;
+      border-radius: 0 0 0.6rem 0.6rem;
+      padding: 0.9rem 1.4rem 1.1rem 2.3rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .section > h3:last-of-type {
+      background: var(--page-warm);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--emerald);
+      border-radius: 0.6rem 0.6rem 0 0;
+      padding: 1rem 1.2rem 0.8rem;
+      margin-bottom: 0;
+    }
+
+    /* ── TABLE ── */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    th {
+      background: var(--page-warm);
+      border: 1px solid var(--rule);
+      padding: 0.55rem 0.85rem;
+      font-weight: 700;
+      text-align: left;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    td {
+      border: 1px solid var(--rule);
+      padding: 0.55rem 0.85rem;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: var(--page-warm);
+    }
+
+    /* ── FOOTNOTES ── */
+    .footnotes {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--rule);
+    }
+
+    .footnotes h3,
+    .footnotes h4 {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      font-family: 'Source Serif 4', serif;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .footnotes ul,
+    .footnotes ol {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .footnote-ref {
+      font-style: normal;
+      white-space: nowrap;
+    }
+
+    .footnote-ref a {
+      color: var(--emerald);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footnote-ref a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── TOPLINK ── */
+    .toplink {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.78rem;
+      color: var(--ink-faint);
+      text-decoration: none;
+      margin-top: 1.5rem;
+      transition: color 0.15s;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    .toplink:hover {
+      color: var(--emerald);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 1.5rem 2rem;
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      color: var(--ink-muted);
+      font-size: 0.78rem;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    /* ── PDF / PRINT ── */
+    .no-print { display: block; }
+    .pdf-only { display: none; }
+    .pdf-cover { display: none; }
+    .pdf-meta-page { display: none; }
+
+    .pdf-cover-inner {
+      min-height: 260mm;
+      padding: 28mm 18mm 24mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #fffefb;
+      color: #1f2937;
+    }
+
+    .pdf-cover-top {
+      border-top: 4px solid #065f46;
+      padding-top: 12mm;
+    }
+
+    .pdf-cover-brand {
+      font-size: 0.9rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 10mm;
+    }
+
+    .pdf-cover-series {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 5mm;
+    }
+
+    .pdf-cover-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 5mm;
+      font-weight: 800;
+    }
+
+    .pdf-cover-subtitle {
+      font-size: 1rem;
+      color: #6b7280;
+      margin: 0;
+    }
+
+    .pdf-cover-bottom {
+      border-top: 1px solid #d1d5db;
+      padding-top: 8mm;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .pdf-meta-inner {
+      min-height: 240mm;
+      padding: 20mm 16mm;
+      background: #fff;
+    }
+
+    .pdf-meta-inner h2 {
+      margin: 0 0 10mm;
+      font-size: 1.3rem;
+    }
+
+    .pdf-meta-list p {
+      margin: 0 0 5mm;
+    }
+
+    .pdf-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    @media print {
+      .no-print,
+      .pdf-toolbar,
+      .topbar,
+      .jump,
+      .toplink {
+        display: none !important;
+      }
+
+      .pdf-only,
+      .pdf-cover,
+      .pdf-meta-page {
+        display: block !important;
+      }
+
+      body {
+        background: #fff;
+      }
+
+      main {
+        max-width: none;
+        padding: 0;
+      }
+
+      .section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      h2, h3, h4 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+
+      main,
+      .page-header {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+      }
+
+      .topbar nav,
+      .jump-inner,
+      .pdf-toolbar,
+      footer {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+      }
+
+      .arab, .arabic {
+        font-size: 1.4rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top nav -->
-  <div class="topbar">
-    <div class="wrap">
-      <nav>
-        <span class="brand">3asbab.org</span>
-        <a href="index.html">🏠 Home</a>
-        <a href="bab-9.html">Prev ←</a>
-        <a href="bab-10.html">Bab ini</a>
-        <a href="bab-11.html">Next →</a>
-      </nav>
-    </div>
+  <div class="topbar no-print">
+    <nav>
+      <span class="brand">3asbab.org</span>
+      <a href="index.html">🏠 Home</a>
+      <a href="bab-09.html">← Bab 9</a>
+      <a href="bab-10.html" class="active">Bab 10</a>
+      <a href="bab-11.html">Bab 11 →</a>
+    </nav>
   </div>
 
-  <!-- Page title -->
-  <header class="wrap" id="top">
-    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
-    <h1>Bab 10 — Mukadimah Dakwah Tauhid</h1>
-  </header>
+  <div class="pdf-toolbar no-print">
+    <button class="btn-pdf" onclick="downloadPDF()">📄 Muat Turun PDF</button>
+  </div>
 
-  <!-- Jump links -->
-  <div class="jump">
-    <div class="wrap">
-      <div class="inner">
-        <strong>Lompat ke:</strong>
-        <a href="#10-1">10.1</a>
-        <a href="#10-2">10.2</a>
-        <a href="#10-3">10.3</a>
-        <a href="#10-4">10.4</a>
-        <a href="#10-5">10.5</a>
-        <a href="#10-6">10.6</a>
-        <a href="#10-7">10.7</a>
-        <a href="#10-8">10.8</a>
-        <a href="#10-9">10.9</a>
-        <a href="#10-10">10.10</a>
-        <a href="#10-11">10.11</a>
+  <div class="pdf-cover pdf-only">
+    <div class="pdf-cover-inner">
+      <div class="pdf-cover-top">
+        <div class="pdf-cover-brand">3asbab.org</div>
+        <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+        <h1 class="pdf-cover-title">Bab 10 — MUKADIMAH DAKWAH TAUHID</h1>
+        <p class="pdf-cover-subtitle">Sub-bab 10.1 hingga 10.11</p>
+      </div>
+      <div class="pdf-cover-bottom">
+        <div>Edisi PDF untuk bacaan berfokus dan cetakan</div>
+        <div>© 3asbab.org</div>
       </div>
     </div>
   </div>
 
-  <main class="wrap">
+  <div class="pdf-meta-page pdf-only pdf-break">
+    <div class="pdf-meta-inner">
+      <h2>Maklumat Dokumen</h2>
+      <div class="pdf-meta-list">
+        <p><strong>Judul:</strong> Bab 10 — MUKADIMAH DAKWAH TAUHID</p>
+        <p><strong>Sub-bab:</strong> 10.1 hingga 10.11</p>
+        <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+        <p><strong>Laman:</strong> 3asbab.org</p>
+        <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-header" id="top">
+    <div class="chapter-eyebrow">Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+    <h1 class="page-title">Bab 10 — MUKADIMAH DAKWAH TAUHID</h1>
+    <p class="page-subtitle">Sub-bab 10.1 hingga 10.11</p>
+  </div>
+
+  <!-- JUMP NAV -->
+  <div class="jump no-print">
+    <div class="jump-inner">
+      <span class="jump-label">Lompat ke</span>
+      <a href="#10-1">10.1</a>
+      <a href="#10-2">10.2</a>
+      <a href="#10-3">10.3</a>
+      <a href="#10-4">10.4</a>
+      <a href="#10-5">10.5</a>
+      <a href="#10-6">10.6</a>
+      <a href="#10-7">10.7</a>
+      <a href="#10-8">10.8</a>
+      <a href="#10-9">10.9</a>
+      <a href="#10-10">10.10</a>
+      <a href="#10-11">10.11</a>
+    </div>
+  </div>
+
+  <main>
     <article>
-      <div class="section">
+
+      <!-- TAMPAL KONTEN BAB DI SINI -->
+      <!-- Contoh:
+      <section class="section" id="10-1">
+        ...
+      </section>
+      -->
+
+    </article>
+  </main>
+
+  <footer>
+    <p>© 3asbab.org — Arkib bacaan sahaja. Bab 10: Mukadimah Dakwah Tauhid.</p>
+  </footer>
+
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn ? btn.innerHTML : '';
+
+      if (btn) {
+        btn.innerHTML = '⏳ Menyediakan PDF...';
+        btn.disabled = true;
+      }
+
+      setTimeout(() => {
+        window.print();
+
+        setTimeout(() => {
+          if (btn) {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+          }
+        }, 500);
+      }, 120);
+    }
+  </script>
+
+</body>
+</html>
         <div class="badge">🟥 BAB 10 – MUKADIMAH DAKWAH TAUHIDI</div>
       </div>
 
@@ -200,7 +814,7 @@
   <h3>1. Dakwah adalah perintah Allah yang paling awal dalam Qur’an</h3>
   <p>Perintah pertama dalam al-Qur’an tentang dakwah ialah:</p>
   <blockquote>
-    <div class="arab">يَا أَيُّهَا الْمُدَّثِّرُ * قُمْ فَأَنْذِرْ</div>
+    <div class="arab">يَا أَيُّهَا الْمُدَّثِّرُ * قُمْ فَأَنْذِرْ</div>
     <div>“Wahai orang yang berselimut, bangunlah lalu berilah peringatan.”<span class="footnote-ref"><a href="#fn10-1-1">【1】</a></span></div>
   </blockquote>
   <p>Ayat ini menunjukkan:</p>
@@ -222,17 +836,17 @@
   <p>Contoh:</p>
   <p><strong>Nabi Nuh</strong></p>
   <blockquote>
-    <div class="arab">إِنِّي لَكُمْ نَذِيرٌ مُّبِينٌ</div>
+    <div class="arab">إِنِّي لَكُمْ نَذِيرٌ مُّبِينٌ</div>
     <div>“Sesungguhnya aku adalah pemberi peringatan yang jelas kepada kamu.”<span class="footnote-ref"><a href="#fn10-1-2">【2】</a></span></div>
   </blockquote>
   <p><strong>Nabi Hud</strong></p>
   <blockquote>
-    <div class="arab">أُبَلِّغُكُمْ رِسَالَاتِ رَبِّي وَأَنَا لَكُمْ نَاصِحٌ أَمِينٌ</div>
+    <div class="arab">أُبَلِّغُكُمْ رِسَالَاتِ رَبِّي وَأَنَا لَكُمْ نَاصِحٌ أَمِينٌ</div>
     <div>“Aku menyampaikan kepada kamu risalah-risalah Tuhanku, dan aku adalah penasihat yang amanah bagi kamu.”<span class="footnote-ref"><a href="#fn10-1-3">【3】</a></span></div>
   </blockquote>
   <p><strong>Nabi Musa</strong></p>
   <blockquote>
-    <div class="arab">اذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُ طَغَى</div>
+    <div class="arab">اذْهَبْ إِلَىٰ فِرْعَوْنَ إِنَّهُ طَغَى</div>
     <div>“Pergilah kepada Firaun, sesungguhnya dia telah melampaui batas.”<span class="footnote-ref"><a href="#fn10-1-4">【4】</a></span></div>
   </blockquote>
   <p><strong>Nabi Isa</strong></p>
@@ -255,7 +869,7 @@
   </ul>
   <p>Dalil:</p>
   <blockquote>
-    <div class="arab">لِيُنذِرَ مَن كَانَ حَيًّا وَيَحِقَّ الْقَوْلُ عَلَى الْكَافِرِينَ</div>
+    <div class="arab">لِيُنذِرَ مَن كَانَ حَيًّا وَيَحِقَّ الْقَوْلُ عَلَى الْكَافِرِينَ</div>
     <div>“Supaya ia memberi peringatan kepada siapa yang hidup (hatinya), dan supaya ketetapan azab berlaku terhadap orang-orang kafir.”<span class="footnote-ref"><a href="#fn10-1-6">【6】</a></span></div>
   </blockquote>
   <p>Hanya hati yang hidup dapat menerima dakwah.</p>
@@ -270,7 +884,7 @@
   <p>Rasulullah ﷺ berdakwah kerana cinta kepada Allah, bukan kerana strategi.</p>
   <p>Dalil:</p>
   <blockquote>
-    <div class="arab">فَلَعَلَّكَ بَاخِعٌ نَّفْسَكَ عَلَى آثَارِهِمْ إِن لَّمْ يُؤْمِنُوا بِهَٰذَا الْحَدِيثِ أَسَفًا</div>
+    <div class="arab">فَلَعَلَّكَ بَاخِعٌ نَّفْسَكَ عَلَى آثَارِهِمْ إِن لَّمْ يُؤْمِنُوا بِهَٰذَا الْحَدِيثِ أَسَفًا</div>
     <div>“Maka barangkali engkau akan membinasakan dirimu kerana bersedih hati terhadap mereka jika mereka tidak beriman kepada perkhabaran ini.”<span class="footnote-ref"><a href="#fn10-1-7">【7】</a></span></div>
   </blockquote>
   <p>Ini menunjukkan:</p>
@@ -284,16 +898,16 @@
   <p>Sahabat bukan berdakwah untuk mengubah orang lain. Mereka berdakwah kerana dakwah itulah cara Allah menghidupkan iman dalam hati mereka.</p>
   <p>Dalil sahih:</p>
   <blockquote>
-    <div class="arab">قَالَ النَّبِيُّ ﷺ بَلِّغُوا عَنِّي وَلَوْ آيَةً</div>
+    <div class="arab">قَالَ النَّبِيُّ ﷺ بَلِّغُوا عَنِّي وَلَوْ آيَةً</div>
     <div>“Sampaikanlah daripadaku walaupun satu ayat.”<span class="footnote-ref"><a href="#fn10-1-8">【8】</a></span></div>
   </blockquote>
   <blockquote>
-    <div class="arab">إِنَّ هَذَا الدِّينَ قَائِمٌ بِالدَّعْوَةِ وَالْجِهَادِ</div>
+    <div class="arab">إِنَّ هَذَا الدِّينَ قَائِمٌ بِالدَّعْوَةِ وَالْجِهَادِ</div>
     <div>“Sesungguhnya agama ini tegak dengan dakwah dan jihad.”<span class="footnote-ref"><a href="#fn10-1-9">【9】</a></span></div>
   </blockquote>
   <p>Dan sabda sahabat:</p>
   <blockquote>
-    <div class="arab">تَعَلَّمْنَا الإِيمَانَ قَبْلَ أَنْ نَتَعَلَّمَ القُرْآنَ</div>
+    <div class="arab">تَعَلَّمْنَا الإِيمَانَ قَبْلَ أَنْ نَتَعَلَّمَ القُرْآنَ</div>
     <div>“Kami mempelajari iman sebelum mempelajari al-Qur’an.”<span class="footnote-ref"><a href="#fn10-1-10">【10】</a></span></div>
   </blockquote>
   <p>Kerana: dakwah → mujahadah → sabar → doa → tilawah adalah asbab hidupnya iman.</p>
@@ -302,9 +916,9 @@
   <p>Nabi ﷺ tidak membina sistem Madinah dengan dokumen. Baginda membina iman, dan iman itu dibina melalui dakwah selama 13 tahun di Makkah.</p>
   <p>Sirah sahih:</p>
   <ul>
-    <li>Baginda pergi rumah ke rumah menyeru kabilah: <span class="arab">يَا بَنِي فُلَانٍ قُولُوا لَا إِلٰهَ إِلَّا اللَّهُ تُفْلِحُوا</span> “Wahai Bani Fulan, katakanlah: La ilaha illallah, kamu akan berjaya.”<span class="footnote-ref"><a href="#fn10-1-11">【11】</a></span></li>
-    <li>Baginda berdiri di Bukit Safa menyeru seluruh Makkah: <span class="arab">يَا بَنِي فِهْرٍ يَا بَنِي عَدِيٍّ</span> (Wahai Bani Fihr, wahai Bani ‘Adi…)<span class="footnote-ref"><a href="#fn10-1-12">【12】</a></span></li>
-    <li>Baginda pergi ke Taif untuk mengajak manusia kepada Allah: <span class="arab">مَنْ يَؤْوِينِي وَيَنْصُرُنِي حَتَّى أُبَلِّغَ رِسَالَةَ رَبِّي</span> “Siapakah yang akan melindungi aku dan menolong aku sehingga aku dapat menyampaikan risalah Tuhanku.”<span class="footnote-ref"><a href="#fn10-1-13">【13】</a></span></li>
+    <li>Baginda pergi rumah ke rumah menyeru kabilah: <span class="arab">يَا بَنِي فُلَانٍ قُولُوا لَا إِلٰهَ إِلَّا اللَّهُ تُفْلِحُوا</span> “Wahai Bani Fulan, katakanlah: La ilaha illallah, kamu akan berjaya.”<span class="footnote-ref"><a href="#fn10-1-11">【11】</a></span></li>
+    <li>Baginda berdiri di Bukit Safa menyeru seluruh Makkah: <span class="arab">يَا بَنِي فِهْرٍ يَا بَنِي عَدِيٍّ</span> (Wahai Bani Fihr, wahai Bani ‘Adi…)<span class="footnote-ref"><a href="#fn10-1-12">【12】</a></span></li>
+    <li>Baginda pergi ke Taif untuk mengajak manusia kepada Allah: <span class="arab">مَنْ يَؤْوِينِي وَيَنْصُرُنِي حَتَّى أُبَلِّغَ رِسَالَةَ رَبِّي</span> “Siapakah yang akan melindungi aku dan menolong aku sehingga aku dapat menyampaikan risalah Tuhanku.”<span class="footnote-ref"><a href="#fn10-1-13">【13】</a></span></li>
   </ul>
   <p>Semua ini berlaku sebelum negara, sebelum ekonomi, sebelum sistem masyarakat.</p>
   <p>Kesimpulan sirah:<br>Dakwah adalah pintu masuk segala perubahan.</p>
@@ -318,7 +932,7 @@
   </ul>
   <p>Dalil:</p>
   <blockquote>
-    <div class="arab">وَلْتَكُن مِّنكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ وَيَأْمُرُونَ بِالْمَعْرُوفِ وَيَنْهَوْنَ عَنِ الْمُنكَرِ</div>
+    <div class="arab">وَلْتَكُن مِّنكُمْ أُمَّةٌ يَدْعُونَ إِلَى الْخَيْرِ وَيَأْمُرُونَ بِالْمَعْرُوفِ وَيَنْهَوْنَ عَنِ الْمُنكَرِ</div>
     <div>“Hendaklah ada daripada kamu satu umat yang menyeru kepada kebaikan, menyuruh kepada yang makruf dan mencegah daripada yang mungkar.”<span class="footnote-ref"><a href="#fn10-1-14">【14】</a></span></div>
   </blockquote>
   <p>Perintah ini bersifat:</p>
@@ -490,7 +1104,7 @@
   <h4>1. Dalil Qur’an — Seruan Untuk Memperbaiki Orang Islam</h4>
   <p><strong>(1) Seruan Agar Hati Orang Beriman Hidup</strong></p>
   <blockquote>
-    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا آمِنُوا بِاللَّهِ وَرَسُولِهِ وَالْكِتَابِ الَّذِي نَزَّلَ عَلَى رَسُولِهِ</div>
+    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا آمِنُوا بِاللَّهِ وَرَسُولِهِ وَالْكِتَابِ الَّذِي نَزَّلَ عَلَى رَسُولِهِ</div>
     <div>“Wahai orang-orang yang beriman, berimanlah kamu kepada Allah dan Rasul-Nya serta kepada Kitab yang telah Dia turunkan kepada Rasul-Nya.”<span class="footnote-ref"><a href="#fn10-2-2-1">【1】</a></span></div>
   </blockquote>
   <p>→ Allah menyeru orang yang sudah Islam supaya beriman sekali lagi.<br>
@@ -499,7 +1113,7 @@
 
   <p><strong>(2) Seruan untuk bangunkan iman dalam hati yang keras</strong></p>
   <blockquote>
-    <div class="arab">أَلَمْ يَأْنِ لِلَّذِينَ آمَنُوا أَنْ تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ وَمَا نَزَلَ مِنَ الْحَقِّ</div>
+    <div class="arab">أَلَمْ يَأْنِ لِلَّذِينَ آمَنُوا أَنْ تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ وَمَا نَزَلَ مِنَ الْحَقِّ</div>
     <div>“Belumkah sampai masanya bagi orang-orang yang beriman untuk khusyuk hati mereka kerana mengingati Allah dan kepada kebenaran yang telah diturunkan?”<span class="footnote-ref"><a href="#fn10-2-2-2">【2】</a></span></div>
   </blockquote>
   <p>→ Sasaran ayat ini ialah orang Islam, bukan kafir.<br>
@@ -508,7 +1122,7 @@
 
   <p><strong>(3) Seruan tinggalkan lalai kerana dunia</strong></p>
   <blockquote>
-    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُلْهِكُمْ أَمْوَالُكُمْ وَلَا أَوْلَادُكُمْ عَنْ ذِكْرِ اللَّهِ</div>
+    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُلْهِكُمْ أَمْوَالُكُمْ وَلَا أَوْلَادُكُمْ عَنْ ذِكْرِ اللَّهِ</div>
     <div>“Wahai orang-orang yang beriman, janganlah harta-harta kamu dan anak-anak kamu melalaikan kamu daripada mengingati Allah.”<span class="footnote-ref"><a href="#fn10-2-2-3">【3】</a></span></div>
   </blockquote>
   <p>→ Arahan kepada orang beriman yang lalai.<br>
@@ -516,7 +1130,7 @@
 
   <p><strong>(4) Seruan taat dan taqwa dalam masyarakat Islam</strong></p>
   <blockquote>
-    <div class="arab">وَمَن يُطِعِ اللَّهَ وَرَسُولَهُ وَيَخْشَ اللَّهَ وَيَتَّقْهِ فَأُولَٰئِكَ هُمُ الْفَائِزُونَ</div>
+    <div class="arab">وَمَن يُطِعِ اللَّهَ وَرَسُولَهُ وَيَخْشَ اللَّهَ وَيَتَّقْهِ فَأُولَٰئِكَ هُمُ الْفَائِزُونَ</div>
     <div>“Dan sesiapa yang taat kepada Allah dan Rasul-Nya serta takut kepada Allah dan bertaqwa kepada-Nya, maka mereka itulah orang-orang yang berjaya.”<span class="footnote-ref"><a href="#fn10-2-2-4">【4】</a></span></div>
   </blockquote>
   <p>→ Ayat ini menyeru orang Islam supaya hidup dalam ketaatan dan taqwa. Ini tujuan islah iman dan amal.</p>
@@ -532,7 +1146,7 @@
 
   <p><strong>(2) Dakwah Nabi kepada sahabat tentang solat Subuh & Isyak</strong></p>
   <blockquote>
-    <div class="arab">أَثْقَلُ الصَّلَاةِ عَلَى الْمُنَافِقِينَ صَلَاةُ الْعِشَاءِ وَصَلَاةُ الْفَجْرِ</div>
+    <div class="arab">أَثْقَلُ الصَّلَاةِ عَلَى الْمُنَافِقِينَ صَلَاةُ الْعِشَاءِ وَصَلَاةُ الْفَجْرِ</div>
     <div>“Solat yang paling berat bagi orang munafik ialah solat Isyak dan solat Subuh.”<span class="footnote-ref"><a href="#fn10-2-2-6">【6】</a></span></div>
   </blockquote>
   <p>→ Nabi ﷺ membetulkan orang Islam sendiri.<br>
@@ -540,18 +1154,18 @@
 
   <p><strong>(3) Hadith Majlis Iman</strong></p>
   <blockquote>
-    <div class="arab">وَمَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ
-إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ
-وَغَشِيَتْهُمُ الرَّحْمَةُ
-وَحَفَّتْهُمُ الْمَلَائِكَةُ
-وَذَكَرَهُمُ اللَّهُ فِيمَنْ عِنْدَهُ</div>
+    <div class="arab">وَمَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ
+إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ
+وَغَشِيَتْهُمُ الرَّحْمَةُ
+وَحَفَّتْهُمُ الْمَلَائِكَةُ
+وَذَكَرَهُمُ اللَّهُ فِيمَنْ عِنْدَهُ</div>
     <div>“Tidaklah satu kaum berkumpul di sebuah rumah daripada rumah-rumah Allah, membaca Kitab Allah dan saling mempelajarinya sesama mereka, melainkan turun kepada mereka ketenangan, mereka diliputi rahmat, para malaikat mengelilingi mereka, dan Allah menyebut mereka di sisi makhluk yang ada di sisi-Nya.”<span class="footnote-ref"><a href="#fn10-2-2-7">【7】</a></span></div>
   </blockquote>
   <p>→ Majlis iman menghidupkan hati orang Islam. Ini asas Dakwah Islahiah.</p>
 
   <p><strong>(4) Hadith Menghidupkan Rumah Dengan Ibadah</strong></p>
   <blockquote>
-    <div class="arab">اجْعَلُوا مِنْ صَلَاتِكُمْ فِي بُيُوتِكُمْ وَلَا تَتَّخِذُوهَا قُبُورًا</div>
+    <div class="arab">اجْعَلُوا مِنْ صَلَاتِكُمْ فِي بُيُوتِكُمْ وَلَا تَتَّخِذُوهَا قُبُورًا</div>
     <div>“Jadikanlah sebahagian daripada solat kamu di rumah-rumah kamu dan janganlah kamu menjadikannya seperti kubur.”<span class="footnote-ref"><a href="#fn10-2-2-8">【8】</a></span></div>
   </blockquote>
   <p>→ Nabi ﷺ membetulkan rumah supaya hidup dengan ibadah. Rumah menjadi mini-masjid.</p>
@@ -711,20 +1325,20 @@
 
   <p>Pentingnya Dakwah Islahiah tidak bergantung kepada masa, keadaan, atau analisis manusia terhadap umat.</p>
   <p>Ia penting kerana Allah sendiri menyeru orang-orang yang telah beriman supaya memperbaiki iman mereka, membersihkan hati mereka, dan kembali hidup dengan ketaatan kepada-Nya.</p>
-  <p>Dalam al-Qur’an, Allah berulang kali memanggil: <span class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا</span> kemudian memerintahkan mereka supaya: beriman dengan sebenar-benarnya, membersihkan hati, meninggalkan kelalaian dunia, kembali kepada ketaatan kepada Allah.</p>
+  <p>Dalam al-Qur’an, Allah berulang kali memanggil: <span class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا</span> kemudian memerintahkan mereka supaya: beriman dengan sebenar-benarnya, membersihkan hati, meninggalkan kelalaian dunia, kembali kepada ketaatan kepada Allah.</p>
   <p>Contohnya firman Allah:</p>
   <blockquote>
-    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا آمِنُوا بِاللَّهِ وَرَسُولِهِ</div>
+    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا آمِنُوا بِاللَّهِ وَرَسُولِهِ</div>
     <div>“Wahai orang-orang yang beriman, berimanlah kamu kepada Allah dan Rasul-Nya.”<span class="footnote-ref"><a href="#fn10-3-1">【1】</a></span></div>
   </blockquote>
   <p>Dan firman-Nya:</p>
   <blockquote>
-    <div class="arab">أَلَمْ يَأْنِ لِلَّذِينَ آمَنُوا أَنْ تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ</div>
+    <div class="arab">أَلَمْ يَأْنِ لِلَّذِينَ آمَنُوا أَنْ تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ</div>
     <div>“Belumkah sampai masanya bagi orang-orang yang beriman untuk khusyuk hati mereka kerana mengingati Allah?”<span class="footnote-ref"><a href="#fn10-3-2">【2】</a></span></div>
   </blockquote>
   <p>Firman Allah lagi:</p>
   <blockquote>
-    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُلْهِكُمْ أَمْوَالُكُمْ وَلَا أَوْلَادُكُمْ عَن ذِكْرِ اللَّهِ</div>
+    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تُلْهِكُمْ أَمْوَالُكُمْ وَلَا أَوْلَادُكُمْ عَن ذِكْرِ اللَّهِ</div>
     <div>“Wahai orang-orang yang beriman, janganlah harta-harta kamu dan anak-anak kamu melalaikan kamu daripada mengingati Allah.”<span class="footnote-ref"><a href="#fn10-3-3">【3】</a></span></div>
   </blockquote>
   <p>Ayat-ayat ini menunjukkan bahawa membaiki iman orang Islam adalah perintah wahyu, bukan kesimpulan manusia tentang keadaan zaman.</p>
@@ -748,21 +1362,21 @@
   <h4>1. Dalil Qur’an — Hati Orang Islam Boleh Menjadi Lemah</h4>
   <p><strong>(1) Allah menegur orang beriman: hati kamu belum khusyuk</strong></p>
   <blockquote>
-    <div class="arab">أَلَمْ يَأْنِ لِلَّذِينَ آمَنُوا أَنْ تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ وَمَا نَزَلَ مِنَ الْحَقِّ</div>
+    <div class="arab">أَلَمْ يَأْنِ لِلَّذِينَ آمَنُوا أَنْ تَخْشَعَ قُلُوبُهُمْ لِذِكْرِ اللَّهِ وَمَا نَزَلَ مِنَ الْحَقِّ</div>
     <div>“Belumkah sampai masanya bagi orang-orang yang beriman untuk khusyuk hati mereka kerana mengingati Allah dan kepada kebenaran yang telah diturunkan?”<span class="footnote-ref"><a href="#fn10-3-2">【2】</a></span></div>
   </blockquote>
   <p>→ Ayat ini ditujukan kepada orang beriman. Ia menunjukkan bahawa hati orang Islam boleh menjadi keras dan perlu dihidupkan kembali.</p>
 
   <p><strong>(2) Iman belum masuk ke dalam hati</strong></p>
   <blockquote>
-    <div class="arab">قَالَتِ الْأَعْرَابُ آمَنَّا ۖ قُل لَّمْ تُؤْمِنُوا وَلَٰكِن قُولُوا أَسْلَمْنَا وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ</div>
+    <div class="arab">قَالَتِ الْأَعْرَابُ آمَنَّا ۖ قُل لَّمْ تُؤْمِنُوا وَلَٰكِن قُولُوا أَسْلَمْنَا وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ</div>
     <div>“Orang-orang Arab Badwi berkata: ‘Kami telah beriman.’ Katakanlah: ‘Kamu belum beriman, tetapi katakanlah: kami telah tunduk (Islam), kerana iman itu belum masuk ke dalam hati kamu.’”<span class="footnote-ref"><a href="#fn10-3-4">【4】</a></span></div>
   </blockquote>
   <p>→ Orang boleh menjadi Islam secara zahir tetapi iman belum hidup dalam hati.</p>
 
   <p><strong>(3) Hati tertutup kerana dosa</strong></p>
   <blockquote>
-    <div class="arab">كَلَّا بَلْ رَانَ عَلَىٰ قُلُوبِهِم مَّا كَانُوا يَكْسِبُونَ</div>
+    <div class="arab">كَلَّا بَلْ رَانَ عَلَىٰ قُلُوبِهِم مَّا كَانُوا يَكْسِبُونَ</div>
     <div>“Sekali-kali tidak! Bahkan apa yang mereka lakukan telah menutupi hati mereka.”<span class="footnote-ref"><a href="#fn10-3-5">【5】</a></span></div>
   </blockquote>
   <p>→ Dosa dan kelalaian menutup hati daripada menerima iman.</p>
@@ -774,8 +1388,8 @@
   </blockquote>
   <p>Sambungan hadith:</p>
   <blockquote>
-    <div class="arab">فَأَيُّ قَلْبٍ أُشْرِبَهَا نُكِتَ فِيهِ نُكْتَةٌ سَوْدَاءُ
-وَأَيُّ قَلْبٍ أَنْكَرَهَا نُكِتَ فِيهِ نُكْتَةٌ بَيْضَاءُ</div>
+    <div class="arab">فَأَيُّ قَلْبٍ أُشْرِبَهَا نُكِتَ فِيهِ نُكْتَةٌ سَوْدَاءُ
+وَأَيُّ قَلْبٍ أَنْكَرَهَا نُكِتَ فِيهِ نُكْتَةٌ بَيْضَاءُ</div>
     <div>“Mana-mana hati yang menerimanya akan ditanam titik hitam padanya, dan mana-mana hati yang menolaknya akan ditanam titik putih padanya.”</div>
   </blockquote>
   <p>→ Fitnah yang berulang boleh menggelapkan hati.</p>
@@ -802,7 +1416,7 @@
   <p>Qur’an telah menggunakan beberapa lafaz untuk keadaan hati:</p>
   <p><strong>(1) <span class="arab">رَانَ عَلَى قُلُوبِهِمْ</span></strong> (hati berkarat) — Al-Mutaffifin 83:14 = nur tidak boleh masuk</p>
   <p><strong>(2) <span class="arab">قَسَتْ قُلُوبُهُمْ</span></strong> (hati keras) — Al-Hadid 57:16 = hati tidak menyerap zikir</p>
-  <p><strong>(3) <span class="arab">وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ</span></strong> (iman belum masuk) — Al-Hujurat 49:14 = hati tidak dapat menampung iman</p>
+  <p><strong>(3) <span class="arab">وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ</span></strong> (iman belum masuk) — Al-Hujurat 49:14 = hati tidak dapat menampung iman</p>
   <p>→ Tiga lafaz Qur’an ini memberi asas kepada konsep hati bocor.</p>
 
   <h4>5. Mengapa Hati Bocor Menjadi Fokus Dakwah Islahiah</h4>
@@ -815,13 +1429,13 @@
   </ul>
   <p>Sedangkan Allah menjanjikan kemenangan hanya kepada iman yang hidup:</p>
   <blockquote>
-    <div class="arab">وَمَن يُطِعِ اللَّهَ وَرَسُولَهُ فَقَدْ فَازَ فَوْزًا عَظِيمًا</div>
+    <div class="arab">وَمَن يُطِعِ اللَّهَ وَرَسُولَهُ فَقَدْ فَازَ فَوْزًا عَظِيمًا</div>
     <div>“Dan sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.”<span class="footnote-ref"><a href="#fn10-3-9">【9】</a></span></div>
   </blockquote>
 
   <h4>6. Rumusan Tauhidi (10.3.1)</h4>
   <ul>
-    <li>✔ “Hati bocor” bukan istilah baru, tetapi gabungan tiga istilah Qur’an: <span class="arab">رَانَ — قَسَتْ — وَلَمَّا يَدْخُلِ الْإِيمَانُ</span>.</li>
+    <li>✔ “Hati bocor” bukan istilah baru, tetapi gabungan tiga istilah Qur’an: <span class="arab">رَانَ — قَسَتْ — وَلَمَّا يَدْخُلِ الْإِيمَانُ</span>.</li>
     <li>✔ Qur’an menunjukkan bahawa hati orang beriman boleh menjadi keras dan tertutup.</li>
     <li>✔ Hadith menunjukkan bahawa fitnah boleh menggelapkan hati.</li>
     <li>✔ Sirah menunjukkan bahawa iman manusia boleh naik dan turun.</li>
@@ -873,7 +1487,7 @@
   <h4>1. Dalil Qur’an — Amal Tanpa Nur = Fatamorgana</h4>
   <p>Qur’an menyebut:</p>
   <blockquote>
-    <div class="arab">وَالَّذِينَ كَفَرُوا أَعْمَالُهُمْ كَسَرَابٍ بِقِيعَةٍ يَحْسَبُهُ الظَّمْآنُ مَاءً حَتَّىٰ إِذَا جَاءَهُ لَمْ يَجِدْهُ شَيْئًا وَوَجَدَ اللَّهَ عِندَهُ فَوَفَّاهُ حِسَابَهُ</div>
+    <div class="arab">وَالَّذِينَ كَفَرُوا أَعْمَالُهُمْ كَسَرَابٍ بِقِيعَةٍ يَحْسَبُهُ الظَّمْآنُ مَاءً حَتَّىٰ إِذَا جَاءَهُ لَمْ يَجِدْهُ شَيْئًا وَوَجَدَ اللَّهَ عِندَهُ فَوَفَّاهُ حِسَابَهُ</div>
     <div>“Dan orang-orang yang kafir, amal-amal mereka seperti fatamorgana di tanah datar; orang yang dahaga menyangkanya air, sehingga apabila dia datang kepadanya dia tidak mendapati apa-apa, tetapi dia mendapati Allah di sisinya, lalu Allah menyempurnakan perhitungan amalnya.”<span class="footnote-ref"><a href="#fn-10-3-2-1">【1】</a></span></div>
   </blockquote>
   <p>Makna ayat:</p>
@@ -892,13 +1506,13 @@
   <h4>2. Dalil Hadith — Amal Banyak Tetapi Tidak Bernilai</h4>
   <p>Rasulullah ﷺ bersabda:</p>
   <blockquote>
-    <div class="arab">لَأَعْلَمَنَّ أَقْوَامًا مِنْ أُمَّتِي يَأْتُونَ يَوْمَ الْقِيَامَةِ بِحَسَنَاتٍ أَمْثَالِ جِبَالِ تِهَامَةَ بَيْضًا فَيَجْعَلُهَا اللَّهُ هَبَاءً مَنْثُورًا</div>
+    <div class="arab">لَأَعْلَمَنَّ أَقْوَامًا مِنْ أُمَّتِي يَأْتُونَ يَوْمَ الْقِيَامَةِ بِحَسَنَاتٍ أَمْثَالِ جِبَالِ تِهَامَةَ بَيْضًا فَيَجْعَلُهَا اللَّهُ هَبَاءً مَنْثُورًا</div>
     <div>“Aku benar-benar mengetahui satu kaum daripada umatku yang datang pada hari kiamat dengan kebaikan sebesar gunung-gunung Tihamah yang putih, tetapi Allah menjadikannya debu yang berterbangan.”<span class="footnote-ref"><a href="#fn-10-3-2-3">【3】</a></span></div>
   </blockquote>
   <p>Para sahabat bertanya sebabnya.</p>
   <p>Baginda menjawab:</p>
   <blockquote>
-    <div class="arab">أَمَا إِنَّهُمْ إِخْوَانُكُمْ وَمِنْ جِلْدَتِكُمْ وَيَأْخُذُونَ مِنَ اللَّيْلِ كَمَا تَأْخُذُونَ وَلَكِنَّهُمْ إِذَا خَلَوْا بِمَحَارِمِ اللَّهِ انْتَهَكُوهَا</div>
+    <div class="arab">أَمَا إِنَّهُمْ إِخْوَانُكُمْ وَمِنْ جِلْدَتِكُمْ وَيَأْخُذُونَ مِنَ اللَّيْلِ كَمَا تَأْخُذُونَ وَلَكِنَّهُمْ إِذَا خَلَوْا بِمَحَارِمِ اللَّهِ انْتَهَكُوهَا</div>
     <div>“Sesungguhnya mereka adalah saudara kamu dan daripada kaum kamu sendiri. Mereka mengambil sebahagian malam (untuk ibadah) seperti kamu, tetapi apabila mereka bersendirian mereka melanggar larangan Allah.”<span class="footnote-ref"><a href="#fn-10-3-2-3">【3】</a></span></div>
   </blockquote>
   <p>Makna hadith:</p>
@@ -913,7 +1527,7 @@
   <p><strong>(1) Bani Israel — ibadah banyak tetapi hati keras</strong></p>
   <p>Allah berfirman:</p>
   <blockquote>
-    <div class="arab">ثُمَّ قَسَتْ قُلُوبُكُم مِّن بَعْدِ ذَٰلِكَ فَهِيَ كَالْحِجَارَةِ أَوْ أَشَدُّ قَسْوَةً</div>
+    <div class="arab">ثُمَّ قَسَتْ قُلُوبُكُم مِّن بَعْدِ ذَٰلِكَ فَهِيَ كَالْحِجَارَةِ أَوْ أَشَدُّ قَسْوَةً</div>
     <div>“Kemudian hati kamu menjadi keras selepas itu, sehingga ia menjadi seperti batu atau lebih keras lagi.”<span class="footnote-ref"><a href="#fn-10-3-2-4">【4】</a></span></div>
   </blockquote>
   <p>Walaupun banyak ritual, hati mereka tidak berubah.</p>
@@ -921,7 +1535,7 @@
   <p><strong>(2) Munafiqin — hadir masjid tetapi tanpa iman</strong></p>
   <p>Rasulullah ﷺ bersabda:</p>
   <blockquote>
-    <div class="arab">أَثْقَلُ الصَّلَاةِ عَلَى الْمُنَافِقِينَ صَلَاةُ الْعِشَاءِ وَصَلَاةُ الْفَجْرِ وَلَوْ يَعْلَمُونَ مَا فِيهِمَا لَأَتَوْهُمَا وَلَوْ حَبْوًا</div>
+    <div class="arab">أَثْقَلُ الصَّلَاةِ عَلَى الْمُنَافِقِينَ صَلَاةُ الْعِشَاءِ وَصَلَاةُ الْفَجْرِ وَلَوْ يَعْلَمُونَ مَا فِيهِمَا لَأَتَوْهُمَا وَلَوْ حَبْوًا</div>
     <div>“Solat yang paling berat bagi orang-orang munafik ialah solat Isyak dan solat Subuh. Jika mereka mengetahui kelebihan keduanya, mereka pasti akan datang walaupun dengan merangkak.”<span class="footnote-ref"><a href="#fn-10-3-2-5">【5】</a></span></div>
   </blockquote>
   <p>→ Mereka solat, tetapi tidak ada nur iman.</p>
@@ -929,7 +1543,7 @@
   <p><strong>(3) Kabilah Arab selepas Fath Makkah</strong></p>
   <p>Allah berfirman:</p>
   <blockquote>
-    <div class="arab">قَالَتِ الْأَعْرَابُ آمَنَّا قُل لَّمْ تُؤْمِنُوا وَلَٰكِن قُولُوا أَسْلَمْنَا وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ</div>
+    <div class="arab">قَالَتِ الْأَعْرَابُ آمَنَّا قُل لَّمْ تُؤْمِنُوا وَلَٰكِن قُولُوا أَسْلَمْنَا وَلَمَّا يَدْخُلِ الْإِيمَانُ فِي قُلُوبِكُمْ</div>
     <div>“Orang-orang Arab Badwi berkata: ‘Kami telah beriman.’ Katakanlah: ‘Kamu belum beriman, tetapi katakanlah: kami telah tunduk (Islam), kerana iman itu belum masuk ke dalam hati kamu.’”<span class="footnote-ref"><a href="#fn-10-3-2-6">【6】</a></span></div>
   </blockquote>
   <p>Ini contoh: Islam ada, amal ada, tetapi iman belum masuk.</p>
@@ -1036,13 +1650,13 @@
   <p>Dakwah bukan perpindahan maklumat. Dakwah ialah perpindahan nur dari hati ke hati.</p>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">فَمَن يُرِدِ اللَّهُ أَن يَهْدِيَهُ يَشْرَحْ صَدْرَهُ لِلْإِسْلَامِ وَمَن يُرِدْ أَن يُضِلَّهُ يَجْعَلْ صَدْرَهُ ضَيِّقًا حَرَجًا كَأَنَّمَا يَصَّعَّدُ فِي السَّمَاءِ</div>
+    <div class="arab">فَمَن يُرِدِ اللَّهُ أَن يَهْدِيَهُ يَشْرَحْ صَدْرَهُ لِلْإِسْلَامِ وَمَن يُرِدْ أَن يُضِلَّهُ يَجْعَلْ صَدْرَهُ ضَيِّقًا حَرَجًا كَأَنَّمَا يَصَّعَّدُ فِي السَّمَاءِ</div>
     <div>“Barang siapa yang Allah kehendaki untuk memberi hidayah kepadanya, Allah melapangkan dadanya untuk Islam. Dan barang siapa yang Allah kehendaki kesesatan baginya, Allah menjadikan dadanya sempit dan sesak seakan-akan dia sedang mendaki ke langit.”<span class="footnote-ref"><a href="#fn-10-4-1">【1】</a></span></div>
   </blockquote>
   <p>Hidayah berlaku di dada, bukan di akal.</p>
   <p><strong>Hadith sahih:</strong></p>
   <blockquote>
-    <div class="arab">وَمَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ وَذَكَرَهُمُ اللَّهُ فِيمَنْ عِنْدَهُ</div>
+    <div class="arab">وَمَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ وَذَكَرَهُمُ اللَّهُ فِيمَنْ عِنْدَهُ</div>
     <div>“Tidaklah satu kaum berkumpul di sebuah rumah daripada rumah-rumah Allah membaca Kitab Allah dan saling mempelajarinya melainkan turun kepada mereka sakinah, mereka diliputi rahmat, para malaikat mengelilingi mereka, dan Allah menyebut mereka di sisi makhluk yang berada di sisi-Nya.”<span class="footnote-ref"><a href="#fn-10-4-2">【2】</a></span></div>
   </blockquote>
   <p>Rumusan: Dakwah Tauhidi = hati hidup → menghidupkan hati manusia.</p>
@@ -1068,12 +1682,12 @@
   <p>Ini berlaku kerana dakwah sahabat bukan sekadar kata-kata, tetapi nur iman dari hati.</p>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">أَوَمَن كَانَ مَيْتًا فَأَحْيَيْنَاهُ وَجَعَلْنَا لَهُ نُورًا يَمْشِي بِهِ فِي النَّاسِ كَمَن مَّثَلُهُ فِي الظُّلُمَاتِ لَيْسَ بِخَارِجٍ مِّنْهَا</div>
+    <div class="arab">أَوَمَن كَانَ مَيْتًا فَأَحْيَيْنَاهُ وَجَعَلْنَا لَهُ نُورًا يَمْشِي بِهِ فِي النَّاسِ كَمَن مَّثَلُهُ فِي الظُّلُمَاتِ لَيْسَ بِخَارِجٍ مِّنْهَا</div>
     <div>“Adakah orang yang dahulu mati (hatinya) lalu Kami hidupkan dia dan Kami jadikan baginya cahaya yang dengannya dia berjalan di tengah manusia, sama seperti orang yang berada dalam kegelapan yang tidak dapat keluar daripadanya?”<span class="footnote-ref"><a href="#fn-10-4-3">【3】</a></span></div>
   </blockquote>
   <p><strong>Hadith Rasulullah ﷺ:</strong></p>
   <blockquote>
-    <div class="arab">نَضَّرَ اللَّهُ امْرَأً سَمِعَ مِنَّا حَدِيثًا فَحَفِظَهُ حَتَّى يُبَلِّغَهُ فَرُبَّ مُبَلَّغٍ أَوْعَى مِنْ سَامِعٍ</div>
+    <div class="arab">نَضَّرَ اللَّهُ امْرَأً سَمِعَ مِنَّا حَدِيثًا فَحَفِظَهُ حَتَّى يُبَلِّغَهُ فَرُبَّ مُبَلَّغٍ أَوْعَى مِنْ سَامِعٍ</div>
     <div>“Semoga Allah mencerahkan wajah seseorang yang mendengar sesuatu daripadaku lalu dia menyampaikannya; kerana kadang-kadang orang yang disampaikan kepadanya lebih memahami daripada orang yang mendengarnya.”<span class="footnote-ref"><a href="#fn-10-4-4">【4】</a></span></div>
   </blockquote>
   <p>Rumusan Tauhidi: Bahasa dakwah yang sebenar ialah bahasa hati. Apabila hati hidup dengan iman, Allah membuka hati manusia untuk memahaminya.</p>
@@ -1083,7 +1697,7 @@
   <p>Dakwah bukan rekaan manusia. Allah sendiri menunjukkan jalan dakwah Nabi ﷺ.</p>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">قُلْ هَٰذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ عَلَى بَصِيرَةٍ أَنَا وَمَنِ اتَّبَعَنِي</div>
+    <div class="arab">قُلْ هَٰذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ عَلَى بَصِيرَةٍ أَنَا وَمَنِ اتَّبَعَنِي</div>
     <div>“Katakanlah: Inilah jalanku; aku menyeru kepada Allah dengan basirah, aku dan orang yang mengikutiku.”<span class="footnote-ref"><a href="#fn-10-4-5">【5】</a></span></div>
   </blockquote>
   <p>Sirah menunjukkan tertib dakwah:</p>
@@ -1103,7 +1717,7 @@
   <p>Dakwah tanpa korban = aktivisme. Dakwah dengan korban = sunnah.</p>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">انْفِرُوا خِفَافًا وَثِقَالًا وَجَاهِدُوا بِأَمْوَالِكُمْ وَأَنفُسِكُمْ فِي سَبِيلِ اللَّهِ</div>
+    <div class="arab">انْفِرُوا خِفَافًا وَثِقَالًا وَجَاهِدُوا بِأَمْوَالِكُمْ وَأَنفُسِكُمْ فِي سَبِيلِ اللَّهِ</div>
     <div>“Berangkatlah kamu, sama ada dalam keadaan ringan atau berat, dan berjihadlah dengan harta dan diri kamu di jalan Allah.”<span class="footnote-ref"><a href="#fn-10-4-6">【6】</a></span></div>
   </blockquote>
   <p>Sirah 13 tahun Makkah: tiada kuasa, tiada sistem, hanya pengorbanan.</p>
@@ -1113,7 +1727,7 @@
   <p>Dakwah Nabi ﷺ mendahului pengajaran hukum.</p>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">فَذَكِّرْ إِن نَّفَعَتِ الذِّكْرَىٰ</div>
+    <div class="arab">فَذَكِّرْ إِن نَّفَعَتِ الذِّكْرَىٰ</div>
     <div>“Maka berilah peringatan jika peringatan itu bermanfaat.”<span class="footnote-ref"><a href="#fn-10-4-7">【7】</a></span></div>
   </blockquote>
   <p>Sirah menunjukkan: Mus‘ab bin ‘Umair berdakwah dahulu, kemudian mengajar Qur’an.</p>
@@ -1123,7 +1737,7 @@
   <p>Nabi ﷺ membina suasana iman, bukan jadual program.</p>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">وَاصْبِرْ نَفْسَكَ مَعَ الَّذِينَ يَدْعُونَ رَبَّهُم بِالْغَدَاةِ وَالْعَشِيِّ يُرِيدُونَ وَجْهَهُ</div>
+    <div class="arab">وَاصْبِرْ نَفْسَكَ مَعَ الَّذِينَ يَدْعُونَ رَبَّهُم بِالْغَدَاةِ وَالْعَشِيِّ يُرِيدُونَ وَجْهَهُ</div>
     <div>“Bersabarlah engkau bersama orang-orang yang menyeru Tuhan mereka pada waktu pagi dan petang dengan mengharap wajah-Nya.”<span class="footnote-ref"><a href="#fn-10-4-8">【8】</a></span></div>
   </blockquote>
   <p>Sirah Madinah: Masjid Nabawi hidup sepanjang masa: solat, zikir, dakwah, taklim.</p>
@@ -1133,7 +1747,7 @@
   <p>Allah melihat kualiti iman, bukan kuantiti manusia.</p>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً بِإِذْنِ اللَّهِ وَاللَّهُ مَعَ الصَّابِرِينَ</div>
+    <div class="arab">كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً بِإِذْنِ اللَّهِ وَاللَّهُ مَعَ الصَّابِرِينَ</div>
     <div>“Berapa banyak golongan kecil mengalahkan golongan besar dengan izin Allah, dan Allah bersama orang-orang yang sabar.”<span class="footnote-ref"><a href="#fn-10-4-9">【9】</a></span></div>
   </blockquote>
   <p>Contoh Badar: 313 sahabat mengalahkan tentera yang jauh lebih besar.</p>
@@ -1143,7 +1757,7 @@
   <p>Dakwah sahabat tersebar kerana iman mereka menular dari hati ke hati.</p>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">الَّذِينَ يُبَلِّغُونَ رِسَالَاتِ اللَّهِ وَيَخْشَوْنَهُ وَلَا يَخْشَوْنَ أَحَدًا إِلَّا اللَّهَ</div>
+    <div class="arab">الَّذِينَ يُبَلِّغُونَ رِسَالَاتِ اللَّهِ وَيَخْشَوْنَهُ وَلَا يَخْشَوْنَ أَحَدًا إِلَّا اللَّهَ</div>
     <div>“Mereka yang menyampaikan risalah Allah, mereka takut kepada-Nya dan tidak takut kepada sesiapa selain Allah.”<span class="footnote-ref"><a href="#fn-10-4-10">【10】</a></span></div>
   </blockquote>
   <p>Sahabat berdakwah: dalam safar, dalam pasar, dalam rumah, dalam masjid. Sehingga iman menular dalam masyarakat.</p>
@@ -1196,7 +1810,7 @@
   <h3>10.5.1 — Dakwah → Cahaya Pertama Iman</h3>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا وَقَالَ إِنَّنِي مِنَ الْمُسْلِمِينَ</div>
+    <div class="arab">وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا وَقَالَ إِنَّنِي مِنَ الْمُسْلِمِينَ</div>
     <div>“Dan siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah, beramal soleh dan berkata: Sesungguhnya aku termasuk orang-orang yang berserah diri.”<span class="footnote-ref"><a href="#fn-10-5-1">【1】</a></span></div>
   </blockquote>
   <p>Dakwah ialah pintu masuk iman kerana:</p>
@@ -1208,7 +1822,7 @@
   </ul>
   <p><strong>Hadith Rasulullah ﷺ:</strong></p>
   <blockquote>
-    <div class="arab">لَأَنْ يَهْدِيَ اللَّهُ بِكَ رَجُلًا وَاحِدًا خَيْرٌ لَكَ مِنْ حُمْرِ النَّعَمِ</div>
+    <div class="arab">لَأَنْ يَهْدِيَ اللَّهُ بِكَ رَجُلًا وَاحِدًا خَيْرٌ لَكَ مِنْ حُمْرِ النَّعَمِ</div>
     <div>“Sekiranya Allah memberi hidayah kepada seorang manusia melalui kamu, itu lebih baik bagimu daripada unta merah (harta paling berharga).”<span class="footnote-ref"><a href="#fn-10-5-2">【2】</a></span></div>
   </blockquote>
   <p><strong>Sirah:</strong> Orang yang paling awal dan paling kuat imannya — Abu Bakr, Mus‘ab, Asma’, Sumayyah — semuanya ahli dakwah.</p>
@@ -1217,7 +1831,7 @@
   <h3>10.5.2 — Mujahadah → Membersihkan Hati Untuk Iman Masuk</h3>
   <p><strong>Dalil utama:</strong></p>
   <blockquote>
-    <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ اللَّهَ لَمَعَ الْمُحْسِنِينَ</div>
+    <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ اللَّهَ لَمَعَ الْمُحْسِنِينَ</div>
     <div>“Dan orang-orang yang bermujahadah kerana Kami, pasti Kami akan tunjukkan kepada mereka jalan-jalan Kami. Dan sesungguhnya Allah bersama orang-orang yang berbuat baik.”<span class="footnote-ref"><a href="#fn-10-5-3">【3】</a></span></div>
   </blockquote>
   <p>Mujahadah ialah:</p>
@@ -1229,7 +1843,7 @@
   </ul>
   <p><strong>Hadith Rasulullah ﷺ:</strong></p>
   <blockquote>
-    <div class="arab">الْمُجَاهِدُ مَنْ جَاهَدَ نَفْسَهُ فِي طَاعَةِ اللَّهِ</div>
+    <div class="arab">الْمُجَاهِدُ مَنْ جَاهَدَ نَفْسَهُ فِي طَاعَةِ اللَّهِ</div>
     <div>“Orang yang berjihad ialah orang yang berjihad melawan dirinya untuk taat kepada Allah.”<span class="footnote-ref"><a href="#fn-10-5-4">【4】</a></span></div>
   </blockquote>
   <p>Rumusan Kerangka 3 Asbab: Mujahadah = menghidupkan hati → nur hidup → kegelapan hilang.</p>
@@ -1237,7 +1851,7 @@
   <h3>10.5.3 — Sabar → Proses Menstabilkan Nur Iman</h3>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">وَلَنَبْلُوَنَّكُمْ حَتَّىٰ نَعْلَمَ الْمُجَاهِدِينَ مِنكُمْ وَالصَّابِرِينَ وَنَبْلُوَ أَخْبَارَكُمْ</div>
+    <div class="arab">وَلَنَبْلُوَنَّكُمْ حَتَّىٰ نَعْلَمَ الْمُجَاهِدِينَ مِنكُمْ وَالصَّابِرِينَ وَنَبْلُوَ أَخْبَارَكُمْ</div>
     <div>“Dan sesungguhnya Kami akan menguji kamu sehingga Kami mengetahui siapa yang berjihad di antara kamu dan siapa yang sabar, serta Kami menampakkan keadaan kamu.”<span class="footnote-ref"><a href="#fn-10-5-5">【5】</a></span></div>
   </blockquote>
   <p>Sabar ialah:</p>
@@ -1247,7 +1861,7 @@
   </ul>
   <p><strong>Hadith Rasulullah ﷺ:</strong></p>
   <blockquote>
-    <div class="arab">وَمَا أُعْطِيَ أَحَدٌ عَطَاءً خَيْرًا وَأَوْسَعَ مِنَ الصَّبْرِ</div>
+    <div class="arab">وَمَا أُعْطِيَ أَحَدٌ عَطَاءً خَيْرًا وَأَوْسَعَ مِنَ الصَّبْرِ</div>
     <div>“Tidak ada pemberian yang lebih baik dan lebih luas kepada seseorang selain daripada sabar.”<span class="footnote-ref"><a href="#fn-10-5-6">【6】</a></span></div>
   </blockquote>
   <p>Rumusan: Mujahadah menyalakan nur — sabar menstabilkan nur.</p>
@@ -1255,7 +1869,7 @@
   <h3>10.5.4 — Solat Khusyuk → Tanda Iman Sudah Masuk</h3>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">قَدْ أَفْلَحَ الْمُؤْمِنُونَ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ</div>
+    <div class="arab">قَدْ أَفْلَحَ الْمُؤْمِنُونَ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ</div>
     <div>“Sesungguhnya berjayalah orang-orang yang beriman, iaitu mereka yang khusyuk dalam solat mereka.”<span class="footnote-ref"><a href="#fn-10-5-7">【7】</a></span></div>
   </blockquote>
   <p>Solat khusyuk ialah hasil, bukan permulaan. Ia muncul setelah:</p>
@@ -1266,7 +1880,7 @@
   </ul>
   <p><strong>Hadith Rasulullah ﷺ:</strong></p>
   <blockquote>
-    <div class="arab">جُعِلَتْ قُرَّةُ عَيْنِي فِي الصَّلَاةِ</div>
+    <div class="arab">جُعِلَتْ قُرَّةُ عَيْنِي فِي الصَّلَاةِ</div>
     <div>“Dijadikan penyejuk mataku dalam solat.”<span class="footnote-ref"><a href="#fn-10-5-8">【8】</a></span></div>
   </blockquote>
   <p>Rumusan: Solat khusyuk = bukti iman telah stabil dalam hati.</p>
@@ -1274,7 +1888,7 @@
   <h3>10.5.5 — Redha Allah → Objektif Akhir Dakwah</h3>
   <p><strong>Dalil Qur’an:</strong></p>
   <blockquote>
-    <div class="arab">رَضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ ذَٰلِكَ لِمَنْ خَشِيَ رَبَّهُ</div>
+    <div class="arab">رَضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ ذَٰلِكَ لِمَنْ خَشِيَ رَبَّهُ</div>
     <div>“Allah redha kepada mereka dan mereka redha kepada-Nya. Itulah balasan bagi orang yang takut kepada Tuhannya.”<span class="footnote-ref"><a href="#fn-10-5-9">【9】</a></span></div>
   </blockquote>
   <p>Redha ialah:</p>
@@ -1285,7 +1899,7 @@
   </ul>
   <p><strong>Hadith Rasulullah ﷺ:</strong></p>
   <blockquote>
-    <div class="arab">ذَاقَ طَعْمَ الْإِيمَانِ مَنْ رَضِيَ بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِينًا وَبِمُحَمَّدٍ رَسُولًا</div>
+    <div class="arab">ذَاقَ طَعْمَ الْإِيمَانِ مَنْ رَضِيَ بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِينًا وَبِمُحَمَّدٍ رَسُولًا</div>
     <div>“Telah merasai kemanisan iman orang yang redha Allah sebagai Tuhan, Islam sebagai agama dan Muhammad sebagai Rasul.”<span class="footnote-ref"><a href="#fn-10-5-10">【10】</a></span></div>
   </blockquote>
   <p><strong>Sirah:</strong> Para Muhajirin dan Ansar mencapai redha Allah — dan itulah puncak hasil 23 tahun dakwah.</p>
@@ -1363,7 +1977,7 @@
   <p><strong>1. Fokus kepada pembinaan hati</strong></p>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">كَلَّا بَلْ رَانَ عَلَىٰ قُلُوبِهِم مَّا كَانُوا يَكْسِبُونَ</div>
+    <div class="arab">كَلَّا بَلْ رَانَ عَلَىٰ قُلُوبِهِم مَّا كَانُوا يَكْسِبُونَ</div>
     <div>“Sekali-kali tidak! Bahkan apa yang mereka kerjakan telah menutupi hati mereka.”<span class="footnote-ref"><a href="#fn-10-6-1">【1】</a></span></div>
   </blockquote>
   <p>Ayat-ayat Makkah berulang kali membentangkan:</p>
@@ -1442,7 +2056,7 @@
   <p>Selepas iman dan jamaah kuat, barulah Allah membuka fasa sistem.</p>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">أُذِنَ لِلَّذِينَ يُقَاتَلُونَ بِأَنَّهُمْ ظُلِمُوا وَإِنَّ اللَّهَ عَلَىٰ نَصْرِهِمْ لَقَدِيرٌ</div>
+    <div class="arab">أُذِنَ لِلَّذِينَ يُقَاتَلُونَ بِأَنَّهُمْ ظُلِمُوا وَإِنَّ اللَّهَ عَلَىٰ نَصْرِهِمْ لَقَدِيرٌ</div>
     <div>“Diizinkan berperang bagi orang-orang yang diperangi kerana mereka telah dizalimi, dan sesungguhnya Allah benar-benar Maha Kuasa menolong mereka.”<span class="footnote-ref"><a href="#fn-10-6-4">【4】</a></span></div>
   </blockquote>
   <p>Izin ini turun selepas hijrah, bukan di Makkah. ➡ Sistem datang selepas iman kuat.</p>
@@ -1451,7 +2065,7 @@
   <p>Nusrah Allah datang setelah iman dan jamaah stabil.</p>
   <p>Hadith Rasulullah ﷺ:</p>
   <blockquote>
-    <div class="arab">وَاعْلَمْ أَنَّ النَّصْرَ مَعَ الصَّبْرِ وَأَنَّ الْفَرَجَ مَعَ الْكَرْبِ وَأَنَّ مَعَ الْعُسْرِ يُسْرًا</div>
+    <div class="arab">وَاعْلَمْ أَنَّ النَّصْرَ مَعَ الصَّبْرِ وَأَنَّ الْفَرَجَ مَعَ الْكَرْبِ وَأَنَّ مَعَ الْعُسْرِ يُسْرًا</div>
     <div>“Ketahuilah bahawa pertolongan datang bersama kesabaran, kelapangan datang bersama kesusahan, dan bersama kesulitan ada kemudahan.”<span class="footnote-ref"><a href="#fn-10-6-5">【5】</a></span></div>
   </blockquote>
   <p>➡ Nusrah datang selepas sabar dan mujahadah, bukan sebelum.</p>
@@ -1459,7 +2073,7 @@
   <h3>10.6.3 — Dalil Qur’an: Fasa Makkah = Islahiah</h3>
   <p><strong>A) Arahan pertama dakwah</strong></p>
   <blockquote>
-    <div class="arab">يَا أَيُّهَا الْمُدَّثِّرُ قُمْ فَأَنْذِرْ</div>
+    <div class="arab">يَا أَيُّهَا الْمُدَّثِّرُ قُمْ فَأَنْذِرْ</div>
     <div>“Wahai orang yang berselimut! Bangunlah lalu berilah peringatan.”<span class="footnote-ref"><a href="#fn-10-6-6">【6】</a></span></div>
   </blockquote>
   <p>Arahan pertama dakwah:</p>
@@ -1475,13 +2089,13 @@
     <div>“Maka bersabarlah dengan kesabaran yang indah.”<span class="footnote-ref"><a href="#fn-10-6-7">【7】</a></span></div>
   </blockquote>
   <blockquote>
-    <div class="arab">وَاصْبِرْ عَلَىٰ مَا يَقُولُونَ وَسَبِّحْ بِحَمْدِ رَبِّكَ</div>
+    <div class="arab">وَاصْبِرْ عَلَىٰ مَا يَقُولُونَ وَسَبِّحْ بِحَمْدِ رَبِّكَ</div>
     <div>“Bersabarlah terhadap apa yang mereka katakan dan bertasbihlah dengan memuji Tuhanmu.”<span class="footnote-ref"><a href="#fn-10-6-8">【8】</a></span></div>
   </blockquote>
 
   <p><strong>C) Fokus kepada peringatan</strong></p>
   <blockquote>
-    <div class="arab">فَذَكِّرْ إِن نَّفَعَتِ الذِّكْرَىٰ</div>
+    <div class="arab">فَذَكِّرْ إِن نَّفَعَتِ الذِّكْرَىٰ</div>
     <div>“Maka berilah peringatan jika peringatan itu bermanfaat.”<span class="footnote-ref"><a href="#fn-10-6-9">【9】</a></span></div>
   </blockquote>
 
@@ -1562,7 +2176,7 @@
   <p>➡ Mahu mengajak orang lain sebelum membaiki hati sendiri.</p>
   <p>Qur’an menegur:</p>
   <blockquote>
-    <div class="arab">أَتَأْمُرُونَ النَّاسَ بِالْبِرِّ وَتَنسَوْنَ أَنفُسَكُمْ وَأَنتُمْ تَتْلُونَ الْكِتَابَ ۚ أَفَلَا تَعْقِلُونَ</div>
+    <div class="arab">أَتَأْمُرُونَ النَّاسَ بِالْبِرِّ وَتَنسَوْنَ أَنفُسَكُمْ وَأَنتُمْ تَتْلُونَ الْكِتَابَ ۚ أَفَلَا تَعْقِلُونَ</div>
     <div>“Adakah kamu menyuruh manusia berbuat kebaikan sedangkan kamu melupakan diri kamu sendiri, padahal kamu membaca Kitab? Tidakkah kamu berfikir?”<span class="footnote-ref"><a href="#fn-10-7-1">【1】</a></span></div>
   </blockquote>
   <p>Dakwah moden banyak menumpu kepada:</p>
@@ -1603,7 +2217,7 @@
   </ul>
   <p>Sedangkan Allah berfirman:</p>
   <blockquote>
-    <div class="arab">وَاصْبِرْ نَفْسَكَ مَعَ الَّذِينَ يَدْعُونَ رَبَّهُم بِالْغَدَاةِ وَالْعَشِيِّ يُرِيدُونَ وَجْهَهُ</div>
+    <div class="arab">وَاصْبِرْ نَفْسَكَ مَعَ الَّذِينَ يَدْعُونَ رَبَّهُم بِالْغَدَاةِ وَالْعَشِيِّ يُرِيدُونَ وَجْهَهُ</div>
     <div>“Dan bersabarlah engkau bersama orang-orang yang menyeru Tuhan mereka pada waktu pagi dan petang dengan mengharapkan wajah-Nya.”<span class="footnote-ref"><a href="#fn-10-7-2">【2】</a></span></div>
   </blockquote>
   <p>Tanpa suasana, iman tidak stabil. Suasana ialah Asbab Mutlak Asli.</p>
@@ -1619,7 +2233,7 @@
   </ul>
   <p>Sedangkan Allah berfirman:</p>
   <blockquote>
-    <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ اللَّهَ لَمَعَ الْمُحْسِنِينَ</div>
+    <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ اللَّهَ لَمَعَ الْمُحْسِنِينَ</div>
     <div>“Dan orang-orang yang bermujahadah pada jalan Kami, pasti Kami akan tunjukkan kepada mereka jalan-jalan Kami. Dan sesungguhnya Allah benar-benar bersama orang-orang yang berbuat ihsan.”<span class="footnote-ref"><a href="#fn-10-7-3">【3】</a></span></div>
   </blockquote>
   <p>Tanpa mujahadah:</p>
@@ -1658,7 +2272,7 @@
   </ul>
   <p>Sedangkan Allah berfirman:</p>
   <blockquote>
-    <div class="arab">وَالَّذِينَ اسْتَجَابُوا لِرَبِّهِمْ وَأَقَامُوا الصَّلَاةَ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ</div>
+    <div class="arab">وَالَّذِينَ اسْتَجَابُوا لِرَبِّهِمْ وَأَقَامُوا الصَّلَاةَ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ</div>
     <div>“Dan juga bagi orang-orang yang menyahut seruan Tuhan mereka, mendirikan solat, urusan mereka diputuskan dengan syura antara mereka, dan mereka menginfakkan sebahagian daripada apa yang Kami rezekikan kepada mereka.”<span class="footnote-ref"><a href="#fn-10-7-5">【5】</a></span></div>
   </blockquote>
   <p>Tanpa mesyuarat:</p>
@@ -1681,7 +2295,7 @@
   </ul>
   <p>Sedangkan Allah berfirman:</p>
   <blockquote>
-    <div class="arab">وَمَا أَسْأَلُكُمْ عَلَيْهِ مِنْ أَجْرٍ ۖ إِنْ أَجْرِيَ إِلَّا عَلَىٰ رَبِّ الْعَالَمِينَ</div>
+    <div class="arab">وَمَا أَسْأَلُكُمْ عَلَيْهِ مِنْ أَجْرٍ ۖ إِنْ أَجْرِيَ إِلَّا عَلَىٰ رَبِّ الْعَالَمِينَ</div>
     <div>“Dan aku tidak meminta kepada kamu sebarang upah atasnya; upahku hanyalah daripada Tuhan sekalian alam.”<span class="footnote-ref"><a href="#fn-10-7-6">【6】</a></span></div>
   </blockquote>
   <p>Dakwah bergantung kepada harta dan diri sendiri (bi amwālikum wa anfusikum), bukan bergantung kepada pengumpulan dana sebagai sandaran.</p>
@@ -1699,7 +2313,7 @@
   <p>Tetapi tidak dengan hati yang bersandar kepada Allah.</p>
   <p>Allah berfirman:</p>
   <blockquote>
-    <div class="arab">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ ۚ عَلَيْهِ تَوَكَّلْتُ وَإِلَيْهِ أُنِيبُ</div>
+    <div class="arab">وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ ۚ عَلَيْهِ تَوَكَّلْتُ وَإِلَيْهِ أُنِيبُ</div>
     <div>“Dan tidaklah taufikku melainkan dengan Allah. Kepada-Nya aku bertawakkal dan kepada-Nya aku kembali.”<span class="footnote-ref"><a href="#fn-10-7-7">【7】</a></span></div>
   </blockquote>
   <p>Bila hati tidak bersandar kepada Allah, usaha dakwah menjadi:</p>
@@ -1724,7 +2338,7 @@
   <p>Sedangkan dakwah ialah amal mutlak — ibadah.</p>
   <p>Hadith Rasulullah ﷺ:</p>
   <blockquote>
-    <div class="arab">لَأَنْ يَهْدِيَ اللَّهُ بِكَ رَجُلًا وَاحِدًا خَيْرٌ لَكَ مِنْ حُمْرِ النَّعَمِ</div>
+    <div class="arab">لَأَنْ يَهْدِيَ اللَّهُ بِكَ رَجُلًا وَاحِدًا خَيْرٌ لَكَ مِنْ حُمْرِ النَّعَمِ</div>
     <div>“Jika Allah memberi hidayah kepada seorang manusia melalui kamu, itu lebih baik bagimu daripada unta-unta merah.”<span class="footnote-ref"><a href="#fn-10-7-8">【8】</a></span></div>
   </blockquote>
   <p>Dakwah bukan alat untuk mendapatkan:</p>
@@ -1786,7 +2400,7 @@
   <p>Inilah “formula” yang melahirkan Muhajirin dan Ansar, dan formula ini tidak berubah sampai kiamat.</p>
   <p>Allah sendiri yang menjustifikasi mereka:</p>
   <blockquote>
-    <div class="arab">وَالسَّابِقُونَ الأَوَّلُونَ مِنَ الْمُهَاجِرِينَ وَالأَنصَارِ وَالَّذِينَ اتَّبَعُوهُم بِإِحْسَانٍ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ وَأَعَدَّ لَهُمْ جَنَّاتٍ تَجْرِي تَحْتَهَا الأَنْهَارُ خَالِدِينَ فِيهَا أَبَدًا ذَٰلِكَ الْفَوْزُ الْعَظِيمُ</div>
+    <div class="arab">وَالسَّابِقُونَ الأَوَّلُونَ مِنَ الْمُهَاجِرِينَ وَالأَنصَارِ وَالَّذِينَ اتَّبَعُوهُم بِإِحْسَانٍ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ وَأَعَدَّ لَهُمْ جَنَّاتٍ تَجْرِي تَحْتَهَا الأَنْهَارُ خَالِدِينَ فِيهَا أَبَدًا ذَٰلِكَ الْفَوْزُ الْعَظِيمُ</div>
     <div>“Dan orang-orang yang terdahulu lagi pertama-tama dari kalangan Muhajirin dan Ansar serta orang-orang yang mengikuti mereka dengan baik, Allah redha kepada mereka dan mereka redha kepada-Nya, dan Dia menyediakan bagi mereka syurga yang mengalir di bawahnya sungai-sungai; mereka kekal di dalamnya selama-lamanya. Itulah kemenangan yang besar.”<span class="footnote-ref"><a href="#fn-10-8-0">(At-Taubah 9:100)</a></span></div>
   </blockquote>
 
@@ -1810,7 +2424,7 @@
   </ul>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">وَمِنَ النَّاسِ مَن يَتَّخِذُ مِن دُونِ اللَّهِ أَندَادًا يُحِبُّونَهُمْ كَحُبِّ اللَّهِ وَالَّذِينَ آمَنُوا أَشَدُّ حُبًّا لِلَّهِ</div>
+    <div class="arab">وَمِنَ النَّاسِ مَن يَتَّخِذُ مِن دُونِ اللَّهِ أَندَادًا يُحِبُّونَهُمْ كَحُبِّ اللَّهِ وَالَّذِينَ آمَنُوا أَشَدُّ حُبًّا لِلَّهِ</div>
     <div>“Dan di antara manusia ada yang menjadikan tandingan selain Allah; mereka mencintainya sebagaimana mencintai Allah. Adapun orang-orang yang beriman sangat kuat cintanya kepada Allah.”<span class="footnote-ref"><a href="#fn-10-8-1">(Al-Baqarah 2:165)</a></span></div>
   </blockquote>
   <p>Sahabat menjadi kuat kerana rasa iman mereka kuat.</p>
@@ -1820,12 +2434,12 @@
   <p>Dakwah bukan sekadar aktiviti, tetapi penyucian hati sahabat setiap hari.</p>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">ادْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ وَجَادِلْهُم بِالَّتِي هِيَ أَحْسَنُ</div>
+    <div class="arab">ادْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ وَجَادِلْهُم بِالَّتِي هِيَ أَحْسَنُ</div>
     <div>“Serulah ke jalan Tuhanmu dengan hikmah dan nasihat yang baik, dan berdebatlah dengan mereka dengan cara yang paling baik.”<span class="footnote-ref"><a href="#fn-10-8-2">(An-Nahl 16:125)</a></span></div>
   </blockquote>
   <p>Hadith Rasulullah ﷺ:</p>
   <blockquote>
-    <div class="arab">لَأَنْ يَهْدِيَ اللَّهُ بِكَ رَجُلًا وَاحِدًا خَيْرٌ لَكَ مِنْ حُمْرِ النَّعَمِ</div>
+    <div class="arab">لَأَنْ يَهْدِيَ اللَّهُ بِكَ رَجُلًا وَاحِدًا خَيْرٌ لَكَ مِنْ حُمْرِ النَّعَمِ</div>
     <div>“Jika Allah memberi hidayah kepada seorang manusia melalui kamu, itu lebih baik bagimu daripada unta merah.”<span class="footnote-ref"><a href="#fn-10-8-3">【1】</a></span></div>
   </blockquote>
   <p>Dengan dakwah, hati sahabat menjadi: ringan, bersih, tidak terikat dunia, tidak takut manusia.</p>
@@ -1834,12 +2448,12 @@
   <p>Tanpa mujahadah, iman tidak masuk ke dalam hati.</p>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ اللَّهَ لَمَعَ الْمُحْسِنِينَ</div>
+    <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ اللَّهَ لَمَعَ الْمُحْسِنِينَ</div>
     <div>“Dan orang-orang yang bermujahadah pada jalan Kami, pasti Kami akan tunjukkan kepada mereka jalan-jalan Kami. Dan sesungguhnya Allah bersama orang-orang yang berbuat ihsan.”<span class="footnote-ref"><a href="#fn-10-8-4">(Al-‘Ankabut 29:69)</a></span></div>
   </blockquote>
   <p>Hadith Rasulullah ﷺ:</p>
   <blockquote>
-    <div class="arab">الْمُجَاهِدُ مَنْ جَاهَدَ نَفْسَهُ فِي طَاعَةِ اللَّهِ</div>
+    <div class="arab">الْمُجَاهِدُ مَنْ جَاهَدَ نَفْسَهُ فِي طَاعَةِ اللَّهِ</div>
     <div>“Orang yang berjihad ialah orang yang berjihad melawan dirinya untuk taat kepada Allah.”<span class="footnote-ref"><a href="#fn-10-8-5">【2】</a></span></div>
   </blockquote>
   <p>Sahabat: berjalan jauh, berpanas, berjalan malam, sabar dicaci, keluar dari zon selesa. Mujahadah mengaktifkan hati lalu Nur masuk.</p>
@@ -1848,12 +2462,12 @@
   <p>Sahabat duduk lama dalam masjid kerana masjid ialah gelanggang Rasulullah ﷺ. Di sini: malaikat turun, hati lembut, iman naik.</p>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">فِي بُيُوتٍ أَذِنَ اللَّهُ أَنْ تُرْفَعَ وَيُذْكَرَ فِيهَا اسْمُهُ يُسَبِّحُ لَهُ فِيهَا بِالْغُدُوِّ وَالْآصَالِ</div>
+    <div class="arab">فِي بُيُوتٍ أَذِنَ اللَّهُ أَنْ تُرْفَعَ وَيُذْكَرَ فِيهَا اسْمُهُ يُسَبِّحُ لَهُ فِيهَا بِالْغُدُوِّ وَالْآصَالِ</div>
     <div>“Di rumah-rumah yang Allah izinkan untuk dimuliakan dan disebut nama-Nya di dalamnya; di dalamnya orang bertasbih kepada-Nya pada waktu pagi dan petang.”<span class="footnote-ref"><a href="#fn-10-8-6">(An-Nur 24:36)</a></span></div>
   </blockquote>
   <p>Hadith Rasulullah ﷺ:</p>
   <blockquote>
-    <div class="arab">وَمَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ</div>
+    <div class="arab">وَمَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ</div>
     <div>“Tidaklah satu kaum berkumpul di rumah Allah membaca Kitab Allah dan mempelajarinya melainkan sakinah turun kepada mereka, rahmat meliputi mereka dan malaikat mengelilingi mereka.”<span class="footnote-ref"><a href="#fn-10-8-7">【3】</a></span></div>
   </blockquote>
   <p>Sahabat membina dalam masjid: taklim, zikir, solat jamaah, syura, tazkiyah, khidmat. Suasana ini menstabilkan iman.</p>
@@ -1863,7 +2477,7 @@
   <p>Dakwah sahabat bukan individual.</p>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">وَالَّذِينَ اسْتَجَابُوا لِرَبِّهِمْ وَأَقَامُوا الصَّلَاةَ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ</div>
+    <div class="arab">وَالَّذِينَ اسْتَجَابُوا لِرَبِّهِمْ وَأَقَامُوا الصَّلَاةَ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ</div>
     <div>“Dan orang-orang yang menyahut seruan Tuhan mereka, mendirikan solat, urusan mereka diputuskan dengan syura antara mereka, dan mereka menginfakkan sebahagian daripada rezeki yang Kami berikan.”<span class="footnote-ref"><a href="#fn-10-8-8">(Ash-Shura 42:38)</a></span></div>
   </blockquote>
   <p>Masjid menjadi: pusat mesyuarat, pusat keputusan, pusat fikir jamaah.</p>
@@ -1872,7 +2486,7 @@
   <p>Rumah sahabat dipenuhi amal: taklim, tilawah, solat berjemaah, tetamu, dakwah.</p>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">وَأَوْحَيْنَا إِلَىٰ مُوسَىٰ وَأَخِيهِ أَنْ تَبَوَّآ لِقَوْمِكُمَا بِمِصْرَ بُيُوتًا وَاجْعَلُوا بُيُوتَكُمْ قِبْلَةً وَأَقِيمُوا الصَّلَاةَ</div>
+    <div class="arab">وَأَوْحَيْنَا إِلَىٰ مُوسَىٰ وَأَخِيهِ أَنْ تَبَوَّآ لِقَوْمِكُمَا بِمِصْرَ بُيُوتًا وَاجْعَلُوا بُيُوتَكُمْ قِبْلَةً وَأَقِيمُوا الصَّلَاةَ</div>
     <div>“Dan Kami wahyukan kepada Musa dan saudaranya: jadikanlah rumah-rumah bagi kaummu di Mesir, dan jadikanlah rumah-rumah kamu sebagai tempat ibadah serta dirikanlah solat.”<span class="footnote-ref"><a href="#fn-10-8-9">(Yunus 10:87)</a></span></div>
   </blockquote>
   <p>Rumah menjadi lanjutan suasana masjid.</p>
@@ -1881,7 +2495,7 @@
   <p>Sahabat dihantar: Mus‘ab ke Madinah, Mu‘adh ke Yaman, Abu Musa ke Hadramaut, Dihyah ke Rom, delegasi ke Najran.</p>
   <p>Hadith Rasulullah ﷺ ketika menghantar Mu‘adh:</p>
   <blockquote>
-    <div class="arab">إِنَّكَ تَأْتِي قَوْمًا مِنْ أَهْلِ الْكِتَابِ فَلْيَكُنْ أَوَّلَ مَا تَدْعُوهُمْ إِلَيْهِ شَهَادَةُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ</div>
+    <div class="arab">إِنَّكَ تَأْتِي قَوْمًا مِنْ أَهْلِ الْكِتَابِ فَلْيَكُنْ أَوَّلَ مَا تَدْعُوهُمْ إِلَيْهِ شَهَادَةُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ</div>
     <div>“Sesungguhnya engkau akan mendatangi kaum dari kalangan Ahli Kitab, maka hendaklah perkara pertama yang engkau seru mereka kepadanya ialah syahadah bahawa tiada Tuhan selain Allah.”<span class="footnote-ref"><a href="#fn-10-8-10">【4】</a></span></div>
   </blockquote>
   <p>Setiap safar: bina iman, bina rumah, bina jamaah, bina masjid kecil, bina suasana.</p>
@@ -1890,7 +2504,7 @@
   <p>Sistem Madinah tidak dibina di atas dokumen. Ia tumbuh dari amal: Amal → Jamaah → Sistem.</p>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">إِنَّ اللَّهَ يُحِبُّ الَّذِينَ يُقَاتِلُونَ فِي سَبِيلِهِ صَفًّا كَأَنَّهُمْ بُنْيَانٌ مَرْصُوصٌ</div>
+    <div class="arab">إِنَّ اللَّهَ يُحِبُّ الَّذِينَ يُقَاتِلُونَ فِي سَبِيلِهِ صَفًّا كَأَنَّهُمْ بُنْيَانٌ مَرْصُوصٌ</div>
     <div>“Sesungguhnya Allah mencintai orang-orang yang berjuang di jalan-Nya dalam saf yang tersusun seolah-olah mereka bangunan yang kukuh.”<span class="footnote-ref"><a href="#fn-10-8-11">(As-Saff 61:4)</a></span></div>
   </blockquote>
   <p>Saf (jamaah) → melahirkan sistem.</p>
@@ -1899,7 +2513,7 @@
   <p>Nusrah bukan hasil strategi. Ia turun apabila syarat iman dipenuhi.</p>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
+    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
     <div>“Wahai orang-orang yang beriman! Jika kamu menolong agama Allah, nescaya Allah akan menolong kamu dan meneguhkan kedudukan kamu.”<span class="footnote-ref"><a href="#fn-10-8-12">(Muhammad 47:7)</a></span></div>
   </blockquote>
   <p>Sahabat sedikit, tetapi Allah membuka alam.</p>
@@ -1951,7 +2565,7 @@
   <h3>10.9.2 — Dakwah adalah Sunnah Semua Nabi</h3>
   <p>Semua Nabi diutus dengan seruan:</p>
   <blockquote>
-    <div class="arab">يَا قَوْمِ اعْبُدُوا اللَّهَ مَا لَكُم مِّنْ إِلَٰهٍ غَيْرُهُ</div>
+    <div class="arab">يَا قَوْمِ اعْبُدُوا اللَّهَ مَا لَكُم مِّنْ إِلَٰهٍ غَيْرُهُ</div>
     <div>“Wahai kaumku, sembahlah Allah; tiada bagi kamu Tuhan selain Dia.”<br>
     <span class="ref">(Hud 11:50 dan ayat-ayat lain)</span></div>
   </blockquote>
@@ -1968,7 +2582,7 @@
   <p>Contoh: Bani Thaqif. Delegasi mereka duduk beberapa hari dalam Masjid Nabawi, melihat kehidupan iman para sahabat — kemudian hati mereka lembut dan menerima Islam.</p>
   <p>Hadith tentang suasana masjid:</p>
   <blockquote>
-    <div class="arab">وَمَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ</div>
+    <div class="arab">وَمَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ</div>
     <div>“Tidaklah suatu kaum berkumpul di rumah Allah membaca Kitab Allah dan mempelajarinya melainkan sakinah turun kepada mereka, rahmat meliputi mereka dan malaikat mengelilingi mereka.”<span class="footnote-ref"><a href="#fn-10-9-1">【1】</a></span></div>
   </blockquote>
   <p>Inilah tertib Qur’an: iman dahulu, hukum kemudian.</p>
@@ -1976,7 +2590,7 @@
   <h3>10.9.4 — Dakwah Membersihkan Hati Sebelum Menyampaikan Hukum</h3>
   <p>Allah berfirman:</p>
   <blockquote>
-    <div class="arab">هُوَ الَّذِي بَعَثَ فِي الْأُمِّيِّينَ رَسُولًا مِّنْهُمْ يَتْلُو عَلَيْهِمْ آيَاتِهِ وَيُزَكِّيهِمْ وَيُعَلِّمُهُمُ الْكِتَابَ وَالْحِكْمَةَ</div>
+    <div class="arab">هُوَ الَّذِي بَعَثَ فِي الْأُمِّيِّينَ رَسُولًا مِّنْهُمْ يَتْلُو عَلَيْهِمْ آيَاتِهِ وَيُزَكِّيهِمْ وَيُعَلِّمُهُمُ الْكِتَابَ وَالْحِكْمَةَ</div>
     <div>“Dialah yang mengutus kepada kaum yang ummi seorang Rasul dari kalangan mereka, yang membacakan kepada mereka ayat-ayat-Nya, menyucikan mereka, dan mengajarkan kepada mereka Kitab dan hikmah.”<br>
     <span class="ref">(Al-Jumu‘ah 62:2)</span></div>
   </blockquote>
@@ -2014,7 +2628,7 @@
   </ul>
   <p>Hadith Rasulullah ﷺ:</p>
   <blockquote>
-    <div class="arab">سَبْعَةٌ يُظِلُّهُمُ اللَّهُ فِي ظِلِّهِ يَوْمَ لَا ظِلَّ إِلَّا ظِلُّهُ … وَرَجُلٌ قَلْبُهُ مُعَلَّقٌ بِالْمَسَاجِدِ</div>
+    <div class="arab">سَبْعَةٌ يُظِلُّهُمُ اللَّهُ فِي ظِلِّهِ يَوْمَ لَا ظِلَّ إِلَّا ظِلُّهُ … وَرَجُلٌ قَلْبُهُ مُعَلَّقٌ بِالْمَسَاجِدِ</div>
     <div>“Tujuh golongan yang akan mendapat naungan Allah pada hari tiada naungan melainkan naungan-Nya… antaranya ialah seorang lelaki yang hatinya terpaut kepada masjid.”<span class="footnote-ref"><a href="#fn-10-9-2">【2】</a></span></div>
   </blockquote>
   <p>Program boleh mati; suasana tidak mati apabila amal Mutlak hidup.</p>
@@ -2030,7 +2644,7 @@
   </ul>
   <p>Tetapi kerana firman Allah:</p>
   <blockquote>
-    <div class="arab">إِنْ تَنْصُرُوا اللَّهَ يَنْصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
+    <div class="arab">إِنْ تَنْصُرُوا اللَّهَ يَنْصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
     <div>“Jika kamu menolong agama Allah, nescaya Allah akan menolong kamu dan meneguhkan kedudukan kamu.”<br>
     <span class="ref">(Muhammad 47:7)</span></div>
   </blockquote>
@@ -2044,7 +2658,7 @@
   </ul>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">إِنَّكَ لَا تَهْدِي مَنْ أَحْبَبْتَ وَلَكِنَّ اللَّهَ يَهْدِي مَن يَشَاءُ</div>
+    <div class="arab">إِنَّكَ لَا تَهْدِي مَنْ أَحْبَبْتَ وَلَكِنَّ اللَّهَ يَهْدِي مَن يَشَاءُ</div>
     <div>“Sesungguhnya engkau tidak dapat memberi hidayah kepada sesiapa yang engkau cintai, tetapi Allah memberi hidayah kepada sesiapa yang Dia kehendaki.”<br>
     <span class="ref">(Al-Qasas 28:56)</span></div>
   </blockquote>
@@ -2056,7 +2670,7 @@
   <p>Bukan sistem dahulu. Bukan organisasi dahulu. Bukan struktur dahulu.</p>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">إِنَّ اللَّهَ يُحِبُّ الَّذِينَ يُقَاتِلُونَ فِي سَبِيلِهِ صَفًّا كَأَنَّهُم بُنْيَانٌ مَّرْصُوصٌ</div>
+    <div class="arab">إِنَّ اللَّهَ يُحِبُّ الَّذِينَ يُقَاتِلُونَ فِي سَبِيلِهِ صَفًّا كَأَنَّهُم بُنْيَانٌ مَّرْصُوصٌ</div>
     <div>“Sesungguhnya Allah mencintai orang-orang yang berjuang di jalan-Nya dalam saf yang tersusun seolah-olah mereka bangunan yang kukuh.”<br>
     <span class="ref">(As-Saff 61:4)</span></div>
   </blockquote>
@@ -2074,7 +2688,7 @@
   </ul>
   <p>Hadith Rasulullah ﷺ:</p>
   <blockquote>
-    <div class="arab">أَلَا وَإِنَّ فِي الْجَسَدِ مُضْغَةً إِذَا صَلَحَتْ صَلَحَ الْجَسَدُ كُلُّهُ وَإِذَا فَسَدَتْ فَسَدَ الْجَسَدُ كُلُّهُ أَلَا وَهِيَ الْقَلْبُ</div>
+    <div class="arab">أَلَا وَإِنَّ فِي الْجَسَدِ مُضْغَةً إِذَا صَلَحَتْ صَلَحَ الْجَسَدُ كُلُّهُ وَإِذَا فَسَدَتْ فَسَدَ الْجَسَدُ كُلُّهُ أَلَا وَهِيَ الْقَلْبُ</div>
     <div>“Sesungguhnya dalam jasad ada seketul daging; jika ia baik maka baiklah seluruh jasad, dan jika ia rosak maka rosaklah seluruh jasad. Ketahuilah, itulah hati.”<span class="footnote-ref"><a href="#fn-10-9-3">【3】</a></span></div>
   </blockquote>
   <p>Sunnah sahabat: baiki umat dahulu → dunia akan tunduk.</p>
@@ -2093,7 +2707,7 @@
   <h3>10.9.12 — Dakwah Menjadikan Manusia Wakil Rahmat Allah</h3>
   <p>Dalil Qur’an:</p>
   <blockquote>
-    <div class="arab">وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِلْعَالَمِينَ</div>
+    <div class="arab">وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِلْعَالَمِينَ</div>
     <div>“Dan tidaklah Kami mengutus engkau melainkan sebagai rahmat bagi seluruh alam.”<br>
     <span class="ref">(Al-Anbiya 21:107)</span></div>
   </blockquote>
@@ -2109,7 +2723,7 @@
   </ul>
   <p>Tetapi kepada penolong agama Allah.</p>
   <blockquote>
-    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا إِنْ تَنْصُرُوا اللَّهَ يَنْصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
+    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا إِنْ تَنْصُرُوا اللَّهَ يَنْصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
     <div>“Wahai orang-orang yang beriman! Jika kamu menolong agama Allah, nescaya Allah akan menolong kamu dan meneguhkan kedudukan kamu.”<br>
     <span class="ref">(Muhammad 47:7)</span></div>
   </blockquote>
@@ -2156,7 +2770,7 @@
   <p>Iman tidak hidup dengan bacaan, teori atau maklumat semata-mata.</p>
   <p>Allah berfirman:</p>
   <blockquote>
-    <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ اللَّهَ لَمَعَ الْمُحْسِنِينَ</div>
+    <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا وَإِنَّ اللَّهَ لَمَعَ الْمُحْسِنِينَ</div>
     <div>“Dan orang-orang yang bermujahadah pada jalan Kami, pasti Kami akan tunjukkan kepada mereka jalan-jalan Kami. Dan sesungguhnya Allah bersama orang-orang yang berbuat ihsan.”<br>
     <span class="ref">(Al-‘Ankabut 29:69)</span></div>
   </blockquote>
@@ -2183,7 +2797,7 @@
   Iman masuk tetapi tidak kekal. Amal tidak memberi kesan kerana hati rosak.</p>
   <p>Hadith Rasulullah ﷺ:</p>
   <blockquote>
-    <div class="arab">أَلَا وَإِنَّ فِي الْجَسَدِ مُضْغَةً إِذَا صَلَحَتْ صَلَحَ الْجَسَدُ كُلُّهُ وَإِذَا فَسَدَتْ فَسَدَ الْجَسَدُ كُلُّهُ أَلَا وَهِيَ الْقَلْبُ</div>
+    <div class="arab">أَلَا وَإِنَّ فِي الْجَسَدِ مُضْغَةً إِذَا صَلَحَتْ صَلَحَ الْجَسَدُ كُلُّهُ وَإِذَا فَسَدَتْ فَسَدَ الْجَسَدُ كُلُّهُ أَلَا وَهِيَ الْقَلْبُ</div>
     <div>“Ketahuilah bahawa dalam jasad ada seketul daging; jika ia baik maka baiklah seluruh jasad, dan jika ia rosak maka rosaklah seluruh jasad. Ketahuilah itulah hati.”<span class="footnote-ref"><a href="#fn-10-10-2">【2】</a></span></div>
   </blockquote>
   <p><strong>(2) Amal fatamorgana</strong> – Amal banyak tetapi tanpa nur.</p>
@@ -2214,7 +2828,7 @@
   </ul>
   <p>Dakwah sahabat bergantung kepada firman Allah:</p>
   <blockquote>
-    <div class="arab">وَمَا النَّصْرُ إِلَّا مِنْ عِندِ اللَّهِ الْعَزِيزِ الْحَكِيمِ</div>
+    <div class="arab">وَمَا النَّصْرُ إِلَّا مِنْ عِندِ اللَّهِ الْعَزِيزِ الْحَكِيمِ</div>
     <div>“Dan kemenangan itu tidak datang melainkan daripada Allah Yang Maha Perkasa lagi Maha Bijaksana.”<br>
     <span class="ref">(Ali ‘Imran 3:126)</span></div>
   </blockquote>
@@ -2223,7 +2837,7 @@
   <h3>10.10.6 — Dakwah Membersihkan Hati Sebelum Menyampaikan Hukum</h3>
   <p>Allah berfirman:</p>
   <blockquote>
-    <div class="arab">هُوَ الَّذِي بَعَثَ فِي الْأُمِّيِّينَ رَسُولًا مِّنْهُمْ يَتْلُو عَلَيْهِمْ آيَاتِهِ وَيُزَكِّيهِمْ وَيُعَلِّمُهُمُ الْكِتَابَ وَالْحِكْمَةَ</div>
+    <div class="arab">هُوَ الَّذِي بَعَثَ فِي الْأُمِّيِّينَ رَسُولًا مِّنْهُمْ يَتْلُو عَلَيْهِمْ آيَاتِهِ وَيُزَكِّيهِمْ وَيُعَلِّمُهُمُ الْكِتَابَ وَالْحِكْمَةَ</div>
     <div>“Dialah yang mengutus kepada kaum yang ummi seorang Rasul dari kalangan mereka, yang membacakan kepada mereka ayat-ayat-Nya, menyucikan mereka, dan mengajarkan kepada mereka Kitab dan hikmah.”<br>
     <span class="ref">(Al-Jumu‘ah 62:2)</span></div>
   </blockquote>
@@ -2238,7 +2852,7 @@
   <h3>10.10.7 — Dakwah Melahirkan Sifat Rahmah</h3>
   <p>Allah berfirman:</p>
   <blockquote>
-    <div class="arab">وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِلْعَالَمِينَ</div>
+    <div class="arab">وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِلْعَالَمِينَ</div>
     <div>“Dan tidaklah Kami mengutus engkau melainkan sebagai rahmat bagi seluruh alam.”<br>
     <span class="ref">(Al-Anbiya 21:107)</span></div>
   </blockquote>
@@ -2289,7 +2903,7 @@
   </ul>
   <p>Nusrah turun kepada mereka yang menolong agama Allah.</p>
   <blockquote>
-    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا إِنْ تَنْصُرُوا اللَّهَ يَنْصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
+    <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا إِنْ تَنْصُرُوا اللَّهَ يَنْصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
     <div>“Wahai orang-orang yang beriman! Jika kamu menolong agama Allah, nescaya Allah akan menolong kamu dan meneguhkan kedudukan kamu.”<br>
     <span class="ref">(Muhammad 47:7)</span></div>
   </blockquote>
@@ -2347,7 +2961,7 @@
   <p>Lebih daripada 30 tempat dalam al-Qur’an menghubungkan iman dengan pengorbanan diri dan harta.</p>
   <p>Allah berfirman:</p>
   <blockquote>
-    <div class="arab">تُجَاهِدُونَ فِي سَبِيلِ اللَّهِ بِأَمْوَالِكُمْ وَأَنْفُسِكُمْ ذَٰلِكُمْ خَيْرٌ لَّكُمْ إِن كُنتُمْ تَعْلَمُونَ</div>
+    <div class="arab">تُجَاهِدُونَ فِي سَبِيلِ اللَّهِ بِأَمْوَالِكُمْ وَأَنْفُسِكُمْ ذَٰلِكُمْ خَيْرٌ لَّكُمْ إِن كُنتُمْ تَعْلَمُونَ</div>
     <div>“(Iaitu) kamu berjihad pada jalan Allah dengan harta kamu dan diri kamu. Yang demikian itu lebih baik bagi kamu jika kamu mengetahui.”<br>
     <span class="ref">(As-Saff 61:11)</span></div>
   </blockquote>
@@ -2369,7 +2983,7 @@
   <p>Allah menolak prestasi zahir tanpa takwa.</p>
   <p>Allah berfirman:</p>
   <blockquote>
-    <div class="arab">لَنْ يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا وَلَٰكِن يَنَالُهُ التَّقْوَى مِنكُمْ</div>
+    <div class="arab">لَنْ يَنَالَ اللَّهَ لُحُومُهَا وَلَا دِمَاؤُهَا وَلَٰكِن يَنَالُهُ التَّقْوَى مِنكُمْ</div>
     <div>“Daging dan darah korban itu tidak sekali-kali sampai kepada Allah, tetapi yang sampai kepada-Nya ialah ketakwaan daripada kamu.”<br>
     <span class="ref">(Al-Hajj 22:37)</span></div>
   </blockquote>
@@ -2384,7 +2998,7 @@
   <p>Sahabat bukan menjadi orang besar kerana banyak kuliah. Mereka menjadi sahabat kerana mereka keluar, bukan kerana mereka duduk.</p>
   <p>Dalil:</p>
   <blockquote>
-    <div class="arab">وَالَّذِينَ هَاجَرُوا فِي سَبِيلِ اللَّهِ مِن بَعْدِ مَا ظُلِمُوا لَنُبَوِّئَنَّهُمْ فِي الدُّنْيَا حَسَنَةً وَلَأَجْرُ الْآخِرَةِ أَكْبَرُ</div>
+    <div class="arab">وَالَّذِينَ هَاجَرُوا فِي سَبِيلِ اللَّهِ مِن بَعْدِ مَا ظُلِمُوا لَنُبَوِّئَنَّهُمْ فِي الدُّنْيَا حَسَنَةً وَلَأَجْرُ الْآخِرَةِ أَكْبَرُ</div>
     <div>“Dan orang-orang yang berhijrah pada jalan Allah setelah mereka dizalimi, pasti Kami akan tempatkan mereka di dunia pada tempat yang baik, dan pahala akhirat itu lebih besar.”<br>
     <span class="ref">(An-Nahl 16:41)</span></div>
   </blockquote>
@@ -2398,7 +3012,7 @@
   <p>Ini adalah korban diri.</p>
   <p>Hadith Rasulullah ﷺ:</p>
   <blockquote>
-    <div class="arab">الْمُهَاجِرُ مَنْ هَجَرَ مَا نَهَى اللَّهُ عَنْهُ</div>
+    <div class="arab">الْمُهَاجِرُ مَنْ هَجَرَ مَا نَهَى اللَّهُ عَنْهُ</div>
     <div>“Orang yang berhijrah ialah orang yang meninggalkan apa yang dilarang oleh Allah.”<span class="footnote-ref"><a href="#fn-10-11-1">【1】</a></span></div>
   </blockquote>
   <p>Tanpa korban diri: hati tidak bergerak → iman tidak naik.</p>
@@ -2407,14 +3021,14 @@
   <p>Allah menjadikan harta sebagai kompas iman.</p>
   <p>Dalil:</p>
   <blockquote>
-    <div class="arab">لَنْ تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ</div>
+    <div class="arab">لَنْ تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ</div>
     <div>“Kamu tidak akan mencapai kebajikan sehingga kamu menginfakkan apa yang kamu cintai.”<br>
     <span class="ref">(Ali ‘Imran 3:92)</span></div>
   </blockquote>
   <p>Sahabat menginfakkan: rumah, kebun, tanah, perniagaan, simpanan, emas.</p>
   <p>Hadith Rasulullah ﷺ tentang infak Abu Bakar r.a.:</p>
   <blockquote>
-    <div class="arab">مَا نَفَعَنِي مَالٌ قَطُّ مَا نَفَعَنِي مَالُ أَبِي بَكْرٍ</div>
+    <div class="arab">مَا نَفَعَنِي مَالٌ قَطُّ مَا نَفَعَنِي مَالُ أَبِي بَكْرٍ</div>
     <div>“Tidak pernah ada harta yang memberi manfaat kepadaku seperti manfaat harta Abu Bakar.”<span class="footnote-ref"><a href="#fn-10-11-2">【2】</a></span></div>
   </blockquote>
   <p>Kerana harta adalah tanda cinta.</p>
@@ -2427,13 +3041,13 @@
   <p>Masa ialah modal hidup yang paling adil. Semua manusia mendapat jumlah masa yang sama. Perbezaannya ialah apa yang mereka korbankan daripada masa itu.</p>
   <p>Dalil:</p>
   <blockquote>
-    <div class="arab">وَالْعَصْرِ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ</div>
+    <div class="arab">وَالْعَصْرِ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ</div>
     <div>“Demi masa. Sesungguhnya manusia berada dalam kerugian, kecuali orang-orang yang beriman, beramal soleh, saling berpesan dengan kebenaran dan saling berpesan dengan kesabaran.”<br>
     <span class="ref">(Al-‘Asr 103:1-3)</span></div>
   </blockquote>
   <p>Hadith Rasulullah ﷺ:</p>
   <blockquote>
-    <div class="arab">نِعْمَتَانِ مَغْبُونٌ فِيهِمَا كَثِيرٌ مِنَ النَّاسِ الصِّحَّةُ وَالْفَرَاغُ</div>
+    <div class="arab">نِعْمَتَانِ مَغْبُونٌ فِيهِمَا كَثِيرٌ مِنَ النَّاسِ الصِّحَّةُ وَالْفَرَاغُ</div>
     <div>“Dua nikmat yang banyak manusia rugi padanya: kesihatan dan masa lapang.”<span class="footnote-ref"><a href="#fn-10-11-3">【3】</a></span></div>
   </blockquote>
   <p>Masa yang diberikan untuk agama menghasilkan nur yang stabil dalam hati.</p>
@@ -2474,7 +3088,7 @@
   <h3>🟥 10.11.8 — Korban Melahirkan Kualiti Muhajirin & Ansar</h3>
   <p>At-Taubah 100:</p>
   <blockquote>
-    <div class="arab">رَضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ</div>
+    <div class="arab">رَضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ</div>
     <div>“Allah redha kepada mereka dan mereka redha kepada-Nya.”<br>
     <span class="ref">(At-Taubah 9:100)</span></div>
   </blockquote>
@@ -2495,7 +3109,7 @@
   <p>Bahasa lidah memerlukan ilmu. Bahasa hati memerlukan pengorbanan.</p>
   <p>Hadith Rasulullah ﷺ:</p>
   <blockquote>
-    <div class="arab">لَأَنْ يَهْدِيَ اللَّهُ بِكَ رَجُلًا وَاحِدًا خَيْرٌ لَكَ مِنْ حُمْرِ النَّعَمِ</div>
+    <div class="arab">لَأَنْ يَهْدِيَ اللَّهُ بِكَ رَجُلًا وَاحِدًا خَيْرٌ لَكَ مِنْ حُمْرِ النَّعَمِ</div>
     <div>“Jika Allah memberi hidayah kepada seorang manusia melalui kamu, itu lebih baik bagimu daripada unta merah.”<span class="footnote-ref"><a href="#fn-10-11-5">【5】</a></span></div>
   </blockquote>
   <p>Pengorbanan menjadikan dakwah:</p>
@@ -2560,17 +3174,43 @@
     </article>
   </main>
 
+    </article>
+  </main>
+
   <footer>
-    <div class="wrap">
-      <div>
-        <a href="index.html">Home</a> ·
-        <a href="bab-9.html">Bab 9</a> ·
-        <a href="bab-11.html">Bab 11</a>
-      </div>
-      <div class="meta" style="margin-top:8px">Nota: Laman ini arkib baca sahaja.</div>
-    </div>
+    <p>© 3asbab.org — Arkib bacaan sahaja. Bab 10: Mukadimah Dakwah Tauhid.</p>
   </footer>
+
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn ? btn.innerHTML : '';
+
+      if (btn) {
+        btn.innerHTML = '⏳ Menyediakan PDF...';
+        btn.disabled = true;
+      }
+
+      setTimeout(() => {
+        window.print();
+
+        setTimeout(() => {
+          if (btn) {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+          }
+        }, 800);
+      }, 200);
+    }
+
+    // smooth scroll ke atas
+    document.querySelectorAll('a[href="#top"]').forEach(el => {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
 
 </body>
 </html>
-```
