@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ms">
 <head>
   <meta charset="UTF-8">
@@ -6,6 +6,7 @@
   <title>Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI | 3asbab.org</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     :root {
       --max-width: 920px;
       --border-light: #e2e8f0;
@@ -22,71 +23,481 @@
       --pdf-muted: #5b6573;
       --pdf-paper: #fffefb;
     }
-    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif; background: white; color: var(--text-dark); line-height: 1.7; scroll-behavior: smooth; }
-    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 clamp(1.2rem, 4vw, 1.8rem); }
-    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
-    .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.75rem 0; }
-    .topbar a { text-decoration: none; font-size: 0.9rem; color: var(--text-dark); }
-    .brand { font-weight: 700; margin-right: 0.5rem; }
-    header { padding: 1.5rem 0 0.5rem 0; }
-    h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.25; margin: 0.25rem 0 0.5rem; }
-    .meta { color: var(--muted); font-size: 0.85rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; }
-    .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 48px; z-index: 15; background: rgba(255,255,255,0.98); }
-    .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.7rem 0; align-items: center; font-size: 0.8rem; }
-    .jump a { padding: 0.2rem 0.7rem; border-radius: 40px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.1s ease; color: var(--text-dark); }
-    .jump a:hover { border-color: var(--accent); background: var(--accent-light); }
-    main { padding: 1.2rem 0 3rem; }
-    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.2rem 0.8rem; border-radius: 30px; margin-bottom: 0.8rem; }
-    h2 { font-size: 1.6rem; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 600; }
-    h3 { font-size: 1.25rem; margin: 1.2rem 0 0.5rem; font-weight: 600; color: #0b3b2a; }
-    p { margin: 0.6rem 0; }
-    ul, ol { margin: 0.5rem 0 0.8rem 1.4rem; }
-    li { margin: 0.3rem 0; }
-    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.2rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
-    .arabic { font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif; font-size: 1.6rem; line-height: 1.8; direction: rtl; text-align: right; margin: 0.8rem 0; color: #1e293b; }
-    .translation { background: #f8fafc; padding: 0.6rem 1rem; border-radius: 0.8rem; margin: 0.5rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.95rem; }
-    blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.8rem 1.2rem; margin: 1rem 0; font-style: normal; }
-    .insight-box { background: #f1f5f9; padding: 0.8rem 1.2rem; border-radius: 1rem; margin: 1rem 0; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
-    th, td { border: 1px solid var(--border-light); padding: 0.6rem; text-align: left; vertical-align: top; }
-    th { background: #f1f5f9; font-weight: 600; }
-    hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
-    .footnote { font-size: 0.8rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
-    .toplink { font-size: 0.75rem; margin-top: 0.8rem; display: inline-block; }
-    footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.8rem; margin-top: 1rem; }
-    .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
-    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
-    .btn-pdf:active { transform: translateY(1px); }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+      background: white;
+      color: var(--text-dark);
+      line-height: 1.8;
+    }
+
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 clamp(1.2rem, 4vw, 1.8rem);
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(6px);
+    }
+
+    .topbar nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.75rem 0;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    .brand {
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    header {
+      padding: 1.5rem 0 0.5rem 0;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      line-height: 1.25;
+      margin: 0.25rem 0 0.5rem;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+
+    .jump {
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 48px;
+      z-index: 15;
+      background: rgba(255,255,255,0.98);
+    }
+
+    .jump-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.7rem 0;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    .jump a {
+      padding: 0.24rem 0.72rem;
+      border-radius: 40px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.1s ease;
+      color: var(--text-dark);
+    }
+
+    .jump a:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+
+    main {
+      padding: 1.2rem 0 3rem;
+    }
+
+    .badge-chapter {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      background: #fef3c7;
+      color: #b45309;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      margin-bottom: 0.8rem;
+    }
+
+    .subbadge {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.78rem;
+      background: #eef6ff;
+      color: #1d4ed8;
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 1.8rem 0 0.85rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.9rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin: 1.2rem 0 0.65rem;
+      font-weight: 600;
+      color: #0b3b2a;
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      margin: 0.25rem 0 1rem;
+      color: #0b3b2a;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    h5 {
+      font-size: 1rem;
+      margin: 1rem 0 0.7rem;
+      color: #1f2937;
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    p {
+      margin: 0.75rem 0;
+      line-height: 1.85;
+    }
+
+    ul, ol {
+      margin: 0.75rem 0 1.1rem 1.5rem;
+    }
+
+    li {
+      margin: 0.55rem 0;
+      line-height: 1.85;
+    }
+
+    .section-card,
+    .section {
+      background: var(--bg-soft);
+      border-radius: 1.2rem;
+      padding: 1.25rem 1.45rem;
+      margin: 1.25rem 0;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .block {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 1rem;
+      padding: 1rem 1.1rem;
+      margin: 1.05rem 0 1.25rem;
+    }
+
+    .label {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #0b3b2a;
+      background: var(--accent-light);
+      border: 1px solid #cfe8da;
+      border-radius: 999px;
+      padding: 0.28rem 0.75rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .arabic,
+    .arab {
+      font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
+      font-size: 1.6rem;
+      line-height: 1.9;
+      direction: rtl;
+      text-align: right;
+      margin: 0.8rem 0;
+      color: #1e293b;
+    }
+
+    .translation {
+      background: #f8fafc;
+      padding: 0.7rem 1rem;
+      border-radius: 0.8rem;
+      margin: 0.55rem 0 1rem;
+      border-left: 3px solid var(--accent);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    blockquote {
+      background: var(--accent-light);
+      border-radius: 0.8rem;
+      padding: 0.9rem 1.2rem;
+      margin: 1rem 0;
+      font-style: normal;
+      line-height: 1.85;
+    }
+
+    .quotes {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 0.9rem;
+    }
+
+    .quote {
+      background: #f8fafc;
+      border: 1px solid var(--border-light);
+      border-left: 4px solid var(--accent);
+      border-radius: 0.9rem;
+      padding: 0.95rem 1rem;
+    }
+
+    .ms {
+      margin-top: 0.55rem;
+      line-height: 1.85;
+      color: #334155;
+    }
+
+    .ref {
+      display: inline-block;
+      margin-left: 0.35rem;
+      color: var(--muted);
+      font-size: 0.92em;
+    }
+
+    .note {
+      border-radius: 1rem;
+      padding: 0.95rem 1rem;
+      margin: 1rem 0;
+      line-height: 1.85;
+    }
+
+    .highlight {
+      background: #fffbea;
+      border: 1px solid #f6e7b8;
+    }
+
+    .insight-box {
+      background: #f1f5f9;
+      padding: 0.9rem 1.2rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+      line-height: 1.85;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.93rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border-light);
+      padding: 0.72rem;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.75;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+
+    hr {
+      margin: 1.6rem 0;
+      border: 0;
+      height: 1px;
+      background: var(--border-light);
+    }
+
+    .footnote,
+    .footnotes {
+      font-size: 0.84rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
+    }
+
+    .footnotes ol li {
+      margin: 0.75rem 0;
+      line-height: 1.8;
+    }
+
+    .toplink {
+      font-size: 0.78rem;
+      margin-top: 0.85rem;
+      display: inline-block;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .pdf-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0 8px;
+    }
+
+    .btn-pdf {
+      appearance: none;
+      border: 1px solid var(--pdf-border);
+      background: #fff;
+      color: var(--pdf-text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
+
+    .btn-pdf:hover {
+      border-color: var(--pdf-accent);
+      background: var(--pdf-accent-soft);
+    }
+
+    .btn-pdf:active {
+      transform: translateY(1px);
+    }
+
     .no-print { display: block; }
     .pdf-only { display: none; }
     .pdf-exporting .pdf-only { display: block !important; }
-    .pdf-exporting .no-print, .pdf-exporting .pdf-toolbar, .pdf-exporting .topbar, .pdf-exporting .jump, .pdf-exporting .toplink { display: none !important; }
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink { display: none !important; }
+
     .pdf-shell { background: #fff; }
     .pdf-cover { display: none; }
-    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
-    .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
-    .pdf-cover-brand { font-size: 0.95rem; letter-spacing: .12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
-    .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
-    .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
-    .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
-    .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
+
+    .pdf-cover-inner {
+      min-height: 260mm;
+      padding: 28mm 18mm 24mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--pdf-paper);
+      color: var(--pdf-text);
+    }
+
+    .pdf-cover-top {
+      border-top: 4px solid var(--pdf-accent);
+      padding-top: 12mm;
+    }
+
+    .pdf-cover-brand {
+      font-size: 0.95rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--pdf-muted);
+      margin-bottom: 10mm;
+    }
+
+    .pdf-cover-series {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 6mm;
+    }
+
+    .pdf-cover-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 5mm;
+      font-weight: 800;
+    }
+
+    .pdf-cover-subtitle {
+      font-size: 1rem;
+      color: var(--pdf-muted);
+      margin: 0;
+    }
+
+    .pdf-cover-bottom {
+      border-top: 1px solid var(--pdf-border);
+      padding-top: 8mm;
+      font-size: 0.95rem;
+      color: var(--pdf-muted);
+    }
+
     .pdf-meta-page { display: none; }
-    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
-    .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
-    .pdf-meta-list p { margin: 0 0 6mm; }
-    .pdf-break { break-before: page; page-break-before: always; }
-    .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
+
+    .pdf-meta-inner {
+      min-height: 240mm;
+      padding: 20mm 16mm;
+      background: #fff;
+      color: var(--pdf-text);
+    }
+
+    .pdf-meta-inner h2 {
+      border: 0;
+      padding: 0;
+      margin: 0 0 10mm;
+      font-size: 1.4rem;
+    }
+
+    .pdf-meta-list p {
+      margin: 0 0 6mm;
+    }
+
+    .pdf-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .pdf-avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
     @media print {
       body { margin: 0; padding: 0; }
       .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
       .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
-      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
-      h2, h3 { break-after: avoid; page-break-after: avoid; }
+      .section-card, .section, .block, blockquote, .insight-box, .quote { break-inside: avoid; page-break-inside: avoid; }
+      h2, h3, h4, h5 { break-after: avoid; page-break-after: avoid; }
     }
+
     @media (max-width: 640px) {
-      .section-card { padding: 1rem; }
-      .arabic { font-size: 1.3rem; }
+      .section-card,
+      .section { padding: 1rem; }
+
+      .block { padding: 0.9rem; }
+
+      .arabic,
+      .arab { font-size: 1.3rem; }
+
+      table { font-size: 0.88rem; }
+
+      ul, ol { margin-left: 1.2rem; }
     }
   </style>
 </head>
@@ -161,484 +572,573 @@
 
     <main class="wrap">
 
+      <!-- =============================================================== -->
+      <!-- 3.1 -->
+      <!-- =============================================================== -->
       <section class="section-card" id="3-1">
         <div class="badge-chapter">🟥 BAB 3.1</div>
 
-        
+        <h2>3.1 MUKADIMAH SIRAH TAUHIDI</h2>
+        <p><strong>Sirah = Mekanisme Allah Mendidik Manusia</strong></p>
 
+        <p>Sirah para Nabi bukan cerita sejarah.<br>
+        Ia adalah mekanisme tarbiah Allah, yang menunjukkan:<br>
+        1. bagaimana hati mukmin berinteraksi dengan Asbab Fitrah,<br>
+        2. bagaimana mereka menolak Asbab Zulumat,<br>
+        3. bagaimana mereka berpaut sepenuhnya kepada Asbab Mutlak.</p>
 
-  <h2>3.1 MUKADIMAH SIRAH TAUHIDI</h2>
-  <p><strong>Sirah = Mekanisme Allah Mendidik Manusia</strong></p>
-  <p>Sirah para Nabi bukan cerita sejarah.<br>
-  Ia adalah mekanisme tarbiah Allah, yang menunjukkan:<br>
-  1. bagaimana hati mukmin berinteraksi dengan Asbab Fitrah,<br>
-  2. bagaimana mereka menolak Asbab Zulumat,<br>
-  3. bagaimana mereka berpaut sepenuhnya kepada Asbab Mutlak.</p>
-  <p>Allah berfirman:</p>
-  <blockquote class="arab">
-    لَقَدْ كَانَ فِي قَصَصِهِمْ عِبْرَةٌ
-  </blockquote>
-  <p>“Sesungguhnya pada kisah-kisah mereka itu ada pengajaran.”<br>— Yūsuf 12:111 <sup>【1】</sup></p>
-  <p>Sirah ialah panduan membaca realiti, kerana semua Nabi hidup dalam tiga asbab yang sama dengan umat hari ini:</p>
-  <div style="overflow-x:auto;">
-    <table>
-      <tr><th>Asbab</th><th>Zaman Nabi</th><th>Zaman Kita</th></tr>
-      <tr><td><strong>Fitrah</strong></td><td>laut, api, sakit, teknologi</td><td>ekonomi, sains, kerja, politik</td></tr>
-      <tr><td><strong>Zulumat</strong></td><td>Firaun, Namrud, kaum kufur</td><td>kapitalisme, demokrasi, liberalisme</td></tr>
-      <tr><td><strong>Mutlak</strong></td><td>wahyu, doa, sabar, tawakkal</td><td>wahyu & sunnah yang sama</td></tr>
-    </table>
-  </div>
-  <p>Kerangka 3 Asbab hanya menjadi hidup apabila dibaca melalui sirah, kerana sirah ialah peta sebenar tentang bagaimana Allah membentuk kemenangan iman.</p>
-  <div class="footnote">【1】Yūsuf 12:111</div>
-  <a class="toplink" href="#top">↑ Atas</a>
-</section>
-<!-- === SECTION 3.1 END === -->
+        <p>Allah berfirman:</p>
 
-<!-- === SECTION 3.2 START === -->
-<section class="section" id="3-2">
-<!-- =============================================================== -->
-<!-- Jump links -->
-  <div class="jump">
-    <div class="wrap">
-      <div class="inner">
-        <strong>Lompat ke:</strong>
-        <a href="#[R01].[K01]"> [R01].[K01]</a>
-        <a href="#[R01].[K02]"> [R01].[K02]</a>
-        
+        <blockquote class="arab">
+          لَقَدْ كَانَ فِي قَصَصِهِمْ عِبْرَةٌ
+        </blockquote>
 
+        <p>“Sesungguhnya pada kisah-kisah mereka itu ada pengajaran.”<br>— Yūsuf 12:111 <sup>【1】</sup></p>
+
+        <p>Sirah ialah panduan membaca realiti, kerana semua Nabi hidup dalam tiga asbab yang sama dengan umat hari ini:</p>
+
+        <div style="overflow-x:auto;">
+          <table>
+            <tr>
+              <th>Asbab</th>
+              <th>Zaman Nabi</th>
+              <th>Zaman Kita</th>
+            </tr>
+            <tr>
+              <td><strong>Fitrah</strong></td>
+              <td>laut, api, sakit, teknologi</td>
+              <td>ekonomi, sains, kerja, politik</td>
+            </tr>
+            <tr>
+              <td><strong>Zulumat</strong></td>
+              <td>Firaun, Namrud, kaum kufur</td>
+              <td>kapitalisme, demokrasi, liberalisme</td>
+            </tr>
+            <tr>
+              <td><strong>Mutlak</strong></td>
+              <td>wahyu, doa, sabar, tawakkal</td>
+              <td>wahyu &amp; sunnah yang sama</td>
+            </tr>
+          </table>
+        </div>
+
+        <p>Kerangka 3 Asbab hanya menjadi hidup apabila dibaca melalui sirah, kerana sirah ialah peta sebenar tentang bagaimana Allah membentuk kemenangan iman.</p>
+
+        <div class="footnote">【1】Yūsuf 12:111</div>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- =============================================================== -->
+      <!-- 3.2 -->
+      <!-- =============================================================== -->
+      <section class="section-card" id="3-2">
+        <div class="badge-chapter">🟥 BAB 3.2</div>
+        <h2>3.2 — NABI ADAM عليه السلام</h2>
+        <p><em>Permulaan manusia, amanah khalifah, dan ujian ketaatan pertama.</em></p>
+
+        <div class="insight-box no-print">
+          <strong>🧭 Lompat ke kisah:</strong><br><br>
+          <a href="#3-2-r01-k01">[R01].[K01] Penciptaan Adam &amp; Pengajaran Nama</a><br>
+          <a href="#3-2-r01-k02">[R01].[K02] Sujud Malaikat &amp; Keingkaran Iblis</a><br>
+          <a href="#3-2-r01-k03">[R01].[K03] Syurga sebagai Medan Ujian</a>
+        </div>
+      </section>
+
+      <!-- =============================================================== -->
+      <!-- 3.2.[R01].[K01] -->
+      <!-- =============================================================== -->
+      <section class="section" id="3-2-r01-k01">
+        <div class="subbadge">3.2 — R01 • K01</div>
+        <h4>3.2.[R01].[K01] — Penciptaan Adam &amp; Pengajaran Nama</h4>
+
+        <div class="block">
+          <div class="label">A. TEKS KISAH (NARATIF WAHYU)</div>
+
+          <h5>A1. Naratif Kisah</h5>
+          <ul>
+            <li>Allah memberitahu para malaikat bahawa Dia akan menjadikan seorang khalifah di bumi.</li>
+            <li>Para malaikat bertanya tentang hikmah penciptaan makhluk yang berpotensi melakukan kerosakan dan menumpahkan darah, sedangkan mereka sentiasa bertasbih dan menyucikan Allah.</li>
+            <li>Allah menjawab bahawa Dia mengetahui apa yang mereka tidak ketahui.</li>
+            <li>Allah menciptakan Adam عليه السلام dan mengajarkannya nama-nama segala sesuatu.</li>
+            <li>Allah memerintahkan agar nama-nama tersebut diberitahu kepada para malaikat.</li>
+            <li>Para malaikat mengakui bahawa mereka tidak memiliki pengetahuan kecuali apa yang Allah ajarkan kepada mereka.</li>
+            <li>Adam عليه السلام menyampaikan nama-nama itu sebagaimana yang diajarkan oleh Allah.</li>
+            <li>Allah menzahirkan kelebihan Adam عليه السلام melalui ilmu yang Dia kurniakan, dan membenarkan ketetapan-Nya untuk menjadikan Adam sebagai khalifah di bumi.</li>
+          </ul>
+
+          <h5>A2. Petikan Wahyu Utama</h5>
+          <div class="quotes">
+            <div class="quote">
+              <div class="arabic">
+                وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً
+              </div>
+              <div class="ms">
+                “Dan (ingatlah) ketika Tuhanmu berfirman kepada para malaikat: Sesungguhnya Aku hendak menjadikan seorang khalifah di bumi.”
+                <span class="ref">(al-Baqarah 2:30)</span>
+              </div>
+            </div>
+
+            <div class="quote">
+              <div class="arabic">
+                وَعَلَّمَ آدَمَ الْأَسْمَاءَ كُلَّهَا
+              </div>
+              <div class="ms">
+                “Dan Dia mengajarkan kepada Adam nama-nama semuanya.”
+                <span class="ref">(al-Baqarah 2:31)</span>
+              </div>
+            </div>
+
+            <div class="quote">
+              <div class="arabic">
+                قَالُوا سُبْحَانَكَ لَا عِلْمَ لَنَا إِلَّا مَا عَلَّمْتَنَا
+              </div>
+              <div class="ms">
+                “Mereka berkata: Maha Suci Engkau, tidak ada pengetahuan bagi kami kecuali apa yang Engkau ajarkan kepada kami.”
+                <span class="ref">(al-Baqarah 2:32)</span>
+              </div>
+            </div>
+
+            <div class="quote">
+              <div class="arabic">
+                قَالَ يَا آدَمُ أَنبِئْهُم بِأَسْمَائِهِمْ
+              </div>
+              <div class="ms">
+                “Allah berfirman: Wahai Adam, beritahukanlah kepada mereka nama-nama itu.”
+                <span class="ref">(al-Baqarah 2:33)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="label">B. ANALISIS TAUHIDI KISAH (KERANGKA 3 ASBAB)</div>
+
+          <h5>B1. Latar Wahyu</h5>
+          <ul>
+            <li><strong>Di mana:</strong> Di alam sebelum kehidupan manusia bermula di bumi.</li>
+            <li><strong>Bila:</strong> Sebelum Adam عليه السلام diturunkan sebagai khalifah.</li>
+            <li><strong>Kepada siapa:</strong> Ditujukan kepada Rasulullah ﷺ untuk menjelaskan asas kedudukan manusia dan amanah khalifah.</li>
+            <li><strong>Keadaan ketika itu:</strong> Belum wujud masyarakat manusia; yang wujud hanyalah Allah, malaikat, dan Adam عليه السلام.</li>
+          </ul>
+
+          <h5>B2. Asbab Fitrah dalam Kisah</h5>
+          <p><strong>Asbab Fitrah yang hadir:</strong></p>
+          <ul>
+            <li>Penciptaan jasad Adam عليه السلام,</li>
+            <li>Keupayaan menerima ilmu,</li>
+            <li>Kebolehan mengenal dan menamakan sesuatu,</li>
+            <li>Keterbatasan pengetahuan malaikat.</li>
+          </ul>
+          <p>Asbab Fitrah ini menyediakan kapasiti amanah, tetapi tidak memberi nilai iman secara sendiri.</p>
+
+          <h5>B3. Asbab Zulumat dalam Kisah</h5>
+          <p>Dalam kisah ini, Asbab Zulumat belum berfungsi sebagai penentangan, tetapi bayangannya muncul melalui:</p>
+          <ul>
+            <li>Penilaian berdasarkan potensi kerosakan,</li>
+            <li>Perbandingan antara ibadah dan amanah.</li>
+          </ul>
+          <p>Ia belum menjadi penolakan, tetapi menjadi latar kepada ujian seterusnya.</p>
+
+          <h5>B4. Asbab Mutlak dalam Kisah</h5>
+          <p><strong>Asbab Mutlak yang hadir:</strong></p>
+          <ul>
+            <li>Keputusan Allah mencipta Adam عليه السلام,</li>
+            <li>Pengajaran nama-nama oleh Allah sendiri,</li>
+            <li>Ketetapan Allah menjadikan Adam sebagai khalifah.</li>
+          </ul>
+          <p>Ilmu Adam عليه السلام ialah pemberian wahyu, bukan hasil usaha.</p>
+
+          <h5>B5. Keputusan Allah (Natijah Wahyu)</h5>
+          <p>Allah menetapkan bahawa:</p>
+          <ol>
+            <li>Adam عليه السلام dimuliakan dengan ilmu.</li>
+            <li>Para malaikat mengakui keterbatasan mereka.</li>
+            <li>Keputusan khalifah adalah hak Allah sepenuhnya.</li>
+          </ol>
+
+          <h5>B6. Ibrah Dalaman Kisah</h5>
+          <ul>
+            <li>Kemuliaan manusia bermula dengan amanah.</li>
+            <li>Ilmu tidak bernilai tanpa tunduk kepada Allah.</li>
+            <li>Iman hidup apabila hati menerima keputusan Allah tanpa menjadikan akal sebagai hakim.</li>
+          </ul>
+
+          <h5>B7. Rujukan Wahyu</h5>
+          <ul>
+            <li>al-Baqarah 2:30–33</li>
+          </ul>
+        </div>
+
+        <div class="block footnotes">
+          <div class="label">C. NOTA KAKI</div>
+          <ol>
+            <li id="fn-3-2-r01-k01-1">al-Baqarah 2:30 — “Sesungguhnya Aku hendak menjadikan seorang khalifah di bumi.”</li>
+            <li id="fn-3-2-r01-k01-2">al-Baqarah 2:31 — “Dan Dia mengajarkan kepada Adam nama-nama semuanya.”</li>
+            <li id="fn-3-2-r01-k01-3">al-Baqarah 2:32–33 — “Tidak ada ilmu bagi kami kecuali apa yang Engkau ajarkan kepada kami” / “Wahai Adam, beritahukanlah kepada mereka nama-nama itu.”</li>
+          </ol>
+        </div>
+
+        <a class="toplink" href="#3-2">← Kembali ke Nabi Adam</a>
+      </section>
+
+      <!-- =============================================================== -->
+      <!-- 3.2.[R01].[K02] -->
+      <!-- =============================================================== -->
+      <section class="section" id="3-2-r01-k02">
+        <div class="subbadge">3.2 — R01 • K02</div>
+        <h4>3.2.[R01].[K02] — Sujud Malaikat &amp; Keingkaran Iblis</h4>
+
+        <div class="block">
+          <div class="label">A. TEKS KISAH (NARATIF WAHYU)</div>
+
+          <h5>A1. Naratif Kisah</h5>
+          <ul>
+            <li>Allah menciptakan Nabi Adam عليه السلام, lalu menyempurnakan kejadiannya.</li>
+            <li>Allah memerintahkan para malaikat supaya sujud kepada Nabi Adam عليه السلام.</li>
+            <li>Para malaikat semuanya sujud sebagaimana perintah Allah.</li>
+            <li>Namun Iblis enggan dan engkar; dia menolak perintah Allah dan menyombongkan diri.</li>
+            <li>Iblis berkata bahawa dirinya lebih baik daripada Nabi Adam عليه السلام; dia berhujah bahawa dia diciptakan daripada api, sedangkan Adam diciptakan daripada tanah.</li>
+            <li>Allah menetapkan bahawa Iblis telah berlaku takbur dan enggan tunduk kepada perintah-Nya; Iblis diusir dan dilaknat, serta tidak lagi mempunyai kedudukan di sisi Allah.</li>
+            <li>Iblis memohon penangguhan sehingga Hari Kiamat; Allah mengizinkan penangguhan itu, dan menetapkan bahawa Iblis serta pengikutnya akan menjadi penghuni neraka.</li>
+          </ul>
+
+          <h5>A2. Petikan Wahyu Utama</h5>
+          <div class="quotes">
+            <div class="quote">
+              <div class="arabic">
+                وَإِذْ قُلْنَا لِلْمَلَائِكَةِ اسْجُدُوا لِآدَمَ فَسَجَدُوا إِلَّا إِبْلِيسَ أَبَىٰ وَاسْتَكْبَرَ وَكَانَ مِنَ الْكَافِرِينَ
+              </div>
+              <div class="ms">
+                “Dan (ingatlah) ketika Kami berfirman kepada para malaikat: ‘Sujudlah kamu kepada Adam’, lalu mereka semua sujud kecuali Iblis; dia enggan dan menyombongkan diri, dan dia termasuk dalam golongan orang-orang yang kafir.”
+                <span class="ref">(al-Baqarah 2:34)</span>
+              </div>
+            </div>
+
+            <div class="quote">
+              <div class="arabic">
+                قَالَ أَنَا خَيْرٌ مِّنْهُ خَلَقْتَنِي مِن نَّارٍ وَخَلَقْتَهُ مِن طِينٍ
+              </div>
+              <div class="ms">
+                “Iblis berkata: ‘Aku lebih baik daripadanya; Engkau ciptakan aku daripada api, dan Engkau ciptakan dia daripada tanah.’”
+                <span class="ref">(al-A‘rāf 7:12)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="label">B. ANALISIS TAUHIDI KISAH (KERANGKA 3 ASBAB)</div>
+          <p class="meta">Analisis ini hanya merujuk kepada Bahagian A. Tidak dibenarkan membawa bahan luar kisah.</p>
+
+          <h5>B1. Latar Wahyu</h5>
+          <ul>
+            <li><strong>Di mana:</strong> Di alam perintah sebelum kehidupan manusia bermula di bumi.</li>
+            <li><strong>Bila:</strong> Selepas penciptaan Nabi Adam عليه السلام dan sebelum peristiwa penempatan di syurga.</li>
+            <li><strong>Kepada siapa:</strong> Diturunkan kepada Rasulullah ﷺ untuk menjelaskan punca awal keangkuhan makhluk, perbezaan antara ketaatan dan keengganan, serta asal penentangan terhadap perintah Allah.</li>
+            <li><strong>Keadaan ketika itu:</strong> Tiada manusia lain; yang wujud hanyalah Allah, para malaikat, Nabi Adam عليه السلام, dan Iblis.</li>
+          </ul>
+
+          <h5>B2. Asbab Fitrah dalam Kisah</h5>
+          <p><strong>Asbab Fitrah yang hadir dalam peristiwa ini:</strong></p>
+          <ul>
+            <li>Perbezaan bahan penciptaan (tanah dan api),</li>
+            <li>Keupayaan makhluk memahami perintah,</li>
+            <li>Kebolehan memilih sama ada taat atau enggan,</li>
+            <li>Kewujudan perbezaan darjat pada pandangan makhluk.</li>
+          </ul>
+          <p>Asbab Fitrah ini menyediakan medan ujian ketaatan, tidak memberi nilai iman, dan tidak menentukan kemuliaan di sisi Allah. Kemuliaan tidak lahir daripada asal kejadian, tetapi daripada tunduk kepada perintah Allah.</p>
+
+          <h5>B3. Asbab Zulumat dalam Kisah</h5>
+          <p>Asbab Zulumat berfungsi melalui penipuan makna dan keangkuhan.</p>
+          <p><strong>Bentuk Asbab Zulumat yang muncul:</strong></p>
+          <ul>
+            <li>Menilai perintah Allah menggunakan perbandingan ciptaan,</li>
+            <li>Menjadikan logik diri sebagai hakim wahyu,</li>
+            <li>Menganggap ketaatan sebagai sesuatu yang tidak adil,</li>
+            <li>Mengangkat “aku lebih baik” sebagai asas penolakan.</li>
+          </ul>
+          <p><strong>Prinsip Scammer (Asbab Zulumat):</strong></p>
+          <ul>
+            <li>Menukar perintah menjadi perdebatan,</li>
+            <li>Menukar ketaatan menjadi hujah kepentingan diri,</li>
+            <li>Menanam rasa “aku lebih tahu” daripada Allah.</li>
+          </ul>
+          <p>Iblis tidak menafikan kewujudan Allah, tetapi menolak hak Allah untuk ditaati tanpa soal.</p>
+
+          <h5>B4. Asbab Mutlak dalam Kisah</h5>
+          <p><strong>Asbab Mutlak dalam kisah ini ialah:</strong></p>
+          <ul>
+            <li>Perintah Allah supaya sujud kepada Nabi Adam عليه السلام,</li>
+            <li>Penetapan Allah tentang kemuliaan Nabi Adam عليه السلام,</li>
+            <li>Keputusan Allah terhadap keengganan Iblis.</li>
+          </ul>
+          <p><strong>Perintah ini:</strong></p>
+          <ul>
+            <li>Datang terus daripada Allah,</li>
+            <li>Tidak memerlukan hujah,</li>
+            <li>Menjadi pemisah antara iman dan kufur.</li>
+          </ul>
+          <p>Iman diuji melalui tunduk hati, bukan melalui kefahaman logik.</p>
+
+          <h5>B5. Keputusan Allah (Natijah Wahyu)</h5>
+          <p>Allah menetapkan bahawa:</p>
+          <ol>
+            <li>Para malaikat dimuliakan kerana ketaatan.</li>
+            <li>Iblis dilaknat kerana keengganan dan kesombongan.</li>
+            <li>Kedudukan boleh gugur kerana keangkuhan.</li>
+            <li>Ketaatan lebih tinggi daripada asal kejadian.</li>
+          </ol>
+          <p>Keputusan Allah tidak dirunding, tidak dibahaskan, dan tidak tertakluk kepada justifikasi makhluk.</p>
+
+          <h5>B6. Ibrah Dalaman Kisah</h5>
+          <p>Ibrah dalaman daripada kisah ini:</p>
+          <ul>
+            <li>Iman hidup dengan tunduk, bukan hujah.</li>
+            <li>Kufur boleh bermula daripada rasa “aku lebih baik”.</li>
+            <li>Mengenal Allah tidak sama dengan taat kepada Allah.</li>
+            <li>Asal kejadian tidak menjamin kemuliaan.</li>
+            <li>Keangkuhan ialah pintu awal penentangan terhadap wahyu.</li>
+          </ul>
+          <p>Ini ialah kisah penolakan tunduk, bukan kisah kejahilan.</p>
+
+          <h5>B7. Rujukan Wahyu</h5>
+          <ul>
+            <li>al-Baqarah 2:34</li>
+            <li>al-A‘rāf 7:11–13</li>
+            <li>Ṣād 38:71–78</li>
+          </ul>
+        </div>
+
+        <div class="block footnotes">
+          <div class="label">C. NOTA KAKI</div>
+          <ol>
+            <li id="fn-3-2-r01-k02-1">al-Baqarah 2:34 — “Sujudlah kamu kepada Adam ... kecuali Iblis; dia enggan, menyombongkan diri, dan termasuk orang kafir.”</li>
+            <li id="fn-3-2-r01-k02-2">al-A‘rāf 7:12 — “Aku lebih baik daripadanya; Engkau ciptakan aku daripada api dan dia daripada tanah.”</li>
+            <li id="fn-3-2-r01-k02-3">Ṣād 38:74–78 — “Kecuali Iblis; dia sombong dan menjadi daripada golongan kafir” / “Maka keluarlah engkau, sesungguhnya engkau terlaknat.”</li>
+          </ol>
+        </div>
+
+        <a class="toplink" href="#3-2">← Kembali ke Nabi Adam</a>
+      </section>
+
+      <!-- =============================================================== -->
+      <!-- 3.2.[R01].[K03] -->
+      <!-- =============================================================== -->
+      <section class="section" id="3-2-r01-k03">
+        <div class="subbadge">3.2 — R01 • K03</div>
+        <h4>3.2.[R01].[K03] — Syurga sebagai Medan Ujian</h4>
+
+        <div class="block">
+          <div class="label">A. TEKS KISAH (NARATIF WAHYU)</div>
+          <p class="meta">
+            Bahagian ini tidak dianalisis. Tiada istilah Asbab digunakan.
+            Tujuan: menghidupkan kisah sebagaimana wahyu.
+          </p>
+
+          <h5>A1. Naratif Kisah</h5>
+          <ul>
+            <li>Allah menempatkan Nabi Adam عليه السلام dan isterinya di dalam syurga.</li>
+            <li>Allah mengizinkan mereka menikmati segala yang ada di dalamnya dengan kelapangan dan kenikmatan.</li>
+            <li>Allah menetapkan satu larangan yang jelas kepada Nabi Adam عليه السلام dan isterinya, iaitu mereka tidak boleh mendekati satu pohon tertentu.</li>
+            <li>Allah menjelaskan bahawa larangan itu adalah batas yang tidak boleh dilanggar.</li>
+            <li>Dalam keadaan nikmat dan kelapangan tersebut, syurga menjadi tempat tinggal sementara bagi Nabi Adam عليه السلام dan isterinya, sebagai medan ujian ketaatan kepada perintah Allah.</li>
+          </ul>
+
+          <div class="note highlight">
+            📌 <strong>Prinsip:</strong><br>
+            Jika pembaca berhenti di sini, dia telah memahami bahawa syurga bukan sekadar tempat nikmat,
+            tetapi ruang ujian awal bagi manusia.
+          </div>
+
+          <h5>A2. Petikan Wahyu Utama</h5>
+          <div class="quotes">
+            <div class="quote">
+              <div class="arabic">
+                وَقُلْنَا يَا آدَمُ اسْكُنْ أَنتَ وَزَوْجُكَ الْجَنَّةَ
+              </div>
+              <div class="ms">
+                “Kami berfirman: Wahai Adam, tinggallah engkau dan isterimu di dalam syurga.”
+                <span class="ref">(al-Baqarah 2:35)</span>
+              </div>
+            </div>
+
+            <div class="quote">
+              <div class="arabic">
+                وَكُلَا مِنْهَا رَغَدًا حَيْثُ شِئْتُمَا
+              </div>
+              <div class="ms">
+                “Dan makanlah kamu berdua daripadanya dengan bebas, di mana sahaja kamu kehendaki.”
+                <span class="ref">(al-Baqarah 2:35)</span>
+              </div>
+            </div>
+
+            <div class="quote">
+              <div class="arabic">
+                وَلَا تَقْرَبَا هَٰذِهِ الشَّجَرَةَ
+              </div>
+              <div class="ms">
+                “Dan janganlah kamu berdua mendekati pohon ini.”
+                <span class="ref">(al-Baqarah 2:35)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="label">B. ANALISIS TAUHIDI KISAH (KERANGKA 3 ASBAB)</div>
+          <p class="meta">
+            Analisis ini hanya merujuk kepada Bahagian A.
+            Tidak dibenarkan membawa bahan luar kisah.
+          </p>
+
+          <h5>B1. Latar Wahyu</h5>
+          <ul>
+            <li><strong>Di mana:</strong> Di syurga, sebelum kehidupan manusia bermula di bumi.</li>
+            <li><strong>Bila:</strong> Selepas penciptaan Nabi Adam عليه السلام dan sebelum peristiwa pelanggaran larangan.</li>
+            <li><strong>Kepada siapa:</strong> Diturunkan kepada Rasulullah ﷺ untuk menjelaskan bahawa ujian manusia bermula sebelum bumi, dan ketaatan didahulukan sebelum amanah khalifah.</li>
+            <li><strong>Keadaan ketika itu:</strong> Tiada masyarakat, tiada sistem sosial; hanya Nabi Adam عليه السلام, isterinya, dan perintah Allah.</li>
+          </ul>
+
+          <h5>B2. Asbab Fitrah dalam Kisah</h5>
+          <p><strong>Asbab Fitrah yang hadir dalam peristiwa ini:</strong></p>
+          <ul>
+            <li>Suasana nikmat dan kelapangan,</li>
+            <li>Kemampuan memilih dan bergerak,</li>
+            <li>Keinginan menikmati yang diizinkan,</li>
+            <li>Kewujudan satu batas larangan.</li>
+          </ul>
+          <p>Asbab Fitrah ini menyediakan ruang ujian, tetapi tidak menentukan nilai iman dan tidak menjamin keselamatan. Nikmat tidak menjadi ukuran ketaatan. Ketaatan diuji ketika nikmat hadir.</p>
+
+          <h5>B3. Asbab Zulumat dalam Kisah</h5>
+          <p>Dalam kisah ini, Asbab Zulumat belum berfungsi secara aktif, tetapi ruangnya telah tersedia.</p>
+          <p><strong>Ruang tersebut wujud melalui:</strong></p>
+          <ul>
+            <li>Kemungkinan menilai larangan sebagai sekatan,</li>
+            <li>Kecenderungan melihat larangan sebagai pengurangan nikmat,</li>
+            <li>Potensi menimbang perintah Allah dengan rasa ingin.</li>
+          </ul>
+          <p>Ini belum menjadi penentangan, tetapi menjadi pintu ujian dalaman.</p>
+
+          <h5>B4. Asbab Mutlak dalam Kisah</h5>
+          <p><strong>Asbab Mutlak dalam kisah ini ialah:</strong></p>
+          <ul>
+            <li>Perintah Allah untuk tinggal di syurga,</li>
+            <li>Keizinan Allah menikmati nikmat,</li>
+            <li>Larangan Allah terhadap satu pohon tertentu.</li>
+          </ul>
+          <p>Larangan ini datang terus daripada Allah, tidak disertai hujah panjang, dan menjadi penimbang arah tunduk hati. Ketaatan tidak diukur melalui banyaknya yang dihalalkan, tetapi melalui ketaatan terhadap satu larangan.</p>
+
+          <h5>B5. Keputusan Allah (Natijah Wahyu)</h5>
+          <p>Dalam peringkat ini, Allah menetapkan:</p>
+          <ol>
+            <li>Syurga sebagai tempat tinggal sementara.</li>
+            <li>Nikmat sebagai latar ujian, bukan ganjaran kekal.</li>
+            <li>Larangan sebagai sempadan ketaatan.</li>
+          </ol>
+          <p>Belum ada hukuman. Belum ada penyingkiran. Yang ada hanyalah medan ujian yang jelas.</p>
+
+          <h5>B6. Ibrah Dalaman Kisah</h5>
+          <ul>
+            <li>Ujian tidak bermula dengan kesusahan, tetapi dengan nikmat.</li>
+            <li>Ketaatan diuji walaupun tanpa tekanan.</li>
+            <li>Satu larangan cukup untuk menimbang iman.</li>
+            <li>Syurga sendiri boleh menjadi medan ujian jika perintah Allah dilanggar.</li>
+          </ul>
+          <p>Iman bukan diuji ketika terdesak, tetapi ketika diberi kelapangan.</p>
+
+          <h5>B7. Rujukan Wahyu</h5>
+          <ul>
+            <li>al-Baqarah 2:35</li>
+            <li>al-A‘rāf 7:19</li>
+          </ul>
+        </div>
+
+        <div class="block footnotes">
+          <div class="label">C. NOTA KAKI</div>
+          <ol>
+            <li id="fn-3-2-r01-k03-1">al-Baqarah 2:35 — “Wahai Adam, tinggallah engkau dan isterimu di dalam syurga ... dan janganlah kamu berdua mendekati pohon ini.”</li>
+            <li id="fn-3-2-r01-k03-2">al-A‘rāf 7:19 — “Wahai Adam, tinggallah engkau dan isterimu di dalam syurga, maka makanlah dari mana sahaja yang kamu kehendaki, dan jangan dekati pokok ini.”</li>
+            <li id="fn-3-2-r01-k03-3">Prinsip ujian ketaatan sebelum amanah khalifah – Kerangka 3 Asbab (Bab 1)</li>
+          </ol>
+        </div>
+
+        <a class="toplink" href="#3-2">← Kembali ke Nabi Adam</a>
+      </section>
+
+      <!-- =============================================================== -->
+      <!-- Placeholder 3.3 -->
+      <!-- =============================================================== -->
+      <section class="section-card" id="3-3">
+        <div class="badge-chapter">🟥 BAB 3.3</div>
+        <h2>3.3 — [Sambung Kandungan]</h2>
+        <p>Letakkan sub-bab seterusnya di sini dengan struktur yang sama seperti Bab 3.2.</p>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- =============================================================== -->
+      <!-- Placeholder 3.4 -->
+      <!-- =============================================================== -->
+      <section class="section-card" id="3-4">
+        <div class="badge-chapter">🟥 BAB 3.4</div>
+        <h2>3.4 — [Sambung Kandungan]</h2>
+        <p>Letakkan sub-bab seterusnya di sini dengan struktur yang sama seperti Bab 3.2.</p>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- =============================================================== -->
+      <!-- Placeholder 3.5 -->
+      <!-- =============================================================== -->
+      <section class="section-card" id="3-5">
+        <div class="badge-chapter">🟥 BAB 3.5</div>
+        <h2>3.5 — [Sambung Kandungan]</h2>
+        <p>Letakkan sub-bab seterusnya di sini dengan struktur yang sama seperti Bab 3.2.</p>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>© 3asbab.org — Arkib bacaan sahaja. Sirah Tauhidi: membaca kisah para Nabi melalui lensa 3 jenis Asbab.</p>
       </div>
-    </div>
+    </footer>
+
   </div>
 
-<!-- 3.2.[R01].[K01] — ADAM: Penciptaan & Nama                      -->
-<!-- =============================================================== -->
-<section class="section" id="3-2-r01-k01">
-  <div class="subbadge">3.2 — R01 • K01</div>
-  <h4>3.2.[R01].[K01] — Penciptaan Adam &amp; Pengajaran Nama</h4>
-  
-  <!-- A) TEKS KISAH (NARATIF WAHYU) -->
-  <div class="block">
-    <div class="label">A. TEKS KISAH (NARATIF WAHYU)</div>
-  
-    <h5>A1. Naratif Kisah</h5>
-    <ul>
-      <li>Allah memberitahu para malaikat bahawa Dia akan menjadikan seorang khalifah di bumi.</li>
-      <li>Para malaikat bertanya tentang hikmah penciptaan makhluk yang berpotensi melakukan kerosakan dan menumpahkan darah, sedangkan mereka sentiasa bertasbih dan menyucikan Allah.</li>
-      <li>Allah menjawab bahawa Dia mengetahui apa yang mereka tidak ketahui.</li>
-      <li>Allah menciptakan Adam عليه السلام dan mengajarkannya nama-nama segala sesuatu.</li>
-      <li>Allah memerintahkan agar nama-nama tersebut diberitahu kepada para malaikat.</li>
-      <li>Para malaikat mengakui bahawa mereka tidak memiliki pengetahuan kecuali apa yang Allah ajarkan kepada mereka.</li>
-      <li>Adam عليه السلام menyampaikan nama-nama itu sebagaimana yang diajarkan oleh Allah.</li>
-      <li>Allah menzahirkan kelebihan Adam عليه السلام melalui ilmu yang Dia kurniakan, dan membenarkan ketetapan-Nya untuk menjadikan Adam sebagai khalifah di bumi.</li>
-    </ul>
-  
-    <h5>A2. Petikan Wahyu Utama</h5>
-    <div class="quotes">
-      <div class="quote">
-        <div class="arabic">
-          وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً
-        </div>
-        <div class="ms">
-          “Dan (ingatlah) ketika Tuhanmu berfirman kepada para malaikat: Sesungguhnya Aku hendak menjadikan seorang khalifah di bumi.”
-          <span class="ref">(al-Baqarah 2:30)</span>
-        </div>
-      </div>
-      <div class="quote">
-        <div class="arabic">
-          وَعَلَّمَ آدَمَ الْأَسْمَاءَ كُلَّهَا
-        </div>
-        <div class="ms">
-          “Dan Dia mengajarkan kepada Adam nama-nama semuanya.”
-          <span class="ref">(al-Baqarah 2:31)</span>
-        </div>
-      </div>
-      <div class="quote">
-        <div class="arabic">
-          قَالُوا سُبْحَانَكَ لَا عِلْمَ لَنَا إِلَّا مَا عَلَّمْتَنَا
-        </div>
-        <div class="ms">
-          “Mereka berkata: Maha Suci Engkau, tidak ada pengetahuan bagi kami kecuali apa yang Engkau ajarkan kepada kami.”
-          <span class="ref">(al-Baqarah 2:32)</span>
-        </div>
-      </div>
-      <div class="quote">
-        <div class="arabic">
-          قَالَ يَا آدَمُ أَنبِئْهُم بِأَسْمَائِهِمْ
-        </div>
-        <div class="ms">
-          “Allah berfirman: Wahai Adam, beritahukanlah kepada mereka nama-nama itu.”
-          <span class="ref">(al-Baqarah 2:33)</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- B) ANALISIS TAUHIDI (KERANGKA 3 ASBAB) -->
-  <div class="block">
-    <div class="label">B. ANALISIS TAUHIDI KISAH (KERANGKA 3 ASBAB)</div>
-  
-    <h5>B1. Latar Wahyu</h5>
-    <ul>
-      <li><strong>Di mana:</strong> Di alam sebelum kehidupan manusia bermula di bumi.</li>
-      <li><strong>Bila:</strong> Sebelum Adam عليه السلام diturunkan sebagai khalifah.</li>
-      <li><strong>Kepada siapa:</strong> Ditujukan kepada Rasulullah ﷺ untuk menjelaskan asas kedudukan manusia dan amanah khalifah.</li>
-      <li><strong>Keadaan ketika itu:</strong> Belum wujud masyarakat manusia; yang wujud hanyalah Allah, malaikat, dan Adam عليه السلام.</li>
-    </ul>
-  
-    <h5>B2. Asbab Fitrah dalam Kisah</h5>
-    <p><strong>Asbab Fitrah yang hadir:</strong></p>
-    <ul>
-      <li>Penciptaan jasad Adam عليه السلام,</li>
-      <li>Keupayaan menerima ilmu,</li>
-      <li>Kebolehan mengenal dan menamakan sesuatu,</li>
-      <li>Keterbatasan pengetahuan malaikat.</li>
-    </ul>
-    <p>Asbab Fitrah ini menyediakan kapasiti amanah, tetapi tidak memberi nilai iman secara sendiri.</p>
-  
-    <h5>B3. Asbab Zulumat dalam Kisah</h5>
-    <p>Dalam kisah ini, Asbab Zulumat belum berfungsi sebagai penentangan, tetapi bayangannya muncul melalui:</p>
-    <ul>
-      <li>Penilaian berdasarkan potensi kerosakan,</li>
-      <li>Perbandingan antara ibadah dan amanah.</li>
-    </ul>
-    <p>Ia belum menjadi penolakan, tetapi menjadi latar kepada ujian seterusnya.</p>
-  
-    <h5>B4. Asbab Mutlak dalam Kisah</h5>
-    <p><strong>Asbab Mutlak yang hadir:</strong></p>
-    <ul>
-      <li>Keputusan Allah mencipta Adam عليه السلام,</li>
-      <li>Pengajaran nama-nama oleh Allah sendiri,</li>
-      <li>Ketetapan Allah menjadikan Adam sebagai khalifah.</li>
-    </ul>
-    <p>Ilmu Adam عليه السلام ialah pemberian wahyu, bukan hasil usaha.</p>
-  
-    <h5>B5. Keputusan Allah (Natijah Wahyu)</h5>
-    <p>Allah menetapkan bahawa:</p>
-    <ol>
-      <li>Adam عليه السلام dimuliakan dengan ilmu.</li>
-      <li>Para malaikat mengakui keterbatasan mereka.</li>
-      <li>Keputusan khalifah adalah hak Allah sepenuhnya.</li>
-    </ol>
-  
-    <h5>B6. Ibrah Dalaman Kisah</h5>
-    <ul>
-      <li>Kemuliaan manusia bermula dengan amanah.</li>
-      <li>Ilmu tidak bernilai tanpa tunduk kepada Allah.</li>
-      <li>Iman hidup apabila hati menerima keputusan Allah tanpa menjadikan akal sebagai hakim.</li>
-    </ul>
-  
-    <h5>B7. Rujukan Wahyu</h5>
-    <ul>
-      <li>al-Baqarah 2:30–33</li>
-    </ul>
-  </div>
-  
-  <!-- C) NOTA KAKI -->
-  <div class="block footnotes">
-    <div class="label">C. NOTA KAKI</div>
-    <ol>
-      <li id="fn-3-2-r01-k01-1">al-Baqarah 2:30 — “Sesungguhnya Aku hendak menjadikan seorang khalifah di bumi.”</li>
-      <li id="fn-3-2-r01-k01-2">al-Baqarah 2:31 — “Dan Dia mengajarkan kepada Adam nama-nama semuanya.”</li>
-      <li id="fn-3-2-r01-k01-3">al-Baqarah 2:32–33 — “Tidak ada ilmu bagi kami kecuali apa yang Engkau ajarkan kepada kami” / “Wahai Adam, beritahukanlah kepada mereka nama-nama itu.”</li>
-    </ol>
-  </div>
-  
-  <a class="toplink" href="#3-2-r01">← Kembali ke Nabi Adam</a>
-</section>
-  
-<!-- =============================================================== -->
-<!-- 3.2.[R01].[K02] — ADAM: Sujud Malaikat & Keingkaran Iblis      -->
-<!-- =============================================================== -->
-<section class="section" id="3-2-r01-k02">
-  <div class="subbadge">3.2 — R01 • K02</div>
-  <h4>3.2.[R01].[K02] — Sujud Malaikat &amp; Keingkaran Iblis</h4>
-  
-  <!-- A) TEKS KISAH (NARATIF WAHYU) -->
-  <div class="block">
-    <div class="label">A. TEKS KISAH (NARATIF WAHYU)</div>
-  
-    <h5>A1. Naratif Kisah</h5>
-    <ul>
-      <li>Allah menciptakan Nabi Adam عليه السلام, lalu menyempurnakan kejadiannya.</li>
-      <li>Allah memerintahkan para malaikat supaya sujud kepada Nabi Adam عليه السلام.</li>
-      <li>Para malaikat semuanya sujud sebagaimana perintah Allah.</li>
-      <li>Namun Iblis enggan dan engkar; dia menolak perintah Allah dan menyombongkan diri.</li>
-      <li>Iblis berkata bahawa dirinya lebih baik daripada Nabi Adam عليه السلام; dia berhujah bahawa dia diciptakan daripada api, sedangkan Adam diciptakan daripada tanah.</li>
-      <li>Allah menetapkan bahawa Iblis telah berlaku takbur dan enggan tunduk kepada perintah-Nya; Iblis diusir dan dilaknat, serta tidak lagi mempunyai kedudukan di sisi Allah.</li>
-      <li>Iblis memohon penangguhan sehingga Hari Kiamat; Allah mengizinkan penangguhan itu, dan menetapkan bahawa Iblis serta pengikutnya akan menjadi penghuni neraka.</li>
-    </ul>
-  
-    <h5>A2. Petikan Wahyu Utama</h5>
-    <div class="quotes">
-      <div class="quote">
-        <div class="arabic">
-          وَإِذْ قُلْنَا لِلْمَلَائِكَةِ اسْجُدُوا لِآدَمَ فَسَجَدُوا إِلَّا إِبْلِيسَ أَبَىٰ وَاسْتَكْبَرَ وَكَانَ مِنَ الْكَافِرِينَ
-        </div>
-        <div class="ms">
-          “Dan (ingatlah) ketika Kami berfirman kepada para malaikat: ‘Sujudlah kamu kepada Adam’, lalu mereka semua sujud kecuali Iblis; dia enggan dan menyombongkan diri, dan dia termasuk dalam golongan orang-orang yang kafir.”
-          <span class="ref">(al-Baqarah 2:34)</span>
-        </div>
-      </div>
-      <div class="quote">
-        <div class="arabic">
-          قَالَ أَنَا خَيْرٌ مِّنْهُ خَلَقْتَنِي مِن نَّارٍ وَخَلَقْتَهُ مِن طِينٍ
-        </div>
-        <div class="ms">
-          “Iblis berkata: ‘Aku lebih baik daripadanya; Engkau ciptakan aku daripada api, dan Engkau ciptakan dia daripada tanah.’”
-          <span class="ref">(al-A‘rāf 7:12)</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- B) ANALISIS TAUHIDI (KERANGKA 3 ASBAB) -->
-  <div class="block">
-    <div class="label">B. ANALISIS TAUHIDI KISAH (KERANGKA 3 ASBAB)</div>
-    <p class="meta">Analisis ini hanya merujuk kepada Bahagian A. Tidak dibenarkan membawa bahan luar kisah.</p>
-  
-    <h5>B1. Latar Wahyu</h5>
-    <ul>
-      <li><strong>Di mana:</strong> Di alam perintah sebelum kehidupan manusia bermula di bumi.</li>
-      <li><strong>Bila:</strong> Selepas penciptaan Nabi Adam عليه السلام dan sebelum peristiwa penempatan di syurga.</li>
-      <li><strong>Kepada siapa:</strong> Diturunkan kepada Rasulullah ﷺ untuk menjelaskan punca awal keangkuhan makhluk, perbezaan antara ketaatan dan keengganan, serta asal penentangan terhadap perintah Allah.</li>
-      <li><strong>Keadaan ketika itu:</strong> Tiada manusia lain; yang wujud hanyalah Allah, para malaikat, Nabi Adam عليه السلام, dan Iblis.</li>
-    </ul>
-  
-    <h5>B2. Asbab Fitrah dalam Kisah</h5>
-    <p><strong>Asbab Fitrah yang hadir dalam peristiwa ini:</strong></p>
-    <ul>
-      <li>Perbezaan bahan penciptaan (tanah dan api),</li>
-      <li>Keupayaan makhluk memahami perintah,</li>
-      <li>Kebolehan memilih sama ada taat atau enggan,</li>
-      <li>Kewujudan perbezaan darjat pada pandangan makhluk.</li>
-    </ul>
-    <p>Asbab Fitrah ini menyediakan medan ujian ketaatan, tidak memberi nilai iman, dan tidak menentukan kemuliaan di sisi Allah. Kemuliaan tidak lahir daripada asal kejadian, tetapi daripada tunduk kepada perintah Allah.</p>
-  
-    <h5>B3. Asbab Zulumat dalam Kisah</h5>
-    <p>Asbab Zulumat berfungsi melalui penipuan makna dan keangkuhan.</p>
-    <p><strong>Bentuk Asbab Zulumat yang muncul:</strong></p>
-    <ul>
-      <li>Menilai perintah Allah menggunakan perbandingan ciptaan,</li>
-      <li>Menjadikan logik diri sebagai hakim wahyu,</li>
-      <li>Menganggap ketaatan sebagai sesuatu yang tidak adil,</li>
-      <li>Mengangkat “aku lebih baik” sebagai asas penolakan.</li>
-    </ul>
-    <p><strong>Prinsip Scammer (Asbab Zulumat):</strong></p>
-    <ul>
-      <li>Menukar perintah menjadi perdebatan,</li>
-      <li>Menukar ketaatan menjadi hujah kepentingan diri,</li>
-      <li>Menanam rasa “aku lebih tahu” daripada Allah.</li>
-    </ul>
-    <p>Iblis tidak menafikan kewujudan Allah, tetapi menolak hak Allah untuk ditaati tanpa soal.</p>
-  
-    <h5>B4. Asbab Mutlak dalam Kisah</h5>
-    <p><strong>Asbab Mutlak dalam kisah ini ialah:</strong></p>
-    <ul>
-      <li>Perintah Allah supaya sujud kepada Nabi Adam عليه السلام,</li>
-      <li>Penetapan Allah tentang kemuliaan Nabi Adam عليه السلام,</li>
-      <li>Keputusan Allah terhadap keengganan Iblis.</li>
-    </ul>
-    <p><strong>Perintah ini:</strong></p>
-    <ul>
-      <li>Datang terus daripada Allah,</li>
-      <li>Tidak memerlukan hujah,</li>
-      <li>Menjadi pemisah antara iman dan kufur.</li>
-    </ul>
-    <p>Iman diuji melalui tunduk hati, bukan melalui kefahaman logik.</p>
-  
-    <h5>B5. Keputusan Allah (Natijah Wahyu)</h5>
-    <p>Allah menetapkan bahawa:</p>
-    <ol>
-      <li>Para malaikat dimuliakan kerana ketaatan.</li>
-      <li>Iblis dilaknat kerana keengganan dan kesombongan.</li>
-      <li>Kedudukan boleh gugur kerana keangkuhan.</li>
-      <li>Ketaatan lebih tinggi daripada asal kejadian.</li>
-    </ol>
-    <p>Keputusan Allah tidak dirunding, tidak dibahaskan, dan tidak tertakluk kepada justifikasi makhluk.</p>
-  
-    <h5>B6. Ibrah Dalaman Kisah</h5>
-    <p>Ibrah dalaman daripada kisah ini:</p>
-    <ul>
-      <li>Iman hidup dengan tunduk, bukan hujah.</li>
-      <li>Kufur boleh bermula daripada rasa “aku lebih baik”.</li>
-      <li>Mengenal Allah tidak sama dengan taat kepada Allah.</li>
-      <li>Asal kejadian tidak menjamin kemuliaan.</li>
-      <li>Keangkuhan ialah pintu awal penentangan terhadap wahyu.</li>
-    </ul>
-    <p>Ini ialah kisah penolakan tunduk, bukan kisah kejahilan.</p>
-  
-    <h5>B7. Rujukan Wahyu</h5>
-    <ul>
-      <li>al-Baqarah 2:34</li>
-      <li>al-A‘rāf 7:11–13</li>
-      <li>Ṣād 38:71–78</li>
-    </ul>
-  </div>
-  
-  <!-- C) NOTA KAKI -->
-  <div class="block footnotes">
-    <div class="label">C. NOTA KAKI</div>
-    <ol>
-      <li id="fn-3-2-r01-k02-1">al-Baqarah 2:34 — “Sujudlah kamu kepada Adam ... kecuali Iblis; dia enggan, menyombongkan diri, dan termasuk orang kafir.”</li>
-      <li id="fn-3-2-r01-k02-2">al-A‘rāf 7:12 — “Aku lebih baik daripadanya; Engkau ciptakan aku daripada api dan dia daripada tanah.”</li>
-      <li id="fn-3-2-r01-k02-3">Ṣād 38:74–78 — “Kecuali Iblis; dia sombong dan menjadi daripada golongan kafir” / “Maka keluarlah engkau, sesungguhnya engkau terlaknat.”</li>
-    </ol>
-  </div>
-  
-  <a class="toplink" href="#3-2-r01">← Kembali ke Nabi Adam</a>
-</section>
-  
-<!-- =============================================================== -->
-<!-- 3.2.[R01].[K03] — ADAM: Syurga sebagai Medan Ujian             -->
-<!-- =============================================================== -->
-<section class="section" id="3-2-r01-k03">
-  <div class="subbadge">3.2 — R01 • K03</div>
-  <h4>3.2.[R01].[K03] — Syurga sebagai Medan Ujian</h4>
-  
-  <!-- A) TEKS KISAH (NARATIF WAHYU) -->
-  <div class="block">
-    <div class="label">A. TEKS KISAH (NARATIF WAHYU)</div>
-    <p class="meta">
-      Bahagian ini tidak dianalisis. Tiada istilah Asbab digunakan.
-      Tujuan: menghidupkan kisah sebagaimana wahyu.
-    </p>
-  
-    <h5>A1. Naratif Kisah</h5>
-    <ul>
-      <li>Allah menempatkan Nabi Adam عليه السلام dan isterinya di dalam syurga.</li>
-      <li>Allah mengizinkan mereka menikmati segala yang ada di dalamnya dengan kelapangan dan kenikmatan.</li>
-      <li>Allah menetapkan satu larangan yang jelas kepada Nabi Adam عليه السلام dan isterinya, iaitu mereka tidak boleh mendekati satu pohon tertentu.</li>
-      <li>Allah menjelaskan bahawa larangan itu adalah batas yang tidak boleh dilanggar.</li>
-      <li>Dalam keadaan nikmat dan kelapangan tersebut, syurga menjadi tempat tinggal sementara bagi Nabi Adam عليه السلام dan isterinya, sebagai medan ujian ketaatan kepada perintah Allah.</li>
-    </ul>
-  
-    <div class="note highlight">
-      📌 <strong>Prinsip:</strong><br>
-      Jika pembaca berhenti di sini, dia telah memahami bahawa syurga bukan sekadar tempat nikmat,
-      tetapi ruang ujian awal bagi manusia.
-    </div>
-  
-    <h5>A2. Petikan Wahyu Utama</h5>
-    <div class="quotes">
-      <div class="quote">
-        <div class="arabic">
-          وَقُلْنَا يَا آدَمُ اسْكُنْ أَنتَ وَزَوْجُكَ الْجَنَّةَ
-        </div>
-        <div class="ms">
-          “Kami berfirman: Wahai Adam, tinggallah engkau dan isterimu di dalam syurga.”
-          <span class="ref">(al-Baqarah 2:35)</span>
-        </div>
-      </div>
-      <div class="quote">
-        <div class="arabic">
-          وَكُلَا مِنْهَا رَغَدًا حَيْثُ شِئْتُمَا
-        </div>
-        <div class="ms">
-          “Dan makanlah kamu berdua daripadanya dengan bebas, di mana sahaja kamu kehendaki.”
-          <span class="ref">(al-Baqarah 2:35)</span>
-        </div>
-      </div>
-      <div class="quote">
-        <div class="arabic">
-          وَلَا تَقْرَبَا هَٰذِهِ الشَّجَرَةَ
-        </div>
-        <div class="ms">
-          “Dan janganlah kamu berdua mendekati pohon ini.”
-          <span class="ref">(al-Baqarah 2:35)</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- B) ANALISIS TAUHIDI (KERANGKA 3 ASBAB) -->
-  <div class="block">
-    <div class="label">B. ANALISIS TAUHIDI KISAH (KERANGKA 3 ASBAB)</div>
-    <p class="meta">
-      Analisis ini hanya merujuk kepada Bahagian A.
-      Tidak dibenarkan membawa bahan luar kisah.
-    </p>
-  
-    <h5>B1. Latar Wahyu</h5>
-    <ul>
-      <li><strong>Di mana:</strong> Di syurga, sebelum kehidupan manusia bermula di bumi.</li>
-      <li><strong>Bila:</strong> Selepas penciptaan Nabi Adam عليه السلام dan sebelum peristiwa pelanggaran larangan.</li>
-      <li><strong>Kepada siapa:</strong> Diturunkan kepada Rasulullah ﷺ untuk menjelaskan bahawa ujian manusia bermula sebelum bumi, dan ketaatan didahulukan sebelum amanah khalifah.</li>
-      <li><strong>Keadaan ketika itu:</strong> Tiada masyarakat, tiada sistem sosial; hanya Nabi Adam عليه السلام, isterinya, dan perintah Allah.</li>
-    </ul>
-  
-    <h5>B2. Asbab Fitrah dalam Kisah</h5>
-    <p><strong>Asbab Fitrah yang hadir dalam peristiwa ini:</strong></p>
-    <ul>
-      <li>Suasana nikmat dan kelapangan,</li>
-      <li>Kemampuan memilih dan bergerak,</li>
-      <li>Keinginan menikmati yang diizinkan,</li>
-      <li>Kewujudan satu batas larangan.</li>
-    </ul>
-    <p>Asbab Fitrah ini menyediakan ruang ujian, tetapi tidak menentukan nilai iman dan tidak menjamin keselamatan. Nikmat tidak menjadi ukuran ketaatan. Ketaatan diuji ketika nikmat hadir.</p>
-  
-    <h5>B3. Asbab Zulumat dalam Kisah</h5>
-    <p>Dalam kisah ini, Asbab Zulumat belum berfungsi secara aktif, tetapi ruangnya telah tersedia.</p>
-    <p><strong>Ruang tersebut wujud melalui:</strong></p>
-    <ul>
-      <li>Kemungkinan menilai larangan sebagai sekatan,</li>
-      <li>Kecenderungan melihat larangan sebagai pengurangan nikmat,</li>
-      <li>Potensi menimbang perintah Allah dengan rasa ingin.</li>
-    </ul>
-    <p>Ini belum menjadi penentangan, tetapi menjadi pintu ujian dalaman.</p>
-  
-    <h5>B4. Asbab Mutlak dalam Kisah</h5>
-    <p><strong>Asbab Mutlak dalam kisah ini ialah:</strong></p>
-    <ul>
-      <li>Perintah Allah untuk tinggal di syurga,</li>
-      <li>Keizinan Allah menikmati nikmat,</li>
-      <li>Larangan Allah terhadap satu pohon tertentu.</li>
-    </ul>
-    <p>Larangan ini datang terus daripada Allah, tidak disertai hujah panjang, dan menjadi penimbang arah tunduk hati. Ketaatan tidak diukur melalui banyaknya yang dihalalkan, tetapi melalui ketaatan terhadap satu larangan.</p>
-  
-    <h5>B5. Keputusan Allah (Natijah Wahyu)</h5>
-    <p>Dalam peringkat ini, Allah menetapkan:</p>
-    <ol>
-      <li>Syurga sebagai tempat tinggal sementara.</li>
-      <li>Nikmat sebagai latar ujian, bukan ganjaran kekal.</li>
-      <li>Larangan sebagai sempadan ketaatan.</li>
-    </ol>
-    <p>Belum ada hukuman. Belum ada penyingkiran. Yang ada hanyalah medan ujian yang jelas.</p>
-  
-    <h5>B6. Ibrah Dalaman Kisah</h5>
-    <ul>
-      <li>Ujian tidak bermula dengan kesusahan, tetapi dengan nikmat.</li>
-      <li>Ketaatan diuji walaupun tanpa tekanan.</li>
-      <li>Satu larangan cukup untuk menimbang iman.</li>
-      <li>Syurga sendiri boleh menjadi medan ujian jika perintah Allah dilanggar.</li>
-    </ul>
-    <p>Iman bukan diuji ketika terdesak, tetapi ketika diberi kelapangan.</p>
-  
-    <h5>B7. Rujukan Wahyu</h5>
-    <ul>
-      <li>al-Baqarah 2:35</li>
-      <li>al-A‘rāf 7:19</li>
-    </ul>
-  </div>
-  
-  <!-- C) NOTA KAKI -->
-  <div class="block footnotes">
-    <div class="label">C. NOTA KAKI</div>
-    <ol>
-      <li id="fn-3-2-r01-k03-1">al-Baqarah 2:35 — “Wahai Adam, tinggallah engkau dan isterimu di dalam syurga ... dan janganlah kamu berdua mendekati pohon ini.”</li>
-      <li id="fn-3-2-r01-k03-2">al-A‘rāf 7:19 — “Wahai Adam, tinggallah engkau dan isterimu di dalam syurga, maka makanlah dari mana sahaja yang kamu kehendaki, dan jangan dekati pokok ini.”</li>
-      <li id="fn-3-2-r01-k03-3">Prinsip ujian ketaatan sebelum amanah khalifah – Kerangka 3 Asbab (Bab 1)</li>
-    </ol>
-  </div>
-  
-  <a class="toplink" href="#3-2-r01">← Kembali ke Nabi Adam</a>
-</section>
-  
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+
+      if (coverTitle) coverTitle.innerHTML = 'Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI';
+      if (coverSubtitle) coverSubtitle.textContent = 'Membaca kisah para Nabi melalui lensa Tauhidi dan 3 jenis Asbab';
+      if (metaTitle) metaTitle.textContent = 'Bab 3 — SIRAH TAUHIDI: 3 ASBAB DALAM KISAH PARA NABI';
+
+      setTimeout(() => {
+        window.print();
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 100);
+    }
+  </script>
+
+</body>
+</html>  
 <!-- =============================================================== -->
 <!-- 3.2.[R01].[K04] — ADAM: Pohon Larangan & Kesilapan             -->
 <!-- =============================================================== -->
 <section class="section" id="3-2-r01-k04">
   <div class="subbadge">3.2 — R01 • K04</div>
   <h4>3.2.[R01].[K04] — Pohon Larangan &amp; Kesilapan</h4>
+
   
   <!-- A) TEKS KISAH (NARATIF WAHYU) -->
   <div class="block">
