@@ -1,202 +1,202 @@
-```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bab 12 — Nafy & Isbat: Jantung Tauhid | 3asbab.org</title>
-  <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      background: var(--bg);
-      color:#111;
-    }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
-    }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
-    }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Bab 12 — NAFY & ISBAT | 3asbab.org</title>
 
-    /* Lompat ke... */
-    .jump{
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
-    }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Lora:wght@400;600;700&family=Source+Serif+4:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
-    }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
-    }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
-    }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
-    }
-    h4{
-      margin: 12px 0 6px 0;
-      font-size: 16px;
-      font-weight:600;
-    }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
-      border-left: 4px solid var(--accent);
-      background: #f8fffb;
-    }
-    .arab{
-      font-size: 20px;
-      line-height: 1.9;
-      direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
-    }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
-    }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration:none;
-    }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    footer a{color:inherit}
-    .footnote-ref{
-      font-size: 0.8em;
-      vertical-align: super;
-      line-height: 0;
-    }
-    .footnotes{
-      margin-top: 20px;
-      padding-top: 10px;
-      border-top: 1px dashed var(--border);
-      font-size: 14px;
-      color: var(--muted);
-    }
-    hr.divider{
-      border:0;
-      border-top:2px solid var(--border);
-      margin:20px 0;
-    }
-  </style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --ink:#1c1917;
+  --ink-soft:#44403c;
+  --ink-muted:#78716c;
+  --ink-faint:#a8a29e;
+  --page:#faf9f7;
+  --page-warm:#f5f0e8;
+  --cream:#ede8df;
+  --rule:#d6cfc4;
+  --rule-light:#e8e3db;
+  --emerald:#065f46;
+  --emerald-mid:#059669;
+  --emerald-pale:#ecfdf5;
+  --gold:#92400e;
+  --gold-light:#fef3c7;
+  --shadow:0 2px 8px rgba(0,0,0,0.05);
+  --max:780px;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'Source Serif 4','Lora',serif;
+  background:var(--page);
+  color:var(--ink);
+  line-height:1.8;
+  font-size:17px;
+}
+
+/* ── TOPBAR ── */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:40;
+  background:rgba(250,249,247,0.95);
+  border-bottom:1px solid var(--rule);
+}
+.topbar nav{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:0.6rem 1.4rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.4rem;
+}
+.topbar a{
+  font-size:0.8rem;
+  text-decoration:none;
+  color:var(--ink-soft);
+}
+.topbar a.active{color:var(--emerald);font-weight:600}
+
+/* ── PDF BUTTON ── */
+.pdf-toolbar{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:0.8rem 1.4rem 0;
+  text-align:right;
+}
+.btn-pdf{
+  border:1px solid var(--emerald);
+  padding:0.35rem 0.9rem;
+  border-radius:999px;
+  cursor:pointer;
+  background:#fff;
+  color:var(--emerald);
+}
+
+/* ── HEADER ── */
+.page-header{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:2.2rem 1.4rem 1.4rem;
+  border-bottom:1px solid var(--rule-light);
+}
+.page-title{
+  font-family:'Lora',serif;
+  font-size:2rem;
+  font-weight:700;
+}
+.page-subtitle{
+  font-size:0.85rem;
+  color:var(--ink-muted);
+}
+
+/* ── JUMP NAV ── */
+.jump{
+  position:sticky;
+  top:44px;
+  background:rgba(250,249,247,0.97);
+  border-bottom:1px solid var(--rule-light);
+}
+.jump-inner{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:0.5rem 1.4rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.4rem;
+}
+.jump a{
+  padding:0.2rem 0.6rem;
+  border:1px solid var(--rule);
+  border-radius:20px;
+  font-size:0.75rem;
+  text-decoration:none;
+  color:var(--ink-soft);
+}
+
+/* ── MAIN ── */
+main{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:0 1.4rem 3rem;
+}
+
+/* ── SECTION ── */
+.section{
+  padding:2.2rem 1.2rem;
+  border-bottom:1px solid var(--rule-light);
+}
+
+/* ── TEXT ── */
+p{margin-bottom:0.9rem}
+ul,ol{padding-left:1.4rem;margin-bottom:0.8rem}
+
+/* ── ARABIC ── */
+.arab{
+  font-family:'Amiri',serif;
+  font-size:1.5rem;
+  direction:rtl;
+  color:var(--emerald);
+  margin:0.8rem 0;
+}
+
+/* ── BLOCKQUOTE ── */
+blockquote{
+  background:var(--page-warm);
+  border-left:3px solid var(--gold);
+  padding:0.8rem 1rem;
+  margin:1rem 0;
+}
+
+/* ── SPACING FIX ── */
+blockquote,
+.translation,
+.callout,
+.insight-box{
+  padding-left:1rem;
+  padding-right:1rem;
+}
+
+/* ── FOOTNOTE ── */
+.footnotes{
+  margin-top:1.5rem;
+  border-top:1px dashed var(--rule);
+  padding-top:1rem;
+  font-size:0.8rem;
+}
+
+/* ── TOPLINK ── */
+.toplink{
+  display:inline-block;
+  margin-top:1rem;
+  font-size:0.8rem;
+  color:var(--ink-faint);
+}
+
+/* ── FOOTER ── */
+footer{
+  max-width:calc(var(--max)+4rem);
+  margin:auto;
+  padding:1.5rem 1.4rem;
+  border-top:1px solid var(--rule);
+  font-size:0.75rem;
+}
+
+/* ── PRINT ── */
+@media print{
+  .topbar,.pdf-toolbar,.jump,.toplink{display:none}
+  main{padding:0}
+}
+
+</style>
 </head>
-<body>
-
-<!-- Top nav (contoh) -->
-  <div class="topbar">
-    <div class="wrap">
-      <nav>
-        <span class="brand">3asbab.org</span>
-        <a href="index.html">🏠 Home</a>
-        <a href="bab-11.html">Prev ←</a>
-        <a href="bab-12.html">Bab ini</a>
-        <a href="bab-13.html">Next →</a>
-      </nav>
-    </div>
-  </div>
-
-<!-- Page title -->
-  <header class="wrap" id="top">
-    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
-    <h1>Bab 12 — Nafy & Isbat: Jantung Tauhid</h1>
-  </header>
-
-<!-- Jump links -->
-  <div class="jump">
-    <div class="wrap">
-      <div class="inner">
-        <strong>Lompat ke:</strong>
-        <a href="#12-1">12.1</a>
-        <a href="#12-2">12.2</a>
-        <a href="#12-3">12.3</a>
-        <a href="#12-4">12.4</a>
-        <a href="#12-5">12.5</a>
-        <a href="#12-6">12.6</a>
-        <a href="#12-7">12.7</a>
-        <a href="#12-8">12.8</a>
-        <a href="#12-9">12.9</a>
-        <a href="#12-10">12.10</a>
-      </div>
-    </div>
-  </div>
-
-<main class="wrap">
     <article>
       <div class="section">
         <div class="badge">🟥 BAB 12 – NAFY & ISBAT: JANTUNG TAUHID</div>
@@ -263,7 +263,7 @@
   <h3>Definisi Asal Kalimah Tauhid</h3>
   <p>Seluruh binaan Nafy–Isbat berpunca daripada satu kalimah yang menjadi asas Islam:</p>
   <blockquote>
-    <div class="arab">لَا إِلَٰهَ إِلَّا اللَّهُ</div>
+    <div class="arab">لَا إِلَٰهَ إِلَّا اللَّهُ</div>
   </blockquote>
   <p>Kalimah ini bukan satu ayat, tetapi dua gerakan Tauhid yang tidak boleh dipisahkan:</p>
   <ol>
@@ -309,7 +309,7 @@
 
   <h4>Dalil Asas Nafy</h4>
   <blockquote>
-    <div class="arab">﴿ وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ ﴾</div>
+    <div class="arab">﴿ وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ ﴾</div>
     “Dan kamu tidak dapat menghendaki kecuali apa yang Allah kehendaki.” (al-Insān 76:30)<a class="footnote-ref" href="#fn-12-1-1">【1】</a>
   </blockquote>
   <p>Ayat ini: menafikan kehendak makhluk sebagai penentu, menafikan kuasa sebab sebagai punca, mematahkan semua kebergantungan halus kepada dunia.</p>
@@ -333,7 +333,7 @@
 
   <h4>Dalil Asas Isbat</h4>
   <blockquote>
-    <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
+    <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
     “Dan kemenangan itu tidak lain melainkan daripada sisi Allah.” (Āli ‘Imrān 3:126)<a class="footnote-ref" href="#fn-12-1-2">【2】</a>
   </blockquote>
   <p>Ayat ini: mengunci sumber kesan kepada Allah, mematikan semua dakwaan kuasa selain-Nya, menetapkan Tauhid dalam amal.</p>
@@ -368,7 +368,7 @@
   </ul>
   <p>Dalil:</p>
   <blockquote>
-    <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+    <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
     “Dan sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.” (al-Aḥzāb 33:71)<a class="footnote-ref" href="#fn-12-1-3">【3】</a>
   </blockquote>
 
@@ -417,12 +417,12 @@
 
   <h4>Contoh Teras: Kalimah Tauhid</h4>
   <blockquote>
-    <div class="arab">﴿ لَا إِلَٰهَ إِلَّا اللَّهُ ﴾</div>
+    <div class="arab">﴿ لَا إِلَٰهَ إِلَّا اللَّهُ ﴾</div>
   </blockquote>
   <p>Struktur ayat ini sendiri ialah:</p>
   <ul>
     <li>لَا إِلَٰهَ → Nafy → penafian mutlak terhadap sebarang ilah yang dianggap mempunyai kuasa, pengaruh, atau kesan.</li>
-    <li>إِلَّا اللَّهُ → Isbat → penetapan bahawa hanya Allah sebagai ilah yang sebenar, berkuasa, dan berhak ditaati.</li>
+    <li>إِلَّا اللَّهُ → Isbat → penetapan bahawa hanya Allah sebagai ilah yang sebenar, berkuasa, dan berhak ditaati.</li>
   </ul>
   <p>Ini bukan susunan linguistik semata-mata. Ini ialah kaedah aqidah.</p>
   <p>Jika Nafy dipisahkan → lahirlah syirik halus (Allah diakui, tetapi sebab juga diberi kuasa). Jika Isbat dipisahkan → lahirlah kekosongan iman (penafian tanpa sandaran). Sebab itu Tauhid tidak sah dengan salah satu sahaja.</p>
@@ -436,21 +436,21 @@
 
   <h4>(A) Nafy terhadap kehendak makhluk</h4>
   <blockquote>
-    <div class="arab">﴿ وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ ﴾</div>
+    <div class="arab">﴿ وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ ﴾</div>
     “Dan kamu tidak dapat menghendaki kecuali apa yang Allah kehendaki.” (al-Insān 76:30)<a class="footnote-ref" href="#fn-12-4-1">【1】</a>
   </blockquote>
   <p>Ayat ini menafikan secara langsung: kehendak manusia sebagai penentu, perancangan sebagai punca hasil, kebebasan mutlak makhluk dalam menentukan natijah. Ini ialah Nafy ke atas Asbab Fitrah: kehendak, usaha, pilihan, dan perancangan manusia. Manusia tetap berkehendak dan berusaha, tetapi kuasa kehendak itu dinafikan daripada memberi kesan.</p>
 
   <h4>(B) Nafy terhadap sebab material & usaha zahir</h4>
   <blockquote>
-    <div class="arab">﴿ أَفَرَأَيْتُم مَّا تَحْرُثُونَ ۝ أَأَنتُمْ تَزْرَعُونَهُۥٓ أَمْ نَحْنُ ٱلزَّٰرِعُونَ ﴾</div>
+    <div class="arab">﴿ أَفَرَأَيْتُم مَّا تَحْرُثُونَ ۝ أَأَنتُمْ تَزْرَعُونَهُۥٓ أَمْ نَحْنُ ٱلزَّٰرِعُونَ ﴾</div>
     “Maka apakah kamu melihat apa yang kamu tanam? Kamulah yang menumbuhkannya atau Kami?” (al-Wāqi‘ah 56:63–64)<a class="footnote-ref" href="#fn-12-4-2">【2】</a>
   </blockquote>
   <p>Manusia: membajak, menanam, menyiram, mengawal masa dan cuaca. Namun Allah memotong sangkaan itu dengan soalan Tauhidi: siapa yang benar-benar menumbuhkan? Ayat ini mengajar dua perkara serentak: sebab digunakan ✔, kuasa sebab dinafikan ✔. Inilah disiplin Nafy yang sah.</p>
 
   <h4>(C) Nafy terhadap sistem, perlindungan & kekuatan sosial</h4>
   <blockquote>
-    <div class="arab">﴿ وَمَا لَهُم مِّن دُونِهِۦ مِن وَلِىٍّ وَلَا نَصِيرٍ ﴾</div>
+    <div class="arab">﴿ وَمَا لَهُم مِّن دُونِهِۦ مِن وَلِىٍّ وَلَا نَصِيرٍ ﴾</div>
     “Dan mereka tidak mempunyai pelindung dan penolong selain daripada-Nya.” (ash-Shūrā 42:31)<a class="footnote-ref" href="#fn-12-4-3">【3】</a>
   </blockquote>
   <p>Ayat ini menafikan: kuasa sistem, kuasa struktur sosial, kuasa perlindungan manusia, kuasa jaringan dan kekuatan kolektif. Inilah Nafy ke atas Asbab Zulumat — sebab-sebab yang lahir daripada persetujuan dan sistem manusia.</p>
@@ -472,21 +472,21 @@
 
   <h4>(A) Isbat terhadap nusrah</h4>
   <blockquote>
-    <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
+    <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
     “Dan kemenangan itu tidak lain melainkan daripada sisi Allah.” (Āli ‘Imrān 3:126)<a class="footnote-ref" href="#fn-12-5-1">【4】</a>
   </blockquote>
   <p>Ini bukan ayat sejarah peperangan semata-mata. Ia ialah hukum umum kesan. Tiada kemenangan: peribadi, dakwah, ekonomi, politik, masyarakat, melainkan daripada Allah.</p>
 
   <h4>(B) Isbat terhadap rezeki</h4>
   <blockquote>
-    <div class="arab">﴿ إِنَّ ٱللَّهَ هُوَ ٱلرَّزَّاقُ ذُو ٱلْقُوَّةِ ٱلْمَتِينُ ﴾</div>
+    <div class="arab">﴿ إِنَّ ٱللَّهَ هُوَ ٱلرَّزَّاقُ ذُو ٱلْقُوَّةِ ٱلْمَتِينُ ﴾</div>
     “Sesungguhnya Allah, Dialah Pemberi rezeki, Yang Memiliki kekuatan lagi kukuh.” (adh-Dhāriyāt 51:58)<a class="footnote-ref" href="#fn-12-5-2">【5】</a>
   </blockquote>
   <p>Ayat ini: tidak membatalkan usaha, tetapi memindahkan sumber rezeki sepenuhnya kepada Allah. Usaha hanyalah alat. Rezeki ialah janji Allah.</p>
 
   <h4>(C) Isbat terhadap hidayah</h4>
   <blockquote>
-    <div class="arab">﴿ إِنَّكَ لَا تَهْدِى مَنْ أَحْبَبْتَ وَلَٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
+    <div class="arab">﴿ إِنَّكَ لَا تَهْدِى مَنْ أَحْبَبْتَ وَلَٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
     “Sesungguhnya engkau tidak memberi hidayah kepada sesiapa yang engkau kasihi, tetapi Allah memberi hidayah kepada siapa yang Dia kehendaki.” (al-Qaṣaṣ 28:56)<a class="footnote-ref" href="#fn-12-5-3">【6】</a>
   </blockquote>
   <p>Ayat ini: menafikan hidayah daripada Rasul ﷺ (makhluk paling mulia), menetapkan hidayah hanya daripada Allah. Jika Rasul ﷺ tidak memberi kesan, maka lebih-lebih lagi: guru, sistem, modul, media, metodologi.</p>
@@ -505,7 +505,7 @@
 <section class="section" id="12-6">
   <h2>12.6 Gabungan Nafy–Isbat dalam Satu Ayat</h2>
   <blockquote>
-    <div class="arab">﴿ أَلَيْسَ ٱللَّهُ بِكَافٍ عَبْدَهُۥ ۖ وَيُخَوِّفُونَكَ بِٱلَّذِينَ مِن دُونِهِۦ ﴾</div>
+    <div class="arab">﴿ أَلَيْسَ ٱللَّهُ بِكَافٍ عَبْدَهُۥ ۖ وَيُخَوِّفُونَكَ بِٱلَّذِينَ مِن دُونِهِۦ ﴾</div>
     “Bukankah Allah itu mencukupi hamba-Nya? Dan mereka menakut-nakutkanmu dengan selain daripada-Nya.” (az-Zumar 39:36)<a class="footnote-ref" href="#fn-12-6-1">【7】</a>
   </blockquote>
   <p>Struktur Tauhidi ayat ini:</p>
@@ -609,7 +609,7 @@
 
   <h3 id="12-3-3">12.3.3 Dalil Qur’an: Amal Tanpa Nafy Tidak Menjamin Kesan</h3>
   <blockquote>
-    <div class="arab">﴿ وَمَا رَمَيْتَ إِذْ رَمَيْتَ وَلَٰكِنَّ ٱللَّهَ رَمَىٰ ﴾</div>
+    <div class="arab">﴿ وَمَا رَمَيْتَ إِذْ رَمَيْتَ وَلَٰكِنَّ ٱللَّهَ رَمَىٰ ﴾</div>
     “Dan bukanlah engkau yang melempar ketika engkau melempar, tetapi Allah yang melempar.” (al-Anfāl 8:17)<a class="footnote-ref" href="#fn-12-3-1">【1】</a>
   </blockquote>
   <p>Ayat ini: mengiktiraf amal Rasulullah ﷺ (melontar), menafikan kuasa amal itu memberi kesan, dan menetapkan kesan hanya daripada Allah. Inilah Nafy dalam amal yang paling jelas dalam al-Qur’an. Jika Rasulullah ﷺ sendiri diajar Nafy ketika beramal, maka umat lebih wajib melakukannya.</p>
@@ -623,13 +623,13 @@
   <p>Ibrahim tidak memadam api. Baginda menafikan kuasanya.</p>
   <p><strong>(B) Nabi Musa عليه السلام — Laut</strong><br>Laut ialah Asbab Fitrah yang mustahil dibelah dengan tongkat. Namun Musa عليه السلام memukul laut dengan Nafy penuh.</p>
   <blockquote>
-    <div class="arab">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ ٱضْرِب بِّعَصَاكَ ٱلْبَحْرَ فَٱنفَلَقَ ﴾</div>
+    <div class="arab">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ ٱضْرِب بِّعَصَاكَ ٱلْبَحْرَ فَٱنفَلَقَ ﴾</div>
     “Lalu Kami wahyukan kepada Musa: Pukullah laut dengan tongkatmu, maka terbelahlah.” (ash-Shu‘arā’ 26:63)<a class="footnote-ref" href="#fn-12-3-3">【3】</a>
   </blockquote>
   <p>Tongkat tidak diberi kuasa. Laut tidak ditakuti. Allah sahaja diyakini.</p>
   <p><strong>(C) Maryam عليها السلام — Goncangan Pokok Tamar</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَهُزِّىٓ إِلَيْكِ بِجِذْعِ ٱلنَّخْلَةِ تُسَٰقِطْ عَلَيْكِ رُطَبًا جَنِيًّا ﴾</div>
+    <div class="arab">﴿ وَهُزِّىٓ إِلَيْكِ بِجِذْعِ ٱلنَّخْلَةِ تُسَٰقِطْ عَلَيْكِ رُطَبًا جَنِيًّا ﴾</div>
     “Goncangkanlah ke arahmu batang pokok tamar itu, nescaya ia menggugurkan kurma masak.” (Maryam 19:25)<a class="footnote-ref" href="#fn-12-3-4">【4】</a>
   </blockquote>
   <p>Goncangan lemah seorang wanita bersalin tidak mampu menjatuhkan buah. Namun Maryam diperintah beramal — dengan Nafy terhadap sebab.</p>
@@ -642,7 +642,7 @@
   <h3 id="12-3-6">12.3.6 Hubungan Nafy dalam Amal dengan Tawakkal</h3>
   <p>Ramai menyangka tawakkal berlaku selepas amal. Al-Qur’an membetulkan faham ini:</p>
   <blockquote>
-    <div class="arab">﴿ وَعَلَى ٱللَّهِ فَتَوَكَّلُوا۟ إِن كُنتُم مُّؤْمِنِينَ ﴾</div>
+    <div class="arab">﴿ وَعَلَى ٱللَّهِ فَتَوَكَّلُوا۟ إِن كُنتُم مُّؤْمِنِينَ ﴾</div>
     “Dan hanya kepada Allah hendaklah kamu bertawakkal, jika kamu benar-benar beriman.” (al-Mā’idah 5:23)<a class="footnote-ref" href="#fn-12-3-5">【5】</a>
   </blockquote>
   <p>Tawakkal bukan penutup amal, tetapi teras amal. Tawakkal = Nafy yang hidup ketika amal sedang berjalan.</p>
@@ -694,19 +694,19 @@
   <h3 id="12-4-3">12.4.3 Dalil Qur’an: Isbat dalam Amal</h3>
   <p><strong>(A) Isbat terhadap Kesan Amal</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
+    <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
     “Dan kemenangan itu tidak lain melainkan daripada sisi Allah.” (Āli ‘Imrān 3:126)<a class="footnote-ref" href="#fn-12-4-1">【1】</a>
   </blockquote>
   <p>Ayat ini tidak menafikan amal, tetapi menetapkan kesan hanya pada Allah. Isbat berlaku: sebelum perang, ketika perang, selepas perang.</p>
   <p><strong>(B) Isbat terhadap Rezeki ketika Amal Ekonomi</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَفِى ٱلسَّمَآءِ رِزْقُكُمْ وَمَا تُوعَدُونَ ﴾</div>
+    <div class="arab">﴿ وَفِى ٱلسَّمَآءِ رِزْقُكُمْ وَمَا تُوعَدُونَ ﴾</div>
     “Dan di langitlah rezekimu dan apa yang dijanjikan kepadamu.” (adh-Dhāriyāt 51:22)<a class="footnote-ref" href="#fn-12-4-2">【2】</a>
   </blockquote>
   <p>Manusia bekerja di bumi, tetapi rezeki diisbatkan kepada Allah, bukan kepada pasaran, majikan, atau sistem.</p>
   <p><strong>(C) Isbat terhadap Hidayah dalam Dakwah</strong></p>
   <blockquote>
-    <div class="arab">﴿ إِنَّكَ لَا تَهْدِى مَنْ أَحْبَبْتَ وَلَٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
+    <div class="arab">﴿ إِنَّكَ لَا تَهْدِى مَنْ أَحْبَبْتَ وَلَٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
     “Sesungguhnya engkau tidak memberi hidayah kepada sesiapa yang engkau kasihi, tetapi Allah memberi hidayah kepada siapa yang Dia kehendaki.” (al-Qaṣaṣ 28:56)<a class="footnote-ref" href="#fn-12-4-3">【3】</a>
   </blockquote>
   <p>Isbat ini: membebaskan pendakwah daripada kecewa, mematikan kebergantungan kepada teknik, menghidupkan istiqamah dalam dakwah.</p>
@@ -714,13 +714,13 @@
   <h3 id="12-4-4">12.4.4 Isbat dalam Amal Para Nabi</h3>
   <p><strong>(A) Nabi Ibrahim عليه السلام — Isbat Tanpa Jaminan Zahir</strong></p>
   <blockquote>
-    <div class="arab">﴿ حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ ﴾</div>
+    <div class="arab">﴿ حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ ﴾</div>
     “Cukuplah Allah bagi kami dan Dialah sebaik-baik Pelindung.” (Āli ‘Imrān 3:173)<a class="footnote-ref" href="#fn-12-4-4">【4】</a>
   </blockquote>
   <p>Isbat Ibrahim: bukan selepas api sejuk, tetapi sebelum api menjadi sejuk.</p>
   <p><strong>(B) Nabi Musa عليه السلام — Isbat di Saat Terhimpit</strong></p>
   <blockquote>
-    <div class="arab">﴿ كَلَّآ ۖ إِنَّ مَعِىَ رَبِّى سَيَهْدِينِ ﴾</div>
+    <div class="arab">﴿ كَلَّآ ۖ إِنَّ مَعِىَ رَبِّى سَيَهْدِينِ ﴾</div>
     “Sekali-kali tidak! Sesungguhnya Tuhanku bersamaku, Dia akan memberi petunjuk.” (ash-Shu‘arā’ 26:62)<a class="footnote-ref" href="#fn-12-4-5">【5】</a>
   </blockquote>
   <p>Isbat ini diucapkan: ketika laut di hadapan, musuh di belakang, tanpa sebarang bukti zahir.</p>
@@ -729,7 +729,7 @@
   <p>Isbat dalam amal harian bermaksud: bekerja kerana perintah Allah, bukan kerana gaji semata-mata; berdakwah kerana janji Allah, bukan kerana respons manusia; bersabar kerana Allah melihat, bukan kerana situasi reda; solat kerana Allah memerintah, bukan kerana boss yang suruh.</p>
   <p>Dalil asas:</p>
   <blockquote>
-    <div class="arab">﴿ وَمَا خَلَقْتُ ٱلْجِنَّ وَٱلْإِنسَ إِلَّا لِيَعْبُدُونِ ﴾</div>
+    <div class="arab">﴿ وَمَا خَلَقْتُ ٱلْجِنَّ وَٱلْإِنسَ إِلَّا لِيَعْبُدُونِ ﴾</div>
     “Dan tidaklah Aku menciptakan jin dan manusia melainkan untuk beribadah kepada-Ku.” (adh-Dhāriyāt 51:56)<a class="footnote-ref" href="#fn-12-4-6">【6】</a>
   </blockquote>
   <p>Isbat menjadikan ibadah berfungsi walau rasa tiada.</p>
@@ -741,7 +741,7 @@
   <h3 id="12-4-7">12.4.7 Hubungan Isbat dengan Sabar & Istiqamah</h3>
   <p>Isbat melahirkan sabar yang terkunci. Kerana: hati tidak menunggu hasil, hati hanya menunggu redha Allah.</p>
   <blockquote>
-    <div class="arab">﴿ إِنَّ ٱللَّهَ مَعَ ٱلصَّٰبِرِينَ ﴾</div>
+    <div class="arab">﴿ إِنَّ ٱللَّهَ مَعَ ٱلصَّٰبِرِينَ ﴾</div>
     “Sesungguhnya Allah bersama orang-orang yang sabar.” (al-Baqarah 2:153)<a class="footnote-ref" href="#fn-12-4-7">【7】</a>
   </blockquote>
   <p>Sabar bukan menahan perasaan, tetapi berterusan beramal kerana yakin kepada Allah.</p>
@@ -797,7 +797,7 @@
   <p>Ini bukan Tauhid, ini penolakan tertib wahyu.</p>
   <p><strong>Dalil pengunci</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+    <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
     “Dan sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.” (al-Aḥzāb 33:71)<a class="footnote-ref" href="#fn-12-5-1">【1】</a>
   </blockquote>
   <p>Ayat ini: mengikat kemenangan kepada ketaatan, bukan kepada rasa, bukan kepada niat, bukan kepada slogan Tauhid.</p>
@@ -819,7 +819,7 @@
   <p>Apabila Asbab Fitrah diisbatkan: iman menjadi bergantung kepada keadaan, dakwah menunggu kestabilan, ketaatan menunggu keselesaan.</p>
   <p><strong>Dalil pengunci</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
+    <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
     “Dan kemenangan itu tidak lain melainkan daripada sisi Allah.” (Āli ‘Imrān 3:126)<a class="footnote-ref" href="#fn-12-5-2">【2】</a>
   </blockquote>
   <p>Ayat ini mematikan semua pintu isbat selain Allah.</p>
@@ -831,7 +831,7 @@
   <p>Masalahnya bukan pada lafaz, tetapi pada tempat sandaran hati.</p>
   <p><strong>Dalil pengunci</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمِنَ ٱلنَّاسِ مَن يَقُولُ ءَامَنَّا بِٱللَّهِ فَإِذَآ أُوذِىَ فِى ٱللَّهِ جَعَلَ فِتْنَةَ ٱلنَّاسِ كَعَذَابِ ٱللَّهِ ﴾</div>
+    <div class="arab">﴿ وَمِنَ ٱلنَّاسِ مَن يَقُولُ ءَامَنَّا بِٱللَّهِ فَإِذَآ أُوذِىَ فِى ٱللَّهِ جَعَلَ فِتْنَةَ ٱلنَّاسِ كَعَذَابِ ٱللَّهِ ﴾</div>
     “Dan antara manusia ada yang berkata: ‘Kami beriman kepada Allah’, tetapi apabila dia disakiti kerana (agama) Allah, dia menjadikan ujian manusia itu seperti azab Allah.” (al-‘Ankabūt 29:10)<a class="footnote-ref" href="#fn-12-5-3">【3】</a>
   </blockquote>
   <p>Ayat ini: membongkar iman lidah, mendedahkan hati yang masih mengisbatkan manusia.</p>
@@ -853,7 +853,7 @@
   <p>Khusyuk: bukan syarat solat, bukan punca amal, tetapi ganjaran daripada Allah.</p>
   <p><strong>Dalil pengunci</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَٱلَّذِينَ جَٰهَدُوا۟ فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
+    <div class="arab">﴿ وَٱلَّذِينَ جَٰهَدُوا۟ فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
     “Dan orang-orang yang bersungguh-sungguh bermujahadah pada jalan Kami, pasti Kami tunjukkan kepada mereka jalan-jalan Kami.” (al-‘Ankabūt 29:69)<a class="footnote-ref" href="#fn-12-5-4">【4】</a>
   </blockquote>
   <p>➡️ Hidayah datang selepas mujahadah, bukan sebelum.</p>
@@ -895,7 +895,7 @@
   <p>Dakwah bukan: strategi komunikasi, kemahiran public speaking, kandungan media, atau aktivisme sosial. Semua itu ialah Asbab Fitrah dan Asbab Zulumat — berguna sebagai alat, tetapi tidak memberi kesan iman. Iman hanya hidup apabila dakwah dilakukan dengan Nafy dan Isbat yang betul.</p>
   <p><strong>Dalil asas:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
+    <div class="arab">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
     “Dan siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah.” (Fuṣṣilat 41:33)<a class="footnote-ref" href="#fn-12-6-1">【1】</a>
   </blockquote>
   <p>Ayat ini mengikat nilai dakwah bukan pada teknik, tetapi pada arah seruan — kepada Allah.</p>
@@ -907,7 +907,7 @@
   <p><strong>Contoh Nafy yang sah dalam dakwah:</strong><br>Ilmu tidak memberi hidayah. Kefasihan tidak melembutkan hati. Jumlah tidak menjamin penerimaan. Media tidak mencipta iman. Sistem tidak menentukan istiqamah.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ إِنَّكَ لَا تَهْدِى مَنْ أَحْبَبْتَ ﴾</div>
+    <div class="arab">﴿ إِنَّكَ لَا تَهْدِى مَنْ أَحْبَبْتَ ﴾</div>
     “Sesungguhnya engkau tidak memberi hidayah kepada sesiapa yang engkau kasihi.” (al-Qaṣaṣ 28:56)<a class="footnote-ref" href="#fn-12-6-2">【2】</a>
   </blockquote>
   <p>➡️ Jika Rasulullah ﷺ sendiri dinafikan daripada memberi kesan hidayah, maka semua selain Baginda ﷺ lebih utama dinafikan.</p>
@@ -917,7 +917,7 @@
   <p>Isbat menetapkan bahawa: Allah yang membuka hati, Allah yang menggerakkan rasa, Allah yang memberi istiqamah, Allah yang memberi penerimaan. Bukan kerana: pendakwah pandai, mesej menarik, atau suasana kondusif.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَلَٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
+    <div class="arab">﴿ وَلَٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
     “Tetapi Allah memberi hidayah kepada siapa yang Dia kehendaki.” (al-Qaṣaṣ 28:56)<a class="footnote-ref" href="#fn-12-6-3">【3】</a>
   </blockquote>
   <p>Isbat ini tidak mematikan dakwah, bahkan menghidupkannya kerana ia mengikat amal kepada janji Allah, bukan kepada hasil zahir.</p>
@@ -947,7 +947,7 @@
   <p>🔴 Asbab Mutlak tidak boleh dinafykan. Ia ialah tempat Allah mengikat perintah + janji-Nya.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+    <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
     “Dan sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.” (al-Aḥzāb 33:71)
   </blockquote>
 
@@ -955,7 +955,7 @@
   <p>Sebahagian pula: menafikan sebab, tetapi tidak mengikat dakwah kepada janji Allah. Bentuknya: meninggalkan dakwah atas nama “Allah Maha Berkuasa”, pasif atas nama tawakkal, berdiam atas nama reda. Ini bukan Tauhid, tetapi pelarian daripada amanah dakwah.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَالَّذِينَ جَٰهَدُوا۟ فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
+    <div class="arab">﴿ وَالَّذِينَ جَٰهَدُوا۟ فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
     “Dan orang-orang yang bersungguh-sungguh bermujahadah pada jalan Kami, pasti Kami tunjukkan kepada mereka jalan-jalan Kami.” (al-‘Ankabūt 29:69)<a class="footnote-ref" href="#fn-12-6-4">【4】</a>
   </blockquote>
   <p>➡️ Hidayah datang selepas amal, bukan sebelum.</p>
@@ -994,7 +994,7 @@
   <p>Dalam Kerangka 3 Asbab, rezeki difahami sebagai: Pemberian Allah yang datang melalui Asbab Mutlak yang Dia tetapkan, bukan hasil kuasa Asbab Fitrah atau Asbab Zulumat. Rezeki bukan: gaji, keuntungan, projek, pelanggan, jawatan, atau peluang. Semua itu hanyalah saluran (Asbab Fitrah / Zulumat), bukan sumber. Sumber rezeki hanya satu: Allah.</p>
   <p><strong>Dalil asas:</strong></p>
   <blockquote>
-    <div class="arab">﴿ إِنَّ ٱللَّهَ هُوَ ٱلرَّزَّاقُ ذُو ٱلْقُوَّةِ ٱلْمَتِينُ ﴾</div>
+    <div class="arab">﴿ إِنَّ ٱللَّهَ هُوَ ٱلرَّزَّاقُ ذُو ٱلْقُوَّةِ ٱلْمَتِينُ ﴾</div>
     “Sesungguhnya Allah, Dialah Pemberi rezeki, Yang Memiliki kekuatan lagi kukuh.” (adh-Dhāriyāt 51:58)<a class="footnote-ref" href="#fn-12-7-1">【1】</a>
   </blockquote>
 
@@ -1004,7 +1004,7 @@
   Kerja tidak memberi rezeki. Majikan tidak menjamin rezeki. Pelanggan tidak menentukan pendapatan. Pasaran tidak meluaskan rezeki. Sistem ekonomi tidak memberi kekayaan.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَفِى ٱلسَّمَآءِ رِزْقُكُمْ وَمَا تُوعَدُونَ ﴾</div>
+    <div class="arab">﴿ وَفِى ٱلسَّمَآءِ رِزْقُكُمْ وَمَا تُوعَدُونَ ﴾</div>
     “Dan di langit terdapat rezeki kamu dan apa yang dijanjikan kepada kamu.” (adh-Dhāriyāt 51:22)<a class="footnote-ref" href="#fn-12-7-2">【2】</a>
   </blockquote>
   <p>➡️ Al-Qur’an memutuskan kebergantungan hati daripada Asbab Fitrah dan Asbab Zulumat.</p>
@@ -1013,7 +1013,7 @@
   <p>Isbat dalam rezeki ialah: Menetapkan bahawa Allah sahaja yang memberi rezeki, dan Allah meletakkan janji-Nya pada amal yang Dia tetapkan sebagai Asbab Mutlak. Isbat menetapkan bahawa: Allah melapangkan rezeki, Allah menyempitkan rezeki, Allah mencukupkan, Allah menguji melalui rezeki. Bukan kerana: kepandaian berniaga, strategi pemasaran, kekuatan modal, kecerdikan manusia (semuanya Asbab Fitrah / Zulumat).</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ ٱللَّهُ يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ وَيَقْدِرُ ﴾</div>
+    <div class="arab">﴿ ٱللَّهُ يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ وَيَقْدِرُ ﴾</div>
     “Allah melapangkan rezeki bagi siapa yang Dia kehendaki dan menyempitkannya.” (ar-Ra‘d 13:26)<a class="footnote-ref" href="#fn-12-7-3">【3】</a>
   </blockquote>
 
@@ -1021,7 +1021,7 @@
   <p>Dalam Kerangka 3 Asbab, rezeki tidak dibiarkan tanpa tertib. Allah meletakkan janji rezeki pada Asbab Mutlak, antaranya: takwa, istighfar dan taubat, infak fi sabilillah, sabar dalam ujian, tawakkal mengikut sunnah, doa, dakwah dan khidmat agama.</p>
   <p><strong>Dalil asas:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا ۝ وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ﴾</div>
+    <div class="arab">﴿ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا ۝ وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ﴾</div>
     “Dan sesiapa yang bertakwa kepada Allah, Dia akan menjadikan baginya jalan keluar, dan Dia akan memberinya rezeki dari arah yang tidak disangka-sangka.” (aṭ-Ṭalāq 65:2–3)<a class="footnote-ref" href="#fn-12-7-4">【4】</a>
   </blockquote>
   <p>➡️ Takwa ialah Asbab Mutlak, bukan keadaan pasaran (Asbab Zulumat).</p>
@@ -1030,7 +1030,7 @@
   <p>Kesilapan paling biasa umat ialah: “Kalau kerja kuat, rezeki mesti banyak.” “Kalau bisnes pandai, mesti kaya.” “Kalau ekonomi stabil, hidup senang.” Ini ialah Isbat Asbab Fitrah / Zulumat. Akibatnya: hati takut kehilangan kerja, iman goyah bila sistem ekonomi terganggu, amal ditinggalkan bila rezeki disempitkan.</p>
   <p><strong>Dalil penutup semua pintu isbat palsu:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَا مِن دَآبَّةٍۢ فِى ٱلْأَرْضِ إِلَّا عَلَى ٱللَّهِ رِزْقُهَا ﴾</div>
+    <div class="arab">﴿ وَمَا مِن دَآبَّةٍۢ فِى ٱلْأَرْضِ إِلَّا عَلَى ٱللَّهِ رِزْقُهَا ﴾</div>
     “Dan tidak ada satu pun makhluk yang bergerak di bumi melainkan Allah yang menjamin rezekinya.” (Hūd 11:6)<a class="footnote-ref" href="#fn-12-7-5">【5】</a>
   </blockquote>
 
@@ -1042,7 +1042,7 @@
   <p>🔴 Asbab Mutlak tidak boleh dinafykan. Allah memerintah usaha yang halal, amanah, dan tawakkal — bukan kemalasan atas nama Tauhid.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ فَٱمْشُوا۟ فِى مَنَاكِبِهَا وَكُلُوا۟ مِن رِّزْقِهِۦ ﴾</div>
+    <div class="arab">﴿ فَٱمْشُوا۟ فِى مَنَاكِبِهَا وَكُلُوا۟ مِن رِّزْقِهِۦ ﴾</div>
     “Maka berjalanlah di segala penjurunya dan makanlah daripada rezeki-Nya.” (al-Mulk 67:15)<a class="footnote-ref" href="#fn-12-7-6">【6】</a>
   </blockquote>
   <p>➡️ Asbab Fitrah digunakan, kuasa Asbab Fitrah dinafykan, Asbab Mutlak diisbatkan.</p>
@@ -1094,7 +1094,7 @@
   Bangun awal tidak menjadikan aku soleh. Disiplin tidak membersihkan hati. Pengetahuan tidak menghidupkan iman. Konsistensi tidak menjamin penerimaan. Penilaian manusia tidak menentukan nilai amal.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَا بِكُم مِّن نِّعْمَةٍۢ فَمِنَ ٱللَّهِ ﴾</div>
+    <div class="arab">﴿ وَمَا بِكُم مِّن نِّعْمَةٍۢ فَمِنَ ٱللَّهِ ﴾</div>
     “Dan apa sahaja nikmat yang ada pada kamu, maka ia adalah daripada Allah.” (an-Naḥl 16:53)<a class="footnote-ref" href="#fn-12-8-1">【1】</a>
   </blockquote>
   <p>➡️ Segala kesan kebaikan dinafykan daripada diri dan sebab, dan dikembalikan kepada Allah.</p>
@@ -1104,7 +1104,7 @@
   <p>Isbat menetapkan bahawa: Allah menerima amal, Allah membersihkan hati, Allah memberi istiqamah, Allah memberi ketenangan, Allah memberi keberkatan. Bukan kerana: kita rajin, kita ikhlas menurut rasa, kita konsisten, atau kita lebih baik daripada orang lain.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ إِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ ﴾</div>
+    <div class="arab">﴿ إِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ ﴾</div>
     “Sesungguhnya Allah tidak mensia-siakan pahala orang-orang yang berbuat baik.” (at-Tawbah 9:120)<a class="footnote-ref" href="#fn-12-8-2">【2】</a>
   </blockquote>
   <p>➡️ Allah mengikat kesan pada amal yang sah, bukan pada kehebatan pelaku.</p>
@@ -1114,7 +1114,7 @@
   • Nafy: Khusyuk bukan hasil teknik, nafas, atau suasana.<br>
   • Isbat: Khusyuk ialah output janji Allah kepada hamba yang berjalan dalam dakwah, mujahadah, dan sabar.</p>
   <blockquote>
-    <div class="arab">﴿ قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ ۝ ٱلَّذِينَ هُمْ فِى صَلَاتِهِمْ خَٰشِعُونَ ﴾</div>
+    <div class="arab">﴿ قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ ۝ ٱلَّذِينَ هُمْ فِى صَلَاتِهِمْ خَٰشِعُونَ ﴾</div>
     (al-Mu’minūn 23:1–2)<a class="footnote-ref" href="#fn-12-8-3">【3】</a>
   </blockquote>
   <p>➡️ Solat dilakukan kerana perintah, khusyuk datang jika Allah terima.</p>
@@ -1123,7 +1123,7 @@
   • Nafy: Kerja tidak memberi nilai di sisi Allah.<br>
   • Isbat: Amanah dan niat kerana Allah yang memberi nilai.</p>
   <blockquote>
-    <div class="arab">﴿ إِنَّ ٱللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا۟ ٱلْأَمَٰنَٰتِ إِلَىٰٓ أَهْلِهَا ﴾</div>
+    <div class="arab">﴿ إِنَّ ٱللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا۟ ٱلْأَمَٰنَٰتِ إِلَىٰٓ أَهْلِهَا ﴾</div>
     (an-Nisā’ 4:58)<a class="footnote-ref" href="#fn-12-8-4">【4】</a>
   </blockquote>
 
@@ -1131,7 +1131,7 @@
   • Nafy: Kebaikan tidak menjadikan kita mulia.<br>
   • Isbat: Allah yang memuliakan siapa yang Dia kehendaki.</p>
   <blockquote>
-    <div class="arab">﴿ إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ ﴾</div>
+    <div class="arab">﴿ إِنَّ أَكْرَمَكُمْ عِندَ ٱللَّهِ أَتْقَىٰكُمْ ﴾</div>
     (al-Ḥujurāt 49:13)<a class="footnote-ref" href="#fn-12-8-5">【5】</a>
   </blockquote>
 
@@ -1142,7 +1142,7 @@
   “Semua daripada Allah” → lalu meninggalkan amal, meninggalkan tertib, meninggalkan sunnah. ➡️ Ini menafikan Asbab Mutlak.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَقُلِ ٱعْمَلُوا۟ فَسَيَرَى ٱللَّهُ عَمَلَكُمْ ﴾</div>
+    <div class="arab">﴿ وَقُلِ ٱعْمَلُوا۟ فَسَيَرَى ٱللَّهُ عَمَلَكُمْ ﴾</div>
     “Dan katakanlah: Beramallah kamu, maka Allah akan melihat amal kamu.” (at-Tawbah 9:105)<a class="footnote-ref" href="#fn-12-8-6">【6】</a>
   </blockquote>
   <p>➡️ Amal diperintah, ➡️ kuasa amal dinafykan, ➡️ kesan amal diisbatkan kepada Allah.</p>
@@ -1197,7 +1197,7 @@
   <p>Oleh itu: usaha tetap usaha, sistem tetap sistem, manusia tetap manusia, tetapi kesan yang lahir tidak lagi mengikut logik sebab, sebaliknya mengikut janji Allah.</p>
   <p><strong>Dalil asas yang mengunci prinsip ini:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَا تَوْفِيقِىٓ إِلَّا بِٱللَّهِ ﴾</div>
+    <div class="arab">﴿ وَمَا تَوْفِيقِىٓ إِلَّا بِٱللَّهِ ﴾</div>
     “Dan tidaklah kejayaanku melainkan dengan pertolongan Allah.” (Hūd 11:88)<a class="footnote-ref" href="#fn-12-9-1">【1】</a>
   </blockquote>
   <p>Ayat ini menafikan secara mutlak bahawa: kebijaksanaan, pengalaman, atau strategi boleh melahirkan kejayaan tanpa campur tangan Allah.</p>
@@ -1208,7 +1208,7 @@
   <p>Tanpa Nafy: sebab akan kembali menjadi pusat keyakinan, hati akan kembali bergantung kepada makhluk, dan syirik halus akan berulang walaupun amal zahir banyak.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَا بِكُم مِّن نِّعْمَةٍۢ فَمِنَ ٱللَّهِ ﴾</div>
+    <div class="arab">﴿ وَمَا بِكُم مِّن نِّعْمَةٍۢ فَمِنَ ٱللَّهِ ﴾</div>
     “Dan apa sahaja nikmat yang ada pada kamu, maka ia adalah daripada Allah.” (an-Naḥl 16:53)<a class="footnote-ref" href="#fn-12-9-2">【2】</a>
   </blockquote>
   <p>Ayat ini mematikan akar kesombongan sebab, tanpa mematikan fungsi sebab itu sendiri.</p>
@@ -1218,7 +1218,7 @@
   <p>Isbat bukan lafaz umum, tetapi: spesifik kepada janji wahyu, terikat kepada perintah, dan disokong oleh amal sebenar. Isbat tanpa perintah = ilusi Tauhid. Isbat tanpa amal = angan-angan rohani.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+    <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
     “Dan sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.” (al-Aḥzāb 33:71)<a class="footnote-ref" href="#fn-12-9-3">【3】</a>
   </blockquote>
   <p>Kemenangan dikaitkan secara langsung dengan: ketaatan, bukan kepintaran, bukan kekuatan, bukan perancangan.</p>
@@ -1228,7 +1228,7 @@
   <p>Jika Asbab Mutlak: ditangguhkan kerana sibuk, dipinggirkan kerana “realiti”, atau digantikan dengan sebab lain, maka tiada janji Allah yang aktif, walaupun sebab zahir kelihatan lengkap.</p>
   <p><strong>Dalil asas:</strong></p>
   <blockquote>
-    <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ ﴾</div>
+    <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ ﴾</div>
     “Jika kamu menolong (agama) Allah, nescaya Dia akan menolong kamu.” (Muḥammad 47:7)<a class="footnote-ref" href="#fn-12-9-4">【4】</a>
   </blockquote>
   <p>Ayat ini menetapkan tertib nusrah: pertolongan Allah datang selepas amal menolong agama Allah, bukan sebelum.</p>
@@ -1238,7 +1238,7 @@
   <p>Melangkau tertib ini: mempercepat hasil, tetapi mematikan nusrah.</p>
   <p><strong>Dalil asas:</strong></p>
   <blockquote>
-    <div class="arab">﴿ لَّقَدْ كَانَ لَكُمْ فِى رَسُولِ ٱللَّهِ أُسْوَةٌ حَسَنَةٌ ﴾</div>
+    <div class="arab">﴿ لَّقَدْ كَانَ لَكُمْ فِى رَسُولِ ٱللَّهِ أُسْوَةٌ حَسَنَةٌ ﴾</div>
     “Sesungguhnya telah ada pada diri Rasulullah itu contoh teladan yang baik.” (al-Aḥzāb 33:21)<a class="footnote-ref" href="#fn-12-9-5">【5】</a>
   </blockquote>
   <p>Uswah Rasulullah ﷺ bukan pada hasil, tetapi pada susunan amal.</p>
@@ -1248,7 +1248,7 @@
   <p>Istiqamah bermaksud: terus beramal walau hasil belum kelihatan, terus berdakwah walau ditolak, terus sabar walau proses panjang.</p>
   <p><strong>Dalil pengunci:</strong></p>
   <blockquote>
-    <div class="arab">﴿ إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَٰمُوا۟ ﴾</div>
+    <div class="arab">﴿ إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَٰمُوا۟ ﴾</div>
     “Sesungguhnya orang-orang yang berkata: ‘Tuhan kami ialah Allah’, kemudian mereka beristiqamah…” (Fuṣṣilat 41:30)<a class="footnote-ref" href="#fn-12-9-6">【6】</a>
   </blockquote>
   <p>Istiqamah ialah penjaga transformasi.</p>
@@ -1302,7 +1302,7 @@
   <p>Dengan Ittiba’: amal berubah menjadi ketaatan, ketaatan mengaktifkan janji Allah, janji Allah menundukkan sebab-sebab lain, dan dunia tunduk tanpa diminta.</p>
   <p><strong>Dalil asas:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+    <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
     “Dan sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.” (al-Aḥzāb 33:71)<a class="footnote-ref" href="#fn-12-10-1">【1】</a>
   </blockquote>
   <p>➡️ Al-Qur’an mengaitkan kemenangan dengan ketaatan, bukan kuantiti amal.</p>
@@ -1319,7 +1319,7 @@
   <p>Dengan Ittiba’: sebab digunakan tanpa diyakini, hasil diserahkan tanpa dituntut, dan ketaatan menjadi pusat keputusan walaupun bertentangan logik.</p>
   <p><strong>Dalil asas:</strong></p>
   <blockquote>
-    <div class="arab">﴿ قُلْ إِن كُنتُمْ تُحِبُّونَ ٱللَّهَ فَٱتَّبِعُونِى يُحْبِبْكُمُ ٱللَّهُ ﴾</div>
+    <div class="arab">﴿ قُلْ إِن كُنتُمْ تُحِبُّونَ ٱللَّهَ فَٱتَّبِعُونِى يُحْبِبْكُمُ ٱللَّهُ ﴾</div>
     “Katakanlah: Jika kamu mencintai Allah, maka ikutilah aku, nescaya Allah mencintai kamu.” (Āli ‘Imrān 3:31)<a class="footnote-ref" href="#fn-12-10-2">【2】</a>
   </blockquote>
   <p>➡️ Cinta kepada Allah dibuktikan dengan Ittiba’, bukan perasaan dan dakwaan.</p>
@@ -1346,7 +1346,7 @@
   <p>Sirah Rasulullah ﷺ membuktikan: Baginda ﷺ tidak mengubah cara walaupun ditekan, tidak mendahulukan hasil walaupun peluang terbuka, tidak menggadaikan tertib walaupun kuasa hampir diperoleh.</p>
   <p><strong>Dalil asas:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَمَا عَلَى ٱلرَّسُولِ إِلَّا ٱلْبَلَٰغُ ٱلْمُبِينُ ﴾</div>
+    <div class="arab">﴿ وَمَا عَلَى ٱلرَّسُولِ إِلَّا ٱلْبَلَٰغُ ٱلْمُبِينُ ﴾</div>
     “Dan tidaklah kewajipan ke atas Rasul melainkan menyampaikan dengan jelas.” (an-Nūr 24:54)<a class="footnote-ref" href="#fn-12-10-4">【4】</a>
   </blockquote>
   <p>➡️ Menyerahkan hasil ialah bukti Tauhid yang hidup, bukan pasif.</p>
@@ -1356,7 +1356,7 @@
   <p>Apabila hati tunduk sepenuhnya kepada tertib Rasulullah ﷺ: pujian tidak menaikkan, penolakan tidak menjatuhkan, kegagalan zahir tidak mematikan amal, kejayaan tidak melahirkan rasa memiliki. Ini kerana pusat kehidupan bukan kejayaan dunia, tetapi keredhaan Allah.</p>
   <p><strong>Dalil asas:</strong></p>
   <blockquote>
-    <div class="arab">﴿ وَرِضْوَٰنٌۭ مِّنَ ٱللَّهِ أَكْبَرُ ﴾</div>
+    <div class="arab">﴿ وَرِضْوَٰنٌۭ مِّنَ ٱللَّهِ أَكْبَرُ ﴾</div>
     “Dan keredhaan Allah itu lebih besar.” (at-Tawbah 9:72)<a class="footnote-ref" href="#fn-12-10-5">【5】</a>
   </blockquote>
   <p>➡️ Keredhaan Allah ialah kemuncak transformasi Tauhidi.</p>
@@ -1388,7 +1388,45 @@
   </div>
   <a class="toplink" href="#top">↑ Atas</a>
 </section>
+</article>
+  </main>
 
+  <footer>
+    <p>© 3asbab.org — Arkib bacaan sahaja. Bab 10: Mukadimah Dakwah Tauhid.</p>
+  </footer>
 
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn ? btn.innerHTML : '';
+
+      if (btn) {
+        btn.innerHTML = '⏳ Menyediakan PDF...';
+        btn.disabled = true;
+      }
+
+      setTimeout(() => {
+        window.print();
+
+        setTimeout(() => {
+          if (btn) {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+          }
+        }, 800);
+      }, 200);
+    }
+
+    // smooth scroll ke atas
+    document.querySelectorAll('a[href="#top"]').forEach(el => {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
 
 
