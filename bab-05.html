@@ -4,397 +4,566 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN | 3asbab.org</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <style>
-    /* SEMUA CSS KEKAL SAMA SEPERTI ASAL */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
     }
+
     :root {
-      --max-width: 920px;
-      --pad: 1.25rem;
-      --border-light: #e2e8f0;
-      --bg-soft: #fafcff;
-      --muted: #4a5568;
-      --accent: #0f7b4a;
-      --accent-light: #e6f4ed;
-      --text-dark: #1a202c;
-      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
-      --pdf-accent: #0f7b4a;
-      --pdf-accent-soft: #e6f4ed;
-      --pdf-border: #d9e2ec;
-      --pdf-text: #1f2937;
-      --pdf-muted: #5b6573;
-      --pdf-paper: #fffefb;
+      --ink: #1c1917;
+      --ink-soft: #44403c;
+      --ink-muted: #78716c;
+      --ink-faint: #a8a29e;
+      --page: #faf9f7;
+      --page-warm: #f5f0e8;
+      --cream: #ede8df;
+      --rule: #d6cfc4;
+      --rule-light: #e8e3db;
+      --emerald: #065f46;
+      --emerald-mid: #059669;
+      --emerald-light: #d1fae5;
+      --emerald-pale: #ecfdf5;
+      --gold: #92400e;
+      --gold-light: #fef3c7;
+      --shadow: 0 2px 8px rgba(28,25,23,0.06), 0 1px 3px rgba(28,25,23,0.04);
+      --shadow-md: 0 4px 20px rgba(28,25,23,0.08), 0 2px 8px rgba(28,25,23,0.05);
+      --max: 780px;
     }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
-      background: white;
-      color: var(--text-dark);
-      line-height: 1.7;
-      scroll-behavior: smooth;
+      font-family: 'Source Serif 4', 'Lora', Georgia, serif;
+      background: var(--page);
+      color: var(--ink);
+      line-height: 1.8;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
     }
-    .wrap {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 clamp(1.2rem, 4vw, 1.8rem);
-    }
+
+    /* ── TOPBAR ── */
     .topbar {
-      border-bottom: 1px solid var(--border-light);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(6px);
+      position: sticky; top: 0; z-index: 40;
+      background: rgba(250,249,247,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
     }
     .topbar nav {
-      display: flex;
-      gap: 1rem;
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      padding: 0.6rem 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
       flex-wrap: wrap;
-      align-items: center;
-      padding: 0.75rem 0;
-    }
-    .topbar a {
-      text-decoration: none;
-      font-size: 0.9rem;
-      color: var(--text-dark);
     }
     .brand {
+      font-family: 'Lora', serif;
       font-weight: 700;
-      letter-spacing: -0.2px;
-      margin-right: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--emerald);
+      letter-spacing: 0.02em;
+      margin-right: 0.75rem;
     }
-    header { padding: 1.5rem 0 0.5rem 0; }
-    h1 {
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      line-height: 1.25;
-      margin: 0.25rem 0 0.5rem;
-      letter-spacing: -0.01em;
+    .topbar a {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      text-decoration: none;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      transition: background 0.15s, color 0.15s;
     }
-    .meta {
-      color: var(--muted);
-      font-size: 0.85rem;
-      border-left: 3px solid var(--accent);
-      padding-left: 0.75rem;
+    .topbar a:hover { background: var(--cream); color: var(--emerald); }
+    .topbar a.active { font-weight: 600; color: var(--emerald); }
+
+    /* ── PDF TOOLBAR ── */
+    .pdf-toolbar {
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      padding: 0.8rem 2rem 0;
+      display: flex; justify-content: flex-end;
     }
+    .btn-pdf {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.82rem; font-weight: 600;
+      color: var(--emerald);
+      background: white;
+      border: 1px solid var(--emerald);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.15s ease;
+      box-shadow: var(--shadow);
+    }
+    .btn-pdf:hover { background: var(--emerald-pale); }
+    .btn-pdf:active { transform: translateY(1px); }
+
+    /* ── JUMP NAV ── */
     .jump {
-      background: #ffffff;
-      border-bottom: 1px solid var(--border-light);
-      position: sticky;
-      top: 48px;
-      z-index: 15;
-      background: rgba(255,255,255,0.98);
+      position: sticky; top: 44px; z-index: 30;
+      background: rgba(250,249,247,0.97);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--rule-light);
     }
     .jump-inner {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      padding: 0.7rem 0;
-      align-items: center;
-      font-size: 0.8rem;
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      padding: 0.5rem 2rem;
+      display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem;
+      font-size: 0.78rem;
+    }
+    .jump-label {
+      font-weight: 600; color: var(--ink-muted);
+      font-size: 0.75rem; letter-spacing: 0.05em;
+      text-transform: uppercase; margin-right: 0.3rem;
     }
     .jump a {
-      padding: 0.2rem 0.7rem;
+      padding: 0.18rem 0.65rem;
       border-radius: 40px;
-      background: var(--bg-soft);
-      border: 1px solid var(--border-light);
+      background: white;
+      border: 1px solid var(--rule);
       text-decoration: none;
       font-weight: 500;
+      color: var(--ink-soft);
       transition: 0.1s ease;
-      color: var(--text-dark);
+      font-family: 'Source Serif 4', serif;
     }
-    .jump a:hover {
-      border-color: var(--accent);
-      background: var(--accent-light);
+    .jump a:hover { border-color: var(--emerald-mid); color: var(--emerald); background: var(--emerald-pale); }
+
+    /* ── HEADER ── */
+    .page-header {
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      padding: 2.5rem 2rem 1.5rem;
+      border-bottom: 1px solid var(--rule-light);
     }
-    main { padding: 1.2rem 0 3rem; }
-    .badge-chapter {
-      display: inline-block;
-      font-weight: 700;
-      font-size: 0.8rem;
-      background: #fef3c7;
-      color: #b45309;
-      padding: 0.2rem 0.8rem;
-      border-radius: 30px;
+    .chapter-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--emerald);
       margin-bottom: 0.8rem;
     }
+    .chapter-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 18px; height: 2px;
+      background: var(--emerald);
+      border-radius: 1px;
+    }
+    h1.page-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+    }
+    .page-subtitle {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      font-style: italic;
+    }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    /* ── SECTIONS ── */
+    section.section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--rule-light);
+    }
+    section.section:last-child { border-bottom: none; }
+
+    /* ── HEADINGS ── */
     h2 {
-      font-size: 1.6rem;
-      margin: 1.8rem 0 0.75rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 0.9rem;
+      font-family: 'Lora', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 0.3rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+    .h2-sub {
+      font-size: 1rem;
       font-weight: 600;
+      color: var(--emerald);
+      margin-bottom: 1rem;
+      font-style: italic;
     }
     h3 {
-      font-size: 1.25rem;
-      margin: 1.2rem 0 0.5rem;
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
       font-weight: 600;
-      color: #0b3b2a;
+      color: var(--emerald);
+      margin: 2rem 0 0.6rem;
+      letter-spacing: -0.01em;
     }
-    .section-card {
-      background: var(--bg-soft);
-      border-radius: 1.2rem;
-      padding: 1.2rem 1.4rem;
-      margin: 1.2rem 0;
-      border: 1px solid var(--border-light);
-      box-shadow: var(--shadow-sm);
+    h4 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 1.5rem 0 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.82rem;
     }
-    .arabic {
-      font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
-      font-size: 1.6rem;
-      line-height: 1.8;
+
+    p { margin-bottom: 0.85rem; }
+    p:last-child { margin-bottom: 0; }
+
+    em { color: var(--ink-soft); }
+
+    strong { font-weight: 700; color: var(--ink); }
+
+    /* ── DIVIDER ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule-light);
+      margin: 1.8rem 0;
+    }
+    .hr-ornament {
+      text-align: center;
+      margin: 1.8rem 0;
+      color: var(--ink-faint);
+      font-size: 0.8rem;
+      letter-spacing: 0.3em;
+    }
+    .hr-ornament::before { content: '— ✦ —'; }
+
+    /* ── ARABIC ── */
+    .arab, .arabic {
+      font-family: 'Amiri', 'Traditional Arabic', serif;
+      font-size: 1.65rem;
+      line-height: 2;
       direction: rtl;
       text-align: right;
-      margin: 0.8rem 0;
-      color: #1e293b;
+      color: var(--emerald);
+      background: linear-gradient(135deg, var(--emerald-pale), white);
+      border-right: 3px solid var(--emerald);
+      padding: 0.7rem 1rem 0.7rem 1.5rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+      margin: 1rem 0 0.4rem;
     }
     .translation {
-      font-style: normal;
-      background: #f8fafc;
-      padding: 0.6rem 1rem;
-      border-radius: 0.8rem;
-      margin: 0.5rem 0 1rem;
-      border-left: 3px solid var(--accent);
-      font-size: 0.95rem;
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin: 0 0 1rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--rule);
     }
+
+    /* ── BLOCKQUOTE ── */
     blockquote {
-      background: var(--accent-light);
-      border-radius: 0.8rem;
+      background: var(--page-warm);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 0.6rem 0.6rem 0;
       padding: 0.8rem 1.2rem;
       margin: 1rem 0;
-      font-style: normal;
+      font-size: 0.92rem;
+      color: var(--ink-soft);
     }
+    blockquote .arabic-hadith {
+      font-family: 'Amiri', serif;
+      font-size: 1.2rem;
+      direction: rtl;
+      text-align: right;
+      display: block;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+
+    /* ── LISTS ── */
+    ul, ol {
+      padding-left: 1.4rem;
+      margin-bottom: 0.85rem;
+    }
+    li {
+      margin-bottom: 0.3rem;
+      line-height: 1.7;
+    }
+    li > ul, li > ol { margin-top: 0.3rem; margin-bottom: 0; }
+    ol > li { padding-left: 0.2rem; }
+
+    /* ── HIGHLIGHT BOX ── */
     .insight-box {
-      background: #f1f5f9;
-      padding: 0.8rem 1.2rem;
-      border-radius: 1rem;
+      background: var(--page-warm);
+      border: 1px solid var(--rule);
+      border-radius: 0.5rem;
+      padding: 0.9rem 1.1rem;
       margin: 1rem 0;
+      font-size: 0.9rem;
     }
+
+    /* ── BADGE ── */
+    .badge {
+      display: inline-flex; align-items: center;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      background: var(--gold-light);
+      color: var(--gold);
+      border: 1px solid #fde68a;
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── SECTION OPENER ── */
+    .section-opener {
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--rule-light);
+    }
+    .section-opener p {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    /* ── TABLE ── */
+    .table-wrap { overflow-x: auto; margin: 1rem 0; }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1rem 0;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
-    th, td {
-      border: 1px solid var(--border-light);
-      padding: 0.6rem;
+    th {
+      background: var(--page-warm);
+      border: 1px solid var(--rule);
+      padding: 0.55rem 0.85rem;
+      font-weight: 700;
       text-align: left;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    td {
+      border: 1px solid var(--rule);
+      padding: 0.55rem 0.85rem;
       vertical-align: top;
     }
-    th { background: #f1f5f9; font-weight: 600; }
-    hr { margin: 2rem 0; border: 0; height: 1px; background: var(--border-light); }
-    .footnote {
-      font-size: 0.8rem;
-      color: var(--muted);
+    tr:nth-child(even) td { background: var(--page-warm); }
+
+    /* ── FOOTNOTES ── */
+    .footnotes {
       margin-top: 1.5rem;
-      border-top: 1px dashed var(--border-light);
       padding-top: 1rem;
+      border-top: 1px dashed var(--rule);
     }
-    footer {
-      border-top: 1px solid var(--border-light);
-      padding: 1.5rem 0;
-      color: var(--muted);
+    .footnotes h3 {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      font-family: 'Source Serif 4', serif;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    .footnotes ul {
       font-size: 0.8rem;
-      margin-top: 1rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
     }
-    .toplink { font-size: 0.75rem; margin-top: 0.5rem; display: inline-block; }
-    .pdf-toolbar {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      margin: 14px 0 8px;
+
+    /* ── BACK TO TOP ── */
+    .toplink {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      font-size: 0.78rem;
+      color: var(--ink-faint);
+      text-decoration: none;
+      margin-top: 1.5rem;
+      transition: color 0.15s;
+      font-family: 'Source Serif 4', serif;
     }
-    .btn-pdf {
-      appearance: none;
-      border: 1px solid var(--pdf-border);
-      background: #fff;
-      color: var(--pdf-text);
-      padding: 10px 14px;
-      border-radius: 999px;
-      cursor: pointer;
-      font: inherit;
-      font-size: 0.95rem;
-      line-height: 1.2;
-      font-weight: 600;
-      transition: 0.15s ease;
-      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    .toplink:hover { color: var(--emerald); }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: var(--emerald-pale);
+      border: 1px solid #a7f3d0;
+      border-radius: 0.6rem;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+      font-size: 0.92rem;
     }
-    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
-    .btn-pdf:active { transform: translateY(1px); }
+    .callout p:last-child { margin-bottom: 0; }
+
+    /* ── RUMUSAN BOX ── */
+    .rumusan {
+      background: var(--page-warm);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--emerald);
+      border-radius: 0.6rem;
+      padding: 1.2rem 1.4rem;
+      margin: 1.5rem 0;
+    }
+    .rumusan ol, .rumusan ul { margin-bottom: 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 1.5rem 2rem;
+      max-width: calc(var(--max) + 4rem);
+      margin: 0 auto;
+      color: var(--ink-muted);
+      font-size: 0.78rem;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    /* ── PRINT / PDF ── */
     .no-print { display: block; }
     .pdf-only { display: none; }
-    .pdf-exporting .pdf-only { display: block !important; }
-    .pdf-exporting .no-print,
-    .pdf-exporting .pdf-toolbar,
-    .pdf-exporting .topbar,
-    .pdf-exporting .jump,
-    .pdf-exporting .toplink { display: none !important; }
-    .pdf-shell { background: #fff; }
     .pdf-cover { display: none; }
+    .pdf-meta-page { display: none; }
+
     .pdf-cover-inner {
       min-height: 260mm;
       padding: 28mm 18mm 24mm;
-      display: flex;
-      flex-direction: column;
+      display: flex; flex-direction: column;
       justify-content: space-between;
-      background: var(--pdf-paper);
-      color: var(--pdf-text);
+      background: #fffefb; color: #1f2937;
     }
-    .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
-    .pdf-cover-brand { font-size: 0.95rem; letter-spacing: .12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
-    .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
+    .pdf-cover-top { border-top: 4px solid #065f46; padding-top: 12mm; }
+    .pdf-cover-brand { font-size: 0.9rem; letter-spacing: .1em; text-transform: uppercase; color: #6b7280; margin-bottom: 10mm; }
+    .pdf-cover-series { font-size: 1rem; font-weight: 700; margin: 0 0 5mm; }
     .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
-    .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
-    .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
-    .pdf-meta-page { display: none; }
-    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
-    .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
-    .pdf-meta-list p { margin: 0 0 6mm; }
+    .pdf-cover-subtitle { font-size: 1rem; color: #6b7280; margin: 0; }
+    .pdf-cover-bottom { border-top: 1px solid #d1d5db; padding-top: 8mm; font-size: 0.9rem; color: #6b7280; }
+    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; }
+    .pdf-meta-inner h2 { margin: 0 0 10mm; font-size: 1.3rem; }
+    .pdf-meta-list p { margin: 0 0 5mm; }
     .pdf-break { break-before: page; page-break-before: always; }
-    .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
-    .pdf-print-mode { font-family: Georgia, "Times New Roman", serif; color: #111827; background: #fff; line-height: 1.8; }
-    .pdf-print-mode .wrap { max-width: 780px; }
-    .pdf-print-mode h1, .pdf-print-mode h2, .pdf-print-mode h3 { color: #111827; letter-spacing: 0; }
-    .pdf-print-mode h1 { font-size: 2rem; }
-    .pdf-print-mode h2 { font-size: 1.45rem; border-left: 0; border-bottom: 1px solid var(--pdf-border); padding-left: 0; padding-bottom: 6px; margin-top: 1.7rem; }
-    .pdf-print-mode h3 { font-size: 1.15rem; margin-top: 1.3rem; }
-    .pdf-print-mode .section-card, .pdf-print-mode blockquote, .pdf-print-mode .insight-box { background: transparent; border: 1px solid #e5e7eb; box-shadow: none; }
-    .pdf-print-mode .badge-chapter, .pdf-print-mode .jump, .pdf-print-mode .topbar, .pdf-print-mode .toplink, .pdf-print-mode .pdf-toolbar { display: none !important; }
-    .pdf-print-mode .arabic { font-size: 1.45rem; line-height: 1.9; }
-    .pdf-print-mode table { font-size: 0.92rem; }
+
     @media print {
-      body { margin: 0; padding: 0; }
       .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
       .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
-      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
-      h2, h3 { break-after: avoid; page-break-after: avoid; }
+      section.section { break-inside: avoid; }
+      h2, h3, h4 { break-after: avoid; }
     }
+
     @media (max-width: 640px) {
-      .section-card { padding: 1rem; }
-      .arabic { font-size: 1.3rem; }
+      body { font-size: 16px; }
+      main, .page-header { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .topbar nav, .jump-inner, .pdf-toolbar, footer { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .arab, .arabic { font-size: 1.4rem; }
+      h2 { font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
 
+  <!-- TOPBAR -->
   <div class="topbar no-print">
-    <div class="wrap">
-      <nav>
-        <span class="brand">3asbab.org</span>
-        <a href="index.html">🏠 Home</a>
-        <a href="bab-04.html">← Prev</a>
-        <a href="bab-05.html" style="font-weight:600;">Bab 5</a>
-        <a href="bab-06.html">Next →</a>
-      </nav>
+    <nav>
+      <span class="brand">3asbab.org</span>
+      <a href="index.html">🏠 Home</a>
+      <a href="bab-04.html">← Bab 4</a>
+      <a href="bab-05.html" class="active">Bab 5</a>
+      <a href="bab-06.html">Bab 6 →</a>
+    </nav>
+  </div>
+
+  <!-- PDF BUTTON -->
+  <div class="pdf-toolbar no-print">
+    <button class="btn-pdf" onclick="downloadPDF()">📄 Muat Turun PDF</button>
+  </div>
+
+  <!-- PDF COVER (print only) -->
+  <div class="pdf-cover pdf-only">
+    <div class="pdf-cover-inner">
+      <div class="pdf-cover-top">
+        <div class="pdf-cover-brand">3asbab.org</div>
+        <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+        <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN</h1>
+        <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Memahami perbezaan Asbab Mutlak Asli dan Asbab Mutlak Terbitan</p>
+      </div>
+      <div class="pdf-cover-bottom">
+        <div>Edisi PDF untuk bacaan berfokus dan cetakan</div>
+        <div>© 3asbab.org</div>
+      </div>
     </div>
   </div>
 
-  <div class="wrap no-print">
-    <div class="pdf-toolbar">
-      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
+  <!-- PDF META (print only) -->
+  <div class="pdf-meta-page pdf-only pdf-break">
+    <div class="pdf-meta-inner">
+      <h2>Maklumat Dokumen</h2>
+      <div class="pdf-meta-list">
+        <p><strong>Judul:</strong> Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN</p>
+        <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+        <p><strong>Laman:</strong> 3asbab.org</p>
+        <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+      </div>
     </div>
   </div>
 
-  <div id="pdf-shell" class="pdf-shell">
+  <!-- PAGE HEADER -->
+  <div class="page-header" id="top">
+    <div class="chapter-eyebrow">Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+    <h1 class="page-title">Bab 5 — Dua Lapisan Asbab Mutlak:<br>Asli dan Terbitan</h1>
+    <p class="page-subtitle">Asbab Mutlak Asli dan Terbitan &nbsp;·&nbsp; Tauhidi &amp; Pembinaan Iman</p>
+  </div>
 
-    <div class="pdf-cover pdf-only">
-      <div class="pdf-cover-inner">
-        <div class="pdf-cover-top">
-          <div class="pdf-cover-brand">3asbab.org</div>
-          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
-          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN</h1>
-          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Memahami perbezaan Asbab Mutlak Asli dan Asbab Mutlak Terbitan</p>
-        </div>
-        <div class="pdf-cover-bottom">
-          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
-          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
-        </div>
-      </div>
+  <!-- JUMP NAV -->
+  <div class="jump no-print">
+    <div class="jump-inner">
+      <span class="jump-label">Lompat ke</span>
+      <a href="#5-1">5.1</a>
+      <a href="#5-2">5.2</a>
+      <a href="#5-3">5.3</a>
+      <a href="#5-4">5.4</a>
+      <a href="#5-5">5.5</a>
+      <a href="#5-6">5.6</a>
+      <a href="#5-7">5.7</a>
+      <a href="#5-8">5.8</a>
     </div>
+  </div>
 
-    <div class="pdf-meta-page pdf-only pdf-break">
-      <div class="pdf-meta-inner">
-        <h2>Maklumat Dokumen</h2>
-        <div class="pdf-meta-list">
-          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN</span></p>
-          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
-          <p><strong>Laman:</strong> 3asbab.org</p>
-          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
-          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
-        </div>
-      </div>
-    </div>
-
-    <header class="wrap" id="top">
-      <div class="meta">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
-      <h1>Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN</h1>
-      <div class="meta">Asbab Mutlak Asli dan Terbitan | Tauhidi &amp; Pembinaan Iman</div>
-    </header>
-
-    <div class="jump no-print">
-      <div class="wrap">
-        <div class="jump-inner">
-          <strong>🧭 Lompat ke:</strong>
-          <a href="#5-1">5.1</a>
-          <a href="#5-2">5.2</a>
-          <a href="#5-3">5.3</a>
-          <a href="#5-4">5.4</a>
-          <a href="#5-5">5.5</a>
-          <a href="#5-6">5.6</a>
-          <a href="#5-7">5.7</a>
-          <a href="#5-8">5.8</a>
-        </div>
-      </div>
-    </div>
-
-    <main class="wrap">
+  <main>
     <article>
-      <div class="section">
-        <div class="badge">🟥 BAB 5 – DUA LAPISAN ASBAB ASBAB MUTLAK: ASLI DAN TERBITAN </div>
-        <!-- Ruang untuk pengenalan bab -->
-      </div>
 
-<!-- === SECTION 5.1 START === -->
+<!-- ═══════════════════════════════════════════
+     SECTION 5.1
+════════════════════════════════════════════ -->
 <section class="section" id="5-1">
-  <h2>BAB 5 – DUA LAPISAN ASBAB MUTLAK: ASLI & TERBITAN</h2>
-  <p><em>(Asbab Mutlak Asli = Asas Wahyu. Asbab Mutlak Terbitan = Asbab Dunia yang tunduk kepada Wahyu.)</em></p>
-
-  <h3>5.1 MUKADIMAH — MENGAPA MUTLAK ADA DUA LAPISAN</h3>
+  <div class="section-opener">
+    <div class="badge">🟥 Bab 5 — Dua Lapisan Asbab Mutlak: Asli dan Terbitan</div>
+    <h2>5.1 Mukadimah — Mengapa Mutlak Ada Dua Lapisan</h2>
+    <p><em>Asbab Mutlak Asli = Asas Wahyu. &nbsp; Asbab Mutlak Terbitan = Asbab Dunia yang tunduk kepada Wahyu.</em></p>
+  </div>
 
   <h4>5.1.1 Mukadimah Tauhidi</h4>
 
-  <p>Asbab Mutlak ialah segala amal yang Allah sendiri ikat dengan janji-Nya — seperti dakwah, mujahadah, sabar, solat khusyuk, syura, infak, hijrah, zikir.<br>
-  Asbab ini mesti menghasilkan kesan, kerana janji Allah pasti benar.</p>
-
-  <p>Firman Allah:</p>
+  <p>Asbab Mutlak ialah segala amal yang Allah sendiri ikat dengan janji-Nya — seperti dakwah, mujahadah, sabar, solat khusyuk, syura, infak, hijrah, zikir. Asbab ini mesti menghasilkan kesan, kerana janji Allah pasti benar.</p>
 
   <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ قِيلًا ﴾</div>
-  <p>“Siapakah yang lebih benar perkataannya daripada Allah?”<br>
-  (An-Nisā’ 4:122)【1】</p>
+  <div class="translation">"Siapakah yang lebih benar perkataannya daripada Allah?" &nbsp;(An-Nisā' 4:122)【1】</div>
 
   <p>Namun dalam kehidupan manusia, wujud dua jenis asbab:</p>
 
-  <p><strong>1. Asbab Wahyu</strong></p>
-  <ul>
-    <li>ia memang Asbab Mutlak Asli</li>
-    <li>contoh: doa → Allah janji jawab; sabar → Allah janji bersama; dakwah → Allah janji nusrah</li>
-  </ul>
+  <p><strong>1. Asbab Wahyu</strong> — ia memang Asbab Mutlak Asli. Contoh: doa → Allah janji jawab; sabar → Allah janji bersama; dakwah → Allah janji nusrah.</p>
 
-  <p><strong>2. Asbab Dunia</strong></p>
-  <ul>
-    <li>makanan, modal, strategi, teknologi, tentera, data</li>
-    <li>neutral (fitrah) atau gelap (zulumat)</li>
-    <li>tetapi bila ditundukkan kepada wahyu → menjadi Asbab Mutlak Terbitan</li>
-  </ul>
+  <p><strong>2. Asbab Dunia</strong> — makanan, modal, strategi, teknologi, tentera, data. Neutral (fitrah) atau gelap (zulumat), tetapi bila ditundukkan kepada wahyu → menjadi Asbab Mutlak Terbitan.</p>
 
-  <p><strong>Kesimpulan:</strong><br>
-  Asbab Mutlak mempunyai dua lapisan:</p>
-  <ol>
-    <li>Asbab Mutlak Asli – datang dari wahyu</li>
-    <li>Asbab Mutlak Terbitan – datang dari dunia tetapi tunduk kepada wahyu</li>
-  </ol>
+  <div class="callout">
+    <strong>Kesimpulan:</strong> Asbab Mutlak mempunyai dua lapisan —<br>
+    1. Asbab Mutlak Asli: datang dari wahyu<br>
+    2. Asbab Mutlak Terbitan: datang dari dunia tetapi tunduk kepada wahyu
+  </div>
 
   <hr>
 
@@ -402,240 +571,121 @@
 
   <p>Tanpa pembezaan ini, manusia masuk dalam dua ekstrem:</p>
 
-  <p><strong>(A) Ekstrem 1 — Menolak Asbab Dunia</strong></p>
-  <p><em>(kesilapan sebahagian golongan zahid salah faham)</em></p>
+  <p><strong>(A) Ekstrem 1 — Menolak Asbab Dunia</strong> <em>(kesilapan sebahagian golongan zahid)</em></p>
   <ul>
     <li>Menganggap teknologi haram</li>
     <li>Menganggap strategi tak perlu</li>
     <li>Menganggap modal melemahkan tawakkal</li>
   </ul>
 
-  <p>Sedangkan sirah menunjukkan Rasulullah ﷺ:</p>
-  <ul>
-    <li>memakai baju besi</li>
-    <li>merancang strategi</li>
-    <li>bermesyuarat</li>
-    <li>berniaga</li>
-    <li>berhijrah dengan perancangan</li>
-  </ul>
+  <p>Sedangkan sirah menunjukkan Rasulullah ﷺ memakai baju besi, merancang strategi, bermesyuarat, berniaga, dan berhijrah dengan perancangan.</p>
 
-  <p>Dalil:</p>
   <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
-  <p>“Dan bersedialah kamu dengan segala kekuatan yang kamu mampu.”<br>
-  (Al-Anfāl 8:60)【2】</p>
+  <div class="translation">"Dan bersedialah kamu dengan segala kekuatan yang kamu mampu." &nbsp;(Al-Anfāl 8:60)【2】</div>
 
-  <p>Asbab dunia → wajib diambil.</p>
-
-  <p><strong>(B) Ekstrem 2 — Mengagungkan Asbab Dunia</strong></p>
-  <p><em>(kesilapan umat moden)</em></p>
+  <p><strong>(B) Ekstrem 2 — Mengagungkan Asbab Dunia</strong> <em>(kesilapan umat moden)</em></p>
   <ul>
-    <li>sains diletakkan di atas wahyu</li>
+    <li>Sains diletakkan di atas wahyu</li>
     <li>KPI di atas amal</li>
-    <li>ekonomi di atas infak</li>
-    <li>strategi di atas doa</li>
-    <li>data di atas tawakkal</li>
+    <li>Ekonomi di atas infak</li>
+    <li>Strategi di atas doa</li>
+    <li>Data di atas tawakkal</li>
   </ul>
 
-  <p>Dalil keras:</p>
   <div class="arab">﴿ وَظَنَنتُمْ ظَنَّ السَّوْءِ ﴾</div>
-  <p>“Kamu menyangka sangkaan buruk terhadap Allah.”<br>
-  (Al-Fatḥ 48:12)【3】</p>
+  <div class="translation">"Kamu menyangka sangkaan buruk terhadap Allah." &nbsp;(Al-Fatḥ 48:12)【3】</div>
 
   <p>Sangka buruk = menyangka asbab memberi kesan lebih daripada Allah.</p>
 
   <hr>
 
-  <h4>5.1.3 Dua Lapisan Asbab Mutlak Menghapuskan Dua Kesilapan Ini</h4>
+  <h4>5.1.3 Dua Lapisan Menghapuskan Dua Kesilapan</h4>
 
-  <p><strong>Asbab Mutlak Asli</strong></p>
-  <ul>
-    <li>→ membetulkan ekstrem moden</li>
-    <li>→ mengajar hati: Allah memberi kesan, bukan sebab</li>
-  </ul>
+  <p><strong>Asbab Mutlak Asli</strong> → membetulkan ekstrem moden. Mengajar hati: Allah memberi kesan, bukan sebab.</p>
+  <p><strong>Asbab Mutlak Terbitan</strong> → membetulkan ekstrem zahid. Mengajar: ambil sebab, tapi tundukkan sebab, jangan sujud kepada sebab.</p>
 
-  <p><strong>Asbab Mutlak Terbitan</strong></p>
-  <ul>
-    <li>→ membetulkan ekstrem zahid</li>
-    <li>→ mengajar: ambil sebab, tapi tundukkan sebab, jangan sujud kepada sebab</li>
-  </ul>
-
-  <p>Hadith besar:</p>
   <blockquote>
-    <p>« اعْقِلْهَا وَتَوَكَّلْ »<br>
-    “Ikatlah unta dan bertawakkallah.”<br>
-    (Tirmizi)【4】</p>
+    <span class="arabic-hadith">« اعْقِلْهَا وَتَوَكَّلْ »</span>
+    "Ikatlah unta dan bertawakkallah." &nbsp;(Tirmizi)【4】
   </blockquote>
 
-  <p>Ini menunjukkan dua lapisan:</p>
-  <ol>
-    <li>ambil sebab → Asbab Mutlak Terbitan</li>
-    <li>hati pada Allah → Asbab Mutlak Asli</li>
-  </ol>
+  <p>Ini menunjukkan dua lapisan: <strong>ambil sebab</strong> (Asbab Mutlak Terbitan) + <strong>hati pada Allah</strong> (Asbab Mutlak Asli).</p>
 
   <hr>
 
   <h4>5.1.4 Mengapa Asbab Mutlak Terbitan Tidak Boleh Berdiri Sendiri?</h4>
 
-  <p>Kerana semua asbab dunia hakikatnya tiada kuasa.</p>
-
-  <p>Dalil:</p>
   <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
-  <p>“Allah mencipta kamu dan apa yang kamu lakukan.”<br>
-  (As-Saffāt 37:96)【5】</p>
+  <div class="translation">"Allah mencipta kamu dan apa yang kamu lakukan." &nbsp;(As-Saffāt 37:96)【5】</div>
 
-  <ul>
-    <li>sebab Allah cipta</li>
-    <li>kesan Allah cipta</li>
-    <li>manusia hanya pelaksana</li>
-  </ul>
-
-  <p>Jika sebab dunia tidak tunduk kepada wahyu, ia menjadi:</p>
-  <ul>
-    <li>tuan bukan alat</li>
-    <li>berhala bukan hamba</li>
-    <li>fitnah bukan ibadah</li>
-  </ul>
-
-  <p>Kerangka 3 Asbab datang memecahkan berhala-berhala asbab ini.</p>
+  <p>Sebab Allah cipta. Kesan Allah cipta. Manusia hanya pelaksana. Jika sebab dunia tidak tunduk kepada wahyu, ia menjadi <em>tuan bukan alat</em> — berhala bukan hamba.</p>
 
   <hr>
 
   <h4>5.1.5 Asbab Mutlak Asli = Cahaya. Asbab Mutlak Terbitan = Bayangan Cahaya.</h4>
 
-  <p><strong>Asbab Mutlak Asli</strong></p>
-  <ul>
-    <li>datang dari langit</li>
-    <li>janjinya pasti</li>
-    <li>tidak bergantung dunia</li>
-  </ul>
+  <p><strong>Asbab Mutlak Asli:</strong> datang dari langit. Janjinya pasti. Tidak bergantung dunia.</p>
+  <p><strong>Asbab Mutlak Terbitan:</strong> datang dari bumi, tetapi diangkat oleh cahaya wahyu.</p>
 
-  <p><strong>Asbab Mutlak Terbitan</strong></p>
-  <ul>
-    <li>datang dari bumi</li>
-    <li>tetapi diangkat oleh cahaya wahyu</li>
-  </ul>
-
-  <p><strong>Contoh:</strong></p>
-  <ul>
-    <li>tongkat Musa<br>
-    – objek fitrah<br>
-    – bila dipukul ke laut → menjadi Asbab Mutlak Terbitan</li>
-    <li>parit Salman al-Farisi<br>
-    – strategi fitrah<br>
-    – bila tunduk sunnah & wahyu → Asbab Mutlak Terbitan</li>
-  </ul>
-
-  <p><strong>Perbezaannya:</strong></p>
-  <ul>
-    <li><strong>Cahaya (Asbab Mutlak Asli)</strong><br>
-    → kekuatan dari janji Allah<br>
-    → pasti mengubah dunia<br>
-    → tidak bergantung sebab</li>
-    <li><strong>Bayangan Cahaya (Asbab Mutlak Terbitan)</strong><br>
-    → kuat bila dekat dengan cahaya<br>
-    → hilang bila jauh dari cahaya</li>
-  </ul>
+  <p><strong>Contoh:</strong> Tongkat Musa — objek fitrah. Bila dipukul ke laut atas perintah Allah → menjadi Asbab Mutlak Terbitan. Parit Salman al-Farisi — strategi fitrah. Bila tunduk sunnah & wahyu → Asbab Mutlak Terbitan.</p>
 
   <hr>
 
   <h4>5.1.6 Kesimpulan Mukadimah Bab 5</h4>
-  <ol>
-    <li>Asbab Mutlak Asli = amal yang Allah ikat dengan janji langsung.</li>
-    <li>Asbab Mutlak Terbitan = sebab dunia yang tunduk melalui Nafy–Isbat–Ittiba’.</li>
-    <li>Tanpa Asli → Terbitan jadi gelap.</li>
-    <li>Tanpa Terbitan → manusia tak boleh berjalan dalam dunia.</li>
-    <li>Rasulullah ﷺ menggabungkan keduanya:</li>
-  </ol>
-
-  <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; margin:10px 0;">
-      <thead>
-        <tr>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Asbab Mutlak Asli</th>
-          <th style="border:1px solid var(--border); padding:8px; text-align:left;">Asbab Mutlak Terbitan</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">doa</td>
-          <td style="border:1px solid var(--border); padding:8px;">strategi</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">sabar</td>
-          <td style="border:1px solid var(--border); padding:8px;">perancangan</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">tawakkal</td>
-          <td style="border:1px solid var(--border); padding:8px;">ambil sebab</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">dakwah</td>
-          <td style="border:1px solid var(--border); padding:8px;">perjalanan, logistik</td>
-        </tr>
-        <tr>
-          <td style="border:1px solid var(--border); padding:8px;">mujahadah</td>
-          <td style="border:1px solid var(--border); padding:8px;">senjata, modal</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="rumusan">
+    <ol>
+      <li>Asbab Mutlak Asli = amal yang Allah ikat dengan janji langsung.</li>
+      <li>Asbab Mutlak Terbitan = sebab dunia yang tunduk melalui Nafy–Isbat–Ittiba'.</li>
+      <li>Tanpa Asli → Terbitan jadi gelap.</li>
+      <li>Tanpa Terbitan → manusia tak boleh berjalan dalam dunia.</li>
+      <li>Rasulullah ﷺ menggabungkan keduanya:</li>
+    </ol>
+    <div class="table-wrap" style="margin-top:1rem;">
+      <table>
+        <thead><tr><th>Asbab Mutlak Asli</th><th>Asbab Mutlak Terbitan</th></tr></thead>
+        <tbody>
+          <tr><td>Doa</td><td>Strategi</td></tr>
+          <tr><td>Sabar</td><td>Perancangan</td></tr>
+          <tr><td>Tawakkal</td><td>Ambil sebab</td></tr>
+          <tr><td>Dakwah</td><td>Perjalanan, logistik</td></tr>
+          <tr><td>Mujahadah</td><td>Senjata, modal</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:0.7rem; font-weight:600; font-style:italic;">Ini Sunnah Kemenangan.</p>
   </div>
 
-  <p>Ini Sunnah Kemenangan.</p>
+  <div class="footnotes">
+    <h3>Nota Kaki 5.1</h3>
+    <ul>
+      <li>【1】 An-Nisā' 4:122 — Allah paling benar dalam janji-Nya</li>
+      <li>【2】 Al-Anfāl 8:60 — perintah mengambil sebab dunia</li>
+      <li>【3】 Al-Fatḥ 48:12 — sangkaan buruk terhadap Allah</li>
+      <li>【4】 Hadith "I'qil-hā wa tawakkal" — Tirmizi</li>
+      <li>【5】 As-Saffāt 37:96 — Allah mencipta sebab &amp; kesan</li>
+    </ul>
+  </div>
 
-  <hr>
-
-  <h3>NOTA KAKI BAB 5.1</h3>
-  <ul>
-    <li>【1】 An-Nisā’ 4:122 — Allah paling benar dalam janji-Nya</li>
-    <li>【2】 Al-Anfāl 8:60 — perintah mengambil sebab dunia</li>
-    <li>【3】 Al-Fatḥ 48:12 — sangkaan buruk terhadap Allah</li>
-    <li>【4】 Hadith “I‘qil-hā wa tawakkal” — Tirmizi</li>
-    <li>【5】 As-Saffāt 37:96 — Allah mencipta sebab & kesan</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
+  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
 </section>
-<!-- === SECTION 5.1 END === -->
-     <!-- === SECTION 5.2 START === -->
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5.2
+════════════════════════════════════════════ -->
 <section class="section" id="5-2">
-  <h2>5.2 ASBAB MUTLAK ASLI (ASAS WAHYU)</h2>
-  <p><em>Asbab yang datang terus daripada Allah — berjanji hasil, memberi kesan walau dunia melawan.</em></p>
+  <div class="section-opener">
+    <h2>5.2 Asbab Mutlak Asli (Asas Wahyu)</h2>
+    <p><em>Asbab yang datang terus daripada Allah — berjanji hasil, memberi kesan walau dunia melawan.</em></p>
+  </div>
 
-  <h3>5.2.1 Takrif Tauhidi: Apa Itu Asbab Mutlak Asli?</h3>
+  <h3>5.2.1 Takrif Tauhidi</h3>
 
-  <p>Asbab Mutlak Asli ialah segala amal yang Allah sendiri ikat dengan janji langsung dalam Qur’an dan Hadith, di mana:</p>
-  <ul>
-    <li>kesan datang terus daripada Allah,</li>
-    <li>tidak bergantung dunia,</li>
-    <li>tidak bergantung logik,</li>
-    <li>tidak bergantung bilangan,</li>
-    <li>tidak bergantung masa,</li>
-    <li>tidak bergantung situasi.</li>
-  </ul>
+  <p>Asbab Mutlak Asli ialah segala amal yang Allah sendiri ikat dengan janji langsung dalam Qur'an dan Hadith, di mana kesan datang terus daripada Allah — tidak bergantung dunia, logik, bilangan, masa, atau situasi. Ia adalah asbab dari langit, bukan dari bumi.</p>
 
-  <p>Ia adalah asbab dari langit, bukan dari bumi.</p>
-
-  <p><strong>Asbab Mutlak Asli adalah seperti:</strong></p>
-  <ol>
-    <li>Doa</li>
-    <li>Dakwah</li>
-    <li>Mujahadah</li>
-    <li>Sabar</li>
-    <li>Solat khusyuk</li>
-    <li>Hijrah</li>
-    <li>Syura</li>
-    <li>Zikir</li>
-    <li>Infak</li>
-    <li>Surah, Sirah, Sarirah Rasulullah ﷺ</li>
-  </ol>
-
-  <p>Asbab-asbab ini tetap, pasti, dan diikat dengan janji Allah.</p>
-
-  <p>Firman Allah:</p>
+  <p><strong>Asbab Mutlak Asli termasuk:</strong> Doa, Dakwah, Mujahadah, Sabar, Solat khusyuk, Hijrah, Syura, Zikir, Infak, dan Surah-Sirah-Sarīrah Rasulullah ﷺ.</p>
 
   <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ حَدِيثًا ﴾</div>
-  <p>“Siapakah yang lebih benar perkataannya daripada Allah?”<br>
-  (An-Nisā’ 4:87)【1】</p>
+  <div class="translation">"Siapakah yang lebih benar perkataannya daripada Allah?" &nbsp;(An-Nisā' 4:87)【1】</div>
 
   <hr>
 
@@ -643,1401 +693,504 @@
 
   <p>Kerana Allah meletakkan janji-Nya terus kepada amal-amal ini.</p>
 
-  <p><strong>Misalnya:</strong></p>
-
   <p><strong>(1) Doa</strong></p>
   <div class="arab">﴿ ادْعُونِي أَسْتَجِبْ لَكُمْ ﴾</div>
-  <p>“Berdoalah kepada-Ku, pasti Aku perkenankan.”<br>
-  (Ghāfir 40:60)【2】</p>
-  <p>Janji terus.<br>
-  Tidak terikat masa, tempat, logik, atau statistik.</p>
+  <div class="translation">"Berdoalah kepada-Ku, pasti Aku perkenankan." &nbsp;(Ghāfir 40:60)【2】</div>
 
   <p><strong>(2) Dakwah</strong></p>
   <div class="arab">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
-  <p>“Siapa yang lebih baik perkataannya daripada orang yang mengajak kepada Allah?”<br>
-  (Fuṣṣilat 41:33)【3】</p>
-  <p>Dakwah membuka manusia kerana Allah janji membuka hati manusia melalui amal ini.</p>
+  <div class="translation">"Siapa yang lebih baik perkataannya daripada orang yang mengajak kepada Allah?" &nbsp;(Fuṣṣilat 41:33)【3】</div>
 
   <p><strong>(3) Mujahadah</strong></p>
   <div class="arab">﴿ وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
-  <p>“Dan orang yang bermujahadah pada jalan Kami — pasti Kami beri mereka petunjuk.”<br>
-  (Al-‘Ankabūt 29:69)【4】</p>
-  <p><em>Lanhdiyannahum</em> = “pasti Kami beri”.</p>
+  <div class="translation">"Dan orang yang bermujahadah pada jalan Kami — pasti Kami beri mereka petunjuk." &nbsp;(Al-'Ankabūt 29:69)【4】</div>
+  <p><em>Lanhdiyannahum</em> = "pasti Kami beri".</p>
 
   <p><strong>(4) Sabar</strong></p>
   <div class="arab">﴿ إِنَّ اللَّهَ مَعَ الصَّابِرِينَ ﴾</div>
-  <p>“Sesungguhnya Allah bersama orang-orang yang sabar.”<br>
-  (Al-Baqarah 2:153)【5】</p>
-  <p>Jika Allah bersama — kemenangan adalah kepastian, walau dunia menentang.</p>
+  <div class="translation">"Sesungguhnya Allah bersama orang-orang yang sabar." &nbsp;(Al-Baqarah 2:153)【5】</div>
 
-  <p><strong>(5) Solat khusyuk</strong></p>
+  <p><strong>(5) Solat Khusyuk</strong></p>
   <div class="arab">﴿ قَدْ أَفْلَحَ الْمُؤْمِنُونَ ۝ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ ﴾</div>
-  <p>“Berjayalah orang beriman — iaitu mereka yang khusyuk dalam solat.”<br>
-  (Al-Mu’minūn 23:1–2)【6】</p>
-  <p>Solat khusyuk → kejayaan.<br>
-  Ini janji langsung.</p>
+  <div class="translation">"Berjayalah orang beriman — iaitu mereka yang khusyuk dalam solat." &nbsp;(Al-Mu'minūn 23:1–2)【6】</div>
 
   <hr>
 
   <h3>5.2.3 Sunnah Sirah sebagai Asbab Mutlak Asli</h3>
 
-  <p>Asbab Mutlak Asli bukan hanya ibadah, tetapi seluruh tertib sirah Rasulullah ﷺ, seperti:</p>
-  <ul>
-    <li>hijrah,</li>
-    <li>syura,</li>
-    <li>zikir,</li>
-    <li>infak,</li>
-    <li>membina suasana masjid,</li>
-    <li>menghidupkan jamaah,</li>
-    <li>membina keluarga beriman,</li>
-    <li>mendidik manusia melalui kasih dan dakwah.</li>
-  </ul>
+  <p>Asbab Mutlak Asli bukan hanya ibadah, tetapi seluruh tertib sirah Rasulullah ﷺ — hijrah, syura, zikir, infak, membina suasana masjid, menghidupkan jamaah, membina keluarga beriman, mendidik manusia melalui kasih dan dakwah.</p>
 
-  <p>Kerana semua ini datang terus daripada wahyu.</p>
-
-  <p><strong>Dalil: Hijrah</strong></p>
   <div class="arab">﴿ إِنَّ الَّذِينَ آمَنُوا وَالَّذِينَ هَاجَرُوا وَجَاهَدُوا فِي سَبِيلِ اللَّهِ … أُولَٰئِكَ هُمُ الْمُؤْمِنُونَ حَقًّا ﴾</div>
-  <p>“Sesungguhnya orang yang beriman, berhijrah dan berjihad – mereka itulah orang beriman sebenar.”<br>
-  (Al-Anfāl 8:74)【7】</p>
-
-  <p><strong>Dalil: Syura</strong></p>
-  <div class="arab">﴿ وَأَمْرُهُمْ شُورَى بَيْنَهُمْ ﴾</div>
-  <p>“Urusan mereka diputuskan melalui syura.”<br>
-  (Ash-Shūrā 42:38)【8】</p>
-  <p>Syura adalah Asbab Mutlak Asli kerana Allah sendiri memerintahkan.</p>
-
-  <p><strong>Dalil: Zikir</strong></p>
-  <div class="arab">﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</div>
-  <p>“Dengan zikir kepada Allah hati menjadi tenang.”<br>
-  (Ar-Ra‘d 13:28)【9】</p>
-
-  <p><strong>Dalil: Infak</strong></p>
-  <div class="arab">﴿ وَمَا أَنفَقْتُم مِّن شَيْءٍ فَهُوَ يُخْلِفُهُ ﴾</div>
-  <p>“Apapun yang kamu infakkan, Allah akan menggantikannya.”<br>
-  (Saba’ 34:39)【10】</p>
-  <p>Janji langsung.</p>
+  <div class="translation">"Sesungguhnya orang yang beriman, berhijrah dan berjihad – mereka itulah orang beriman sebenar." &nbsp;(Al-Anfāl 8:74)【7】</div>
 
   <hr>
 
   <h3>5.2.4 Surah – Sirah – Sarīrah Rasulullah ﷺ</h3>
 
-  <p>Tiga unsur besar yang menjadi Sumber Mutlak Asli dalam diri Nabi.</p>
-
-  <p><strong>(1) Surah</strong></p>
-  <p>= penampilan, ketenangan, aura, hikmah yang terpancar dari Baginda.</p>
-  <p>Dalil:</p>
+  <p><strong>(1) Surah</strong> = penampilan, ketenangan, aura, hikmah yang terpancar dari Baginda.</p>
   <blockquote>
-    <p>“مَنْ رَآهُ بَدِيهَةً هَابَهُ”<br>
-    “Sesiapa yang melihat Rasulullah ﷺ secara tiba-tiba akan terasa segan dan hormat.”<br>
-    (Syamā’il Muhammadiyyah)【11】</p>
+    <span class="arabic-hadith">"مَنْ رَآهُ بَدِيهَةً هَابَهُ"</span>
+    "Sesiapa yang melihat Rasulullah ﷺ secara tiba-tiba akan terasa segan dan hormat." &nbsp;(Syamā'il Muhammadiyyah)【11】
   </blockquote>
-  <p>Ini kesan rohani, bukan fizikal.</p>
 
-  <p><strong>(2) Sirah</strong></p>
-  <p>= perjalanan hidup Baginda, tertib wahyu, strategi dakwah, sunnah amal.</p>
-  <p>Hadith:</p>
+  <p><strong>(2) Sirah</strong> = perjalanan hidup Baginda, tertib wahyu, strategi dakwah, sunnah amal.</p>
   <blockquote>
-    <p>« صَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي »<br>
-    “Solatlah kamu seperti kamu melihat aku solat.”<br>
-    (Bukhari)【12】</p>
+    <span class="arabic-hadith">« صَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي »</span>
+    "Solatlah kamu seperti kamu melihat aku solat." &nbsp;(Bukhari)【12】
   </blockquote>
-  <p>Sirah → penentu tertib amal.</p>
 
-  <p><strong>(3) Sarīrah</strong></p>
-  <p>= keadaan batin Baginda — kasih, takut, harap, yakin, tawadhu’, ikhlas.</p>
-  <p>Hadith:</p>
+  <p><strong>(3) Sarīrah</strong> = keadaan batin Baginda — kasih, takut, harap, yakin, tawadhu', ikhlas.</p>
   <blockquote>
-    <p>« أَنَا سَيِّدُ وَلَدِ آدَمَ وَلَا فَخْر »<br>
-    “Aku pemimpin anak Adam – bukan untuk bermegah.”<br>
-    (Muslim)【13】</p>
+    <span class="arabic-hadith">« أَنَا سَيِّدُ وَلَدِ آدَمَ وَلَا فَخْر »</span>
+    "Aku pemimpin anak Adam – bukan untuk bermegah." &nbsp;(Muslim)【13】
   </blockquote>
-  <p>Ini puncak sarīrah: kepimpinan tanpa ego.</p>
 
   <hr>
 
-  <h3>5.2.5 Sifat Asbab Mutlak Asli</h3>
+  <h3>5.2.5 Rumusan Tauhidi 5.2</h3>
+  <div class="rumusan">
+    <ol>
+      <li>Asbab Mutlak Asli datang terus daripada wahyu.</li>
+      <li>Asbab ini mempunyai janji Allah yang pasti benar.</li>
+      <li>Kesan berlaku walau dunia menolak.</li>
+      <li>Asbab ini mengubah takdir dunia seperti Badar &amp; Fathu Makkah.</li>
+      <li>Surah – Sirah – Sarīrah Rasulullah ﷺ menjadi pusat pembentukan umat.</li>
+      <li>Inilah cahaya asal yang memandu semua Asbab Mutlak Terbitan.</li>
+    </ol>
+  </div>
 
-  <p>Asbab Mutlak Asli mempunyai sifat-sifat berikut:</p>
+  <div class="callout" style="text-align:center; font-style:italic;">
+    Tanpa Asbab Mutlak Asli → dunia menelan iman.<br>
+    Dengan Asbab Mutlak Asli → dunia tunduk di bawah iman.
+  </div>
 
-  <p><strong>(1) Tetap (tsābit)</strong></p>
-  <ul>
-    <li>tidak berubah mengikut zaman</li>
-    <li>tidak bergantung teknologi</li>
-    <li>tidak bergantung politik</li>
-    <li>tidak bergantung keadaan ekonomi</li>
-  </ul>
+  <div class="footnotes">
+    <h3>Nota Kaki 5.2</h3>
+    <ul>
+      <li>【1】 An-Nisā' 4:87 &nbsp;【2】 Ghāfir 40:60 &nbsp;【3】 Fuṣṣilat 41:33 &nbsp;【4】 Al-'Ankabūt 29:69</li>
+      <li>【5】 Al-Baqarah 2:153 &nbsp;【6】 Al-Mu'minūn 23:1–2 &nbsp;【7】 Al-Anfāl 8:74</li>
+      <li>【8】 Ash-Shūrā 42:38 &nbsp;【9】 Ar-Ra'd 13:28 &nbsp;【10】 Saba' 34:39</li>
+      <li>【11】 Syamā'il Muhammadiyyah &nbsp;【12】 Bukhari &nbsp;【13】 Muslim</li>
+    </ul>
+  </div>
 
-  <p><strong>(2) Pasti (yaqīni)</strong></p>
-  <ul>
-    <li>Allah beri janji khusus</li>
-    <li>janji itu tidak akan gagal</li>
-  </ul>
-
-  <p><strong>(3) Mengubah dunia tanpa bergantung dunia</strong></p>
-  <p>Badar, Hudaibiyyah, Fathu Makkah, Tabuk — semua bergerak atas Asbab Mutlak Asli.</p>
-
-  <p><strong>(4) Menjadi pusat kehidupan orang beriman</strong></p>
-  <p>Orang beriman menjadikan:</p>
-  <ul>
-    <li>sabar sebagai strategi,</li>
-    <li>doa sebagai senjata,</li>
-    <li>dakwah sebagai kerja,</li>
-    <li>mujahadah sebagai proses,</li>
-    <li>syura sebagai tempat fikir jamaah.</li>
-  </ul>
-
-  <hr>
-
-  <h3>5.2.6 Rumusan Tauhidi Bab 5.2</h3>
-  <ol>
-    <li>Asbab Mutlak Asli datang terus daripada wahyu.</li>
-    <li>Asbab ini mempunyai janji Allah yang pasti benar.</li>
-    <li>Kesan berlaku walau dunia menolak.</li>
-    <li>Asbab ini mengubah takdir dunia seperti Badar & Fathu Makkah.</li>
-    <li>Surah – Sirah – Sarīrah Rasulullah ﷺ menjadi pusat pembentukan umat.</li>
-    <li>Inilah cahaya asal yang memandu semua Asbab Mutlak Terbitan.</li>
-  </ol>
-
-  <p>Tanpa Asbab Mutlak Asli →<br>
-  dunia menelan iman.</p>
-
-  <p>Dengan Asbab Mutlak Asli →<br>
-  dunia tunduk di bawah iman.</p>
-
-  <hr>
-
-  <h3>NOTA KAKI BAB 5.2</h3>
-  <ul>
-    <li>【1】 An-Nisā’ 4:87 — Allah paling benar dalam perkataan</li>
-    <li>【2】 Ghāfir 40:60 — doa pasti diperkenankan</li>
-    <li>【3】 Fuṣṣilat 41:33 — kelebihan dakwah</li>
-    <li>【4】 Al-‘Ankabūt 29:69 — janji hidayah bagi mujahadah</li>
-    <li>【5】 Al-Baqarah 2:153 — Allah bersama orang sabar</li>
-    <li>【6】 Al-Mu’minūn 23:1–2 — kejayaan untuk solat khusyuk</li>
-    <li>【7】 Al-Anfāl 8:74 — darjat hijrah dan jihad</li>
-    <li>【8】 Ash-Shūrā 42:38 — syura sebagai tertib umat</li>
-    <li>【9】 Ar-Ra‘d 13:28 — zikir menenangkan hati</li>
-    <li>【10】 Saba’ 34:39 — infak pasti diganti</li>
-    <li>【11】 Syamā’il Muhammadiyyah — kesan surah Rasulullah ﷺ</li>
-    <li>【12】 Bukhari — tuntutan mengikuti sirah Nabi dalam solat</li>
-    <li>【13】 Muslim — sifat sarīrah Nabi ﷺ</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
+  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
 </section>
-<!-- === SECTION 5.2 END === -->
-     <!-- === SECTION 5.3 START === -->
-<section class="section" id="5-3">
-  <h2>5.3 ASBAB MUTLAK TERBITAN (ASBAB FITRAH/ZULUMAT YANG DITUNDUKKAN)</h2>
 
-  <p>Asbab Mutlak Terbitan ialah asbab dunia (Asbab Fitrah & Asbab Zulumat)<br>
-  yang asalnya tiada nilai rohani,<br>
-  tetapi ditundukkan oleh Asbab Mutlak Asli melalui:</p>
+<!-- ═══════════════════════════════════════════
+     SECTION 5.3
+════════════════════════════════════════════ -->
+<section class="section" id="5-3">
+  <div class="section-opener">
+    <h2>5.3 Asbab Mutlak Terbitan (Asbab Fitrah/Zulumat yang Ditundukkan)</h2>
+  </div>
+
+  <p>Asbab Mutlak Terbitan ialah asbab dunia (Asbab Fitrah &amp; Asbab Zulumat) yang asalnya tiada nilai rohani, tetapi ditundukkan oleh Asbab Mutlak Asli melalui:</p>
   <ol>
     <li><strong>Nafy</strong> – menafikan kuasa asbab dunia</li>
     <li><strong>Isbat</strong> – menetapkan hanya Allah memberi kesan</li>
-    <li><strong>Ittiba’</strong> – mengambil asbab mengikut sunnah Rasulullah ﷺ</li>
+    <li><strong>Ittiba'</strong> – mengambil asbab mengikut sunnah Rasulullah ﷺ</li>
     <li><strong>Ikhlas</strong> – objektif amal ialah mendapatkan keredhaan Allah</li>
     <li><strong>Tunduk syarak</strong> – tidak melanggar hukum Allah</li>
   </ol>
 
-  <p><strong>Hasilnya:</strong></p>
-  <blockquote>
-    <p>Asbab dunia tadi menjadi Asbab Mutlak Terbitan — ia berfungsi kerana disandarkan kepada janji Allah, bukan kepada logik dunia.</p>
-  </blockquote>
+  <div class="callout">
+    <strong>Hasilnya:</strong> Asbab dunia tadi menjadi Asbab Mutlak Terbitan — ia berfungsi kerana disandarkan kepada janji Allah, bukan kepada logik dunia.
+  </div>
 
   <hr>
 
   <h3>5.3.1 Mengapa Asbab Dunia Perlu Ditundukkan?</h3>
 
-  <p>Asbab dunia seperti teknologi, modal, strategi, ekonomi, media, statistik —<br>
-  tidak haram, tetapi tidak suci.</p>
-
+  <p>Asbab dunia seperti teknologi, modal, strategi, ekonomi, media, statistik — tidak haram, tetapi tidak suci.</p>
   <ul>
     <li>Jika ditinggalkan → umat menjadi lemah</li>
     <li>Jika diagungkan → umat menjadi rosak</li>
     <li>Jika ditundukkan → ia menjadi alat hidayat</li>
   </ul>
 
-  <p><strong>Dalil:</strong></p>
   <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
-  <p>“Allah mencipta kamu dan apa yang kamu lakukan.”<br>
-  (As-Saffāt 37:96)【1】</p>
-
-  <p>Maknanya:</p>
-  <ul>
-    <li>Asbab dunia bukan punca kesan.</li>
-    <li>Allah yang mencipta sebab dan kesan.</li>
-    <li>Manusia hanya menggunakan apa yang Allah cipta.</li>
-  </ul>
+  <div class="translation">"Allah mencipta kamu dan apa yang kamu lakukan." &nbsp;(As-Saffāt 37:96)【1】</div>
 
   <hr>
 
   <h3>5.3.2 Tiga Sifat Asbab Dunia</h3>
 
   <ol>
-    <li><strong>Asbab Fitrah</strong> – tetap & konsisten<br>
-    (makanan, air, api, strategi, kepakaran, perubatan)</li>
-    <li><strong>Asbab Zulumat</strong> – dibentuk oleh nilai masyarakat<br>
-    (politik, media, reputasi, undang-undang sekular, ekonomi kapitalis)</li>
-    <li><strong>Kedua-duanya neutral atau gelap, tidak mengangkat manusia kepada Allah</strong><br>
-    kecuali apabila ditundukkan oleh Asbab Mutlak Asli.</li>
+    <li><strong>Asbab Fitrah</strong> – tetap &amp; konsisten (makanan, air, api, strategi, kepakaran, perubatan)</li>
+    <li><strong>Asbab Zulumat</strong> – dibentuk oleh nilai masyarakat (politik, media, reputasi, undang-undang sekular, ekonomi kapitalis)</li>
+    <li>Kedua-duanya neutral atau gelap, tidak mengangkat manusia kepada Allah — kecuali apabila ditundukkan oleh Asbab Mutlak Asli.</li>
   </ol>
 
   <hr>
 
   <h3>5.3.3 Bagaimana Asbab Dunia Menjadi Asbab Mutlak Terbitan</h3>
 
-  <p>Untuk menjadi Asbab Mutlak Terbitan, asbab dunia mesti melalui lima penyucian:</p>
-
-  <p><strong>(1) NAFY — menafikan kuasa Asbab dunia</strong></p>
-  <p>Contoh penafian Tauhidi:</p>
-  <ul>
-    <li>teknologi tidak memberi rezeki,</li>
-    <li>modal tidak menentukan kejayaan,</li>
-    <li>pasaran tidak menentukan untung rugi,</li>
-    <li>politik tidak menentukan masa depan.</li>
-  </ul>
-  <p><strong>Dalil:</strong></p>
+  <p><strong>(1) NAFY</strong> — Contoh penafian Tauhidi: teknologi tidak memberi rezeki; modal tidak menentukan kejayaan; pasaran tidak menentukan untung rugi.</p>
   <div class="arab">﴿ قُل لَّا أَمْلِكُ لِنَفْسِي نَفْعًا وَلَا ضَرًّا ﴾</div>
-  <p>“Katakan: aku tidak memiliki manfaat dan mudarat walau untuk diriku.”<br>
-  (Al-A‘rāf 7:188)【2】</p>
-  <p>Jika Nabi ﷺ tidak memiliki kuasa —<br>
-  asbab dunia lebih tidak memiliki kuasa.</p>
+  <div class="translation">"Katakan: aku tidak memiliki manfaat dan mudarat walau untuk diriku." &nbsp;(Al-A'rāf 7:188)【2】</div>
 
-  <p><strong>(2) ISBAT — menetapkan hanya Allah memberi kesan</strong></p>
-  <p><strong>Dalil:</strong></p>
+  <p><strong>(2) ISBAT</strong></p>
   <div class="arab">﴿ إِنَّ الْقُوَّةَ لِلَّهِ جَمِيعًا ﴾</div>
-  <p>“Kekuatan semuanya milik Allah.”<br>
-  (Fāṭir 35:10)【3】</p>
+  <div class="translation">"Kekuatan semuanya milik Allah." &nbsp;(Fāṭir 35:10)【3】</div>
 
-  <p><strong>(3) ITTIBA’ — menggunakan Asbab dunia mengikut sunnah Nabi ﷺ</strong></p>
-  <p>Contoh tertib Nabi dalam mengambil asbab:</p>
-  <ul>
-    <li>memakai baju besi</li>
-    <li>menggali parit (Khandaq)</li>
-    <li>berhijrah dengan strategi</li>
-    <li>perjanjian Hudaibiyyah</li>
-    <li>menyusun saf Badar</li>
-    <li>melantik panglima perang</li>
-  </ul>
-  <p><strong>Dalil:</strong></p>
+  <p><strong>(3) ITTIBA'</strong> — Menggunakan asbab dunia mengikut sunnah Nabi ﷺ: memakai baju besi, menggali parit (Khandaq), berhijrah dengan strategi, perjanjian Hudaibiyyah, menyusun saf Badar.</p>
   <div class="arab">﴿ لَّقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ ﴾</div>
-  <p>“Pada Rasulullah ada contoh terbaik.”<br>
-  (Al-Aḥzāb 33:21)【4】</p>
+  <div class="translation">"Pada Rasulullah ada contoh terbaik." &nbsp;(Al-Aḥzāb 33:21)【4】</div>
 
-  <p><strong>(4) IKHLAS — objektif amal ialah untuk mendapat keredhaan Allah</strong></p>
-  <p><strong>Hadith:</strong></p>
+  <p><strong>(4) IKHLAS</strong></p>
   <blockquote>
-    <p>« إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ »<br>
-    “Sesungguhnya amal bergantung pada niat.”<br>
-    (Muttafaq ‘alaih)【5】</p>
+    <span class="arabic-hadith">« إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ »</span>
+    "Sesungguhnya amal bergantung pada niat." &nbsp;(Muttafaq 'alaih)【5】
   </blockquote>
 
-  <p><strong>(5) TUNDUK SYARAK — tidak melanggar hukum Allah</strong></p>
-  <p>Asbab haram tidak boleh ditransformasi, tidak boleh menjadi Asbab Mutlak Terbitan:</p>
-  <ul>
-    <li>riba</li>
-    <li>zina</li>
-    <li>sihir</li>
-    <li>arak</li>
-    <li>muzik maksiat</li>
-    <li>politik zalim</li>
-  </ul>
-  <p><strong>Dalil:</strong></p>
+  <p><strong>(5) TUNDUK SYARAK</strong> — Asbab haram tidak boleh ditransformasi: riba, zina, sihir, arak, muzik maksiat, politik zalim.</p>
   <div class="arab">﴿ قُلْ إِنَّمَا حَرَّمَ رَبِّيَ… ﴾</div>
-  <p>“Katakanlah: Tuhanku mengharamkan… (segala dosa).”<br>
-  (Al-A‘rāf 7:33)【6】</p>
+  <div class="translation">"Katakanlah: Tuhanku mengharamkan… (segala dosa)." &nbsp;(Al-A'rāf 7:33)【6】</div>
 
   <hr>
 
-  <h3>5.3.4 Contoh Asbab Dunia Menjadi Asbab Mutlak Terbitan</h3>
+  <h3>5.3.4 Contoh Transformasi</h3>
 
   <ol>
-    <li>
-      <p><strong>Parit (Khandaq)</strong><br>
-      Asal: strategi perang (Asbab Fitrah)<br>
-      Bila tunduk melalui syura & ittiba’<br>
-      → menjadi Asbab Mutlak Terbitan<br>
-      → menyelamatkan umat dari kehancuran</p>
-    </li>
-    <li>
-      <p><strong>Baju besi Rasulullah ﷺ</strong><br>
-      Asal: teknologi perang (Asbab Fitrah)<br>
-      Bila digabung dengan tawakkal & sabar<br>
-      → menjadi Asbab Mutlak Terbitan</p>
-    </li>
-    <li>
-      <p><strong>Tongkat Musa</strong><br>
-      Asal: kayu mati (Asbab Fitrah)<br>
-      Bila digunakan atas perintah Allah<br>
-      → menjadi Asbab Mutlak Terbitan<br>
-      → laut terbelah</p>
-      <p><strong>Dalil:</strong></p>
-      <div class="arab">﴿ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
-      <p>“Pukullah laut dengan tongkatmu.”<br>
-      (Ash-Shu‘arā 26:63)【7】</p>
-    </li>
-    <li>
-      <p><strong>Diplomasi Hudaibiyyah</strong><br>
-      Asal: sistem politik Arab (Asbab Zulumat)<br>
-      Bila tunduk kepada sabar, syura dan wahyu<br>
-      → menjadi Asbab Mutlak Terbitan<br>
-      → Allah turunkan ayat kemenangan</p>
-      <p><strong>Dalil:</strong></p>
-      <div class="arab">﴿ إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا ﴾</div>
-      <p>“Kami membuka bagimu kemenangan yang nyata.”<br>
-      (Al-Fatḥ 48:1)【8】</p>
-    </li>
+    <li><strong>Parit (Khandaq)</strong> — Asal: strategi perang (Asbab Fitrah). Bila tunduk melalui syura &amp; ittiba' → menyelamatkan umat dari kehancuran.</li>
+    <li><strong>Baju besi Rasulullah ﷺ</strong> — Asal: teknologi perang (Asbab Fitrah). Bila digabung dengan tawakkal &amp; sabar → Asbab Mutlak Terbitan.</li>
+    <li><strong>Tongkat Musa</strong> — Asal: kayu mati (Asbab Fitrah). Bila digunakan atas perintah Allah → laut terbelah.</li>
+    <li><strong>Diplomasi Hudaibiyyah</strong> — Asal: sistem politik Arab. Bila tunduk kepada sabar, syura dan wahyu → Allah turunkan ayat kemenangan.</li>
   </ol>
+
+  <div class="arab">﴿ إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا ﴾</div>
+  <div class="translation">"Kami membuka bagimu kemenangan yang nyata." &nbsp;(Al-Fatḥ 48:1)【8】</div>
 
   <hr>
 
   <h3>5.3.5 Rumusan Tauhidi</h3>
+  <div class="rumusan">
+    <ol>
+      <li>Asbab dunia tidak dibuang, tetapi ditundukkan.</li>
+      <li>Asbab dunia tidak dipercayai, tetapi diambil sebagai alat.</li>
+      <li>Asbab dunia jadi hidayat apabila tunduk kepada Asbab Mutlak Asli.</li>
+      <li>Bila Asbab Mutlak Asli hidup dalam hati → Asbab dunia tunduk dan menjadi Asbab Mutlak Terbitan.</li>
+      <li>Seluruh sirah membuktikan: Sains, teknologi, ekonomi, strategi, politik — semuanya boleh menjadi hamba. Tetapi hanya bila Asbab Mutlak menjadi tuan.</li>
+    </ol>
+  </div>
 
-  <ol>
-    <li>Asbab dunia tidak dibuang, tetapi ditundukkan.</li>
-    <li>Asbab dunia tidak dipercayai, tetapi diambil sebagai alat.</li>
-    <li>Asbab dunia jadi hidayat apabila tunduk kepada Asbab Mutlak Asli.</li>
-    <li>Bila Asbab Mutlak Asli hidup dalam hati →<br>
-    Asbab dunia tunduk dan menjadi Asbab Mutlak Terbitan.</li>
-    <li>Bila Asbab dunia tidak tunduk →<br>
-    ia menjadi berhala, sistem zulumat, dan punca kerosakan umat.</li>
-    <li>Seluruh sirah membuktikan:<br>
-    Sains, teknologi, ekonomi, strategi, politik — semuanya boleh menjadi hamba.<br>
-    Tetapi hanya bila Asbab Mutlak menjadi tuan.</li>
-  </ol>
+  <div class="footnotes">
+    <h3>Nota Kaki 5.3</h3>
+    <ul>
+      <li>【1】 As-Saffāt 37:96 &nbsp;【2】 Al-A'rāf 7:188 &nbsp;【3】 Fāṭir 35:10 &nbsp;【4】 Al-Aḥzāb 33:21</li>
+      <li>【5】 Muttafaq 'alaih &nbsp;【6】 Al-A'rāf 7:33 &nbsp;【7】 Ash-Shu'arā 26:63 &nbsp;【8】 Al-Fatḥ 48:1</li>
+    </ul>
+  </div>
 
-  <hr>
-
-  <h3>NOTA KAKI BAB 5.3</h3>
-  <ul>
-    <li>【1】 As-Saffāt 37:96 – Allah mencipta sebab & kesan</li>
-    <li>【2】 Al-A‘rāf 7:188 – Nabi ﷺ tidak memiliki manfaat/mudarat</li>
-    <li>【3】 Fāṭir 35:10 – Segala kekuatan milik Allah</li>
-    <li>【4】 Al-Aḥzāb 33:21 – Sunnah sebagai tertib</li>
-    <li>【5】 Muttafaq ‘alaih – Niat menentukan amal</li>
-    <li>【6】 Al-A‘rāf 7:33 – Larangan asbab haram</li>
-    <li>【7】 Ash-Shu‘arā 26:63 – Tongkat Musa</li>
-    <li>【8】 Al-Fatḥ 48:1 – Hudaibiyyah sebagai kemenangan</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
+  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
 </section>
-<!-- === SECTION 5.3 END === -->
-<!-- === SECTION 5.4 START === -->
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5.4
+════════════════════════════════════════════ -->
 <section class="section" id="5-4">
-  <h2>5.4 PERBEZAAN KRITIS</h2>
-  <p><strong>ASBAB MUTLAK ASLI vs ASBAB MUTLAK TERBITAN</strong></p>
+  <div class="section-opener">
+    <h2>5.4 Perbezaan Kritis</h2>
+    <p><strong>Asbab Mutlak Asli vs Asbab Mutlak Terbitan</strong></p>
+  </div>
 
-  <p>Bab ini adalah salah satu bahagian yang paling penting dalam seluruh Kerangka 3 Asbab.</p>
+  <p>Bab ini adalah salah satu bahagian yang paling penting dalam seluruh Kerangka 3 Asbab. Jika umat tidak membezakan dua lapisan Asbab Mutlak, mereka akan salah faham sunnah, takdir, tawakkal, amal, dan hubungan dunia–akhirat — lalu tersesat dalam dua jurang.</p>
 
-  <p>Kerana…</p>
-
-  <p>Jika umat tidak membezakan dua lapisan Asbab Mutlak, mereka akan:</p>
-  <ul>
-    <li>salah faham sunnah</li>
-    <li>salah faham takdir</li>
-    <li>salah faham tawakkal</li>
-    <li>salah faham amal</li>
-    <li>salah faham hubungan dunia–akhirat</li>
-    <li>dan akhirnya tersesat dalam dua jurang:</li>
-  </ul>
-
-  <p><strong>Jurang 1 — Mengagungkan dunia</strong></p>
-  <p>Teknologi, ekonomi, modal, KPI, sains, data → dianggap “penentu”.</p>
-
-  <p><strong>Jurang 2 — Melarikan diri dari dunia</strong></p>
-  <p>Tidak mahu strategi, tidak mahu pengurusan, tidak mahu usaha, tidak mahu asbab dunia langsung.</p>
-
-  <p>Kerangka 3 Asbab memecahkan kedua-duanya dengan membina dua lapisan:</p>
-  <ol>
-    <li><strong>Asbab Mutlak Asli</strong> → Cahaya Wahyu</li>
-    <li><strong>Asbab Mutlak Terbitan</strong> → Asbab dunia yang tunduk kepada wahyu</li>
-  </ol>
-
-  <p>Ini bukan teori.<br>
-  Ini ialah fizik Tauhidi — hukum yang berulang ratusan kali dalam Qur’an.</p>
-
-  <p>Mari kita syarah satu per satu.</p>
+  <div class="callout">
+    <strong>Jurang 1</strong> — Mengagungkan dunia: teknologi, ekonomi, modal, KPI, sains, data dianggap "penentu".<br><br>
+    <strong>Jurang 2</strong> — Melarikan diri dari dunia: tidak mahu strategi, pengurusan, usaha, atau asbab dunia langsung.
+  </div>
 
   <hr>
 
-  <h3>5.4.1 PERBEZAAN PERTAMA – Sumber Kuasa Ruhani</h3>
+  <h3>5.4.1 Perbezaan Pertama – Sumber Kuasa Ruhani</h3>
 
-  <p><strong>A. Asbab Mutlak Asli — datang terus daripada wahyu</strong></p>
+  <p><strong>A. Asbab Mutlak Asli</strong> — datang terus daripada wahyu (perintah Allah, sunnah Rasulullah ﷺ, amal para Nabi, janji Allah yang pasti turun).</p>
 
-  <p>Ia mempunyai kuasa rohani secara langsung kerana ia adalah:</p>
-  <ul>
-    <li>perintah Allah</li>
-    <li>sunnah Rasulullah ﷺ</li>
-    <li>amal para Nabi</li>
-    <li>janji Allah yang pasti turun</li>
-  </ul>
-
-  <p>Contohnya:</p>
-  <ul>
-    <li>dakwah</li>
-    <li>doa</li>
-    <li>mujahadah</li>
-    <li>sabar</li>
-    <li>solat khusyuk</li>
-    <li>syura</li>
-    <li>hijrah</li>
-    <li>zikir</li>
-    <li>infak kerana Allah</li>
-  </ul>
-
-  <p><strong>Dalil:</strong></p>
   <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ قِيلًا ﴾</div>
-  <p>“Siapa lagi yang lebih benar perkataannya daripada Allah?”<br>
-  (An-Nisā’ 4:122)【1】</p>
+  <div class="translation">"Siapa lagi yang lebih benar perkataannya daripada Allah?" &nbsp;(An-Nisā' 4:122)【1】</div>
 
-  <p>Asbab Mutlak Asli → mengandungi janji Allah yang berlaku tanpa syarat dunia.</p>
+  <p><strong>B. Asbab Mutlak Terbitan</strong> — asalnya tidak mempunyai kuasa rohani (teknologi, ekonomi, pengurusan, politik, strategi, statistik, kemahiran, tentera, media). Ia hanya berubah menjadi Asbab Mutlak Terbitan apabila ditundukkan melalui Nafy, Isbat, Ittiba', Ikhlas, dan Tunduk syarak.</p>
 
-  <p><strong>B. Asbab Mutlak Terbitan — asalnya tidak mempunyai kuasa rohani</strong></p>
-
-  <p>Contoh:</p>
-  <ul>
-    <li>teknologi (asbab fitrah)</li>
-    <li>ekonomi (asbab fitrah / zulumat)</li>
-    <li>pengurusan (asbab fitrah)</li>
-    <li>politik (asbab zulumat)</li>
-    <li>strategi (asbab fitrah)</li>
-    <li>statistik (asbab fitrah)</li>
-    <li>kemahiran (asbab fitrah)</li>
-    <li>tentera (asbab fitrah)</li>
-    <li>media (asbab zulumat)</li>
-  </ul>
-
-  <p>Asalnya semua ini:</p>
-  <ul>
-    <li>neutral</li>
-    <li>gelap</li>
-    <li>kosong dari nur</li>
-  </ul>
-
-  <p>Ia hanya berubah menjadi Asbab Mutlak Terbitan apabila ditundukkan melalui:</p>
-  <ul>
-    <li>Nafy</li>
-    <li>Isbat</li>
-    <li>Ittiba’</li>
-    <li>Ikhlas</li>
-    <li>Tunduk syarak</li>
-  </ul>
-
-  <p><strong>Dalil asas:</strong></p>
   <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
-  <p>“Allah mencipta kamu dan apa yang kamu lakukan.”<br>
-  (As-Saffāt 37:96)【2】</p>
-
-  <p>Makna Tauhidi:<br>
-  asbab dunia tidak boleh memberi kesan sendiri.</p>
+  <div class="translation">"Allah mencipta kamu dan apa yang kamu lakukan." &nbsp;(As-Saffāt 37:96)【2】</div>
 
   <hr>
 
-  <h3>5.4.2 PERBEZAAN KEDUA – Cara Asbab Ini Memberi Kesan</h3>
+  <h3>5.4.2 Perbezaan Kedua – Cara Memberi Kesan</h3>
 
-  <p><strong>A. Asbab Mutlak Asli memberi kesan tanpa syarat dunia</strong></p>
+  <p><strong>A. Asbab Mutlak Asli memberi kesan tanpa syarat dunia</strong> — solat menenangkan hati walaupun miskin, tanpa modal. Dakwah membuka hati tanpa banner atau kamera. Sabar mendapat pertolongan Allah terus.</p>
 
-  <p>Contoh:</p>
-  <ul>
-    <li><strong>Solat (khusyuk)</strong><br>
-    → menenangkan hati walaupun miskin, tanpa modal, tanpa teknologi.</li>
-  </ul>
-  <div class="arab">﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾</div>
-  <p>“Ketahuilah, dengan mengingati Allah, hati menjadi tenang.”<br>
-  (Ar-Ra‘d 13:28)【3】</p>
+  <p><strong>B. Asbab Mutlak Terbitan hanya memberi kesan setelah ditundukkan</strong> — Parit Khandaq (strategi + tunduk wahyu), baju besi Rasulullah ﷺ (teknologi + tawakkal), Tongkat Musa (kayu + perintah Allah).</p>
 
-  <ul>
-    <li><strong>Dakwah</strong><br>
-    → membuka hati manusia tanpa banner, kamera, modal.</li>
-    <li><strong>Sabar</strong><br>
-    → mendapat pertolongan Allah terus.</li>
-  </ul>
-  <div class="arab">﴿ إِنَّ ٱللَّهَ مَعَ ٱلصَّـٰبِرِینَ ﴾</div>
-  <p>“Sesungguhnya Allah bersama orang-orang yang sabar.”<br>
-  (Al-Baqarah 2:153)【4】</p>
-
-  <p>Asbab Mutlak Asli → memberi kesan secara ruhani langsung kerana ia datang dari langit.</p>
-
-  <p><strong>B. Asbab Mutlak Terbitan hanya memberi kesan setelah ditundukkan</strong></p>
-
-  <p>Contoh (versi dibetulkan):</p>
-  <ul>
-    <li>Parit Khandaq → strategi (asbab fitrah), tetapi tunduk wahyu</li>
-    <li>Baju besi Rasulullah ﷺ → teknologi (asbab fitrah), tetapi tunduk tawakkal</li>
-    <li>Perang Badar → strategi (asbab fitrah), tetapi janji Allah yang menentukan</li>
-    <li>Tongkat Musa → kayu (asbab fitrah), tetapi perintah Allah yang memecahkan laut</li>
-  </ul>
-
-  <p><strong>Dalil:</strong></p>
   <div class="arab">﴿ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
-  <p>“Pukullah laut itu dengan tongkatmu.”<br>
-  (Ash-Shu‘arā 26:63)【5】</p>
+  <div class="translation">"Pukullah laut itu dengan tongkatmu." &nbsp;(Ash-Shu'arā 26:63)【5】</div>
 
-  <p>Kayu tidak membelah laut.<br>
-  Kayu + wahyu = Asbab Mutlak Terbitan.</p>
+  <p><em>Kayu tidak membelah laut. Kayu + wahyu = Asbab Mutlak Terbitan.</em></p>
 
   <hr>
 
-  <h3>5.4.3 PERANAN HATI, DIRI & HARTA</h3>
+  <h3>5.4.3 Peranan Hati, Diri &amp; Harta</h3>
 
-  <p><strong>A. Asbab Mutlak Asli membina hati & diri</strong></p>
+  <p><strong>A. Asbab Mutlak Asli membina hati &amp; diri</strong> — memasukkan iman, menguatkan yakin, menundukkan ego, menenangkan jiwa, membersihkan penyakit hati.</p>
 
-  <p>Asbab Mutlak Asli bekerja terus atas diri — khususnya atas hati dan anggota badan.</p>
-
-  <p>Ia:</p>
-  <ul>
-    <li>memasukkan iman</li>
-    <li>menguatkan yakin</li>
-    <li>menundukkan ego</li>
-    <li>menenangkan jiwa</li>
-    <li>membersihkan penyakit hati</li>
-  </ul>
-
-  <p><strong>Dalil:</strong></p>
   <div class="arab">﴿ هُوَ ٱلَّذِیٓ أَنزَلَ ٱلسَّكِینَةَ فِی قُلُوبِ ٱلۡمُؤۡمِنِینَ ﴾</div>
-  <p>“Dialah yang menurunkan ketenangan dalam hati orang-orang beriman.”<br>
-  (Al-Fatḥ 48:4)【6】</p>
+  <div class="translation">"Dialah yang menurunkan ketenangan dalam hati orang-orang beriman." &nbsp;(Al-Fatḥ 48:4)【6】</div>
 
-  <p>Diri (hati, masa, tenaga, jasad) adalah medan utama Asbab Mutlak Asli:</p>
-  <ul>
-    <li>Dakwah → diri bergerak, lidah berkata, hati kasihkan hidayat.</li>
-    <li>Solat → diri tunduk, anggota sujud, hati hadir kepada Allah.</li>
-    <li>Mujahadah → diri menahan nafsu.</li>
-    <li>Sabar → diri menahan reaksi, memilih reda.</li>
-    <li>Zikir → lidah menyebut, hati mengingati.</li>
-  </ul>
+  <div class="arab">﴿ إِنَّ ٱللَّهَ ٱشۡتَرَىٰ مِنَ ٱلۡمُؤۡمِنِینَ أَنفُسَهُمۡ وَأَمۡوَ ٰلَهُم بِأَنَّ لَهُمُ ٱلۡجَنَّةَ ﴾</div>
+  <div class="translation">"Sesungguhnya Allah telah membeli dari orang-orang beriman, diri-diri mereka dan harta-harta mereka dengan (balasan) syurga untuk mereka." &nbsp;(At-Tawbah 9:111)【7】</div>
 
-  <p>Semua ini boleh berlaku tanpa harta.<br>
-  Yang diperlukan hanyalah diri yang sanggup dikorbankan.</p>
+  <p>Susunan ayat: <em>أَنفُسَهُمۡ</em> (diri) datang dahulu, kemudian <em>أَمۡوَ ٰلَهُم</em> (harta). Ini menunjukkan diri ialah medan pertama Asbab Mutlak Asli.</p>
 
-  <p>Inilah rahsia ayat:</p>
-  <div class="arab">﴿ إِنَّ ٱللَّهَ ٱشۡتَرَىٰ مِنَ ٱلۡمُؤۡمِنِینَ أَنفُسَهُمۡ وَأَمۡوَ ٰلَهُم بِأَنَّ لَهُمُ ٱلۡجَنَّةَ ﴾</div>
-  <p>“Sesungguhnya Allah telah membeli dari orang-orang beriman, diri-diri mereka dan harta-harta mereka dengan (balasan) syurga untuk mereka.”<br>
-  (At-Tawbah 9:111)【7】</p>
+  <p><strong>B. Asbab Mutlak Terbitan menggunakan harta sebagai bahan utama</strong> — teknologi, sistem, logistik, perang, pentadbiran, media, pendidikan, infrastruktur semuanya memerlukan harta.</p>
 
-  <p>Susunan ayat: “أَنفُسَهُمۡ” (diri) datang dahulu, kemudian “أَمۡوَ ٰلَهُم” (harta).</p>
-
-  <p>Ini menunjukkan:<br>
-  Diri ialah medan pertama Asbab Mutlak Asli.</p>
-
-  <p>Tanpa pengorbanan diri:</p>
-  <ul>
-    <li>dakwah tinggal teori,</li>
-    <li>solat tinggal rutin,</li>
-    <li>sabar tinggal slogan,</li>
-    <li>syura tinggal mesyuarat teknikal.</li>
-  </ul>
-
-  <p><strong>B. Asbab Mutlak Terbitan menggunakan harta sebagai bahan utama</strong></p>
-
-  <p>Harta adalah bahan utama yang mengalir dalam hampir semua Asbab Mutlak Terbitan:</p>
-  <ul>
-    <li>teknologi → perlukan harta</li>
-    <li>pembinaan sistem → perlukan harta</li>
-    <li>logistik, perang, pentadbiran → perlukan harta</li>
-    <li>media, pendidikan, infrastruktur → perlukan harta</li>
-  </ul>
-
-  <p>Asalnya, harta hanyalah asbab fitrah:</p>
-  <ul>
-    <li>makanan, rumah, kenderaan, mesin, modal, saham.</li>
-  </ul>
-
-  <p>Apabila harta:</p>
-  <ol>
-    <li>Ditundukkan melalui Nafy & Isbat</li>
-    <li>Dibelanjakan mengikut Ittiba’ Rasulullah ﷺ</li>
-    <li>Diniatkan ikhlas untuk redha Allah</li>
-    <li>Dipastikan sah dari sudut syarak</li>
-  </ol>
-
-  <p>…maka harta itu berubah menjadi Asbab Mutlak Terbitan.</p>
-
-  <p><strong>Dalil:</strong></p>
   <div class="arab">﴿ لَن تَنَالُوا۟ ٱلۡبِرَّ حَتَّىٰ تُنفِقُوا۟ مِمَّا تُحِبُّونَ ﴾</div>
-  <p>“Kamu tidak akan mencapai kebaikan yang sempurna sehingga kamu menginfakkan apa yang kamu cintai.”<br>
-  (Āli ‘Imrān 3:92)【8】</p>
-
-  <p>Ayat ini menunjukkan:</p>
-  <ul>
-    <li>Harta yang dicintai → bila diinfak kerana Allah → naik taraf menjadi asbab yang membawa birr (kebaikan yang tinggi).</li>
-    <li>Inilah fungsi Asbab Mutlak Terbitan yang berpunca daripada harta.</li>
-  </ul>
-
-  <p><strong>Hadith:</strong></p>
-  <blockquote>
-    <p>« سَبَقَ دِرْهَمٌ مِائَةَ أَلْفِ دِرْهَمٍ »<br>
-    “Satu dirham telah mendahului seratus ribu dirham (dalam nilai di sisi Allah).”<br>
-    (Riwayat al-Nasā’ī dan yang lain)【9】</p>
-  </blockquote>
-
-  <p>Ini menunjukkan:</p>
-  <ul>
-    <li>Nilai harta tidak pada jumlah,</li>
-    <li>Tetapi pada cara ia ditransformasikan menjadi Asbab Mutlak Terbitan — melalui Nafy & Isbat, Ittiba’, Ikhlas dan tertib syarak.</li>
-  </ul>
-
-  <p><strong>C. Prinsip gabungan: bila harta & diri dikorbankan serentak</strong></p>
-
-  <p>Dalam Kerangka 3 Asbab, kita telah tetapkan:</p>
+  <div class="translation">"Kamu tidak akan mencapai kebaikan yang sempurna sehingga kamu menginfakkan apa yang kamu cintai." &nbsp;(Āli 'Imrān 3:92)【8】</div>
 
   <blockquote>
-    <p>Apabila harta dan diri dikorbankan serentak, cinta dunia dan cinta diri keluar dari hati, lalu cinta Allah masuk.</p>
+    <span class="arabic-hadith">« سَبَقَ دِرْهَمٌ مِائَةَ أَلْفِ دِرْهَمٍ »</span>
+    "Satu dirham telah mendahului seratus ribu dirham (dalam nilai di sisi Allah)." &nbsp;(Al-Nasā'ī)【9】
   </blockquote>
 
-  <ul>
-    <li>Korban harta → mematahkan cinta dunia.</li>
-    <li>Korban diri → mematahkan cinta ego.</li>
-  </ul>
-
-  <p>Jika salah satu sahaja dikorbankan:</p>
-  <ul>
-    <li>korban harta tanpa diri → membawa kepada kibir;</li>
-    <li>korban diri tanpa harta → membawa kepada berharap makhluk.</li>
-  </ul>
-
-  <p>Hanya gabungan kedua-duanya membuka pintu cinta Allah.</p>
-
-  <p><strong>Susunan Tauhidi:</strong></p>
-  <ul>
-    <li>Asbab Mutlak Asli → utamanya melalui diri (amal badan & hati).</li>
-    <li>Asbab Mutlak Terbitan → banyak berlegar pada harta (asbab dunia yang ditundukkan).</li>
-  </ul>
-
-  <p>Apabila kedua-dua ini bersatu:</p>
-  <ol>
-    <li>Diri bergerak dalam dakwah, mujahadah, sabar, solat.</li>
-    <li>Harta mengalir dalam infak, sistem, bantuan, bina suasana.</li>
-  </ol>
-
-  <p>Maka iman memuncak, dan Allah menzahirkan janji-Nya dalam bentuk nusrah di dunia.</p>
+  <p><strong>C. Prinsip gabungan:</strong> Apabila harta dan diri dikorbankan serentak, cinta dunia dan cinta diri keluar dari hati, lalu cinta Allah masuk.</p>
 
   <hr>
 
-  <h4>5.4.3.1 ANALOGI PRAKTIKAL: “MINUM KOPI DI KL vs MINUM KOPI DI KUTUB UTARA”</h4>
+  <h4>5.4.3.1 Analogi: "Minum Kopi di KL vs Kutub Utara"</h4>
 
-  <p>Untuk memahamkan proses transformasi antara Mutlak Asli dan Mutlak Terbitan, kita gunakan satu analogi ringkas:</p>
+  <p><strong>1. Kopi di KL</strong> — RM2, tanpa pengorbanan. Seperti ilmu tanpa mujahadah.</p>
 
-  <p><strong>1. Minum kopi di KL = murah, dekat, tanpa pengorbanan</strong></p>
-  <ul>
-    <li>Harga: RM2.</li>
-    <li>Tanpa tiket kapal terbang.</li>
-    <li>Tanpa penat.</li>
-    <li>Tanpa risiko.</li>
-  </ul>
+  <p><strong>2. Kopi di Kutub Utara</strong> — tiket, hotel, pakaian sejuk, logistik, masa, stamina. Inilah gambaran dakwah, mujahadah dan sabar ijtima'i.</p>
 
-  <p>Ini seperti ilmu:</p>
-  <ul>
-    <li>boleh dapat cepat,</li>
-    <li>tidak perlukan mujahadah,</li>
-    <li>tidak menuntut harta & diri secara besar.</li>
-  </ul>
-
-  <p>Inilah keadaan modul RM2 — semua orang mampu buat, tidak salah, tetapi tidak memberi pemberat iman.</p>
-
-  <p><strong>2. Minum kopi di Kutub Utara = bi amwālikum wa anfusikum + wal-‘aṣr</strong></p>
-
-  <p>Untuk minum kopi di Kutub Utara:</p>
-  <ul>
-    <li>perlu tiket kapal terbang,</li>
-    <li>hotel, pakaian sejuk, logistik,</li>
-    <li>masa panjang,</li>
-    <li>stamina & risiko.</li>
-  </ul>
-
-  <p>Inilah gambaran dakwah, mujahadah dan sabar ijtima’i:</p>
-  <ul>
-    <li>Cakap sendirian: mudah, seperti kopi RM2.</li>
-    <li>Cakap dengan orang lain: susah, memalukan nafsu — inilah mujahadah.</li>
-    <li>Cakap dengan semua orang setiap hari: berulang-ulang — inilah sabar.</li>
-  </ul>
-
-  <p>Di sinilah hakikat ayat:</p>
   <div class="arab">﴿ وَالْعَصْرِ ﴾</div>
-  <p>“Demi masa.”<br>
-  (Al-‘Aṣr 103:1)【10】</p>
+  <div class="translation">"Demi masa." &nbsp;(Al-'Aṣr 103:1)【10】</div>
 
-  <p>Masa yang dikorbankan, diulang, dan ditekan atas diri — menjadi pemberat iman.</p>
-
-  <p>Dan juga hakikat jihad:</p>
   <div class="arab">﴿ تُؤْمِنُونَ بِاللَّهِ وَرَسُولِهِ وَتُجَاهِدُونَ فِي سَبِيلِ اللَّهِ بِأَمْوَالِكُمْ وَأَنفُسِكُمْ ﴾</div>
-  <p>“…kamu beriman kepada Allah dan Rasul-Nya, dan kamu berjihad di jalan Allah dengan harta kamu dan diri kamu…”<br>
-  (As-Saff 61:11)【11】</p>
+  <div class="translation">"…kamu beriman kepada Allah dan Rasul-Nya, dan kamu berjihad di jalan Allah dengan harta kamu dan diri kamu…" &nbsp;(As-Saff 61:11)【11】</div>
 
-  <ul>
-    <li>Tiket, hotel, pakaian, logistik → bi amwālikum (harta).</li>
-    <li>Penat, masa, perjalanan, risiko → wa anfusikum (diri).</li>
-  </ul>
-
-  <p>Begitu juga Asbab Mutlak Asli dakwah:</p>
-  <ul>
-    <li>lidah bergerak setiap hari,</li>
-    <li>hati bergantung kepada Allah,</li>
-    <li>harta mengalir untuk usaha,</li>
-    <li>masa dikorbankan berterusan.</li>
-  </ul>
-
-  <p>Di sinilah Mutlak Asli (dakwah, mujahadah, sabar)<br>
-  menarik Asbab Mutlak Terbitan (suasana, jamaah, sistem, nusrah).</p>
-
-  <p><strong>3. Kalau mahu minum kopi di Kutub Utara RAMAI-RAMAI?</strong></p>
-
-  <p>Soalan seterusnya:</p>
-  <ul>
-    <li>Bagaimana hendak pergi ramai-ramai?</li>
-    <li>Siapa susun?</li>
-    <li>Siapa urus pembahagian?</li>
-    <li>Bagaimana pastikan semua orang dapat bercakap?</li>
-  </ul>
-
-  <p>Jawapannya hanya satu perkataan:</p>
-
-  <p><strong>MESYUARAT (الشُّورَى)</strong></p>
-
-  <p>Tanpa Asbab Mutlak Asli mesyuarat:</p>
-  <ul>
-    <li>dakwah tidak tersusun,</li>
-    <li>mujahadah tidak terarah,</li>
-    <li>sabar tidak bertahan,</li>
-    <li>jamaah tidak terbina,</li>
-    <li>Mutlak Terbitan tidak muncul,</li>
-    <li>iman tidak berat.</li>
-  </ul>
-
-  <p>Dengan mesyuarat:</p>
-  <ul>
-    <li>harta dan diri ditenun dalam tertib,</li>
-    <li>asbab dunia tunduk kepada Mutlak,</li>
-    <li>rantaian bi amwālikum wa anfusikum bergerak dalam wal-‘aṣr.</li>
-  </ul>
-
-  <p>Analogi ini mengikat semula:</p>
-  <ul>
-    <li>Diri → medan Asbab Mutlak Asli.</li>
-    <li>Harta dan Masa → bahan Asbab Mutlak Terbitan.</li>
-    <li>Ditransformasikan → proses yang menjadikan kedua-duanya berat di sisi Allah iaitu menjadi Asbab Mutlak Terbitan</li>
-  </ul>
+  <p><strong>3. Kopi di Kutub Utara ramai-ramai?</strong> — Jawapannya satu perkataan: <strong>MESYUARAT (الشُّورَى)</strong>. Tanpa syura, dakwah tidak tersusun, mujahadah tidak terarah, sabar tidak bertahan, jamaah tidak terbina.</p>
 
   <hr>
 
-  <h3>5.4.4 PERBEZAAN KEEMPAT – Keperluan Modal Dunia</h3>
+  <h3>5.4.4 Perbezaan Keempat – Keperluan Modal Dunia</h3>
 
-  <p><strong>A. Asbab Mutlak Asli → berfungsi tanpa syarat dunia</strong></p>
+  <p><strong>Asbab Mutlak Asli</strong> → berfungsi tanpa syarat dunia. Solat, zikir, doa, sabar, mujahadah, dakwah tidak perlukan modal sebagai syarat sah. (Haji &amp; Zakat memerlukan harta sebagai syarat luar, tetapi nilai Asbab Mutlak Asli di dalamnya adalah pada tazkiyah hati, bukan pada harta atau perjalanan.)</p>
 
-  <p>Solat, zikir, doa, sabar, mujahadah, dakwah → tidak perlukan modal sebagai syarat sah.</p>
+  <p><strong>Asbab Mutlak Terbitan</strong> → memerlukan dunia (terutamanya harta): membina masjid, madrasah, hospital, media, platform dakwah, logistik, makanan, peralatan.</p>
 
-  <p>Haji & Zakat memang memerlukan harta (asbab fitrah):</p>
-
-  <p>Tetapi:</p>
-  <ul>
-    <li>Nilai Asbab Mutlak Asli di dalam Haji & Zakat bukan pada harta atau perjalanan,</li>
-    <li>Tetapi pada tazkiyah hati & pengorbanan diri di sebalik harta itu.</li>
-    <li>Zakat → membersihkan hati pemberi & penerima, bukan sekadar memindahkan wang.</li>
-    <li>Haji → mengosongkan diri di hadapan Allah, walau semua perjalanan guna asbab fitrah (kenderaan, visa, duit).</li>
-  </ul>
-
-  <p>Harta hanyalah syarat luar; Asbab Mutlak Asli tetap beroperasi dalam hati dan diri.</p>
-
-  <p><strong>B. Asbab Mutlak Terbitan → memerlukan dunia (terutamanya harta)</strong></p>
-
-  <p>Asbab Mutlak Terbitan ialah:</p>
-  <ul>
-    <li>teknologi yang ditundukkan</li>
-    <li>strategi yang ditundukkan</li>
-    <li>sistem ekonomi yang patuh syarak</li>
-    <li>media yang dijadikan alat dakwah</li>
-    <li>pentadbiran yang amanah kerana Allah</li>
-  </ul>
-
-  <p>Semua ini tidak wujud tanpa harta:</p>
-  <ul>
-    <li>membina masjid, madrasah, hospital, media, platform dakwah</li>
-    <li>menyediakan logistik, makanan, pengangkutan, peralatan</li>
-  </ul>
-
-  <p><strong>Dalil umum:</strong></p>
   <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
-  <p>“Dan bersedialah untuk mereka dengan segala kekuatan yang kamu mampu.”<br>
-  (Al-Anfāl 8:60)【12】</p>
-
-  <p>Ayat ini memerintahkan:</p>
-  <ul>
-    <li>ambil asbab fitrah dan asbab zulumat,</li>
-    <li>gunakan kekuatan untuk ditransformasikan (termasuk harta & teknologi)</li>
-    <li>tetapi tetap di bawah naungan iman & taqwa.</li>
-  </ul>
+  <div class="translation">"Dan bersedialah untuk mereka dengan segala kekuatan yang kamu mampu." &nbsp;(Al-Anfāl 8:60)【12】</div>
 
   <hr>
 
-  <h3>5.4.5 PERBEZAAN KELIMA – Cara Allah Menurunkan Pertolongan</h3>
+  <h3>5.4.5 Perbezaan Kelima – Cara Allah Menurunkan Pertolongan</h3>
 
-  <p><strong>A. Asbab Mutlak Asli → pertolongan turun terus dari langit</strong></p>
+  <p><strong>Asbab Mutlak Asli</strong> → pertolongan turun terus dari langit: Badar (malaikat turun), Uhud (sabar menentukan), Hunain (bilangan tidak membantu), Hudaibiyyah ("kalah" menjadi kemenangan).</p>
 
-  <p>Contoh:</p>
-  <ul>
-    <li>Badar — malaikat turun</li>
-    <li>Uhud — sabar menentukan</li>
-    <li>Hunain — bilangan tidak membantu</li>
-    <li>Hudaibiyyah — “kalah” menjadi kemenangan kerana sabar & taat</li>
-    <li>Doa Taif — membuka pintu hidayat</li>
-  </ul>
-
-  <p><strong>Dalil:</strong></p>
   <div class="arab">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ ﴾</div>
-  <p>“Jika kamu menolong agama Allah, Dia akan menolong kamu.”<br>
-  (Muhammad 47:7)【13】</p>
+  <div class="translation">"Jika kamu menolong agama Allah, Dia akan menolong kamu." &nbsp;(Muhammad 47:7)【13】</div>
 
-  <p><strong>B. Asbab Mutlak Terbitan → pertolongan turun selepas ia disucikan</strong></p>
+  <p><strong>Asbab Mutlak Terbitan</strong> → pertolongan turun selepas ia disucikan. Bukan parit yang menang di Khandaq — Allah yang menang, parit hanya hamba.</p>
 
-  <p>Jika tidak ditundukkan:</p>
-  <ul>
-    <li>menjadi berhala,</li>
-    <li>menjadi sumber kibir,</li>
-    <li>menipu hati.</li>
-  </ul>
-
-  <p>Jika ditundukkan:</p>
-  <ul>
-    <li>menjadi alat iman,</li>
-    <li>menjadi saksi tauhid,</li>
-    <li>mengangkat dakwah.</li>
-  </ul>
-
-  <p><strong>Dalil:</strong></p>
   <div class="arab">﴿ وَرَدَّ اللَّهُ الَّذِينَ كَفَرُوا بِغَيْظِهِمْ ﴾</div>
-  <p>“Dan Allah menghalau orang-orang kafir itu dengan penuh kegeraman mereka (tanpa hasil).”<br>
-  (Al-Ahzāb 33:25)【14】</p>
-
-  <p>Bukan parit yang menang di Khandaq.<br>
-  Allah yang menang — parit hanya hamba.</p>
+  <div class="translation">"Dan Allah menghalau orang-orang kafir itu dengan penuh kegeraman mereka (tanpa hasil)." &nbsp;(Al-Ahzāb 33:25)【14】</div>
 
   <hr>
 
-  <h3>5.4.6 PERANAN DALAM PEMBINAAN TAMADUN</h3>
+  <h3>5.4.6 Peranan dalam Pembinaan Tamadun</h3>
 
-  <p><strong>A. Asbab Mutlak Asli membina manusia</strong></p>
+  <p><strong>Asbab Mutlak Asli membina manusia.</strong> Tanpa Asbab Mutlak Asli: tiada iman, mujahadah, sabar, syura, nur, suasana masjid. Tamadun jatuh walaupun teknologinya tinggi.</p>
 
-  <p>Tanpa Asbab Mutlak Asli:</p>
-  <ul>
-    <li>tiada iman</li>
-    <li>tiada mujahadah</li>
-    <li>tiada sabar</li>
-    <li>tiada syura</li>
-    <li>tiada nur</li>
-    <li>tiada suasana masjid</li>
-  </ul>
+  <p><strong>Asbab Mutlak Terbitan membina struktur selepas hati dibina.</strong></p>
 
-  <p>Tamadun jatuh walaupun teknologinya tinggi.</p>
-
-  <p><strong>B. Asbab Mutlak Terbitan membina struktur selepas hati dibina</strong></p>
-  <ul>
-    <li>Asbab Mutlak Asli → mendirikan manusia</li>
-    <li>Asbab Mutlak Terbitan → mendirikan struktur & sistem</li>
-  </ul>
-
-  <p><strong>Dalil:</strong></p>
   <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</div>
-  <p>“Sesungguhnya Allah tidak mengubah apa yang ada pada sesuatu kaum sehingga mereka mengubah apa yang ada pada diri mereka.”<br>
-  (Ar-Ra‘d 13:11)【15】</p>
-
-  <p>Perubahan bermula dalam diri (Asbab Mutlak Asli),<br>
-  kemudian merebak kepada struktur (Asbab Mutlak Terbitan).</p>
+  <div class="translation">"Sesungguhnya Allah tidak mengubah apa yang ada pada sesuatu kaum sehingga mereka mengubah apa yang ada pada diri mereka." &nbsp;(Ar-Ra'd 13:11)【15】</div>
 
   <hr>
 
-  <h3>5.4.7 RUMUSAN TAUHIDI (Versi Muktamad – Diri & Harta)</h3>
-  <ol>
-    <li>Asbab Mutlak Asli = cahaya wahyu yang bekerja utama atas diri (hati, masa, tenaga).</li>
-    <li>Asbab Mutlak Terbitan = bayangan cahaya yang terbentuk apabila harta & asbab dunia tunduk kepada wahyu.</li>
-    <li>Asbab Mutlak Asli memberi kesan tanpa bergantung kepada dunia; ia menghidupkan iman dan menyucikan diri.</li>
-    <li>Asbab Mutlak Terbitan hanya berfungsi bila dikawal Asbab Mutlak Asli dan disucikan melalui Nafy, Isbat, Ittiba’, Ikhlas, dan Tunduk syarak.</li>
-    <li>Diri adalah tempat jatuh bangun Asbab Mutlak Asli; harta adalah bahan utama bagi Asbab Mutlak Terbitan.</li>
-    <li>Bila hanya harta dikorbankan, tanpa diri → timbul kibir & riya’.</li>
-    <li>Bila hanya diri dikorbankan, tanpa harta → timbul berharap kepada makhluk, sistem, atau bantuan manusia.</li>
-    <li>Bila diri dan harta dikorbankan serentak kerana Allah, cinta dunia dan cinta diri keluar dari hati, lalu cinta Allah memenuhi seluruh jiwa.</li>
-    <li>Nabi dan Sahabat membina Asbab Mutlak Asli dahulu (iman, dakwah, mujahadah), kemudian menggunakan harta & asbab dunia sebagai Asbab Mutlak Terbitan.</li>
-    <li>Tamadun Islam runtuh apabila harta dan sistem (Asbab Mutlak Terbitan) menggantikan iman & amal (Asbab Mutlak Asli) sebagai pusat.</li>
-    <li>Kerangka 3 Asbab datang untuk membetulkan neraca ini: mengembalikan diri kepada Asbab Mutlak Asli dan harta kepada Asbab Mutlak Terbitan.</li>
-  </ol>
+  <h3>5.4.7 Rumusan Tauhidi (Versi Muktamad)</h3>
+  <div class="rumusan">
+    <ol>
+      <li>Asbab Mutlak Asli = cahaya wahyu yang bekerja utama atas diri (hati, masa, tenaga).</li>
+      <li>Asbab Mutlak Terbitan = bayangan cahaya apabila harta &amp; asbab dunia tunduk kepada wahyu.</li>
+      <li>Asbab Mutlak Asli memberi kesan tanpa bergantung dunia; ia menghidupkan iman dan menyucikan diri.</li>
+      <li>Asbab Mutlak Terbitan hanya berfungsi bila dikawal Asbab Mutlak Asli dan disucikan melalui Nafy, Isbat, Ittiba', Ikhlas, dan Tunduk syarak.</li>
+      <li>Diri adalah tempat jatuh bangun Asbab Mutlak Asli; harta adalah bahan utama bagi Asbab Mutlak Terbitan.</li>
+      <li>Bila hanya harta dikorbankan tanpa diri → timbul kibir &amp; riya'.</li>
+      <li>Bila hanya diri dikorbankan tanpa harta → timbul berharap kepada makhluk.</li>
+      <li>Bila diri dan harta dikorbankan serentak kerana Allah, cinta dunia dan cinta diri keluar dari hati, lalu cinta Allah memenuhi seluruh jiwa.</li>
+      <li>Tamadun Islam runtuh apabila harta dan sistem (Asbab Mutlak Terbitan) menggantikan iman &amp; amal (Asbab Mutlak Asli) sebagai pusat.</li>
+      <li>Kerangka 3 Asbab datang untuk membetulkan neraca ini.</li>
+    </ol>
+  </div>
 
-  <hr>
+  <div class="footnotes">
+    <h3>Nota Kaki 5.4</h3>
+    <ul>
+      <li>【1】 An-Nisā' 4:122 &nbsp;【2】 As-Saffāt 37:96 &nbsp;【3】 Ar-Ra'd 13:28 &nbsp;【4】 Al-Baqarah 2:153 &nbsp;【5】 Ash-Shu'arā 26:63</li>
+      <li>【6】 Al-Fatḥ 48:4 &nbsp;【7】 At-Tawbah 9:111 &nbsp;【8】 Āli 'Imrān 3:92 &nbsp;【9】 Al-Nasā'ī &nbsp;【10】 Al-'Aṣr 103:1</li>
+      <li>【11】 As-Saff 61:11 &nbsp;【12】 Al-Anfāl 8:60 &nbsp;【13】 Muhammad 47:7 &nbsp;【14】 Al-Ahzāb 33:25 &nbsp;【15】 Ar-Ra'd 13:11</li>
+    </ul>
+  </div>
 
-  <h3>NOTA KAKI BAB 5.4</h3>
-  <ul>
-    <li>【1】 An-Nisā’ 4:122</li>
-    <li>【2】 As-Saffāt 37:96</li>
-    <li>【3】 Ar-Ra‘d 13:28</li>
-    <li>【4】 Al-Baqarah 2:153</li>
-    <li>【5】 Ash-Shu‘arā 26:63</li>
-    <li>【6】 Al-Fatḥ 48:4</li>
-    <li>【7】 At-Tawbah 9:111 – Allah membeli diri & harta orang beriman</li>
-    <li>【8】 Āli ‘Imrān 3:92 – Infak harta yang dicintai</li>
-    <li>【9】 Hadith “سَبَقَ دِرْهَمٌ مِائَةَ أَلْفِ دِرْهَمٍ” – keutamaan harta yang diinfak dengan hati yang betul</li>
-    <li>【10】 Al-‘Aṣr 103:1 – “Demi masa” sebagai pemberat amal</li>
-    <li>【11】 As-Saff 61:11 – Jihad bi amwālikum wa anfusikum</li>
-    <li>【12】 Al-Anfāl 8:60 – Perintah mengambil asbab dunia</li>
-    <li>【13】 Muhammad 47:7 – Jika kamu menolong agama Allah, Dia menolong kamu</li>
-    <li>【14】 Al-Ahzāb 33:25 – Khandaq: Allah yang mengalahkan musuh</li>
-    <li>【15】 Ar-Ra‘d 13:11 – Perubahan bermula dalam diri</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
+  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
 </section>
-<!-- === SECTION 5.4 END === -->
-     <!-- === SECTION 5.5 START === -->
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5.5
+════════════════════════════════════════════ -->
 <section class="section" id="5-5">
-  <h2>5.5 DALIL SIRAH:</h2>
-  <p><strong>TRANSFORMASI ASBAB FITRAH → ASBAB MUTLAK TERBITAN</strong></p>
+  <div class="section-opener">
+    <h2>5.5 Dalil Sirah: Transformasi Asbab Fitrah → Asbab Mutlak Terbitan</h2>
+  </div>
 
-  <p>Bab ini menghimpunkan empat contoh besar bagaimana Asbab Fitrah (benda biasa, strategi biasa, ilmu biasa) ditransformasikan menjadi Asbab Mutlak Terbitan apabila:</p>
-  <ul>
-    <li>datang perintah Allah,</li>
-    <li>hati hidup dengan Nafy & Isbat,</li>
-    <li>amal mengikut Ittiba’ Rasul,</li>
-    <li>niat ikhlas,</li>
-    <li>dan tertib syarak dijaga.</li>
-  </ul>
-
-  <p>Empat contoh ini ialah:</p>
-  <ol>
-    <li>Tongkat Nabi Musa عليه السلام</li>
-    <li>Baju besi Rasulullah ﷺ</li>
-    <li>Parit Salman al-Farisi (Khandaq)</li>
-    <li>Ilmu perubatan sahabat</li>
-  </ol>
-
-  <p>Keempat-empatnya menunjukkan “dunia tunduk bila hati bertauhid”.</p>
+  <p>Bab ini menghimpunkan empat contoh besar bagaimana Asbab Fitrah ditransformasikan menjadi Asbab Mutlak Terbitan apabila datang perintah Allah, hati hidup dengan Nafy &amp; Isbat, amal mengikut Ittiba' Rasul, niat ikhlas, dan tertib syarak dijaga.</p>
 
   <hr>
 
-  <h3>5.5.1 Tongkat Musa — Kayu (Asbab Fitrah) Menjadi Asbab Mutlak Terbitan</h3>
-
-  <p>Asal tongkat Musa عليه السلام hanyalah kayu (asbab fitrah):</p>
-  <ul>
-    <li>digunakan untuk berjalan,</li>
-    <li>menghalau binatang,</li>
-    <li>fungsi biasa seorang penggembala.</li>
-  </ul>
-
-  <p>Allah bertanya kepada Nabi Musa:</p>
+  <h3>5.5.1 Tongkat Musa — Kayu Menjadi Asbab Mutlak Terbitan</h3>
 
   <div class="arab">﴿ وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَىٰ ﴾</div>
-  <p>“Apakah itu yang di tangan kananmu, wahai Musa?”<br>
-  (Ṭāhā 20:17)【1】</p>
-
-  <p>Nabi Musa menjawab dengan menyebut fungsi-fungsi fitrah tongkat tersebut.</p>
-
-  <p>Tetapi apabila datang perintah wahyu:</p>
+  <div class="translation">"Apakah itu yang di tangan kananmu, wahai Musa?" &nbsp;(Ṭāhā 20:17)【1】</div>
 
   <div class="arab">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
-  <p>“Lalu Kami wahyukan kepada Musa: Pukullah laut dengan tongkatmu.”<br>
-  (Ash-Shu‘arā 26:63)【2】</p>
+  <div class="translation">"Lalu Kami wahyukan kepada Musa: Pukullah laut dengan tongkatmu." &nbsp;(Ash-Shu'arā 26:63)【2】</div>
 
-  <p>Maka berlaku transformasi:</p>
-  <ul>
-    <li>Tongkat = kayu (Asbab Fitrah)</li>
-    <li>Pukul laut atas perintah Allah = Asbab Mutlak Asli (wahyu)</li>
-    <li>Laut terbelah = kesan yang lahir melalui Asbab Mutlak Terbitan</li>
-  </ul>
+  <div class="insight-box">
+    Tongkat = kayu (Asbab Fitrah) &nbsp;→&nbsp; Pukul laut atas perintah Allah = Asbab Mutlak Asli (wahyu) &nbsp;→&nbsp; Laut terbelah = kesan melalui Asbab Mutlak Terbitan.
+  </div>
 
-  <p>Kayu itu bukan saja-saja jadi “mukjizat”; ia:</p>
-  <ol>
-    <li>kekal kayu dari sudut fitrah,</li>
-    <li>tetapi berubah fungsi dari sudut tauhid — menjadi Asbab Mutlak Terbitan kerana ia:
-      <ul>
-        <li>digunakan dalam Nafy (Musa tidak percaya tongkat ada kuasa),</li>
-        <li>diisi Isbat (yakin hanya Allah menyelamatkan),</li>
-        <li>dan mengikut Ittiba’ (taat perintah wahyu tepat seperti diperintah).</li>
-      </ul>
-    </li>
-  </ol>
-
-  <p><strong>Pelajaran Tauhidi:</strong></p>
-  <ul>
-    <li>Kayu biasa boleh memecahkan laut apabila menjadi Asbab Mutlak Terbitan.</li>
-    <li>Benda biasa hari ini (duit, teknologi, kamera, mikrofon) boleh menjadi Asbab Mutlak Terbitan jika digunakan dengan cara yang sama:<br>
-    Nafy + Isbat + Ittiba’ + Ikhlas + Tunduk syarak.</li>
-  </ul>
+  <p><strong>Pelajaran:</strong> Benda biasa hari ini (duit, teknologi, kamera, mikrofon) boleh menjadi Asbab Mutlak Terbitan jika digunakan dengan Nafy + Isbat + Ittiba' + Ikhlas + Tunduk syarak.</p>
 
   <hr>
 
-  <h3>5.5.2 Baju Besi Rasulullah ﷺ — Teknologi (Asbab Fitrah) di Bawah Tawakkal</h3>
+  <h3>5.5.2 Baju Besi Rasulullah ﷺ — Teknologi di Bawah Tawakkal</h3>
 
-  <p>Baju besi ialah teknologi perang (Asbab Fitrah):</p>
-  <ul>
-    <li>melindungi badan,</li>
-    <li>mengurangkan kecederaan,</li>
-    <li>dicipta melalui usaha manusia.</li>
-  </ul>
-
-  <p>Rasulullah ﷺ memakainya dalam peperangan, antaranya di Uhud, sehingga diriwayatkan bahawa baginda memakai dua lapis baju besi dalam perang itu.【3】</p>
-
-  <p>Ini menunjukkan:</p>
-  <ul>
-    <li>Rasulullah ﷺ mengambil Asbab Fitrah sepenuhnya,</li>
-    <li>tetapi hati baginda tidak bergantung pada baju besi, sebaliknya pada Allah.</li>
-  </ul>
-
-  <p>Dalil umum tawakkal:</p>
+  <p>Rasulullah ﷺ memakai dua lapis baju besi di Uhud, namun hati baginda tidak bergantung pada baju besi, sebaliknya pada Allah.</p>
 
   <blockquote>
-    <p>« اِعْقِلْهَا وَتَوَكَّلْ »<br>
-    “Ikatlah unta, kemudian bertawakkallah.”<br>
-    (Riwayat at-Tirmiżī)【4】</p>
+    <span class="arabic-hadith">« اِعْقِلْهَا وَتَوَكَّلْ »</span>
+    "Ikatlah unta, kemudian bertawakkallah." &nbsp;(at-Tirmiżī)【4】
   </blockquote>
 
-  <p>Di sini:</p>
-  <ul>
-    <li>baju besi = teknologi (Asbab Fitrah)</li>
-    <li>pengambilan sebab + hati bertawakkal = syarat Asbab Mutlak Terbitan</li>
-  </ul>
-
-  <p>Baju besi menjadi Asbab Mutlak Terbitan apabila:</p>
-  <ol>
-    <li>diambil sebagai sebab,</li>
-    <li>tetapi Nafy dilakukan terhadap kuasanya (bukan baju besi yang menyelamatkan),</li>
-    <li>Isbat diletakkan pada Allah,</li>
-    <li>Ittiba’ mengikut sunnah Nabi ﷺ dalam adab perang,</li>
-    <li>niat ikhlas — berperang kerana Allah, bukan kerana dunia.</li>
-  </ol>
-
-  <p><strong>Pelajaran Tauhidi:</strong></p>
-  <ul>
-    <li>Mengambil teknologi bukan tanda lemah iman.</li>
-    <li>Bergantung kepada teknologi tanpa Asbab Mutlak Asli itulah tanda penyakit iman.</li>
-    <li>Teknologi hanya naik taraf menjadi Asbab Mutlak Terbitan bila hati sudah bebas daripada pergantungan kepadanya.</li>
-  </ul>
+  <p><strong>Pelajaran:</strong> Mengambil teknologi bukan tanda lemah iman. Bergantung kepada teknologi tanpa Asbab Mutlak Asli itulah tanda penyakit iman.</p>
 
   <hr>
 
-  <h3>5.5.3 Parit Salman al-Farisi — Strategi (Asbab Fitrah) Menjadi Asbab Mutlak Terbitan</h3>
+  <h3>5.5.3 Parit Salman al-Farisi — Strategi Menjadi Asbab Mutlak Terbitan</h3>
 
-  <p>Ketika Perang Khandaq, cadangan menggali parit datang daripada Salman al-Farisi — satu strategi perang (Asbab Fitrah) yang biasa digunakan di Parsi.</p>
+  <p>Parit menjadi Asbab Mutlak Terbitan kerana: diusulkan dalam syura, dilaksanakan dengan mujahadah (sahabat menggali sendiri, kelaparan, berzikir), disertai doa &amp; tawakkal — bukan yakin parit melindungi, tetapi Allah yang melindungi.</p>
 
-  <p>Secara fitrah:</p>
-  <ul>
-    <li>parit hanyalah halangan fizikal,</li>
-    <li>musuh boleh menyesuaikan diri jika ada masa & sumber.</li>
-  </ul>
+  <div class="arab">﴿ وَرَدَّ اللَّهُ الَّذِينَ كَفَرُوا بِغَيْظِهِمْ لَمْ يَنَالُوا خَيْرًا ۚ وَكَفَى اللَّهُ الْمُؤْمِنِينَ الْقِتَالَ ﴾</div>
+  <div class="translation">"Dan Allah mengembalikan orang kafir dengan kemarahan (kecewa), mereka tidak mendapat apa-apa kebaikan; dan cukuplah Allah bagi orang beriman daripada (perlu) berperang." &nbsp;(Al-Aḥzāb 33:25)【5】</div>
 
-  <p>Tetapi di Madinah, parit itu menjadi Asbab Mutlak Terbitan kerana beberapa sebab Tauhidi:</p>
-  <ol>
-    <li>Diusulkan dalam suasana syura dengan Rasulullah ﷺ sebagai rujukan.</li>
-    <li>Diputuskan dalam tertib wahyu — bukan kejar logik semata-mata.</li>
-    <li>Dilaksanakan bersama mujahadah — sahabat menggali sendiri, kelaparan, berzikir.</li>
-    <li>Disertai doa & tawakkal — bukan yakin parit melindungi, tetapi Allah yang melindungi.</li>
-  </ol>
-
-  <p>Dalil kemenangan Khandaq:</p>
-
-  <div class="arab">﴿ وَرَدَّ اللَّهُ الَّذِينَ كَفَرُوا بِغَيْظِهِمْ لَمْ يَنَالُوا خَيْرًا ۚ وَكَفَى اللَّهُ الْمُؤْمِنِينَ الْقِتَالَ ۚ ﴾</div>
-  <p>“Dan Allah mengembalikan orang kafir dengan kemarahan (kecewa), mereka tidak mendapat apa-apa kebaikan; dan cukuplah Allah bagi orang beriman daripada (perlu) berperang.”<br>
-  (Al-Aḥzāb 33:25)【5】</p>
-
-  <p>Perhatikan:</p>
-  <ul>
-    <li>Allah tidak menyebut parit sebagai penentu,</li>
-    <li>tetapi menyandarkan kemenangan kepada-Nya sendiri.</li>
-  </ul>
-
-  <p><strong>Secara Tauhidi:</strong></p>
-  <ul>
-    <li>Parit = strategi (Asbab Fitrah)</li>
-    <li>Suasana syura, sabar, tawakkal, doa = Asbab Mutlak Asli</li>
-    <li>Bila kedua-duanya bergabung → parit naik taraf menjadi Asbab Mutlak Terbitan.</li>
-  </ul>
-
-  <p><strong>Pelajaran Tauhidi:</strong></p>
-  <ul>
-    <li>Strategi apa pun boleh menjadi Asbab Mutlak Terbitan bila diletakkan di bawah:<br>
-    syura + sabar + tawakkal + niat kerana Allah.</li>
-    <li>Tanpa itu semua, strategi hanyalah Asbab Fitrah yang boleh jadi berhala baru.</li>
-  </ul>
+  <p>Allah tidak menyebut parit sebagai penentu, tetapi menyandarkan kemenangan kepada-Nya sendiri.</p>
 
   <hr>
 
-  <h3>5.5.4 Ilmu Perubatan Sahabat — Asbab Fitrah yang Disucikan Menjadi Asbab Mutlak Terbitan</h3>
+  <h3>5.5.4 Ilmu Perubatan Sahabat — Asbab Fitrah yang Disucikan</h3>
 
-  <p>Sahabat memiliki ilmu perubatan (Asbab Fitrah):</p>
-  <ul>
-    <li>ada yang belajar herba,</li>
-    <li>ada yang mahir rawatan,</li>
-    <li>ada yang menggunakan ruqyah.</li>
-  </ul>
-
-  <p>Kisah mashyhur:</p>
-  <ul>
-    <li>Satu kabilah menolak menerima sahabat sebagai tetamu.</li>
-    <li>Ketua kabilah disengat binatang.</li>
-    <li>Mereka meminta bantuan sahabat.</li>
-    <li>Salah seorang sahabat meruqyah ketua itu dengan membaca Surah al-Fātiḥah.</li>
-    <li>Ketua itu sembuh, lalu mereka menghadiahkan kambing.</li>
-  </ul>
-
-  <p>Rasulullah ﷺ bersabda (antara mafhumnya):</p>
+  <p>Sahabat meruqyah ketua kabilah dengan Surah al-Fātiḥah. Ketua itu sembuh.</p>
 
   <blockquote>
-    <p>« وَمَا يُدْرِيكَ أَنَّهَا رُقْيَةٌ »<br>
-    “Bagaimana engkau tahu (al-Fātiḥah) itu adalah ruqyah?”<br>
-    (Riwayat al-Bukhārī)【6】</p>
+    <span class="arabic-hadith">« وَمَا يُدْرِيكَ أَنَّهَا رُقْيَةٌ »</span>
+    "Bagaimana engkau tahu (al-Fātiḥah) itu adalah ruqyah?" &nbsp;(al-Bukhārī)【6】
   </blockquote>
-
-  <p>Dalam peristiwa ini:</p>
-  <ul>
-    <li>Asbab Fitrah: bacaan, suara, komposisi kalam (dari sudut lahir).</li>
-    <li>Asbab Mutlak Asli: al-Qur’an sebagai kalam Allah + yakin sahabat terhadap janji Allah.</li>
-    <li>Transformasi: ruqyah itu menjadi Asbab Mutlak Terbitan — bacaan (asbab fitrah) yang membawa kesan penyembuhan kerana hati yang bertauhid.</li>
-  </ul>
-
-  <p><strong>Pelajaran penting:</strong></p>
-  <ol>
-    <li>Perubatan secara fitrah (ubat, rawatan) tetap diambil — itu Asbab Fitrah.</li>
-    <li>Ruqyah & doa adalah Asbab Mutlak Asli.</li>
-    <li>Bila kedua-duanya digunakan dalam Nafy (tiada kuasa pada ubat atau bacaan) dan Isbat (hanya Allah menyembuhkan), rawatan itu naik taraf menjadi Asbab Mutlak Terbitan.</li>
-  </ol>
-
-  <p>Dalil umum:</p>
 
   <div class="arab">﴿ وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ ﴾</div>
-  <p>“Dan apabila aku sakit, Dialah (Allah) yang menyembuhkan aku.”<br>
-  (Ash-Shu‘arā 26:80)【7】</p>
+  <div class="translation">"Dan apabila aku sakit, Dialah (Allah) yang menyembuhkan aku." &nbsp;(Ash-Shu'arā 26:80)【7】</div>
 
-  <p>Asbab perubatan hanya hamba;<br>
-  Doktor hanya hamba;<br>
-  Yang menyembuhkan hanyalah Allah.</p>
+  <p>Asbab perubatan hanya hamba; Doktor hanya hamba; Yang menyembuhkan hanyalah Allah.</p>
 
   <hr>
 
-  <h3>5.5.5 Rumusan Tauhidi – Sirah Sebagai Manual Transformasi</h3>
+  <h3>5.5.5 Rumusan Tauhidi</h3>
+  <div class="rumusan">
+    <ol>
+      <li>Asbab Fitrah tidak dibuang — ia dijadikan tunggangan.</li>
+      <li>Asbab Mutlak Asli tidak boleh diganti oleh teknologi atau strategi.</li>
+      <li>Bila Asbab Fitrah ditundukkan di bawah Asbab Mutlak Asli, ia berubah status menjadi Asbab Mutlak Terbitan.</li>
+      <li>Inilah cara para Nabi dan Sahabat membina sejarah.</li>
+    </ol>
+  </div>
 
-  <p>Daripada keempat-empat contoh:</p>
-  <ol>
-    <li>
-      <p><strong>Tongkat Musa</strong><br>
-      Kayu (Asbab Fitrah)<br>
-      + perintah Allah<br>
-      + yakin penuh kepada Allah<br>
-      → Asbab Mutlak Terbitan yang memecahkan laut.</p>
-    </li>
-    <li>
-      <p><strong>Baju besi Rasulullah ﷺ</strong><br>
-      Teknologi (Asbab Fitrah)<br>
-      + tawakkal yang sempurna<br>
-      → Asbab Mutlak Terbitan yang diambil tanpa pergantungan hati.</p>
-    </li>
-    <li>
-      <p><strong>Parit Salman al-Farisi</strong><br>
-      Strategi (Asbab Fitrah)<br>
-      + syura + mujahadah + doa + sabar<br>
-      → Asbab Mutlak Terbitan yang menjadi sebab kemenangan Khandaq.</p>
-    </li>
-    <li>
-      <p><strong>Ilmu perubatan sahabat</strong><br>
-      Rawatan & bacaan (Asbab Fitrah)<br>
-      + al-Fātiḥah + yakin + ikhlas<br>
-      → Asbab Mutlak Terbitan yang menyembuhkan dengan izin Allah.</p>
-    </li>
-  </ol>
+  <div class="footnotes">
+    <h3>Nota Kaki 5.5</h3>
+    <ul>
+      <li>【1】 Ṭāhā 20:17 &nbsp;【2】 Ash-Shu'arā 26:63 &nbsp;【3】 Musnad Aḥmad (baju besi Uhud)</li>
+      <li>【4】 at-Tirmiżī &nbsp;【5】 Al-Aḥzāb 33:25 &nbsp;【6】 Ṣaḥīḥ al-Bukhārī &nbsp;【7】 Ash-Shu'arā 26:80</li>
+    </ul>
+  </div>
 
-  <p><strong>Kesimpulan utama Bab 5.5:</strong></p>
-  <ul>
-    <li>Asbab Fitrah tidak dibuang — ia dijadikan tunggangan.</li>
-    <li>Asbab Mutlak Asli (wahyu, dakwah, sabar, doa, tawakkal) tidak boleh diganti oleh teknologi atau strategi.</li>
-    <li>Bila Asbab Fitrah ditundukkan di bawah Asbab Mutlak Asli, ia berubah status menjadi Asbab Mutlak Terbitan.</li>
-    <li>Inilah cara para Nabi dan Sahabat membina sejarah:<br>
-    dengan menggabungkan Asbab Mutlak Asli pada hati & diri, dan Asbab Mutlak Terbitan pada harta & dunia.</li>
-  </ul>
-
-  <hr>
-
-  <h3>NOTA KAKI BAB 5.5</h3>
-  <ul>
-    <li>【1】 Ṭāhā 20:17 – Dialog Allah dengan Musa tentang tongkat</li>
-    <li>【2】 Ash-Shu‘arā 26:63 – Perintah memukul laut dengan tongkat</li>
-    <li>【3】 Riwayat sahih tentang Nabi ﷺ memakai dua baju besi di Uhud (antara lainnya dalam Musnad Aḥmad)</li>
-    <li>【4】 Hadith “I‘qilhā wa tawakkal” – at-Tirmiżī</li>
-    <li>【5】 Al-Aḥzāb 33:25 – Khandaq: Allah yang menggagalkan musuh</li>
-    <li>【6】 Ṣaḥīḥ al-Bukhārī – Kisah ruqyah al-Fātiḥah ke atas ketua kabilah yang disengat</li>
-    <li>【7】 Ash-Shu‘arā 26:80 – Nabi Ibrāhīm: Allah sahaja yang menyembuhkan</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
+  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
 </section>
-<!-- === SECTION 5.5 END === -->
-     <!-- === SECTION 5.6 START === -->
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5.6
+════════════════════════════════════════════ -->
 <section class="section" id="5-6">
-  <h2>5.6 DALIL QUR’AN (AL-ANFĀL 8:60):</h2>
-  <p><strong>FUSION ASBAB FITRAH & ASBAB MUTLAK DALAM SATU AYAT</strong></p>
+  <div class="section-opener">
+    <h2>5.6 Dalil Qur'an (Al-Anfāl 8:60): Fusion Asbab Fitrah &amp; Asbab Mutlak dalam Satu Ayat</h2>
+  </div>
 
-  <p>Bab ini menyempurnakan seluruh Bab 5.</p>
-
-  <p>Jika Bab 5.5 menunjukkan contoh sirah bagaimana Asbab Fitrah berubah menjadi Asbab Mutlak Terbitan,<br>
-  maka Bab 5.6 memberikan dalil qat‘i Qur’an bahawa:</p>
-  <ul>
-    <li>Asbab Fitrah mesti diambil,</li>
-    <li>Asbab Mutlak mesti menjadi pusat,</li>
-    <li>Dan kedua-duanya mesti digabungkan seperti tertib para Nabi.</li>
-  </ul>
-
-  <p>Ayat ini adalah manual Qur’ani untuk Bab 5.</p>
+  <p>Ayat ini adalah <em>manual Qur'ani</em> untuk Bab 5 — membuktikan bahawa Asbab Fitrah mesti diambil, Asbab Mutlak mesti menjadi pusat, dan kedua-duanya mesti digabungkan seperti tertib para Nabi.</p>
 
   <hr>
 
   <h3>5.6.1 Teks Ayat</h3>
 
   <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ وَمِن رِّبَاطِ الْخَيْلِ تُرْهِبُونَ بِهِ عَدُوَّ اللَّهِ وَعَدُوَّكُمْ ۚ وَآخَرِينَ مِن دُونِهِمْ لَا تَعْلَمُونَهُمُ اللَّهُ يَعْلَمُهُمْ ۚ وَمَا تُنفِقُوا مِن شَيْءٍ فِي سَبِيلِ اللَّهِ يُوَفَّ إِلَيْكُمْ وَأَنتُمْ لَا تُظْلَمُونَ ﴾</div>
-  <p>(al-Anfāl 8:60)【1】</p>
+  <div class="translation">(Al-Anfāl 8:60)</div>
 
   <hr>
 
-  <h3>5.6.2 Hukum Pertama — ASBAB FITRAH ADALAH PERINTAH ALLAH</h3>
+  <h3>5.6.2 Hukum Pertama — Asbab Fitrah Adalah Perintah Allah</h3>
 
   <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
-  <p>“Dan siapkanlah oleh kamu segala bentuk kekuatan yang kamu mampu.”【1】</p>
+  <div class="translation">"Dan siapkanlah segala bentuk kekuatan yang kamu mampu."</div>
 
-  <p>Ayat ini menunjukkan bahawa:</p>
-  <ul>
-    <li>strategi,</li>
-    <li>persiapan,</li>
-    <li>logistik,</li>
-    <li>teknologi,</li>
-    <li>peralatan ketenteraan,</li>
-    <li>kemahiran,</li>
-    <li>analisis,</li>
-    <li>pengurusan,</li>
-  </ul>
+  <p>Strategi, persiapan, logistik, teknologi, peralatan, kemahiran, pengurusan — semua ini Asbab Fitrah yang wajib diambil. Tetapi ia bukan pusat.</p>
 
-  <p>semua ini ialah Asbab Fitrah yang wajib diambil.</p>
-
-  <p>Ini mematahkan fahaman salah bahawa ambil sebab adalah kurang iman.</p>
-
-  <p>Tetapi…<br>
-  Asbab Fitrah bukan pusat.</p>
-
-  <p>Ia diambil kerana perintah Allah, bukan kerana kuasa sebab.</p>
-
-  <p>Inilah tegasnya Kerangka 3 Asbab:</p>
-
-  <blockquote>
-    <p>Ambil sebab (fitrah), bukan bergantung pada sebab.</p>
-  </blockquote>
+  <div class="callout">
+    <strong>Tegasan Kerangka 3 Asbab:</strong> Ambil sebab (fitrah), bukan bergantung pada sebab.
+  </div>
 
   <hr>
 
-  <h3>5.6.3 Hukum Kedua — ASBAB FITRAH MESTI DIIKHLASKAN DENGAN “FI SABILILLAH”</h3>
+  <h3>5.6.3 Hukum Kedua — Asbab Fitrah Mesti Diikhlaskan dengan "Fi Sabilillah"</h3>
 
   <div class="arab">﴿ وَمَا تُنفِقُوا مِن شَيْءٍ فِي سَبِيلِ اللَّهِ ﴾</div>
-  <p>“Apa sahaja yang kamu belanjakan di jalan Allah…”【1】</p>
+  <div class="translation">"Apa sahaja yang kamu belanjakan di jalan Allah…"</div>
 
-  <p>Inilah titik transformasi:</p>
-
-  <ul>
-    <li>Asbab Fitrah + niat dunia → kekal fitrah</li>
-    <li>Asbab Fitrah + ikhlas (redha Allah) → menjadi Asbab Mutlak Terbitan</li>
-  </ul>
-
-  <p>Kerana:</p>
-  <ul>
-    <li>ia tunduk kepada wahyu,</li>
-    <li>ia dibersihkan dengan ikhlas (niat untuk redha Allah),</li>
-    <li>ia ditapis dengan Nafy & Isbat,</li>
-    <li>ia dipandu oleh tawakkal,</li>
-    <li>dan ia menjadi sebahagian daripada amal yang Allah terima.</li>
-  </ul>
-
-  <p>Ini selari dengan definisi ikhlas:</p>
-
-  <blockquote>
-    <p>Ikhlas = objektif amal adalah untuk mendapatkan keredhaan Allah.</p>
-  </blockquote>
+  <p>Inilah titik transformasi: Asbab Fitrah + niat dunia → kekal fitrah. Asbab Fitrah + ikhlas (redha Allah) → menjadi Asbab Mutlak Terbitan.</p>
 
   <hr>
 
-  <h3>5.6.4 Hukum Ketiga — KESAN AKHIR BUKAN DITENTUKAN ASBAB FITRAH</h3>
+  <h3>5.6.4 Hukum Ketiga — Kesan Akhir Bukan Ditentukan Asbab Fitrah</h3>
 
   <div class="arab">﴿ وَأَنتُمْ لَا تُظْلَمُونَ ﴾</div>
-  <p>“Dan kamu tidak akan dizalimi.”【1】</p>
+  <div class="translation">"Dan kamu tidak akan dizalimi."</div>
 
-  <p>Maksud Tauhidi ayat ini:</p>
-  <ul>
-    <li>kamu ambil sebab → itu bahagian kamu,</li>
-    <li>kamu taat kepada wahyu → itu nilai sebenar,</li>
-    <li>hasil akhirnya Allah tentukan,</li>
-    <li>dan Allah tidak akan sia-siakan taat kamu.</li>
-  </ul>
-
-  <p>Inilah ringkasan:</p>
-
-  <blockquote>
-    <p>Asbab Fitrah → menentukan suasana<br>
-    Asbab Mutlak → menentukan kesan akhir</p>
-  </blockquote>
-
-  <p>Ini selari dengan naratif:</p>
-
-  <p>Asbab fitrah memberi suasana, tetapi tidak pernah memberi kesan akhir.</p>
+  <div class="callout">
+    Asbab Fitrah → menentukan suasana.<br>
+    Asbab Mutlak → menentukan kesan akhir.
+  </div>
 
   <hr>
 
-  <h3>5.6.5 Hukum Keempat — JANJI ALLAH HANYA TURUN BILA ASBAB FITRAH TUNDUK WAHYU</h3>
+  <h3>5.6.5 Hukum Keempat — Janji Allah Hanya Turun Bila Asbab Fitrah Tunduk Wahyu</h3>
 
   <div class="arab">﴿ يُوَفَّ إِلَيْكُمْ ﴾</div>
-  <p>“Allah akan menyempurnakannya kepada kamu.”【1】</p>
+  <div class="translation">"Allah akan menyempurnakannya kepada kamu."</div>
 
-  <p>Makna “menyempurnakan” di sini (tafsir Ibn Kathir, Qurtubi, Tabari):</p>
-  <ul>
-    <li>memberi nusrah,</li>
-    <li>membuka jalan,</li>
-    <li>memberi kemenangan,</li>
-    <li>memalukan musuh,</li>
-    <li>menggagalkan rancangan mereka,</li>
-    <li>menukar sebab kecil menjadi hasil besar,</li>
-    <li>dan memberi kesan yang tidak mungkin berlaku dengan sebab semata-mata.</li>
-  </ul>
-
-  <p>Menuju konklusi besar:</p>
-
-  <ul>
-    <li>Asbab Fitrah → wajib diambil</li>
-    <li>Asbab Mutlak → wajib menjadi pusat</li>
-    <li>Gabungan kedua-duanya → Asbab Mutlak Terbitan</li>
-  </ul>
-
-  <p>Ayat ini secara literal menyatukan Bab 5.1–5.5.</p>
+  <p>Makna "menyempurnakan" (Tafsir Ibn Kathir, Qurtubi, Tabari): memberi nusrah, membuka jalan, memberi kemenangan, memalukan musuh, menukar sebab kecil menjadi hasil besar.</p>
 
   <hr>
 
-  <h3>5.6.6 Dalil Ini Mengikat Dua Lapisan Mutlak yang Kita Bina dalam Bab 5</h3>
+  <h3>5.6.6 Al-Anfāl 8:60 Mengikat Seluruh Bab 5</h3>
 
-  <p><strong>Asbab Fitrah dalam ayat:</strong></p>
-  <ul>
-    <li>persiapan,</li>
-    <li>kekuatan,</li>
-    <li>peralatan,</li>
-    <li>kuda (teknologi peperangan waktu itu),</li>
-    <li>logistik.</li>
-  </ul>
-
-  <p><strong>Asbab Mutlak dalam ayat:</strong></p>
-  <ul>
-    <li>niat fi sabilillah,</li>
-    <li>janji Allah menyempurnakan,</li>
-    <li>keadilan Allah terhadap hamba,</li>
-    <li>ilmu ghaib Allah terhadap musuh.</li>
-  </ul>
-
-  <p><strong>Makna Tauhidi:</strong></p>
-  <ul>
-    <li>Asbab Fitrah memberikan usaha,</li>
-    <li>Asbab Mutlak memberikan hasil,</li>
-    <li>Asbab Mutlak Terbitan muncul bila usaha + niat tunduk.</li>
-  </ul>
-
-  <p>Ini metodologi seluruh sirah Rasulullah ﷺ:</p>
-
+  <p>Metodologi seluruh sirah Rasulullah ﷺ:</p>
   <ul>
     <li>Badar → ambil strategi (fitrah), menang kerana malaikat (mutlak).</li>
     <li>Khandaq → gali parit (fitrah), Allah kirim angin (mutlak).</li>
@@ -2045,437 +1198,241 @@
     <li>Tabuk → ambil unta (fitrah), kemenangan tanpa peperangan (mutlak).</li>
   </ul>
 
-  <p>Al-Anfal 8:60 adalah “payung besar” bagi semua peristiwa ini.</p>
+  <p>Al-Anfal 8:60 adalah "payung besar" bagi semua peristiwa ini.</p>
 
   <hr>
 
   <h3>5.6.7 Rumusan Tauhidi Ayat 8:60</h3>
-  <ol>
-    <li>Asbab Fitrah wajib diambil, bukan ditinggalkan.</li>
-    <li>Asbab Fitrah menjadi bernilai hanya apabila diniatkan kerana Allah.</li>
-    <li>Asbab Fitrah tidak menentukan kesan akhir.</li>
-    <li>Allah menentukan hasil berdasarkan ketaatan, bukan kekuatan dunia.</li>
-    <li>Apabila Asbab Fitrah tunduk pada wahyu → ia naik taraf menjadi Asbab Mutlak Terbitan.</li>
-    <li>Ayat ini adalah dalil qat‘i gabungan dua lapisan Asbab Mutlak.</li>
-    <li>Ayat ini menyempurnakan keseluruhan Bab 5 — definisi → teori → transformasi → sirah → Qur’an.</li>
-  </ol>
+  <div class="rumusan">
+    <ol>
+      <li>Asbab Fitrah wajib diambil, bukan ditinggalkan.</li>
+      <li>Asbab Fitrah menjadi bernilai hanya apabila diniatkan kerana Allah.</li>
+      <li>Asbab Fitrah tidak menentukan kesan akhir.</li>
+      <li>Allah menentukan hasil berdasarkan ketaatan, bukan kekuatan dunia.</li>
+      <li>Apabila Asbab Fitrah tunduk pada wahyu → ia naik taraf menjadi Asbab Mutlak Terbitan.</li>
+      <li>Ayat ini menyempurnakan keseluruhan Bab 5.</li>
+    </ol>
+  </div>
 
-  <hr>
+  <div class="footnotes">
+    <h3>Nota Kaki 5.6</h3>
+    <ul>
+      <li>【1】 Al-Qur'an, Surah al-Anfāl 8:60. Rujukan tafsir: al-Tabari, Jāmi' al-Bayān; Ibn Kathir, Tafsīr al-Qur'ān al-'Azīm; al-Qurtubi, al-Jāmi' li Ahkām al-Qur'ān.</li>
+    </ul>
+  </div>
 
-  <h3>NOTA KAKI BAB 5.6</h3>
-  <ul>
-    <li>【1】 Al-Qur’an, Surah al-Anfāl 8:60.<br>
-    Rujukan tafsir: al-Tabari, Jāmi‘ al-Bayān; Ibn Kathir, Tafsīr al-Qur’ān al-‘Azīm; al-Qurtubi, al-Jāmi‘ li Ahkām al-Qur’ān.</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
+  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
 </section>
-<!-- === SECTION 5.6 END === -->
-     <!-- === SECTION 5.7 START === -->
-<section class="section" id="5-7">
-  <h2>5.7 RUMUSAN TAUHIDI</h2>
 
-  <p>Bab 5 membina satu hakikat yang sangat besar dalam Kerangka 3 Asbab:</p>
+<!-- ═══════════════════════════════════════════
+     SECTION 5.7
+════════════════════════════════════════════ -->
+<section class="section" id="5-7">
+  <div class="section-opener">
+    <h2>5.7 Rumusan Tauhidi</h2>
+  </div>
 
   <blockquote>
-    <p>Tidak semua sebab itu sama.<br>
+    Tidak semua sebab itu sama.<br>
     Tidak semua usaha itu bernilai.<br>
-    Tidak semua tindakan itu diterima.</p>
+    Tidak semua tindakan itu diterima.
   </blockquote>
-
-  <p>Sebahagian sebab tetap, sebahagian konsisten, sebahagian gelap,<br>
-  dan hanya sebab tertentu yang diterima Allah sebagai amal.</p>
-
-  <p>Seluruh bab ini menyusun semula dunia sebab (asbab) kepada tiga peringkat:</p>
-  <ul>
-    <li>Asbab Mutlak Asli</li>
-    <li>Asbab Mutlak Terbitan</li>
-    <li>Asbab Fitrah & Zulumat (tanpa transformasi)</li>
-  </ul>
-
-  <p>Dan rumusan Tauhidi tertinggi adalah seperti berikut:</p>
 
   <hr>
 
   <h3>5.7.1 Mutlak Asli = Cahaya Wahyu</h3>
 
-  <p>Asbab Mutlak Asli adalah sebab yang:</p>
-  <ul>
-    <li>datang terus dari wahyu,</li>
-    <li>diamalkan oleh para Nabi & Sahabat,</li>
-    <li>mempunyai janji Allah yang pasti,</li>
-    <li>mengandungi nur (cahaya) yang menghidupkan hati dan mengubah dunia.</li>
-  </ul>
+  <p>Asbab Mutlak Asli adalah sebab yang datang terus dari wahyu, diamalkan para Nabi &amp; Sahabat, mempunyai janji Allah yang pasti, dan mengandungi nur yang menghidupkan hati dan mengubah dunia.</p>
 
-  <p>Contohnya:</p>
-  <ul>
-    <li>dakwah,</li>
-    <li>sabar,</li>
-    <li>mujahadah,</li>
-    <li>doa,</li>
-    <li>solat khusyuk,</li>
-    <li>syura,</li>
-    <li>hijrah,</li>
-    <li>zikir,</li>
-    <li>infak yang ikhlas untuk redha Allah.</li>
-  </ul>
+  <p>Ia dinamakan cahaya kerana ia memberi kesan walau tanpa dunia, menghidupkan hati terlebih dahulu, menjadi pusat kepada semua sistem, dan menerangi semua asbab lain.</p>
 
-  <p>Ia dinamakan cahaya kerana:</p>
-  <ol>
-    <li>Ia memberi kesan walau tanpa dunia.</li>
-    <li>Ia menghidupkan hati terlebih dahulu.</li>
-    <li>Ia menjadi pusat kepada semua sistem.</li>
-    <li>Ia menerangi semua asbab lain.</li>
-  </ol>
-
-  <p>Cahaya Mutlak Asli adalah sumber seluruh tamadun Nabi ﷺ.</p>
-
-  <p>Dalil:</p>
   <div class="arab">﴿ يَهْدِي اللَّهُ لِنُورِهِ مَن يَشَاءُ ﴾</div>
-  <p>“Allah memberi petunjuk kepada cahaya-Nya sesiapa yang Dia kehendaki.”<br>
-  (An-Nūr 24:35)【1】</p>
+  <div class="translation">"Allah memberi petunjuk kepada cahaya-Nya sesiapa yang Dia kehendaki." &nbsp;(An-Nūr 24:35)【1】</div>
 
   <hr>
 
   <h3>5.7.2 Asbab Mutlak Terbitan = Bayangan Cahaya</h3>
 
-  <p>Asbab Mutlak Terbitan ialah:</p>
-
   <blockquote>
-    <p>Asbab dunia (fitrah & zulumat) yang ditundukkan kepada wahyu melalui Nafy, Isbat, Ittiba’, Ikhlas & Syarak.</p>
+    Asbab dunia (fitrah &amp; zulumat) yang ditundukkan kepada wahyu melalui Nafy, Isbat, Ittiba', Ikhlas &amp; Syarak.
   </blockquote>
 
-  <p>Contoh:</p>
-  <ul>
-    <li>Parit Khandaq → strategi (asbab fitrah), tetapi tunduk wahyu.</li>
-    <li>Baju besi Rasulullah ﷺ → teknologi (asbab fitrah), tetapi tunduk tawakkal.</li>
-    <li>Perang Badar → strategi (asbab fitrah), tetapi janji Allah yang menentukan.</li>
-    <li>Tongkat Musa → kayu (asbab fitrah), tetapi perintah Allah membelah laut.</li>
-  </ul>
+  <p>Ia tidak mempunyai cahaya sendiri. Ia hanya bercahaya apabila berada di belakang Mutlak Asli. Ia tidak boleh menjadi pusat. Ia berfungsi hanya apabila hati sudah hidup.</p>
 
-  <p>Ia dinamakan bayangan cahaya kerana:</p>
-  <ol>
-    <li>Ia tidak mempunyai cahaya sendiri.</li>
-    <li>Ia hanya bercahaya apabila berada di belakang Mutlak Asli.</li>
-    <li>Ia tidak boleh menjadi pusat.</li>
-    <li>Ia berfungsi hanya apabila hati sudah hidup.</li>
-  </ol>
-
-  <p>Inilah prinsip besar:</p>
-
-  <blockquote>
-    <p>Asbab Mutlak Asli menerangi dunia.<br>
-    Asbab Mutlak Terbitan memanjangkan cahaya itu ke dalam sistem.</p>
-  </blockquote>
+  <div class="callout">
+    Asbab Mutlak Asli menerangi dunia.<br>
+    Asbab Mutlak Terbitan memanjangkan cahaya itu ke dalam sistem.
+  </div>
 
   <hr>
 
-  <h3>5.7.3 Asbab Fitrah & Zulumat (tanpa transformasi) = Gelap</h3>
+  <h3>5.7.3 Asbab Fitrah &amp; Zulumat (tanpa transformasi) = Gelap</h3>
 
-  <p><strong>Asbab Fitrah:</strong><br>
-  api, air, makanan, kesihatan, teknologi, strategi, logistik, modal.</p>
+  <p>Kedua-duanya neutral dari sudut roh, gelap dari sudut iman, tidak membawa manusia kepada Allah, tidak mempunyai nur, tidak mampu memberi kesan akhir.</p>
 
-  <p><strong>Asbab Zulumat:</strong><br>
-  politik, sistem sosial, wang, media, budaya, undang-undang sekular.</p>
-
-  <p>Kedua-duanya:</p>
-  <ul>
-    <li>neutral dari sudut roh,</li>
-    <li>gelap dari sudut iman,</li>
-    <li>tidak membawa manusia kepada Allah,</li>
-    <li>tidak mempunyai nur,</li>
-    <li>tidak mampu memberi kesan akhir.</li>
-  </ul>
-
-  <p><strong>Gelap bermaksud:</strong></p>
-  <ol>
-    <li>Ia hanya mengubah suasana, bukan hati.</li>
-    <li>Ia melahirkan kebergantungan kepada makhluk.</li>
-    <li>Ia menumbuhkan ego, riak, yakin kepada dunia.</li>
-    <li>Ia tidak diterima Allah sebagai amal.</li>
-    <li>Ia tidak membawa tamadun kepada redha Allah.</li>
-  </ol>
-
-  <p>Dalil:</p>
   <div class="arab">﴿ ظُلُمَاتٌ بَعْضُهَا فَوْقَ بَعْضٍ ﴾</div>
-  <p>“Kegelapan yang bertindih-tindih.”<br>
-  (An-Nūr 24:40)【2】</p>
-
-  <p>Ayat ini merujuk kepada sebab-sebab dunia tanpa iman.</p>
+  <div class="translation">"Kegelapan yang bertindih-tindih." &nbsp;(An-Nūr 24:40)【2】</div>
 
   <hr>
 
   <h3>5.7.4 Rumusan Besar Bab 5</h3>
 
-  <ol>
-    <li>
-      <p><strong>Mutlak Asli = Cahaya</strong></p>
-      <ul>
-        <li>memberi kesan tanpa dunia</li>
-        <li>meniupkan iman</li>
-        <li>asas perubahan umat</li>
-        <li>punca tamadun Nabi ﷺ</li>
-        <li>terus dari wahyu</li>
-        <li>pusat seluruh amal</li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Asbab Mutlak Terbitan = Bayangan Cahaya</strong></p>
-      <ul>
-        <li>asbab dunia yang ditundukkan</li>
-        <li>berfungsi hanya apabila cahaya Asli menerangi</li>
-        <li>membina sistem setelah hati dibina</li>
-        <li>digunakan oleh Nabi & Sahabat setelah iman tegak</li>
-      </ul>
-    </li>
-    <li>
-      <p><strong>Fitrah/Zulumat = Gelap</strong></p>
-      <ul>
-        <li>konsisten tetapi tidak suci</li>
-        <li>berguna untuk dunia tetapi tidak kepada Allah</li>
-        <li>tidak menentukan kesan akhir</li>
-        <li>menjadi berhala jika menjadi pusat</li>
-        <li>hanya jadi alat bila ditransformasi</li>
-      </ul>
-    </li>
-  </ol>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Jenis Asbab</th><th>Sifat</th><th>Fungsi</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Mutlak Asli</strong></td><td>Cahaya wahyu</td><td>Menghidupkan iman, mengubah tamadun, pusat seluruh amal</td></tr>
+        <tr><td><strong>Mutlak Terbitan</strong></td><td>Bayangan cahaya</td><td>Membina sistem setelah hati dibina, berfungsi bila cahaya Asli menerangi</td></tr>
+        <tr><td><strong>Fitrah/Zulumat</strong></td><td>Gelap</td><td>Konsisten tetapi tidak suci; menjadi berhala jika menjadi pusat</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <hr>
 
   <h3>5.7.5 Penutup: Rumusan Tauhidi Paling Tinggi</h3>
 
-  <blockquote>
+  <div class="callout" style="text-align:center;">
     <p>Cahaya (Mutlak Asli) menerangi manusia.<br>
     Bayangan cahaya (Mutlak Terbitan) membentuk dunia.<br>
-    Gelap (Fitrah & Zulumat) tidak memberi nilai akhirat.</p>
-  </blockquote>
+    Gelap (Fitrah &amp; Zulumat) tidak memberi nilai akhirat.</p>
+    <hr style="margin:0.8rem 0; border-color: #a7f3d0;">
+    <p><strong>Apabila Iman menjadi pusat → sebab tunduk.<br>
+    Apabila sebab menjadi pusat → iman tenggelam.</strong></p>
+  </div>
 
-  <p>Dan rumusan paling tajam:</p>
+  <div class="footnotes">
+    <h3>Nota Kaki 5.7</h3>
+    <ul>
+      <li>【1】 An-Nūr 24:35 &nbsp;【2】 An-Nūr 24:40</li>
+    </ul>
+  </div>
 
-  <blockquote>
-    <p>Apabila Iman menjadi pusat → sebab tunduk.<br>
-    Apabila sebab menjadi pusat → iman tenggelam.</p>
-  </blockquote>
-
-  <p>Inilah Batu Asas Seluruh Kerangka 3 Asbab.</p>
-
-  <hr>
-
-  <h3>NOTA KAKI BAB 5.7</h3>
-  <ul>
-    <li>【1】 An-Nūr 24:35 – Allah memberi petunjuk kepada cahaya-Nya.</li>
-    <li>【2】 An-Nūr 24:40 – Kegelapan bertindih-tindih (asbab fitrah & zulumat tanpa iman).</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
+  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
 </section>
-<!-- === SECTION 5.7 END === -->
-     <!-- === SECTION 5.8 START === -->
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5.8
+════════════════════════════════════════════ -->
 <section class="section" id="5-8">
-  <h2>5.8 KESIMPULAN BAB 5</h2>
-
-  <p>Bab 5 membina satu kaedah agung dalam Kerangka 3 Asbab:</p>
+  <div class="section-opener">
+    <h2>5.8 Kesimpulan Bab 5</h2>
+  </div>
 
   <blockquote>
-    <p>Tidak semua sebab adalah sama.<br>
+    Tidak semua sebab adalah sama.<br>
     Tidak semua sebab bernilai.<br>
-    Tidak semua sebab diterima Allah.</p>
+    Tidak semua sebab diterima Allah.
   </blockquote>
 
-  <p>Dalam bahasa Tauhidi:</p>
-  <ul>
-    <li><strong>Asbab Mutlak Asli</strong> → wahyu, janji Allah, sunnah Nabi ﷺ</li>
-    <li><strong>Asbab Mutlak Terbitan</strong> → dunia yang tunduk kepada wahyu</li>
-    <li><strong>Asbab Fitrah & Zulumat</strong> → dunia yang belum tunduk</li>
-  </ul>
-
-  <p>Namun intipati bab ini bukan sekadar pembahagian teknikal.</p>
-
-  <p><strong>Intipati bab ini adalah:</strong></p>
-
-  <blockquote>
-    <p>Untuk mengubah dunia, Allah tidak memerlukan dunia.<br>
+  <div class="callout">
+    <strong>Intipati bab ini:</strong><br>
+    Untuk mengubah dunia, Allah tidak memerlukan dunia.<br>
     Untuk mengubah hati, manusia mesti kembali kepada Mutlak Asli.<br>
-    Untuk membina sistem, dunia mesti tunduk kepada Mutlak Asli.</p>
-  </blockquote>
-
-  <p>Ini lahir daripada tiga hakikat besar:</p>
+    Untuk membina sistem, dunia mesti tunduk kepada Mutlak Asli.
+  </div>
 
   <hr>
 
-  <h3>5.8.1 Hakikat Pertama</h3>
+  <h3>5.8.1 Hakikat Pertama: Mutlak Asli Adalah Pusat Seluruh Tamadun</h3>
 
-  <p><strong>Mutlak Asli adalah pusat seluruh tamadun</strong></p>
+  <p>Dakwah, sabar, doa, mujahadah, solat khusyuk, syura, hijrah — semua ini adalah "jantung" tamadun Islam. Ia membina manusia sebelum membina dunia.</p>
 
-  <p>Dakwah, sabar, doa, mujahadah, solat khusyuk, syura, hijrah —<br>
-  semua ini adalah “jantung” tamadun Islam.</p>
-
-  <p>Ia membina manusia sebelum membina dunia.</p>
-
-  <p>Dalil:</p>
   <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</div>
-  <p>“Allah tidak mengubah sesuatu kaum sehingga mereka mengubah apa yang dalam diri mereka.”<br>
-  (Ar-Ra‘d 13:11)【1】</p>
-
-  <p>Perubahan TAMADUN bermula dalam HATI.</p>
+  <div class="translation">"Allah tidak mengubah sesuatu kaum sehingga mereka mengubah apa yang dalam diri mereka." &nbsp;(Ar-Ra'd 13:11)【1】</div>
 
   <hr>
 
-  <h3>5.8.2 Hakikat Kedua</h3>
+  <h3>5.8.2 Hakikat Kedua: Asbab Mutlak Terbitan Hanya Berfungsi Bila Ditundukkan</h3>
 
-  <p><strong>Asbab Mutlak Terbitan hanya berfungsi apabila ditundukkan</strong></p>
+  <p>Tongkat Musa tidak berkuasa. Parit Khandaq tidak berkuasa. Baju besi tidak berkuasa. Strategi Badar tidak berkuasa. Semua itu gelap sehingga ia ditundukkan kepada wahyu, disucikan dari syirik asbab, ditetapkan kepada kuasa Allah, diniatkan untuk redha Allah, dan dipastikan halal.</p>
 
-  <p>Tongkat Musa tidak berkuasa.<br>
-  Parit Khandaq tidak berkuasa.<br>
-  Baju besi tidak berkuasa.<br>
-  Strategi perang Badar tidak berkuasa.</p>
-
-  <p>Semua itu gelap sehingga ia:</p>
-  <ul>
-    <li>ditundukkan kepada wahyu (Ittiba’)</li>
-    <li>disucikan dari syirik asbab (Nafy)</li>
-    <li>ditetapkan kepada kuasa Allah (Isbat)</li>
-    <li>diniatkan untuk redha Allah (Ikhlas)</li>
-    <li>dipastikan halal (Syarak)</li>
-  </ul>
-
-  <p>Apabila proses ini berlaku:</p>
-
-  <blockquote>
-    <p>Asbab fitrah → Asbab Mutlak Terbitan<br>
-    dan<br>
-    asbab dunia menjadi hamba iman.</p>
-  </blockquote>
+  <div class="callout">
+    Asbab fitrah → Asbab Mutlak Terbitan.<br>
+    Asbab dunia menjadi hamba iman.
+  </div>
 
   <hr>
 
-  <h3>5.8.3 Hakikat Ketiga</h3>
+  <h3>5.8.3 Hakikat Ketiga: Asbab Fitrah &amp; Zulumat Tidak Pernah Memberi Kesan Akhir</h3>
 
-  <p><strong>Asbab Fitrah & Zulumat tidak pernah memberi kesan akhir</strong></p>
+  <p>Dunia boleh mencipta suasana — kenyang, lapar, sihat, sakit, kuat, lemah. Tetapi dunia tidak boleh memberi kesan akhir (hasil yang Allah nilai).</p>
 
-  <p>Dunia boleh mencipta suasana:</p>
-  <ul>
-    <li>kenyang, lapar</li>
-    <li>sihat, sakit</li>
-    <li>kuat, lemah</li>
-    <li>naik, turun</li>
-    <li>menang di mata manusia, kalah di mata Allah</li>
-  </ul>
-
-  <p>Tetapi dunia tidak boleh memberi kesan akhir (hasil yang Allah nilai).</p>
-
-  <p>Dalil:</p>
   <div class="arab">﴿ قُلْ كُلٌّ مِّنْ عِندِ ٱللَّهِ ﴾</div>
-  <p>“Katakanlah: semuanya dari sisi Allah.”<br>
-  (An-Nisā’ 4:78)【2】</p>
-
-  <p>Kesan AKHIR hanya datang dari Asbab Mutlak Asli.</p>
+  <div class="translation">"Katakanlah: semuanya dari sisi Allah." &nbsp;(An-Nisā' 4:78)【2】</div>
 
   <hr>
 
-  <h3>5.8.4 Intipati Tertinggi Bab 5</h3>
+  <h3>5.8.4 Intipati Tertinggi: Cahaya, Bayangan, dan Gelap</h3>
 
-  <p><strong>Perbezaan antara cahaya, bayangan, dan gelap</strong></p>
-  <ul>
-    <li>Mutlak Asli = Cahaya</li>
-    <li>Mutlak Terbitan = Bayangan cahaya</li>
-    <li>Fitrah/Zulumat = Gelap</li>
-  </ul>
-
-  <p>Dengan cahaya → kita mengenal jalan.<br>
-  Dengan bayangan → kita menggerakkan dunia.<br>
-  Dalam gelap → manusia sesat walaupun memegang teknologi.</p>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><td><strong>Dengan cahaya</strong></td><td>kita mengenal jalan</td></tr>
+        <tr><td><strong>Dengan bayangan</strong></td><td>kita menggerakkan dunia</td></tr>
+        <tr><td><strong>Dalam gelap</strong></td><td>manusia sesat walaupun memegang teknologi</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <hr>
 
   <h3>5.8.5 Penutup: Rantaian Perubahan Tauhidi</h3>
 
-  <p>Bab 5 mengajar kita bahawa:</p>
-
-  <blockquote>
-    <p>Hati dahulu → dunia selepas itu.<br>
+  <div class="callout">
+    Hati dahulu → dunia selepas itu.<br>
     Iman dahulu → strategi selepas itu.<br>
-    Sunnah dahulu → teknologi selepas itu.</p>
-  </blockquote>
+    Sunnah dahulu → teknologi selepas itu.
+  </div>
 
-  <p>Inilah rantaian yang diperintah Allah:</p>
+  <div class="rumusan" style="margin-top:1.5rem;">
+    <p><strong>Rantaian Mutlak Asli:</strong></p>
+    <p style="color:var(--emerald); font-style:italic;">Dakwah → Mujahadah → Sabar → Solat Khusyuk → Redha Allah</p>
+    <br>
+    <p><strong>Rantaian Mutlak Terbitan:</strong></p>
+    <p style="color:var(--emerald); font-style:italic;">Strategi → Sistem → Struktur → Tamadun</p>
+    <br>
+    <p>Jika tertib ini disusun semula, tamadun runtuh seperti berlaku hari ini.</p>
+  </div>
 
-  <p><strong>Dakwah → Mujahadah → Sabar → Solat Khusyuk → Redha Allah</strong></p>
-  <p><em>(Rantaian Mutlak Asli)</em></p>
+  <div class="callout" style="margin-top:1.5rem; text-align:center;">
+    <p>Asbab Mutlak Asli membentuk manusia.<br>
+    Asbab Mutlak Terbitan membentuk dunia.<br>
+    Asbab Fitrah &amp; Zulumat tidak membentuk apa-apa tanpa iman.</p>
+    <hr style="margin:0.8rem 0; border-color: #a7f3d0;">
+    <p><strong>Apabila iman menjadi pusat — sebab tunduk.<br>
+    Apabila sebab menjadi pusat — iman tenggelam.</strong></p>
+  </div>
 
-  <p>dan barulah selepas itu:</p>
+  <div class="footnotes">
+    <h3>Nota Kaki 5.8</h3>
+    <ul>
+      <li>【1】 Ar-Ra'd 13:11 &nbsp;【2】 An-Nisā' 4:78</li>
+    </ul>
+  </div>
 
-  <p><strong>Strategi → Sistem → Struktur → Tamadun</strong></p>
-  <p><em>(Rantaian Mutlak Terbitan)</em></p>
-
-  <p>Jika tertib ini disusun semula, tamadun runtuh seperti berlaku hari ini.</p>
-
-  <hr>
-
-  <h3>Kesimpulan Besar</h3>
-
-  <ul>
-    <li>Asbab Mutlak Asli membentuk manusia.</li>
-    <li>Asbab Mutlak Terbitan membentuk dunia.</li>
-    <li>Asbab Fitrah & Zulumat tidak membentuk apa-apa tanpa iman.</li>
-  </ul>
-
-  <p>Dan rumusan tertinggi:</p>
-
-  <blockquote>
-    <p>Apabila iman menjadi pusat — sebab tunduk.<br>
-    Apabila sebab menjadi pusat — iman tenggelam.</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>NOTA KAKI BAB 5.8</h3>
-  <ul>
-    <li>【1】 Ar-Ra‘d 13:11 – Perubahan bermula dalam hati.</li>
-    <li>【2】 An-Nisā’ 4:78 – Semua kesan akhir hanya dari Allah.</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Atas</a>
+  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
 </section>
-<!-- === SECTION 5.8 END === -->
 
     </article>
   </main>
 
-
-    <footer>
-      <div class="wrap">
-        <p>© 3asbab.org — Arkib bacaan sahaja. Dua Lapisan Asbab Mutlak: Asli dan Terbitan.</p>
-      </div>
-    </footer>
-
-  </div>
+  <footer>
+    <p>© 3asbab.org — Arkib bacaan sahaja. Dua Lapisan Asbab Mutlak: Asli dan Terbitan.</p>
+  </footer>
 
   <script>
     function downloadPDF() {
       const btn = document.querySelector('.btn-pdf');
-      const originalText = btn.innerHTML;
+      const orig = btn.innerHTML;
       btn.innerHTML = '⏳ Menyediakan PDF...';
       btn.disabled = true;
-
-      const coverTitle = document.getElementById('pdf-cover-title');
-      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
-      const metaTitle = document.getElementById('pdf-meta-title');
-
-      if (coverTitle) coverTitle.innerHTML = 'Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN';
-      if (coverSubtitle) coverSubtitle.textContent = 'Memahami perbezaan Asbab Mutlak Asli dan Asbab Mutlak Terbitan';
-      if (metaTitle) metaTitle.textContent = 'Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN';
-
       setTimeout(() => {
         window.print();
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-          btn.disabled = false;
-        }, 500);
+        setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 500);
       }, 100);
     }
   </script>
 
 </body>
 </html>
-
