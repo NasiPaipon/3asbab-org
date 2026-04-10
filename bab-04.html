@@ -2,447 +2,450 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Bab 4 — TRANSFORMASI ASBAB | 3asbab.org</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --max-width: 920px;
-      --border-light: #e2e8f0;
-      --bg-soft: #fafcff;
-      --muted: #4a5568;
-      --accent: #0f7b4a;
-      --accent-light: #e6f4ed;
-      --text-dark: #1a202c;
-      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
-      --pdf-accent: #0f7b4a;
-      --pdf-accent-soft: #e6f4ed;
-      --pdf-border: #d9e2ec;
-      --pdf-text: #1f2937;
-      --pdf-muted: #5b6573;
-      --pdf-paper: #fffefb;
-    }
-    body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
-      background: white;
-      color: var(--text-dark);
-      line-height: 1.7;
-      scroll-behavior: smooth;
-    }
-    .wrap {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 clamp(1.2rem, 4vw, 1.8rem);
-    }
-    .topbar {
-      border-bottom: 1px solid var(--border-light);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(6px);
-    }
-    .topbar nav {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-      padding: 0.75rem 0;
-    }
-    .topbar a {
-      text-decoration: none;
-      font-size: 0.9rem;
-      color: var(--text-dark);
-    }
-    .brand { font-weight: 700; margin-right: 0.5rem; }
-
-    header { padding: 1.5rem 0 0.5rem 0; }
-    h1 {
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      line-height: 1.25;
-      margin: 0.25rem 0 0.5rem;
-    }
-    .meta {
-      color: var(--muted);
-      font-size: 0.85rem;
-      border-left: 3px solid var(--accent);
-      padding-left: 0.75rem;
-    }
-
-    .jump {
-      border-bottom: 1px solid var(--border-light);
-      position: sticky;
-      top: 48px;
-      z-index: 15;
-      background: rgba(255,255,255,0.98);
-    }
-    .jump-inner {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      padding: 0.7rem 0;
-      align-items: center;
-      font-size: 0.8rem;
-    }
-    .jump a {
-      padding: 0.2rem 0.7rem;
-      border-radius: 40px;
-      background: var(--bg-soft);
-      border: 1px solid var(--border-light);
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.1s ease;
-      color: var(--text-dark);
-    }
-    .jump a:hover {
-      border-color: var(--accent);
-      background: var(--accent-light);
-    }
-
-    main { padding: 1.2rem 0 3rem; }
-    .badge-chapter {
-      display: inline-block;
-      font-weight: 700;
-      font-size: 0.8rem;
-      background: #fef3c7;
-      color: #b45309;
-      padding: 0.2rem 0.8rem;
-      border-radius: 30px;
-      margin-bottom: 0.8rem;
-    }
-    h2 {
-      font-size: 1.6rem;
-      margin: 1.8rem 0 0.75rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 0.9rem;
-      font-weight: 600;
-    }
-    h3 {
-      font-size: 1.25rem;
-      margin: 1.2rem 0 0.5rem;
-      font-weight: 600;
-      color: #0b3b2a;
-    }
-    p { margin: 0.6rem 0; }
-    ul, ol { margin: 0.5rem 0 0.8rem 1.4rem; }
-    li { margin: 0.3rem 0; }
-
-    .section-card {
-      background: var(--bg-soft);
-      border-radius: 1.2rem;
-      padding: 1.2rem 1.4rem;
-      margin: 1.2rem 0;
-      border: 1px solid var(--border-light);
-      box-shadow: var(--shadow-sm);
-    }
-    .arabic {
-      font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
-      font-size: 1.6rem;
-      line-height: 1.8;
-      direction: rtl;
-      text-align: right;
-      margin: 0.8rem 0;
-      color: #1e293b;
-    }
-    .translation {
-      background: #f8fafc;
-      padding: 0.6rem 1rem;
-      border-radius: 0.8rem;
-      margin: 0.5rem 0 1rem;
-      border-left: 3px solid var(--accent);
-      font-size: 0.95rem;
-    }
-    blockquote {
-      background: var(--accent-light);
-      border-radius: 0.8rem;
-      padding: 0.8rem 1.2rem;
-      margin: 1rem 0;
-      font-style: normal;
-    }
-    .insight-box {
-      background: #f1f5f9;
-      padding: 0.8rem 1.2rem;
-      border-radius: 1rem;
-      margin: 1rem 0;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-      font-size: 0.9rem;
-    }
-    th, td {
-      border: 1px solid var(--border-light);
-      padding: 0.6rem;
-      text-align: left;
-      vertical-align: top;
-    }
-    th {
-      background: #f1f5f9;
-      font-weight: 600;
-    }
-    hr {
-      margin: 1.5rem 0;
-      border: 0;
-      height: 1px;
-      background: var(--border-light);
-    }
-    .footnote {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 1.5rem;
-      border-top: 1px dashed var(--border-light);
-      padding-top: 1rem;
-    }
-    .toplink {
-      font-size: 0.75rem;
-      margin-top: 0.8rem;
-      display: inline-block;
-    }
-    footer {
-      border-top: 1px solid var(--border-light);
-      padding: 1.5rem 0;
-      color: var(--muted);
-      font-size: 0.8rem;
-      margin-top: 1rem;
-    }
-
-    .pdf-toolbar {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      margin: 14px 0 8px;
-    }
-    .btn-pdf {
-      appearance: none;
-      border: 1px solid var(--pdf-border);
-      background: #fff;
-      color: var(--pdf-text);
-      padding: 10px 14px;
-      border-radius: 999px;
-      cursor: pointer;
-      font: inherit;
-      font-size: 0.95rem;
-      font-weight: 600;
-      transition: 0.15s ease;
-      box-shadow: 0 1px 2px rgba(0,0,0,.04);
-    }
-    .btn-pdf:hover {
-      border-color: var(--pdf-accent);
-      background: var(--pdf-accent-soft);
-    }
-    .btn-pdf:active { transform: translateY(1px); }
-
-    .no-print { display: block; }
-    .pdf-only { display: none; }
-    .pdf-exporting .pdf-only { display: block !important; }
-    .pdf-exporting .no-print,
-    .pdf-exporting .pdf-toolbar,
-    .pdf-exporting .topbar,
-    .pdf-exporting .jump,
-    .pdf-exporting .toplink {
-      display: none !important;
-    }
-    .pdf-shell { background: #fff; }
-    .pdf-cover { display: none; }
-    .pdf-cover-inner {
-      min-height: 260mm;
-      padding: 28mm 18mm 24mm;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: var(--pdf-paper);
-      color: var(--pdf-text);
-    }
-    .pdf-cover-top {
-      border-top: 4px solid var(--pdf-accent);
-      padding-top: 12mm;
-    }
-    .pdf-cover-brand {
-      font-size: 0.95rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--pdf-muted);
-      margin-bottom: 10mm;
-    }
-    .pdf-cover-series {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin: 0 0 6mm;
-    }
-    .pdf-cover-title {
-      font-size: 2rem;
-      line-height: 1.2;
-      margin: 0 0 5mm;
-      font-weight: 800;
-    }
-    .pdf-cover-subtitle {
-      font-size: 1rem;
-      color: var(--pdf-muted);
-      margin: 0;
-    }
-    .pdf-cover-bottom {
-      border-top: 1px solid var(--pdf-border);
-      padding-top: 8mm;
-      font-size: 0.95rem;
-      color: var(--pdf-muted);
-    }
-    .pdf-meta-page { display: none; }
-    .pdf-meta-inner {
-      min-height: 240mm;
-      padding: 20mm 16mm;
-      background: #fff;
-      color: var(--pdf-text);
-    }
-    .pdf-meta-inner h2 {
-      border: 0;
-      padding: 0;
-      margin: 0 0 10mm;
-      font-size: 1.4rem;
-    }
-    .pdf-meta-list p { margin: 0 0 6mm; }
-    .pdf-break {
-      break-before: page;
-      page-break-before: always;
-    }
-    .pdf-avoid-break {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-
-    @media print {
-      body { margin: 0; padding: 0; }
-      .no-print, .pdf-toolbar, .topbar, .jump, .toplink {
-        display: none !important;
-      }
-      .pdf-only, .pdf-cover, .pdf-meta-page {
-        display: block !important;
-      }
-      .section-card, blockquote, .insight-box {
-        break-inside: avoid;
-        page-break-inside: avoid;
-      }
-      h2, h3 {
-        break-after: avoid;
-        page-break-after: avoid;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .section-card { padding: 1rem; }
-      .arabic { font-size: 1.3rem; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bab 4 — TRANSFORMASI ASBAB | 3asbab.org</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --max-width: 920px;
+      --border-light: #e2e8f0;
+      --bg-soft: #fafcff;
+      --muted: #4a5568;
+      --accent: #0f7b4a;
+      --accent-light: #e6f4ed;
+      --text-dark: #1a202c;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+      background: white;
+      color: var(--text-dark);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 clamp(1.2rem, 4vw, 1.8rem);
+    }
+    .topbar {
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(6px);
+    }
+    .topbar nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.75rem 0;
+    }
+    .topbar a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+    .brand { font-weight: 700; margin-right: 0.5rem; }
+ 
+    header { padding: 1.5rem 0 0.5rem 0; }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      line-height: 1.25;
+      margin: 0.25rem 0 0.5rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+ 
+    .jump {
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 48px;
+      z-index: 15;
+      background: rgba(255,255,255,0.98);
+    }
+    .jump-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.7rem 0;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+    .jump a {
+      padding: 0.2rem 0.7rem;
+      border-radius: 40px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.1s ease;
+      color: var(--text-dark);
+    }
+    .jump a:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+ 
+    main { padding: 1.2rem 0 3rem; }
+    .badge-chapter {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      background: #fef3c7;
+      color: #b45309;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      margin-bottom: 0.8rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin: 1.8rem 0 0.75rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.9rem;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin: 1.2rem 0 0.5rem;
+      font-weight: 600;
+      color: #0b3b2a;
+    }
+    p { margin: 0.6rem 0; }
+    ul, ol { margin: 0.5rem 0 0.8rem 1.4rem; }
+    li { margin: 0.3rem 0; }
+ 
+    .section-card {
+      background: var(--bg-soft);
+      border-radius: 1.2rem;
+      padding: 1.2rem 1.4rem;
+      margin: 1.2rem 0;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+    .arabic {
+      font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
+      font-size: 1.6rem;
+      line-height: 1.8;
+      direction: rtl;
+      text-align: right;
+      margin: 0.8rem 0;
+      color: #1e293b;
+    }
+    .translation {
+      background: #f8fafc;
+      padding: 0.6rem 1rem;
+      border-radius: 0.8rem;
+      margin: 0.5rem 0 1rem;
+      border-left: 3px solid var(--accent);
+      font-size: 0.95rem;
+    }
+    blockquote {
+      background: var(--accent-light);
+      border-radius: 0.8rem;
+      padding: 0.8rem 1.2rem;
+      margin: 1rem 0;
+      font-style: normal;
+    }
+    .insight-box {
+      background: #f1f5f9;
+      padding: 0.8rem 1.2rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid var(--border-light);
+      padding: 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+    hr {
+      margin: 1.5rem 0;
+      border: 0;
+      height: 1px;
+      background: var(--border-light);
+    }
+    .footnote {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
+    }
+    .toplink {
+      font-size: 0.75rem;
+      margin-top: 0.8rem;
+      display: inline-block;
+    }
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+ 
+    .pdf-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0 8px;
+    }
+    .btn-pdf {
+      appearance: none;
+      border: 1px solid var(--pdf-border);
+      background: #fff;
+      color: var(--pdf-text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
+    .btn-pdf:hover {
+      border-color: var(--pdf-accent);
+      background: var(--pdf-accent-soft);
+    }
+    .btn-pdf:active { transform: translateY(1px); }
+ 
+    .no-print { display: block; }
+    .pdf-only { display: none; }
+    .pdf-exporting .pdf-only { display: block !important; }
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink {
+      display: none !important;
+    }
+    .pdf-shell { background: #fff; }
+    .pdf-cover { display: none; }
+    .pdf-cover-inner {
+      min-height: 260mm;
+      padding: 28mm 18mm 24mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--pdf-paper);
+      color: var(--pdf-text);
+    }
+    .pdf-cover-top {
+      border-top: 4px solid var(--pdf-accent);
+      padding-top: 12mm;
+    }
+    .pdf-cover-brand {
+      font-size: 0.95rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--pdf-muted);
+      margin-bottom: 10mm;
+    }
+    .pdf-cover-series {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 6mm;
+    }
+    .pdf-cover-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 5mm;
+      font-weight: 800;
+    }
+    .pdf-cover-subtitle {
+      font-size: 1rem;
+      color: var(--pdf-muted);
+      margin: 0;
+    }
+    .pdf-cover-bottom {
+      border-top: 1px solid var(--pdf-border);
+      padding-top: 8mm;
+      font-size: 0.95rem;
+      color: var(--pdf-muted);
+    }
+    .pdf-meta-page { display: none; }
+    .pdf-meta-inner {
+      min-height: 240mm;
+      padding: 20mm 16mm;
+      background: #fff;
+      color: var(--pdf-text);
+    }
+    .pdf-meta-inner h2 {
+      border: 0;
+      padding: 0;
+      margin: 0 0 10mm;
+      font-size: 1.4rem;
+    }
+    .pdf-meta-list p { margin: 0 0 6mm; }
+    .pdf-break {
+      break-before: page;
+      page-break-before: always;
+    }
+    .pdf-avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+ 
+    @media print {
+      body { margin: 0; padding: 0; }
+      .no-print, .pdf-toolbar, .topbar, .jump, .toplink {
+        display: none !important;
+      }
+      .pdf-only, .pdf-cover, .pdf-meta-page {
+        display: block !important;
+      }
+      .section-card, blockquote, .insight-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      h2, h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+ 
+    @media (max-width: 640px) {
+      .section-card { padding: 1rem; }
+      .arabic { font-size: 1.3rem; }
+    }
+  </style>
 </head>
 <body>
-
-  <div class="topbar no-print">
-    <div class="wrap">
-      <nav>
-        <span class="brand">3asbab.org</span>
-        <a href="index.html">🏠 Home</a>
-        <a href="bab-3.html">← Prev</a>
-        <a href="bab-4.html" style="font-weight:600;">Bab 4</a>
-        <a href="bab-5.html">Next →</a>
-      </nav>
-    </div>
-  </div>
-
-  <div class="wrap no-print">
-    <div class="pdf-toolbar">
-      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
-    </div>
-  </div>
-
-  <div id="pdf-shell" class="pdf-shell">
-
-    <div class="pdf-cover pdf-only">
-      <div class="pdf-cover-inner">
-        <div class="pdf-cover-top">
-          <div class="pdf-cover-brand">3asbab.org</div>
-          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
-          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 4 — TRANSFORMASI ASBAB</h1>
-          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Memahami proses menukar asbab kepada tertib Tauhidi</p>
-        </div>
-        <div class="pdf-cover-bottom">
-          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
-          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pdf-meta-page pdf-only pdf-break">
-      <div class="pdf-meta-inner">
-        <h2>Maklumat Dokumen</h2>
-        <div class="pdf-meta-list">
-          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 4 — TRANSFORMASI ASBAB</span></p>
-          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
-          <p><strong>Laman:</strong> 3asbab.org</p>
-          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
-          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
-        </div>
-      </div>
-    </div>
-
-    <header class="wrap" id="top">
-      <div class="meta">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
-      <h1>Bab 4 — TRANSFORMASI ASBAB</h1>
-      <div class="meta">Memahami proses transformasi Asbab | Tauhidi &amp; Pembinaan Iman</div>
-    </header>
-
-    <div class="jump no-print">
-      <div class="wrap">
-        <div class="jump-inner">
-          <strong>🧭 Lompat ke:</strong>
-          <a href="#4-1">4.1</a>
-          <a href="#4-2">4.2</a>
-          <a href="#4-3">4.3</a>
-          <a href="#4-4">4.4</a>
-          <a href="#4-5">4.5</a>
-          <a href="#4-6">4.6</a>
-          <a href="#4-7">4.7</a>
-        </div>
-      </div>
-    </div>
-
-    <main class="wrap">
+ 
+  <div class="topbar no-print">
+    <div class="wrap">
+      <nav>
+        <span class="brand">3asbab.org</span>
+        <a href="index.html">🏠 Home</a>
+        <a href="bab-3.html">← Prev</a>
+        <a href="bab-4.html" style="font-weight:600;">Bab 4</a>
+        <a href="bab-5.html">Next →</a>
+      </nav>
+    </div>
+  </div>
+ 
+  <div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
+    </div>
+  </div>
+ 
+  <div id="pdf-shell" class="pdf-shell">
+ 
+    <div class="pdf-cover pdf-only">
+      <div class="pdf-cover-inner">
+        <div class="pdf-cover-top">
+          <div class="pdf-cover-brand">3asbab.org</div>
+          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 4 — TRANSFORMASI ASBAB</h1>
+          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Memahami proses menukar asbab kepada tertib Tauhidi</p>
+        </div>
+        <div class="pdf-cover-bottom">
+          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="pdf-meta-page pdf-only pdf-break">
+      <div class="pdf-meta-inner">
+        <h2>Maklumat Dokumen</h2>
+        <div class="pdf-meta-list">
+          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 4 — TRANSFORMASI ASBAB</span></p>
+          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+          <p><strong>Laman:</strong> 3asbab.org</p>
+          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+        </div>
+      </div>
+    </div>
+ 
+    <header class="wrap" id="top">
+      <div class="meta">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+      <h1>Bab 4 — TRANSFORMASI ASBAB</h1>
+      <div class="meta">Memahami proses transformasi Asbab | Tauhidi &amp; Pembinaan Iman</div>
+    </header>
+ 
+    <div class="jump no-print">
+      <div class="wrap">
+        <div class="jump-inner">
+          <strong>🧭 Lompat ke:</strong>
+          <a href="#4-1">4.1</a>
+          <a href="#4-2">4.2</a>
+          <a href="#4-3">4.3</a>
+          <a href="#4-4">4.4</a>
+          <a href="#4-5">4.5</a>
+          <a href="#4-6">4.6</a>
+          <a href="#4-7">4.7</a>
+        </div>
+      </div>
+    </div>
+ 
+    <main class="wrap">
+ 
 
 <!-- ============================== BAB 4.0 ============================== -->
 <section class="section-card" id="4-0">
   <div class="badge-chapter">🟥 BAB 4.0</div>
   <h2>4.0 — MUKADIMAH BAB</h2>
   <p><em>Fungsi Bab 4 dalam Kerangka 3 Asbab</em></p>
-
+  
   <h3>4.0.1 Fungsi Bab 4</h3>
   <p>Bab ini menjelaskan bagaimana <strong>Asbab-Asbab Fitrah</strong> dan <strong>Asbab-Asbab Zulumat</strong> tidak ditolak secara mutlak, tetapi ditentukan statusnya melalui hubungan dengan Allah, iman, amal soleh, dan ittiba’ Rasulullah ﷺ.</p>
-
+  
   <p>Bab ini sangat penting kerana ramai manusia jatuh ke dalam dua kesilapan besar:</p>
   <ol>
     <li>Mengagungkan sebab sehingga menyangka sebab memberi kesan.</li>
     <li>Menolak sebab secara salah sehingga menyangka mengambil sebab bercanggah dengan tauhid.</li>
   </ol>
-
-  <p>Kerangka 3 Asbab datang untuk membetulkan kedua-dua kesilapan ini.</p>
-
+  
+  <p>Kerangka 3 Asbab datang untuk membetulkan kedua-dua kesilapan ini. Allah sendiri menafikan kuasa zahir sebab apabila Dia berfirman: <span class="arab">﴿ فَلَمْ تَقْتُلُوهُمْ وَلَٰكِنَّ اللَّهَ قَتَلَهُمْ ﴾</span><sup><a href="#fn-4-0-1">[1]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.0.2 Titik Utama Bab 4</h3>
   <p>Hakikat sesuatu <strong>bukan ditentukan oleh hasil zahirnya</strong>, tetapi oleh <strong>proses tauhidi</strong> yang menghubungkannya kepada Allah.</p>
-
+  
   <p>Dalam erti kata lain:</p>
   <ul>
     <li>benda yang sama boleh menjadi khidmat kepada ketaatan,</li>
     <li>dan benda yang sama juga boleh menjadi hijab daripada Allah,</li>
     <li>bergantung kepada hubungan hati, niat, tertib amal, dan batas syarak.</li>
   </ul>
-
+  
   <blockquote>
     Yang menentukan nilai hakiki bukan semata-mata bentuk zahir sesuatu, tetapi hubungan proses itu dengan Allah dan ketaatan kepada Rasulullah ﷺ.
   </blockquote>
-
+  
+  <p>Sebab itu Islam tidak mengajar manusia memandang kepada bentuk luar semata-mata, tetapi kembali kepada Allah dengan Asbab Mutlak yang Dia sendiri tunjukkan: <span class="arab">﴿ وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ ﴾</span><sup><a href="#fn-4-0-2">[2]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.0.3 Mengapa Bab Ini Datang Selepas Bab Pengenalan Asbab</h3>
   <p>Selepas memahami bahawa seluruh realiti bergerak dalam tiga wilayah besar:</p>
   <ol>
@@ -450,30 +453,36 @@
     <li>Asbab-Asbab Fitrah</li>
     <li>Asbab-Asbab Zulumat</li>
   </ol>
-
+  
   <p>Maka soalan seterusnya ialah:</p>
   <blockquote>
     Bagaimanakah manusia berinteraksi dengan Asbab-Asbab Fitrah dan Asbab-Asbab Zulumat tanpa jatuh ke dalam syirik sebab?
   </blockquote>
-
+  
   <p>Jawapannya ialah <strong>transformasi asbab</strong>.</p>
-
+  
   <p>Transformasi inilah yang akan dijelaskan dalam bab ini: bagaimana sesuatu yang neutral ditundukkan menjadi khidmat kepada iman dan amal soleh, dan bagaimana sesuatu yang gelap tidak boleh dibenarkan memimpin hati.</p>
-
+  
+  <p>Dalam amal ijtima’i pula, manusia tidak dibiarkan berjalan dengan akal sendiri, tetapi diperintah mengikuti tertib syura: <span class="arab">﴿ وَشَاوِرْهُمْ فِي الْأَمْرِ ﴾</span><sup><a href="#fn-4-0-3">[3]</a></sup>. Ini menunjukkan bahawa interaksi dengan realiti mesti berada di bawah bimbingan wahyu, bukan di bawah hawa nafsu atau kuasa sebab.</p>
+  
   <hr>
-
+  
   <h3>4.0.4 Penegasan Tauhidi</h3>
   <p>Islam tidak menolak realiti dengan mengikut wahyu. Sebaliknya, Islam memahami realiti melalui wahyu, lalu menundukkan realiti itu kepada kehendak Allah dan tertib Rasulullah ﷺ.</p>
-
+  
   <p>Maka Bab 4 bukan bab “menolak dunia”, tetapi bab:</p>
   <ul>
     <li>memahami kedudukan dunia,</li>
     <li>meletakkan dunia pada tempatnya,</li>
     <li>dan memastikan hati tidak menyerah kepada dunia.</li>
   </ul>
-
+  
+  <p>Kerana itu Allah berfirman: <span class="arab">﴿ وَابْتَغِ فِيمَا آتَاكَ اللَّهُ الدَّارَ الْآخِرَةَ وَلَا تَنسَ نَصِيبَكَ مِنَ الدُّنْيَا ﴾</span><sup><a href="#fn-4-0-4">[4]</a></sup>. Dunia tidak dibuang, tetapi diletakkan di bawah akhirat.</p>
+  
+  <p>Begitu juga dalam hadith tawakkal, Rasulullah ﷺ mengajar bahawa makhluk tetap bergerak mengambil sebab, tetapi hati tetap bergantung kepada Allah: <span class="arab">« لَوْ أَنَّكُمْ تَتَوَكَّلُونَ عَلَى اللَّهِ حَقَّ تَوَكُّلِهِ لَرُزِقْتُمْ كَمَا يُرْزَقُ الطَّيْرُ تَغْدُو خِمَاصًا وَتَرُوحُ بِطَانًا »</span><sup><a href="#fn-4-0-5">[5]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.0.5 Rumusan Mukadimah Bab 4</h3>
   <ol>
     <li>Bab 4 menjelaskan bagaimana Asbab-Asbab Fitrah dan Asbab-Asbab Zulumat dinilai dalam neraca tauhidi.</li>
@@ -482,7 +491,7 @@
     <li>Transformasi Asbab ialah jalan untuk menundukkan sebab kepada iman dan amal soleh.</li>
     <li>Islam memahami realiti melalui wahyu, lalu menundukkannya kepada Allah dan Rasul-Nya.</li>
   </ol>
-
+  
   <div class="insight-box">
     <h3>📌 Rumusan Besar</h3>
     <p>
@@ -491,27 +500,31 @@
       Asbab-Asbab Fitrah dan Asbab-Asbab Zulumat hanya selamat apabila berada di bawah iman, amal soleh, dan ittiba’ Rasulullah ﷺ.
     </p>
   </div>
-<hr>
-<h3>NOTA KAKI BAB 4.0</h3>
-<ul>
-  <li>【1】 Al-Baqarah 2:45 — Perintah kembali kepada solat dan sabar sebagai Asbab Mutlak</li>
-  <li>【2】 Al-Anfāl 8:17 — “Bukan kamu yang membunuh, tetapi Allah” (penafian kuasa sebab)</li>
-  <li>【3】 Āli ‘Imrān 3:159 — Syura sebagai tertib amal ijtima’i</li>
-  <li>【4】 Hadith tawakkal burung — Tirmizi (ambil sebab, tetapi bergantung kepada Allah)</li>
-  <li>【5】 Al-Qaṣaṣ 28:77 — Gunakan dunia untuk akhirat tanpa melupakan bahagiannya</li>
-</ul>
+
+  <hr>
+
+  <h3>NOTA KAKI BAB 4.0</h3>
+  <ul class="footnotes">
+    <li id="fn-4-0-1">[1] Al-Anfāl 8:17 — Penafian kuasa sebab.</li>
+    <li id="fn-4-0-2">[2] Al-Baqarah 2:45 — Perintah kembali kepada sabar dan solat.</li>
+    <li id="fn-4-0-3">[3] Āli ‘Imrān 3:159 — Syura sebagai tertib amal.</li>
+    <li id="fn-4-0-4">[4] Al-Qaṣaṣ 28:77 — Dunia sebagai alat menuju akhirat.</li>
+    <li id="fn-4-0-5">[5] Hadith tawakkal burung — Riwayat al-Tirmizi.</li>
+  </ul>
+
   <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
 </section>
 <!-- ============================== /BAB 4.0 ============================== -->
+
 <!-- ============================== BAB 4.1 ============================== -->
 <section class="section-card" id="4-1">
   <div class="badge-chapter">🟥 BAB 4.1</div>
   <h2>4.1 — MENGAPA BAB TRANSFORMASI ASBAB MESTI WUJUD</h2>
   <p><em>Mengapa umat perlu memahami transformasi, bukan sekadar kategori asbab</em></p>
-
+  
   <h3>4.1.1 Masalah Besar Umat Dalam Memahami Asbab</h3>
   <p>Ramai manusia mengetahui bahawa dunia ini penuh dengan sebab, tetapi mereka tidak mengetahui bagaimana sebab-sebab itu mesti dilihat dari sudut tauhid.</p>
-
+  
   <p>Akibatnya, manusia terbahagi kepada beberapa bentuk kesilapan:</p>
   <ul>
     <li>ada yang mengagungkan <strong>Asbab-Asbab Fitrah</strong> sehingga menyangka ia sumber kejayaan,</li>
@@ -519,14 +532,14 @@
     <li>ada yang menolak dunia secara salah lalu menyangka semua sebab mesti ditinggalkan,</li>
     <li>ada yang mengambil sebab tanpa nafy, isbat, dan ittiba’ lalu jatuh ke dalam syirik sebab.</li>
   </ul>
-
-  <p>Oleh itu, sekadar mengenal kategori asbab belum mencukupi. Umat mesti diajar bagaimana <strong>berinteraksi</strong> dengan asbab secara sah di sisi Allah.</p>
-
+  
+  <p>Oleh itu, sekadar mengenal kategori asbab belum mencukupi. Umat mesti diajar bagaimana <strong>berinteraksi</strong> dengan asbab secara sah di sisi Allah. Allah memerintahkan manusia mengambil kekuatan yang diperlukan pada tempatnya: <span class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</span><sup><a href="#fn-4-1-1">[1]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.1.2 Kesilapan Dua Hujung</h3>
   <p>Dalam bab ini, terdapat dua hujung yang sama-sama merosakkan:</p>
-
+  
   <p><strong>Hujung pertama: mengagungkan sebab</strong></p>
   <ul>
     <li>melihat teknologi sebagai kuasa,</li>
@@ -534,7 +547,7 @@
     <li>melihat angka sebagai jaminan,</li>
     <li>melihat sistem manusia sebagai sumber kejayaan.</li>
   </ul>
-
+  
   <p><strong>Hujung kedua: membunuh sebab</strong></p>
   <ul>
     <li>menolak usaha,</li>
@@ -542,14 +555,14 @@
     <li>menolak alat,</li>
     <li>menyangka mengambil sebab bercanggah dengan tawakkal.</li>
   </ul>
-
-  <p>Kedua-dua hujung ini salah kerana kedua-duanya gagal meletakkan sebab pada tempat yang sebenar.</p>
-
+  
+  <p>Kedua-dua hujung ini salah kerana kedua-duanya gagal meletakkan sebab pada tempat yang sebenar. Rasulullah ﷺ sendiri mengajar bahawa sebab diambil, tetapi hati tidak bersandar kepadanya: <span class="arab">« اعْقِلْهَا وَتَوَكَّلْ »</span><sup><a href="#fn-4-1-2">[2]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.1.3 Jalan Tengah Wahyu</h3>
   <p>Wahyu tidak mengajar manusia supaya menyembah sebab, dan wahyu juga tidak mengajar manusia supaya membuang sebab.</p>
-
+  
   <p>Wahyu mengajar manusia supaya:</p>
   <ol>
     <li>mengambil sebab sebagai adab,</li>
@@ -557,16 +570,18 @@
     <li>menetapkan hanya Allah memberi kesan,</li>
     <li>dan mengikuti cara Rasulullah ﷺ dalam menggunakan sebab.</li>
   </ol>
-
+  
   <blockquote>
     Jalan wahyu bukan menolak realiti, tetapi memahami realiti melalui wahyu dan menundukkannya kepada Allah.
   </blockquote>
-
+  
+  <p>Inilah yang terlihat dalam hijrah Rasulullah ﷺ. Baginda mengambil sebab, tetapi hati Baginda teguh dengan isbat kepada Allah: <span class="arab">﴿ لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا ﴾</span><sup><a href="#fn-4-1-3">[3]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.1.4 Mengapa “Transformasi” Menjadi Istilah Penting</h3>
   <p>Istilah transformasi diperlukan kerana tidak semua sebab berada pada tahap yang sama.</p>
-
+  
   <p>Ada sebab yang:</p>
   <ul>
     <li>boleh diambil terus sebagai alat,</li>
@@ -574,7 +589,7 @@
     <li>mesti dibuang,</li>
     <li>dan ada yang langsung tidak boleh disentuh.</li>
   </ul>
-
+  
   <p>Tanpa konsep transformasi, manusia akan keliru:</p>
   <ul>
     <li>yang harus dianggap haram,</li>
@@ -582,27 +597,31 @@
     <li>yang neutral dianggap berkuasa,</li>
     <li>dan yang hanya alat dianggap penentu.</li>
   </ul>
-
+  
+  <p>Sebab itu manusia tidak boleh bergerak hanya dengan logik kemampuan semata-mata. Ukuran asas tetap datang daripada Allah yang mengetahui batas manusia: <span class="arab">﴿ لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا ﴾</span><sup><a href="#fn-4-1-4">[4]</a></sup>. Maka apa yang diambil, ditinggalkan, atau dibuang mestilah berada dalam neraca wahyu.</p>
+  
   <hr>
-
+  
   <h3>4.1.5 Fungsi Bab Ini Dalam Binaan Kerangka 3 Asbab</h3>
   <p>Bab ini menjadi jambatan antara:</p>
   <ul>
     <li><strong>pengenalan kategori asbab</strong> dalam Bab 2,</li>
     <li>dan <strong>penerangan lanjut tentang batas, pelanggaran, serta natijah tauhidi</strong> dalam bab-bab selepas ini.</li>
   </ul>
-
+  
   <p>Tanpa Bab 4, manusia mungkin tahu istilah:</p>
   <ul>
     <li>Asbab-Asbab Mutlak,</li>
     <li>Asbab-Asbab Fitrah,</li>
     <li>Asbab-Asbab Zulumat,</li>
   </ul>
-
+  
   <p>tetapi masih tidak tahu bagaimana hendak hidup dalam dunia sebenar dengan neraca tersebut.</p>
-
+  
+  <p>Allah memang memerintahkan manusia berjalan di bumi dan mengambil rezeki-Nya: <span class="arab">﴿ فَامْشُوا فِي مَنَاكِبِهَا وَكُلُوا مِن رِّزْقِهِ ﴾</span><sup><a href="#fn-4-1-5">[5]</a></sup>, tetapi semua itu mesti berlaku dalam kedudukan sebab sebagai alat, bukan sebagai tuhan kecil yang memimpin hati.</p>
+  
   <hr>
-
+  
   <h3>4.1.6 Rumusan Tauhidi 4.1</h3>
   <ol>
     <li>Masalah umat bukan sekadar tidak kenal sebab, tetapi tidak kenal cara sah berinteraksi dengan sebab.</li>
@@ -611,7 +630,7 @@
     <li>Konsep transformasi perlu untuk membezakan apa yang boleh ditundukkan, apa yang mesti dibuang, dan apa yang haram disentuh.</li>
     <li>Bab Transformasi Asbab ialah jambatan praktikal untuk menghidupkan Kerangka 3 Asbab dalam realiti.</li>
   </ol>
-
+  
   <div class="insight-box">
     <h3>📌 Rumusan Besar</h3>
     <p>
@@ -620,38 +639,42 @@
       Sebab mesti diambil dengan tertib wahyu, lalu ditundukkan kepada Allah.
     </p>
   </div>
-<hr>
-<h3>NOTA KAKI BAB 4.1</h3>
-<ul>
-  <li>【1】 Al-Anfāl 8:60 — Perintah mengambil kekuatan sebagai sebab dunia</li>
-  <li>【2】 At-Tawbah 9:40 — “Allah bersama kita” (Isbat dalam mengambil sebab)</li>
-  <li>【3】 Hadith “I‘qil-hā wa tawakkal” — Tirmizi</li>
-  <li>【4】 Al-Baqarah 2:286 — Allah tidak membebankan melainkan kemampuan</li>
-  <li>【5】 Al-Mulk 67:15 — Berjalan di bumi dan makan rezeki (ambil sebab fitrah)</li>
-</ul>
+
+  <hr>
+
+  <h3>NOTA KAKI BAB 4.1</h3>
+  <ul class="footnotes">
+    <li id="fn-4-1-1">[1] Al-Anfāl 8:60 — Perintah mengambil kekuatan.</li>
+    <li id="fn-4-1-2">[2] Hadith “I‘qilhā wa tawakkal” — Riwayat al-Tirmizi.</li>
+    <li id="fn-4-1-3">[3] At-Tawbah 9:40 — “Sesungguhnya Allah bersama kita.”</li>
+    <li id="fn-4-1-4">[4] Al-Baqarah 2:286 — Allah tidak membebankan melainkan kemampuan.</li>
+    <li id="fn-4-1-5">[5] Al-Mulk 67:15 — Berjalan di bumi dan makan rezeki-Nya.</li>
+  </ul>
+
   <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
 </section>
 <!-- ============================== /BAB 4.1 ============================== -->
+
 <!-- ============================== BAB 4.2 ============================== -->
 <section class="section-card" id="4-2">
   <div class="badge-chapter">🟥 BAB 4.2</div>
   <h2>4.2 — DEFINISI TRANSFORMASI ASBAB</h2>
   <p><em>Apakah maksud “transformasi” dalam Kerangka 3 Asbab</em></p>
-
+  
   <h3>4.2.1 Maksud Asas Transformasi</h3>
   <p>Transformasi Asbab ialah proses <strong>menundukkan Asbab-Asbab Fitrah</strong> dan sebahagian <strong>Asbab-Asbab Zulumat</strong> supaya ia tidak lagi berdiri sebagai pusat pergantungan, tetapi menjadi <strong>khidmat kepada iman dan amal soleh</strong>.</p>
-
-  <p>Transformasi bukan bermaksud menukar hakikat kuasa sesuatu benda. Kuasa tetap bukan pada benda. Kuasa tetap hanya milik Allah.</p>
-
+  
+  <p>Transformasi bukan bermaksud menukar hakikat kuasa sesuatu benda. Kuasa tetap bukan pada benda. Kuasa tetap hanya milik Allah yang mencipta segala sesuatu dan perbuatan manusia: <span class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</span><sup><a href="#fn-4-2-1">[1]</a></sup>.</p>
+  
   <blockquote>
     Transformasi tidak memindahkan kuasa kepada sebab.<br>
     Transformasi hanya memindahkan kedudukan sebab:<br>
     daripada sesuatu yang boleh menghijab hati,<br>
     menjadi sesuatu yang tunduk sebagai khidmat kepada ketaatan.
   </blockquote>
-
+  
   <hr>
-
+  
   <h3>4.2.2 Apa Yang Berubah Dalam Transformasi</h3>
   <p>Dalam transformasi, yang berubah bukan zat kuasa sesuatu, kerana sebab memang tidak pernah mempunyai kuasa hakiki. Yang berubah ialah:</p>
   <ol>
@@ -660,14 +683,14 @@
     <li><strong>fungsi sebab dalam proses ketaatan,</strong></li>
     <li><strong>nilai sebab di sisi Allah.</strong></li>
   </ol>
-
-  <p>Sebab yang asalnya neutral boleh menjadi khidmat kepada iman apabila ditundukkan. Sebab yang asalnya gelap dari sudut sistem manusia hanya boleh selamat jika tidak lagi memimpin hati, tetapi dipatahkan dominannya dan diletakkan di bawah syarak.</p>
-
+  
+  <p>Sebab yang asalnya neutral boleh menjadi khidmat kepada iman apabila ditundukkan. Sebab yang asalnya gelap dari sudut sistem manusia hanya boleh selamat jika tidak lagi memimpin hati, tetapi dipatahkan dominannya dan diletakkan di bawah syarak yang telah disempurnakan oleh Allah: <span class="arab">﴿ الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ ﴾</span><sup><a href="#fn-4-2-2">[2]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.2.3 Transformasi Bukan Menjadikan Dunia Suci Dengan Sendiri</h3>
   <p>Transformasi tidak bermaksud semua perkara dunia automatik menjadi baik hanya kerana manusia berniat baik.</p>
-
+  
   <p>Dalam Kerangka 3 Asbab:</p>
   <ul>
     <li>niat baik <strong>tidak menghalalkan</strong> yang haram,</li>
@@ -675,20 +698,22 @@
     <li>manfaat zahir <strong>tidak membuktikan</strong> penerimaan Allah,</li>
     <li>dan sesuatu hanya bernilai apabila ia berada dalam tertib iman, amal soleh, dan ittiba’ Rasulullah ﷺ.</li>
   </ul>
-
+  
+  <p>Rasulullah ﷺ bersabda bahawa nilai amal bermula dengan niat, tetapi tidak berhenti pada niat semata-mata: <span class="arab">« إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ »</span><sup><a href="#fn-4-2-3">[3]</a></sup>. Maka niat adalah asas, tetapi mesti diikat dengan syarak.</p>
+  
   <p>Maka transformasi bukan proses kosmetik, bukan rebranding agama, dan bukan menutup batil dengan bahasa baik. Transformasi ialah proses tauhidi yang sah di sisi wahyu.</p>
-
+  
   <hr>
-
+  
   <h3>4.2.4 Transformasi Hanya Berlaku Pada Wilayah Yang Dibenarkan</h3>
   <p>Tidak semua asbab boleh ditransformasikan.</p>
-
+  
   <p>Transformasi hanya berlaku pada:</p>
   <ol>
     <li><strong>Asbab-Asbab Fitrah</strong> yang bersifat neutral,</li>
     <li>dan <strong>Asbab-Asbab Zulumat</strong> yang tidak haram pada zatnya, tetapi perlu ditundukkan supaya menjadi khidmat.</li>
   </ol>
-
+  
   <p>Sebaliknya:</p>
   <ul>
     <li>Asbab yang haram,</li>
@@ -696,20 +721,22 @@
     <li>maksiat batin,</li>
     <li>dan sistem batil yang berdiri atas pelanggaran syarak</li>
   </ul>
-
-  <p>tidak ditransformasikan, tetapi mesti ditolak, dibuang, atau dihancurkan pengaruhnya.</p>
-
+  
+  <p>tidak ditransformasikan, tetapi mesti ditolak, dibuang, atau dihancurkan pengaruhnya. Ini kerana apabila Allah dan Rasul-Nya telah menetapkan sesuatu, manusia tidak lagi mempunyai pilihan untuk mengubahnya: <span class="arab">﴿ وَمَا كَانَ لِمُؤْمِنٍ وَلَا مُؤْمِنَةٍ إِذَا قَضَى اللَّهُ وَرَسُولُهُ أَمْرًا أَن يَكُونَ لَهُمُ الْخِيَرَةُ مِنْ أَمْرِهِمْ ﴾</span><sup><a href="#fn-4-2-4">[4]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.2.5 Definisi Muktamad Transformasi Asbab</h3>
   <blockquote>
     <strong>Transformasi Asbab</strong> ialah proses menundukkan Asbab-Asbab Fitrah dan sebahagian Asbab-Asbab Zulumat yang dibenarkan syarak, melalui Nafy, Isbat, Ittiba’, Ikhlas, dan amal soleh, sehingga ia menjadi khidmat kepada ketaatan — bukan pusat pergantungan, bukan sumber kesan, dan bukan hakim kepada wahyu.
   </blockquote>
-
+  
   <p>Inilah definisi yang membezakan Kerangka 3 Asbab daripada pendekatan umum yang hanya bercakap tentang “guna dunia untuk akhirat” tanpa menjelaskan neraca tauhidinya secara tepat.</p>
-
+  
+  <p>Hakikat bahawa semua urusan berada di bawah pengurusan Allah ditegaskan berulang kali dalam al-Qur’an: <span class="arab">﴿ يُدَبِّرُ الْأَمْرَ ﴾</span><sup><a href="#fn-4-2-5">[5]</a></sup>. Maka sebab tidak pernah menjadi pengurus hakiki.</p>
+  
   <hr>
-
+  
   <h3>4.2.6 Mengapa Istilah Ini Penting</h3>
   <p>Istilah ini penting kerana tanpa definisi yang jelas, manusia akan jatuh kepada salah satu daripada tiga kekeliruan:</p>
   <ol>
@@ -717,11 +744,11 @@
     <li>menyangka semua sebab dunia mesti dibuang,</li>
     <li>atau menyangka niat baik sudah cukup untuk menukar sesuatu menjadi ibadah.</li>
   </ol>
-
+  
   <p>Kerangka 3 Asbab menolak ketiga-tiga kekeliruan ini.</p>
-
+  
   <hr>
-
+  
   <h3>4.2.7 Rumusan Tauhidi 4.2</h3>
   <ol>
     <li>Transformasi Asbab bukan menukar kuasa sebab, kerana sebab tidak pernah berkuasa.</li>
@@ -730,7 +757,7 @@
     <li>Niat baik sahaja tidak cukup untuk mentransformasikan sesuatu.</li>
     <li>Transformasi berlaku apabila sebab ditundukkan kepada Nafy, Isbat, Ittiba’, Ikhlas, dan amal soleh.</li>
   </ol>
-
+  
   <div class="insight-box">
     <h3>📌 Rumusan Besar</h3>
     <p>
@@ -739,41 +766,45 @@
       Hati tetap berpaut kepada Allah, dan amal tetap mengikuti Rasulullah ﷺ.
     </p>
   </div>
-<hr>
-<h3>NOTA KAKI BAB 4.2</h3>
-<ul>
-  <li>【1】 As-Saffāt 37:96 — Allah mencipta kamu dan apa yang kamu lakukan</li>
-  <li>【2】 Al-Ahzāb 33:36 — Tiada pilihan setelah Allah dan Rasul menetapkan</li>
-  <li>【3】 Al-Mā’idah 5:3 — Penyempurnaan agama sebagai neraca</li>
-  <li>【4】 Hadith niat — Bukhari & Muslim</li>
-  <li>【5】 Yunus 10:31 — Allah yang memberi rezeki dan menguruskan urusan</li>
-</ul>
+
+  <hr>
+
+  <h3>NOTA KAKI BAB 4.2</h3>
+  <ul class="footnotes">
+    <li id="fn-4-2-1">[1] As-Saffāt 37:96 — Allah mencipta kamu dan apa yang kamu lakukan.</li>
+    <li id="fn-4-2-2">[2] Al-Mā’idah 5:3 — Penyempurnaan agama sebagai neraca.</li>
+    <li id="fn-4-2-3">[3] Hadith niat — Riwayat Bukhari & Muslim.</li>
+    <li id="fn-4-2-4">[4] Al-Ahzāb 33:36 — Tiada pilihan setelah Allah dan Rasul menetapkan.</li>
+    <li id="fn-4-2-5">[5] Yunus 10:31 — Allah yang menguruskan urusan.</li>
+  </ul>
+
   <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
 </section>
 <!-- ============================== /BAB 4.2 ============================== -->
+
 <!-- ============================== BAB 4.3 ============================== -->
 <section class="section-card" id="4-3">
   <div class="badge-chapter">🟥 BAB 4.3</div>
   <h2>4.3 — SYARAT TRANSFORMASI ASBAB</h2>
   <p><em>Bilakah sesuatu sebab boleh ditundukkan menjadi khidmat kepada ketaatan</em></p>
-
+  
   <h3>4.3.1 Transformasi Tidak Berlaku Secara Automatik</h3>
   <p>Sesuatu sebab tidak menjadi baik secara automatik hanya kerana digunakan oleh orang Islam, disebut dengan nama agama, atau menghasilkan manfaat zahir.</p>
-
+  
   <p>Transformasi hanya berlaku apabila sebab itu melalui syarat-syarat tauhidi yang ketat. Jika syarat ini tiada, maka sebab itu kekal sebagai alat dunia yang boleh menjadi hijab, malah boleh menjadi pintu syirik sebab.</p>
-
+  
   <blockquote>
     Bukan semua yang berguna itu diterima Allah.<br>
     Dan bukan semua yang nampak membantu itu menjadi ibadah.
   </blockquote>
-
+  
   <hr>
-
+  
   <h3>4.3.2 Syarat Pertama — NAFY</h3>
   <p><strong>Nafy</strong> bermaksud menafikan kuasa memberi kesan pada Asbab-Asbab Fitrah dan Asbab-Asbab Zulumat.</p>
-
+  
   <p>Ini bukan menafikan penggunaan sebab. Ini menafikan <strong>ketuhanan sebab</strong>.</p>
-
+  
   <p>Tanpa nafy:</p>
   <ul>
     <li>alat akan diangkat menjadi penentu,</li>
@@ -781,14 +812,16 @@
     <li>sistem akan dianggap sumber kejayaan,</li>
     <li>dan hati akan bergantung kepada makhluk.</li>
   </ul>
-
+  
+  <p>Tauhid menafikan semua sandaran ini dan membersihkan hati daripada bergantung kepada selain Allah: <span class="arab">﴿ قُلْ هُوَ اللَّهُ أَحَدٌ ﴾</span><sup><a href="#fn-4-3-1">[1]</a></sup>.</p>
+  
   <p>Maka nafy ialah syarat pertama kerana transformasi mustahil berlaku pada hati yang masih menyembah sebab.</p>
-
+  
   <hr>
-
+  
   <h3>4.3.3 Syarat Kedua — ISBAT</h3>
   <p><strong>Isbat</strong> bermaksud menetapkan bahawa hanya Allah memberi kesan.</p>
-
+  
   <p>Sesudah kuasa sebab dinafikan, hati mesti menetapkan dengan yakin bahawa:</p>
   <ul>
     <li>Allah yang memberi manfaat,</li>
@@ -796,14 +829,16 @@
     <li>Allah yang membuka jalan,</li>
     <li>Allah yang menjadikan sesuatu alat itu bermanfaat atau tidak.</li>
   </ul>
-
+  
+  <p>Inilah hakikat ubudiyyah yang diulang setiap hari dalam solat: <span class="arab">﴿ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ﴾</span><sup><a href="#fn-4-3-2">[2]</a></sup>.</p>
+  
   <p>Tanpa isbat, manusia mungkin menolak sebab secara zahir tetapi belum benar-benar kembali kepada Allah secara batin.</p>
-
+  
   <hr>
-
+  
   <h3>4.3.4 Syarat Ketiga — ITTIBA’</h3>
   <p><strong>Ittiba’</strong> bermaksud menggunakan sebab mengikut tertib Rasulullah ﷺ, bukan menurut hawa nafsu, logik bebas, atau salinan buta daripada sistem manusia.</p>
-
+  
   <p>Ini bermaksud:</p>
   <ul>
     <li>jalan yang diambil mesti berada dalam batas syarak,</li>
@@ -811,14 +846,16 @@
     <li>urutan amal mesti memelihara tertib wahyu,</li>
     <li>dan matlamat tidak boleh menghalalkan cara.</li>
   </ul>
-
+  
+  <p>Allah menetapkan bahawa Rasulullah ﷺ ialah contoh tertinggi dalam semua bentuk amal: <span class="arab">﴿ لَّقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ ﴾</span><sup><a href="#fn-4-3-3">[3]</a></sup>.</p>
+  
   <p>Tanpa ittiba’, sebab yang nampak baik boleh menjadi hijab kerana ia bergerak di luar jalan Rasulullah ﷺ.</p>
-
+  
   <hr>
-
+  
   <h3>4.3.5 Syarat Keempat — IKHLAS</h3>
   <p><strong>Ikhlas</strong> bermaksud objektif amal adalah untuk mendapatkan keredhaan Allah.</p>
-
+  
   <p>Sebab yang digunakan tidak boleh dipacu oleh:</p>
   <ul>
     <li>cinta nama,</li>
@@ -826,14 +863,16 @@
     <li>cinta pengaruh,</li>
     <li>atau keinginan menonjolkan diri.</li>
   </ul>
-
+  
+  <p>Allah memerintahkan agar ibadah dimurnikan hanya untuk-Nya: <span class="arab">﴿ وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ ﴾</span><sup><a href="#fn-4-3-4">[4]</a></sup>.</p>
+  
   <p>Walaupun bentuknya betul, sesuatu sebab belum benar-benar ditransformasikan jika hati masih mencari selain Allah.</p>
-
+  
   <hr>
-
+  
   <h3>4.3.6 Syarat Kelima — AMAL SOLEH & BATAS SYARAK</h3>
   <p>Transformasi hanya berlaku apabila sebab masuk ke dalam wilayah <strong>amal soleh</strong>, iaitu amal yang ditetapkan syariat.</p>
-
+  
   <p>Maksudnya:</p>
   <ul>
     <li>ia tidak melanggar halal dan haram,</li>
@@ -841,11 +880,13 @@
     <li>ia tidak menghalalkan batil,</li>
     <li>dan ia benar-benar menjadi khidmat kepada ketaatan.</li>
   </ul>
-
+  
+  <p>Rasulullah ﷺ memberi amaran bahawa setiap perkara yang tidak mengikuti tertib wahyu akan tertolak: <span class="arab">« مَنْ أَحْدَثَ فِي أَمْرِنَا هَذَا مَا لَيْسَ مِنْهُ فَهُوَ رَدٌّ »</span><sup><a href="#fn-4-3-5">[5]</a></sup>.</p>
+  
   <p>Jika batas syarak pecah, transformasi terbatal.</p>
-
+  
   <hr>
-
+  
   <h3>4.3.7 Rumusan Lima Syarat Transformasi</h3>
   <div style="overflow-x:auto;">
     <table>
@@ -879,11 +920,11 @@
       </tbody>
     </table>
   </div>
-
+  
   <p>Kelima-lima syarat ini mesti hadir bersama. Jika satu gugur, transformasi menjadi rosak atau batal.</p>
-
+  
   <hr>
-
+  
   <h3>4.3.8 Rumusan Tauhidi 4.3</h3>
   <ol>
     <li>Transformasi tidak berlaku secara automatik.</li>
@@ -894,7 +935,7 @@
     <li>Amal soleh dan batas syarak menentukan kesahihan transformasi.</li>
     <li>Jika mana-mana syarat ini pecah, sebab kembali menjadi hijab atau batil.</li>
   </ol>
-
+  
   <div class="insight-box">
     <h3>📌 Rumusan Besar</h3>
     <p>
@@ -903,24 +944,28 @@
       <strong>Nafy → Isbat → Ittiba’ → Ikhlas → Amal Soleh</strong>.
     </p>
   </div>
-<hr>
-<h3>NOTA KAKI BAB 4.3</h3>
-<ul>
-  <li>【1】 Al-Ikhlāṣ 112:1–4 — Tauhid membersihkan hati daripada sandaran selain Allah</li>
-  <li>【2】 Al-Fātiḥah 1:5 — Hanya kepada Allah kita menyembah dan memohon pertolongan</li>
-  <li>【3】 Al-Aḥzāb 33:21 — Rasulullah ﷺ ialah uswah terbaik dalam ittiba’</li>
-  <li>【4】 Al-Bayyinah 98:5 — Perintah beribadah dengan ikhlas kepada Allah</li>
-  <li>【5】 Hadith “Man أحدث في أمرنا هذا ما ليس منه فهو رد” — Bukhari & Muslim</li>
-</ul>
+
+  <hr>
+
+  <h3>NOTA KAKI BAB 4.3</h3>
+  <ul class="footnotes">
+    <li id="fn-4-3-1">[1] Al-Ikhlāṣ 112:1–4 — Tauhid membersihkan hati.</li>
+    <li id="fn-4-3-2">[2] Al-Fātiḥah 1:5 — Hanya kepada Allah kita menyembah dan memohon pertolongan.</li>
+    <li id="fn-4-3-3">[3] Al-Aḥzāb 33:21 — Rasulullah ﷺ sebagai uswah.</li>
+    <li id="fn-4-3-4">[4] Al-Bayyinah 98:5 — Perintah ikhlas dalam ibadah.</li>
+    <li id="fn-4-3-5">[5] Hadith — Riwayat Bukhari & Muslim.</li>
+  </ul>
+
   <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
-</section
+</section>
 <!-- ============================== /BAB 4.3 ============================== -->
+
 <!-- ============================== BAB 4.4 ============================== -->
 <section class="section-card" id="4-4">
   <div class="badge-chapter">🟥 BAB 4.4</div>
   <h2>4.4 — TRANSFORMASI ASBAB-ASBAB FITRAH</h2>
   <p><em>Bagaimana Asbab-Asbab Fitrah ditundukkan menjadi khidmat kepada iman dan amal soleh</em></p>
-
+  
   <h3>4.4.1 Hakikat Asbab-Asbab Fitrah</h3>
   <p>Asbab-Asbab Fitrah ialah sebab-sebab yang Allah jadikan dalam alam sebagai sebahagian daripada ciptaan-Nya, seperti:</p>
   <ul>
@@ -929,21 +974,23 @@
     <li>perancangan, strategi, dan pengurusan,</li>
     <li>hubungan sosial, ekonomi, dan pekerjaan.</li>
   </ul>
-
+  
   <p>Hakikatnya:</p>
   <ul>
     <li>ia <strong>neutral</strong>,</li>
     <li>ia <strong>tidak memberi kesan sendiri</strong>,</li>
     <li>ia hanya berlaku dengan kehendak Allah, bukan janji Allah.</li>
   </ul>
-
+  
   <blockquote>
     Asbab-Asbab Fitrah bukan sunnatullah dalam erti janji.<br>
     Ia hanya berlaku dengan kehendak Allah, bukan kerana Allah menjanjikan kesan padanya.
   </blockquote>
-
+  
+  <p>Allah menegaskan bahawa Dialah yang memberi bantuan sebenar dan menentukan natijah: <span class="arab">﴿ إِن يَنصُرْكُمُ اللَّهُ فَلَا غَالِبَ لَكُمْ ﴾</span><sup><a href="#fn-4-4-1">[1]</a></sup>. Maka Asbab-Asbab Fitrah tidak pernah berdiri sebagai kuasa hakiki.</p>
+  
   <hr>
-
+  
   <h3>4.4.2 Kedudukan Asbab-Asbab Fitrah dalam Tauhid</h3>
   <p>Dalam neraca tauhidi:</p>
   <ul>
@@ -951,11 +998,13 @@
     <li>tetapi tidak boleh dijadikan <strong>sandaran hati</strong>,</li>
     <li>dan tidak boleh dianggap sebagai <strong>sumber kejayaan</strong>.</li>
   </ul>
-
+  
   <p>Jika hati bergantung kepada Asbab-Asbab Fitrah, maka ia menjadi hijab. Jika ia diambil sebagai adab dalam ketaatan, maka ia menjadi khidmat.</p>
-
+  
+  <p>Kerana itu syariat sendiri memerintahkan persiapan pada tempatnya: <span class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</span><sup><a href="#fn-4-4-2">[2]</a></sup>. Perintah mengambil sebab tidak pernah bermaksud sebab itu menjadi penentu natijah.</p>
+  
   <hr>
-
+  
   <h3>4.4.3 Bagaimana Asbab-Asbab Fitrah Ditransformasikan</h3>
   <p>Asbab-Asbab Fitrah menjadi khidmat apabila:</p>
   <ol>
@@ -965,29 +1014,31 @@
     <li>niat dimurnikan dengan <strong>ikhlas</strong>,</li>
     <li>dan penggunaan sebab berada dalam <strong>batas syarak</strong>.</li>
   </ol>
-
+  
   <p>Dalam keadaan ini, sebab tidak lagi memimpin hati. Ia hanya menjadi alat yang tunduk kepada amal soleh.</p>
-
+  
   <blockquote>
     Asbab-Asbab Fitrah tidak naik menjadi Mutlak.<br>
     Ia hanya turun menjadi khidmat apabila tunduk kepada iman dan amal soleh.
   </blockquote>
-
+  
+  <p>Rasulullah ﷺ sendiri mengajar prinsip ini dengan ungkapan yang sangat padat: <span class="arab">« اعْقِلْهَا وَتَوَكَّلْ »</span><sup><a href="#fn-4-4-3">[3]</a></sup>. Sebab diikat, tetapi hati bertawakkal kepada Allah.</p>
+  
   <hr>
-
+  
   <h3>4.4.4 Contoh Transformasi Asbab-Asbab Fitrah dalam Wahyu</h3>
-
+  
   <h4>(1) Nabi Musa عليه السلام — Tongkat</h4>
   <div class="arabic">
-    فَأَلْقَىٰ عَصَاهُ فَإِذَا هِيَ حَيَّةٌ تَسْعَىٰ
+‎    فَأَلْقَىٰ عَصَاهُ فَإِذَا هِيَ حَيَّةٌ تَسْعَىٰ
   </div>
   <div class="translation">
     “Lalu dia mencampakkan tongkatnya, maka tiba-tiba tongkat itu menjadi ular yang bergerak pantas.”
-    <br>(Ṭāhā 20:20)
+    <br>(Ṭāhā 20:20)<sup><a href="#fn-4-4-4">[4]</a></sup>
   </div>
-
-  <p>Tongkat ialah Asbab Fitrah. Namun kesan berlaku bukan kerana tongkat, tetapi kerana perintah Allah.</p>
-
+  
+  <p>Tongkat ialah Asbab Fitrah. Namun kesan berlaku bukan kerana tongkat, tetapi kerana perintah Allah. Maka tongkat tidak berkuasa; tongkat hanya tunduk.</p>
+  
   <h4>(2) Rasulullah ﷺ — Hijrah</h4>
   <p>Rasulullah ﷺ mengambil perancangan:</p>
   <ul>
@@ -996,22 +1047,22 @@
     <li>menggunakan gua,</li>
     <li>mengatur bekalan.</li>
   </ul>
-
+  
   <div class="arabic">
-    لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا
+‎    لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا
   </div>
   <div class="translation">
     “Janganlah engkau bersedih, sesungguhnya Allah bersama kita.”
-    <br>(at-Taubah 9:40)
+    <br>(at-Tawbah 9:40)<sup><a href="#fn-4-4-5">[5]</a></sup>
   </div>
-
+  
   <p>Asbab diambil, tetapi hati tidak bergantung kepada asbab. Hati berpaut kepada Allah.</p>
-
+  
   <h4>(3) Perang Khandaq</h4>
-  <p>Penggalian parit ialah strategi. Namun kemenangan bukan kerana strategi, tetapi kerana nusrah Allah.</p>
-
+  <p>Penggalian parit ialah strategi. Namun strategi itu sendiri tidak memberi kemenangan. Ia hanya menjadi khidmat dalam tertib amal, sedangkan natijah tetap bergantung kepada nusrah Allah.</p>
+  
   <hr>
-
+  
   <h3>4.4.5 Risiko Besar Asbab-Asbab Fitrah</h3>
   <p>Jika tidak ditransformasikan, Asbab-Asbab Fitrah membawa kepada:</p>
   <ul>
@@ -1020,11 +1071,13 @@
     <li><strong>profesionalisme palsu</strong> (kemahiran tanpa iman),</li>
     <li><strong>kehilangan tawakkal</strong>.</li>
   </ul>
-
+  
   <p>Manusia akan melihat kejayaan pada angka, sistem, dan data, bukan pada hubungan dengan Allah.</p>
-
+  
+  <p>Apabila ini berlaku, alat yang neutral berubah menjadi hijab hati. Sebab zahir membesar, sedangkan hubungan dengan Allah mengecil.</p>
+  
   <hr>
-
+  
   <h3>4.4.6 Prinsip Tauhidi dalam Menggunakan Asbab-Asbab Fitrah</h3>
   <ul>
     <li>Ambil sebab sebagai adab, bukan sebagai kuasa.</li>
@@ -1032,14 +1085,16 @@
     <li>Jangan jadikan sebab sebagai penentu natijah.</li>
     <li>Jangan meninggalkan sebab dengan alasan tawakkal.</li>
   </ul>
-
+  
   <blockquote>
     Tawakkal bukan meninggalkan sebab.<br>
     Tawakkal ialah memutuskan pergantungan kepada sebab.
   </blockquote>
-
+  
+  <p>Inilah jalan tengah wahyu: sebab diambil, tetapi kemenangan tetap disandarkan kepada Allah; adab dipelihara, tetapi hati tidak sujud kepada alat.</p>
+  
   <hr>
-
+  
   <h3>4.4.7 Rumusan Tauhidi 4.4</h3>
   <ol>
     <li>Asbab-Asbab Fitrah ialah alat yang neutral dan tidak memberi kesan sendiri.</li>
@@ -1048,7 +1103,7 @@
     <li>Ia menjadi hijab apabila hati bergantung kepadanya.</li>
     <li>Transformasi bukan menaikkan sebab, tetapi menundukkan sebab.</li>
   </ol>
-
+  
   <div class="insight-box">
     <h3>📌 Rumusan Besar</h3>
     <p>
@@ -1057,24 +1112,28 @@
       Nilainya ditentukan oleh hubungan hati dengan Allah dan tertib amal mengikut Rasulullah ﷺ.
     </p>
   </div>
-<hr>
-<h3>NOTA KAKI BAB 4.4</h3>
-<ul>
-  <li>【1】 Ṭāhā 20:17–21 — Tongkat Nabi Musa عليه السلام sebagai sebab fitrah yang tunduk kepada perintah Allah</li>
-  <li>【2】 At-Tawbah 9:40 — Hijrah: mengambil sebab, tetapi hati tetap bersama Allah</li>
-  <li>【3】 Al-Anfāl 8:60 — Perintah menyediakan kekuatan mengikut kemampuan</li>
-  <li>【4】 Āli ‘Imrān 3:160 — Jika Allah menolong kamu, tiada siapa dapat mengalahkan kamu</li>
-  <li>【5】 Hadith “I‘qil-hā wa tawakkal” — Tirmizi</li>
-</ul>
+
+  <hr>
+
+  <h3>NOTA KAKI BAB 4.4</h3>
+  <ul class="footnotes">
+    <li id="fn-4-4-1">[1] Āli ‘Imrān 3:160 — Jika Allah menolong kamu, tiada siapa dapat mengalahkan kamu.</li>
+    <li id="fn-4-4-2">[2] Al-Anfāl 8:60 — Perintah menyediakan kekuatan mengikut kemampuan.</li>
+    <li id="fn-4-4-3">[3] Hadith “I‘qil-hā wa tawakkal” — Riwayat al-Tirmizi.</li>
+    <li id="fn-4-4-4">[4] Ṭāhā 20:17–21 — Tongkat Nabi Musa عليه السلام tunduk kepada perintah Allah.</li>
+    <li id="fn-4-4-5">[5] At-Tawbah 9:40 — Hijrah: mengambil sebab, tetapi hati tetap bersama Allah.</li>
+  </ul>
+
   <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
 </section>
 <!-- ============================== /BAB 4.4 ============================== -->
+
 <!-- ============================== BAB 4.5 ============================== -->
 <section class="section-card" id="4-5">
   <div class="badge-chapter">🟥 BAB 4.5</div>
   <h2>4.5 — TRANSFORMASI ASBAB-ASBAB ZULUMAT</h2>
   <p><em>Bagaimana Asbab-Asbab Zulumat ditundukkan tanpa dijadikan sandaran</em></p>
-
+  
   <h3>4.5.1 Hakikat Asbab-Asbab Zulumat</h3>
   <p>Asbab-Asbab Zulumat ialah sebab-sebab yang lahir daripada sistem nilai manusia yang terpisah daripada wahyu, seperti:</p>
   <ul>
@@ -1083,21 +1142,23 @@
     <li>struktur ekonomi yang berasaskan riba dan eksploitasi,</li>
     <li>pemikiran yang menjadikan manusia sebagai pusat.</li>
   </ul>
-
+  
   <p>Hakikatnya:</p>
   <ul>
     <li>ia <strong>bukan sumber kesan</strong>,</li>
     <li>ia <strong>tidak boleh mengubah dirinya sendiri</strong>,</li>
     <li>ia hanya boleh berubah apabila ditundukkan oleh iman dan amal soleh.</li>
   </ul>
-
+  
   <blockquote>
     Asbab-Asbab Zulumat bukan sahaja tidak memberi kesan,<br>
     bahkan ia membawa kegelapan jika dijadikan sandaran.
   </blockquote>
-
+  
+  <p>Allah sendiri menggambarkan hakikat ini dengan membezakan antara Asbab-Asbab Zulumat dan nur: <span class="arab">﴿ اللَّهُ وَلِيُّ الَّذِينَ آمَنُوا يُخْرِجُهُم مِّنَ الظُّلُمَاتِ إِلَى النُّورِ ﴾</span><sup><a href="#fn-4-5-1">[1]</a></sup>. Ini menunjukkan Asbab-Asbab Zulumat bukan jalan keselamatan, tetapi wilayah yang manusia mesti dikeluarkan daripadanya.</p>
+  
   <hr>
-
+  
   <h3>4.5.2 Kedudukan Asbab-Asbab Zulumat dalam Tauhid</h3>
   <p>Dalam neraca tauhidi:</p>
   <ul>
@@ -1105,16 +1166,18 @@
     <li>tidak boleh dijadikan <strong>asas keputusan</strong>,</li>
     <li>dan tidak boleh dijadikan <strong>jalan utama perubahan</strong>.</li>
   </ul>
-
+  
   <p>Namun ia tetap wujud dalam realiti dan tidak boleh dinafikan kewujudannya.</p>
-
+  
   <blockquote>
-    Tauhid bukan menafikan kewujudan zulumat,<br>
+    Tauhid bukan menafikan kewujudan Asbab-Asbab Zulumat,<br>
     tetapi menafikan kuasanya dan menundukkannya di bawah iman.
   </blockquote>
-
+  
+  <p>Wahyu diturunkan bukan untuk menyesuaikan diri dengan Asbab-Asbab Zulumat, tetapi untuk mengeluarkan manusia daripadanya: <span class="arab">﴿ كِتَابٌ أَنزَلْنَاهُ إِلَيْكَ لِتُخْرِجَ النَّاسَ مِنَ الظُّلُمَاتِ إِلَى النُّورِ ﴾</span><sup><a href="#fn-4-5-2">[2]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.5.3 Prinsip Transformasi Asbab-Asbab Zulumat</h3>
   <p>Asbab-Asbab Zulumat tidak boleh “diperbaiki dari dalam”. Ia hanya boleh diangkat apabila:</p>
   <ol>
@@ -1124,34 +1187,36 @@
     <li>mujahadah berlaku,</li>
     <li>sabar mengekalkan istiqamah.</li>
   </ol>
-
+  
   <p>Dalam keadaan ini:</p>
   <ul>
-    <li>zulumat tidak lagi memimpin,</li>
+    <li>Asbab-Asbab Zulumat tidak lagi memimpin,</li>
     <li>ia menjadi bahan mentah yang dipaksa tunduk,</li>
-    <li>ia boleh menjadi <strong>Asbab Mutlak Terbitan</strong>.</li>
+    <li>ia boleh menjadi <strong>Asbab-Asbab Mutlak Terbitan</strong>.</li>
   </ul>
-
+  
   <blockquote>
-    Zulumat tidak berubah kerana sistem diperbaiki.<br>
-    Zulumat berubah apabila hati manusia berubah melalui iman dan amal.
+    Asbab-Asbab Zulumat tidak berubah kerana sistem diperbaiki.<br>
+    Asbab-Asbab Zulumat berubah apabila hati manusia berubah melalui iman dan amal.
   </blockquote>
-
+  
+  <p>Prinsip ini selari dengan firman Allah: <span class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</span><sup><a href="#fn-4-5-3">[3]</a></sup>. Perubahan yang hakiki bermula dari dalam manusia, bukan dari struktur yang kosong daripada iman.</p>
+  
   <hr>
-
+  
   <h3>4.5.4 Contoh Transformasi dalam Wahyu</h3>
-
+  
   <h4>(1) Firaun — Kuasa yang runtuh</h4>
   <div class="arabic">
-    فَأَخَذَهُ اللَّهُ نَكَالَ الْآخِرَةِ وَالْأُولَىٰ
+‎    فَأَخَذَهُ اللَّهُ نَكَالَ الْآخِرَةِ وَالْأُولَىٰ
   </div>
   <div class="translation">
     “Maka Allah menyeksanya dengan azab di akhirat dan di dunia.”
-    <br>(an-Nāzi‘āt 79:25)
+    <br>(an-Nāzi‘āt 79:25)<sup><a href="#fn-4-5-4">[4]</a></sup>
   </div>
-
-  <p>Sistem Firaun tidak diubah dari dalam. Ia runtuh apabila berhadapan dengan iman Nabi Musa عليه السلام.</p>
-
+  
+  <p>Sistem Firaun tidak diubah dari dalam. Ia runtuh apabila berhadapan dengan iman Nabi Musa عليه السلام. Ini menunjukkan kuasa Asbab-Asbab Zulumat tidak berdiri sendiri; ia runtuh apabila Allah menzahirkan kebenaran-Nya.</p>
+  
   <h4>(2) Sahabat — Transformasi masyarakat</h4>
   <p>Masyarakat jahiliyyah tidak diperbaiki melalui sistem politik atau ekonomi.</p>
   <p>Ia berubah apabila:</p>
@@ -1160,96 +1225,106 @@
     <li>dakwah bergerak,</li>
     <li>pengorbanan berlaku.</li>
   </ul>
-
+  
   <div class="arabic">
-    كُنتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ
+‎    كُنتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ
   </div>
   <div class="translation">
     “Kamu adalah umat terbaik yang dilahirkan untuk manusia.”
-    <br>(Āli ‘Imrān 3:110)
+    <br>(Āli ‘Imrān 3:110)<sup><a href="#fn-4-5-5">[5]</a></sup>
   </div>
-
-  <p>Perubahan berlaku dari hati, bukan dari struktur.</p>
-
+  
+  <p>Perubahan berlaku dari hati, bukan dari struktur. Umat terbaik lahir apabila iman, amar makruf, dan nahi munkar hidup — bukan apabila sistem manusia dipuja.</p>
+  
   <h4>(3) Kaabah — Dari pusat syirik ke pusat tauhid</h4>
-  <p>Kaabah pernah dipenuhi berhala (Asbab Zulumat), tetapi:</p>
+  <p>Kaabah pernah dipenuhi berhala (Asbab-Asbab Zulumat), tetapi:</p>
   <ul>
     <li>tidak dimusnahkan struktur,</li>
     <li>yang diubah ialah aqidah manusia,</li>
     <li>akhirnya struktur menjadi pusat tauhid.</li>
   </ul>
-
+  
+  <p>Ini menunjukkan bahawa masalah utama bukan sentiasa pada bentuk luar, tetapi pada siapa yang memimpin hati dan atas dasar apa sesuatu struktur itu digunakan.</p>
+  
   <hr>
-
+  
   <h3>4.5.5 Kesilapan Besar dalam Menghadapi Asbab-Asbab Zulumat</h3>
   <ul>
     <li><strong>Menganggap sistem sebagai penyelamat</strong></li>
     <li><strong>Mengubah sistem tanpa membina iman</strong></li>
-    <li><strong>Melawan zulumat tanpa dakwah</strong></li>
+    <li><strong>Melawan Asbab-Asbab Zulumat tanpa dakwah</strong></li>
     <li><strong>Menyangka kuasa politik membawa hidayah</strong></li>
   </ul>
-
+  
   <p>Kesemua ini menyebabkan:</p>
   <ul>
     <li>perubahan hanya sementara,</li>
-    <li>zulumat kembali dalam bentuk lain,</li>
+    <li>Asbab-Asbab Zulumat kembali dalam bentuk lain,</li>
     <li>umat kehilangan arah tauhid.</li>
   </ul>
-
+  
   <blockquote>
-    Mengubah zulumat tanpa iman<br>
+    Mengubah Asbab-Asbab Zulumat tanpa iman<br>
     sama seperti menukar bentuk kegelapan tanpa membawa cahaya.
   </blockquote>
-
+  
+  <p>Selagi manusia tidak keluar daripada Asbab-Asbab Zulumat kepada nur, perubahan hanya berlaku pada lapisan luar, bukan pada akar masalah.</p>
+  
   <hr>
-
-  <h3>4.5.6 Prinsip Tauhidi dalam Menghadapi Zulumat</h3>
+  
+  <h3>4.5.6 Prinsip Tauhidi dalam Menghadapi Asbab-Asbab Zulumat</h3>
   <ul>
-    <li>Jangan jadikan zulumat sebagai sandaran.</li>
-    <li>Jangan jadikan zulumat sebagai musuh utama — fokus kepada pembinaan iman.</li>
-    <li>Gunakan zulumat hanya apabila ia tunduk kepada syariat.</li>
+    <li>Jangan jadikan Asbab-Asbab Zulumat sebagai sandaran.</li>
+    <li>Jangan jadikan Asbab-Asbab Zulumat sebagai musuh utama — fokus kepada pembinaan iman.</li>
+    <li>Gunakan Asbab-Asbab Zulumat hanya apabila ia tunduk kepada syariat.</li>
     <li>Utamakan dakwah, bukan konfrontasi.</li>
   </ul>
-
+  
   <p>Perjuangan sebenar bukan menukar sistem, tetapi menghidupkan iman dalam manusia.</p>
-
+  
+  <p>Apabila iman hidup, Allah sendiri mengeluarkan manusia daripada Asbab-Asbab Zulumat kepada nur. Maka fokus asas bukan membesarkan gelanggang gelap, tetapi menghidupkan cahaya wahyu dalam hati dan masyarakat.</p>
+  
   <hr>
-
+  
   <h3>4.5.7 Rumusan Tauhidi 4.5</h3>
   <ol>
     <li>Asbab-Asbab Zulumat tidak memberi kesan dan tidak boleh mengubah dirinya.</li>
     <li>Ia hanya berubah apabila ditundukkan oleh iman dan amal soleh.</li>
     <li>Perubahan sebenar bermula dari hati, bukan dari sistem.</li>
-    <li>Zulumat boleh menjadi khidmat apabila tunduk kepada tauhid.</li>
-    <li>Dakwah ialah jalan utama mengubah zulumat.</li>
+    <li>Asbab-Asbab Zulumat boleh menjadi khidmat apabila tunduk kepada tauhid.</li>
+    <li>Dakwah ialah jalan utama mengubah Asbab-Asbab Zulumat.</li>
   </ol>
-
+  
   <div class="insight-box">
     <h3>📌 Rumusan Besar</h3>
     <p>
-      Zulumat tidak dihapuskan dengan melawan.<br>
-      Zulumat hilang apabila cahaya iman masuk.<br>
-      Apabila iman hidup, zulumat akan runtuh atau tunduk dengan sendirinya.
+      Asbab-Asbab Zulumat tidak dihapuskan dengan melawan.<br>
+      Asbab-Asbab Zulumat hilang apabila cahaya iman masuk.<br>
+      Apabila iman hidup, Asbab-Asbab Zulumat akan runtuh atau tunduk dengan sendirinya.
     </p>
   </div>
-<hr>
-<h3>NOTA KAKI BAB 4.5</h3>
-<ul>
-  <li>【1】 An-Nāzi‘āt 79:25 — Firaun dihukum Allah; kuasa zulumat runtuh di hadapan Allah</li>
-  <li>【2】 Āli ‘Imrān 3:110 — Umat terbaik lahir melalui iman, amar makruf dan nahi munkar</li>
-  <li>【3】 Ar-Ra‘d 13:11 — Allah tidak mengubah keadaan sesuatu kaum sehingga mereka mengubah apa yang pada diri mereka</li>
-  <li>【4】 Al-Baqarah 2:257 — Allah mengeluarkan orang beriman daripada zulumat kepada nur</li>
-  <li>【5】 Ibrāhīm 14:1 — Wahyu diturunkan untuk mengeluarkan manusia daripada kegelapan kepada cahaya</li>
-</ul>
+
+  <hr>
+
+  <h3>NOTA KAKI BAB 4.5</h3>
+  <ul class="footnotes">
+    <li id="fn-4-5-1">[1] Al-Baqarah 2:257 — Allah mengeluarkan orang beriman daripada zulumat kepada nur.</li>
+    <li id="fn-4-5-2">[2] Ibrāhīm 14:1 — Wahyu diturunkan untuk mengeluarkan manusia daripada kegelapan kepada cahaya.</li>
+    <li id="fn-4-5-3">[3] Ar-Ra‘d 13:11 — Allah tidak mengubah keadaan sesuatu kaum sehingga mereka mengubah apa yang pada diri mereka.</li>
+    <li id="fn-4-5-4">[4] An-Nāzi‘āt 79:25 — Firaun dihukum Allah; kuasa Asbab-Asbab Zulumat runtuh di hadapan Allah.</li>
+    <li id="fn-4-5-5">[5] Āli ‘Imrān 3:110 — Umat terbaik lahir melalui iman, amar makruf, dan nahi munkar.</li>
+  </ul>
+
   <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
 </section>
 <!-- ============================== /BAB 4.5 ============================== -->
+
 <!-- ============================== BAB 4.6 ============================== -->
 <section class="section-card" id="4-6">
   <div class="badge-chapter">🟥 BAB 4.6</div>
   <h2>4.6 — KESILAPAN EPISTEMOLOGI: MENGAPA MANUSIA GAGAL MEMAHAMI ASBAB</h2>
   <p><em>Punca sebenar kegagalan manusia bukan pada amal, tetapi pada cara memahami sebab</em></p>
-
+  
   <h3>4.6.1 Akar Masalah: Salah Letak Sumber Kesan</h3>
   <p>Kesilapan terbesar manusia ialah:</p>
   <ul>
@@ -1257,66 +1332,72 @@
     <li>menganggap logik menentukan natijah,</li>
     <li>menganggap sistem mengubah realiti.</li>
   </ul>
-
+  
   <p>Sedangkan dalam tauhid:</p>
   <ul>
-    <li>sebab tidak memberi kesan,</li>
-    <li>logik tidak menentukan natijah,</li>
+    <li>Asbab-Asbab Fitrah tidak memberi kesan,</li>
+    <li>Asbab-Asbab Zulumat tidak memberi kesan,</li>
     <li>yang memberi kesan hanyalah Allah.</li>
   </ul>
-
+  
+  <p>Allah mengikat natijah dengan ketaatan kepada-Nya dan Rasul-Nya: <span class="arab">﴿ وَمَن يُطِعِ اللَّهَ وَرَسُولَهُ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</span><sup><a href="#fn-4-6-1">[1]</a></sup>.</p>
+  
   <blockquote>
     Kesan tidak datang daripada sebab,<br>
     tetapi daripada janji Allah yang diikat pada iman dan amal soleh.
   </blockquote>
-
+  
   <hr>
-
+  
   <h3>4.6.2 Tiga Kesilapan Besar dalam Melihat Asbab</h3>
-
-  <h4>(1) Menjadikan Asbab Fitrah sebagai sumber kesan</h4>
+  
+  <h4>(1) Menjadikan Asbab-Asbab Fitrah sebagai sumber kesan</h4>
   <ul>
     <li>Menganggap usaha menentukan hasil</li>
     <li>Menganggap sains menentukan realiti</li>
     <li>Menganggap strategi menentukan kemenangan</li>
   </ul>
-
+  
   <p><strong>Natijah:</strong></p>
   <ul>
     <li>hati bergantung kepada makhluk</li>
     <li>tauhid menjadi lemah</li>
   </ul>
-
-  <h4>(2) Menjadikan Asbab Zulumat sebagai jalan perubahan</h4>
+  
+  <h4>(2) Menjadikan Asbab-Asbab Zulumat sebagai jalan perubahan</h4>
   <ul>
     <li>Mengharap sistem manusia membaiki umat</li>
     <li>Mengharap kuasa politik membawa hidayah</li>
     <li>Mengharap struktur dunia membina iman</li>
   </ul>
-
+  
   <p><strong>Natijah:</strong></p>
   <ul>
     <li>perubahan menjadi superficial</li>
-    <li>zulumat terus berulang</li>
+    <li>Asbab-Asbab Zulumat terus berulang</li>
   </ul>
-
-  <h4>(3) Memisahkan Asbab Mutlak daripada realiti</h4>
+  
+  <p>Ini berlaku kerana manusia menjadikan hawa sebagai sumber hukum: <span class="arab">﴿ أَفَرَأَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَاهُ ﴾</span><sup><a href="#fn-4-6-2">[2]</a></sup>.</p>
+  
+  <h4>(3) Memisahkan Asbab-Asbab Mutlak daripada realiti</h4>
   <ul>
     <li>menganggap dakwah hanya ritual</li>
     <li>menganggap sabar hanya akhlak peribadi</li>
     <li>menganggap tawakkal hanya konsep spiritual</li>
   </ul>
-
+  
   <p><strong>Natijah:</strong></p>
   <ul>
-    <li>Asbab Mutlak tidak digunakan</li>
+    <li>Asbab-Asbab Mutlak tidak digunakan</li>
     <li>umat kehilangan sumber sebenar perubahan</li>
   </ul>
-
+  
+  <p>Sedangkan dakwah ialah amal yang paling tinggi dalam neraca wahyu: <span class="arab">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ ﴾</span><sup><a href="#fn-4-6-3">[3]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.6.3 Perbandingan Epistemologi: Islam vs Barat</h3>
-
+  
   <table>
     <tr>
       <th>Aspek</th>
@@ -1344,99 +1425,84 @@
       <td>Dapatkan redha Allah</td>
     </tr>
   </table>
-
+  
   <blockquote>
     Barat mengkaji sebab untuk mengawal dunia.<br>
     Islam menggunakan sebab untuk taat kepada Allah.
   </blockquote>
-
+  
   <hr>
-
+  
   <h3>4.6.4 Hakikat Ilmu dalam Tauhid</h3>
   <p>Ilmu bukan sekadar maklumat.</p>
-
+  
   <p><strong>Ilmu yang sebenar ialah:</strong></p>
   <ul>
     <li>ilmu yang menghubungkan hati kepada Allah,</li>
     <li>ilmu yang melahirkan amal mengikut Rasulullah ﷺ,</li>
     <li>ilmu yang menarik perhatian Allah.</li>
   </ul>
-
+  
   <blockquote>
     Ilmu yang tidak berpaut kepada Allah hanyalah maklumat,<br>
     dan maklumat tidak memberi kesan kepada hati.
   </blockquote>
-
+  
+  <p>Allah menggambarkan ilmu tanpa iman seperti beban yang tidak memberi manfaat: <span class="arab">﴿ كَمَثَلِ الْحِمَارِ يَحْمِلُ أَسْفَارًا ﴾</span><sup><a href="#fn-4-6-4">[4]</a></sup>.</p>
+  
   <p><strong>Natijah ilmu tanpa tauhid:</strong></p>
   <ul>
     <li>manusia semakin berkuasa,</li>
     <li>tetapi kehilangan makna,</li>
     <li>dan akhirnya membawa kerosakan.</li>
   </ul>
-
+  
   <hr>
-
-  <h3>4.6.5 Dalil Tauhidi</h3>
-
-  <div class="arabic">
-    وَمَن يُطِعِ اللَّهَ وَرَسُولَهُ فَقَدْ فَازَ فَوْزًا عَظِيمًا
-  </div>
-  <div class="translation">
-    “Dan sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.”
-    <br>(al-Ahzāb 33:71)
-  </div>
-
-  <p>Ayat ini menetapkan:</p>
-  <ul>
-    <li>taat = sebab,</li>
-    <li>kejayaan = kesan,</li>
-    <li>hubungan antara keduanya ialah janji Allah.</li>
-  </ul>
-
-  <hr>
-
-  <h3>4.6.6 Kesan Kesilapan Epistemologi</h3>
+  
+  <h3>4.6.5 Kesan Kesilapan Epistemologi</h3>
   <ul>
     <li>umat bergantung kepada sistem dunia,</li>
     <li>dakwah menjadi lemah,</li>
     <li>iman tidak masuk ke dalam hati,</li>
     <li>amal tidak memberi kesan,</li>
-    <li>zulumat terus mendominasi.</li>
+    <li>Asbab-Asbab Zulumat terus mendominasi.</li>
   </ul>
-
+  
   <blockquote>
     Masalah umat bukan kurang usaha,<br>
     tetapi salah memahami sumber kesan.
   </blockquote>
-
+  
   <hr>
-
-  <h3>4.6.7 Pembetulan Tauhidi</h3>
+  
+  <h3>4.6.6 Pembetulan Tauhidi</h3>
   <p>Untuk membetulkan kesilapan ini, manusia mesti kembali kepada tertib wahyu:</p>
   <ol>
     <li>menafikan kuasa sebab (Nafy),</li>
     <li>menetapkan kuasa Allah (Isbat),</li>
     <li>mengikuti cara Rasulullah ﷺ (Ittiba’).</li>
   </ol>
-
-  <p>Dan menghidupkan tiga amal utama:</p>
+  
+  <p>Dan menghidupkan Asbab-Asbab Mutlak:</p>
   <ul>
-    <li>dakwah</li>
-    <li>mujahadah</li>
-    <li>sabar</li>
+    <li>dakwah,</li>
+    <li>mujahadah,</li>
+    <li>sabar.</li>
   </ul>
-
+  
+  <p>Allah menjanjikan jalan kepada mereka yang bersungguh-sungguh: <span class="arab">﴿ وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</span><sup><a href="#fn-4-6-5">[5]</a></sup>.</p>
+  
   <hr>
-
-  <h3>4.6.8 Rumusan Tauhidi 4.6</h3>
+  
+  <h3>4.6.7 Rumusan Tauhidi 4.6</h3>
   <ol>
     <li>Kegagalan manusia berpunca daripada kesilapan memahami sebab.</li>
-    <li>Asbab Fitrah dan Zulumat bukan sumber kesan.</li>
-    <li>Hanya Asbab Mutlak membawa kepada janji Allah.</li>
+    <li>Asbab-Asbab Fitrah dan Asbab-Asbab Zulumat bukan sumber kesan.</li>
+    <li>Hanya Asbab-Asbab Mutlak membawa kepada janji Allah.</li>
     <li>Ilmu tanpa tauhid hanyalah maklumat.</li>
     <li>Pembetulan bermula dengan Nafy–Isbat–Ittiba’.</li>
   </ol>
-
+  
   <div class="insight-box">
     <h3>📌 Rumusan Besar</h3>
     <p>
@@ -1446,51 +1512,57 @@
       seluruh kehidupan akan tersalah arah.
     </p>
   </div>
-<hr>
-<h3>NOTA KAKI BAB 4.6</h3>
-<ul>
-  <li>【1】 Al-Aḥzāb 33:71 — Kejayaan besar diikat pada taat kepada Allah dan Rasul</li>
-  <li>【2】 Al-Jumu‘ah 62:5 — Ilmu tanpa kesan iman diumpamakan seperti keldai membawa kitab</li>
-  <li>【3】 Al-Jāthiyah 45:23 — Hawa nafsu boleh diangkat menjadi tuhan</li>
-  <li>【4】 Fuṣṣilat 41:33 — Dakwah ialah percakapan terbaik dan jalan amal</li>
-  <li>【5】 Al-‘Ankabūt 29:69 — Mujahadah membuka jalan hidayah daripada Allah</li>
-</ul>
+
+  <hr>
+
+  <h3>NOTA KAKI BAB 4.6</h3>
+  <ul class="footnotes">
+    <li id="fn-4-6-1">[1] Al-Aḥzāb 33:71 — Kejayaan diikat pada taat kepada Allah dan Rasul.</li>
+    <li id="fn-4-6-2">[2] Al-Jāthiyah 45:23 — Hawa nafsu boleh diangkat menjadi tuhan.</li>
+    <li id="fn-4-6-3">[3] Fuṣṣilat 41:33 — Dakwah ialah sebaik-baik perkataan.</li>
+    <li id="fn-4-6-4">[4] Al-Jumu‘ah 62:5 — Ilmu tanpa iman diumpamakan seperti keldai membawa kitab.</li>
+    <li id="fn-4-6-5">[5] Al-‘Ankabūt 29:69 — Mujahadah membawa hidayah.</li>
+  </ul>
+
   <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
 </section>
 <!-- ============================== /BAB 4.6 ============================== -->
+
 <!-- ============================== BAB 4.7 ============================== -->
 <section class="section-card" id="4-7">
   <div class="badge-chapter">🟥 BAB 4.7</div>
   <h2>4.7 — PENUTUP: TRANSFORMASI ASBAB SEBAGAI JALAN KEBANGKITAN UMAT</h2>
   <p><em>Perubahan hakiki tidak berlaku pada dunia, tetapi pada hubungan manusia dengan Allah</em></p>
-
+  
   <h3>4.7.1 Rumusan Besar Bab 4</h3>
   <p>Seluruh Bab 4 membuktikan satu hakikat:</p>
-
+  
   <blockquote>
     Perubahan sebenar tidak berlaku pada sebab,<br>
     tetapi pada cara manusia berhubung dengan Allah melalui sebab.
   </blockquote>
-
+  
   <p>Manusia tidak mengubah realiti dengan:</p>
   <ul>
-    <li>menambah Asbab Fitrah,</li>
-    <li>memperbaiki Asbab Zulumat,</li>
+    <li>menambah Asbab-Asbab Fitrah,</li>
+    <li>memperbaiki Asbab-Asbab Zulumat,</li>
     <li>atau menyusun strategi dunia.</li>
   </ul>
-
+  
   <p>Sebaliknya, perubahan berlaku apabila:</p>
   <ul>
     <li>iman hidup dalam hati,</li>
     <li>amal soleh hidup dalam kehidupan,</li>
-    <li>Asbab Mutlak dihidupkan.</li>
+    <li>Asbab-Asbab Mutlak dihidupkan.</li>
   </ul>
-
+  
+  <p>Allah menetapkan bahawa pertolongan-Nya datang apabila agama-Nya ditolong: <span class="arab">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ ﴾</span><sup><a href="#fn-4-7-1">[1]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.7.2 Tertib Transformasi Tauhidi</h3>
   <p>Transformasi Asbab mengikuti tertib wahyu yang tetap:</p>
-
+  
   <ol>
     <li><strong>Dakwah</strong> → menghidupkan hati dan mengeluarkan manusia daripada diri</li>
     <li><strong>Mujahadah</strong> → menundukkan nafsu dan dunia</li>
@@ -1498,7 +1570,7 @@
     <li><strong>Solat khusyuk</strong> → tanda iman telah masuk ke dalam hati</li>
     <li><strong>Redha Allah</strong> → natijah tertinggi</li>
   </ol>
-
+  
   <blockquote>
     Dakwah menggerakkan,<br>
     Mujahadah membersihkan,<br>
@@ -1506,11 +1578,13 @@
     Solat menenangkan,<br>
     Redha Allah menyempurnakan.
   </blockquote>
-
+  
+  <p>Tertib ini selari dengan perintah Allah agar kembali kepada sabar dan solat: <span class="arab">﴿ وَاسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ ﴾</span><sup><a href="#fn-4-7-2">[2]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.7.3 Hubungan Tiga Asbab dalam Transformasi</h3>
-
+  
   <table>
     <tr>
       <th>Jenis Asbab</th>
@@ -1518,31 +1592,31 @@
       <th>Status Tauhidi</th>
     </tr>
     <tr>
-      <td><strong>Asbab Mutlak</strong></td>
+      <td><strong>Asbab-Asbab Mutlak</strong></td>
       <td>Jalan ketaatan (iman + amal soleh)</td>
       <td>Sumber janji Allah</td>
     </tr>
     <tr>
-      <td><strong>Asbab Fitrah</strong></td>
+      <td><strong>Asbab-Asbab Fitrah</strong></td>
       <td>Alat kehidupan</td>
       <td>Neutral (khidmat / hijab)</td>
     </tr>
     <tr>
-      <td><strong>Asbab Zulumat</strong></td>
+      <td><strong>Asbab-Asbab Zulumat</strong></td>
       <td>Sistem nilai manusia</td>
       <td>Gelap (perlu ditundukkan)</td>
     </tr>
   </table>
-
+  
   <p>Transformasi berlaku apabila:</p>
   <ul>
-    <li>Asbab Mutlak dihidupkan,</li>
-    <li>Asbab Fitrah ditundukkan,</li>
-    <li>Asbab Zulumat dikalahkan atau dijadikan khidmat.</li>
+    <li>Asbab-Asbab Mutlak dihidupkan,</li>
+    <li>Asbab-Asbab Fitrah ditundukkan,</li>
+    <li>Asbab-Asbab Zulumat dikalahkan atau dijadikan khidmat.</li>
   </ul>
-
+  
   <hr>
-
+  
   <h3>4.7.4 Hakikat Kebangkitan Umat</h3>
   <p>Kebangkitan umat bukan bermula dengan:</p>
   <ul>
@@ -1550,7 +1624,7 @@
     <li>kekuatan ekonomi,</li>
     <li>atau kemajuan teknologi.</li>
   </ul>
-
+  
   <p>Kebangkitan bermula apabila:</p>
   <ul>
     <li>iman masuk ke dalam hati,</li>
@@ -1558,89 +1632,95 @@
     <li>amal ijtima’i terbina melalui mesyuarat,</li>
     <li>suasana iman terbentuk.</li>
   </ul>
-
+  
   <blockquote>
     Umat tidak bangkit dengan sistem,<br>
     tetapi sistem bangkit apabila umat hidup dengan iman.
   </blockquote>
-
+  
+  <p>Allah tidak mengubah keadaan sesuatu kaum sehingga mereka mengubah apa yang ada pada diri mereka: <span class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</span><sup><a href="#fn-4-7-3">[3]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.7.5 Dalil Tauhidi</h3>
-
+  
   <div class="arabic">
-    إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ
+‎    إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ
   </div>
   <div class="translation">
     “Jika kamu menolong agama Allah, nescaya Dia akan menolong kamu dan meneguhkan kedudukan kamu.”
-    <br>(Muḥammad 47:7)
+    <br>(Muḥammad 47:7)<sup><a href="#fn-4-7-1-ref">[1]</a></sup>
   </div>
-
+  
   <p>Ayat ini menjadi asas:</p>
   <ul>
     <li>amal → sebab,</li>
     <li>nusrah → kesan,</li>
     <li>hubungan antara keduanya ialah janji Allah.</li>
   </ul>
-
+  
+  <p>Maka kebangkitan umat bukan hasil automatik daripada Asbab-Asbab Fitrah atau Asbab-Asbab Zulumat, tetapi hasil janji Allah ke atas Asbab-Asbab Mutlak yang hidup.</p>
+  
   <hr>
-
+  
   <h3>4.7.6 Kesilapan Umat Hari Ini</h3>
   <ul>
-    <li>mencari solusi dalam Asbab Fitrah,</li>
-    <li>bergantung kepada Asbab Zulumat,</li>
-    <li>mengabaikan Asbab Mutlak.</li>
+    <li>mencari solusi dalam Asbab-Asbab Fitrah,</li>
+    <li>bergantung kepada Asbab-Asbab Zulumat,</li>
+    <li>mengabaikan Asbab-Asbab Mutlak.</li>
   </ul>
-
+  
   <p>Akibatnya:</p>
   <ul>
     <li>usaha banyak tetapi tiada kesan,</li>
     <li>ilmu banyak tetapi tiada perubahan,</li>
     <li>sistem banyak tetapi umat lemah.</li>
   </ul>
-
+  
   <blockquote>
     Umat tidak gagal kerana kurang usaha,<br>
     tetapi kerana meninggalkan jalan yang Allah tetapkan.
   </blockquote>
-
+  
+  <p>Allah juga menegaskan bahawa Dia tidak mengubah nikmat yang telah diberikan sehingga manusia sendiri mengubah apa yang ada pada diri mereka: <span class="arab">﴿ ذَٰلِكَ بِأَنَّ اللَّهَ لَمْ يَكُ مُغَيِّرًا نِّعْمَةً أَنْعَمَهَا عَلَىٰ قَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</span><sup><a href="#fn-4-7-4">[4]</a></sup>.</p>
+  
   <hr>
-
+  
   <h3>4.7.7 Jambatan ke Bab Seterusnya</h3>
   <p>Bab ini telah menjelaskan bahawa:</p>
   <ul>
-    <li>Asbab Mutlak ialah pusat perubahan,</li>
-    <li>Asbab Fitrah dan Zulumat mesti ditundukkan.</li>
+    <li>Asbab-Asbab Mutlak ialah pusat perubahan,</li>
+    <li>Asbab-Asbab Fitrah dan Asbab-Asbab Zulumat mesti ditundukkan.</li>
   </ul>
-
+  
   <p>Namun satu persoalan penting masih belum dijawab:</p>
-
+  
   <blockquote>
-    Bagaimana Asbab Mutlak ini berfungsi dalam dua bentuk:
+    Bagaimana Asbab-Asbab Mutlak ini berfungsi dalam dua bentuk:
     <br><br>
     ➤ secara langsung (amal wahyu)<br>
     ➤ dan secara terbitan (ekosistem iman)?
   </blockquote>
-
-  <p>Jawapan kepada persoalan ini akan dibincangkan dalam Bab seterusnya:</p>
-
+  
+  <p>Jawapan kepada persoalan ini akan dibincangkan dalam Bab seterusnya.</p>
+  
   <div class="insight-box">
     <h3>➡️ BAB 5</h3>
-    <p><strong>Dua Lapisan Asbab Mutlak:</strong><br>
+    <p><strong>Dua Lapisan Asbab-Asbab Mutlak:</strong><br>
     Asli dan Terbitan</p>
   </div>
-
+  
   <hr>
-
+  
   <h3>4.7.8 Rumusan Akhir Bab 4</h3>
   <ol>
     <li>Transformasi sebenar berlaku pada hubungan manusia dengan Allah.</li>
-    <li>Asbab Mutlak ialah jalan perubahan yang Allah tetapkan.</li>
-    <li>Asbab Fitrah dan Zulumat bukan sumber kesan.</li>
+    <li>Asbab-Asbab Mutlak ialah jalan perubahan yang Allah tetapkan.</li>
+    <li>Asbab-Asbab Fitrah dan Asbab-Asbab Zulumat bukan sumber kesan.</li>
     <li>Kebangkitan umat bermula dengan iman, bukan sistem.</li>
     <li>Tertib wahyu ialah satu-satunya jalan yang membawa kepada nusrah Allah.</li>
   </ol>
-
+  
   <div class="insight-box">
     <h3>📌 Rumusan Penutup</h3>
     <p>
@@ -1650,51 +1730,54 @@
       maka Allah akan mengubah segala sesuatu.
     </p>
   </div>
-<hr>
-<h3>NOTA KAKI BAB 4.7</h3>
-<ul>
-  <li>【1】 Muḥammad 47:7 — Nusrah Allah datang apabila agama Allah ditolong</li>
-  <li>【2】 Ar-Ra‘d 13:11 — Perubahan sebenar bermula daripada perubahan dalaman</li>
-  <li>【3】 Al-Baqarah 2:45 — Sabar dan solat ialah jalan pertolongan</li>
-  <li>【4】 At-Tawbah 9:100 — Redha Allah ialah natijah tertinggi jalan Muhajirin dan Ansar</li>
-  <li>【5】 Al-Anfāl 8:53 — Allah tidak mengubah nikmat sehingga manusia mengubah apa yang pada diri mereka</li>
-</ul>
+
+  <hr>
+
+  <h3>NOTA KAKI BAB 4.7</h3>
+  <ul class="footnotes">
+    <li id="fn-4-7-1">[1] Muḥammad 47:7 — Nusrah Allah datang apabila agama Allah ditolong.</li>
+    <li id="fn-4-7-2">[2] Al-Baqarah 2:45 — Sabar dan solat ialah jalan pertolongan.</li>
+    <li id="fn-4-7-3">[3] Ar-Ra‘d 13:11 — Perubahan sebenar bermula daripada perubahan dalaman.</li>
+    <li id="fn-4-7-4">[4] Al-Anfāl 8:53 — Allah tidak mengubah nikmat sehingga manusia mengubah apa yang pada diri mereka.</li>
+    <li id="fn-4-7-5">[5] At-Tawbah 9:100 — Redha Allah ialah natijah tertinggi jalan Muhajirin dan Ansar.</li>
+  </ul>
+
   <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
 </section>
 <!-- ============================== /BAB 4.7 ============================== -->
-   <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
-      </section>
-
-    </main>
-
-    <footer>
-      <div class="wrap">
-        <p>© 3asbab.org — Arkib bacaan sahaja. Bab 4: Transformasi Asbab.</p>
-      </div>
-    </footer>
-
-  </div>
-
-  <script>
-    function downloadPDF() {
-      const btn = document.querySelector('.btn-pdf');
-      const originalText = btn.innerHTML;
-      btn.innerHTML = '⏳ Menyediakan PDF...';
-      btn.disabled = true;
-
-      const coverTitle = document.getElementById('pdf-cover-title');
-      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
-      const metaTitle = document.getElementById('pdf-meta-title');
-
-      if (coverTitle) coverTitle.innerHTML = 'Bab 4 — TRANSFORMASI ASBAB';
-      if (coverSubtitle) coverSubtitle.textContent = 'Memahami proses menukar asbab kepada tertib Tauhidi';
-      if (metaTitle) metaTitle.textContent = 'Bab 4 — TRANSFORMASI ASBAB';
-
-      setTimeout(() => {
-        window.print();
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-          btn.disabled = false;
-        }, 500);
-      }, 100);
-    }
+  <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
+      </section>
+ 
+    </main>
+ 
+    <footer>
+      <div class="wrap">
+        <p>© 3asbab.org — Arkib bacaan sahaja. Bab 4: Transformasi Asbab.</p>
+      </div>
+    </footer>
+ 
+  </div>
+ 
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+ 
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+ 
+      if (coverTitle) coverTitle.innerHTML = 'Bab 4 — TRANSFORMASI ASBAB';
+      if (coverSubtitle) coverSubtitle.textContent = 'Memahami proses menukar asbab kepada tertib Tauhidi';
+      if (metaTitle) metaTitle.textContent = 'Bab 4 — TRANSFORMASI ASBAB';
+ 
+      setTimeout(() => {
+        window.print();
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 100);
+    }
