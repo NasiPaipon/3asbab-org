@@ -230,7 +230,8 @@
 
     /* ── BASIC CONTENT ── */
     .section {
-      padding: 2.5rem 0;
+  padding: 2.5rem 1.2rem;
+}
       border-bottom: 1px solid var(--rule-light);
     }
 
@@ -378,6 +379,13 @@
       border-radius: 0 0.6rem 0.6rem 0;
       padding: 0.8rem 1.2rem;
       margin: 1rem 0;
+blockquote,
+.translation,
+.callout,
+.insight-box {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
       font-size: 0.92rem;
       color: var(--ink-soft);
     }
@@ -669,7 +677,10 @@
 
     @media (max-width: 640px) {
       body { font-size: 16px; }
-
+.section {
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+}
       main,
       .page-header {
         padding-left: 1.2rem;
