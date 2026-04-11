@@ -121,12 +121,299 @@
     main {
       padding: 1.2rem 0 3rem;
     }
+
+    .badge-chapter {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      background: #fef3c7;
+      color: #b45309;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 1.8rem 0 0.75rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.9rem;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin: 1.2rem 0 0.5rem;
+      font-weight: 600;
+      color: #0b3b2a;
+    }
+
+    p { margin: 0.6rem 0; }
+
+    ul, ol {
+      margin: 0.5rem 0 0.8rem 1.4rem;
+    }
+
+    li { margin: 0.3rem 0; }
+
+    .section-card {
+      background: var(--bg-soft);
+      border-radius: 1.2rem;
+      padding: 1.2rem 1.4rem;
+      margin: 1.2rem 0;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .arabic {
+      font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
+      font-size: 1.6rem;
+      line-height: 1.8;
+      direction: rtl;
+      text-align: right;
+      margin: 0.8rem 0;
+      color: #1e293b;
+    }
+
+    .translation {
+      background: #f8fafc;
+      padding: 0.6rem 1rem;
+      border-radius: 0.8rem;
+      margin: 0.5rem 0 1rem;
+      border-left: 3px solid var(--accent);
+      font-size: 0.95rem;
+    }
+
+    blockquote {
+      background: var(--accent-light);
+      border-radius: 0.8rem;
+      padding: 0.8rem 1.2rem;
+      margin: 1rem 0;
+      font-style: normal;
+    }
+
+    .insight-box {
+      background: #f1f5f9;
+      padding: 0.8rem 1.2rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border-light);
+      padding: 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+
+    hr {
+      margin: 1.5rem 0;
+      border: 0;
+      height: 1px;
+      background: var(--border-light);
+    }
+
+    .footnote {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
+    }
+
+    .toplink {
+      font-size: 0.75rem;
+      margin-top: 0.8rem;
+      display: inline-block;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .pdf-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0 8px;
+    }
+
+    .btn-pdf {
+      appearance: none;
+      border: 1px solid var(--pdf-border);
+      background: #fff;
+      color: var(--pdf-text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
+
+    .btn-pdf:hover {
+      border-color: var(--pdf-accent);
+      background: var(--pdf-accent-soft);
+    }
+
+    .btn-pdf:active {
+      transform: translateY(1px);
+    }
+
+    .no-print { display: block; }
+    .pdf-only { display: none; }
+
+    .pdf-exporting .pdf-only { display: block !important; }
+
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink {
+      display: none !important;
+    }
+
+    .pdf-shell { background: #fff; }
+
+    .pdf-cover { display: none; }
+
+    .pdf-cover-inner {
+      min-height: 260mm;
+      padding: 28mm 18mm 24mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--pdf-paper);
+      color: var(--pdf-text);
+    }
+
+    .pdf-cover-top {
+      border-top: 4px solid var(--pdf-accent);
+      padding-top: 12mm;
+    }
+
+    .pdf-cover-brand {
+      font-size: 0.95rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--pdf-muted);
+      margin-bottom: 10mm;
+    }
+
+    .pdf-cover-series {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 6mm;
+    }
+
+    .pdf-cover-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 5mm;
+      font-weight: 800;
+    }
+
+    .pdf-cover-subtitle {
+      font-size: 1rem;
+      color: var(--pdf-muted);
+      margin: 0;
+    }
+
+    .pdf-cover-bottom {
+      border-top: 1px solid var(--pdf-border);
+      padding-top: 8mm;
+      font-size: 0.95rem;
+      color: var(--pdf-muted);
+    }
+
+    .pdf-meta-page { display: none; }
+
+    .pdf-meta-inner {
+      min-height: 240mm;
+      padding: 20mm 16mm;
+      background: #fff;
+      color: var(--pdf-text);
+    }
+
+    .pdf-meta-inner h2 {
+      border: 0;
+      padding: 0;
+      margin: 0 0 10mm;
+      font-size: 1.4rem;
+    }
+
+    .pdf-meta-list p {
+      margin: 0 0 6mm;
+    }
+
+    .pdf-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .pdf-avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      body { margin: 0; padding: 0; }
+
+      .no-print,
+      .pdf-toolbar,
+      .topbar,
+      .jump,
+      .toplink {
+        display: none !important;
+      }
+
+      .pdf-only,
+      .pdf-cover,
+      .pdf-meta-page {
+        display: block !important;
+      }
+
+      .section-card,
+      blockquote,
+      .insight-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      h2, h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section-card { padding: 1rem; }
+      .arabic { font-size: 1.3rem; }
+    }
   </style>
 </head>
 <body>
 
-<script>
-const DOC_META = {
+  <script>
+    const DOC_META = {
   pageTitle: "Bab 10 — MANHAJ DAKWAH TAUHIDI",
   shortTitle: "Bab 10",
   subtitle: "Dakwah Islamiah, Dakwah Islahiah & Mekanisme Pembinaan Iman dalam Kerangka 3 Asbab",
@@ -152,46 +439,71 @@ const DOC_META = {
     { id: "10-11", label: "10.11" }
   ]
 };
-</script>
+  </script>
 
-<div class="topbar no-print">
-  <div class="wrap">
-    <nav>
-      <span class="brand">3asbab.org</span>
-      <a href="index.html">🏠 Home</a>
-      <a href="bab-9.html">← Bab 9</a>
-      <a href="bab-10.html" style="font-weight:600;">Bab 10</a>
-      <a href="bab-11.html">Bab 11 →</a>
-    </nav>
-  </div>
-</div>
-
-<header class="wrap" id="top">
-  <div class="meta">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
-  <h1>Bab 10 — MANHAJ DAKWAH TAUHIDI</h1>
-  <div class="meta">Dakwah Tauhidi, Islahiah &amp; Pembinaan Iman | Tauhid Amali</div>
-</header>
-
-<div class="jump no-print">
-  <div class="wrap">
-    <div class="jump-inner">
-      <strong>🧭 Lompat ke:</strong>
-      <a href="#10-1">10.1</a>
-      <a href="#10-2">10.2</a>
-      <a href="#10-3">10.3</a>
-      <a href="#10-4">10.4</a>
-      <a href="#10-5">10.5</a>
-      <a href="#10-6">10.6</a>
-      <a href="#10-7">10.7</a>
-      <a href="#10-8">10.8</a>
-      <a href="#10-9">10.9</a>
-      <a href="#10-10">10.10</a>
-      <a href="#10-11">10.11</a>
+  <div class="topbar no-print">
+    <div class="wrap">
+      <nav>
+        <span class="brand">3asbab.org</span>
+        <a href="index.html">🏠 Home</a>
+        <a id="nav-prev" href="bab-9.html">← Bab 9</a>
+        <a id="nav-current" href="bab-10.html" style="font-weight:600;">Bab 10</a>
+        <a id="nav-next" href="bab-11.html">Bab 11 →</a>
+      </nav>
     </div>
   </div>
-</div>
 
-<main class="wrap">
+  <div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
+    </div>
+  </div>
+
+  <div id="pdf-shell" class="pdf-shell">
+
+    <div class="pdf-cover pdf-only">
+      <div class="pdf-cover-inner">
+        <div class="pdf-cover-top">
+          <div class="pdf-cover-brand">3asbab.org</div>
+          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 10 — MANHAJ DAKWAH TAUHIDI</h1>
+          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Dakwah Islamiah, Dakwah Islahiah & Mekanisme Pembinaan Iman dalam Kerangka 3 Asbab</p>
+        </div>
+        <div class="pdf-cover-bottom">
+          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pdf-meta-page pdf-only pdf-break">
+      <div class="pdf-meta-inner">
+        <h2>Maklumat Dokumen</h2>
+        <div class="pdf-meta-list">
+          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 10 — MANHAJ DAKWAH TAUHIDI</span></p>
+          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+          <p><strong>Laman:</strong> 3asbab.org</p>
+          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+        </div>
+      </div>
+    </div>
+
+    <header class="wrap" id="top">
+      <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+      <h1 id="page-title">Bab 10 — MANHAJ DAKWAH TAUHIDI</h1>
+      <div class="meta" id="category-line">Dakwah Tauhidi, Islahiah &amp; Pembinaan Iman | Tauhid Amali</div>
+    </header>
+
+    <div class="jump no-print">
+      <div class="wrap">
+        <div class="jump-inner" id="jump-links">
+          <strong>🧭 Lompat ke:</strong>
+        </div>
+      </div>
+    </div>
+
+    <main class="wrap">
 
 <section class="section-card" id="11-1">
   <div class="badge-chapter">🟥 BAB 11.1</div>
