@@ -1,205 +1,686 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 15 — NUSRAH ALLAH | 3asbab.org</title>
   <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
+    * {
       margin: 0;
-      background: var(--bg);
-      color:#111;
+      padding: 0;
+      box-sizing: border-box;
     }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
+ 
+    :root {
+      --max-width: 920px;
+      --border-light: #e2e8f0;
+      --bg-soft: #fafcff;
+      --muted: #4a5568;
+      --accent: #0f7b4a;
+      --accent-light: #e6f4ed;
+      --text-dark: #1a202c;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+ 
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
     }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
+ 
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
+ 
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+      background: #ffffff;
+      color: var(--text-dark);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-wrap: break-word;
     }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
+ 
+    .wrap {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding-left: clamp(1.15rem, 4vw, 1.8rem);
+      padding-right: clamp(1.15rem, 4vw, 1.8rem);
     }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
-    }
-
-    /* Lompat ke... */
-    .jump{
+ 
+    .topbar {
+      border-bottom: 1px solid var(--border-light);
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
+      z-index: 30;
+      background: rgba(255,255,255,0.96);
       backdrop-filter: blur(6px);
     }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
+ 
+    .topbar nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.8rem 0;
+      min-height: 56px;
     }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
+ 
+    .topbar a {
+      text-decoration: none;
+      font-size: 0.92rem;
+      color: var(--text-dark);
+    }
+ 
+    .topbar a:hover {
+      color: var(--accent);
+    }
+ 
+    .brand {
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+ 
+    header {
+      padding: 1.5rem 0 0.65rem;
+    }
+ 
+    h1 {
+      font-size: clamp(1.85rem, 4vw, 2.45rem);
+      line-height: 1.25;
+      margin: 0.3rem 0 0.55rem;
+      letter-spacing: -0.01em;
+    }
+ 
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+      margin: 0.45rem 0;
+    }
+ 
+    .jump {
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 56px;
+      z-index: 20;
+      background: rgba(255,255,255,0.98);
+    }
+ 
+    .jump-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.75rem 0;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+ 
+    .jump a {
+      padding: 0.24rem 0.72rem;
       border-radius: 999px;
-      background:#fff;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.12s ease;
+      color: var(--text-dark);
     }
-
-    main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
+ 
+    .jump a:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+      color: var(--accent);
     }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
+ 
+    main {
+      padding: 1.2rem 0 3rem;
     }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
+ 
+    .badge-chapter {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      background: #fef3c7;
+      color: #b45309;
+      padding: 0.22rem 0.82rem;
+      border-radius: 999px;
+      margin-bottom: 0.8rem;
     }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
-    }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
+ 
+    h2 {
+      font-size: 1.6rem;
+      line-height: 1.35;
+      margin: 1.8rem 0 0.75rem;
       border-left: 4px solid var(--accent);
-      background: #f8fffb;
+      padding-left: 0.9rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
     }
-    .arab{
-      font-size: 20px;
+ 
+    h3 {
+      font-size: 1.24rem;
+      line-height: 1.45;
+      margin: 1.2rem 0 0.52rem;
+      font-weight: 700;
+      color: #0b3b2a;
+    }
+ 
+    h4 {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin: 1rem 0 0.45rem;
+      font-weight: 700;
+      color: #134e3a;
+    }
+ 
+    p {
+      margin: 0.72rem 0;
+    }
+ 
+    ul,
+    ol {
+      margin: 0.55rem 0 0.95rem 1.4rem;
+      padding-left: 0.2rem;
+    }
+ 
+    li {
+      margin: 0.34rem 0;
+      line-height: 1.75;
+    }
+ 
+    strong {
+      font-weight: 700;
+    }
+ 
+    em {
+      font-style: italic;
+    }
+ 
+    .section-card {
+      background: var(--bg-soft);
+      border-radius: 1.2rem;
+      padding: 1.25rem 1.4rem;
+      margin: 1.2rem 0;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+ 
+    .arab,
+    .arabic {
+      font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif;
+      color: #1e293b;
+    }
+ 
+    .arab {
+      direction: rtl;
+      unicode-bidi: embed;
+      font-size: 1.12em;
+      line-height: 1.9;
+      white-space: normal;
+    }
+ 
+    .arabic {
+      font-size: 1.62rem;
       line-height: 1.9;
       direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
+      text-align: right;
+      margin: 0.85rem 0;
     }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
+ 
+    .translation {
+      background: #f8fafc;
+      padding: 0.7rem 1rem;
+      border-radius: 0.8rem;
+      margin: 0.55rem 0 1rem;
+      border-left: 3px solid var(--accent);
+      font-size: 0.96rem;
+      line-height: 1.75;
     }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration:none;
+ 
+    blockquote {
+      background: var(--accent-light);
+      border-radius: 0.8rem;
+      padding: 0.9rem 1.15rem;
+      margin: 1rem 0;
+      font-style: normal;
+      line-height: 1.8;
     }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
-      color: var(--muted);
-      font-size: 14px;
+ 
+    .insight-box {
+      background: #f1f5f9;
+      padding: 0.9rem 1.15rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+      line-height: 1.75;
     }
-    footer a{color:inherit}
-    /* Nota kaki */
-    .footnote{
-      font-size:13px;
-      color:var(--muted);
-      border-top:1px dashed var(--border);
-      margin-top:20px;
-      padding-top:10px;
+ 
+    .insight-box h3 {
+      margin-top: 0;
     }
-    /* Gaya jadual perbandingan */
-    .comparison-table {
+ 
+    table {
       width: 100%;
       border-collapse: collapse;
-      margin: 15px 0;
+      margin: 1rem 0;
+      font-size: 0.94rem;
+      background: #fff;
     }
-    .comparison-table th {
-      background: var(--soft);
-      font-weight: 600;
+ 
+    th,
+    td {
+      border: 1px solid var(--border-light);
+      padding: 0.68rem;
       text-align: left;
-      padding: 10px 6px;
-      border: 1px solid var(--border);
-    }
-    .comparison-table td {
-      padding: 8px 6px;
-      border: 1px solid var(--border);
       vertical-align: top;
+      line-height: 1.65;
+    }
+ 
+    th {
+      background: #f1f5f9;
+      font-weight: 700;
+    }
+ 
+    hr {
+      margin: 1.5rem 0;
+      border: 0;
+      height: 1px;
+      background: var(--border-light);
+    }
+ 
+    .footnote {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
+    }
+ 
+    .footnotes {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
+      padding-left: 1.2rem;
+    }
+ 
+    .footnotes li {
+      margin: 0.38rem 0;
+      line-height: 1.65;
+    }
+ 
+    .footnotes a,
+    .footnote a,
+    sup a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+ 
+    .toplink {
+      font-size: 0.78rem;
+      margin-top: 0.85rem;
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+    }
+ 
+    .toplink:hover {
+      text-decoration: underline;
+    }
+ 
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 1rem;
+    }
+ 
+    .pdf-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0 8px;
+    }
+ 
+    .btn-pdf {
+      appearance: none;
+      border: 1px solid var(--pdf-border);
+      background: #fff;
+      color: var(--pdf-text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
+ 
+    .btn-pdf:hover {
+      border-color: var(--pdf-accent);
+      background: var(--pdf-accent-soft);
+    }
+ 
+    .btn-pdf:active {
+      transform: translateY(1px);
+    }
+ 
+    .no-print {
+      display: block;
+    }
+ 
+    .pdf-only {
+      display: none;
+    }
+ 
+    .pdf-exporting .pdf-only {
+      display: block !important;
+    }
+ 
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink {
+      display: none !important;
+    }
+ 
+    .pdf-shell {
+      background: #fff;
+    }
+ 
+    .pdf-cover {
+      display: none;
+    }
+ 
+    .pdf-cover-inner {
+      min-height: 260mm;
+      padding: 28mm 18mm 24mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--pdf-paper);
+      color: var(--pdf-text);
+    }
+ 
+    .pdf-cover-top {
+      border-top: 4px solid var(--pdf-accent);
+      padding-top: 12mm;
+    }
+ 
+    .pdf-cover-brand {
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--pdf-muted);
+      margin-bottom: 10mm;
+    }
+ 
+    .pdf-cover-series {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 6mm;
+    }
+ 
+    .pdf-cover-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 5mm;
+      font-weight: 800;
+    }
+ 
+    .pdf-cover-subtitle {
+      font-size: 1rem;
+      color: var(--pdf-muted);
+      margin: 0;
+    }
+ 
+    .pdf-cover-bottom {
+      border-top: 1px solid var(--pdf-border);
+      padding-top: 8mm;
+      font-size: 0.95rem;
+      color: var(--pdf-muted);
+    }
+ 
+    .pdf-meta-page {
+      display: none;
+    }
+ 
+    .pdf-meta-inner {
+      min-height: 240mm;
+      padding: 20mm 16mm;
+      background: #fff;
+      color: var(--pdf-text);
+    }
+ 
+    .pdf-meta-inner h2 {
+      border: 0;
+      padding: 0;
+      margin: 0 0 10mm;
+      font-size: 1.4rem;
+    }
+ 
+    .pdf-meta-list p {
+      margin: 0 0 6mm;
+    }
+ 
+    .pdf-break {
+      break-before: page;
+      page-break-before: always;
+    }
+ 
+    .pdf-avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+ 
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+ 
+      .no-print,
+      .pdf-toolbar,
+      .topbar,
+      .jump,
+      .toplink {
+        display: none !important;
+      }
+ 
+      .pdf-only,
+      .pdf-cover,
+      .pdf-meta-page {
+        display: block !important;
+      }
+ 
+      .section-card,
+      blockquote,
+      .insight-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+ 
+      h2,
+      h3,
+      h4 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+ 
+    @media (max-width: 640px) {
+      .wrap {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+      }
+ 
+      .topbar nav {
+        gap: 0.75rem;
+        min-height: 52px;
+      }
+ 
+      .jump {
+        top: 52px;
+      }
+ 
+      .section-card {
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+      }
+ 
+      h1 {
+        font-size: 1.75rem;
+      }
+ 
+      h2 {
+        font-size: 1.34rem;
+        padding-left: 0.75rem;
+      }
+ 
+      h3 {
+        font-size: 1.1rem;
+      }
+ 
+      h4 {
+        font-size: 1rem;
+      }
+ 
+      .arab {
+        font-size: 1.08em;
+      }
+ 
+      .arabic {
+        font-size: 1.34rem;
+      }
+ 
+      table {
+        font-size: 0.88rem;
+      }
+ 
+      th,
+      td {
+        padding: 0.58rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- Top nav -->
-  <div class="topbar">
+  <script>
+    const DOC_META = {
+      pageTitle: "Bab 15 — NUSRAH ALLAH",
+      shortTitle: "Bab 15",
+      subtitle: "Nusrah Allah dalam Kerangka 3 Asbab",
+      headerLine: "📖 Kerangka 3 Asbab — Arkib Baca Sahaja",
+      categoryLine: "Nusrah Allah, Janji Ilahi &amp; Transformasi Tauhidi | Tauhid Amali",
+      currentFile: "bab-15.html",
+      prevFile: "bab-14.html",
+      prevLabel: "Bab 14",
+      nextFile: "bab-16.html",
+      nextLabel: "Bab 16",
+      jumpLinks: [
+        { id: "15-0", label: "15.0" },
+        { id: "15-1", label: "15.1" },
+        { id: "15-2", label: "15.2" },
+        { id: "15-3", label: "15.3" },
+        { id: "15-4", label: "15.4" },
+        { id: "15-5", label: "15.5" },
+        { id: "15-6", label: "15.6" },
+        { id: "15-7", label: "15.7" },
+        { id: "15-8", label: "15.8" },
+        { id: "15-9", label: "15.9" },
+        { id: "15-10", label: "15.10" },
+        { id: "15-11", label: "15.11" },
+        { id: "15-12", label: "15.12" },
+        { id: "15-13", label: "15.13" },
+        { id: "15-14", label: "15.14" }
+      ]
+    };
+  </script>
+  <div class="topbar no-print">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a href="bab-14.html">Prev ←</a>
-        <a href="bab-15.html">Bab ini</a>
-        <a href="bab-16.html">Next →</a>
+        <a id="nav-prev" href="index.html">← Home</a>
+        <a id="nav-current" href="bab-0.html" style="font-weight:600;">Bab 0</a>
+        <a id="nav-next" href="bab-1.html">Bab 1 →</a>
       </nav>
     </div>
   </div>
-
-  <!-- Page title -->
-  <header class="wrap" id="top">
-    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
-    <h1>Bab 15 — NUSRAH ALLAH</h1>
-  </header>
-
-  <!-- Jump links (10 sub-bab) -->
-  <div class="jump">
-    <div class="wrap">
-      <div class="inner">
-        <strong>Lompat ke:</strong>
-        <a href="#15-1">15.1</a>
-        <a href="#15-2">15.2</a>
-        <a href="#15-3">15.3</a>
-        <a href="#15-4">15.4</a>
-        <a href="#15-5">15.5</a>
-        <a href="#15-6">15.6</a>
-        <a href="#15-7">15.7</a>
-        <a href="#15-8">15.8</a>
-        <a href="#15-9">15.9</a>
-        <a href="#15-10">15.10</a>
-      </div>
+  <div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
     </div>
   </div>
+  <div id="pdf-shell" class="pdf-shell">
+<div class="pdf-cover pdf-only">
+  <div class="pdf-cover-inner">
+    <div class="pdf-cover-top">
+      <div class="pdf-cover-brand">3asbab.org</div>
+      <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+      <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 15 — NUSRAH ALLAH</h1>
+      <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Nusrah Allah dalam Kerangka 3 Asbab</p>
+    </div>
+    <div class="pdf-cover-bottom">
+      <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+      <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+    </div>
+  </div>
+</div>
 
-  <main class="wrap">
+<div class="pdf-meta-page pdf-only pdf-break">
+  <div class="pdf-meta-inner">
+    <h2>Maklumat Dokumen</h2>
+    <div class="pdf-meta-list">
+      <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 15 — NUSRAH ALLAH</span></p>
+      <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+      <p><strong>Laman:</strong> 3asbab.org</p>
+      <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+      <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+    </div>
+  </div>
+</div>
+
+<header class="wrap" id="top">
+  <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+  <h1 id="page-title">Bab 15 — NUSRAH ALLAH</h1>
+  <div class="meta" id="category-line">Nusrah Allah, Janji Ilahi &amp; Transformasi Tauhidi | Tauhid Amali</div>
+</header>
+
+<div class="jump no-print">
+  <div class="wrap">
+    <div class="jump-inner" id="jump-links">
+      <strong>🧭 Lompat ke:</strong>
+      <a href="#15-0">15.0</a>
+      <a href="#15-1">15.1</a>
+      <a href="#15-2">15.2</a>
+      <a href="#15-3">15.3</a>
+      <a href="#15-4">15.4</a>
+      <a href="#15-5">15.5</a>
+      <a href="#15-6">15.6</a>
+      <a href="#15-7">15.7</a>
+      <a href="#15-8">15.8</a>
+      <a href="#15-9">15.9</a>
+      <a href="#15-10">15.10</a>
+      <a href="#15-11">15.11</a>
+      <a href="#15-12">15.12</a>
+      <a href="#15-13">15.13</a>
+      <a href="#15-14">15.14</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
     <article>
       <!-- Badge pembuka bab -->
       <div class="section">
@@ -221,12 +702,12 @@
         <h3>Nusrah Bukan Milik Orang Kuat</h3>
         <p>Nusrah tidak turun kerana:<br>• jumlah yang ramai,<br>• teknologi yang canggih,<br>• strategi yang bijak,<br>• atau sistem yang tersusun.</p>
         <p><strong>Dalil Qur’an</strong></p>
-        <div class="arab">﴿ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ﴾</div>
+        <div class="arab">﴿ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ﴾</div>
         <p>“Berapa banyak golongan yang sedikit mengalahkan golongan yang banyak dengan izin Allah.”<br>(al-Baqarah 2:249)【1】</p>
         <p>➡️ Kemenangan dinisbahkan kepada izin Allah, bukan kekuatan bilangan.</p>
         <p><strong>Contoh Sirah: Perang Badar</strong><br>• Bilangan Muslim: 313 orang<br>• Bilangan Quraisy: ±1000 orang<br>• Peralatan Muslim sangat terhad<br>• Tiada kelebihan strategi duniawi</p>
         <p>Namun Allah berfirman:</p>
-        <div class="arab">﴿ وَلَقَدْ نَصَرَكُمُ ٱللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌ ﴾</div>
+        <div class="arab">﴿ وَلَقَدْ نَصَرَكُمُ ٱللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌ ﴾</div>
         <p>“Dan sesungguhnya Allah telah menolong kamu dalam Perang Badar, sedangkan kamu ketika itu lemah.”<br>(Āli ‘Imrān 3:123)【2】</p>
         <p>➡️ Badar membatalkan fahaman bahawa Nusrah milik orang kuat.</p>
         <hr>
@@ -234,7 +715,7 @@
         <p>Lebih penting, Nusrah bukan janji dunia.</p>
         <p>Rasulullah ﷺ dan para sahabat:<br>• menerima Nusrah ketika disakiti,<br>• menerima Nusrah ketika ditekan,<br>• menerima Nusrah walaupun belum menang secara zahir.</p>
         <p><strong>Dalil Qur’an</strong></p>
-        <div class="arab">﴿ أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ ﴾</div>
+        <div class="arab">﴿ أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ ﴾</div>
         <p>“Adakah manusia menyangka mereka akan dibiarkan berkata: ‘Kami beriman’, sedangkan mereka tidak diuji?”<br>(al-‘Ankabūt 29:2)【3】</p>
         <p>➡️ Ujian tidak menafikan Nusrah.<br>Ujian ialah laluan kepada Nusrah.</p>
         <p><strong>Contoh Sirah: Fasa Mekah (13 Tahun)</strong><br>• Tiada kemenangan zahir<br>• Sahabat diseksa (Bilal, Khabbab, Sumayyah r.a.)<br>• Rasulullah ﷺ tetap berdakwah dengan tertib</p>
@@ -243,7 +724,7 @@
         <h3>Prinsip Tauhidi yang Dikunci</h3>
         <blockquote>Nusrah ialah janji Allah terhadap ketaatan, bukan terhadap hasil.</blockquote>
         <p><strong>Dalil Qur’an</strong></p>
-        <div class="arab">﴿ وَمَن يَنصُرِ ٱللَّهَ فَإِنَّ ٱللَّهَ لَقَوِىٌّ عَزِيزٌ ﴾</div>
+        <div class="arab">﴿ وَمَن يَنصُرِ ٱللَّهَ فَإِنَّ ٱللَّهَ لَقَوِىٌّ عَزِيزٌ ﴾</div>
         <p>“Dan sesiapa yang menolong agama Allah, maka sesungguhnya Allah Maha Kuat lagi Maha Perkasa.”<br>(al-Ḥajj 22:40)【4】</p>
         <p>➡️ Allah tidak memerlukan kita.<br>Namun Allah menjadikan ketaatan kita sebagai syarat Nusrah.</p>
         <hr>
@@ -251,7 +732,7 @@
         <p>Bab 15 datang selepas Bab Nur, bukan secara rawak.</p>
         <p>Susunannya adalah Tauhidi:<br>1. Iman hidup dalam hati<br>2. Amal soleh dilakukan mengikut wahyu & tertib Rasulullah ﷺ<br>3. Allah menerima → Nur turun<br>4. Apabila Nur hidup secara kolektif → Nusrah Allah turun</p>
         <p><strong>Dalil Qur’an</strong></p>
-        <div class="arab">﴿ ٱللَّهُ وَلِىُّ ٱلَّذِينَ ءَامَنُوا۟ يُخْرِجُهُم مِّنَ ٱلظُّلُمَٰتِ إِلَى ٱلنُّورِ ﴾</div>
+        <div class="arab">﴿ ٱللَّهُ وَلِىُّ ٱلَّذِينَ ءَامَنُوا۟ يُخْرِجُهُم مِّنَ ٱلظُّلُمَٰتِ إِلَى ٱلنُّورِ ﴾</div>
         <p>“Allah Pelindung orang-orang beriman; Dia mengeluarkan mereka dari kegelapan kepada Nur.”<br>(al-Baqarah 2:257)【5】</p>
         <p>➡️ Nur mendahului Nusrah.<br>Tanpa Nur, tiada pertolongan yang kekal.</p>
         <hr>
@@ -304,43 +785,43 @@
         <hr>
         <h3>15.2.1 Janji Nusrah: Allah Pasti Menolong</h3>
         <p>Allah memulakan perbahasan Nusrah dengan jaminan mutlak.</p>
-        <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ ﴾</div>
+        <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ ﴾</div>
         <p>“Jika kamu menolong agama Allah, nescaya Allah akan menolong kamu dan meneguhkan kedudukan kamu.”<br>(Muḥammad 47:7)【1】</p>
         <p>➡️ Ayat ini mengunci tiga perkara:<br>• Nusrah pasti berlaku,<br>• Nusrah bersyarat,<br>• Syaratnya ialah menolong agama Allah, bukan menolong agenda sendiri.</p>
         <hr>
         <h3>15.2.2 Nusrah Milik Allah, Bukan Milik Asbab</h3>
         <p>Allah mematikan kebergantungan kepada sebab dunia sejak awal.</p>
-        <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
+        <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
         <p>“Dan kemenangan itu tidak lain hanyalah dari sisi Allah.”<br>(Āli ‘Imrān 3:126)【2】</p>
         <p>➡️ Ayat ini:<br>• menafikan kuasa Asbab Fitrah (bilangan, senjata, strategi),<br>• menafikan kuasa Asbab Zulumat (pakatan batil, tipu daya),<br>• menetapkan bahawa Nusrah ialah tindakan langsung Allah.</p>
         <hr>
         <h3>15.2.3 Nusrah Boleh Turun Ketika Lemah</h3>
         <p>Allah sengaja menurunkan Nusrah ketika keadaan zahir lemah supaya Tauhid terjaga.</p>
-        <div class="arab">﴿ وَلَقَدْ نَصَرَكُمُ ٱللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌ ﴾</div>
+        <div class="arab">﴿ وَلَقَدْ نَصَرَكُمُ ٱللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌ ﴾</div>
         <p>“Dan sesungguhnya Allah telah menolong kamu di Badar, sedangkan kamu ketika itu lemah.”<br>(Āli ‘Imrān 3:123)【3】</p>
         <p>➡️ Ini membatalkan fahaman:<br>• “kita belum cukup kuat untuk dapat Nusrah”<br>• “tunggu sistem siap baru Allah tolong”<br>Nusrah datang untuk membina kekuatan, bukan menunggu kekuatan.</p>
         <hr>
         <h3>15.2.4 Nusrah Boleh Ditahan Walaupun Iman Ada</h3>
         <p>Al-Qur’an juga menjelaskan bahawa iman semata-mata tidak cukup jika tertib dilanggar.</p>
-        <div class="arab">﴿ أَوَلَمَّآ أَصَٰبَتْكُم مُّصِيبَةٌۭ قَدْ أَصَبْتُم مِّثْلَيْهَا قُلْتُمْ أَنَّىٰ هَٰذَا ۖ قُلْ هُوَ مِنْ عِندِ أَنفُسِكُمْ ﴾</div>
+        <div class="arab">﴿ أَوَلَمَّآ أَصَٰبَتْكُم مُّصِيبَةٌۭ قَدْ أَصَبْتُم مِّثْلَيْهَا قُلْتُمْ أَنَّىٰ هَٰذَا ۖ قُلْ هُوَ مِنْ عِندِ أَنفُسِكُمْ ﴾</div>
         <p>“Ketika kamu ditimpa musibah (Uhud), padahal kamu telah menimpakan dua kali ganda sebelumnya, kamu berkata: ‘Dari mana ini?’ Katakanlah: ‘Ia dari diri kamu sendiri.’”<br>(Āli ‘Imrān 3:165)【4】</p>
         <p>➡️ Uhud membuktikan:<br>• iman ada,<br>• Rasulullah ﷺ ada,<br>• tetapi pelanggaran tertib menangguhkan Nusrah.</p>
         <hr>
         <h3>15.2.5 Nusrah Tidak Terikat Kepada Bilangan</h3>
         <p>Allah menutup pintu syirik kuantiti.</p>
-        <div class="arab">﴿ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ﴾</div>
+        <div class="arab">﴿ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ﴾</div>
         <p>“Berapa banyak golongan yang sedikit mengalahkan golongan yang banyak dengan izin Allah.”<br>(al-Baqarah 2:249)【5】</p>
         <p>➡️ Izin Allah, bukan statistik, ialah kunci Nusrah.</p>
         <hr>
         <h3>15.2.6 Nusrah Kadang-Kadang Datang Tanpa Kemenangan Zahir</h3>
         <p>Ini ayat paling penting untuk membetulkan kefahaman umat.</p>
-        <div class="arab">﴿ فَإِن تَوَلَّوْا۟ فَإِنَّمَا عَلَيْكَ ٱلْبَلَٰغُ ٱلْمُبِينُ ﴾</div>
+        <div class="arab">﴿ فَإِن تَوَلَّوْا۟ فَإِنَّمَا عَلَيْكَ ٱلْبَلَٰغُ ٱلْمُبِينُ ﴾</div>
         <p>“Jika mereka berpaling, maka kewajipanmu hanyalah menyampaikan dengan jelas.”<br>(an-Nūr 24:54)【6】</p>
         <p>➡️ Ayat ini menunjukkan:<br>• Nusrah bukan diukur pada penerimaan manusia,<br>• Nusrah berlaku apabila tugas ditunaikan, bukan apabila hasil dicapai.</p>
         <hr>
         <h3>15.2.7 Nusrah Berkait Langsung Dengan Ketaatan</h3>
         <p>Allah mengikat Nusrah dengan ketaatan total, bukan separuh.</p>
-        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
         <p>“Sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.”<br>(al-Aḥzāb 33:71)【7】</p>
         <p>➡️ Kemenangan besar di sisi Allah ≠ kemenangan dunia semata-mata.<br>Ia termasuk:<br>• iman terpelihara,<br>• Nur hidup,<br>• amal diterima,<br>• dan Nusrah diturunkan mengikut hikmah Allah.</p>
         <hr>
@@ -388,7 +869,7 @@
         <h3>SYARAT 1 — Iman yang Hidup dalam Hati</h3>
         <p>Nusrah tidak turun kepada iman yang tinggal sebagai maklumat atau slogan.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ إِنَّمَا ٱلْمُؤْمِنُونَ ٱلَّذِينَ ءَامَنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ ثُمَّ لَمْ يَرْتَابُوا۟ ﴾</div>
+        <div class="arab">﴿ إِنَّمَا ٱلْمُؤْمِنُونَ ٱلَّذِينَ ءَامَنُوا۟ بِٱللَّهِ وَرَسُولِهِۦ ثُمَّ لَمْ يَرْتَابُوا۟ ﴾</div>
         <p>“Sesungguhnya orang-orang beriman hanyalah mereka yang beriman kepada Allah dan Rasul-Nya, kemudian mereka tidak ragu-ragu.”<br>(al-Ḥujurāt 49:15)【1】</p>
         <p>➡️ Iman yang melayakkan Nusrah ialah:<br>• iman yang yakin,<br>• iman yang bergerak,<br>• iman yang menggerakkan amal,<br>bukan iman pasif yang hanya bertahan dalam minda.</p>
         <p><strong>Contoh Sirah</strong><br>• Di Mekah: iman sahabat hidup walaupun dizalimi → Nusrah dalam bentuk keteguhan, bukan kemenangan zahir.<br>• Di Badar: iman hidup → Nusrah turun walaupun jumlah sedikit.</p>
@@ -396,7 +877,7 @@
         <h3>SYARAT 2 — Amal Soleh yang Sah (Mengikut Wahyu)</h3>
         <p>Allah tidak menjanjikan Nusrah kepada semua amal — hanya kepada amal yang Dia terima.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ ﴾</div>
+        <div class="arab">﴿ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ ﴾</div>
         <p>“Orang-orang yang beriman dan beramal soleh…”<br>(frasa berulang puluhan kali dalam al-Qur’an)【2】</p>
         <p>➡️ Amal soleh bukan sekadar amal baik, tetapi:<br>• amal yang diperintahkan,<br>• amal yang sah menurut wahyu,<br>• amal yang tidak bercanggah dengan syariat.</p>
         <p><strong>Contoh Sirah</strong><br>• Uhud: amal jihad ada, iman ada, tetapi pelanggaran perintah → Nusrah ditangguh.<br>• Ini membuktikan: niat baik tidak menggantikan ketaatan.</p>
@@ -404,7 +885,7 @@
         <h3>SYARAT 3 — Ittiba’ Rasulullah ﷺ (Tertib, Bukan Kreativiti)</h3>
         <p>Ini syarat paling kerap gagal.</p>
         <p>Allah mengikat Nusrah dengan mengikut Rasul, bukan mencipta jalan sendiri.</p>
-        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
         <p>“Sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.”<br>(al-Aḥzāb 33:71)【3】</p>
         <p>➡️ Fawz ‘Azīm (kemenangan besar) inilah yang melahirkan:<br>• Nur,<br>• ketenangan,<br>• dan akhirnya Nusrah.</p>
         <p><strong>Contoh Sirah</strong><br>• Rasulullah ﷺ tidak mendahulukan kuasa sebelum dakwah.<br>• Tidak mendahulukan sistem sebelum iman.<br>• Tidak mendahulukan hasil sebelum tertib.<br>Setiap kali tertib dijaga → Nusrah turun.<br>Setiap kali tertib dilanggar → Nusrah tertahan.</p>
@@ -412,14 +893,14 @@
         <h3>SYARAT 4 — Penafian Kuasa Asbab (Nafy)</h3>
         <p>Nusrah tidak turun selagi hati masih bergantung kepada:<br>• bilangan,<br>• dana,<br>• pengaruh,<br>• strategi,<br>• atau sokongan manusia.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
+        <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
         <p>“Dan kemenangan itu tidak lain hanyalah dari sisi Allah.”<br>(Āli ‘Imrān 3:126)【4】</p>
         <p>➡️ Selagi sebab diyakini memberi kesan,<br>Nusrah tidak turun kerana Tauhid belum bersih.</p>
         <p><strong>Contoh Sirah</strong><br>• Hunain: sahabat kagum dengan bilangan → hampir kalah.<br>• Allah mengajar bahawa kebergantungan membatalkan Nusrah.</p>
         <hr>
         <h3>SYARAT 5 — Sabar & Istiqamah dalam Tempoh Ujian</h3>
         <p>Nusrah bukan respon kepada desakan, tetapi kepada kesabaran dalam ketaatan.</p>
-        <div class="arab">﴿ حَتَّىٰ يَقُولَ ٱلرَّسُولُ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ مَتَىٰ نَصْرُ ٱللَّهِ ۗ أَلَآ إِنَّ نَصْرَ ٱللَّهِ قَرِيبٌۭ ﴾</div>
+        <div class="arab">﴿ حَتَّىٰ يَقُولَ ٱلرَّسُولُ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ مَتَىٰ نَصْرُ ٱللَّهِ ۗ أَلَآ إِنَّ نَصْرَ ٱللَّهِ قَرِيبٌۭ ﴾</div>
         <p>“Sehingga Rasul dan orang-orang beriman bersamanya berkata: ‘Bilakah pertolongan Allah?’ Ketahuilah, sesungguhnya pertolongan Allah itu dekat.”<br>(al-Baqarah 2:214)【5】</p>
         <p>➡️ Ayat ini menunjukkan:<br>• Nusrah datang selepas sabar diuji,<br>• bukan sebelum ujian.</p>
         <hr>
@@ -465,7 +946,7 @@
         <p><strong>Definisi</strong><br>Nusrah Hati ialah: pertolongan Allah dalam bentuk keteguhan iman, ketenangan qalb, keberanian, dan hilangnya takut kepada makhluk, walaupun tekanan zahir masih berlaku.</p>
         <p>Ini ialah bentuk Nusrah pertama yang Allah turunkan apabila iman mula hidup.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ هُوَ ٱلَّذِىٓ أَنزَلَ ٱلسَّكِينَةَ فِى قُلُوبِ ٱلْمُؤْمِنِينَ ﴾</div>
+        <div class="arab">﴿ هُوَ ٱلَّذِىٓ أَنزَلَ ٱلسَّكِينَةَ فِى قُلُوبِ ٱلْمُؤْمِنِينَ ﴾</div>
         <p>“Dialah yang menurunkan ketenangan ke dalam hati orang-orang beriman.”<br>(al-Fatḥ 48:4)【1】</p>
         <p>➡️ Sakīnah ialah Nusrah dalaman — bukan kemenangan fizikal.</p>
         <p><strong>Contoh Sirah</strong><br>• Mekah (13 tahun): sahabat diseksa, tiada kuasa, tiada sistem, tetapi iman tidak runtuh.<br>• Bilal r.a. diseksa → tetap berkata Ahad. Ini Nusrah.</p>
@@ -475,7 +956,7 @@
         <p><strong>Definisi</strong><br>Nusrah jenis kedua ialah: pertolongan Allah dalam bentuk kemudahan beramal, kesatuan jamaah, istiqamah kolektif, dan hidupnya suasana iman, walaupun musuh masih wujud.</p>
         <p>Ini Nusrah yang:<br>• menguatkan proses,<br>• memanjangkan nafas dakwah,<br>• dan menjaga amal daripada mati.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَٱلَّذِينَ ءَاوَوْا۟ وَنَصَرُوا۟ أُو۟لَٰٓئِكَ هُمُ ٱلْمُؤْمِنُونَ حَقًّا ﴾</div>
+        <div class="arab">﴿ وَٱلَّذِينَ ءَاوَوْا۟ وَنَصَرُوا۟ أُو۟لَٰٓئِكَ هُمُ ٱلْمُؤْمِنُونَ حَقًّا ﴾</div>
         <p>“Dan orang-orang yang memberi tempat dan pertolongan, merekalah orang-orang beriman sebenar.”<br>(al-Anfāl 8:74)【2】</p>
         <p>➡️ Perkataan nasarū di sini merujuk kepada sokongan, kebersamaan, perlindungan jamaah, bukan kemenangan perang semata-mata.</p>
         <p><strong>Contoh Sirah</strong><br>• Hijrah ke Madinah: iman bertemu iman, Muhājirin & Anṣār bersatu, masjid hidup, amal ijtima’i bermula.</p>
@@ -485,7 +966,7 @@
         <p><strong>Definisi</strong><br>Nusrah Zahir ialah: pertolongan Allah dalam bentuk kemenangan nyata, jatuhnya musuh, terbukanya wilayah, atau perubahan struktur kuasa.</p>
         <p>⚠️ Ini bukan Nusrah pertama, dan bukan Nusrah wajib. Ia datang apabila Allah kehendaki, selepas syarat-syarat Tauhidi matang.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ إِذْ تَسْتَغِيثُونَ رَبَّكُمْ فَٱسْتَجَابَ لَكُمْ ﴾</div>
+        <div class="arab">﴿ إِذْ تَسْتَغِيثُونَ رَبَّكُمْ فَٱسْتَجَابَ لَكُمْ ﴾</div>
         <p>“Ketika kamu memohon pertolongan Tuhanmu, lalu Dia memperkenankannya.”<br>(al-Anfāl 8:9)【3】</p>
         <p><strong>Contoh Sirah</strong><br>• Badar: sedikit bilangan → menang.<br>• Fathu Makkah: tanpa perang besar.<br>• Rom & Parsi: runtuh selepas iman & amal matang.</p>
         <p>➡️ Nusrah Zahir tidak datang tanpa Nusrah Hati dan Nusrah Amal terlebih dahulu.</p>
@@ -493,7 +974,7 @@
         <h3>Kesalahan Besar: Mengiktiraf Hanya Satu Bentuk Nusrah</h3>
         <p>Umat sering tersilap apabila:<br>• hanya menganggap menang zahir = Nusrah,<br>• menganggap ditindas = Allah tidak menolong.</p>
         <p>Ini fahaman cetek dan bercanggah dengan al-Qur’an.</p>
-        <div class="arab">﴿ وَتِلْكَ ٱلْأَيَّامُ نُدَاوِلُهَا بَيْنَ ٱلنَّاسِ ﴾</div>
+        <div class="arab">﴿ وَتِلْكَ ٱلْأَيَّامُ نُدَاوِلُهَا بَيْنَ ٱلنَّاسِ ﴾</div>
         <p>“Dan hari-hari itu Kami putarkan di antara manusia.”<br>(Āli ‘Imrān 3:140)【4】</p>
         <p>➡️ Putaran menang–kalah bukan ukuran Nusrah. Ukuran Nusrah ialah apakah iman dan amal hidup atau mati.</p>
         <hr>
@@ -533,7 +1014,7 @@
         <hr>
         <h3>15.5.1 Pengangkatan dari Hina kepada Mulia</h3>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَلِلَّهِ ٱلْعِزَّةُ وَلِرَسُولِهِۦ وَلِلْمُؤْمِنِينَ ﴾</div>
+        <div class="arab">﴿ وَلِلَّهِ ٱلْعِزَّةُ وَلِرَسُولِهِۦ وَلِلْمُؤْمِنِينَ ﴾</div>
         <p>“Dan kemuliaan itu milik Allah, Rasul-Nya, dan orang-orang beriman.”<br>(al-Munāfiqūn 63:8)【1】</p>
         <p>➡️ ‘Izzah (kemuliaan) bukan hasil kuasa politik, tetapi hasil Nusrah Allah terhadap iman yang hidup.</p>
         <p><strong>Contoh Sirah</strong><br>• Sahabat di Mekah: miskin, hamba, dipukul dan dihina.<br>• Tetapi dengan Nusrah: mereka menjadi manusia paling mulia di sisi Allah, dan akhirnya dihormati oleh dunia.</p>
@@ -543,7 +1024,7 @@
         <p>Nusrah tidak sekadar mengubah keadaan, tetapi mengubah peranan umat.</p>
         <p>Daripada:<br>• mangsa → pembawa risalah,<br>• penonton → saksi kebenaran,<br>• tertindas → pembimbing manusia.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَكَذَٰلِكَ جَعَلْنَٰكُمْ أُمَّةًۭ وَسَطًۭا لِّتَكُونُوا۟ شُهَدَآءَ عَلَى ٱلنَّاسِ ﴾</div>
+        <div class="arab">﴿ وَكَذَٰلِكَ جَعَلْنَٰكُمْ أُمَّةًۭ وَسَطًۭا لِّتَكُونُوا۟ شُهَدَآءَ عَلَى ٱلنَّاسِ ﴾</div>
         <p>“Dan demikianlah Kami jadikan kamu umat pertengahan agar kamu menjadi saksi atas manusia.”<br>(al-Baqarah 2:143)【2】</p>
         <p>➡️ Menjadi saksi bukan kuasa politik, tetapi kedudukan amanah yang Allah berikan melalui Nusrah.</p>
         <p><strong>Contoh Sirah</strong><br>• Di Madinah: umat mula memimpin akhlak, menyusun masyarakat, menjadi rujukan keadilan.</p>
@@ -552,7 +1033,7 @@
         <h3>15.5.3 Pengangkatan Melalui Penyatuan Umat</h3>
         <p>Salah satu tanda besar Nusrah ialah: Allah menyatukan hati umat yang sebelum ini berpecah.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَأَلَّفَ بَيْنَ قُلُوبِهِمْ ۚ لَوْ أَنفَقْتَ مَا فِى ٱلْأَرْضِ جَمِيعًۭا مَّآ أَلَّفْتَ بَيْنَ قُلُوبِهِمْ ﴾</div>
+        <div class="arab">﴿ وَأَلَّفَ بَيْنَ قُلُوبِهِمْ ۚ لَوْ أَنفَقْتَ مَا فِى ٱلْأَرْضِ جَمِيعًۭا مَّآ أَلَّفْتَ بَيْنَ قُلُوبِهِمْ ﴾</div>
         <p>“Allah yang menyatukan hati mereka; jika engkau belanjakanseluruh harta di bumi, engkau tidak mampu menyatukan hati mereka.”<br>(al-Anfāl 8:63)【3】</p>
         <p>➡️ Penyatuan hati ialah kesan langsung Nusrah, bukan hasil strategi atau kompromi manusia.</p>
         <p><strong>Contoh Sirah</strong><br>• Aus dan Khazraj: permusuhan puluhan tahun, perang berdarah berulang.<br>• Dengan Nusrah: menjadi Ansar, mempertahankan Rasulullah ﷺ dengan nyawa.</p>
@@ -562,7 +1043,7 @@
         <p>Kesilapan besar umat hari ini:<br>• menunggu kuasa dahulu,<br>• baru mahu bersatu,<br>• baru mahu hidupkan agama.</p>
         <p>Sirah membatalkan fahaman ini.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ ٱلَّذِينَ إِن مَّكَّنَّٰهُمْ فِى ٱلْأَرْضِ أَقَامُوا۟ ٱلصَّلَوٰةَ ﴾</div>
+        <div class="arab">﴿ ٱلَّذِينَ إِن مَّكَّنَّٰهُمْ فِى ٱلْأَرْضِ أَقَامُوا۟ ٱلصَّلَوٰةَ ﴾</div>
         <p>“Orang-orang yang apabila Kami berikan kekuasaan, mereka menegakkan solat…”<br>(al-Ḥajj 22:41)【4】</p>
         <p>➡️ Ayat ini tidak berkata: “Kami beri kuasa dahulu supaya mereka taat.” Tetapi: “Apabila mereka taat, lalu Kami beri kuasa.”</p>
         <p><strong>Contoh Sirah</strong><br>• Rasulullah ﷺ: membina iman dan amal tanpa kuasa, Allah yang mengangkat Baginda ﷺ apabila masa tiba.</p>
@@ -570,7 +1051,7 @@
         <h3>15.5.5 Pengangkatan Umat Walaupun Dunia Menekan</h3>
         <p>Nusrah tidak semestinya menghilangkan tekanan dunia. Kadangkala Nusrah hadir dalam tekanan.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَلَا تَهِنُوا۟ وَلَا تَحْزَنُوا۟ وَأَنتُمُ ٱلْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ ﴾</div>
+        <div class="arab">﴿ وَلَا تَهِنُوا۟ وَلَا تَحْزَنُوا۟ وَأَنتُمُ ٱلْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ ﴾</div>
         <p>“Jangan kamu lemah dan bersedih, kamu pasti tinggi jika kamu beriman.”<br>(Āli ‘Imrān 3:139)【5】</p>
         <p>➡️ Tinggi di sini ialah kedudukan iman, maruah, keteguhan prinsip.</p>
         <p><strong>Contoh Sirah</strong><br>• Uhud: kekalahan zahir, tetapi iman disaring, umat dididik, dan martabat iman meningkat.</p>
@@ -608,7 +1089,7 @@
         <p><strong>Definisi Mukjizat</strong><br>Mukjizat ialah:<br>• peristiwa luar biasa,<br>• yang mematahkan hukum kebiasaan,<br>• diberikan khusus kepada para Nabi,<br>• sebagai bukti kerasulan, bukan ganjaran amal umat.</p>
         <p>Mukjizat:<br>• tidak boleh diusahakan,<br>• tidak boleh dituntut,<br>• dan tidak boleh diulang sesuka hati.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَمَا مَنَعَنَآ أَن نُّرْسِلَ بِٱلْـَٔايَٰتِ إِلَّآ أَن كَذَّبَ بِهَا ٱلْأَوَّلُونَ ﴾</div>
+        <div class="arab">﴿ وَمَا مَنَعَنَآ أَن نُّرْسِلَ بِٱلْـَٔايَٰتِ إِلَّآ أَن كَذَّبَ بِهَا ٱلْأَوَّلُونَ ﴾</div>
         <p>“Tidak ada yang menghalang Kami mengutuskan mukjizat melainkan kerana orang-orang terdahulu telah mendustakannya.”<br>(al-Isrā’ 17:59)【1】</p>
         <p>➡️ Mukjizat bukan norma, ia pengecualian dalam sejarah wahyu.</p>
         <hr>
@@ -617,7 +1098,7 @@
         <p>Tetapi janji Allah kepada orang beriman tidak pernah berhenti.</p>
         <p>Inilah sebab Allah menukar model bantuan: daripada mukjizat → kepada Nusrah.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ ﴾</div>
+        <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ ﴾</div>
         <p>“Jika kamu menolong agama Allah, Allah akan menolong kamu.”<br>(Muḥammad 47:7)【2】</p>
         <p>➡️ Ini bukan janji mukjizat, tetapi janji Nusrah yang bersyarat.</p>
         <hr>
@@ -625,7 +1106,7 @@
         <p><strong>Definisi Nusrah</strong><br>Nusrah ialah:<br>• bantuan Allah,<br>• yang turun melalui tertib wahyu,<br>• dalam bentuk yang selari dengan sunnatullah,<br>• apabila syarat Tauhidi dipenuhi.</p>
         <p>Nusrah:<br>• boleh berlaku secara zahir atau batin,<br>• boleh hadir sebagai kemenangan, ketenangan, penyatuan, atau keteguhan,<br>• dan boleh berulang dalam setiap zaman.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَكَانَ حَقًّا عَلَيْنَا نَصْرُ ٱلْمُؤْمِنِينَ ﴾</div>
+        <div class="arab">﴿ وَكَانَ حَقًّا عَلَيْنَا نَصْرُ ٱلْمُؤْمِنِينَ ﴾</div>
         <p>“Dan menjadi kewajipan ke atas Kami untuk menolong orang-orang beriman.”<br>(ar-Rūm 30:47)【3】</p>
         <p>➡️ Ini janji hidup, bukan sejarah silam.</p>
         <hr>
@@ -645,7 +1126,7 @@
         <p>Kesalahan besar umat moden:<br>• menunggu keajaiban,<br>• menunggu perubahan mendadak,<br>• menunggu “orang luar biasa”.</p>
         <p>Sedangkan:<br>• iman tidak dibina,<br>• amal tidak ditertibkan,<br>• dan ittiba’ Rasulullah ﷺ tidak ditegakkan.</p>
         <p><strong>Dalil Peringatan</strong></p>
-        <div class="arab">﴿ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ﴾</div>
+        <div class="arab">﴿ حَتَّىٰ يُغَيِّرُوا۟ مَا بِأَنفُسِهِمْ ﴾</div>
         <p>“Sehingga mereka mengubah apa yang ada pada diri mereka.”<br>(ar-Ra‘d 13:11)【4】</p>
         <p>➡️ Allah tidak memulakan dengan mukjizat, Allah memulakan dengan perubahan iman dan amal.</p>
         <hr>
@@ -691,7 +1172,7 @@
         <p>Allah tidak menilai amal melalui:<br>• angka,<br>• kesan segera,<br>• atau pengiktirafan manusia.</p>
         <p>Allah menilai:<br>• iman dalam hati,<br>• sahnya amal,<br>• dan ketaatan kepada tertib Rasulullah ﷺ.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ إِنَّمَا يَتَقَبَّلُ ٱللَّهُ مِنَ ٱلْمُتَّقِينَ ﴾</div>
+        <div class="arab">﴿ إِنَّمَا يَتَقَبَّلُ ٱللَّهُ مِنَ ٱلْمُتَّقِينَ ﴾</div>
         <p>“Sesungguhnya Allah hanya menerima daripada orang-orang yang bertaqwa.”<br>(al-Mā’idah 5:27)【1】</p>
         <p>➡️ Penerimaan terikat kepada taqwa, bukan hasil.</p>
         <hr>
@@ -714,7 +1195,7 @@
         <p>Apabila amal diterima:<br>• seseorang semakin menjaga sunnah,<br>• semakin berhati-hati dengan bid‘ah,<br>• dan semakin takut melanggar tertib.</p>
         <p>Jika selepas banyak amal:<br>• seseorang mula meremehkan sunnah,<br>• menghalalkan pelanggaran atas nama “maslahat”,<br>➡️ itu tanda amal belum diterima sepenuhnya.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
         <p>(al-Aḥzāb 33:71)【4】</p>
         <p>➡️ Ketaatan meningkat = tanda kemenangan batin.</p>
         <hr>
@@ -722,7 +1203,7 @@
         <p>Antara tanda paling jelas amal diterima ialah:<br>• hati menjadi lembut,<br>• keputusan semakin tepat,<br>• suasana jamaah hidup,<br>• konflik reda tanpa paksaan.</p>
         <p>Ini bukan kebolehan manusia, tetapi Nur yang Allah turunkan sebagai balasan penerimaan.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ أَوَمَن كَانَ مَيْتًا فَأَحْيَيْنَٰهُ وَجَعَلْنَا لَهُۥ نُورًا يَمْشِى بِهِۦ فِى ٱلنَّاسِ ﴾</div>
+        <div class="arab">﴿ أَوَمَن كَانَ مَيْتًا فَأَحْيَيْنَٰهُ وَجَعَلْنَا لَهُۥ نُورًا يَمْشِى بِهِۦ فِى ٱلنَّاسِ ﴾</div>
         <p>(al-An‘ām 6:122)【5】</p>
         <p>➡️ Nur ialah tanda hidupnya iman, bukan hasil psikologi.</p>
         <hr>
@@ -730,14 +1211,14 @@
         <p>Apabila amal diterima:<br>• harta tidak lagi mengikat,<br>• jawatan tidak lagi mempengaruhi prinsip,<br>• ancaman tidak lagi mematahkan amal.</p>
         <p>Bukan bermaksud dunia hilang, tetapi dunia tidak lagi menjadi penentu.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَرِضْوَٰنٌۭ مِّنَ ٱللَّهِ أَكْبَرُ ﴾</div>
+        <div class="arab">﴿ وَرِضْوَٰنٌۭ مِّنَ ٱللَّهِ أَكْبَرُ ﴾</div>
         <p>(at-Tawbah 9:72)【6】</p>
         <p>➡️ Apabila redha Allah menjadi pusat, dunia mengecil dengan sendiri.</p>
         <hr>
         <h3>15.7.7 Sirah: Contoh Amal Diterima Tanpa Menang Zahir</h3>
         <p><strong>Fasa Mekah</strong><br>• Tiada negara, tiada kuasa, tiada kemenangan zahir.<br>Tetapi:<br>• iman sahabat semakin kukuh,<br>• akhlak semakin lembut,<br>• Nur semakin hidup.<br>➡️ Ini tanda penerimaan, walaupun belum Nusrah zahir.</p>
         <p><strong>Perjanjian Hudaibiyah</strong><br>• kelihatan “rugi” secara zahir,<br>• tetapi Allah menamakan ia kemenangan nyata.</p>
-        <div class="arab">﴿ إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا ﴾</div>
+        <div class="arab">﴿ إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا ﴾</div>
         <p>(al-Fatḥ 48:1)【7】</p>
         <p>➡️ Allah menilai dengan neraca-Nya, bukan neraca manusia.</p>
         <hr>
@@ -781,7 +1262,7 @@
         <p><strong>Keadaan Tauhidi</strong><br>• Iman hidup dan segar<br>• Ketaatan penuh kepada Rasulullah ﷺ<br>• Tiada rasa yakin kepada jumlah atau strategi<br>• Pergantungan total kepada Allah</p>
         <p><strong>Doa Rasulullah ﷺ</strong><br>Baginda ﷺ berdoa sepanjang malam:<br>“Ya Allah, jika kumpulan kecil ini binasa, Engkau tidak lagi disembah di bumi.”<br>➡️ Ini bukan doa kemenangan, tetapi doa kebergantungan mutlak.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَلَقَدْ نَصَرَكُمُ ٱللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌۭ ﴾</div>
+        <div class="arab">﴿ وَلَقَدْ نَصَرَكُمُ ٱللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌۭ ﴾</div>
         <p>“Dan sungguh Allah telah menolong kamu di Badar, padahal kamu dalam keadaan lemah.”<br>(Āli ‘Imrān 3:123)【1】</p>
         <p><strong>Hakikat Tauhidi Badar</strong><br>• Nusrah turun sebelum kemenangan zahir<br>• Malaikat diturunkan<br>• Musuh digerunkan dari dalam<br>➡️ Badar = Nusrah kerana iman & ketaatan penuh.</p>
         <hr>
@@ -790,7 +1271,7 @@
         <p><strong>Kesilapan Kritikal</strong><br>Sebahagian pemanah:<br>• meninggalkan posisi,<br>• melanggar arahan Rasulullah ﷺ,<br>• kerana menyangka kemenangan telah dicapai.<br>➡️ Pelanggaran tertib, bukan kelemahan iman secara total.</p>
         <p><strong>Akibat</strong><br>• Keadaan berbalik<br>• Sahabat gugur<br>• Rasulullah ﷺ cedera</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ أَوَلَمَّآ أَصَٰبَتْكُم مُّصِيبَةٌۭ قَدْ أَصَبْتُم مِّثْلَيْهَا قُلْتُمْ أَنَّىٰ هَٰذَا ۖ قُلْ هُوَ مِنْ عِندِ أَنفُسِكُمْ ﴾</div>
+        <div class="arab">﴿ أَوَلَمَّآ أَصَٰبَتْكُم مُّصِيبَةٌۭ قَدْ أَصَبْتُم مِّثْلَيْهَا قُلْتُمْ أَنَّىٰ هَٰذَا ۖ قُلْ هُوَ مِنْ عِندِ أَنفُسِكُمْ ﴾</div>
         <p>“Mengapa apabila kamu ditimpa musibah, padahal kamu telah menimpakan yang lebih besar sebelum itu, kamu berkata: dari mana ini datang? Katakanlah: ia dari diri kamu sendiri.”<br>(Āli ‘Imrān 3:165)【2】</p>
         <p><strong>Hakikat Tauhidi Uhud</strong><br>• Allah tidak mungkir janji<br>• Nusrah ditarik sementara sebagai tarbiyah<br>• Kemenangan tidak dibatalkan, tetapi ditangguhkan<br>➡️ Uhud = kehilangan Nusrah kerana melanggar tertib, bukan kerana Allah tidak menolong.</p>
         <hr>
@@ -798,10 +1279,10 @@
         <p><strong>Keadaan Zahir</strong><br>• Bilangan: 12,000<br>• Umat berkata: “Kita tidak akan kalah hari ini kerana bilangan.”<br>➡️ Keyakinan berpindah dari Allah kepada jumlah.</p>
         <p><strong>Akibat</strong><br>• Kucar-kacir di awal pertempuran<br>• Ramai lari<br>• Rasulullah ﷺ hampir bersendirian</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَيَوْمَ حُنَيْنٍ إِذْ أَعْجَبَتْكُمْ كَثْرَتُكُمْ فَلَمْ تُغْنِ عَنكُمْ شَيْـًٔا ﴾</div>
+        <div class="arab">﴿ وَيَوْمَ حُنَيْنٍ إِذْ أَعْجَبَتْكُمْ كَثْرَتُكُمْ فَلَمْ تُغْنِ عَنكُمْ شَيْـًٔا ﴾</div>
         <p>“Dan pada hari Hunain, ketika kamu berbangga dengan bilangan kamu, maka bilangan itu tidak memberi manfaat sedikit pun.”<br>(at-Tawbah 9:25)【3】</p>
         <p><strong>Pemulihan Nusrah</strong><br>• Rasulullah ﷺ memanggil para sahabat<br>• Sahabat kembali<br>• Hati kembali tunduk<br>• Allah menurunkan ketenangan</p>
-        <div class="arab">﴿ ثُمَّ أَنزَلَ ٱللَّهُ سَكِينَتَهُۥ عَلَىٰ رَسُولِهِۦ وَعَلَى ٱلْمُؤْمِنِينَ ﴾</div>
+        <div class="arab">﴿ ثُمَّ أَنزَلَ ٱللَّهُ سَكِينَتَهُۥ عَلَىٰ رَسُولِهِۦ وَعَلَى ٱلْمُؤْمِنِينَ ﴾</div>
         <p>(at-Tawbah 9:26)【4】</p>
         <p>➡️ Hunain = pengajaran bahawa bilangan tanpa Tauhid mematikan Nusrah.</p>
         <hr>
@@ -853,9 +1334,9 @@
         <h3>15.9.1 Prinsip Asas: Sunnatullah Tidak Berubah</h3>
         <p>Nusrah bukan produk sejarah. Nusrah ialah sunnatullah. Dan sunnatullah tidak berubah mengikut zaman, teknologi, atau geopolitik.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ فَلَن تَجِدَ لِسُنَّتِ ٱللَّهِ تَبْدِيلًا ﴾</div>
+        <div class="arab">﴿ فَلَن تَجِدَ لِسُنَّتِ ٱللَّهِ تَبْدِيلًا ﴾</div>
         <p>“Maka engkau tidak akan mendapati sebarang perubahan pada sunnatullah.”<br>(al-Fatḥ 48:23)【1】</p>
-        <div class="arab">﴿ وَلَن تَجِدَ لِسُنَّتِ ٱللَّهِ تَحْوِيلًا ﴾</div>
+        <div class="arab">﴿ وَلَن تَجِدَ لِسُنَّتِ ٱللَّهِ تَحْوِيلًا ﴾</div>
         <p>“Dan engkau tidak akan mendapati sebarang penyimpangan pada sunnatullah.”<br>(Fāṭir 35:43)【2】</p>
         <p>➡️ Jika Nusrah tidak turun hari ini, masalahnya bukan zaman — tetapi syarat.</p>
         <hr>
@@ -869,7 +1350,7 @@
         <p>Ia neutral (Asbab Fitrah), dan hanya menjadi khidmat apabila tunduk kepada tertib wahyu.</p>
         <p>Masalah zaman moden ialah:<br>• hati lebih yakin kepada sistem,<br>• algoritma lebih dipercayai daripada doa,<br>• angka lebih diyakini daripada iman.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
+        <div class="arab">﴿ وَمَا ٱلنَّصْرُ إِلَّا مِنْ عِندِ ٱللَّهِ ﴾</div>
         <p>“Dan tidaklah pertolongan itu melainkan daripada Allah.”<br>(Āli ‘Imrān 3:126)【3】</p>
         <p>➡️ Nusrah tidak pernah datang daripada alat — dahulu atau sekarang.</p>
         <hr>
@@ -878,7 +1359,7 @@
         <p><strong>Ciri-ciri mereka:</strong><br>• fokus kepada dakwah dan tarbiyah,<br>• sabar dalam tekanan,<br>• tidak mengejar kuasa,<br>• menjaga ittiba’ walau perlahan.</p>
         <p>➡️ Ini Nusrah dalam bentuk “hidupnya iman”, bukan jatuhnya kerajaan.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ ﴾</div>
+        <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ ﴾</div>
         <p>“Jika kamu menolong agama Allah, nescaya Allah menolong kamu.”<br>(Muḥammad 47:7)【4】</p>
         <p>➡️ Menolong Allah ≠ menang pilihan raya<br>➡️ Menolong Allah = menegakkan agama dengan tertib Nabi ﷺ</p>
         <hr>
@@ -886,7 +1367,7 @@
         <p>Bukan kerana Allah lambat, tetapi kerana umat:<br>• mahukan hasil cepat,<br>• tidak sabar proses,<br>• dan melangkau tarbiyah iman.</p>
         <p>Sirah membuktikan:<br>• 13 tahun Mekah tanpa kuasa → Nusrah tetap turun<br>• Madinah datang selepas iman masak</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ أَمْ حَسِبْتُمْ أَن تَدْخُلُوا۟ ٱلْجَنَّةَ وَلَمَّا يَأْتِكُم مَّثَلُ ٱلَّذِينَ خَلَوْا۟ مِن قَبْلِكُمْ ﴾</div>
+        <div class="arab">﴿ أَمْ حَسِبْتُمْ أَن تَدْخُلُوا۟ ٱلْجَنَّةَ وَلَمَّا يَأْتِكُم مَّثَلُ ٱلَّذِينَ خَلَوْا۟ مِن قَبْلِكُمْ ﴾</div>
         <p>“Apakah kamu menyangka akan masuk syurga sedangkan belum datang kepada kamu seperti yang menimpa orang-orang sebelum kamu?”<br>(al-Baqarah 2:214)【5】</p>
         <p>➡️ Ujian mendahului Nusrah. Sentiasa.</p>
         <hr>
@@ -894,7 +1375,7 @@
         <p>Nusrah hari ini tidak semestinya:<br>• tumbangnya musuh,<br>• naiknya satu pemerintahan,<br>• atau dominasi global.</p>
         <p>Tetapi ia hadir dalam bentuk:<br>• iman yang kembali hidup,<br>• hati umat bersatu,<br>• keberanian berkata benar,<br>• hilangnya takut kepada makhluk,<br>• istiqamah walau minoriti.</p>
         <p><strong>Dalil al-Qur’an</strong></p>
-        <div class="arab">﴿ ٱلَّذِينَ قَالَ لَهُمُ ٱلنَّاسُ إِنَّ ٱلنَّاسَ قَدْ جَمَعُوا۟ لَكُمْ فَٱخْشَوْهُمْ فَزَادَهُمْ إِيمَٰنًا ﴾</div>
+        <div class="arab">﴿ ٱلَّذِينَ قَالَ لَهُمُ ٱلنَّاسُ إِنَّ ٱلنَّاسَ قَدْ جَمَعُوا۟ لَكُمْ فَٱخْشَوْهُمْ فَزَادَهُمْ إِيمَٰنًا ﴾</div>
         <p>“Orang-orang yang apabila dikatakan kepada mereka: manusia telah berkumpul untuk menyerang kamu, maka itu menambahkan iman mereka.”<br>(Āli ‘Imrān 3:173)【6】</p>
         <p>➡️ Iman yang bertambah di bawah tekanan ialah Nusrah.</p>
         <hr>
@@ -939,7 +1420,7 @@
         <h3>15.10.2 Kunci Besar: Allah Tidak Pernah Mungkir Janji</h3>
         <p>Jika Nusrah tidak turun, itu bukan kerana Allah mungkir janji.</p>
         <p>Allah sendiri menafikan perkara ini:</p>
-        <div class="arab">﴿ إِنَّ ٱللَّهَ لَا يُخْلِفُ ٱلْمِيعَادَ ﴾</div>
+        <div class="arab">﴿ إِنَّ ٱللَّهَ لَا يُخْلِفُ ٱلْمِيعَادَ ﴾</div>
         <p>“Sesungguhnya Allah tidak memungkiri janji.”<br>(Āli ‘Imrān 3:9)</p>
         <p>Maka satu-satunya kemungkinan yang tinggal ialah: syarat Nusrah belum dipenuhi sepenuhnya. Ini membebaskan Allah daripada tuduhan, dan mengembalikan audit sepenuhnya kepada amal manusia.</p>
         <hr>
@@ -976,9 +1457,46 @@
     </article>
   </main>
 
-  <footer class="wrap">
-    <p>© 3asbab.org — Kerangka 3 Asbab (Tarbiah Tauhid). Disediakan untuk rujukan dalaman.<br>
-    <a href="index.html">Kembali ke halaman utama</a> | <a href="bab-14.html">Bab 14</a> | <a href="bab-15.html">Bab 15</a> | <a href="bab-16.html">Bab 16</a></p>
-  </footer>
+    <footer class="wrap">
+      <div>© 3asbab.org — Kerangka 3 Asbab</div>
+    </footer>
+
+  </div>
+
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      if (!btn) return;
+
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+      const pageTitle = document.getElementById('page-title');
+      const categoryLine = document.getElementById('category-line');
+      const headerLine = document.getElementById('header-line');
+
+      if (typeof DOC_META !== "undefined") {
+        if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
+        if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
+        if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
+        if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
+        if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
+        if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
+      }
+
+      setTimeout(() => {
+        window.print();
+
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 120);
+    }
+  </script>
 </body>
 </html>
