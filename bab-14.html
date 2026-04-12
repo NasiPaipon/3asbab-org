@@ -2500,11 +2500,109 @@
       </section>
 
     </article>
-  </main>
+      </main>
 
-  <footer class="wrap">
-    <p>© 3asbab.org — Kerangka 3 Asbab (Tarbiah Tauhid). Disediakan untuk rujukan dalaman.<br>
-    <a href="index.html">Kembali ke halaman utama</a> | <a href="bab-13.html">Bab 13</a> | <a href="bab-14.html">Bab 14</a> | <a href="bab-15.html">Bab 15</a></p>
-  </footer>
+    <footer class="wrap">
+      <div>© 3asbab.org — Kerangka 3 Asbab</div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    (function applyDocMeta() {
+      if (typeof DOC_META === "undefined") return;
+
+      document.title = (DOC_META.pageTitle || document.title) + " | 3asbab.org";
+
+      const setHTML = (id, value) => {
+        const el = document.getElementById(id);
+        if (el && value !== undefined) el.innerHTML = value;
+      };
+
+      const setText = (id, value) => {
+        const el = document.getElementById(id);
+        if (el && value !== undefined) el.textContent = value;
+      };
+
+      const setNav = (id, href, label) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        if (href !== undefined) el.setAttribute("href", href);
+        if (label !== undefined) el.textContent = label;
+      };
+
+      setHTML("header-line", DOC_META.headerLine);
+      setText("page-title", DOC_META.pageTitle);
+      setHTML("category-line", DOC_META.categoryLine);
+
+      setText("pdf-cover-title", DOC_META.pageTitle);
+      setText("pdf-cover-subtitle", DOC_META.subtitle);
+      setText("pdf-meta-title", DOC_META.pageTitle);
+
+      setNav("nav-prev", DOC_META.prevFile, "← " + DOC_META.prevLabel);
+      setNav("nav-current", DOC_META.currentFile, DOC_META.shortTitle);
+      setNav("nav-next", DOC_META.nextFile, DOC_META.nextLabel + " →");
+
+      const jumpWrap = document.getElementById("jump-links");
+      if (jumpWrap && Array.isArray(DOC_META.jumpLinks)) {
+        jumpWrap.innerHTML = "<strong>🧭 Lompat ke:</strong>";
+        DOC_META.jumpLinks.forEach(item => {
+          const a = document.createElement("a");
+          a.href = "#" + item.id;
+          a.textContent = item.label;
+          jumpWrap.appendChild(a);
+        });
+      }
+    })();
+
+    async function downloadPDF() {
+      const shell = document.getElementById("pdf-shell");
+      if (!shell || typeof html2pdf === "undefined") {
+        alert("PDF exporter tidak tersedia.");
+        return;
+      }
+
+      const pageTitle = (typeof DOC_META !== "undefined" && DOC_META.pageTitle)
+        ? DOC_META.pageTitle
+        : "dokumen";
+
+      const safeFilename = pageTitle
+        .replace(/[<>:"/\\|?*]+/g, "")
+        .replace(/\s+/g, " ")
+        .trim() + ".pdf";
+
+      document.body.classList.add("pdf-exporting");
+
+      const opt = {
+        margin: [8, 8, 10, 8],
+        filename: safeFilename,
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: "#ffffff",
+          scrollX: 0,
+          scrollY: 0
+        },
+        jsPDF: {
+          unit: "mm",
+          format: "a4",
+          orientation: "portrait"
+        },
+        pagebreak: {
+          mode: ["css", "legacy"]
+        }
+      };
+
+      try {
+        await html2pdf().set(opt).from(shell).save();
+      } catch (err) {
+        console.error(err);
+        alert("PDF gagal dijana.");
+      } finally {
+        document.body.classList.remove("pdf-exporting");
+      }
+    }
+  </script>
 </body>
 </html>
