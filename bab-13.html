@@ -658,8 +658,18 @@
   <div class="wrap">
     <div class="jump-inner" id="jump-links">
       <strong>🧭 Lompat ke:</strong>
-      <a href="#0-0">0.0</a>
-      <a href="#0-1">0.1</a>
+      <a href="#13-0">13.0</a>
+      <a href="#13-1">13.1</a>
+      <a href="#13-2">13.2</a>
+      <a href="#13-3">13.3</a>
+      <a href="#13-4">13.4</a>
+      <a href="#13-5">13.5</a>
+      <a href="#13-6">13.6</a>
+      <a href="#13-7">13.7</a>
+      <a href="#13-8">13.8</a>
+      <a href="#13-9">13.9</a>
+      <a href="#13-10">13.10</a>
+      <a href="#13-11">13.11</a>
     </div>
   </div>
 </div>
@@ -3248,40 +3258,46 @@
 </article>
   </main>
 
-  <footer>
-    <p>© 3asbab.org — Arkib bacaan sahaja. Bab 10: Mukadimah Dakwah Tauhid.</p>
-  </footer>
+    <footer class="wrap">
+      <div>© 3asbab.org — Kerangka 3 Asbab</div>
+    </footer>
+
+  </div>
 
   <script>
     function downloadPDF() {
       const btn = document.querySelector('.btn-pdf');
-      const originalText = btn ? btn.innerHTML : '';
+      if (!btn) return;
 
-      if (btn) {
-        btn.innerHTML = '⏳ Menyediakan PDF...';
-        btn.disabled = true;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+      const pageTitle = document.getElementById('page-title');
+      const categoryLine = document.getElementById('category-line');
+      const headerLine = document.getElementById('header-line');
+
+      if (typeof DOC_META !== "undefined") {
+        if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
+        if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
+        if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
+        if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
+        if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
+        if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
       }
 
       setTimeout(() => {
         window.print();
 
         setTimeout(() => {
-          if (btn) {
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-          }
-        }, 800);
-      }, 200);
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 120);
     }
-
-    // smooth scroll ke atas
-    document.querySelectorAll('a[href="#top"]').forEach(el => {
-      el.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    });
   </script>
-
 </body>
 </html>
