@@ -32,6 +32,48 @@
       line-height: 1.7;
       scroll-behavior: smooth;
     }
+/* ===== FIX LAYOUT & STICKY ===== */
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+}
+
+.wrap,
+main,
+.section-card,
+blockquote,
+.translation,
+.insight-box,
+.arabic {
+  max-width: 100%;
+}
+
+p, li, blockquote, td, th {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* ===== FIX STICKY NAV ===== */
+.topbar {
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(6px);
+}
+
+.jump {
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 48px;
+  z-index: 30;
+  background: rgba(255,255,255,0.98);
+}
 html, body {
   max-width: 100%;
   overflow-x: hidden;
