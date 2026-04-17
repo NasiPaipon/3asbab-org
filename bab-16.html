@@ -1,184 +1,666 @@
-```html
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 16 — GLOBALISASI TAUHIDI | 3asbab.org</title>
   <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
+    * {
       margin: 0;
-      background: var(--bg);
-      color:#111;
-    }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
-    }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
-    }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* Lompat ke... */
-    .jump{
+    :root {
+      --max-width: 920px;
+      --border-light: #e2e8f0;
+      --bg-soft: #fafcff;
+      --muted: #4a5568;
+      --accent: #0f7b4a;
+      --accent-light: #e6f4ed;
+      --text-dark: #1a202c;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+      background: #ffffff;
+      color: var(--text-dark);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-wrap: break-word;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding-left: clamp(1.15rem, 4vw, 1.8rem);
+      padding-right: clamp(1.15rem, 4vw, 1.8rem);
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--border-light);
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
+      z-index: 30;
+      background: rgba(255,255,255,0.96);
       backdrop-filter: blur(6px);
     }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
-    }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
+
+    .topbar nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.8rem 0;
+      min-height: 56px;
     }
 
-    main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
+    .topbar a {
+      text-decoration: none;
+      font-size: 0.92rem;
+      color: var(--text-dark);
     }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
+
+    .topbar a:hover {
+      color: var(--accent);
     }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
+
+    .brand {
+      font-weight: 700;
+      margin-right: 0.5rem;
     }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
+
+    header {
+      padding: 1.5rem 0 0.65rem;
     }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
+
+    h1 {
+      font-size: clamp(1.85rem, 4vw, 2.45rem);
+      line-height: 1.25;
+      margin: 0.3rem 0 0.55rem;
+      letter-spacing: -0.01em;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+      margin: 0.45rem 0;
+    }
+
+    .jump {
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 56px;
+      z-index: 20;
+      background: rgba(255,255,255,0.98);
+    }
+
+    .jump-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.75rem 0;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+
+    .jump a {
+      padding: 0.24rem 0.72rem;
+      border-radius: 999px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.12s ease;
+      color: var(--text-dark);
+    }
+
+    .jump a:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    main {
+      padding: 1.2rem 0 3rem;
+    }
+
+    .badge-chapter {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      background: #fef3c7;
+      color: #b45309;
+      padding: 0.22rem 0.82rem;
+      border-radius: 999px;
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      line-height: 1.35;
+      margin: 1.8rem 0 0.75rem;
       border-left: 4px solid var(--accent);
-      background: #f8fffb;
+      padding-left: 0.9rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
     }
-    .arab{
-      font-size: 20px;
+
+    h3 {
+      font-size: 1.24rem;
+      line-height: 1.45;
+      margin: 1.2rem 0 0.52rem;
+      font-weight: 700;
+      color: #0b3b2a;
+    }
+
+    h4 {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin: 1rem 0 0.45rem;
+      font-weight: 700;
+      color: #134e3a;
+    }
+
+    p {
+      margin: 0.72rem 0;
+    }
+
+    ul,
+    ol {
+      margin: 0.55rem 0 0.95rem 1.4rem;
+      padding-left: 0.2rem;
+    }
+
+    li {
+      margin: 0.34rem 0;
+      line-height: 1.75;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    .section-card {
+      background: var(--bg-soft);
+      border-radius: 1.2rem;
+      padding: 1.25rem 1.4rem;
+      margin: 1.2rem 0;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .arab,
+    .arabic {
+      font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif;
+      color: #1e293b;
+    }
+
+    .arab {
+      direction: rtl;
+      unicode-bidi: embed;
+      font-size: 1.12em;
+      line-height: 1.9;
+      white-space: normal;
+    }
+
+    .arabic {
+      font-size: 1.62rem;
       line-height: 1.9;
       direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
+      text-align: right;
+      margin: 0.85rem 0;
     }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
+
+    .translation {
+      background: #f8fafc;
+      padding: 0.7rem 1rem;
+      border-radius: 0.8rem;
+      margin: 0.55rem 0 1rem;
+      border-left: 3px solid var(--accent);
+      font-size: 0.96rem;
+      line-height: 1.75;
     }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
+
+    blockquote {
+      background: var(--accent-light);
+      border-radius: 0.8rem;
+      padding: 0.9rem 1.15rem;
+      margin: 1rem 0;
+      font-style: normal;
+      line-height: 1.8;
+    }
+
+    .insight-box {
+      background: #f1f5f9;
+      padding: 0.9rem 1.15rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+      line-height: 1.75;
+    }
+
+    .insight-box h3 {
+      margin-top: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.94rem;
+      background: #fff;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--border-light);
+      padding: 0.68rem;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.65;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-weight: 700;
+    }
+
+    hr {
+      margin: 1.5rem 0;
+      border: 0;
+      height: 1px;
+      background: var(--border-light);
+    }
+
+    .footnote {
+      font-size: 0.82rem;
       color: var(--muted);
-      text-decoration:none;
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
     }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
+
+    .footnotes {
+      font-size: 0.82rem;
       color: var(--muted);
-      font-size: 14px;
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
+      padding-left: 1.2rem;
     }
-    footer a{color:inherit}
-    /* Nota kaki */
-    .footnote{
-      font-size:13px;
-      color:var(--muted);
-      border-top:1px dashed var(--border);
-      margin-top:20px;
-      padding-top:10px;
+
+    .footnotes li {
+      margin: 0.38rem 0;
+      line-height: 1.65;
+    }
+
+    .footnotes a,
+    .footnote a,
+    sup a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .toplink {
+      font-size: 0.78rem;
+      margin-top: 0.85rem;
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .toplink:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 1rem;
+    }
+
+    .pdf-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0 8px;
+    }
+
+    .btn-pdf {
+      appearance: none;
+      border: 1px solid var(--pdf-border);
+      background: #fff;
+      color: var(--pdf-text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
+
+    .btn-pdf:hover {
+      border-color: var(--pdf-accent);
+      background: var(--pdf-accent-soft);
+    }
+
+    .btn-pdf:active {
+      transform: translateY(1px);
+    }
+
+    .no-print {
+      display: block;
+    }
+
+    .pdf-only {
+      display: none;
+    }
+
+    .pdf-exporting .pdf-only {
+      display: block !important;
+    }
+
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink {
+      display: none !important;
+    }
+
+    .pdf-shell {
+      background: #fff;
+    }
+
+    .pdf-cover {
+      display: none;
+    }
+
+    .pdf-cover-inner {
+      min-height: 260mm;
+      padding: 28mm 18mm 24mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--pdf-paper);
+      color: var(--pdf-text);
+    }
+
+    .pdf-cover-top {
+      border-top: 4px solid var(--pdf-accent);
+      padding-top: 12mm;
+    }
+
+    .pdf-cover-brand {
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--pdf-muted);
+      margin-bottom: 10mm;
+    }
+
+    .pdf-cover-series {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 6mm;
+    }
+
+    .pdf-cover-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 5mm;
+      font-weight: 800;
+    }
+
+    .pdf-cover-subtitle {
+      font-size: 1rem;
+      color: var(--pdf-muted);
+      margin: 0;
+    }
+
+    .pdf-cover-bottom {
+      border-top: 1px solid var(--pdf-border);
+      padding-top: 8mm;
+      font-size: 0.95rem;
+      color: var(--pdf-muted);
+    }
+
+    .pdf-meta-page {
+      display: none;
+    }
+
+    .pdf-meta-inner {
+      min-height: 240mm;
+      padding: 20mm 16mm;
+      background: #fff;
+      color: var(--pdf-text);
+    }
+
+    .pdf-meta-inner h2 {
+      border: 0;
+      padding: 0;
+      margin: 0 0 10mm;
+      font-size: 1.4rem;
+    }
+
+    .pdf-meta-list p {
+      margin: 0 0 6mm;
+    }
+
+    .pdf-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .pdf-avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .no-print,
+      .pdf-toolbar,
+      .topbar,
+      .jump,
+      .toplink {
+        display: none !important;
+      }
+
+      .pdf-only,
+      .pdf-cover,
+      .pdf-meta-page {
+        display: block !important;
+      }
+
+      .section-card,
+      blockquote,
+      .insight-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      h2,
+      h3,
+      h4 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+      }
+
+      .topbar nav {
+        gap: 0.75rem;
+        min-height: 52px;
+      }
+
+      .jump {
+        top: 52px;
+      }
+
+      .section-card {
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      h2 {
+        font-size: 1.34rem;
+        padding-left: 0.75rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      .arab {
+        font-size: 1.08em;
+      }
+
+      .arabic {
+        font-size: 1.34rem;
+      }
+
+      table {
+        font-size: 0.88rem;
+      }
+
+      th,
+      td {
+        padding: 0.58rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- Top nav -->
-  <div class="topbar">
+  <script>
+    const DOC_META = {
+      pageTitle: "Bab 16 — GLOBALISASI TAUHIDI",
+      shortTitle: "Bab 16",
+      subtitle: "Arah Penyebaran Tauhid dan Kebangkitan Umat dalam Kerangka 3 Asbab",
+      headerLine: "📖 Kerangka 3 Asbab — Arkib Baca Sahaja",
+      categoryLine: "Globalisasi Tauhidi &amp; Kebangkitan Umat | Tauhid Amali",
+      currentFile: "bab-16.html",
+      prevFile: "bab-15.html",
+      prevLabel: "Bab 15",
+      nextFile: "bab-17.html",
+      nextLabel: "Bab 17",
+      jumpLinks: [
+        { id: "16-0", label: "16.0" },
+        { id: "16-1", label: "16.1" },
+        { id: "16-2", label: "16.2" },
+        { id: "16-3", label: "16.3" },
+        { id: "16-4", label: "16.4" }
+      ]
+    };
+  </script>
+  <div class="topbar no-print">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a href="bab-15.html">Prev ←</a>
-        <a href="bab-16.html">Bab ini</a>
-        <a href="bab-17.html">Next →</a>
+        <a id="nav-prev" href="index.html">← Home</a>
+        <a id="nav-current" href="bab-0.html" style="font-weight:600;">Bab 0</a>
+        <a id="nav-next" href="bab-1.html">Bab 1 →</a>
       </nav>
     </div>
   </div>
-
-  <!-- Page title -->
-  <header class="wrap" id="top">
-    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
-    <h1>Bab 16 — GLOBALISASI TAUHIDI</h1>
-  </header>
-
-  <!-- Jump links (10 sub-bab) -->
-  <div class="jump">
-    <div class="wrap">
-      <div class="inner">
-        <strong>Lompat ke:</strong>
-        <a href="#16-1">16.1</a>
-        <a href="#16-2">16.2</a>
-        <a href="#16-3">16.3</a>
-        <a href="#16-4">16.4</a>
-        <a href="#16-5">16.5</a>
-   
-      </div>
+  <div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
     </div>
   </div>
+  <div id="pdf-shell" class="pdf-shell">
+<div class="pdf-cover pdf-only">
+  <div class="pdf-cover-inner">
+    <div class="pdf-cover-top">
+      <div class="pdf-cover-brand">3asbab.org</div>
+      <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+      <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 16 — GLOBALISASI TAUHIDI</h1>
+      <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Arah Penyebaran Tauhid dan Kebangkitan Umat dalam Kerangka 3 Asbab</p>
+    </div>
+    <div class="pdf-cover-bottom">
+      <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+      <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+    </div>
+  </div>
+</div>
 
-  <main class="wrap">
+<div class="pdf-meta-page pdf-only pdf-break">
+  <div class="pdf-meta-inner">
+    <h2>Maklumat Dokumen</h2>
+    <div class="pdf-meta-list">
+      <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 16 — GLOBALISASI TAUHIDI</span></p>
+      <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+      <p><strong>Laman:</strong> 3asbab.org</p>
+      <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+      <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+    </div>
+  </div>
+</div>
+
+<header class="wrap" id="top">
+  <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+  <h1 id="page-title">Bab 16 — GLOBALISASI TAUHIDI</h1>
+  <div class="meta" id="category-line">Globalisasi Tauhidi &amp; Kebangkitan Umat | Tauhid Amali</div>
+</header>
+
+<div class="jump no-print">
+  <div class="wrap">
+    <div class="jump-inner" id="jump-links">
+      <strong>🧭 Lompat ke:</strong>
+      <a href="#16-0">16.0</a>
+      <a href="#16-1">16.1</a>
+      <a href="#16-2">16.2</a>
+      <a href="#16-3">16.3</a>
+      <a href="#16-4">16.4</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
     <article>
       <!-- Badge pembuka bab -->
       <div class="section">
@@ -201,7 +683,7 @@
         <p>Tauhid dalam Kerangka 3 Asbab bukan slogan aqidah, tetapi:<br>• pemutusan pergantungan hati daripada makhluk,<br>• penetapan bahawa hanya Allah memberi kesan,<br>• dan ketaatan mutlak kepada wahyu.</p>
         <p>Tanpa Tauhid yang hidup:<br>• amal menjadi aktiviti,<br>• sistem menjadi berhala,<br>• dan masyarakat menjadi alat.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا ٱللَّهَ مُخْلِصِينَ لَهُ ٱلدِّينَ ﴾</div>
+        <div class="arab">﴿ وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا ٱللَّهَ مُخْلِصِينَ لَهُ ٱلدِّينَ ﴾</div>
         <p>“Dan mereka tidak diperintahkan melainkan supaya menyembah Allah dengan mengikhlaskan agama kepada-Nya.”<br>(al-Bayyinah 98:5)</p>
         <p>➡️ Tauhid ialah akar, bukan cabang.</p>
 
@@ -212,7 +694,7 @@
         <p>Amal dalam rantaian Tauhidi:<br>• bukan hasil kreativiti manusia,<br>• bukan aktivisme moral,<br>• tetapi ketaatan praktikal mengikut wahyu dan tertib Rasulullah ﷺ.</p>
         <p>Inilah sebab:<br>• iman sentiasa digandingkan dengan amal soleh dalam al-Qur’an,<br>• dan iman tanpa amal tidak menggerakkan sejarah.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ ﴾</div>
+        <div class="arab">﴿ إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ ﴾</div>
         <p>“Sesungguhnya orang-orang yang beriman dan beramal soleh…”<br>(berulang kali dalam al-Qur’an)</p>
         <p>➡️ Amal ialah jambatan antara Tauhid dan realiti.</p>
 
@@ -231,7 +713,7 @@
         <p>Masyarakat Tauhidi bukan masyarakat yang:<br>• paling maju,<br>• paling kaya,<br>• atau paling berpengaruh.</p>
         <p>Tetapi masyarakat yang:<br>• mudah taat,<br>• hidup amal ijtima’i,<br>• dan saling menolong agama Allah.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَٱلْمُؤْمِنُونَ وَٱلْمُؤْمِنَٰتُ بَعْضُهُمْ أَوْلِيَآءُ بَعْضٍۢ ﴾</div>
+        <div class="arab">﴿ وَٱلْمُؤْمِنُونَ وَٱلْمُؤْمِنَٰتُ بَعْضُهُمْ أَوْلِيَآءُ بَعْضٍۢ ﴾</div>
         <p>“Orang-orang beriman lelaki dan perempuan saling menjadi penolong.”<br>(at-Tawbah 9:71)</p>
         <p>➡️ Masyarakat Tauhidi diukur dengan ketaatan kolektif, bukan statistik.</p>
 
@@ -253,7 +735,7 @@
         <p>Apabila:<br>• Tauhid hidup,<br>• amal sah ditegakkan,<br>• sistem tunduk,<br>• masyarakat bersatu,<br>• syura diamalkan,</p>
         <p>maka:<br>• Nusrah turun sebagai bantuan Allah,<br>• sama ada dunia berubah atau tidak.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ ﴾</div>
+        <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ ﴾</div>
         <p>“Jika kamu menolong agama Allah, nescaya Allah akan menolong kamu.”<br>(Muḥammad 47:7)</p>
         <p>➡️ Nusrah ialah natijah, bukan strategi.</p>
 
@@ -286,7 +768,7 @@
         <p>Nafy bermaksud:<br>• menafikan bahawa Asbab Fitrah memberi kesan,<br>• menafikan bahawa Asbab Zulumat memberi kuasa,<br>• menafikan bahawa manusia, sistem, angka, atau teknologi menentukan natijah.</p>
         <p>Tanpa nafy:<br>• Tauhid tinggal di lidah,<br>• amal bercampur syirik halus,<br>• dan sistem menjadi sandaran hati.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَمَا بِكُم مِّن نِّعْمَةٍۢ فَمِنَ ٱللَّهِ ﴾</div>
+        <div class="arab">﴿ وَمَا بِكُم مِّن نِّعْمَةٍۢ فَمِنَ ٱللَّهِ ﴾</div>
         <p>“Dan apa sahaja nikmat yang ada pada kamu, maka ia adalah daripada Allah.”<br>(an-Naḥl 16:53)</p>
         <p>➡️ Selagi kuasa makhluk tidak dinafikan, Asbab tidak akan tunduk.</p>
 
@@ -297,7 +779,7 @@
         <p>Isbat bermaksud:<br>• menetapkan bahawa hanya Allah memberi kesan,<br>• hanya Allah menghidupkan dan mematikan,<br>• dan hanya Allah menentukan hasil.</p>
         <p>Isbat tanpa nafy melahirkan:<br>• kebergantungan dua hala (Allah + sebab),<br>• Tauhid bercampur,<br>• dan kegagalan transformasi.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَٱللَّهُ غَالِبٌ عَلَىٰٓ أَمْرِهِۦ ﴾</div>
+        <div class="arab">﴿ وَٱللَّهُ غَالِبٌ عَلَىٰٓ أَمْرِهِۦ ﴾</div>
         <p>“Dan Allah Maha Berkuasa atas urusan-Nya.”<br>(Yūsuf 12:21)</p>
         <p>➡️ Isbat menjadikan hati berpaut, bukan sekadar percaya.</p>
 
@@ -308,7 +790,7 @@
         <p>Ramai:<br>• beriman kepada Allah,<br>• mengaku Allah Maha Kuasa,<br>• tetapi tidak tunduk kepada tertib Rasulullah ﷺ.</p>
         <p>Dalam Kerangka 3 Asbab:<br>• amal yang tidak mengikut tertib Nabi ﷺ tidak boleh mentransformasikan Asbab,<br>• walaupun ayatnya betul,<br>• walaupun niatnya ikhlas.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَمَآ ءَاتَىٰكُمُ ٱلرَّسُولُ فَخُذُوهُ ﴾</div>
+        <div class="arab">﴿ وَمَآ ءَاتَىٰكُمُ ٱلرَّسُولُ فَخُذُوهُ ﴾</div>
         <p>“Apa yang Rasul berikan kepadamu, maka ambillah.”<br>(al-Ḥashr 59:7)</p>
         <p>➡️ Ittiba’ ialah penentu sah atau rosak transformasi.</p>
 
@@ -319,7 +801,7 @@
         <p>Sunnatullah menunjukkan:<br>• transformasi besar sentiasa lahir daripada amal jamaah,<br>• yang hidup dengan syura,<br>• dan bersatu atas iman, bukan kepentingan.</p>
         <p>Tanpa amal ijtima’i:<br>• amal menjadi individualistik,<br>• kebenaran menjadi opini,<br>• dan sistem berpecah.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَٱعْتَصِمُوا۟ بِحَبْلِ ٱللَّهِ جَمِيعًا ﴾</div>
+        <div class="arab">﴿ وَٱعْتَصِمُوا۟ بِحَبْلِ ٱللَّهِ جَمِيعًا ﴾</div>
         <p>“Berpegang teguhlah kamu semua kepada tali Allah.”<br>(Āli ‘Imrān 3:103)</p>
         <p>➡️ Asbab tunduk kepada jamaah yang bersatu, bukan individu yang hebat.</p>
 
@@ -330,7 +812,7 @@
         <p>Jika matlamat tersasar:<br>• walaupun empat syarat sebelumnya dipenuhi secara zahir,<br>• transformasi akan terhenti di tengah jalan.</p>
         <p>Apabila:<br>• kuasa,<br>• kemenangan,<br>• pengaruh,<br>• atau kejayaan dunia<br>menjadi tujuan, maka:<br>• Asbab kembali berkuasa,<br>• Nur padam,<br>• dan Nusrah terangkat.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَرِضْوَٰنٌۭ مِّنَ ٱللَّهِ أَكْبَرُ ﴾</div>
+        <div class="arab">﴿ وَرِضْوَٰنٌۭ مِّنَ ٱللَّهِ أَكْبَرُ ﴾</div>
         <p>“Dan keredhaan Allah itu lebih besar.”<br>(at-Tawbah 9:72)</p>
         <p>➡️ Redha Allah ialah kompas terakhir transformasi Tauhidi.</p>
 
@@ -370,7 +852,7 @@
         <p>Dalam kerangka Tauhidi:<br>• tiada pusat kuasa dunia,<br>• tiada paksaan sistem,<br>• tiada penjajahan akal atau hati.</p>
         <p>Yang tersebar hanyalah:<br>• iman,<br>• amal soleh,<br>• dan Nur hasil penerimaan Allah.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ ٱللَّهُ وَلِىُّ ٱلَّذِينَ ءَامَنُوا۟ يُخْرِجُهُم مِّنَ ٱلظُّلُمَٰتِ إِلَى ٱلنُّورِ ﴾</div>
+        <div class="arab">﴿ ٱللَّهُ وَلِىُّ ٱلَّذِينَ ءَامَنُوا۟ يُخْرِجُهُم مِّنَ ٱلظُّلُمَٰتِ إِلَى ٱلنُّورِ ﴾</div>
         <p>“Allah adalah Pelindung orang-orang yang beriman; Dia mengeluarkan mereka daripada kegelapan kepada Nur.”<br>(al-Baqarah 2:257)【1】</p>
         <p>➡️ Perhatikan: mengeluarkan, bukan menundukkan.</p>
 
@@ -388,7 +870,7 @@
         <p>Rasulullah ﷺ:<br>• tidak membina empayar,<br>• tidak memaksa iman,<br>• tidak menyeragamkan budaya.</p>
         <p>Baginda ﷺ membina:<br>• manusia beriman,<br>• jamaah hidup,<br>• dan suasana Nur.</p>
         <p>Allah menegaskan:</p>
-        <div class="arab">﴿ لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ ﴾</div>
+        <div class="arab">﴿ لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ ﴾</div>
         <p>“Engkau bukan penguasa ke atas mereka.”<br>(al-Ghāshiyah 88:22)【2】</p>
         <p>➡️ Dakwah Rasulullah ﷺ ialah penyampaian Nur, bukan penguasaan manusia.</p>
 
@@ -399,7 +881,7 @@
         <p>Di mana ada:<br>• iman yang hidup,<br>• amal soleh yang sah,<br>• dan ittiba’ Rasulullah ﷺ,</p>
         <p>di situ:<br>• Nur muncul,<br>• suasana berubah,<br>• dan masyarakat hidup walaupun kecil.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ قَدْ جَآءَكُم مِّنَ ٱللَّهِ نُورٌۭ وَكِتَٰبٌۭ مُّبِينٌۭ ﴾</div>
+        <div class="arab">﴿ قَدْ جَآءَكُم مِّنَ ٱللَّهِ نُورٌۭ وَكِتَٰبٌۭ مُّبِينٌۭ ﴾</div>
         <p>“Telah datang kepada kamu daripada Allah satu Nur dan Kitab yang jelas.”<br>(al-Mā’idah 5:15)【3】</p>
 
         <hr>
@@ -446,7 +928,7 @@
         <p>Kebangkitan global tidak bermula dengan majoriti, tetapi dengan kualiti.</p>
         <p>Tandanya:<br>• iman terasa hidup,<br>• hati mudah kembali kepada Allah,<br>• dosa cepat dirasa berat,<br>• taat terasa perlu walau susah.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ﴾</div>
+        <div class="arab">﴿ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ﴾</div>
         <p>“Berapa banyak kelompok kecil mengalahkan kelompok besar dengan izin Allah.”<br>(al-Baqarah 2:249)</p>
         <p>➡️ Kebangkitan bermula dengan iman hidup, bukan jumlah besar.</p>
 
@@ -456,7 +938,7 @@
         <p>Apabila kebangkitan bermula, amal:<br>• kembali kepada wahyu,<br>• dijaga tertibnya,<br>• ditimbang sah atau tidak, bukan popular atau tidak.</p>
         <p>Tandanya:<br>• dakwah didahulukan sebelum sistem,<br>• mujahadah mendahului hasil,<br>• sabar mendahului kemenangan.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
         <p>(al-Aḥzāb 33:71)</p>
         <p>➡️ Kemenangan Tauhidi terikat kepada ketaatan, bukan inovasi.</p>
 
@@ -466,7 +948,7 @@
         <p>Kebangkitan global bukan fenomena individu, tetapi suasana kolektif.</p>
         <p>Tandanya:<br>• masjid hidup,<br>• syura berfungsi,<br>• hati saling melembut,<br>• konflik diselesaikan dengan iman, bukan ego.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَأَلَّفَ بَيْنَ قُلُوبِهِمْ ﴾</div>
+        <div class="arab">﴿ وَأَلَّفَ بَيْنَ قُلُوبِهِمْ ﴾</div>
         <p>“Dan Dia menyatukan hati-hati mereka.”<br>(al-Anfāl 8:63)</p>
         <p>➡️ Penyatuan hati ialah tanda Nur hidup — bukan hasil perundingan politik.</p>
 
@@ -476,7 +958,7 @@
         <p>Apabila Nur hidup:<br>• dunia tidak lagi menakutkan,<br>• tekanan tidak mematikan amal,<br>• kekalahan zahir tidak memadam iman.</p>
         <p>Tandanya:<br>• sebab digunakan tanpa diyakini,<br>• sistem diurus tanpa disembah,<br>• hasil diserahkan tanpa dituntut.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَٰمُوا۟ لَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ ﴾</div>
+        <div class="arab">﴿ إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَٰمُوا۟ لَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ ﴾</div>
         <p>(al-Aḥqāf 46:13)</p>
         <p>➡️ Hilangnya takut dan sedih dunia ialah tanda kebangkitan Tauhidi.</p>
 
@@ -486,7 +968,7 @@
         <p>Kebangkitan global tidak mengejar Nusrah — Nusrah datang sendiri.</p>
         <p>Tandanya:<br>• bantuan muncul dari arah tidak disangka,<br>• pintu terbuka tanpa perancangan,<br>• musuh melemah tanpa dilawan secara langsung.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا ۝ وَيَرْزُقْهُۥ مِنْ حَيْثُ لَا يَحْتَسِبُ ﴾</div>
+        <div class="arab">﴿ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا ۝ وَيَرْزُقْهُۥ مِنْ حَيْثُ لَا يَحْتَسِبُ ﴾</div>
         <p>(aṭ-Ṭalāq 65:2–3)</p>
         <p>➡️ Nusrah ialah output, bukan sasaran.</p>
 
@@ -496,7 +978,7 @@
         <p>Apabila kebangkitan Tauhidi berlaku:<br>• dunia digunakan,<br>• tetapi tidak diagungkan,<br>• dan tidak menjadi pusat keputusan.</p>
         <p>Tandanya:<br>• kuasa tidak memabukkan,<br>• pujian tidak menaikkan,<br>• penolakan tidak menjatuhkan.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ تِلْكَ ٱلدَّارُ ٱلْـَٔاخِرَةُ نَجْعَلُهَا لِلَّذِينَ لَا يُرِيدُونَ عُلُوًّۭا فِى ٱلْأَرْضِ وَلَا فَسَادًۭا ﴾</div>
+        <div class="arab">﴿ تِلْكَ ٱلدَّارُ ٱلْـَٔاخِرَةُ نَجْعَلُهَا لِلَّذِينَ لَا يُرِيدُونَ عُلُوًّۭا فِى ٱلْأَرْضِ وَلَا فَسَادًۭا ﴾</div>
         <p>(al-Qaṣaṣ 28:83)</p>
         <p>➡️ Kebangkitan tanpa kerendahan hati ialah kebangkitan palsu.</p>
 
@@ -506,7 +988,7 @@
         <p>Dalam kebangkitan global Tauhidi:<br>• kejayaan ≠ menang,<br>• kejayaan = taat.</p>
         <p>Tandanya:<br>• umat tidak kecewa bila kalah,<br>• tidak sombong bila menang,<br>• dan terus beramal walau hasil berubah.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
         <p>(al-Aḥzāb 33:71)</p>
 
         <hr>
@@ -539,7 +1021,7 @@
         <p>Dalam pandangan dunia:<br>• kemenangan = kuasa,<br>• kejayaan = pengaruh,<br>• kebangkitan = dominasi.</p>
         <p>Dalam wahyu:<br>• kemenangan = ketaatan.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
         <p>“Dan sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.”<br>(al-Aḥzāb 33:71)【1】</p>
         <p>➡️ Al-Qur’an tidak mengaitkan kemenangan dengan menang, tetapi dengan taat.</p>
 
@@ -548,7 +1030,7 @@
         <h3>16.5.2 Redha Allah Mendahului Segala Hasil</h3>
         <p>Redha Allah bukan reaksi terhadap kejayaan, tetapi ganjaran terhadap ketaatan.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ﴾</div>
+        <div class="arab">﴿ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ﴾</div>
         <p>“Allah redha terhadap mereka dan mereka pun redha terhadap-Nya.”<br>(al-Bayyinah 98:8)【2】</p>
         <p>Perhatikan susunan wahyu:<br>• Allah redha terlebih dahulu,<br>• barulah hamba itu redha.</p>
         <p>➡️ Ini menutup fahaman bahawa redha Allah datang selepas manusia berjaya.</p>
@@ -558,7 +1040,7 @@
         <h3>16.5.3 Rasulullah ﷺ Sebagai Neraca Kemenangan</h3>
         <p>Rasulullah ﷺ menang dan kalah secara zahir, tetapi tidak pernah gagal secara Tauhidi.<br>• Uhud: kalah zahir, tetapi iman dibersihkan.<br>• Ṭā’if: ditolak manusia, tetapi diterima langit.<br>• Ḥudaibiyah: kelihatan rugi, tetapi dinamakan fathan mubīna.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ إِنَّا فَتَحْنَا لَكَ فَتْحًۭا مُّبِينًۭا ﴾</div>
+        <div class="arab">﴿ إِنَّا فَتَحْنَا لَكَ فَتْحًۭا مُّبِينًۭا ﴾</div>
         <p>“Sesungguhnya Kami telah memberikan kepadamu satu kemenangan yang nyata.”<br>(al-Fatḥ 48:1)【3】</p>
         <p>➡️ Allah menamakan ketaatan dalam sabar sebagai kemenangan.</p>
 
@@ -568,7 +1050,7 @@
         <p>Dalam dunia:<br>• kejayaan boleh tertangguh,<br>• projek boleh gagal,<br>• usaha boleh sia-sia.</p>
         <p>Dalam Tauhid:<br>• tiada amal soleh yang diterima tanpa kemenangan.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ إِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ ﴾</div>
+        <div class="arab">﴿ إِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ ﴾</div>
         <p>“Sesungguhnya Allah tidak mensia-siakan ganjaran orang-orang yang berbuat baik.”<br>(Hūd 11:115)【4】</p>
         <p>➡️ Jika Allah menerima amal, kemenangan telah berlaku, walaupun dunia belum berubah.</p>
 
@@ -578,7 +1060,7 @@
         <p>Globalisasi Tauhidi bukan penyebaran wilayah, tetapi penyebaran ketaatan dan Nur.</p>
         <p>Tandanya:<br>• manusia kembali taat walau bersendirian,<br>• amal hidup walau ditekan,<br>• iman kekal walau tidak dipuji.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ لَيْسَ عَلَيْكَ هُدَىٰهُمْ وَلَٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
+        <div class="arab">﴿ لَيْسَ عَلَيْكَ هُدَىٰهُمْ وَلَٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
         <p>“Bukan tanggungjawabmu memberi hidayah kepada mereka, tetapi Allah memberi hidayah kepada sesiapa yang Dia kehendaki.”<br>(al-Baqarah 2:272)【5】</p>
         <p>➡️ Tugas manusia ialah taat dan menyampaikan, bukan memastikan hasil.</p>
 
@@ -595,7 +1077,7 @@
         <p>Kemenangan bukan apa yang dunia lihat.<br>Kemenangan ialah apabila Allah berkata:<br>“Aku redha.”</p>
         <p>Dan apabila Allah redha:<br>• dunia tunduk atau tidak, tidak lagi penting,<br>• hidup atau mati, kedua-duanya kemenangan.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْعَظِيمُ ﴾</div>
+        <div class="arab">﴿ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْعَظِيمُ ﴾</div>
         <p>“Allah redha terhadap mereka dan mereka pun redha terhadap-Nya. Itulah kemenangan yang agung.”<br>(al-Mā’idah 5:119)【6】</p>
 
         <hr>
@@ -619,10 +1101,46 @@
     </article>
   </main>
 
-  <footer class="wrap">
-    <p>© 3asbab.org — Kerangka 3 Asbab (Tarbiah Tauhid). Disediakan untuk rujukan dalaman.<br>
-    <a href="index.html">Kembali ke halaman utama</a> | <a href="bab-15.html">Bab 15</a> | <a href="bab-16.html">Bab 16</a> | <a href="bab-17.html">Bab 17</a></p>
-  </footer>
+    <footer class="wrap">
+      <div>© 3asbab.org — Kerangka 3 Asbab</div>
+    </footer>
+
+  </div>
+
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      if (!btn) return;
+
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+      const pageTitle = document.getElementById('page-title');
+      const categoryLine = document.getElementById('category-line');
+      const headerLine = document.getElementById('header-line');
+
+      if (typeof DOC_META !== "undefined") {
+        if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
+        if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
+        if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
+        if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
+        if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
+        if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
+      }
+
+      setTimeout(() => {
+        window.print();
+
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 120);
+    }
+  </script>
 </body>
 </html>
-```
