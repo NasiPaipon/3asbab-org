@@ -1312,8 +1312,44 @@ footer {
       }
 
       setTimeout(() => {
-        window.print();
+        <script>
+function downloadPDF() {
+  const btn = document.querySelector('.btn-pdf');
+  if (!btn) return;
 
+  const originalText = btn.innerHTML;
+  btn.innerHTML = '⏳ Menyediakan PDF...';
+  btn.disabled = true;
+
+  document.body.classList.add('pdf-exporting');
+
+  const coverTitle = document.getElementById('pdf-cover-title');
+  const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+  const metaTitle = document.getElementById('pdf-meta-title');
+  const pageTitle = document.getElementById('page-title');
+  const categoryLine = document.getElementById('category-line');
+  const headerLine = document.getElementById('header-line');
+
+  if (typeof DOC_META !== "undefined") {
+    if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
+    if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
+    if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
+    if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
+    if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
+    if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
+  }
+
+  setTimeout(() => {
+    window.print();
+
+    setTimeout(() => {
+      document.body.classList.remove('pdf-exporting');
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+    }, 500);
+  }, 120);
+}
+</script>
         setTimeout(() => {
           btn.innerHTML = originalText;
           btn.disabled = false;
