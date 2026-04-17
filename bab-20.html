@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ms"><head><meta charset="UTF-8">
+<!DOCTYPE html><html lang="ms"><head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 20 — MASJID NABAWI: KILANG IMAN | 3asbab.org</title>
   <style>
@@ -27,7 +28,7 @@ scroll-behavior: smooth;
 -webkit-text-size-adjust: 100%;
 }
 body {
-font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+font-family: system-ui, -apple-system, “Segoe UI”, Roboto, “Noto Sans”, sans-serif;
 background: #ffffff;
 color: var(–text-dark);
 line-height: 1.75;
@@ -181,7 +182,7 @@ box-shadow: var(–shadow-sm);
 }
 .arab,
 .arabic {
-font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif;
+font-family: “Noto Naskh Arabic”, “Amiri”, “Traditional Arabic”, serif;
 color: #1e293b;
 }
 .arab {
@@ -1049,32 +1050,41 @@ padding: 0.58rem;
 </footer></div><script>
     function downloadPDF() {
       const btn = document.querySelector('.btn-pdf');
-      if (!btn) return;const originalText = btn.innerHTML;
-btn.innerHTML = ‘⏳ Menyediakan PDF…’;
-btn.disabled = true;
-document.body.classList.add(‘pdf-exporting’);
-const coverTitle = document.getElementById(‘pdf-cover-title’);
-const coverSubtitle = document.getElementById(‘pdf-cover-subtitle’);
-const metaTitle = document.getElementById(‘pdf-meta-title’);
-const pageTitle = document.getElementById(‘page-title’);
-const categoryLine = document.getElementById(‘category-line’);
-const headerLine = document.getElementById(‘header-line’);
-if (typeof DOC_META !== “undefined”) {
-if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || ‘’;
-if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || ‘’;
-if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || ‘’;
-if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || ‘’;
-if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || ‘’;
-if (headerLine) headerLine.innerHTML = DOC_META.headerLine || ‘’;
+      if (!btn) return;
+
+  const originalText = btn.innerHTML;
+  btn.innerHTML = '⏳ Menyediakan PDF...';
+  btn.disabled = true;
+
+  document.body.classList.add('pdf-exporting');
+
+  const coverTitle = document.getElementById('pdf-cover-title');
+  const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+  const metaTitle = document.getElementById('pdf-meta-title');
+  const pageTitle = document.getElementById('page-title');
+  const categoryLine = document.getElementById('category-line');
+  const headerLine = document.getElementById('header-line');
+
+  if (typeof DOC_META !== "undefined") {
+    if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
+    if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
+    if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
+    if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
+    if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
+    if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
+  }
+
+  setTimeout(() => {
+    window.print();
+    setTimeout(() => {
+      document.body.classList.remove('pdf-exporting');
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+    }, 500);
+  }, 120);
 }
-setTimeout(() => {
-window.print();
-setTimeout(() => {
-document.body.classList.remove(‘pdf-exporting’);
-btn.innerHTML = originalText;
-btn.disabled = false;
-}, 500);
-}, 120);
-}
+
+
 </script></body>
 </html>
+
