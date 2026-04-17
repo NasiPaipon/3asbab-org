@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 17 — OBJEKTIF HIDUP: REDHA ALLAH SEBELUM MATI | 3asbab.org</title>
-
   <style>
     * {
       margin: 0;
@@ -211,8 +210,6 @@
       margin: 1.2rem 0;
       border: 1px solid var(--border-light);
       box-shadow: var(--shadow-sm);
-      break-inside: avoid;
-      page-break-inside: avoid;
     }
 
     .arab,
@@ -254,8 +251,6 @@
       margin: 1rem 0;
       font-style: normal;
       line-height: 1.8;
-      break-inside: avoid;
-      page-break-inside: avoid;
     }
 
     .insight-box {
@@ -264,24 +259,16 @@
       border-radius: 1rem;
       margin: 1rem 0;
       line-height: 1.75;
-      break-inside: avoid;
-      page-break-inside: avoid;
     }
 
     .insight-box h3 {
       margin-top: 0;
     }
 
-    .table-wrap {
-      width: 100%;
-      overflow-x: auto;
-      margin: 1rem 0;
-    }
-
     table {
       width: 100%;
-      min-width: 640px;
       border-collapse: collapse;
+      margin: 1rem 0;
       font-size: 0.94rem;
       background: #fff;
     }
@@ -387,17 +374,24 @@
       transform: translateY(1px);
     }
 
-    .btn-pdf[disabled] {
-      opacity: 0.7;
-      cursor: wait;
-    }
-
     .no-print {
       display: block;
     }
 
     .pdf-only {
       display: none;
+    }
+
+    .pdf-exporting .pdf-only {
+      display: block !important;
+    }
+
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink {
+      display: none !important;
     }
 
     .pdf-shell {
@@ -479,6 +473,51 @@
       margin: 0 0 6mm;
     }
 
+    .pdf-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .pdf-avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .no-print,
+      .pdf-toolbar,
+      .topbar,
+      .jump,
+      .toplink {
+        display: none !important;
+      }
+
+      .pdf-only,
+      .pdf-cover,
+      .pdf-meta-page {
+        display: block !important;
+      }
+
+      .section-card,
+      blockquote,
+      .insight-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      h2,
+      h3,
+      h4 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+
     @media (max-width: 640px) {
       .wrap {
         padding-left: 1.1rem;
@@ -534,11 +573,8 @@
       }
     }
   </style>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-
   <script>
     const DOC_META = {
       pageTitle: "Bab 17 — OBJEKTIF HIDUP: REDHA ALLAH SEBELUM MATI",
@@ -564,7 +600,6 @@
       ]
     };
   </script>
-
   <div class="topbar no-print">
     <div class="wrap">
       <nav>
@@ -576,66 +611,64 @@
       </nav>
     </div>
   </div>
-
   <div class="wrap no-print">
     <div class="pdf-toolbar">
       <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
     </div>
   </div>
-
   <div id="pdf-shell" class="pdf-shell">
-    <div class="pdf-cover pdf-only">
-      <div class="pdf-cover-inner">
-        <div class="pdf-cover-top">
-          <div class="pdf-cover-brand">3asbab.org</div>
-          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
-          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 17 — OBJEKTIF HIDUP: REDHA ALLAH SEBELUM MATI</h1>
-          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Matlamat Kehidupan Mukmin dalam Kerangka 3 Asbab</p>
-        </div>
-        <div class="pdf-cover-bottom">
-          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
-          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
-        </div>
-      </div>
+<div class="pdf-cover pdf-only">
+  <div class="pdf-cover-inner">
+    <div class="pdf-cover-top">
+      <div class="pdf-cover-brand">3asbab.org</div>
+      <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+      <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 17 — OBJEKTIF HIDUP: REDHA ALLAH SEBELUM MATI</h1>
+      <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Matlamat Kehidupan Mukmin dalam Kerangka 3 Asbab</p>
     </div>
-
-    <div class="pdf-meta-page pdf-only">
-      <div class="pdf-meta-inner">
-        <h2>Maklumat Dokumen</h2>
-        <div class="pdf-meta-list">
-          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 17 — OBJEKTIF HIDUP: REDHA ALLAH SEBELUM MATI</span></p>
-          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
-          <p><strong>Laman:</strong> 3asbab.org</p>
-          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
-          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
-        </div>
-      </div>
+    <div class="pdf-cover-bottom">
+      <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+      <div id="pdf-cover-footer-line2">© 3asbab.org</div>
     </div>
+  </div>
+</div>
 
-    <header class="wrap" id="top">
-      <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
-      <h1 id="page-title">Bab 17 — OBJEKTIF HIDUP: REDHA ALLAH SEBELUM MATI</h1>
-      <div class="meta" id="category-line">Objektif Hidup, Redha Allah &amp; Husnul Khatimah | Tauhid Amali</div>
-    </header>
-
-    <div class="jump no-print">
-      <div class="wrap">
-        <div class="jump-inner" id="jump-links">
-          <strong>🧭 Lompat ke:</strong>
-          <a href="#17-0">17.0</a>
-          <a href="#17-1">17.1</a>
-          <a href="#17-2">17.2</a>
-          <a href="#17-3">17.3</a>
-          <a href="#17-4">17.4</a>
-          <a href="#17-5">17.5</a>
-          <a href="#17-6">17.6</a>
-          <a href="#17-7">17.7</a>
-          <a href="#17-8">17.8</a>
-        </div>
-      </div>
+<div class="pdf-meta-page pdf-only pdf-break">
+  <div class="pdf-meta-inner">
+    <h2>Maklumat Dokumen</h2>
+    <div class="pdf-meta-list">
+      <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 17 — OBJEKTIF HIDUP: REDHA ALLAH SEBELUM MATI</span></p>
+      <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+      <p><strong>Laman:</strong> 3asbab.org</p>
+      <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+      <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
     </div>
+  </div>
+</div>
 
-    <main class="wrap">
+<header class="wrap" id="top">
+  <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+  <h1 id="page-title">Bab 17 — OBJEKTIF HIDUP: REDHA ALLAH SEBELUM MATI</h1>
+  <div class="meta" id="category-line">Objektif Hidup, Redha Allah &amp; Husnul Khatimah | Tauhid Amali</div>
+</header>
+
+<div class="jump no-print">
+  <div class="wrap">
+    <div class="jump-inner" id="jump-links">
+      <strong>🧭 Lompat ke:</strong>
+      <a href="#17-0">17.0</a>
+      <a href="#17-1">17.1</a>
+      <a href="#17-2">17.2</a>
+      <a href="#17-3">17.3</a>
+      <a href="#17-4">17.4</a>
+      <a href="#17-5">17.5</a>
+      <a href="#17-6">17.6</a>
+      <a href="#17-7">17.7</a>
+      <a href="#17-8">17.8</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
     
     <article>
       <!-- Badge pembuka bab -->
@@ -1252,11 +1285,12 @@
 
 </article>
   
-    </main>
+   </main>
 
     <footer class="wrap">
       <div>© 3asbab.org — Kerangka 3 Asbab</div>
     </footer>
+
   </div>
 
   <script>
@@ -1284,43 +1318,15 @@
         if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
       }
 
-      const element = document.getElementById('pdf-shell');
+      setTimeout(() => {
+        window.print();
 
-      const opt = {
-        margin: [10, 10, 10, 10],
-        filename: 'bab-17-objektif-hidup-redha-allah-sebelum-mati.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: {
-          scale: 2,
-          useCORS: true,
-          scrollY: 0
-        },
-        jsPDF: {
-          unit: 'mm',
-          format: 'a4',
-          orientation: 'portrait'
-        },
-        pagebreak: {
-          mode: ['css', 'legacy']
-        }
-      };
-
-      html2pdf()
-        .set(opt)
-        .from(element)
-        .save()
-        .then(() => {
+        setTimeout(() => {
           btn.innerHTML = originalText;
           btn.disabled = false;
-        })
-        .catch(() => {
-          btn.innerHTML = originalText;
-          btn.disabled = false;
-          alert('PDF gagal dijana. Sila cuba semula.');
-        });
+        }, 500);
+      }, 120);
     }
   </script>
-
 </body>
 </html>
-
