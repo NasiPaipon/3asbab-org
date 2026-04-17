@@ -1,193 +1,670 @@
-```html
-<!DOCTYPE html>
-<html lang="ms">
+    <!DOCTYPE html><html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 18 — STANDARD UMAT: MENJADI MUHAJIRIN & ANSAR | 3asbab.org</title>
   <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
+    * {
       margin: 0;
-      background: var(--bg);
-      color:#111;
-    }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
-    }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
-    }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* Lompat ke... */
-    .jump{
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
-    }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
-    }
+:root {
+  --max-width: 920px;
+  --border-light: #e2e8f0;
+  --bg-soft: #fafcff;
+  --muted: #4a5568;
+  --accent: #0f7b4a;
+  --accent-light: #e6f4ed;
+  --text-dark: #1a202c;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
 
-    main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
-    }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
-    }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
-    }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
-    }
-    h4{
-      margin: 12px 0 6px 0;
-      font-size: 16px;
-      font-weight:600;
-    }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
-      border-left: 4px solid var(--accent);
-      background: #f8fffb;
-    }
-    .arab{
-      font-size: 20px;
-      line-height: 1.9;
-      direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
-    }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
-    }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration:none;
-    }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    footer a{color:inherit}
-    /* Nota kaki */
-    .footnote{
-      font-size:13px;
-      color:var(--muted);
-      border-top:1px dashed var(--border);
-      margin-top:20px;
-      padding-top:10px;
-    }
-  </style>
+  --pdf-accent: #0f7b4a;
+  --pdf-accent-soft: #e6f4ed;
+  --pdf-border: #d9e2ec;
+  --pdf-text: #1f2937;
+  --pdf-muted: #5b6573;
+  --pdf-paper: #fffefb;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  background: #ffffff;
+  color: var(--text-dark);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: clamp(1.15rem, 4vw, 1.8rem);
+  padding-right: clamp(1.15rem, 4vw, 1.8rem);
+}
+
+.topbar {
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(6px);
+}
+
+.topbar nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.8rem 0;
+  min-height: 56px;
+}
+
+.topbar a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+}
+
+.topbar a:hover {
+  color: var(--accent);
+}
+
+.brand {
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+header {
+  padding: 1.5rem 0 0.65rem;
+}
+
+h1 {
+  font-size: clamp(1.85rem, 4vw, 2.45rem);
+  line-height: 1.25;
+  margin: 0.3rem 0 0.55rem;
+  letter-spacing: -0.01em;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 0.75rem;
+  margin: 0.45rem 0;
+}
+
+.jump {
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 56px;
+  z-index: 20;
+  background: rgba(255,255,255,0.98);
+}
+
+.jump-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  align-items: center;
+  font-size: 0.82rem;
+}
+
+.jump a {
+  padding: 0.24rem 0.72rem;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.12s ease;
+  color: var(--text-dark);
+}
+
+.jump a:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+main {
+  padding: 1.2rem 0 3rem;
+}
+
+.badge-chapter {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  background: #fef3c7;
+  color: #b45309;
+  padding: 0.22rem 0.82rem;
+  border-radius: 999px;
+  margin-bottom: 0.8rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  line-height: 1.35;
+  margin: 1.8rem 0 0.75rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.24rem;
+  line-height: 1.45;
+  margin: 1.2rem 0 0.52rem;
+  font-weight: 700;
+  color: #0b3b2a;
+}
+
+h4 {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 1rem 0 0.45rem;
+  font-weight: 700;
+  color: #134e3a;
+}
+
+p {
+  margin: 0.72rem 0;
+}
+
+ul,
+ol {
+  margin: 0.55rem 0 0.95rem 1.4rem;
+  padding-left: 0.2rem;
+}
+
+li {
+  margin: 0.34rem 0;
+  line-height: 1.75;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+.section-card {
+  background: var(--bg-soft);
+  border-radius: 1.2rem;
+  padding: 1.25rem 1.4rem;
+  margin: 1.2rem 0;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.arab,
+.arabic {
+  font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif;
+  color: #1e293b;
+}
+
+.arab {
+  direction: rtl;
+  unicode-bidi: embed;
+  font-size: 1.12em;
+  line-height: 1.9;
+  white-space: normal;
+}
+
+.arabic {
+  font-size: 1.62rem;
+  line-height: 1.9;
+  direction: rtl;
+  text-align: right;
+  margin: 0.85rem 0;
+}
+
+.translation {
+  background: #f8fafc;
+  padding: 0.7rem 1rem;
+  border-radius: 0.8rem;
+  margin: 0.55rem 0 1rem;
+  border-left: 3px solid var(--accent);
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+blockquote {
+  background: var(--accent-light);
+  border-radius: 0.8rem;
+  padding: 0.9rem 1.15rem;
+  margin: 1rem 0;
+  font-style: normal;
+  line-height: 1.8;
+}
+
+.insight-box {
+  background: #f1f5f9;
+  padding: 0.9rem 1.15rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  line-height: 1.75;
+}
+
+.insight-box h3 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.94rem;
+  background: #fff;
+}
+
+th,
+td {
+  border: 1px solid var(--border-light);
+  padding: 0.68rem;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.65;
+}
+
+th {
+  background: #f1f5f9;
+  font-weight: 700;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: 0;
+  height: 1px;
+  background: var(--border-light);
+}
+
+.footnote {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 1.5rem;
+  border-top: 1px dashed var(--border-light);
+  padding-top: 1rem;
+}
+
+.footnotes {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 1.5rem;
+  border-top: 1px dashed var(--border-light);
+  padding-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.footnotes li {
+  margin: 0.38rem 0;
+  line-height: 1.65;
+}
+
+.footnotes a,
+.footnote a,
+sup a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.toplink {
+  font-size: 0.78rem;
+  margin-top: 0.85rem;
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.toplink:hover {
+  text-decoration: underline;
+}
+
+footer {
+  border-top: 1px solid var(--border-light);
+  padding: 1.5rem 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-top: 1rem;
+}
+
+.pdf-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 14px 0 8px;
+}
+
+.btn-pdf {
+  appearance: none;
+  border: 1px solid var(--pdf-border);
+  background: #fff;
+  color: var(--pdf-text);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+.btn-pdf:hover {
+  border-color: var(--pdf-accent);
+  background: var(--pdf-accent-soft);
+}
+
+.btn-pdf:active {
+  transform: translateY(1px);
+}
+
+.no-print {
+  display: block;
+}
+
+.pdf-only {
+  display: none;
+}
+
+.pdf-exporting .pdf-only {
+  display: block !important;
+}
+
+.pdf-exporting .no-print,
+.pdf-exporting .pdf-toolbar,
+.pdf-exporting .topbar,
+.pdf-exporting .jump,
+.pdf-exporting .toplink {
+  display: none !important;
+}
+
+.pdf-shell {
+  background: #fff;
+}
+
+.pdf-cover {
+  display: none;
+}
+
+.pdf-cover-inner {
+  min-height: 260mm;
+  padding: 28mm 18mm 24mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--pdf-paper);
+  color: var(--pdf-text);
+}
+
+.pdf-cover-top {
+  border-top: 4px solid var(--pdf-accent);
+  padding-top: 12mm;
+}
+
+.pdf-cover-brand {
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pdf-muted);
+  margin-bottom: 10mm;
+}
+
+.pdf-cover-series {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 6mm;
+}
+
+.pdf-cover-title {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 5mm;
+  font-weight: 800;
+}
+
+.pdf-cover-subtitle {
+  font-size: 1rem;
+  color: var(--pdf-muted);
+  margin: 0;
+}
+
+.pdf-cover-bottom {
+  border-top: 1px solid var(--pdf-border);
+  padding-top: 8mm;
+  font-size: 0.95rem;
+  color: var(--pdf-muted);
+}
+
+.pdf-meta-page {
+  display: none;
+}
+
+.pdf-meta-inner {
+  min-height: 240mm;
+  padding: 20mm 16mm;
+  background: #fff;
+  color: var(--pdf-text);
+}
+
+.pdf-meta-inner h2 {
+  border: 0;
+  padding: 0;
+  margin: 0 0 10mm;
+  font-size: 1.4rem;
+}
+
+.pdf-meta-list p {
+  margin: 0 0 6mm;
+}
+
+.pdf-break {
+  break-before: page;
+  page-break-before: always;
+}
+
+.pdf-avoid-break {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .no-print,
+  .pdf-toolbar,
+  .topbar,
+  .jump,
+  .toplink {
+    display: none !important;
+  }
+
+  .pdf-only,
+  .pdf-cover,
+  .pdf-meta-page {
+    display: block !important;
+  }
+
+  .section-card,
+  blockquote,
+  .insight-box {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h2,
+  h3,
+  h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .topbar nav {
+    gap: 0.75rem;
+    min-height: 52px;
+  }
+
+  .jump {
+    top: 52px;
+  }
+
+  .section-card {
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.34rem;
+    padding-left: 0.75rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .arab {
+    font-size: 1.08em;
+  }
+
+  .arabic {
+    font-size: 1.34rem;
+  }
+
+  table {
+    font-size: 0.88rem;
+  }
+
+  th,
+  td {
+    padding: 0.58rem;
+  }
+}
+
+
+</style>
 </head>
 <body>
-
-  <!-- Top nav -->
-  <div class="topbar">
+  <script>
+    const DOC_META = {
+      pageTitle: "Bab 18 — STANDARD UMAT: MENJADI MUHAJIRIN & ANSAR",
+      shortTitle: "Bab 18",
+      subtitle: "Standard Umat dalam Mengikut Muhajirin & Ansar dengan Ihsan",
+      headerLine: "📖 Kerangka 3 Asbab — Arkib Baca Sahaja",
+      categoryLine: "Standard Umat, Muhajirin &amp; Ansar | Tauhid Amali",
+      currentFile: "bab-18.html",
+      prevFile: "bab-17.html",
+      prevLabel: "Bab 17",
+      nextFile: "bab-19.html",
+      nextLabel: "Bab 19",
+      jumpLinks: [
+        { id: "18-0", label: "18.0" },
+        { id: "18-1", label: "18.1" },
+        { id: "18-2", label: "18.2" },
+        { id: "18-3", label: "18.3" },
+        { id: "18-4", label: "18.4" },
+        { id: "18-5", label: "18.5" },
+        { id: "18-6", label: "18.6" }
+      ]
+    };
+  </script><div class="topbar no-print">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a href="bab-17.html">Prev ←</a>
-        <a href="bab-18.html">Bab ini</a>
-        <a href="bab-19.html">Next →</a>
+        <a id="nav-prev" href="bab-17.html">← Bab 17</a>
+        <a id="nav-current" href="bab-18.html" style="font-weight:600;">Bab 18</a>
+        <a id="nav-next" href="bab-19.html">Bab 19 →</a>
       </nav>
     </div>
-  </div>
+  </div><div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
+    </div>
+  </div><div id="pdf-shell" class="pdf-shell">
 
-  <!-- Page title -->
-  <header class="wrap" id="top">
-    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
-    <h1>Bab 18 — STANDARD UMAT: MENJADI MUHAJIRIN & ANSAR</h1>
-  </header>
-
-  <!-- Jump links (10 sub-bab) -->
-  <div class="jump">
-    <div class="wrap">
-      <div class="inner">
-        <strong>Lompat ke:</strong>
-        <a href="#18-1">18.1</a>
-        <a href="#18-2">18.2</a>
-        <a href="#18-3">18.3</a>
-        <a href="#18-4">18.4</a>
-        <a href="#18-5">18.5</a>
-        <a href="#18-6">18.6</a>
-        <a href="#18-7">18.7</a>
-      
-a>
-      </div>
+<div class="pdf-cover pdf-only">
+  <div class="pdf-cover-inner">
+    <div class="pdf-cover-top">
+      <div class="pdf-cover-brand">3asbab.org</div>
+      <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+      <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 18 — STANDARD UMAT: MENJADI MUHAJIRIN & ANSAR</h1>
+      <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Standard Umat dalam Mengikut Muhajirin & Ansar dengan Ihsan</p>
+    </div>
+    <div class="pdf-cover-bottom">
+      <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+      <div id="pdf-cover-footer-line2">© 3asbab.org</div>
     </div>
   </div>
+</div>
 
-  <main class="wrap">
-    <article>
+<div class="pdf-meta-page pdf-only pdf-break">
+  <div class="pdf-meta-inner">
+    <h2>Maklumat Dokumen</h2>
+    <div class="pdf-meta-list">
+      <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 18 — STANDARD UMAT: MENJADI MUHAJIRIN & ANSAR</span></p>
+      <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+      <p><strong>Laman:</strong> 3asbab.org</p>
+      <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+      <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+    </div>
+  </div>
+</div>
+
+<header class="wrap" id="top">
+  <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+  <h1 id="page-title">Bab 18 — STANDARD UMAT: MENJADI MUHAJIRIN & ANSAR</h1>
+  <div class="meta" id="category-line">Standard Umat, Muhajirin &amp; Ansar | Tauhid Amali</div>
+</header>
+
+<div class="jump no-print">
+  <div class="wrap">
+    <div class="jump-inner" id="jump-links">
+      <strong>🧭 Lompat ke:</strong>
+      <a href="#18-0">18.0</a>
+      <a href="#18-1">18.1</a>
+      <a href="#18-2">18.2</a>
+      <a href="#18-3">18.3</a>
+      <a href="#18-4">18.4</a>
+      <a href="#18-5">18.5</a>
+      <a href="#18-6">18.6</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+<article>
       <!-- Badge pembuka bab -->
       <div class="section">
         <div class="badge">🟥 BAB 18 — STANDARD UMAT: MENJADI MUHAJIRIN & ANSAR</div>
@@ -232,7 +709,7 @@ a>
         <p><strong>Hijrah Iman, Bukan Sekadar Geografi</strong></p>
         <p>Muhajirin dalam al-Qur’an bukan semata-mata orang yang berpindah tempat.<br>Hijrah fizikal hanyalah manifestasi luar kepada hijrah yang lebih dalam.</p>
         <p>Allah berfirman:</p>
-        <div class="arab">﴿ وَٱلَّذِينَ ءَامَنُوا۟ وَهَاجَرُوا۟ وَجَـٰهَدُوا۟ بِأَمْوَٰلِهِمْ وَأَنفُسِهِمْ فِى سَبِيلِ ٱللَّهِ ﴾</div>
+        <div class="arab">﴿ وَٱلَّذِينَ ءَامَنُوا۟ وَهَاجَرُوا۟ وَجَـٰهَدُوا۟ بِأَمْوَٰلِهِمْ وَأَنفُسِهِمْ فِى سَبِيلِ ٱللَّهِ ﴾</div>
         <p>“Dan orang-orang yang beriman, berhijrah, serta berjihad dengan harta dan diri mereka di jalan Allah.”<br>(at-Taubah 9:20)【1】</p>
         <p>Hijrah Muhajirin merangkumi:<br>• Hijrah iman → berpindah daripada hidup berpusatkan diri kepada hidup berpusatkan Allah.<br>• Hijrah pergantungan → meninggalkan sandaran kepada asbab dunia (status, keselamatan, kestabilan), dan menggantikannya dengan tawakkal kepada Allah.<br>• Hijrah keutamaan → mendahulukan agama ke atas harta, keluarga, dan kepentingan peribadi.<br>• Hijrah amal → kesanggupan berjuang dengan harta dan diri (bi amwālikum wa anfusikum).</p>
         <p>➡️ Maka sesiapa yang: beriman, tetapi masih meletakkan dunia sebagai pusat hidup, dan agama sebagai tambahan sampingan, belum memenuhi standard Muhajirin, walaupun dia tidak berpindah tempat.</p>
@@ -243,7 +720,7 @@ a>
         <h3>18.2.2 Ansar Menurut al-Qur’an</h3>
         <p><strong>Menolong Agama Allah dengan Harta, Ruang Hidup dan Diri</strong></p>
         <p>Ansar bukan sekadar “orang baik yang membantu”.<br>Mereka ialah penyokong strategik agama Allah yang sanggup mengorbankan apa yang paling peribadi.<br>Allah memuji Ansar dengan ciri yang sangat spesifik:</p>
-        <div class="arab">﴿ وَٱلَّذِينَ تَبَوَّءُوا۟ ٱلدَّارَ وَٱلْإِيمَـٰنَ مِن قَبْلِهِمْ يُحِبُّونَ مَنْ هَاجَرَ إِلَيْهِمْ وَلَا يَجِدُونَ فِى صُدُورِهِمْ حَاجَةً مِّمَّآ أُوتُوا۟ وَيُؤْثِرُونَ عَلَىٰٓ أَنفُسِهِمْ وَلَوْ كَانَ بِهِمْ خَصَاصَةٌ ﴾</div>
+        <div class="arab">﴿ وَٱلَّذِينَ تَبَوَّءُوا۟ ٱلدَّارَ وَٱلْإِيمَـٰنَ مِن قَبْلِهِمْ يُحِبُّونَ مَنْ هَاجَرَ إِلَيْهِمْ وَلَا يَجِدُونَ فِى صُدُورِهِمْ حَاجَةً مِّمَّآ أُوتُوا۟ وَيُؤْثِرُونَ عَلَىٰٓ أَنفُسِهِمْ وَلَوْ كَانَ بِهِمْ خَصَاصَةٌ ﴾</div>
         <p>(al-Ḥashr 59:9)【2】</p>
         <p>Ansar dicirikan oleh:<br>• Memberi tempat → membuka rumah, kota, dan ruang hidup untuk agama Allah.<br>• Memberi harta → tanpa rasa rugi, iri, atau syarat tersembunyi.<br>• Mendahulukan orang lain atas diri sendiri → walaupun mereka sendiri dalam kesempitan.<br>• Menjadikan iman sebagai asas komuniti → bukan sekadar toleransi sosial.</p>
         <p>➡️ Ansar bukan sekadar membantu Muslim, tetapi menanggung beban agama Allah bersama Muhajirin.</p>
@@ -254,7 +731,7 @@ a>
         <h3>18.2.3 “Orang-Orang yang Mengikuti Mereka dengan Ihsan”</h3>
         <p><strong>Siapa yang Termasuk, Siapa yang Terkeluar</strong></p>
         <p>Allah tidak menutup pintu selepas generasi Sahabat.<br>Namun Allah meletakkan satu syarat yang sangat ketat:</p>
-        <div class="arab">﴿ وَٱلَّذِينَ ٱتَّبَعُوهُم بِإِحْسَـٰنٍ ﴾</div>
+        <div class="arab">﴿ وَٱلَّذِينَ ٱتَّبَعُوهُم بِإِحْسَـٰنٍ ﴾</div>
         <p>“Dan orang-orang yang mengikuti mereka dengan ihsan.”<br>(at-Taubah 9:100)【3】</p>
         <p>Mengikuti dengan ihsan bukan bermaksud:<br>• mengagumi sejarah,<br>• memuji Sahabat,<br>• atau sekadar menisbahkan diri kepada mereka.</p>
         <p>Ia bermaksud:<br>• meniru tertib hidup mereka,<br>• mengambil jalan hijrah mereka,<br>• memikul beban jamaah seperti mereka,<br>• dan bersabar sebagaimana mereka bersabar.</p>
@@ -304,22 +781,22 @@ a>
         <p>Hijrah bermula dengan meninggalkan sesuatu yang selama ini menjadi pusat hidup.</p>
         <p>Hijrah Muhajirin menuntut seseorang keluar daripada tiga kebergantungan utama:</p>
         <p><strong>a) Pergantungan dunia</strong><br>→ rasa selamat bergantung kepada: harta, jawatan, kestabilan hidup, pengiktirafan manusia.</p>
-        <div class="arab">وَمَا ٱلْحَيَوٰةُ ٱلدُّنْيَآ إِلَّا مَتَـٰعُ ٱلْغُرُورِ【2】</div>
+        <div class="arab">وَمَا ٱلْحَيَوٰةُ ٱلدُّنْيَآ إِلَّا مَتَـٰعُ ٱلْغُرُورِ【2】</div>
         <p>“Dan kehidupan dunia ini tidak lain hanyalah kesenangan yang memperdayakan.”<br>(Surah al-Ḥadīd 57:20)</p>
         <p>Rasulullah ﷺ bersabda:</p>
-        <div class="arab">لَيْسَ الْغِنَىٰ عَنْ كَثْرَةِ الْعَرَضِ، وَلَٰكِنَّ الْغِنَىٰ غِنَى النَّفْسِ【3】</div>
+        <div class="arab">لَيْسَ الْغِنَىٰ عَنْ كَثْرَةِ الْعَرَضِ، وَلَٰكِنَّ الْغِنَىٰ غِنَى النَّفْسِ【3】</div>
         <p>“Bukanlah kekayaan itu kerana banyaknya harta, tetapi kekayaan sebenar ialah kekayaan jiwa.”<br>(Riwayat al-Bukhārī dan Muslim)</p>
         <p>Selagi dunia menjadi sandaran utama, panahan hidup akan condong ke bawah — bukan ke sasaran Allah.</p>
 
         <p><strong>b) Asbab Zulumat</strong><br>→ sistem, status, pengaruh dan kuasa sosial yang diyakini boleh: menjaga maruah, menjamin masa depan, menentukan kejayaan.</p>
-        <div class="arab">وَٱتَّخَذُوا۟ مِن دُونِ ٱللَّهِ ءَالِهَةً لِّيَكُونُوا۟ لَهُمْ عِزًّا【4】</div>
+        <div class="arab">وَٱتَّخَذُوا۟ مِن دُونِ ٱللَّهِ ءَالِهَةً لِّيَكُونُوا۟ لَهُمْ عِزًّا【4】</div>
         <p>“Dan mereka menjadikan selain Allah sebagai pelindung dengan harapan mendapat kemuliaan.”<br>(Surah Maryam 19:81)</p>
-        <div class="arab">مَن كَانَ يُرِيدُ ٱلْعِزَّةَ فَلِلَّهِ ٱلْعِزَّةُ جَمِيعًا【5】</div>
+        <div class="arab">مَن كَانَ يُرِيدُ ٱلْعِزَّةَ فَلِلَّهِ ٱلْعِزَّةُ جَمِيعًا【5】</div>
         <p>“Sesiapa yang menginginkan kemuliaan, maka seluruh kemuliaan itu milik Allah.”<br>(Surah Fāṭir 35:10)</p>
         <p>Selagi Asbab Zulumat diyakini berkuasa, hijrah belum bermula.</p>
 
         <p><strong>c) Pusat hidup kepada diri</strong><br>→ hidup berputar di sekitar: keselesaan diri, cita rasa peribadi, perancangan sendiri.</p>
-        <div class="arab">أَفَرَءَيْتَ مَنِ ٱتَّخَذَ إِلَـٰهَهُۥ هَوَىٰهُ【6】</div>
+        <div class="arab">أَفَرَءَيْتَ مَنِ ٱتَّخَذَ إِلَـٰهَهُۥ هَوَىٰهُ【6】</div>
         <p>“Maka pernahkah engkau melihat orang yang menjadikan hawa nafsunya sebagai tuhannya?”<br>(Surah al-Jāthiyah 45:23)</p>
         <p>Selagi “aku” menjadi pusat, agama hanya menjadi pelengkap, bukan arah.</p>
         <p>➡️ Hijrah bermula apabila pusat hidup dialihkan daripada dunia dan diri.</p>
@@ -330,18 +807,18 @@ a>
         <p>Hijrah bukan sekadar meninggalkan, tetapi berpindah kepada pusat baharu.</p>
         <p>Hijrah Muhajirin menuntut tiga peralihan besar:</p>
         <p><strong>a) Allah sebagai pusat hidup</strong><br>→ keputusan hidup tidak lagi ditentukan oleh: untung rugi dunia, tekanan manusia, ketakutan kehilangan, tetapi oleh apa yang Allah redha.</p>
-        <div class="arab">قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ【7】</div>
+        <div class="arab">قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ【7】</div>
         <p>“Katakanlah: Sesungguhnya solatku, ibadahku, hidupku dan matiku hanyalah untuk Allah, Tuhan seluruh alam.”<br>(Surah al-An‘ām 6:162)</p>
 
         <p><strong>b) Agama sebagai beban hidup</strong><br>→ agama bukan: aktiviti sampingan, ibadah hujung minggu, identiti simbolik, tetapi amanah harian.</p>
-        <div class="arab">إِنَّا عَرَضْنَا ٱلْأَمَانَةَ عَلَى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱلْجِبَالِ فَأَبَيْنَ أَن يَحْمِلْنَهَا… وَحَمَلَهَا ٱلْإِنسَـٰنُ【8】</div>
+        <div class="arab">إِنَّا عَرَضْنَا ٱلْأَمَانَةَ عَلَى ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱلْجِبَالِ فَأَبَيْنَ أَن يَحْمِلْنَهَا… وَحَمَلَهَا ٱلْإِنسَـٰنُ【8】</div>
         <p>(Surah al-Aḥzāb 33:72)</p>
         <p>Rasulullah ﷺ sehingga bengkak kakinya, lalu bersabda:</p>
         <div class="arab">أَفَلَا أَكُونُ عَبْدًا شَكُورًا【9】</div>
         <p>“Tidakkah aku menjadi hamba yang bersyukur?”<br>(Riwayat al-Bukhārī dan Muslim)</p>
 
         <p><strong>c) Jamaah sebagai wadah amal</strong><br>→ hijrah tidak sah secara individu semata-mata.</p>
-        <div class="arab">وَٱلَّذِينَ ءَامَنُوا۟ وَهَاجَرُوا۟ وَجَـٰهَدُوا۟ فِى سَبِيلِ ٱللَّهِ وَٱلَّذِينَ ءَاوَوا۟ وَنَصَرُوٓا۟ أُو۟لَـٰٓئِكَ هُمُ ٱلْمُؤْمِنُونَ حَقًّا【10】</div>
+        <div class="arab">وَٱلَّذِينَ ءَامَنُوا۟ وَهَاجَرُوا۟ وَجَـٰهَدُوا۟ فِى سَبِيلِ ٱللَّهِ وَٱلَّذِينَ ءَاوَوا۟ وَنَصَرُوٓا۟ أُو۟لَـٰٓئِكَ هُمُ ٱلْمُؤْمِنُونَ حَقًّا【10】</div>
         <p>(Surah al-Anfāl 8:74)</p>
         <p>➡️ Hijrah total ialah memindahkan seluruh struktur hidup kepada Allah, agama dan jamaah.</p>
 
@@ -350,14 +827,14 @@ a>
         <h3>18.3.3 Harga Hijrah</h3>
         <p>Hijrah total tidak pernah murah.<br>Allah menapis kelayakan Muhajirin melalui harga yang perlu dibayar:</p>
         <p><strong>a) Kehilangan</strong></p>
-        <div class="arab">لِلْفُقَرَآءِ ٱلْمُهَـٰجِرِينَ ٱلَّذِينَ أُخْرِجُوا۟ مِن دِيَـٰرِهِمْ وَأَمْوَٰلِهِمْ【11】</div>
+        <div class="arab">لِلْفُقَرَآءِ ٱلْمُهَـٰجِرِينَ ٱلَّذِينَ أُخْرِجُوا۟ مِن دِيَـٰرِهِمْ وَأَمْوَٰلِهِمْ【11】</div>
         <p>(Surah al-Ḥashr 59:8)</p>
         <p>Kisah Sahabat:<br>Ṣuhayb ar-Rūmī menyerahkan seluruh hartanya, lalu Rasulullah ﷺ bersabda:</p>
         <div class="arab">رَبِحَ ٱلْبَيْعُ أَبَا يَحْيَىٰ【12】</div>
         <p>“Untunglah jual beli Ṣuhayb.”</p>
 
         <p><strong>b) Ketidakselesaan</strong></p>
-        <div class="arab">أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ【13】</div>
+        <div class="arab">أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ【13】</div>
         <p>(Surah al-‘Ankabūt 29:2)</p>
 
         <p><strong>c) Risiko</strong></p>
@@ -368,7 +845,7 @@ a>
         <hr>
 
         <h3>18.3.4 Hijrah sebagai Penapis Ketepatan Panahan</h3>
-        <div class="arab">وَٱلَّذِينَ هَاجَرُوا۟ فِى ٱللَّهِ ثُمَّ قُتِلُوٓا۟ أَوْ مَاتُوا۟ لَيَرْزُقَنَّهُمُ ٱللَّهُ رِزْقًا حَسَنًا【15】</div>
+        <div class="arab">وَٱلَّذِينَ هَاجَرُوا۟ فِى ٱللَّهِ ثُمَّ قُتِلُوٓا۟ أَوْ مَاتُوا۟ لَيَرْزُقَنَّهُمُ ٱللَّهُ رِزْقًا حَسَنًا【15】</div>
         <p>(Surah al-Ḥajj 22:58)</p>
         <p>➡️ Hijrah tidak menentukan siapa masuk syurga, tetapi menentukan sejauh mana panahan hidup tepat ke sasaran tertinggi.</p>
 
@@ -418,10 +895,10 @@ a>
 
         <h3>18.4.1 Makna Nusrah Menurut al-Qur’an</h3>
         <p>Nusrah bukan sekadar membantu.<br>Nusrah ialah memberi kekuatan agar agama Allah boleh ditegakkan dan bergerak.</p>
-        <div class="arab">يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوٓا۟ أَنصَارَ ٱللَّهِ【16】</div>
+        <div class="arab">يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوٓا۟ أَنصَارَ ٱللَّهِ【16】</div>
         <p>“Wahai orang-orang yang beriman, jadilah kamu penolong-penolong agama Allah.”<br>(Surah aṣ-Ṣaff 61:14)</p>
         <p>Nusrah dalam al-Qur’an sentiasa berkait dengan:<br>• tindakan nyata,<br>• pengorbanan,<br>• dan kesiapsediaan memikul risiko.</p>
-        <div class="arab">إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ【17】</div>
+        <div class="arab">إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ【17】</div>
         <p>“Jika kamu menolong agama Allah, nescaya Allah akan menolong kamu dan meneguhkan kedudukanmu.”<br>(Surah Muḥammad 47:7)</p>
         <p>➡️ Nusrah ialah amal yang mengundang nusrah Allah. Tanpa nusrah, janji ini tidak diaktifkan.</p>
 
@@ -433,14 +910,14 @@ a>
         <div class="arab">وَيُؤْثِرُونَ عَلَىٰٓ أَنفُسِهِمْ وَلَوْ كَانَ بِهِمْ خَصَاصَةٌ【18】</div>
         <p>“Dan mereka mengutamakan orang lain atas diri mereka sendiri walaupun mereka dalam kesempitan.”<br>(Surah al-Ḥashr 59:9)</p>
         <p><strong>b) Ruang hidup</strong></p>
-        <div class="arab">وَٱلَّذِينَ تَبَوَّءُوا۟ ٱلدَّارَ وَٱلْإِيمَـٰنَ مِن قَبْلِهِمْ【18】</div>
+        <div class="arab">وَٱلَّذِينَ تَبَوَّءُوا۟ ٱلدَّارَ وَٱلْإِيمَـٰنَ مِن قَبْلِهِمْ【18】</div>
         <p>Agama bukan ditumpangkan, tetapi diberi ruang untuk bernaung dan membesar.</p>
         <p><strong>c) Masa</strong></p>
-        <div class="arab">الدِّينُ النَّصِيحَةُ【19】</div>
+        <div class="arab">الدِّينُ النَّصِيحَةُ【19】</div>
         <p>“Agama itu adalah nasihat (komitmen dan kesetiaan).”<br>(Riwayat Muslim)</p>
         <p>Nasihat di sini bukan kata, tetapi kesanggupan hadir, terlibat dan berterusan.</p>
         <p><strong>d) Risiko sosial</strong></p>
-        <div class="arab">أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ【13】</div>
+        <div class="arab">أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ【13】</div>
         <p>“Adakah manusia menyangka mereka akan dibiarkan berkata ‘kami beriman’ tanpa diuji?”<br>(Surah al-‘Ankabūt 29:2)</p>
         <p>➡️ Ansar menerima risiko ini sebagai harga nusrah.</p>
 
@@ -450,7 +927,7 @@ a>
         <p>Salah satu ciri paling halus Ansar ialah: memberi tanpa menguasai.</p>
         <p>Ansar:<br>• menyokong tanpa mengawal,<br>• membantu tanpa menjadi pusat,<br>• memberi tanpa menuntut kuasa.</p>
         <p>Mereka tidak menjadikan nusrah sebagai alat: dominasi, pengaruh, atau leverage kepentingan diri.</p>
-        <div class="arab">وَلَا يَجِدُونَ فِى صُدُورِهِمْ حَاجَةً مِّمَّآ أُوتُوا۟【18】</div>
+        <div class="arab">وَلَا يَجِدُونَ فِى صُدُورِهِمْ حَاجَةً مِّمَّآ أُوتُوا۟【18】</div>
         <p>“Dan mereka tidak menyimpan keinginan dalam hati terhadap apa yang diberikan (kepada orang lain).”<br>(Surah al-Ḥashr 59:9)</p>
         <p>➡️ Nusrah yang bercampur kuasa bukan nusrah. Ia hanya pertukaran kepentingan.</p>
 
@@ -459,7 +936,7 @@ a>
         <h3>18.4.4 Mengapa Ramai “Menyokong” Tetapi Tidak Menjadi Ansar</h3>
         <p>Ramai menyokong agama Allah secara emosi, tetapi tidak menjadi Ansar kerana satu sebab utama: tidak sanggup kehilangan keutamaan diri.</p>
         <p>Mereka mahu:<br>• agama bergerak, tetapi tidak mengganggu keselesaan hidup;<br>• dakwah berjaya, tetapi tanpa menanggung beban;<br>• pahala mengalir, tanpa pengorbanan nyata.</p>
-        <div class="arab">وَٱلَّذِينَ ءَامَنُوا۟ وَلَمْ يُهَاجِرُوا۟ مَا لَكُم مِّن وَلَـٰيَتِهِم مِّن شَىْءٍ حَتَّىٰ يُهَاجِرُوا۟【20】</div>
+        <div class="arab">وَٱلَّذِينَ ءَامَنُوا۟ وَلَمْ يُهَاجِرُوا۟ مَا لَكُم مِّن وَلَـٰيَتِهِم مِّن شَىْءٍ حَتَّىٰ يُهَاجِرُوا۟【20】</div>
         <p>(Surah al-Anfāl 8:72)</p>
         <p>➡️ Tanpa nusrah, iman kekal terhad.<br>➡️ Dengan nusrah, iman naik darjat.</p>
 
@@ -481,7 +958,7 @@ a>
           <li>【16】 al-Qur’an, Surah aṣ-Ṣaff (61): 14</li>
           <li>【17】 al-Qur’an, Surah Muḥammad (47): 7</li>
           <li>【18】 al-Qur’an, Surah al-Ḥashr (59): 9</li>
-          <li>【19】 Hadith: Riwayat Muslim — الدِّينُ النَّصِيحَةُ</li>
+          <li>【19】 Hadith: Riwayat Muslim — الدِّينُ النَّصِيحَةُ</li>
           <li>【20】 al-Qur’an, Surah al-Anfāl (8): 72</li>
         </ul>
 
@@ -499,7 +976,7 @@ a>
 
         <h3>18.5.1 Mengapa Allah Tidak Membenarkan Pemisahan</h3>
         <p>Allah sentiasa menggandingkan hijrah dan nusrah dalam satu rangka iman.</p>
-        <div class="arab">وَٱلَّذِينَ ءَامَنُوا۟ وَهَاجَرُوا۟ وَجَـٰهَدُوا۟ فِى سَبِيلِ ٱللَّهِ بِأَمْوَٰلِهِمْ وَأَنفُسِهِمْ وَٱلَّذِينَ ءَاوَوا۟ وَنَصَرُوٓا۟ أُو۟لَـٰٓئِكَ بَعْضُهُمْ أَوْلِيَآءُ بَعْضٍ【1】</div>
+        <div class="arab">وَٱلَّذِينَ ءَامَنُوا۟ وَهَاجَرُوا۟ وَجَـٰهَدُوا۟ فِى سَبِيلِ ٱللَّهِ بِأَمْوَٰلِهِمْ وَأَنفُسِهِمْ وَٱلَّذِينَ ءَاوَوا۟ وَنَصَرُوٓا۟ أُو۟لَـٰٓئِكَ بَعْضُهُمْ أَوْلِيَآءُ بَعْضٍ【1】</div>
         <p>“Dan orang-orang yang beriman, berhijrah dan berjihad di jalan Allah dengan harta dan diri mereka, serta orang-orang yang memberi perlindungan dan pertolongan — mereka saling menjadi pelindung antara satu sama lain.”<br>(Surah al-Anfāl 8:72)</p>
         <p>Ayat ini menetapkan dua hakikat penting:<br>1. Hijrah tanpa nusrah tidak lengkap.<br>2. Nusrah tanpa hijrah tidak sah sebagai standard iman tinggi.</p>
         <p>Muhajirin tanpa Ansar → lari daripada tanggungjawab umat → hijrah hanya menyelamatkan diri → agama tidak dipikul sebagai beban bersama<br>Ansar tanpa Muhajirin → iman tanpa hijrah → menyokong tanpa keluar dari zon selesa → agama dibantu, tetapi diri sendiri tidak berubah</p>
@@ -510,7 +987,7 @@ a>
         <h3>18.5.2 Model Sahabat: Dua Peranan, Satu Jiwa</h3>
         <p>Walaupun sirah menyebut dua kumpulan — Muhajirin dan Ansar — namun cara hidup mereka saling meniru dan melengkapi.</p>
         <p>Hakikatnya:<br>• Muhajirin juga menolong agama Allah setelah berhijrah.<br>• Ansar juga berhijrah secara iman, keutamaan dan pengorbanan, walaupun tidak berpindah geografi.</p>
-        <div class="arab">وَٱلسَّـٰبِقُونَ ٱلْأَوَّلُونَ مِنَ ٱلْمُهَـٰجِرِينَ وَٱلْأَنصَارِ وَٱلَّذِينَ ٱتَّبَعُوهُم بِإِحْسَـٰنٍ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ【2】</div>
+        <div class="arab">وَٱلسَّـٰبِقُونَ ٱلْأَوَّلُونَ مِنَ ٱلْمُهَـٰجِرِينَ وَٱلْأَنصَارِ وَٱلَّذِينَ ٱتَّبَعُوهُم بِإِحْسَـٰنٍ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ【2】</div>
         <p>“Dan orang-orang yang terdahulu lagi pertama (masuk Islam) dari kalangan Muhajirin dan Ansar serta orang-orang yang mengikuti mereka dengan ihsan — Allah redha kepada mereka dan mereka redha kepada-Nya.”<br>(Surah at-Taubah 9:100)</p>
         <p>➡️ Redha Allah diberikan bukan kerana label, tetapi kerana kesatuan cara hidup.</p>
         <p>Bezanya hanya konteks:<br>• Muhajirin: hijrah zahir + batin<br>• Ansar: hijrah batin + nusrah zahir<br>Tetapi jiwa amalnya sama.</p>
@@ -550,7 +1027,7 @@ a>
         <h2>18.6 Empat Piawaian Surah al-‘Asr sebagai Ujian Ketepatan 🔒</h2>
 
         <p>Surah al-‘Asr bukan sekadar surah ringkas untuk hafalan.<br>Ia ialah neraca Ilahi yang menimbang sama ada panahan hidup seorang manusia:<br>• benar-benar keluar daripada kerugian, atau<br>• sekadar kelihatan beriman tetapi masih berada dalam zon rugi.</p>
-        <div class="arab">وَٱلْعَصْرِ ۝ إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ ۝ إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ【1】</div>
+        <div class="arab">وَٱلْعَصْرِ ۝ إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ ۝ إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ【1】</div>
         <p>“Demi masa. Sesungguhnya manusia itu benar-benar berada dalam kerugian, kecuali orang-orang yang: 1. beriman, 2. beramal soleh, 3. saling menasihati dalam kebenaran, 4. dan saling menasihati dalam kesabaran.”<br>(Surah al-‘Asr 103:1–3)</p>
         <p>➡️ Ayat ini menetapkan bahawa semua manusia rugi, termasuk yang beriman dan beramal, jika tidak memenuhi keempat-empat piawaian secara serentak.</p>
 
@@ -559,7 +1036,7 @@ a>
         <h3>18.6.1 Āmanū — Iman yang Diuji</h3>
         <p>Īman dalam Surah al-‘Asr bukan iman teori dan bukan iman selamat.</p>
         <p>Iman yang Allah terima ialah iman yang: diuji, digugat, dipertahankan dengan pengorbanan.</p>
-        <div class="arab">أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ【2】</div>
+        <div class="arab">أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ【2】</div>
         <p>“Adakah manusia menyangka mereka akan dibiarkan berkata ‘kami beriman’ tanpa diuji?”<br>(Surah al-‘Ankabūt 29:2)</p>
         <p>➡️ Muhajirin & Ansar lulus piawaian iman ini: Muhajirin diuji dengan hijrah, kehilangan dan risiko. Ansar diuji dengan pengorbanan harta dan ruang hidup. Iman mereka berat, bukan ringan.</p>
 
@@ -568,7 +1045,7 @@ a>
         <h3>18.6.2 ‘Amilū ṣ-ṣāliḥāt — Amal yang Berkorban</h3>
         <p>Amal soleh dalam Surah al-‘Asr bukan amal mudah dan bukan amal sisa masa.</p>
         <p>Ia ialah amal yang: menuntut korban, menekan nafsu, memerlukan konsistensi.</p>
-        <div class="arab">وَٱلَّذِينَ ءَامَنُوا۟ وَهَاجَرُوا۟ وَجَـٰهَدُوا۟ فِى سَبِيلِ ٱللَّهِ بِأَمْوَٰلِهِمْ وَأَنفُسِهِمْ【3】</div>
+        <div class="arab">وَٱلَّذِينَ ءَامَنُوا۟ وَهَاجَرُوا۟ وَجَـٰهَدُوا۟ فِى سَبِيلِ ٱللَّهِ بِأَمْوَٰلِهِمْ وَأَنفُسِهِمْ【3】</div>
         <p>(Surah at-Taubah 9:20)</p>
         <p>➡️ Amal Muhajirin: meninggalkan harta, memulakan hidup dari kosong.<br>➡️ Amal Ansar: memberi harta, mendahulukan orang lain walau diri sempit. Ini amal mahal, bukan amal simbolik.</p>
 
@@ -578,7 +1055,7 @@ a>
         <p>Surah al-‘Asr menafikan dakwah individu semata-mata.</p>
         <p>“Tawāṣaw” bermaksud: saling, berulang, dalam jamaah.</p>
         <p>Ia menuntut: hidup bersama manusia, membetulkan manusia, memikul beban umat.</p>
-        <div class="arab">وَلْتَكُن مِّنكُمْ أُمَّةٌۭ يَدْعُونَ إِلَى ٱلْخَيْرِ【4】</div>
+        <div class="arab">وَلْتَكُن مِّنكُمْ أُمَّةٌۭ يَدْعُونَ إِلَى ٱلْخَيْرِ【4】</div>
         <p>(Surah Āli ‘Imrān 3:104)</p>
         <p>➡️ Muhajirin & Ansar: hidup dalam jamaah, membuat keputusan bersama, berdakwah sebagai umat, bukan individu terpencil. Tanpa dakwah jama‘i, panahan iman tidak cukup kuat.</p>
 
@@ -587,7 +1064,7 @@ a>
         <h3>18.6.4 Tawāṣaw biṣ-ṣabr — Sabar di Bawah Tekanan</h3>
         <p>Sabar dalam Surah al-‘Asr bukan sabar selesa.</p>
         <p>Ia ialah sabar: dalam tekanan, dalam penolakan, dalam pengorbanan berpanjangan.</p>
-        <div class="arab">وَٱصْبِرْ وَمَا صَبْرُكَ إِلَّا بِٱللَّهِ【5】</div>
+        <div class="arab">وَٱصْبِرْ وَمَا صَبْرُكَ إِلَّا بِٱللَّهِ【5】</div>
         <p>(Surah an-Naḥl 16:127)</p>
         <p>➡️ Muhajirin sabar: dalam kehilangan, dalam pengusiran, dalam ketidaktentuan.<br>➡️ Ansar sabar: menanggung orang lain, mendahulukan agama atas diri, hidup dalam kekurangan. Tanpa sabar, iman dan amal akan runtuh di tengah jalan.</p>
 
@@ -638,7 +1115,7 @@ a>
         <h3>18.7.1 Panahan Tepat</h3>
         <p><strong>Definisi Tauhidi</strong><br>Panahan tepat ialah apabila seseorang:<br>• membidik sasaran tertinggi (redha Allah sebelum mati),<br>• memenuhi piawaian Muhajirin & Ansar,<br>• dan lulus ujian Surah al-‘Asr secara serentak.</p>
         <p>Natijah panahan ini:<br>• Redha Allah diumumkan sebelum mati<br>• Laluan akhirat berfungsi sebagai pengesahan, bukan penentuan</p>
-        <div class="arab">إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَـٰمُوا۟ تَتَنَزَّلُ عَلَيْهِمُ ٱلْمَلَـٰٓئِكَةُ أَلَّا تَخَافُوا۟ وَلَا تَحْزَنُوا۟ وَأَبْشِرُوا۟ بِٱلْجَنَّةِ ٱلَّتِى كُنتُمْ تُوعَدُونَ【1】</div>
+        <div class="arab">إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَـٰمُوا۟ تَتَنَزَّلُ عَلَيْهِمُ ٱلْمَلَـٰٓئِكَةُ أَلَّا تَخَافُوا۟ وَلَا تَحْزَنُوا۟ وَأَبْشِرُوا۟ بِٱلْجَنَّةِ ٱلَّتِى كُنتُمْ تُوعَدُونَ【1】</div>
         <p>“Sesungguhnya orang-orang yang berkata: ‘Tuhan kami ialah Allah’, kemudian mereka istiqamah, para malaikat akan turun kepada mereka (ketika hampir mati) sambil berkata: ‘Janganlah kamu takut dan janganlah kamu bersedih; dan bergembiralah dengan syurga yang telah dijanjikan kepada kamu.’”<br>(Surah Fuṣṣilat 41:30)</p>
         <p>➡️ Ketenangan sebelum mati, khabar gembira sebelum kubur, redha Allah dirasai dan diketahui semasa hidup. Inilah panahan tepat.</p>
 
@@ -648,9 +1125,9 @@ a>
         <p><strong>Definisi Tauhidi</strong><br>Panahan tidak tepat ialah apabila seseorang:<br>• membidik sasaran tertinggi,<br>• berusaha dengan iman dan amal,<br>• tetapi tidak cukup syarat kelayakan untuk redha diumumkan sebelum mati.</p>
         <p>Namun:<br>• sasaran betul,<br>• usaha sah,<br>• iman tidak terbatal.</p>
         <p>Natijah panahan ini:<br>• Usaha diterima Allah<br>• Redha Allah diperoleh di syurga sebagai redha penutup</p>
-        <div class="arab">رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُۚ أُو۟لَـٰٓئِكَ حِزْبُ ٱللَّهِۚ أَلَآ إِنَّ حِزْبَ ٱللَّهِ هُمُ ٱلْمُفْلِحُونَ【2】</div>
+        <div class="arab">رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُۚ أُو۟لَـٰٓئِكَ حِزْبُ ٱللَّهِۚ أَلَآ إِنَّ حِزْبَ ٱللَّهِ هُمُ ٱلْمُفْلِحُونَ【2】</div>
         <p>(Surah al-Mujādilah 58:22)</p>
-        <div class="arab">رَضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُۚ ذَٰلِكَ لِمَنْ خَشِىَ رَبَّهُ【3】</div>
+        <div class="arab">رَضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُۚ ذَٰلِكَ لِمَنْ خَشِىَ رَبَّهُ【3】</div>
         <p>(Surah al-Bayyinah 98:8)</p>
         <p>➡️ Mereka selamat, mereka tidak rugi akhirat, tetapi mereka tidak hidup dengan pengiktirafan redha sebelum mati. Ini bukan kegagalan iman. Ini ialah ketidaktepatan sasaran, bukan kesesatan.</p>
 
@@ -659,7 +1136,7 @@ a>
         <h3>18.7.3 Yang Ditolak</h3>
         <p>Dalam Tauhid, yang ditolak bukan ketidaktepatan, tetapi tidak membidik langsung.</p>
         <p>Iaitu mereka yang:<br>• tidak menjadikan redha Allah sebagai sasaran hidup,<br>• hidup sekadar mengejar dunia atau “cukup selamat”,<br>• tidak berhijrah,<br>• tidak memikul beban agama,<br>• tidak masuk dalam amal jama‘i.</p>
-        <div class="arab">إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ【4】</div>
+        <div class="arab">إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ【4】</div>
         <p>“Sesungguhnya manusia itu benar-benar berada dalam kerugian.”<br>(Surah al-‘Asr 103:2)</p>
         <p>➡️ Bukan kerana kurang amal, tetapi kerana tiada sasaran Tauhidi. Mereka inilah yang: tidak memanah, tidak keluar dari zon rugi, dan tidak berada dalam dua natijah selamat.</p>
 
@@ -700,12 +1177,50 @@ a>
      
 
     </article>
-  </main>
 
-  <footer class="wrap">
-    <p>© 3asbab.org — Kerangka 3 Asbab (Tarbiah Tauhid). Disediakan untuk rujukan dalaman.<br>
-    <a href="index.html">Kembali ke halaman utama</a> | <a href="bab-17.html">Bab 17</a> | <a href="bab-18.html">Bab 18</a> | <a href="bab-19.html">Bab 19</a></p>
-  </footer>
-</body>
+</main>
+
+<footer class="wrap">
+  <div>© 3asbab.org — Kerangka 3 Asbab</div>
+</footer>
+
+
+</div><script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      if (!btn) return;
+
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+
+      document.body.classList.add('pdf-exporting');
+
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+      const pageTitle = document.getElementById('page-title');
+      const categoryLine = document.getElementById('category-line');
+      const headerLine = document.getElementById('header-line');
+
+      if (typeof DOC_META !== "undefined") {
+        if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
+        if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
+        if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
+        if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
+        if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
+        if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
+      }
+
+      setTimeout(() => {
+        window.print();
+        setTimeout(() => {
+          document.body.classList.remove('pdf-exporting');
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 120);
+    }
+  </script></body>
 </html>
-```
+
