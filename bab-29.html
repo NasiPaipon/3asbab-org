@@ -1,190 +1,217 @@
-```html
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 29 — Tertib Amal Tauhidi | 3asbab.org</title>
   <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --max-width: 920px;
+      --border-light: #e2e8f0;
+      --bg-soft: #fafcff;
+      --muted: #4a5568;
+      --accent: #0f7b4a;
+      --accent-light: #e6f4ed;
+      --text-dark: #1a202c;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
     }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      background: var(--bg);
-      color:#111;
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; background: #ffffff; color: var(--text-dark); line-height: 1.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-wrap: break-word; }
+    .wrap { width: 100%; max-width: var(--max-width); margin: 0 auto; padding-left: clamp(1.15rem, 4vw, 1.8rem); padding-right: clamp(1.15rem, 4vw, 1.8rem); }
+    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
+    .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.8rem 0; min-height: 56px; }
+    .topbar a { text-decoration: none; font-size: 0.92rem; color: var(--text-dark); }
+    .topbar a:hover { color: var(--accent); }
+    .brand { font-weight: 700; margin-right: 0.5rem; }
+    header { padding: 1.5rem 0 0.65rem; }
+    h1 { font-size: clamp(1.85rem, 4vw, 2.45rem); line-height: 1.25; margin: 0.3rem 0 0.55rem; letter-spacing: -0.01em; }
+    .meta { color: var(--muted); font-size: 0.9rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; margin: 0.45rem 0; }
+    .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 56px; z-index: 20; background: rgba(255,255,255,0.98); }
+    .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem 0; align-items: center; font-size: 0.82rem; }
+    .jump a { padding: 0.24rem 0.72rem; border-radius: 999px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.12s ease; color: var(--text-dark); }
+    .jump a:hover { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
+    main { padding: 1.2rem 0 3rem; }
+    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.22rem 0.82rem; border-radius: 999px; margin-bottom: 0.8rem; }
+    h2 { font-size: 1.6rem; line-height: 1.35; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 700; letter-spacing: -0.01em; }
+    h3 { font-size: 1.24rem; line-height: 1.45; margin: 1.2rem 0 0.52rem; font-weight: 700; color: #0b3b2a; }
+    h4 { font-size: 1.05rem; line-height: 1.5; margin: 1rem 0 0.45rem; font-weight: 700; color: #134e3a; }
+    p { margin: 0.72rem 0; }
+    ul, ol { margin: 0.55rem 0 0.95rem 1.4rem; padding-left: 0.2rem; }
+    li { margin: 0.34rem 0; line-height: 1.75; }
+    strong { font-weight: 700; }
+    em { font-style: italic; }
+    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.25rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
+    .arab, .arabic { font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif; color: #1e293b; }
+    .arab { direction: rtl; unicode-bidi: embed; font-size: 1.12em; line-height: 1.9; white-space: normal; }
+    .arabic { font-size: 1.62rem; line-height: 1.9; direction: rtl; text-align: right; margin: 0.85rem 0; }
+    .translation { background: #f8fafc; padding: 0.7rem 1rem; border-radius: 0.8rem; margin: 0.55rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.96rem; line-height: 1.75; }
+    blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.9rem 1.15rem; margin: 1rem 0; font-style: normal; line-height: 1.8; }
+    .insight-box { background: #f1f5f9; padding: 0.9rem 1.15rem; border-radius: 1rem; margin: 1rem 0; line-height: 1.75; }
+    .insight-box h3 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.94rem; background: #fff; }
+    th, td { border: 1px solid var(--border-light); padding: 0.68rem; text-align: left; vertical-align: top; line-height: 1.65; }
+    th { background: #f1f5f9; font-weight: 700; }
+    hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
+    .footnote { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
+    .footnotes { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; padding-left: 1.2rem; }
+    .footnotes li { margin: 0.38rem 0; line-height: 1.65; }
+    .footnotes a, .footnote a, sup a { color: var(--accent); text-decoration: none; }
+    .toplink { font-size: 0.78rem; margin-top: 0.85rem; display: inline-block; color: var(--accent); text-decoration: none; }
+    .toplink:hover { text-decoration: underline; }
+    footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.82rem; margin-top: 1rem; }
+    .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
+    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
+    .btn-pdf:active { transform: translateY(1px); }
+    .no-print { display: block; }
+    .pdf-only { display: none; }
+    .pdf-exporting .pdf-only { display: block !important; }
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink { display: none !important; }
+    .pdf-shell { background: #fff; }
+    .pdf-cover { display: none; }
+    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
+    .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
+    .pdf-cover-brand { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
+    .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
+    .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
+    .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
+    .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
+    .pdf-meta-page { display: none; }
+    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
+    .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
+    .pdf-meta-list p { margin: 0 0 6mm; }
+    .pdf-break { break-before: page; page-break-before: always; }
+    .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
+    @media print {
+      body { margin: 0; padding: 0; }
+      .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
+      .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
+      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
+      h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
     }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
-    }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
-    }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
-    }
-
-    /* Lompat ke... */
-    .jump{
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
-    }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
-    }
-
-    main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
-    }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
-    }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
-    }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
-    }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
-      border-left: 4px solid var(--accent);
-      background: #f8fffb;
-    }
-    .arab{
-      font-size: 20px;
-      line-height: 1.9;
-      direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
-    }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
-    }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration:none;
-    }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    footer a{color:inherit}
-    /* Nota kaki */
-    .footnote{
-      font-size:13px;
-      color:var(--muted);
-      border-top:1px dashed var(--border);
-      margin-top:20px;
-      padding-top:10px;
+    @media (max-width: 640px) {
+      .wrap { padding-left: 1.1rem; padding-right: 1.1rem; }
+      .topbar nav { gap: 0.75rem; min-height: 52px; }
+      .jump { top: 52px; }
+      .section-card { padding: 1rem 1rem; border-radius: 1rem; }
+      h1 { font-size: 1.75rem; }
+      h2 { font-size: 1.34rem; padding-left: 0.75rem; }
+      h3 { font-size: 1.1rem; }
+      h4 { font-size: 1rem; }
+      .arab { font-size: 1.08em; }
+      .arabic { font-size: 1.34rem; }
+      table { font-size: 0.88rem; }
+      th, td { padding: 0.58rem; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Top nav -->
-  <div class="topbar">
+  <script>
+    const DOC_META = {
+      pageTitle: "Bab 29 — Tertib Amal Tauhidi",
+      shortTitle: "Bab 29",
+      subtitle: "Susunan amal yang membina iman, jamaah, dan tamaddun.",
+      headerLine: "📖 Kerangka 3 Asbab — Arkib Baca Sahaja",
+      categoryLine: "Tertib Amal, Iman & Jamaah | Pembinaan Tauhidi",
+      currentFile: "bab-29.html",
+      prevFile: "bab-28.html",
+      prevLabel: "Bab 28",
+      currentLabel: "Bab 29",
+      nextFile: "bab-30.html",
+      nextLabel: "Bab 30",
+      jumpLinks: [
+        { id: "29-1", label: "29.1" },
+        { id: "29-2", label: "29.2" },
+        { id: "29-3", label: "29.3" },
+        { id: "29-4", label: "29.4" },
+        { id: "29-5", label: "29.5" },
+        { id: "29-6", label: "29.6" },
+        { id: "29-7", label: "29.7" },
+        { id: "29-8", label: "29.8" },
+        { id: "29-9", label: "29.9" },
+        { id: "29-10", label: "29.10" },
+        { id: "29-11", label: "29.11" }
+      ]
+    };
+  </script>
+  <div class="topbar no-print">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a href="bab-28.html">Prev ←</a>
-        <a href="bab-29.html">Bab ini</a>
-        <a href="bab-30.html">Next →</a>
+        <a id="nav-prev" href="bab-28.html">← Bab 28</a>
+        <a id="nav-current" href="bab-29.html" style="font-weight:600;">Bab 29</a>
+        <a id="nav-next" href="bab-30.html">Bab 30 →</a>
       </nav>
     </div>
   </div>
-
-  <!-- Page title -->
-  <header class="wrap" id="top">
-    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
-    <h1>Bab 29 — Tertib Amal Tauhidi</h1>
-  </header>
-
-  <!-- Jump links -->
-  <div class="jump">
-    <div class="wrap">
-      <div class="inner">
-        <strong>Lompat ke:</strong>
-        <a href="#29-0">29.0</a>
-        <a href="#29-1">29.1</a>
-        <a href="#29-2">29.2</a>
-        <a href="#29-3">29.3</a>
-        <a href="#29-4">29.4</a>
-        <a href="#29-5">29.5</a>
-        <a href="#29-6">29.6</a>
-        <a href="#29-7">29.7</a>
-        <a href="#29-8">29.8</a>
-        <a href="#29-9">29.9</a>
-        <a href="#29-10">29.10</a>
-        <a href="#29-11">29.11</a>
-      </div>
+  <div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
     </div>
   </div>
-
-  <main class="wrap">
+  <div id="pdf-shell" class="pdf-shell">
+    <div class="pdf-cover pdf-only">
+      <div class="pdf-cover-inner">
+        <div class="pdf-cover-top">
+          <div class="pdf-cover-brand">3asbab.org</div>
+          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 29 — Tertib Amal Tauhidi</h1>
+          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Susunan amal yang membina iman, jamaah, dan tamaddun.</p>
+        </div>
+        <div class="pdf-cover-bottom">
+          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+        </div>
+      </div>
+    </div>
+    <div class="pdf-meta-page pdf-only pdf-break">
+      <div class="pdf-meta-inner">
+        <h2>Maklumat Dokumen</h2>
+        <div class="pdf-meta-list">
+          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 29 — Tertib Amal Tauhidi</span></p>
+          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+          <p><strong>Laman:</strong> 3asbab.org</p>
+          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+        </div>
+      </div>
+    </div>
+    <header class="wrap" id="top">
+      <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+      <h1 id="page-title">Bab 29 — Tertib Amal Tauhidi</h1>
+      <div class="meta" id="category-line">Tertib Amal, Iman & Jamaah | Pembinaan Tauhidi</div>
+    </header>
+    <div class="jump no-print">
+      <div class="wrap">
+        <div class="jump-inner" id="jump-links">
+          <strong>🧭 Lompat ke:</strong>
+          <a href="#29-1">29.1</a>
+          <a href="#29-2">29.2</a>
+          <a href="#29-3">29.3</a>
+          <a href="#29-4">29.4</a>
+          <a href="#29-5">29.5</a>
+          <a href="#29-6">29.6</a>
+          <a href="#29-7">29.7</a>
+          <a href="#29-8">29.8</a>
+          <a href="#29-9">29.9</a>
+          <a href="#29-10">29.10</a>
+          <a href="#29-11">29.11</a>
+        </div>
+      </div>
+    </div>
+    <main class="wrap">
     <article>
       <!-- Badge pembuka bab -->
       <div class="section">
@@ -200,7 +227,7 @@
         <p>Dalam Islam, perubahan tidak berlaku secara rawak. Setiap amal mempunyai tertib yang telah ditunjukkan oleh para Nabi, dan tertib ini mencapai kesempurnaan dalam kehidupan Rasulullah ﷺ.</p>
         <p>Kerana itu, amal dalam Islam tidak boleh disusun berdasarkan logik manusia atau strategi dunia semata‑mata. Amal mesti mengikuti tertib wahyu.</p>
         <p>Al‑Qur’an menegaskan bahawa Rasulullah ﷺ adalah contoh yang mesti diikuti dalam seluruh kehidupan umat.</p>
-        <div class="arab">لَّقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ</div>
+        <div class="arab">لَّقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ</div>
         <p>“Sesungguhnya pada diri Rasulullah itu terdapat contoh teladan yang baik bagi kamu.”<sup>[1]</sup></p>
         <p>Ayat ini menunjukkan bahawa jalan perubahan umat bukanlah sesuatu yang perlu dicipta oleh manusia. Jalan itu telah ditunjukkan oleh Rasulullah ﷺ melalui: dakwah, mujahadah, sabar, pembinaan jamaah, dan kehidupan yang tunduk kepada Allah.</p>
         <p>Bab ini akan menjelaskan tertib amal Tauhidi, iaitu susunan amal yang membina iman manusia, membentuk jamaah orang beriman, dan akhirnya melahirkan masyarakat yang tunduk kepada Allah.</p>
@@ -214,9 +241,9 @@
       <!-- ===== 29.1 ===== -->
       <section class="section" id="29-1">
         <h2>29.1 Tauhid Sebagai Permulaan Semua Amal</h2>
-        <p>Setiap perubahan dalam Islam bermula dengan tauhid. Tauhid bukan sekadar pengakuan bahawa Allah itu Tuhan, tetapi keadaan hati yang: menafikan kuasa semua makhluk, menetapkan bahawa kesan hanya datang daripada Allah, dan hidup dengan keyakinan penuh kepada janji Allah. Inilah makna sebenar kalimah لَا إِلَٰهَ إِلَّا اللَّهُ.</p>
+        <p>Setiap perubahan dalam Islam bermula dengan tauhid. Tauhid bukan sekadar pengakuan bahawa Allah itu Tuhan, tetapi keadaan hati yang: menafikan kuasa semua makhluk, menetapkan bahawa kesan hanya datang daripada Allah, dan hidup dengan keyakinan penuh kepada janji Allah. Inilah makna sebenar kalimah لَا إِلَٰهَ إِلَّا اللَّهُ.</p>
         <p>Kerana itu seluruh dakwah para Nabi bermula dengan menyeru manusia kepada tauhid.</p>
-        <div class="arab">وَلَقَدْ بَعَثْنَا فِي كُلِّ أُمَّةٍ رَّسُولًا أَنِ اعْبُدُوا اللَّهَ وَاجْتَنِبُوا الطَّاغُوتَ</div>
+        <div class="arab">وَلَقَدْ بَعَثْنَا فِي كُلِّ أُمَّةٍ رَّسُولًا أَنِ اعْبُدُوا اللَّهَ وَاجْتَنِبُوا الطَّاغُوتَ</div>
         <p>“Sesungguhnya Kami telah mengutus dalam setiap umat seorang rasul (yang menyeru): Sembahlah Allah dan jauhilah taghut.”<sup>[1]</sup></p>
         <p>Ayat ini menunjukkan bahawa pembinaan masyarakat yang benar tidak bermula dengan sistem, politik atau ekonomi. Ia bermula dengan membetulkan hubungan manusia dengan Allah. Apabila tauhid hidup dalam hati manusia: pergantungan kepada makhluk akan hilang, manusia tidak lagi diperintah oleh dunia, keberanian dan pengorbanan akan muncul dalam kehidupan. Inilah sebabnya para Nabi memulakan dakwah mereka dengan membina tauhid dalam hati manusia. Daripada tauhid inilah lahir amal yang benar, jamaah yang kuat dan masyarakat yang diberkati.</p>
 
@@ -231,11 +258,11 @@
         <h2>29.2 Iman Sebagai Tenaga Amal</h2>
         <p>Selepas tauhid dibetulkan, perkara yang seterusnya terbina dalam diri manusia ialah iman. Iman ialah kehidupan hati yang tunduk kepada Allah. Ia bukan sekadar pengetahuan atau pengakuan di lidah, tetapi rasa hati yang hidup kepada Allah — rasa cinta, takut, harap dan tawakkal kepada‑Nya. Apabila iman hidup dalam hati, ia menjadi tenaga yang menggerakkan amal manusia.</p>
         <p>Kerana itu al‑Qur’an sering menyebut iman bersama amal soleh, menunjukkan bahawa amal yang benar lahir daripada iman yang hidup.</p>
-        <div class="arab">إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ وَإِذَا تُلِيَتْ عَلَيْهِمْ آيَاتُهُ زَادَتْهُمْ إِيمَانًا وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ</div>
+        <div class="arab">إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ وَإِذَا تُلِيَتْ عَلَيْهِمْ آيَاتُهُ زَادَتْهُمْ إِيمَانًا وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ</div>
         <p>“Sesungguhnya orang‑orang yang beriman itu ialah mereka yang apabila disebut nama Allah, hati mereka berasa takut, dan apabila dibacakan kepada mereka ayat‑ayat‑Nya, iman mereka bertambah, dan kepada Tuhan mereka bertawakkal.”<sup>[1]</sup></p>
         <p>Ayat ini menunjukkan bahawa iman bukan sesuatu yang statik. Ia boleh bertambah dan berkurang bergantung kepada keadaan hati manusia. Apabila iman kuat: manusia berani berkorban, manusia tidak takut kepada makhluk, manusia bersedia berjuang di jalan Allah. Sebaliknya apabila iman lemah, manusia akan mudah dikalahkan oleh cinta dunia dan ketakutan kepada makhluk.</p>
         <p>Kerana itu Rasulullah ﷺ sentiasa menekankan bahawa iman perlu sentiasa diperbaharui. Baginda bersabda:</p>
-        <blockquote>إِنَّ الْإِيمَانَ لَيَخْلَقُ فِي جَوْفِ أَحَدِكُمْ كَمَا يَخْلَقُ الثَّوْبُ فَاسْأَلُوا اللَّهَ أَنْ يُجَدِّدَ الْإِيمَانَ فِي قُلُوبِكُمْ</blockquote>
+        <blockquote>إِنَّ الْإِيمَانَ لَيَخْلَقُ فِي جَوْفِ أَحَدِكُمْ كَمَا يَخْلَقُ الثَّوْبُ فَاسْأَلُوا اللَّهَ أَنْ يُجَدِّدَ الْإِيمَانَ فِي قُلُوبِكُمْ</blockquote>
         <p>“Sesungguhnya iman boleh menjadi usang dalam hati seseorang seperti pakaian yang menjadi usang. Maka mintalah kepada Allah agar memperbaharui iman dalam hati kamu.”<sup>[2]</sup></p>
         <p>Dalam tertib amal Tauhidi, iman bukan sekadar matlamat, tetapi juga tenaga yang menggerakkan seluruh amal. Apabila iman hidup: dakwah akan hidup, mujahadah akan berlaku, sabar akan menjadi kuat, jamaah akan terbina. Kerana itu pembinaan iman merupakan langkah asas dalam perjalanan perubahan umat.</p>
 
@@ -253,11 +280,11 @@
         <h2>29.3 Dakwah: Amal Pertama Para Nabi</h2>
         <p>Selepas tauhid dibetulkan dan iman hidup dalam hati manusia, amal pertama yang lahir daripada iman ialah dakwah kepada Allah. Dakwah bukan sekadar menyampaikan maklumat agama. Dakwah ialah usaha mengajak manusia kembali kepada Allah, membetulkan pergantungan hati mereka, dan menghidupkan iman dalam kehidupan manusia.</p>
         <p>Kerana itu seluruh sejarah para Nabi menunjukkan bahawa dakwah adalah amal pertama dalam perubahan manusia dan masyarakat.</p>
-        <div class="arab">وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا وَقَالَ إِنَّنِي مِنَ الْمُسْلِمِينَ</div>
+        <div class="arab">وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا وَقَالَ إِنَّنِي مِنَ الْمُسْلِمِينَ</div>
         <p>“Dan siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah, beramal soleh dan berkata: sesungguhnya aku termasuk dalam kalangan orang‑orang Muslim.”<sup>[1]</sup></p>
         <p>Ayat ini menunjukkan bahawa dakwah adalah percakapan terbaik dalam kehidupan manusia, kerana ia menghubungkan manusia dengan Allah. Dakwah bukan sekadar tugas para ulama atau pendakwah. Ia adalah tanggungjawab seluruh umat.</p>
         <p>Rasulullah ﷺ bersabda:</p>
-        <blockquote>بَلِّغُوا عَنِّي وَلَوْ آيَةً</blockquote>
+        <blockquote>بَلِّغُوا عَنِّي وَلَوْ آيَةً</blockquote>
         <p>“Sampaikan daripadaku walaupun satu ayat.”<sup>[2]</sup></p>
         <p>Dalam Kerangka 3 Asbab, dakwah adalah salah satu Asbab Mutlak yang paling penting, kerana melalui dakwah: iman dibina, hati manusia dibersihkan, masyarakat mula berubah. Inilah jalan yang dilalui oleh Rasulullah ﷺ di Makkah. Baginda tidak memulakan perubahan dengan membina sistem politik atau kekuatan ekonomi. Baginda memulakan perubahan dengan dakwah kepada manusia, sehingga iman hidup dalam hati para sahabat. Daripada iman yang hidup ini lahir pengorbanan, jamaah, dan akhirnya masyarakat yang tunduk kepada Allah. Kerana itu dakwah menjadi amal pertama dalam tertib perubahan Tauhidi.</p>
 
@@ -276,7 +303,7 @@
         <p>Selepas dakwah bermula dan iman hidup dalam hati manusia, langkah seterusnya dalam tertib amal Tauhidi ialah mujahadah. Mujahadah bermaksud kesungguhan dan pengorbanan dalam menjalankan perintah Allah walaupun menghadapi kesusahan dan cabaran.</p>
         <p>Iman yang sebenar tidak berhenti pada pengakuan. Ia akan menuntut manusia untuk berkorban. Pengorbanan ini boleh berlaku dalam pelbagai bentuk: pengorbanan masa, pengorbanan tenaga, pengorbanan harta, pengorbanan keselesaan, pengorbanan diri di jalan Allah.</p>
         <p>Kerana itu al‑Qur’an mengaitkan jalan menuju petunjuk Allah dengan mujahadah.</p>
-        <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا</div>
+        <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا</div>
         <p>“Dan orang‑orang yang bersungguh‑sungguh berjuang di jalan Kami, pasti Kami akan tunjukkan kepada mereka jalan‑jalan Kami.”<sup>[1]</sup></p>
         <p>Ayat ini menunjukkan bahawa hidayah yang lebih tinggi datang selepas manusia bersungguh‑sungguh berusaha di jalan Allah. Dalam sejarah para Nabi, perubahan besar dalam masyarakat sentiasa melalui fasa mujahadah. Para sahabat Rasulullah ﷺ juga melalui proses pengorbanan yang panjang: mereka meninggalkan kampung halaman dalam hijrah, mereka mengorbankan harta, mereka menghadapi tekanan dan penentangan masyarakat, mereka bersabar dalam kesusahan di jalan Allah. Melalui mujahadah ini, iman mereka menjadi semakin kuat dan hati mereka semakin bergantung kepada Allah.</p>
         <p>Dalam Kerangka 3 Asbab, mujahadah adalah proses yang membersihkan hati daripada pergantungan kepada dunia. Apabila manusia mengorbankan: harta, masa, diri, demi Allah, cinta dunia akan keluar dari hati dan digantikan dengan cinta kepada Allah. Inilah sebabnya mujahadah menjadi harga sebenar kebangkitan umat.</p>
@@ -293,7 +320,7 @@
         <p>Selepas dakwah dan mujahadah bermula, amal yang seterusnya dalam tertib Tauhidi ialah sabar. Sabar ialah kekuatan hati untuk terus istiqamah dalam ketaatan kepada Allah walaupun menghadapi ujian, kesusahan dan penentangan.</p>
         <p>Dalam perjalanan dakwah, sabar bukan pilihan tetapi keperluan yang pasti. Setiap usaha untuk menghidupkan agama Allah akan menghadapi cabaran daripada: hawa nafsu manusia, tekanan masyarakat, penentangan golongan yang tidak mahu berubah.</p>
         <p>Kerana itu al‑Qur’an sering mengaitkan kejayaan dengan sabar.</p>
-        <div class="arab">وَالْعَصْرِ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ</div>
+        <div class="arab">وَالْعَصْرِ إِنَّ الْإِنسَانَ لَفِي خُسْرٍ إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ</div>
         <p>“Demi masa. Sesungguhnya manusia berada dalam kerugian. Kecuali orang‑orang yang beriman, beramal soleh, saling berpesan dengan kebenaran dan saling berpesan dengan kesabaran.”<sup>[1]</sup></p>
         <p>Ayat ini menunjukkan bahawa sabar adalah sebahagian daripada jalan keselamatan manusia. Dalam sejarah para Nabi, sabar sentiasa menjadi unsur penting dalam dakwah. Nabi Nuh عليه السلام berdakwah kepada kaumnya selama beratus‑ratus tahun walaupun menghadapi penolakan yang berterusan.<sup>[2]</sup> Rasulullah ﷺ dan para sahabat juga melalui pelbagai ujian di Makkah: penghinaan, tekanan sosial, penyeksaan, pemulauan ekonomi. Namun mereka terus bersabar dan istiqamah dalam dakwah.</p>
         <p>Dalam Kerangka 3 Asbab, sabar ialah kekuatan yang memastikan manusia tidak kembali kepada pergantungan kepada sebab‑sebab dunia ketika menghadapi kesusahan. Sabar mengekalkan hati manusia agar terus bergantung kepada Allah walaupun keadaan zahir kelihatan sukar. Kerana itu sabar menjadi kekuatan utama dalam perjalanan dakwah dan mujahadah.</p>
@@ -312,11 +339,11 @@
         <h2>29.6 Jamaah: Amal Tidak Boleh Bersendirian</h2>
         <p>Selepas tauhid dibetulkan, iman hidup, dakwah berjalan, mujahadah dilakukan dan sabar diamalkan, tertib amal Tauhidi seterusnya ialah terbentuknya jamaah orang beriman. Islam tidak dibina melalui usaha individu yang terpisah. Ia dibina melalui amal ijtima’i, iaitu usaha bersama manusia yang bersatu atas iman dan ketaatan kepada Allah.</p>
         <p>Kerana itu al‑Qur’an menegaskan kepentingan kesatuan umat.</p>
-        <div class="arab">وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا</div>
+        <div class="arab">وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا</div>
         <p>“Dan berpeganglah kamu semua kepada tali Allah, dan janganlah kamu berpecah‑belah.”<sup>[1]</sup></p>
         <p>Ayat ini menunjukkan bahawa kekuatan umat terletak pada kesatuan hati dan amal. Dalam sejarah Islam, jamaah yang pertama terbina melalui hubungan antara Muhajirin dan Ansar di Madinah. Muhajirin meninggalkan kampung halaman mereka demi agama, manakala Ansar menyambut mereka dengan kasih sayang dan pengorbanan. Melalui kesatuan ini lahir sebuah masyarakat yang kuat dan saling membantu.</p>
         <p>Allah memuji hubungan ini dalam al‑Qur’an:</p>
-        <div class="arab">وَالَّذِينَ تَبَوَّؤُوا الدَّارَ وَالْإِيمَانَ مِن قَبْلِهِمْ يُحِبُّونَ مَنْ هَاجَرَ إِلَيْهِمْ</div>
+        <div class="arab">وَالَّذِينَ تَبَوَّؤُوا الدَّارَ وَالْإِيمَانَ مِن قَبْلِهِمْ يُحِبُّونَ مَنْ هَاجَرَ إِلَيْهِمْ</div>
         <p>“Dan orang‑orang yang telah menetap di Madinah serta beriman sebelum kedatangan mereka mencintai orang‑orang yang berhijrah kepada mereka.”<sup>[2]</sup></p>
         <p>Ayat ini menunjukkan bahawa jamaah bukan sekadar struktur organisasi. Jamaah ialah hubungan iman antara hati manusia. Dalam Kerangka 3 Asbab, jamaah penting kerana iman manusia mudah menjadi lemah apabila seseorang hidup bersendirian. Sebaliknya apabila manusia berada dalam jamaah: iman saling menguatkan, amal menjadi lebih tersusun, dakwah menjadi lebih luas, masyarakat mula berubah. Kerana itu Rasulullah ﷺ membina para sahabat bukan sahaja sebagai individu beriman, tetapi sebagai jamaah yang hidup bersama dalam iman dan amal. Daripada jamaah inilah lahir masyarakat Madinah yang menjadi contoh pertama tamaddun Islam.</p>
 
@@ -353,7 +380,7 @@
         <h2>29.8 Suasana Iman dalam Masyarakat</h2>
         <p>Apabila jamaah terbina dan syura berjalan, tertib amal Tauhidi akan melahirkan satu perkara yang sangat penting, iaitu suasana iman dalam masyarakat. Iman tidak hidup hanya melalui pengetahuan atau teori. Iman hidup melalui suasana yang dipenuhi amal kepada Allah.</p>
         <p>Kerana itu dalam kehidupan Rasulullah ﷺ, masjid menjadi pusat kehidupan umat. Masjid bukan sekadar tempat solat, tetapi tempat di mana: iman dibina, al‑Qur’an diajarkan, dakwah dijalankan, jamaah berkumpul, masyarakat dibentuk.</p>
-        <div class="arab">فِي بُيُوتٍ أَذِنَ اللَّهُ أَن تُرْفَعَ وَيُذْكَرَ فِيهَا اسْمُهُ</div>
+        <div class="arab">فِي بُيُوتٍ أَذِنَ اللَّهُ أَن تُرْفَعَ وَيُذْكَرَ فِيهَا اسْمُهُ</div>
         <p>“Di rumah‑rumah (masjid) yang Allah izinkan untuk dimuliakan dan disebut di dalamnya nama‑Nya.”<sup>[1]</sup></p>
         <p>Ayat ini menunjukkan bahawa masjid adalah tempat yang Allah pilih untuk menghidupkan iman manusia. Dalam masyarakat yang dibina oleh Rasulullah ﷺ, masjid menjadi gelanggang kehidupan umat. Di situlah para sahabat: belajar al‑Qur’an, mendengar nasihat Rasulullah ﷺ, bermesyuarat, merancang dakwah, membina persaudaraan. Suasana ini menjadikan iman sentiasa hidup dalam kehidupan masyarakat.</p>
         <p>Selain masjid, rumah‑rumah para sahabat juga menjadi tempat yang dipenuhi dengan amal. Rasulullah ﷺ mengingatkan supaya rumah tidak dibiarkan kosong daripada zikir dan ibadah. Baginda bersabda:</p>
@@ -376,7 +403,7 @@
         <p>Apabila iman hidup dalam hati manusia, dakwah berjalan, mujahadah dilakukan, jamaah terbina dan suasana iman wujud dalam masyarakat, satu perkara penting akan berlaku secara sunnatullah: sistem akan lahir daripada amal manusia yang tunduk kepada Allah. Ini merupakan prinsip penting dalam Kerangka 3 Asbab. Sistem yang adil tidak boleh dibina secara terpisah daripada manusia yang beriman. Sistem yang benar lahir daripada masyarakat yang hidup dengan iman dan amal soleh.</p>
         <p>Kerana itu Rasulullah ﷺ tidak memulakan perubahan dengan membina struktur politik atau sistem pentadbiran terlebih dahulu. Baginda memulakan perubahan dengan membina manusia. Apabila manusia berubah, masyarakat berubah. Apabila masyarakat berubah, sistem akan terbina secara semula jadi.</p>
         <p>Al‑Qur’an menjelaskan bahawa perubahan masyarakat bermula daripada perubahan dalam diri manusia.</p>
-        <div class="arab">إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ</div>
+        <div class="arab">إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ</div>
         <p>“Sesungguhnya Allah tidak akan mengubah keadaan sesuatu kaum sehingga mereka mengubah apa yang ada dalam diri mereka.”<sup>[1]</sup></p>
         <p>Ayat ini menunjukkan bahawa perubahan dalam sistem masyarakat bukan bermula dengan struktur luar, tetapi dengan perubahan dalam hati manusia. Apabila hati manusia tunduk kepada Allah: keadilan akan muncul dalam urusan manusia, amanah akan menjadi asas kepimpinan, kerjasama akan menggantikan permusuhan. Daripada keadaan ini akan lahir pelbagai sistem dalam masyarakat, seperti sistem keadilan, sistem pendidikan, sistem ekonomi, sistem keluarga, sistem pemerintahan. Sistem‑sistem ini bukan dibina melalui paksaan atau teori semata‑mata. Ia lahir secara sunnatullah daripada manusia yang hatinya tunduk kepada Allah. Inilah yang berlaku dalam masyarakat Madinah yang dibina oleh Rasulullah ﷺ. Dalam masa yang singkat, masyarakat yang sebelumnya berpecah dan dipenuhi permusuhan berubah menjadi masyarakat yang adil, bersatu dan saling membantu. Perubahan ini berlaku kerana iman hidup dalam hati manusia, dan daripada iman itu lahir sistem yang membawa rahmat kepada masyarakat.</p>
 
@@ -392,7 +419,7 @@
         <p>Apabila iman hidup dalam hati manusia, dakwah berjalan, mujahadah dilakukan, sabar diamalkan, jamaah terbina, syura berjalan dan suasana iman wujud dalam masyarakat, maka satu hasil besar akan muncul secara sunnatullah: lahirnya tamaddun Tauhidi. Tamaddun Tauhidi bukan sekadar kemajuan material seperti pembangunan bandar, teknologi atau kekuatan ekonomi. Tamaddun Tauhidi ialah kehidupan manusia yang tunduk kepada Allah dalam seluruh aspek kehidupan.</p>
         <p>Dalam tamaddun seperti ini: iman menjadi asas kehidupan, keadilan menjadi prinsip masyarakat, amanah menjadi asas kepimpinan, dan rahmat menjadi hubungan antara manusia.</p>
         <p>Allah menjelaskan bahawa umat Islam diciptakan untuk membawa kebaikan kepada manusia.</p>
-        <div class="arab">كُنتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ تَأْمُرُونَ بِالْمَعْرُوفِ وَتَنْهَوْنَ عَنِ الْمُنكَرِ وَتُؤْمِنُونَ بِاللَّهِ</div>
+        <div class="arab">كُنتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ تَأْمُرُونَ بِالْمَعْرُوفِ وَتَنْهَوْنَ عَنِ الْمُنكَرِ وَتُؤْمِنُونَ بِاللَّهِ</div>
         <p>“Kamu adalah umat terbaik yang dilahirkan untuk manusia; kamu menyuruh kepada kebaikan, mencegah kemungkaran dan beriman kepada Allah.”<sup>[1]</sup></p>
         <p>Ayat ini menunjukkan bahawa keunggulan umat Islam bukan pada kekuatan dunia semata‑mata, tetapi pada iman dan amal yang membawa kebaikan kepada manusia. Sejarah menunjukkan bahawa tamaddun Islam yang paling jelas ialah masyarakat Madinah yang dibina oleh Rasulullah ﷺ. Dalam masyarakat tersebut: manusia bersaudara tanpa mengira asal usul, keadilan ditegakkan, orang miskin dipelihara, dan agama menjadi pusat kehidupan. Semua ini tidak bermula dengan pembinaan sistem atau kuasa politik. Ia bermula dengan pembinaan iman dalam hati manusia. Apabila iman hidup, manusia berubah. Apabila manusia berubah, masyarakat berubah. Dan apabila masyarakat tunduk kepada Allah, lahirlah tamaddun yang membawa rahmat kepada seluruh manusia. Inilah tamaddun Tauhidi yang dibina oleh Rasulullah ﷺ dan para sahabat.</p>
 
@@ -417,12 +444,49 @@
       </section>
 
     </article>
-  </main>
+  
 
-  <footer class="wrap">
-    <p>© 3asbab.org — Kerangka 3 Asbab (Tarbiah Tauhid). Disediakan untuk rujukan dalaman.<br>
-    <a href="index.html">Kembali ke halaman utama</a> | <a href="bab-28.html">Bab 28</a> | <a href="bab-29.html">Bab 29</a> | <a href="bab-30.html">Bab 30</a></p>
-  </footer>
+    </main>
+    <footer class="wrap">
+      <div>© 3asbab.org — Kerangka 3 Asbab</div>
+    </footer>
+  </div>
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      if (!btn) return;
+
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+
+      document.body.classList.add('pdf-exporting');
+
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+      const pageTitle = document.getElementById('page-title');
+      const categoryLine = document.getElementById('category-line');
+      const headerLine = document.getElementById('header-line');
+
+      if (typeof DOC_META !== "undefined") {
+        if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
+        if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
+        if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
+        if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
+        if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
+        if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
+      }
+
+      setTimeout(() => {
+        window.print();
+        setTimeout(() => {
+          document.body.classList.remove('pdf-exporting');
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 120);
+    }
+  </script>
 </body>
 </html>
-```
