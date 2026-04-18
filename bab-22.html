@@ -1,192 +1,211 @@
-```html
-<!DOCTYPE html>
-<html lang="ms">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<!DOCTYPE html><html lang="ms"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 22 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA | 3asbab.org</title>
   <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --max-width: 920px;
+      --border-light: #e2e8f0;
+      --bg-soft: #fafcff;
+      --muted: #4a5568;
+      --accent: #0f7b4a;
+      --accent-light: #e6f4ed;
+      --text-dark: #1a202c;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
     }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      background: var(--bg);
-      color:#111;
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; background: #ffffff; color: var(--text-dark); line-height: 1.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-wrap: break-word; }
+    .wrap { width: 100%; max-width: var(--max-width); margin: 0 auto; padding-left: clamp(1.15rem, 4vw, 1.8rem); padding-right: clamp(1.15rem, 4vw, 1.8rem); }
+    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
+    .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.8rem 0; min-height: 56px; }
+    .topbar a { text-decoration: none; font-size: 0.92rem; color: var(--text-dark); }
+    .topbar a:hover { color: var(--accent); }
+    .brand { font-weight: 700; margin-right: 0.5rem; }
+    header { padding: 1.5rem 0 0.65rem; }
+    h1 { font-size: clamp(1.85rem, 4vw, 2.45rem); line-height: 1.25; margin: 0.3rem 0 0.55rem; letter-spacing: -0.01em; }
+    .meta { color: var(--muted); font-size: 0.9rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; margin: 0.45rem 0; }
+    .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 56px; z-index: 20; background: rgba(255,255,255,0.98); }
+    .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem 0; align-items: center; font-size: 0.82rem; }
+    .jump a { padding: 0.24rem 0.72rem; border-radius: 999px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.12s ease; color: var(--text-dark); }
+    .jump a:hover { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
+    main { padding: 1.2rem 0 3rem; }
+    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.22rem 0.82rem; border-radius: 999px; margin-bottom: 0.8rem; }
+    h2 { font-size: 1.6rem; line-height: 1.35; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 700; letter-spacing: -0.01em; }
+    h3 { font-size: 1.24rem; line-height: 1.45; margin: 1.2rem 0 0.52rem; font-weight: 700; color: #0b3b2a; }
+    h4 { font-size: 1.05rem; line-height: 1.5; margin: 1rem 0 0.45rem; font-weight: 700; color: #134e3a; }
+    p { margin: 0.72rem 0; }
+    ul, ol { margin: 0.55rem 0 0.95rem 1.4rem; padding-left: 0.2rem; }
+    li { margin: 0.34rem 0; line-height: 1.75; }
+    strong { font-weight: 700; }
+    em { font-style: italic; }
+    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.25rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
+    .arab, .arabic { font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif; color: #1e293b; }
+    .arab { direction: rtl; unicode-bidi: embed; font-size: 1.12em; line-height: 1.9; white-space: normal; }
+    .arabic { font-size: 1.62rem; line-height: 1.9; direction: rtl; text-align: right; margin: 0.85rem 0; }
+    .translation { background: #f8fafc; padding: 0.7rem 1rem; border-radius: 0.8rem; margin: 0.55rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.96rem; line-height: 1.75; }
+    blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.9rem 1.15rem; margin: 1rem 0; font-style: normal; line-height: 1.8; }
+    .insight-box { background: #f1f5f9; padding: 0.9rem 1.15rem; border-radius: 1rem; margin: 1rem 0; line-height: 1.75; }
+    .insight-box h3 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.94rem; background: #fff; }
+    th, td { border: 1px solid var(--border-light); padding: 0.68rem; text-align: left; vertical-align: top; line-height: 1.65; }
+    th { background: #f1f5f9; font-weight: 700; }
+    hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
+    .footnote { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
+    .footnotes { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; padding-left: 1.2rem; }
+    .footnotes li { margin: 0.38rem 0; line-height: 1.65; }
+    .footnotes a, .footnote a, sup a { color: var(--accent); text-decoration: none; }
+    .toplink { font-size: 0.78rem; margin-top: 0.85rem; display: inline-block; color: var(--accent); text-decoration: none; }
+    .toplink:hover { text-decoration: underline; }
+    footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.82rem; margin-top: 1rem; }
+    .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
+    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
+    .btn-pdf:active { transform: translateY(1px); }
+    .no-print { display: block; }
+    .pdf-only { display: none; }
+    .pdf-exporting .pdf-only { display: block !important; }
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink { display: none !important; }
+    .pdf-shell { background: #fff; }
+    .pdf-cover { display: none; }
+    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
+    .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
+    .pdf-cover-brand { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
+    .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
+    .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
+    .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
+    .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
+    .pdf-meta-page { display: none; }
+    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
+    .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
+    .pdf-meta-list p { margin: 0 0 6mm; }
+    .pdf-break { break-before: page; page-break-before: always; }
+    .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
+    @media print {
+      body { margin: 0; padding: 0; }
+      .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
+      .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
+      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
+      h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
     }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
-    }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
-    }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
-    }
-
-    /* Lompat ke... */
-    .jump{
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
-    }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
-    }
-
-    main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
-    }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
-    }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
-    }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
-    }
-    h4{
-      margin: 12px 0 6px 0;
-      font-size: 16px;
-      font-weight:600;
-    }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
-      border-left: 4px solid var(--accent);
-      background: #f8fffb;
-    }
-    .arab{
-      font-size: 20px;
-      line-height: 1.9;
-      direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
-    }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
-    }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration:none;
-    }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    footer a{color:inherit}
-    /* Nota kaki */
-    .footnote{
-      font-size:13px;
-      color:var(--muted);
-      border-top:1px dashed var(--border);
-      margin-top:20px;
-      padding-top:10px;
+    @media (max-width: 640px) {
+      .wrap { padding-left: 1.1rem; padding-right: 1.1rem; }
+      .topbar nav { gap: 0.75rem; min-height: 52px; }
+      .jump { top: 52px; }
+      .section-card { padding: 1rem 1rem; border-radius: 1rem; }
+      h1 { font-size: 1.75rem; }
+      h2 { font-size: 1.34rem; padding-left: 0.75rem; }
+      h3 { font-size: 1.1rem; }
+      h4 { font-size: 1rem; }
+      .arab { font-size: 1.08em; }
+      .arabic { font-size: 1.34rem; }
+      table { font-size: 0.88rem; }
+      th, td { padding: 0.58rem; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Top nav -->
-  <div class="topbar">
+  <script>
+    const DOC_META = {
+      pageTitle: "Bab 22 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA",
+      shortTitle: "Bab 22",
+      subtitle: "Aplikasi Kerangka 3 Asbab pada Institusi Rumah",
+      headerLine: "📖 Kerangka 3 Asbab — Arkib Baca Sahaja",
+      categoryLine: "Rumah, Keluarga &amp; Suasana Iman | Aplikasi Tauhid",
+      currentFile: "bab-22.html",
+      prevFile: "bab-21.html",
+      prevLabel: "Bab 21",
+      currentLabel: "Bab 22",
+      nextFile: "bab-23.html",
+      nextLabel: "Bab 23",
+      jumpLinks: [
+        { id: "22-1", label: "22.1" },
+        { id: "22-2", label: "22.2" },
+        { id: "22-3", label: "22.3" },
+        { id: "22-4", label: "22.4" },
+        { id: "22-5", label: "22.5" },
+        { id: "22-6", label: "22.6" },
+        { id: "22-7", label: "22.7" },
+        { id: "22-8", label: "22.8" }
+      ]
+    };
+  </script>
+  <div class="topbar no-print">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a href="bab-21.html">Prev ←</a>
-        <a href="bab-22.html">Bab ini</a>
-        <a href="bab-23.html">Next →</a>
+        <a id="nav-prev" href="bab-21.html">← Bab 21</a>
+        <a id="nav-current" href="bab-22.html" style="font-weight:600;">Bab 22</a>
+        <a id="nav-next" href="bab-23.html">Bab 23 →</a>
       </nav>
     </div>
   </div>
-
-  <!-- Page title -->
-  <header class="wrap" id="top">
-    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
-    <h1>Bab 22 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA 🔒</h1>
-    <p style="color:var(--muted);"><em>Aplikasi Kerangka 3 Asbab pada Institusi Rumah</em></p>
-  </header>
-
-  <!-- Jump links -->
-  <div class="jump">
-    <div class="wrap">
-      <div class="inner">
-        <strong>Lompat ke:</strong>
-        <a href="#22-1">22.1</a>
-        <a href="#22-2">22.2</a>
-        <a href="#22-3">22.3</a>
-        <a href="#22-4">22.4</a>
-        <a href="#22-5">22.5</a>
-        <a href="#22-6">22.6</a>
-        <a href="#22-7">22.7</a>
-        <a href="#22-8">22.8</a>
-      </div>
+  <div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
     </div>
   </div>
+  <div id="pdf-shell" class="pdf-shell">
+    <div class="pdf-cover pdf-only">
+      <div class="pdf-cover-inner">
+        <div class="pdf-cover-top">
+          <div class="pdf-cover-brand">3asbab.org</div>
+          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 22 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</h1>
+          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Aplikasi Kerangka 3 Asbab pada Institusi Rumah</p>
+        </div>
+        <div class="pdf-cover-bottom">
+          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+        </div>
+      </div>
+    </div>
+    <div class="pdf-meta-page pdf-only pdf-break">
+      <div class="pdf-meta-inner">
+        <h2>Maklumat Dokumen</h2>
+        <div class="pdf-meta-list">
+          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 22 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</span></p>
+          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+          <p><strong>Laman:</strong> 3asbab.org</p>
+          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+        </div>
+      </div>
+    </div>
+    <header class="wrap" id="top">
+      <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+      <h1 id="page-title">Bab 22 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</h1>
+      <div class="meta" id="category-line">Rumah, Keluarga &amp; Suasana Iman | Aplikasi Tauhid</div>
+    </header>
+    <div class="jump no-print">
+      <div class="wrap">
+        <div class="jump-inner" id="jump-links">
+          <strong>🧭 Lompat ke:</strong>
+          <a href="#22-1">22.1</a>
+          <a href="#22-2">22.2</a>
+          <a href="#22-3">22.3</a>
+          <a href="#22-4">22.4</a>
+          <a href="#22-5">22.5</a>
+          <a href="#22-6">22.6</a>
+          <a href="#22-7">22.7</a>
+          <a href="#22-8">22.8</a>
+        </div>
+      </div>
+    </div>
+    <main class="wrap">
 
-  <main class="wrap">
     <article>
       <!-- Badge pembuka bab -->
       <div class="section">
@@ -208,7 +227,7 @@
           <li>Rumah ialah Asbab Mutlak Terbitan → tempat Nur dipelihara, distabilkan, dan diwariskan kepada keluarga.</li>
         </ul>
         <p>Apabila Nur keluar dari masjid, ia tidak boleh dibiarkan tergantung. Ia mesti mendarat di rumah. Jika rumah tidak dihidupkan sebagai markaz dakwah keluarga, Nur akan: bocor secara perlahan, luntur tanpa disedari, dan akhirnya mati walaupun keluarga masih beridentiti Islam.</p>
-        <div class="arab">﴿ فِى بُيُوتٍ أَذِنَ ٱللَّهُ أَن تُرْفَعَ وَيُذْكَرَ فِيهَا ٱسْمُهُۥ ﴾</div>
+        <div class="arab">﴿ فِى بُيُوتٍ أَذِنَ ٱللَّهُ أَن تُرْفَعَ وَيُذْكَرَ فِيهَا ٱسْمُهُۥ ﴾</div>
         <p>“Di rumah-rumah yang Allah izinkan untuk ditinggikan dan disebut nama-Nya di dalamnya.” (an-Nūr 24:36)【1】</p>
         <p>➡️ Ayat ini menunjukkan bahawa rumah mempunyai peranan langsung dalam membawa Nur, apabila ia dihidupkan dengan amal yang Allah izinkan, bukan sekadar label.</p>
 
@@ -230,7 +249,7 @@
           <li>mengharapkan sistem pendidikan menggantikan dakwah rumah (Asbab Zulumat).</li>
         </ul>
         <p>Sedangkan tiada satu pun daripada ini mempunyai janji Allah.</p>
-        <div class="arab">﴿ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ قُوٓا۟ أَنفُسَكُمْ وَأَهْلِيكُمْ نَارًۭا ﴾</div>
+        <div class="arab">﴿ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ قُوٓا۟ أَنفُسَكُمْ وَأَهْلِيكُمْ نَارًۭا ﴾</div>
         <p>“Wahai orang-orang yang beriman, peliharalah diri kamu dan keluarga kamu daripada api neraka.” (at-Taḥrīm 66:6)【2】</p>
         <p>➡️ Ayat ini meletakkan tanggungjawab iman keluarga ke atas amal, bukan ke atas sistem luaran.</p>
         <p>Tanpa: dakwah keluarga, syura rumah, mujahadah dan sabar, serta penghidupan amal-amal sunat secara berjemaah di rumah (sebagai kesinambungan kepada solat fardhu berjemaah di masjid), maka: rumah kekal sebagai Asbab Fitrah yang tidak diaktifkan, iman anak tidak dipelihara secara berterusan, dan keluarga mudah hanyut oleh arus dunia walaupun beridentiti Islam.</p>
@@ -238,7 +257,7 @@
         <h3>Rumah Sebagai Markaz Dakwah Keluarga</h3>
         <p>Dalam Kerangka 3 Asbab: Dakwah ialah Asbab Mutlak Asli, Rumah yang menghidupkan dakwah menjadi Asbab Mutlak Terbitan.</p>
         <p>Rasulullah ﷺ bersabda:</p>
-        <blockquote>« بَلِّغُوا عَنِّي وَلَوْ آيَةً » – “Sampaikanlah daripadaku walaupun satu ayat.” (Riwayat al-Bukhārī)【3】</blockquote>
+        <blockquote>« بَلِّغُوا عَنِّي وَلَوْ آيَةً » – “Sampaikanlah daripadaku walaupun satu ayat.” (Riwayat al-Bukhārī)【3】</blockquote>
         <p>➡️ Dakwah tidak bermula di mimbar besar, tetapi bermula di rumah. Maka rumah bukan sekadar tempat tinggal, tetapi: markaz dakwah paling hampir, madrasah iman paling berterusan, dan benteng terakhir Nur sebelum keluarga berdepan dunia.</p>
 
         <hr>
@@ -288,7 +307,7 @@
 
         <h3>Dalil Hadith: Keberkatan Jamaah & Keputusan Bersama</h3>
         <p>Rasulullah ﷺ bersabda:</p>
-        <blockquote>يَدُ اللَّهِ مَعَ الْجَمَاعَةِ – “Tangan Allah bersama jamaah.” (Riwayat at-Tirmidhī)【2】</blockquote>
+        <blockquote>يَدُ اللَّهِ مَعَ الْجَمَاعَةِ – “Tangan Allah bersama jamaah.” (Riwayat at-Tirmidhī)【2】</blockquote>
         <p>➡️ Apabila keluarga duduk bermesyuarat: mereka menjadi jamaah, keputusan tidak lagi milik individu, dan tangan Allah bersama mereka. Tanpa syura, rumah kehilangan jamaah. Tanpa jamaah, tiada jaminan pertolongan Allah.</p>
 
         <h3>Syura Rumah ≠ Mesyuarat Korporat</h3>
@@ -365,17 +384,17 @@
         <p>Nur tidak hidup dengan kefahaman mental semata-mata. Nur hidup apabila wahyu dibacakan, didengar, dan diulang dalam suasana ketaatan berjamaah.</p>
 
         <h3>Dalil al-Qur’an: Wahyu Dihidupkan dengan Bacaan</h3>
-        <div class="arab">﴿ وَرَتِّلِ ٱلْقُرْءَانَ تَرْتِيلًا ﴾</div>
+        <div class="arab">﴿ وَرَتِّلِ ٱلْقُرْءَانَ تَرْتِيلًا ﴾</div>
         <p>“Dan bacalah al-Qur’an itu dengan tartil.” (al-Muzzammil 73:4)【1】</p>
         <p>➡️ Perintah ini ialah perintah amal, bukan teori, dan ia berlaku di mana wahyu dibaca — termasuk di rumah.</p>
 
-        <div class="arab">﴿ ٱللَّهُ نَزَّلَ أَحْسَنَ ٱلْحَدِيثِ كِتَـٰبًۭا مُّتَشَـٰبِهًۭا مَّثَانِىَ تَقْشَعِرُّ مِنْهُ جُلُودُ ٱلَّذِينَ يَخْشَوْنَ رَبَّهُمْ ﴾</div>
+        <div class="arab">﴿ ٱللَّهُ نَزَّلَ أَحْسَنَ ٱلْحَدِيثِ كِتَـٰبًۭا مُّتَشَـٰبِهًۭا مَّثَانِىَ تَقْشَعِرُّ مِنْهُ جُلُودُ ٱلَّذِينَ يَخْشَوْنَ رَبَّهُمْ ﴾</div>
         <p>“Allah telah menurunkan sebaik-baik perkataan, iaitu Kitab yang serupa ayat-ayatnya, diulang-ulang, yang menyebabkan gementar kulit orang yang takut kepada Tuhan mereka.” (az-Zumar 39:23)【2】</p>
         <p>➡️ Kesan iman lahir daripada bacaan dan pengulangan wahyu, bukan semata-mata analisis atau perbincangan akal.</p>
 
         <h3>Dalil Hadith: Halaqah Qur’an Menarik Sakinah & Malaikat</h3>
         <p>Rasulullah ﷺ bersabda:</p>
-        <blockquote>مَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ وَذَكَرَهُمُ اللَّهُ فِيمَنْ عِنْدَهُ – “Tidaklah suatu kaum berkumpul di salah satu rumah Allah, membaca Kitab Allah dan saling mempelajarinya, melainkan turun kepada mereka ketenangan, mereka diliputi rahmat, dikelilingi malaikat, dan Allah menyebut mereka di sisi makhluk-Nya.” (Riwayat Muslim)【3】</blockquote>
+        <blockquote>مَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ وَذَكَرَهُمُ اللَّهُ فِيمَنْ عِنْدَهُ – “Tidaklah suatu kaum berkumpul di salah satu rumah Allah, membaca Kitab Allah dan saling mempelajarinya, melainkan turun kepada mereka ketenangan, mereka diliputi rahmat, dikelilingi malaikat, dan Allah menyebut mereka di sisi makhluk-Nya.” (Riwayat Muslim)【3】</blockquote>
         <p>➡️ Apabila rumah dijadikan tempat halaqah Qur’an, rumah itu mengambil hukum suasana masjid bukan kerana bangunannya, tetapi kerana amal Asbab Mutlak yang berlaku di dalamnya.</p>
 
         <h3>Halaqah Qur’an ≠ Kelas Mengaji</h3>
@@ -441,7 +460,7 @@
 
         <h3>22.4.2 Asas Syar‘i Majlis Ilmu</h3>
         <p>Rasulullah ﷺ bersabda:</p>
-        <blockquote>مَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ وَذَكَرَهُمُ اللَّهُ فِيمَنْ عِنْدَهُ【3】</blockquote>
+        <blockquote>مَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ وَذَكَرَهُمُ اللَّهُ فِيمَنْ عِنْدَهُ【3】</blockquote>
         <p>📌 Kesan majlis ilmu bukan pada kefahaman akal, tetapi pada turunnya sakinah dan rahmat.</p>
 
         <h3>22.4.3 Fungsi Tauhidi Majlis Ilmu Harian</h3>
@@ -613,7 +632,7 @@
         <p>Mujahadah setiap ahli keluarga ialah: usaha sedar dan berterusan untuk menundukkan nafsu, dunia, dan rasa diri supaya hati kekal berpaut kepada Allah dan amal dapat dilakukan dengan istiqamah. Mujahadah ini: tidak seragam bentuknya, tidak sama kadar tekanannya, dan tidak boleh dipaksa, tetapi wajib wujud pada setiap individu mengikut kemampuan dan keadaan masing-masing.【2】 📌 Tiada iman hidup tanpa mujahadah.</p>
 
         <h3>22.7.2 Asas Syar‘i Mujahadah</h3>
-        <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا</div>
+        <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا</div>
         <p>“Dan orang-orang yang bersungguh-sungguh bermujahadah pada jalan Kami, nescaya Kami akan tunjukkan kepada mereka jalan-jalan Kami.” (al-‘Ankabūt 29:69)【3】</p>
         <p>📌 Hidayah tidak turun sebelum mujahadah, tetapi selepas mujahadah dimulakan.</p>
 
@@ -719,12 +738,52 @@
       </section>
 
     </article>
-  </main>
+</main>
+<footer class="wrap">
+  <div>© 3asbab.org — Kerangka 3 Asbab</div>
+</footer>
 
-  <footer class="wrap">
-    <p>© 3asbab.org — Kerangka 3 Asbab (Tarbiah Tauhid). Disediakan untuk rujukan dalaman.<br>
-    <a href="index.html">Kembali ke halaman utama</a> | <a href="bab-21.html">Bab 21</a> | <a href="bab-22.html">Bab 22</a> | <a href="bab-23.html">Bab 23</a></p>
-  </footer>
+
+</div>
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      if (!btn) return;
+
+  const originalText = btn.innerHTML;
+  btn.innerHTML = '⏳ Menyediakan PDF...';
+  btn.disabled = true;
+
+  document.body.classList.add('pdf-exporting');
+
+  const coverTitle = document.getElementById('pdf-cover-title');
+  const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+  const metaTitle = document.getElementById('pdf-meta-title');
+  const pageTitle = document.getElementById('page-title');
+  const categoryLine = document.getElementById('category-line');
+  const headerLine = document.getElementById('header-line');
+
+  if (typeof DOC_META !== "undefined") {
+    if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
+    if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
+    if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
+    if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
+    if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
+    if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
+  }
+
+  setTimeout(() => {
+    window.print();
+    setTimeout(() => {
+      document.body.classList.remove('pdf-exporting');
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+    }, 500);
+  }, 120);
+}
+
+
+</script>
 </body>
 </html>
-```
+
