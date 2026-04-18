@@ -1,188 +1,213 @@
-```html
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 27 — Perbandingan Agama Mengikut Kerangka 3 Asbab | 3asbab.org</title>
   <style>
-    :root{
-      --max: 900px;
-      --pad: 16px;
-      --border: #e6e6e6;
-      --bg: #ffffff;
-      --muted: #666;
-      --soft: #f6f6f6;
-      --accent: #0b6; /* hijau ringkas */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --max-width: 920px;
+      --border-light: #e2e8f0;
+      --bg-soft: #fafcff;
+      --muted: #4a5568;
+      --accent: #0f7b4a;
+      --accent-light: #e6f4ed;
+      --text-dark: #1a202c;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
     }
-    *{box-sizing:border-box}
-    body{
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      background: var(--bg);
-      color:#111;
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; background: #ffffff; color: var(--text-dark); line-height: 1.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-wrap: break-word; }
+    .wrap { width: 100%; max-width: var(--max-width); margin: 0 auto; padding-left: clamp(1.15rem, 4vw, 1.8rem); padding-right: clamp(1.15rem, 4vw, 1.8rem); }
+    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
+    .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.8rem 0; min-height: 56px; }
+    .topbar a { text-decoration: none; font-size: 0.92rem; color: var(--text-dark); }
+    .topbar a:hover { color: var(--accent); }
+    .brand { font-weight: 700; margin-right: 0.5rem; }
+    header { padding: 1.5rem 0 0.65rem; }
+    h1 { font-size: clamp(1.85rem, 4vw, 2.45rem); line-height: 1.25; margin: 0.3rem 0 0.55rem; letter-spacing: -0.01em; }
+    .meta { color: var(--muted); font-size: 0.9rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; margin: 0.45rem 0; }
+    .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 56px; z-index: 20; background: rgba(255,255,255,0.98); }
+    .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem 0; align-items: center; font-size: 0.82rem; }
+    .jump a { padding: 0.24rem 0.72rem; border-radius: 999px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.12s ease; color: var(--text-dark); }
+    .jump a:hover { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
+    main { padding: 1.2rem 0 3rem; }
+    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.22rem 0.82rem; border-radius: 999px; margin-bottom: 0.8rem; }
+    h2 { font-size: 1.6rem; line-height: 1.35; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 700; letter-spacing: -0.01em; }
+    h3 { font-size: 1.24rem; line-height: 1.45; margin: 1.2rem 0 0.52rem; font-weight: 700; color: #0b3b2a; }
+    h4 { font-size: 1.05rem; line-height: 1.5; margin: 1rem 0 0.45rem; font-weight: 700; color: #134e3a; }
+    p { margin: 0.72rem 0; }
+    ul, ol { margin: 0.55rem 0 0.95rem 1.4rem; padding-left: 0.2rem; }
+    li { margin: 0.34rem 0; line-height: 1.75; }
+    strong { font-weight: 700; }
+    em { font-style: italic; }
+    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.25rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
+    .arab, .arabic { font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif; color: #1e293b; }
+    .arab { direction: rtl; unicode-bidi: embed; font-size: 1.12em; line-height: 1.9; white-space: normal; }
+    .arabic { font-size: 1.62rem; line-height: 1.9; direction: rtl; text-align: right; margin: 0.85rem 0; }
+    .translation { background: #f8fafc; padding: 0.7rem 1rem; border-radius: 0.8rem; margin: 0.55rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.96rem; line-height: 1.75; }
+    blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.9rem 1.15rem; margin: 1rem 0; font-style: normal; line-height: 1.8; }
+    .insight-box { background: #f1f5f9; padding: 0.9rem 1.15rem; border-radius: 1rem; margin: 1rem 0; line-height: 1.75; }
+    .insight-box h3 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.94rem; background: #fff; }
+    th, td { border: 1px solid var(--border-light); padding: 0.68rem; text-align: left; vertical-align: top; line-height: 1.65; }
+    th { background: #f1f5f9; font-weight: 700; }
+    hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
+    .footnote { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
+    .footnotes { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; padding-left: 1.2rem; }
+    .footnotes li { margin: 0.38rem 0; line-height: 1.65; }
+    .footnotes a, .footnote a, sup a { color: var(--accent); text-decoration: none; }
+    .toplink { font-size: 0.78rem; margin-top: 0.85rem; display: inline-block; color: var(--accent); text-decoration: none; }
+    .toplink:hover { text-decoration: underline; }
+    footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.82rem; margin-top: 1rem; }
+    .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
+    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
+    .btn-pdf:active { transform: translateY(1px); }
+    .no-print { display: block; }
+    .pdf-only { display: none; }
+    .pdf-exporting .pdf-only { display: block !important; }
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink { display: none !important; }
+    .pdf-shell { background: #fff; }
+    .pdf-cover { display: none; }
+    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
+    .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
+    .pdf-cover-brand { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
+    .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
+    .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
+    .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
+    .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
+    .pdf-meta-page { display: none; }
+    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
+    .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
+    .pdf-meta-list p { margin: 0 0 6mm; }
+    .pdf-break { break-before: page; page-break-before: always; }
+    .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
+    @media print {
+      body { margin: 0; padding: 0; }
+      .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
+      .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
+      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
+      h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
     }
-    a{color:inherit}
-    a:hover{color:var(--accent)}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    .topbar{
-      background: var(--soft);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar nav{
-      display:flex; gap:14px; align-items:center;
-      padding: 12px 0;
-      flex-wrap:wrap;
-    }
-    .topbar a{ text-decoration:none }
-    .brand{font-weight:700}
-    header{
-      padding: 18px 0 8px 0;
-    }
-    h1{
-      margin: 8px 0 6px 0;
-      line-height:1.25;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .meta{
-      color:var(--muted);
-      font-size: 14px;
-    }
-
-    /* Lompat ke... */
-    .jump{
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(246,246,246,.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-    .jump .inner{
-      padding: 10px 0;
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-      font-size: 14px;
-    }
-    .jump a{
-      text-decoration:none;
-      padding: 4px 8px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background:#fff;
-    }
-
-    main{padding: 14px 0 40px 0;}
-    article{
-      font-size: 16px;
-    }
-    .badge{
-      display:inline-block;
-      font-weight:700;
-      color:#b00;
-      letter-spacing:.2px;
-      margin: 10px 0 2px 0;
-    }
-    h2{
-      margin: 22px 0 10px 0;
-      padding-top: 6px;
-      font-size: 20px;
-      line-height:1.25;
-    }
-    h3{
-      margin: 14px 0 8px 0;
-      font-size: 17px;
-    }
-    p{margin: 10px 0}
-    ul{margin: 8px 0 10px 22px}
-    li{margin: 4px 0}
-    ol{margin: 8px 0 10px 22px}
-    hr{border:0; border-top:1px solid var(--border); margin: 18px 0}
-    blockquote{
-      margin: 12px 0;
-      padding: 10px 14px;
-      border-left: 4px solid var(--accent);
-      background: #f8fffb;
-    }
-    .arab{
-      font-size: 20px;
-      line-height: 1.9;
-      direction: rtl;
-      unicode-bidi: isolate;
-      font-family: "Noto Naskh Arabic","Amiri",serif;
-    }
-    .section{
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 14px 12px 14px;
-      margin: 14px 0;
-      background:#fff;
-    }
-    .toplink{
-      display:inline-block;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration:none;
-    }
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 18px 0 26px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    footer a{color:inherit}
-    /* Nota kaki */
-    .footnote{
-      font-size:13px;
-      color:var(--muted);
-      border-top:1px dashed var(--border);
-      margin-top:20px;
-      padding-top:10px;
+    @media (max-width: 640px) {
+      .wrap { padding-left: 1.1rem; padding-right: 1.1rem; }
+      .topbar nav { gap: 0.75rem; min-height: 52px; }
+      .jump { top: 52px; }
+      .section-card { padding: 1rem 1rem; border-radius: 1rem; }
+      h1 { font-size: 1.75rem; }
+      h2 { font-size: 1.34rem; padding-left: 0.75rem; }
+      h3 { font-size: 1.1rem; }
+      h4 { font-size: 1rem; }
+      .arab { font-size: 1.08em; }
+      .arabic { font-size: 1.34rem; }
+      table { font-size: 0.88rem; }
+      th, td { padding: 0.58rem; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Top nav -->
-  <div class="topbar">
+  <script>
+    const DOC_META = {
+      pageTitle: "Bab 27 — Perbandingan Agama Mengikut Kerangka 3 Asbab",
+      shortTitle: "Bab 27",
+      subtitle: "Analisis struktur keyakinan manusia melalui tiga jenis sebab.",
+      headerLine: "📖 Kerangka 3 Asbab — Arkib Baca Sahaja",
+      categoryLine: "Perbandingan Agama & Struktur Keyakinan | Analisis Tauhidi",
+      currentFile: "bab-27.html",
+      prevFile: "bab-26.html",
+      prevLabel: "Bab 26",
+      currentLabel: "Bab 27",
+      nextFile: "bab-28.html",
+      nextLabel: "Bab 28",
+      jumpLinks: [
+        { id: "27-1", label: "27.1" },
+        { id: "27-2", label: "27.2" },
+        { id: "27-3", label: "27.3" },
+        { id: "27-4", label: "27.4" },
+        { id: "27-5", label: "27.5" },
+        { id: "27-6", label: "27.6" },
+        { id: "27-7", label: "27.7" },
+        { id: "27-8", label: "27.8" },
+        { id: "27-9", label: "27.9" }
+      ]
+    };
+  </script>
+  <div class="topbar no-print">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a href="bab-26.html">Prev ←</a>
-        <a href="bab-27.html">Bab ini</a>
-        <a href="bab-28.html">Next →</a>
+        <a id="nav-prev" href="bab-26.html">← Bab 26</a>
+        <a id="nav-current" href="bab-27.html" style="font-weight:600;">Bab 27</a>
+        <a id="nav-next" href="bab-28.html">Bab 28 →</a>
       </nav>
     </div>
   </div>
-
-  <!-- Page title -->
-  <header class="wrap" id="top">
-    <div class="meta">Kerangka 3 Asbab (Arkib Baca Sahaja)</div>
-    <h1>Bab 27 — Perbandingan Agama Mengikut Kerangka 3 Asbab</h1>
-  </header>
-
-  <!-- Jump links -->
-  <div class="jump">
-    <div class="wrap">
-      <div class="inner">
-        <strong>Lompat ke:</strong>
-        <a href="#27-0">27.0</a>
-        <a href="#27-1">27.1</a>
-        <a href="#27-2">27.2</a>
-        <a href="#27-3">27.3</a>
-        <a href="#27-4">27.4</a>
-        <a href="#27-5">27.5</a>
-        <a href="#27-6">27.6</a>
-        <a href="#27-7">27.7</a>
-        <a href="#27-8">27.8</a>
-        <a href="#27-9">27.9</a>
-      </div>
+  <div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
     </div>
   </div>
-
-  <main class="wrap">
+  <div id="pdf-shell" class="pdf-shell">
+    <div class="pdf-cover pdf-only">
+      <div class="pdf-cover-inner">
+        <div class="pdf-cover-top">
+          <div class="pdf-cover-brand">3asbab.org</div>
+          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 27 — Perbandingan Agama Mengikut Kerangka 3 Asbab</h1>
+          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Analisis struktur keyakinan manusia melalui tiga jenis sebab.</p>
+        </div>
+        <div class="pdf-cover-bottom">
+          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+        </div>
+      </div>
+    </div>
+    <div class="pdf-meta-page pdf-only pdf-break">
+      <div class="pdf-meta-inner">
+        <h2>Maklumat Dokumen</h2>
+        <div class="pdf-meta-list">
+          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 27 — Perbandingan Agama Mengikut Kerangka 3 Asbab</span></p>
+          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+          <p><strong>Laman:</strong> 3asbab.org</p>
+          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+        </div>
+      </div>
+    </div>
+    <header class="wrap" id="top">
+      <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+      <h1 id="page-title">Bab 27 — Perbandingan Agama Mengikut Kerangka 3 Asbab</h1>
+      <div class="meta" id="category-line">Perbandingan Agama &amp; Struktur Keyakinan | Analisis Tauhidi</div>
+    </header>
+    <div class="jump no-print">
+      <div class="wrap">
+        <div class="jump-inner" id="jump-links">
+          <strong>🧭 Lompat ke:</strong>
+          <a href="#27-1">27.1</a>
+          <a href="#27-2">27.2</a>
+          <a href="#27-3">27.3</a>
+          <a href="#27-4">27.4</a>
+          <a href="#27-5">27.5</a>
+          <a href="#27-6">27.6</a>
+          <a href="#27-7">27.7</a>
+          <a href="#27-8">27.8</a>
+          <a href="#27-9">27.9</a>
+        </div>
+      </div>
+    </div>
+    <main class="wrap">
     <article>
       <!-- Badge pembuka bab -->
       <div class="section">
@@ -200,7 +225,7 @@
         <p>Sebahagian manusia pada zaman moden pula bergantung kepada: sistem, ekonomi, teknologi, kuasa manusia.</p>
         <p>Bentuknya berbeza, tetapi asasnya sama, iaitu pergantungan kepada makhluk.<sup>[2]</sup></p>
         <p>Al‑Qur’an memberi isyarat bahawa fenomena ini boleh berlaku walaupun seseorang mengaku beriman kepada Allah.</p>
-        <div class="arab">وَمَا يُؤْمِنُ أَكْثَرُهُم بِاللَّهِ إِلَّا وَهُم مُّشْرِكُونَ</div>
+        <div class="arab">وَمَا يُؤْمِنُ أَكْثَرُهُم بِاللَّهِ إِلَّا وَهُم مُّشْرِكُونَ</div>
         <p>“Kebanyakan mereka tidak beriman kepada Allah melainkan dalam keadaan mereka mempersekutukan‑Nya.” — Surah Yusuf 12:106 <sup>[3]</sup></p>
         <p>Ayat ini menunjukkan bahawa seseorang boleh mengaku beriman kepada Allah tetapi pada masa yang sama bergantung kepada selain Allah dalam hatinya.</p>
         <p>Kerana itu, untuk memahami tauhid dan syirik dengan tepat, kita memerlukan satu kaedah analisis yang jelas.</p>
@@ -227,13 +252,13 @@
         <p>Kaedah ini bermula dengan satu soalan asas:</p>
         <p><strong>Kepada siapa kesan disandarkan?</strong></p>
         <p>Dalam pandangan tauhid, semua kesan dalam alam ini datang daripada Allah.</p>
-        <div class="arab">وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ</div>
+        <div class="arab">وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ</div>
         <p>“Allah yang menciptakan kamu dan apa yang kamu lakukan.” — Surah As‑Saffat 37:96 <sup>[6]</sup></p>
         <p>Namun dalam kehidupan manusia, sebab‑sebab zahir tetap wujud. Kerangka 3 Asbab membahagikan sebab‑sebab ini kepada tiga kategori utama.<sup>[7]</sup></p>
 
         <h3>1. Asbab Mutlak</h3>
         <p>Asbab Mutlak ialah sebab yang datang daripada wahyu dan mempunyai janji daripada Allah. Contohnya: iman, amal soleh, doa, dakwah, sabar, syura. Allah meletakkan janji‑Nya pada sebab‑sebab ini.</p>
-        <div class="arab">وَمَن يُطِعِ اللَّهَ وَرَسُولَهُ فَقَدْ فَازَ فَوْزًا عَظِيمًا</div>
+        <div class="arab">وَمَن يُطِعِ اللَّهَ وَرَسُولَهُ فَقَدْ فَازَ فَوْزًا عَظِيمًا</div>
         <p>“Sesiapa yang taat kepada Allah dan Rasul‑Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.” — Surah Al‑Ahzab 33:71 <sup>[8]</sup></p>
 
         <h3>2. Asbab Fitrah</h3>
@@ -250,7 +275,7 @@
         </ul>
         <p>Apabila manusia menyandarkan kuasa kepada Asbab Fitrah atau Asbab Zulumat, maka di situlah bermulanya syirik sebab.<sup>[11]</sup></p>
         <p>Kerana itu Rasulullah ﷺ mengingatkan umat supaya sentiasa menjaga tauhid dalam hati. Baginda bersabda:</p>
-        <blockquote>إِذَا سَأَلْتَ فَاسْأَلِ اللَّهَ، وَإِذَا اسْتَعَنْتَ فَاسْتَعِنْ بِاللَّهِ</blockquote>
+        <blockquote>إِذَا سَأَلْتَ فَاسْأَلِ اللَّهَ، وَإِذَا اسْتَعَنْتَ فَاسْتَعِنْ بِاللَّهِ</blockquote>
         <p>“Apabila engkau meminta, mintalah kepada Allah. Apabila engkau meminta pertolongan, mintalah pertolongan kepada Allah.” — Riwayat al‑Tirmizi <sup>[12]</sup></p>
         <p>Hadith ini menunjukkan bahawa walaupun manusia menggunakan sebab‑sebab dalam kehidupan, hati tetap bergantung kepada Allah semata‑mata.</p>
         <p>Dengan kaedah analisis inilah Kerangka 3 Asbab akan membandingkan pelbagai bentuk keyakinan manusia dalam bab‑bab seterusnya. Melalui perbandingan ini akan terlihat bahawa banyak struktur keyakinan manusia — dahulu dan sekarang — sebenarnya mempunyai pola yang sama.<sup>[13]</sup></p>
@@ -280,7 +305,7 @@
         <p>Manusia percaya bahawa makhluk tertentu mempunyai kuasa untuk: memberi manfaat, menolak mudarat, menentukan rezeki, menentukan nasib manusia.</p>
         <p>Kerana itu mereka menjadikan makhluk tersebut sebagai tempat pergantungan dan harapan.</p>
         <p>Al‑Qur’an menjelaskan keadaan ini dengan sangat jelas.</p>
-        <div class="arab">وَيَعْبُدُونَ مِن دُونِ اللَّهِ مَا لَا يَضُرُّهُمْ وَلَا يَنفَعُهُمْ</div>
+        <div class="arab">وَيَعْبُدُونَ مِن دُونِ اللَّهِ مَا لَا يَضُرُّهُمْ وَلَا يَنفَعُهُمْ</div>
         <p>“Mereka menyembah selain Allah sesuatu yang tidak dapat memberi mudarat dan tidak dapat memberi manfaat kepada mereka.” — Surah Yunus 10:18 <sup>[15]</sup></p>
         <p>Ayat ini menunjukkan bahawa penyembahan makhluk bukanlah kerana makhluk itu benar‑benar mempunyai kuasa, tetapi kerana manusia meyakini bahawa makhluk itu mempunyai kuasa.</p>
 
@@ -288,18 +313,18 @@
 
         <h4>1. Penyembahan Berhala</h4>
         <p>Masyarakat Arab sebelum Islam menyembah berhala seperti: Latta, Uzza, Manat. Mereka percaya bahawa berhala ini boleh menjadi perantara kepada Tuhan. Al‑Qur’an menyebut:</p>
-        <div class="arab">مَا نَعْبُدُهُمْ إِلَّا لِيُقَرِّبُونَا إِلَى اللَّهِ زُلْفَىٰ</div>
+        <div class="arab">مَا نَعْبُدُهُمْ إِلَّا لِيُقَرِّبُونَا إِلَى اللَّهِ زُلْفَىٰ</div>
         <p>“Kami tidak menyembah mereka melainkan supaya mereka mendekatkan kami kepada Allah.” — Surah Az‑Zumar 39:3 <sup>[16]</sup></p>
         <p>Ini menunjukkan bahawa syirik sering berlaku bukan kerana manusia menolak Allah sepenuhnya, tetapi kerana mereka memberi peranan kepada makhluk dalam menentukan kesan.</p>
 
         <h4>2. Penyembahan Alam</h4>
         <p>Sebahagian masyarakat menyembah: matahari, bulan, bintang, gunung, sungai. Mereka percaya bahawa unsur‑unsur alam ini mempunyai kuasa yang mempengaruhi kehidupan manusia. Namun Al‑Qur’an menegaskan bahawa semua itu hanyalah ciptaan Allah.</p>
-        <div class="arab">وَمِنْ آيَاتِهِ اللَّيْلُ وَالنَّهَارُ وَالشَّمْسُ وَالْقَمَرُ لَا تَسْجُدُوا لِلشَّمْسِ وَلَا لِلْقَمَرِ وَاسْجُدُوا لِلَّهِ الَّذِي خَلَقَهُنَّ</div>
+        <div class="arab">وَمِنْ آيَاتِهِ اللَّيْلُ وَالنَّهَارُ وَالشَّمْسُ وَالْقَمَرُ لَا تَسْجُدُوا لِلشَّمْسِ وَلَا لِلْقَمَرِ وَاسْجُدُوا لِلَّهِ الَّذِي خَلَقَهُنَّ</div>
         <p>“Antara tanda‑tanda‑Nya ialah malam dan siang, matahari dan bulan. Janganlah kamu sujud kepada matahari dan bulan, tetapi sujudlah kepada Allah yang menciptakannya.” — Surah Fussilat 41:37 <sup>[17]</sup></p>
 
         <h4>3. Penyembahan Manusia</h4>
         <p>Dalam sebahagian tamadun, manusia tertentu dianggap mempunyai kuasa luar biasa. Contohnya: raja dianggap suci, pemimpin dianggap penentu nasib rakyat, tokoh tertentu dianggap mempunyai kuasa ghaib. Al‑Qur’an memberikan contoh yang jelas melalui kisah Firaun.</p>
-        <div class="arab">فَقَالَ أَنَا رَبُّكُمُ الْأَعْلَىٰ</div>
+        <div class="arab">فَقَالَ أَنَا رَبُّكُمُ الْأَعْلَىٰ</div>
         <p>“Maka Firaun berkata: Aku adalah tuhan kamu yang paling tinggi.” — Surah An‑Nazi‘at 79:24 <sup>[18]</sup></p>
         <p>Walaupun tidak semua masyarakat mengaku secara terang seperti Firaun, struktur keyakinan yang sama boleh muncul apabila manusia memberi kuasa mutlak kepada manusia lain.</p>
 
@@ -333,7 +358,7 @@
 
         <h4>2. Pergantungan kepada Teknologi</h4>
         <p>Perkembangan teknologi memberi manusia kemampuan yang sangat besar. Namun sebahagian manusia mula mempercayai bahawa teknologi mampu: menyelesaikan masalah manusia, menghapuskan penderitaan, mengawal masa depan manusia. Padahal teknologi hanyalah alat yang dicipta oleh manusia. Ia tidak mempunyai kuasa memberi manfaat atau mudarat dengan sendirinya. Al‑Qur’an menegaskan bahawa semua manfaat dan mudarat berada di bawah kehendak Allah.</p>
-        <div class="arab">قُل لَّن يُصِيبَنَا إِلَّا مَا كَتَبَ اللَّهُ لَنَا</div>
+        <div class="arab">قُل لَّن يُصِيبَنَا إِلَّا مَا كَتَبَ اللَّهُ لَنَا</div>
         <p>“Katakanlah: tidak akan menimpa kami melainkan apa yang telah Allah tetapkan untuk kami.” — Surah At‑Taubah 9:51 <sup>[5]</sup></p>
 
         <h4>3. Pergantungan kepada Kuasa Manusia</h4>
@@ -341,7 +366,7 @@
 
         <h3>Hakikat Pergantungan</h3>
         <p>Kerangka 3 Asbab menunjukkan bahawa semua bentuk pergantungan moden ini mempunyai satu ciri yang sama: manusia menggunakan sebab yang zahir, kemudian menyandarkan kuasa kepada sebab tersebut. Padahal dalam tauhid: sebab hanya alat, kesan datang daripada Allah.</p>
-        <div class="arab">وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ اللَّهِ</div>
+        <div class="arab">وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ اللَّهِ</div>
         <p>“Dan apa sahaja nikmat yang ada pada kamu maka ia datang daripada Allah.” — Surah An‑Nahl 16:53 <sup>[7]</sup></p>
         <p>Ayat ini menegaskan bahawa semua manfaat dalam kehidupan manusia sebenarnya datang daripada Allah.</p>
 
@@ -381,7 +406,7 @@
         <p>Dalam masyarakat jahiliyah, manusia bergantung kepada berhala untuk perlindungan, dewa untuk rezeki, roh untuk mengelakkan mudarat. Dalam masyarakat moden pula, sebahagian manusia bergantung kepada sistem untuk menyelesaikan masalah manusia, ekonomi untuk menjamin masa depan, teknologi untuk memberi keselamatan. Bentuknya kelihatan lebih moden dan rasional, namun struktur pergantungan hati tetap sama.</p>
         <p>Hakikatnya tetap sama: manusia menggantungkan hati kepada makhluk.<sup>[2]</sup></p>
         <p>Padahal al‑Qur’an menegaskan bahawa makhluk tidak mempunyai kuasa memberi manfaat atau mudarat dengan sendirinya.</p>
-        <div class="arab">قُل لَّا أَمْلِكُ لِنَفْسِي نَفْعًا وَلَا ضَرًّا إِلَّا مَا شَاءَ اللَّهُ</div>
+        <div class="arab">قُل لَّا أَمْلِكُ لِنَفْسِي نَفْعًا وَلَا ضَرًّا إِلَّا مَا شَاءَ اللَّهُ</div>
         <p>“Katakanlah: Aku tidak memiliki kuasa memberi manfaat atau mudarat kepada diriku kecuali apa yang Allah kehendaki.” — Surah Al‑A‘raf 7:188 <sup>[3]</sup></p>
         <p>Ayat ini menunjukkan bahawa semua makhluk berada dalam kekuasaan Allah, dan tidak mempunyai kuasa mutlak terhadap kehidupan manusia. Oleh itu, apabila manusia menyandarkan keselamatan, rezeki atau masa depan kepada makhluk, maka di situlah muncul struktur syirik yang halus, walaupun manusia tidak menyedarinya.<sup>[4]</sup></p>
         <p>Kerangka 3 Asbab membantu kita mengenal pasti struktur ini supaya tauhid dapat dibersihkan daripada pergantungan yang tersembunyi.</p>
@@ -407,20 +432,20 @@
 
         <h3>Syirik Yang Halus</h3>
         <p>Rasulullah ﷺ memberi amaran bahawa syirik boleh muncul dalam bentuk yang sangat halus. Baginda bersabda:</p>
-        <blockquote>إِنَّ أَخْوَفَ مَا أَخَافُ عَلَيْكُمُ الشِّرْكُ الأَصْغَرُ</blockquote>
+        <blockquote>إِنَّ أَخْوَفَ مَا أَخَافُ عَلَيْكُمُ الشِّرْكُ الأَصْغَرُ</blockquote>
         <p>“Perkara yang paling aku takutkan atas kamu ialah syirik kecil.” Para sahabat bertanya: “Apakah syirik kecil itu?” Baginda menjawab: “Iaitu riya’.” — Riwayat Ahmad <sup>[3]</sup></p>
         <p>Hadith ini menunjukkan bahawa syirik tidak semestinya berlaku dalam bentuk penyembahan patung. Ia boleh muncul dalam bentuk pergantungan hati yang halus kepada selain Allah.</p>
 
         <h3>Pergantungan Kepada Sebab</h3>
         <p>Dalam Kerangka 3 Asbab, syirik sering berlaku apabila manusia: menggunakan sebab yang zahir, kemudian menyandarkan kuasa kepada sebab tersebut. Padahal dalam tauhid: sebab hanyalah alat, kesan datang daripada Allah.</p>
-        <div class="arab">وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ اللَّهِ</div>
+        <div class="arab">وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ اللَّهِ</div>
         <p>“Dan apa sahaja nikmat yang ada pada kamu maka ia datang daripada Allah.” — Surah An‑Nahl 16:53 <sup>[4]</sup></p>
         <p>Ayat ini menegaskan bahawa semua manfaat yang diterima oleh manusia sebenarnya datang daripada Allah. Sebab‑sebab yang wujud dalam dunia hanyalah alat yang Allah gunakan untuk menzahirkan kehendak‑Nya.</p>
 
         <h3>Syirik Tanpa Disedari</h3>
         <p>Bahaya syirik moden ialah ia sering berlaku tanpa disedari oleh manusia. Manusia mungkin masih mengaku bahawa Allah adalah Tuhan. Namun dalam kehidupan harian, hati mereka boleh bergantung kepada: kekuatan ekonomi, kuasa manusia, sistem dunia, teknologi. Apabila keselamatan, harapan dan masa depan disandarkan kepada sebab‑sebab tersebut, maka tauhid boleh tercemar tanpa disedari.<sup>[5]</sup></p>
         <p>Kerana itu al‑Qur’an sering mengingatkan manusia supaya tidak menggantungkan hati kepada makhluk.</p>
-        <div class="arab">وَعَلَى اللَّهِ فَلْيَتَوَكَّلِ الْمُؤْمِنُونَ</div>
+        <div class="arab">وَعَلَى اللَّهِ فَلْيَتَوَكَّلِ الْمُؤْمِنُونَ</div>
         <p>“Dan kepada Allah hendaklah orang‑orang beriman bertawakkal.” — Surah Ibrahim 14:11 <sup>[6]</sup></p>
 
         <h3>Kesimpulan Bahagian Ini</h3>
@@ -452,7 +477,7 @@
         <h3>Menyembah Sebab</h3>
         <p>Masalah bermula apabila manusia mula menyandarkan kuasa kepada sebab. Apabila manusia percaya bahawa: sistem menentukan kejayaan, ekonomi menentukan keselamatan, teknologi menentukan masa depan, manusia tertentu menentukan rezeki, maka sebab tersebut telah berubah daripada alat kepada tempat pergantungan hati.<sup>[4]</sup></p>
         <p>Di sinilah bermulanya apa yang disebut dalam Kerangka 3 Asbab sebagai syirik sebab. Padahal Al‑Qur’an menegaskan bahawa semua kesan dalam alam ini berada di bawah kehendak Allah.</p>
-        <div class="arab">وَمَا تَشَاؤُونَ إِلَّا أَن يَشَاءَ اللَّهُ</div>
+        <div class="arab">وَمَا تَشَاؤُونَ إِلَّا أَن يَشَاءَ اللَّهُ</div>
         <p>“Dan kamu tidak akan berkehendak kecuali jika Allah menghendaki.” — Surah At‑Takwir 81:29 <sup>[5]</sup></p>
         <p>Ayat ini menunjukkan bahawa semua sebab dalam alam hanya berfungsi dengan izin Allah.</p>
 
@@ -460,7 +485,7 @@
         <p>Kerangka 3 Asbab mentakrifkan tawakkal sebagai: rasa yakin di dalam hati yang memutuskan pergantungan kepada Asbab Fitrah dan Asbab Zulumat, sambil berpegang teguh kepada Asbab Mutlak (Asli dan Terbitan), dan menyerahkan natijah sepenuhnya kepada Allah — walaupun hasil Asbab Fitrah tidak berlaku dan sokongan Asbab Zulumat tidak menyebelahi.<sup>[6]</sup></p>
         <p>Ini bermakna seorang mukmin: menggunakan sebab yang dibenarkan, tetapi hatinya tidak bergantung kepada sebab. Sebaliknya hatinya bergantung sepenuhnya kepada Allah.</p>
         <p>Rasulullah ﷺ bersabda:</p>
-        <blockquote>لَوْ أَنَّكُمْ تَوَكَّلْتُمْ عَلَى اللَّهِ حَقَّ تَوَكُّلِهِ لَرَزَقَكُمْ كَمَا يَرْزُقُ الطَّيْرَ</blockquote>
+        <blockquote>لَوْ أَنَّكُمْ تَوَكَّلْتُمْ عَلَى اللَّهِ حَقَّ تَوَكُّلِهِ لَرَزَقَكُمْ كَمَا يَرْزُقُ الطَّيْرَ</blockquote>
         <p>“Jika kamu bertawakkal kepada Allah dengan tawakkal yang sebenar, nescaya Dia akan memberi rezeki kepada kamu sebagaimana Dia memberi rezeki kepada burung.” — Riwayat al‑Tirmizi <sup>[7]</sup></p>
         <p>Burung tetap keluar mencari makanan, tetapi rezekinya datang daripada Allah. Ini menggambarkan keseimbangan antara menggunakan sebab dan bergantung kepada Allah.</p>
 
@@ -492,20 +517,20 @@
         <p>Tauhid bukan sekadar kepercayaan bahawa Allah wujud. Tauhid ialah pembebasan hati manusia daripada pergantungan kepada makhluk.<sup>[1]</sup></p>
         <p>Sepanjang sejarah, manusia sering hidup dalam pelbagai bentuk perhambaan: perhambaan kepada berhala, perhambaan kepada manusia, perhambaan kepada sistem, perhambaan kepada harta dan kuasa. Apabila manusia menggantungkan harapan, ketakutan dan keselamatan kepada makhluk, maka makhluk tersebut secara tidak langsung menjadi tuan kepada hatinya. Inilah bentuk perhambaan yang paling halus dalam kehidupan manusia.</p>
         <p>Al‑Qur’an menggambarkan keadaan ini apabila manusia menjadikan sesuatu selain Allah sebagai tempat pergantungan.</p>
-        <div class="arab">أَفَرَأَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَاهُ</div>
+        <div class="arab">أَفَرَأَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَاهُ</div>
         <p>“Tidakkah engkau melihat orang yang menjadikan hawa nafsunya sebagai tuhan.” — Surah Al‑Jathiyah 45:23 <sup>[2]</sup></p>
         <p>Ayat ini menunjukkan bahawa “tuhan” dalam kehidupan manusia tidak semestinya berbentuk patung. Apa sahaja yang menguasai hati manusia boleh menjadi tuhan dalam kehidupan seseorang.</p>
 
         <h3>Tauhid Membebaskan Hati</h3>
         <p>Apabila tauhid difahami dengan benar, hati manusia dibebaskan daripada pergantungan kepada makhluk. Seorang mukmin boleh menggunakan sistem, teknologi, ekonomi, kuasa manusia tetapi hatinya tidak bergantung kepada semua itu. Hatinya hanya bergantung kepada Allah.</p>
-        <div class="arab">وَعَلَى اللَّهِ فَلْيَتَوَكَّلِ الْمُؤْمِنُونَ</div>
+        <div class="arab">وَعَلَى اللَّهِ فَلْيَتَوَكَّلِ الْمُؤْمِنُونَ</div>
         <p>“Dan kepada Allah hendaklah orang‑orang beriman bertawakkal.” — Surah Ibrahim 14:11 <sup>[3]</sup></p>
         <p>Ayat ini menegaskan bahawa tawakkal adalah asas kepada kebebasan hati seorang mukmin.</p>
 
         <h3>Tauhid dan Kemuliaan Manusia</h3>
         <p>Apabila manusia membebaskan dirinya daripada pergantungan kepada makhluk, dia akan memperoleh kemuliaan yang sebenar. Inilah hakikat yang difahami oleh para sahabat Rasulullah ﷺ. Mereka tidak takut kepada manusia, kerana mereka hanya takut kepada Allah.</p>
         <p>Rib‘i bin ‘Amir رضي الله عنه pernah menjelaskan tujuan kedatangan umat Islam kepada dunia dengan kata‑kata yang terkenal:</p>
-        <blockquote>اللَّهُ ابْتَعَثَنَا لِنُخْرِجَ النَّاسَ مِنْ عِبَادَةِ الْعِبَادِ إِلَى عِبَادَةِ اللَّهِ</blockquote>
+        <blockquote>اللَّهُ ابْتَعَثَنَا لِنُخْرِجَ النَّاسَ مِنْ عِبَادَةِ الْعِبَادِ إِلَى عِبَادَةِ اللَّهِ</blockquote>
         <p>“Allah mengutus kami untuk mengeluarkan manusia daripada perhambaan kepada manusia kepada perhambaan kepada Allah.”<sup>[4]</sup></p>
         <p>Kata‑kata ini menggambarkan misi tauhid dalam sejarah manusia. Tauhid bukan sekadar aqidah dalam hati, tetapi pembebasan manusia daripada perhambaan kepada makhluk.</p>
 
@@ -533,7 +558,7 @@
         <h2>27.8 Cermin Kepada Umat Islam</h2>
         <p>Bab ini tidak bertujuan menuduh atau menghukum mana‑mana kelompok dalam umat. Sebaliknya bahagian ini berfungsi sebagai cermin kepada umat Islam, supaya setiap orang dapat menilai keadaan tauhid dalam dirinya sendiri.<sup>[1]</sup></p>
         <p>Al‑Qur’an sering menggunakan kisah umat terdahulu sebagai cermin bagi umat kemudian. Allah berfirman:</p>
-        <div class="arab">لَقَدْ كَانَ فِي قَصَصِهِمْ عِبْرَةٌ لِّأُولِي الْأَلْبَابِ</div>
+        <div class="arab">لَقَدْ كَانَ فِي قَصَصِهِمْ عِبْرَةٌ لِّأُولِي الْأَلْبَابِ</div>
         <p>“Sesungguhnya pada kisah‑kisah mereka terdapat pengajaran bagi orang yang berakal.” — Surah Yusuf 12:111 <sup>[2]</sup></p>
         <p>Ayat ini menunjukkan bahawa kisah umat terdahulu bukan sekadar sejarah, tetapi peringatan untuk umat yang datang kemudian.</p>
 
@@ -551,12 +576,12 @@
         <h3>Bahaya Pergantungan Yang Halus</h3>
         <p>Bahaya terbesar dalam syirik moden ialah ia sering muncul dalam bentuk yang tidak disedari oleh manusia. Seseorang mungkin masih mengaku bahawa Allah adalah Tuhan. Namun dalam kehidupan harian, hatinya boleh bergantung kepada: kekuatan sistem, kestabilan ekonomi, perlindungan kuasa manusia, teknologi moden. Apabila harapan dan ketakutan manusia berpindah kepada sebab‑sebab tersebut, maka tauhid boleh tercemar tanpa disedari.<sup>[4]</sup></p>
         <p>Kerana itu Rasulullah ﷺ memberi amaran tentang syirik yang tersembunyi. Baginda bersabda:</p>
-        <blockquote>أَخْوَفُ مَا أَخَافُ عَلَى أُمَّتِي الشِّرْكُ الْخَفِيُّ</blockquote>
+        <blockquote>أَخْوَفُ مَا أَخَافُ عَلَى أُمَّتِي الشِّرْكُ الْخَفِيُّ</blockquote>
         <p>“Perkara yang paling aku takutkan atas umatku ialah syirik yang tersembunyi.” — Riwayat Ahmad <sup>[5]</sup></p>
 
         <h3>Membersihkan Tauhid</h3>
         <p>Tujuan bahagian ini bukan untuk menghukum umat, tetapi untuk membersihkan tauhid. Apabila seseorang memahami bahawa hatinya mungkin bergantung kepada makhluk, dia akan kembali membetulkan pergantungan tersebut kepada Allah.</p>
-        <div class="arab">قُل لَّن يُصِيبَنَا إِلَّا مَا كَتَبَ اللَّهُ لَنَا</div>
+        <div class="arab">قُل لَّن يُصِيبَنَا إِلَّا مَا كَتَبَ اللَّهُ لَنَا</div>
         <p>“Katakanlah: tidak akan menimpa kami melainkan apa yang telah Allah tetapkan untuk kami.” — Surah At‑Taubah 9:51 <sup>[6]</sup></p>
         <p>Ayat ini mengajar manusia supaya tidak menggantungkan hati kepada makhluk.</p>
 
@@ -585,7 +610,7 @@
         <p>Yang berubah hanyalah bentuknya.</p>
         <p>Pada zaman dahulu manusia menyembah: patung, roh, bintang, manusia yang dianggap suci. Pada zaman moden pula manusia boleh bergantung kepada: sistem, ekonomi, teknologi, kuasa manusia. Walaupun bentuknya kelihatan berbeza, hakikatnya tetap sama apabila hati menyandarkan kesan kepada makhluk.<sup>[2]</sup></p>
         <p>Padahal tauhid yang sebenar mengajar bahawa semua kesan dalam alam ini datang daripada Allah.</p>
-        <div class="arab">وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ اللَّهِ</div>
+        <div class="arab">وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ اللَّهِ</div>
         <p>“Dan apa sahaja nikmat yang ada pada kamu maka ia datang daripada Allah.” — Surah An‑Nahl 16:53 <sup>[3]</sup></p>
         <p>Ayat ini menegaskan bahawa segala manfaat dan keselamatan dalam kehidupan manusia sebenarnya berada di bawah kehendak Allah. Makhluk hanyalah sebab zahir yang tidak mempunyai kuasa sendiri.</p>
         <p>Kerana itu tauhid bukan sekadar mengakui bahawa Allah wujud. Tauhid yang sebenar ialah:</p>
@@ -609,12 +634,49 @@
       </section>
 
     </article>
-  </main>
+ 
 
-  <footer class="wrap">
-    <p>© 3asbab.org — Kerangka 3 Asbab (Tarbiah Tauhid). Disediakan untuk rujukan dalaman.<br>
-    <a href="index.html">Kembali ke halaman utama</a> | <a href="bab-26.html">Bab 26</a> | <a href="bab-27.html">Bab 27</a> | <a href="bab-28.html">Bab 28</a></p>
-  </footer>
+    </main>
+    <footer class="wrap">
+      <div>© 3asbab.org — Kerangka 3 Asbab</div>
+    </footer>
+  </div>
+  <script>
+    function downloadPDF() {
+      const btn = document.querySelector('.btn-pdf');
+      if (!btn) return;
+
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+
+      document.body.classList.add('pdf-exporting');
+
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+      const pageTitle = document.getElementById('page-title');
+      const categoryLine = document.getElementById('category-line');
+      const headerLine = document.getElementById('header-line');
+
+      if (typeof DOC_META !== "undefined") {
+        if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
+        if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
+        if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
+        if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
+        if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
+        if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
+      }
+
+      setTimeout(() => {
+        window.print();
+        setTimeout(() => {
+          document.body.classList.remove('pdf-exporting');
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 120);
+    }
+  </script>
 </body>
 </html>
-```
