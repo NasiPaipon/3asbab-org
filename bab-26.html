@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="ms">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Bab 26 — Kenapa Kebenaran Akan Diserang | 3asbab.org</title>
+  <title>BAB 26 — GLOBALISASI TAUHIDI | 3asbab.org</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     :root {
       --max-width: 920px;
       --border-light: #e2e8f0;
@@ -15,6 +20,7 @@
       --accent-light: #e6f4ed;
       --text-dark: #1a202c;
       --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+
       --pdf-accent: #0f7b4a;
       --pdf-accent-soft: #e6f4ed;
       --pdf-border: #d9e2ec;
@@ -22,114 +28,565 @@
       --pdf-muted: #5b6573;
       --pdf-paper: #fffefb;
     }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; background: #ffffff; color: var(--text-dark); line-height: 1.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-wrap: break-word; }
-    .wrap { width: 100%; max-width: var(--max-width); margin: 0 auto; padding-left: clamp(1.15rem, 4vw, 1.8rem); padding-right: clamp(1.15rem, 4vw, 1.8rem); }
-    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
-    .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.8rem 0; min-height: 56px; }
-    .topbar a { text-decoration: none; font-size: 0.92rem; color: var(--text-dark); }
-    .topbar a:hover { color: var(--accent); }
-    .brand { font-weight: 700; margin-right: 0.5rem; }
-    header { padding: 1.5rem 0 0.65rem; }
-    h1 { font-size: clamp(1.85rem, 4vw, 2.45rem); line-height: 1.25; margin: 0.3rem 0 0.55rem; letter-spacing: -0.01em; }
-    .meta { color: var(--muted); font-size: 0.9rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; margin: 0.45rem 0; }
-    .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 56px; z-index: 20; background: rgba(255,255,255,0.98); }
-    .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem 0; align-items: center; font-size: 0.82rem; }
-    .jump a { padding: 0.24rem 0.72rem; border-radius: 999px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.12s ease; color: var(--text-dark); }
-    .jump a:hover { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
-    main { padding: 1.2rem 0 3rem; }
-    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.22rem 0.82rem; border-radius: 999px; margin-bottom: 0.8rem; }
-    h2 { font-size: 1.6rem; line-height: 1.35; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 700; letter-spacing: -0.01em; }
-    h3 { font-size: 1.24rem; line-height: 1.45; margin: 1.2rem 0 0.52rem; font-weight: 700; color: #0b3b2a; }
-    h4 { font-size: 1.05rem; line-height: 1.5; margin: 1rem 0 0.45rem; font-weight: 700; color: #134e3a; }
-    p { margin: 0.72rem 0; }
-    ul, ol { margin: 0.55rem 0 0.95rem 1.4rem; padding-left: 0.2rem; }
-    li { margin: 0.34rem 0; line-height: 1.75; }
-    strong { font-weight: 700; }
-    em { font-style: italic; }
-    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.25rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
-    .arab, .arabic { font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif; color: #1e293b; }
-    .arab { direction: rtl; unicode-bidi: embed; font-size: 1.12em; line-height: 1.9; white-space: normal; }
-    .arabic { font-size: 1.62rem; line-height: 1.9; direction: rtl; text-align: right; margin: 0.85rem 0; }
-    .translation { background: #f8fafc; padding: 0.7rem 1rem; border-radius: 0.8rem; margin: 0.55rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.96rem; line-height: 1.75; }
-    blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.9rem 1.15rem; margin: 1rem 0; font-style: normal; line-height: 1.8; }
-    .insight-box { background: #f1f5f9; padding: 0.9rem 1.15rem; border-radius: 1rem; margin: 1rem 0; line-height: 1.75; }
-    .insight-box h3 { margin-top: 0; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.94rem; background: #fff; }
-    th, td { border: 1px solid var(--border-light); padding: 0.68rem; text-align: left; vertical-align: top; line-height: 1.65; }
-    th { background: #f1f5f9; font-weight: 700; }
-    hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
-    .footnote { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
-    .footnotes { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; padding-left: 1.2rem; }
-    .footnotes li { margin: 0.38rem 0; line-height: 1.65; }
-    .footnotes a, .footnote a, sup a { color: var(--accent); text-decoration: none; }
-    .toplink { font-size: 0.78rem; margin-top: 0.85rem; display: inline-block; color: var(--accent); text-decoration: none; }
-    .toplink:hover { text-decoration: underline; }
-    footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.82rem; margin-top: 1rem; }
-    .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
-    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
-    .btn-pdf:active { transform: translateY(1px); }
-    .no-print { display: block; }
-    .pdf-only { display: none; }
-    .pdf-exporting .pdf-only { display: block !important; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+      background: #ffffff;
+      color: var(--text-dark);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-wrap: break-word;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding-left: clamp(1.15rem, 4vw, 1.8rem);
+      padding-right: clamp(1.15rem, 4vw, 1.8rem);
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(6px);
+    }
+
+    .topbar nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.8rem 0;
+      min-height: 56px;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      font-size: 0.92rem;
+      color: var(--text-dark);
+    }
+
+    .topbar a:hover {
+      color: var(--accent);
+    }
+
+    .brand {
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    header {
+      padding: 1.5rem 0 0.65rem;
+    }
+
+    h1 {
+      font-size: clamp(1.85rem, 4vw, 2.45rem);
+      line-height: 1.25;
+      margin: 0.3rem 0 0.55rem;
+      letter-spacing: -0.01em;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+      margin: 0.45rem 0;
+    }
+
+    .jump {
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 56px;
+      z-index: 20;
+      background: rgba(255,255,255,0.98);
+    }
+
+    .jump-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.75rem 0;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+
+    .jump a {
+      padding: 0.24rem 0.72rem;
+      border-radius: 999px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.12s ease;
+      color: var(--text-dark);
+    }
+
+    .jump a:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    main {
+      padding: 1.2rem 0 3rem;
+    }
+
+    .badge-chapter {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      background: #fef3c7;
+      color: #b45309;
+      padding: 0.22rem 0.82rem;
+      border-radius: 999px;
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      line-height: 1.35;
+      margin: 1.8rem 0 0.75rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.9rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.24rem;
+      line-height: 1.45;
+      margin: 1.2rem 0 0.52rem;
+      font-weight: 700;
+      color: #0b3b2a;
+    }
+
+    h4 {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin: 1rem 0 0.45rem;
+      font-weight: 700;
+      color: #134e3a;
+    }
+
+    p {
+      margin: 0.72rem 0;
+    }
+
+    ul,
+    ol {
+      margin: 0.55rem 0 0.95rem 1.4rem;
+      padding-left: 0.2rem;
+    }
+
+    li {
+      margin: 0.34rem 0;
+      line-height: 1.75;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    .section-card {
+      background: var(--bg-soft);
+      border-radius: 1.2rem;
+      padding: 1.25rem 1.4rem;
+      margin: 1.2rem 0;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .arab,
+    .arabic {
+      font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif;
+      color: #1e293b;
+    }
+
+    .arab {
+      direction: rtl;
+      unicode-bidi: embed;
+      font-size: 1.12em;
+      line-height: 1.9;
+      white-space: normal;
+    }
+
+    .arabic {
+      font-size: 1.62rem;
+      line-height: 1.9;
+      direction: rtl;
+      text-align: right;
+      margin: 0.85rem 0;
+    }
+
+    .translation {
+      background: #f8fafc;
+      padding: 0.7rem 1rem;
+      border-radius: 0.8rem;
+      margin: 0.55rem 0 1rem;
+      border-left: 3px solid var(--accent);
+      font-size: 0.96rem;
+      line-height: 1.75;
+    }
+
+    blockquote {
+      background: var(--accent-light);
+      border-radius: 0.8rem;
+      padding: 0.9rem 1.15rem;
+      margin: 1rem 0;
+      font-style: normal;
+      line-height: 1.8;
+    }
+
+    .insight-box {
+      background: #f1f5f9;
+      padding: 0.9rem 1.15rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+      line-height: 1.75;
+    }
+
+    .insight-box h3 {
+      margin-top: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.94rem;
+      background: #fff;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--border-light);
+      padding: 0.68rem;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.65;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-weight: 700;
+    }
+
+    hr {
+      margin: 1.5rem 0;
+      border: 0;
+      height: 1px;
+      background: var(--border-light);
+    }
+
+    .footnote {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
+    }
+
+    .footnotes {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    .footnotes li {
+      margin: 0.38rem 0;
+      line-height: 1.65;
+    }
+
+    .footnotes a,
+    .footnote a,
+    sup a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .toplink {
+      font-size: 0.78rem;
+      margin-top: 0.85rem;
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .toplink:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 1rem;
+    }
+
+    .pdf-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0 8px;
+    }
+
+    .btn-pdf {
+      appearance: none;
+      border: 1px solid var(--pdf-border);
+      background: #fff;
+      color: var(--pdf-text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
+
+    .btn-pdf:hover {
+      border-color: var(--pdf-accent);
+      background: var(--pdf-accent-soft);
+    }
+
+    .btn-pdf:active {
+      transform: translateY(1px);
+    }
+
+    .no-print {
+      display: block;
+    }
+
+    .pdf-only {
+      display: none;
+    }
+
+    .pdf-exporting .pdf-only {
+      display: block !important;
+    }
+
     .pdf-exporting .no-print,
     .pdf-exporting .pdf-toolbar,
     .pdf-exporting .topbar,
     .pdf-exporting .jump,
-    .pdf-exporting .toplink { display: none !important; }
-    .pdf-shell { background: #fff; }
-    .pdf-cover { display: none; }
-    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
-    .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
-    .pdf-cover-brand { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
-    .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
-    .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
-    .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
-    .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
-    .pdf-meta-page { display: none; }
-    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
-    .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
-    .pdf-meta-list p { margin: 0 0 6mm; }
-    .pdf-break { break-before: page; page-break-before: always; }
-    .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
-    @media print {
-      body { margin: 0; padding: 0; }
-      .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
-      .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
-      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
-      h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+    .pdf-exporting .toplink {
+      display: none !important;
     }
+
+    .pdf-shell {
+      background: #fff;
+    }
+
+    .pdf-cover {
+      display: none;
+    }
+
+    .pdf-cover-inner {
+      min-height: 260mm;
+      padding: 28mm 18mm 24mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--pdf-paper);
+      color: var(--pdf-text);
+    }
+
+    .pdf-cover-top {
+      border-top: 4px solid var(--pdf-accent);
+      padding-top: 12mm;
+    }
+
+    .pdf-cover-brand {
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--pdf-muted);
+      margin-bottom: 10mm;
+    }
+
+    .pdf-cover-series {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 6mm;
+    }
+
+    .pdf-cover-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 5mm;
+      font-weight: 800;
+    }
+
+    .pdf-cover-subtitle {
+      font-size: 1rem;
+      color: var(--pdf-muted);
+      margin: 0;
+    }
+
+    .pdf-cover-bottom {
+      border-top: 1px solid var(--pdf-border);
+      padding-top: 8mm;
+      font-size: 0.95rem;
+      color: var(--pdf-muted);
+    }
+
+    .pdf-meta-page {
+      display: none;
+    }
+
+    .pdf-meta-inner {
+      min-height: 240mm;
+      padding: 20mm 16mm;
+      background: #fff;
+      color: var(--pdf-text);
+    }
+
+    .pdf-meta-inner h2 {
+      border: 0;
+      padding: 0;
+      margin: 0 0 10mm;
+      font-size: 1.4rem;
+    }
+
+    .pdf-meta-list p {
+      margin: 0 0 6mm;
+    }
+
+    .pdf-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .pdf-avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .no-print,
+      .pdf-toolbar,
+      .topbar,
+      .jump,
+      .toplink {
+        display: none !important;
+      }
+
+      .pdf-only,
+      .pdf-cover,
+      .pdf-meta-page {
+        display: block !important;
+      }
+
+      .section-card,
+      blockquote,
+      .insight-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      h2,
+      h3,
+      h4 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+    }
+
     @media (max-width: 640px) {
-      .wrap { padding-left: 1.1rem; padding-right: 1.1rem; }
-      .topbar nav { gap: 0.75rem; min-height: 52px; }
-      .jump { top: 52px; }
-      .section-card { padding: 1rem 1rem; border-radius: 1rem; }
-      h1 { font-size: 1.75rem; }
-      h2 { font-size: 1.34rem; padding-left: 0.75rem; }
-      h3 { font-size: 1.1rem; }
-      h4 { font-size: 1rem; }
-      .arab { font-size: 1.08em; }
-      .arabic { font-size: 1.34rem; }
-      table { font-size: 0.88rem; }
-      th, td { padding: 0.58rem; }
+      .wrap {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+      }
+
+      .topbar nav {
+        gap: 0.75rem;
+        min-height: 52px;
+      }
+
+      .jump {
+        top: 52px;
+      }
+
+      .section-card {
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      h2 {
+        font-size: 1.34rem;
+        padding-left: 0.75rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      .arab {
+        font-size: 1.08em;
+      }
+
+      .arabic {
+        font-size: 1.34rem;
+      }
+
+      table {
+        font-size: 0.88rem;
+      }
+
+      th,
+      td {
+        padding: 0.58rem;
+      }
     }
   </style>
 </head>
 <body>
   <script>
     const DOC_META = {
-      pageTitle: "Bab 26 — Kenapa Kebenaran Akan Diserang",
-      shortTitle: "Bab 26",
-      subtitle: "Sunnatullah Penentangan & Istiqamah atas Wahyu",
+      pageTitle: "BAB 26 — GLOBALISASI TAUHIDI",
+      shortTitle: "BAB 26",
+      subtitle: "Arah Penyebaran Tauhid dan Kebangkitan Umat dalam Kerangka 3 Asbab",
       headerLine: "📖 Kerangka 3 Asbab — Arkib Baca Sahaja",
-      categoryLine: "Defensive War Zone | Sunnatullah Penentangan & Dakwah",
+      categoryLine: "Globalisasi Tauhidi &amp; Kebangkitan Umat | Tauhid Amali",
       currentFile: "bab-26.html",
-      prevFile: "bab-25.html",
-      prevLabel: "Bab 25",
-      currentLabel: "Bab 26",
-      nextFile: "bab-27.html",
-      nextLabel: "Bab 27",
+      prevFile: "bab-15.html",
+      prevLabel: "Bab 15",
+      nextFile: "bab-17.html",
+      nextLabel: "Bab 17",
       jumpLinks: [
         { id: "26-0", label: "26.0" },
         { id: "26-1", label: "26.1" },
@@ -144,9 +601,9 @@
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a id="nav-prev" href="bab-25.html">← Bab 25</a>
-        <a id="nav-current" href="bab-26.html" style="font-weight:600;">Bab 26</a>
-        <a id="nav-next" href="bab-27.html">Bab 27 →</a>
+        <a id="nav-prev" href="index.html">← Home</a>
+        <a id="nav-current" href="bab-0.html" style="font-weight:600;">Bab 0</a>
+        <a id="nav-next" href="bab-1.html">Bab 1 →</a>
       </nav>
     </div>
   </div>
@@ -156,667 +613,500 @@
     </div>
   </div>
   <div id="pdf-shell" class="pdf-shell">
-    <div class="pdf-cover pdf-only">
-      <div class="pdf-cover-inner">
-        <div class="pdf-cover-top">
-          <div class="pdf-cover-brand">3asbab.org</div>
-          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
-          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 26 — Kenapa Kebenaran Akan Diserang</h1>
-          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Sunnatullah Penentangan & Istiqamah atas Wahyu</p>
-        </div>
-        <div class="pdf-cover-bottom">
-          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
-          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
-        </div>
-      </div>
+<div class="pdf-cover pdf-only">
+  <div class="pdf-cover-inner">
+    <div class="pdf-cover-top">
+      <div class="pdf-cover-brand">3asbab.org</div>
+      <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+      <h1 class="pdf-cover-title" id="pdf-cover-title">BAB 26 — GLOBALISASI TAUHIDI</h1>
+      <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Arah Penyebaran Tauhid dan Kebangkitan Umat dalam Kerangka 3 Asbab</p>
     </div>
-    <div class="pdf-meta-page pdf-only pdf-break">
-      <div class="pdf-meta-inner">
-        <h2>Maklumat Dokumen</h2>
-        <div class="pdf-meta-list">
-          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 26 — Kenapa Kebenaran Akan Diserang</span></p>
-          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
-          <p><strong>Laman:</strong> 3asbab.org</p>
-          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
-          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
-        </div>
-      </div>
+    <div class="pdf-cover-bottom">
+      <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+      <div id="pdf-cover-footer-line2">© 3asbab.org</div>
     </div>
-    <header class="wrap" id="top">
-      <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
-      <h1 id="page-title">Bab 26 — Kenapa Kebenaran Akan Diserang</h1>
-      <div class="meta" id="category-line">Defensive War Zone | Sunnatullah Penentangan & Dakwah</div>
-    </header>
-    <div class="jump no-print">
-      <div class="wrap">
-        <div class="jump-inner" id="jump-links">
-          <strong>🧭 Lompat ke:</strong>
-          <a href="#26-0">26.0</a>
-          <a href="#26-1">26.1</a>
-          <a href="#26-2">26.2</a>
-          <a href="#26-3">26.3</a>
-          <a href="#26-4">26.4</a>
-        </div>
-      </div>
-    </div>
-    <main class="wrap">
+  </div>
+</div>
 
-  <!-- ================= 26.0 MUQADDIMAH ================= -->
-  <section id="26-0">
-    <div class="badge-chapter">🔷 26.0 — MUQADDIMAH: KENAPA KEBENARAN AKAN DISERANG</div>
-    <div class="section-card">
-      <h3>26.0.1 — Sunnatullah: Kebenaran Pasti Ditentang</h3>
-      <p>Setiap kebenaran yang datang daripada Allah tidak akan dibiarkan tanpa ujian.</p>
-      <p>Ia bukan sekadar akan diuji,<br>tetapi hampir pasti akan ditentang.</p>
-      <p>Ini bukan sesuatu yang luar biasa,<br>tetapi sunnatullah yang tetap dalam sejarah para Nabi.</p>
-      <p>Allah berfirman:</p>
-      <div class="arabic">﴿ وَكَذَٰلِكَ جَعَلْنَا لِكُلِّ نَبِىٍّ عَدُوًّا مِّنَ ٱلْمُجْرِمِينَ ﴾</div>
-      <div class="translation">“Dan demikianlah Kami jadikan bagi setiap Nabi itu musuh daripada kalangan orang-orang yang berdosa.” — <strong>Al-Furqān 25:31</strong></div>
-      
-      <p>📌 Analisis Tauhidi</p>
-      <p>Ayat ini menetapkan satu prinsip besar:</p>
-      <ol>
-        <li>Setiap kebenaran akan ada penentangan — bukan sebahagian, tetapi setiap Nabi</li>
-        <li>Penentangan bukan berlaku secara kebetulan — tetapi ditetapkan oleh Allah</li>
-        <li>Musuh muncul bersama kebenaran — bukan selepas kebenaran lemah, tetapi ketika kebenaran mula hidup</li>
-      </ol>
-      
-      <p>📖 Dalil Sirah Para Nabi</p>
-      <p><strong>(A) Nabi Nuh عليه السلام</strong><br>• berdakwah selama ratusan tahun<br>• ditolak, diejek, dan diperlekeh</p>
-      <div class="arabic">﴿ كُلَّمَا دَعَوْتُهُمْ لِتَغْفِرَ لَهُمْ جَعَلُوٓا۟ أَصَـٰبِعَهُمْ فِىٓ ءَاذَانِهِمْ ﴾</div>
-      <div class="translation">“Setiap kali aku menyeru mereka… mereka memasukkan jari ke telinga mereka…” — <strong>Nūḥ 71:7</strong></div>
-      
-      <p><strong>(B) Nabi Musa عليه السلام</strong><br>• berhadapan dengan kekuasaan Firaun<br>• dituduh sebagai pendusta</p>
-      <div class="arabic">﴿ فَقَالَ إِنَّ رَسُولَكُمُ ٱلَّذِىٓ أُرْسِلَ إِلَيْكُمْ لَمَجْنُونٌ ﴾</div>
-      <div class="translation">“Firaun berkata: Sesungguhnya Rasul kamu ini benar-benar gila.” — <strong>Ash-Shu‘arā’ 26:27</strong></div>
-      
-      <p><strong>(C) Rasulullah ﷺ</strong><br>• dituduh penyihir, pendusta, penyair<br>• ditentang oleh kaum sendiri</p>
-      <div class="arabic">﴿ وَقَالُوا۟ يَـٰٓأَيُّهَا ٱلَّذِى نُزِّلَ عَلَيْهِ ٱلذِّكْرُ إِنَّكَ لَمَجْنُونٌ ﴾</div>
-      <div class="translation">“Dan mereka berkata: Wahai orang yang diturunkan kepadanya al-Qur’an, sesungguhnya engkau benar-benar gila.” — <strong>Al-Ḥijr 15:6</strong></div>
-      
-      <p>📌 Rumusan Tauhidi</p>
-      <p>Daripada keseluruhan dalil:</p>
-      <ul>
-        <li>kebenaran tidak pernah berjalan tanpa tentangan</li>
-        <li>penentangan bukan tanda kegagalan</li>
-        <li>tetapi tanda bahawa kebenaran sedang hidup</li>
-      </ul>
-      
-      <p>📌 Prinsip yang Dikunci</p>
-      <p>👉 Bila kebenaran muncul, penentangan akan menyusul.</p>
-      <p>👉 Penentangan bukan tanda salah, tetapi tanda hidupnya kebenaran.</p>
-      
-      <h3>26.0.2 — Hakikat Serangan: Cahaya vs Gelap</h3>
-      <p>Penentangan terhadap kebenaran sering disalah fahami sebagai:</p>
-      <ul>
-        <li>konflik antara manusia</li>
-        <li>perbezaan pendapat</li>
-        <li>atau pertelingkahan idea</li>
-      </ul>
-      <p>Namun al-Qur'an menunjukkan hakikat yang lebih dalam:</p>
-      <p>👉 Ia adalah pertembungan antara cahaya dan gelap.</p>
-      
-      <p>📖 Dalil Qur’ani</p>
-      <p>Allah berfirman:</p>
-      <div class="arabic">﴿ ٱللَّهُ وَلِىُّ ٱلَّذِينَ ءَامَنُوا۟ يُخْرِجُهُم مِّنَ ٱلظُّلُمَـٰتِ إِلَى ٱلنُّورِ وَٱلَّذِينَ كَفَرُوٓا۟ أَوْلِيَآؤُهُمُ ٱلطَّـٰغُوتُ يُخْرِجُونَهُم مِّنَ ٱلنُّورِ إِلَى ٱلظُّلُمَـٰتِ ﴾</div>
-      <div class="translation">“Allah adalah Pelindung orang-orang yang beriman; Dia mengeluarkan mereka dari kegelapan kepada cahaya. Dan orang-orang yang kufur, pelindung mereka ialah taghut; mereka mengeluarkan mereka dari cahaya kepada kegelapan.” — <strong>Al-Baqarah 2:257</strong></div>
-      
-      <p>📌 Analisis Tauhidi</p>
-      <p>Ayat ini menetapkan dua hakikat:</p>
-      <p>(1) Kebenaran = Cahaya (Nur)<br>• datang dari Allah<br>• menghidupkan hati<br>• memberi arah dan ketenangan</p>
-      <p>(2) Penentangan = Kegelapan (Zulumat)<br>• bukan sekadar salah faham<br>• tetapi keadaan hati yang tidak menerima cahaya</p>
-      
-      <p>📌 Penjelasan Kritikal</p>
-      <p>Apabila kebenaran disampaikan:</p>
-      <p>➡️ jika hati ada cahaya → ia menerima dengan mudah</p>
-      <p>➡️ jika hati dalam kegelapan → ia akan menolak, melawan, atau memperlekeh</p>
-      <p>Bukan kerana hujah tidak jelas, tetapi kerana cahaya tidak bertemu cahaya.</p>
-      
-      <p>📖 Dalil Sokongan</p>
-      <div class="arabic">﴿ أَفَمَن شَرَحَ ٱللَّهُ صَدْرَهُۥ لِلْإِسْلَـٰمِ فَهُوَ عَلَىٰ نُورٍۢ مِّن رَّبِّهِۦ ﴾</div>
-      <div class="translation">“Maka adakah orang yang Allah lapangkan dadanya untuk Islam, lalu dia berada di atas cahaya daripada Tuhannya (sama dengan yang keras hatinya)?” — <strong>Az-Zumar 39:22</strong></div>
-      
-      <p>📌 Rumusan Tauhidi</p>
-      <p>👉 Penentangan bukan semata-mata isu hujah<br>👉 tetapi isu keadaan hati</p>
-      
-      <p>📌 Prinsip yang Dikunci</p>
-      <p>👉 Pertembungan sebenar bukan antara manusia, tetapi antara cahaya dan kegelapan.</p>
-      <p>👉 Penentang bukan musuh peribadi, tetapi manifestasi kegelapan hati.</p>
-      <p>👉 Apabila cahaya sampai kepada hati yang hidup, ia terus menerima. Apabila cahaya sampai kepada hati yang gelap, ia akan menentang.</p>
-      
-      <p>📌 Implikasi Besar</p>
-      <p>Dengan memahami hakikat ini:</p>
-      <ul>
-        <li>kita tidak membenci manusia</li>
-        <li>kita tidak terperangkap dalam emosi</li>
-        <li>kita fokus membawa cahaya, bukan melawan gelap</li>
-      </ul>
-      <p>Kerana: 👉 Gelap tidak dihilangkan dengan melawan, tetapi dengan menghadirkan cahaya.</p>
-      
-      <h3>26.0.3 — Strategi Wahyu: Bagaimana Rasulullah ﷺ Menghadapi Serangan</h3>
-      <p>Setelah difahami bahawa penentangan adalah sunnatullah, dan hakikatnya adalah pertembungan antara cahaya dan kegelapan, maka persoalan seterusnya ialah: 👉 Bagaimana Rasulullah ﷺ menghadapi serangan ini?</p>
-      <p>Jawapannya bukan melalui strategi manusia, tetapi melalui strategi wahyu.</p>
-      
-      <p>📌 Prinsip Asas</p>
-      <p>Rasulullah ﷺ tidak melawan serangan dengan:</p>
-      <ul>
-        <li>emosi</li>
-        <li>ego</li>
-        <li>atau reaksi spontan</li>
-      </ul>
-      <p>Tetapi Baginda ﷺ menghadapi serangan dengan: 👉 tertib wahyu yang tetap dan konsisten</p>
-      
-      <p>🟥 (1) Teruskan Dakwah, Tidak Berhenti</p>
-      <p>Walaupun ditolak, dihina, dan disakiti, Rasulullah ﷺ tidak menghentikan dakwah.</p>
-      <div class="arabic">﴿ قُلْ هَـٰذِهِۦ سَبِيلِىٓ أَدْعُوٓا۟ إِلَى ٱللَّهِ عَلَىٰ بَصِيرَةٍ أَنَا۠ وَمَنِ ٱتَّبَعَنِى ﴾</div>
-      <div class="translation">“Katakanlah: Inilah jalanku; aku menyeru kepada Allah dengan penuh kesedaran, aku dan orang-orang yang mengikutiku.” — <strong>Yūsuf 12:108</strong></div>
-      <p>📌 Prinsip: 👉 Serangan bukan sebab untuk berhenti, tetapi sebab untuk terus berdakwah</p>
-      
-      <p>🟥 (2) Sabar, Bukan Reaksi</p>
-      <p>Rasulullah ﷺ tidak membalas serangan dengan tindakan balas yang emosional.</p>
-      <div class="arabic">﴿ وَٱصْبِرْ عَلَىٰ مَا يَقُولُونَ ﴾</div>
-      <div class="translation">“Dan bersabarlah atas apa yang mereka katakan.” — <strong>Al-Muzzammil 73:10</strong></div>
-      <p>📌 Prinsip: 👉 Serangan tidak memerlukan reaksi, tetapi memerlukan sabar yang berterusan</p>
-      
-      <p>🟥 (3) Tidak Kompromi Kebenaran</p>
-      <p>Walaupun tekanan kuat, Rasulullah ﷺ tidak mengubah mesej.</p>
-      <div class="arabic">﴿ فَٱصْدَعْ بِمَا تُؤْمَرُ وَأَعْرِضْ عَنِ ٱلْمُشْرِكِينَ ﴾</div>
-      <div class="translation">“Maka sampaikanlah secara terang apa yang diperintahkan kepadamu, dan berpalinglah daripada orang-orang musyrik.” — <strong>Al-Ḥijr 15:94</strong></div>
-      <p>📌 Prinsip: 👉 Dakwah tidak boleh diubah untuk memuaskan manusia, kebenaran mesti disampaikan sebagaimana wahyu</p>
-      
-      <p>🟥 (4) Tidak Fokus kepada Penentang</p>
-      <p>Rasulullah ﷺ tidak menjadikan penentang sebagai fokus utama. Baginda ﷺ fokus kepada: menyampaikan wahyu, membina iman manusia.</p>
-      <div class="arabic">﴿ فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌ لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ ﴾</div>
-      <div class="translation">“Maka berilah peringatan; sesungguhnya engkau hanyalah pemberi peringatan. Engkau bukanlah penguasa ke atas mereka.” — <strong>Al-Ghāshiyah 88:21–22</strong></div>
-      <p>📌 Prinsip: 👉 Tugas kita bukan mengawal manusia, tetapi menyampaikan kebenaran</p>
-      
-      <p>🟥 (5) Membina Jamaah, Bukan Bergerak Sendiri</p>
-      <p>Rasulullah ﷺ tidak menghadapi serangan secara individu. Baginda ﷺ membina: sahabat, jamaah, suasana iman.</p>
-      <p>📖 Contoh Sirah: Di Makkah — tekanan sangat kuat, jumlah sedikit. Namun Baginda ﷺ tetap membina sahabat satu demi satu. ➡️ Hasilnya: jamaah kecil tetapi kuat iman</p>
-      <p>📌 Prinsip: 👉 Kekuatan menghadapi serangan bukan pada individu, tetapi pada jamaah yang hidup dengan iman</p>
-      
-      <p>🟥 (6) Bergantung kepada Allah, Bukan Sebab</p>
-      <p>Dalam situasi paling kritikal, Rasulullah ﷺ tidak bergantung kepada sebab zahir. Contoh hijrah:</p>
-      <div class="arabic">﴿ لَا تَحْزَنْ إِنَّ ٱللَّهَ مَعَنَا ﴾</div>
-      <div class="translation">“Jangan bersedih, sesungguhnya Allah bersama kita.” — <strong>At-Taubah 9:40</strong></div>
-      <p>📌 Prinsip: 👉 Serangan mengajar satu perkara: bergantung kepada Allah, bukan kepada sebab</p>
-      
-      <p>🟥 (7) Fokus Membawa Cahaya, Bukan Melawan Gelap</p>
-      <p>Rasulullah ﷺ tidak melawan kebatilan secara langsung. Baginda ﷺ: membawa cahaya wahyu. Dan cahaya itu sendiri: menghilangkan kegelapan.</p>
-      <p>📌 Prinsip Besar: 👉 Gelap tidak dilawan, tetapi dihilangkan dengan cahaya</p>
-      
-      <p>🔒 FORMULASI MUKTAMAD (Manual Operasi)</p>
-      <p>Apabila berhadapan serangan:</p>
-      <ol>
-        <li>Teruskan dakwah</li>
-        <li>Sabar tanpa reaksi emosi</li>
-        <li>Jangan kompromi wahyu</li>
-        <li>Fokus kepada penyampaian, bukan penentang</li>
-        <li>Bina jamaah</li>
-        <li>Bergantung kepada Allah</li>
-        <li>Bawa cahaya, bukan lawan gelap</li>
-      </ol>
-      
-      <p>📌 Kesimpulan Tauhidi</p>
-      <p>Rasulullah ﷺ tidak menghadapi serangan dengan strategi manusia, tetapi dengan tertib wahyu. Dan tertib ini bukan hanya untuk Baginda ﷺ, tetapi untuk: 👉 “وَمَنِ ٱتَّبَعَنِى” — semua yang mengikut Baginda ﷺ</p>
+<div class="pdf-meta-page pdf-only pdf-break">
+  <div class="pdf-meta-inner">
+    <h2>Maklumat Dokumen</h2>
+    <div class="pdf-meta-list">
+      <p><strong>Judul:</strong> <span id="pdf-meta-title">BAB 26 — GLOBALISASI TAUHIDI</span></p>
+      <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+      <p><strong>Laman:</strong> 3asbab.org</p>
+      <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+      <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- ================= 26.1 POLA SERANGAN ================= -->
-  <section id="26-1">
-    <div class="badge-chapter">🔷 26.1 — POLA SERANGAN TERHADAP KEBENARAN</div>
-    <div class="section-card">
-      <h3>26.1.1 — Premis: Serangan Bukan Rawak, Tetapi Berpola</h3>
-      <p>Penentangan terhadap kebenaran tidak berlaku secara rawak.</p>
-      <p>Ia:<br>• berulang dalam sejarah<br>• sama dalam semua zaman<br>• hanya berubah pada bentuk, bukan hakikat</p>
-      
-      <p>📌 Penetapan Tauhidi: 👉 Serangan terhadap kebenaran mempunyai pola tetap (pattern) yang boleh dikenali, difahami, dan dijangkakan.</p>
-      
-      <p>📖 Dalil Qur’ani</p>
-      <div class="arabic">﴿ وَكَذَٰلِكَ مَآ أَتَى ٱلَّذِينَ مِن قَبْلِهِم مِّن رَّسُولٍ إِلَّا قَالُوا۟ سَاحِرٌ أَوْ مَجْنُونٌ ﴾</div>
-      <div class="translation">“Demikianlah, tidak datang kepada orang-orang sebelum mereka seorang rasul pun melainkan mereka berkata: ‘Dia seorang penyihir atau orang gila.’” — <strong>Aẓ-Ẓāriyāt 51:52</strong></div>
-      <p>📌 Analisis: tuduhan berulang, skrip sama, hanya pelaku berbeza</p>
-      
-      <h3>26.1.2 — Pola 1: Penafian (Denial)</h3>
-      <p>📌 Bentuk Serangan: menolak tanpa menilai, menafikan tanpa memahami, mengatakan “ini salah” tanpa hujah</p>
-      <div class="arabic">﴿ بَلْ كَذَّبُوا۟ بِٱلْحَقِّ لَمَّا جَآءَهُمْ ﴾</div>
-      <div class="translation">“Bahkan mereka mendustakan kebenaran ketika ia datang kepada mereka.” — <strong>Qāf 50:5</strong></div>
-      <p>📌 Hakikat: 👉 Penafian bukan kerana tiada bukti, tetapi kerana hati tidak menerima</p>
-      
-      <h3>26.1.3 — Pola 2: Pelabelan (Labeling)</h3>
-      <p>📌 Bentuk Serangan: melabel: sesat, pelik, ekstrem; memberi nama untuk menjatuhkan kredibiliti; bukan menjawab isi, tetapi menyerang identiti</p>
-      <div class="arabic">﴿ وَقَالُوا۟ سَاحِرٌ أَوْ مَجْنُونٌ ﴾</div>
-      <p>📌 Hakikat: 👉 Bila hujah tidak mampu dilawan, label digunakan untuk menggantikan hujah</p>
-      
-      <h3>26.1.4 — Pola 3: Pemutaran (Distortion)</h3>
-      <p>📌 Bentuk Serangan: memutar maksud, mengambil sebahagian meninggalkan sebahagian, menukar konteks</p>
-      <div class="arabic">﴿ يُحَرِّفُونَ ٱلْكَلِمَ عَن مَّوَاضِعِهِۦ ﴾</div>
-      <div class="translation">“Mereka mengubah perkataan dari tempatnya.” — <strong>An-Nisā’ 4:46</strong></div>
-      <p>📌 Hakikat: 👉 Kebenaran tidak ditolak secara terus, tetapi diubah supaya kelihatan salah</p>
-      
-      <h3>26.1.5 — Pola 4: Pengalihan Fokus (Distraction)</h3>
-      <p>📌 Bentuk Serangan: ubah topik, alihkan perbincangan, fokus kepada perkara sampingan</p>
-      <div class="arabic">﴿ وَقَالَ ٱلَّذِينَ كَفَرُوا۟ لَا تَسْمَعُوا۟ لِهَـٰذَا ٱلْقُرْءَانِ وَٱلْغَوْا۟ فِيهِ ﴾</div>
-      <div class="translation">“Dan orang-orang kafir berkata: Jangan kamu dengar al-Qur’an ini, dan buatlah bising terhadapnya.” — <strong>Fussilat 41:26</strong></div>
-      <p>📌 Hakikat: 👉 Tujuan bukan mencari kebenaran, tetapi menghalang manusia daripada mendengar kebenaran</p>
-      
-      <h3>26.1.6 — Pola 5: Tekanan Sosial (Social Pressure)</h3>
-      <p>📌 Bentuk Serangan: ejekan, pemulauan, tekanan keluarga atau masyarakat</p>
-      <div class="arabic">﴿ قَالُوٓا۟ إِنَّا وَجَدْنَآ ءَابَآءَنَا عَلَىٰٓ أُمَّةٍ ﴾</div>
-      <div class="translation">“Mereka berkata: Sesungguhnya kami dapati nenek moyang kami di atas satu jalan.” — <strong>Az-Zukhruf 43:22</strong></div>
-      <p>📌 Hakikat: 👉 manusia takut berubah kerana tekanan persekitaran</p>
-      
-      <h3>26.1.7 — Pola 6: Tawaran Dunia (Compromise Attempt)</h3>
-      <p>📌 Bentuk Serangan: tawaran kuasa, tawaran harta, tawaran kompromi</p>
-      <div class="arabic">﴿ وَدُّوا۟ لَوْ تُدْهِنُ فَيُدْهِنُونَ ﴾</div>
-      <div class="translation">“Mereka suka jika engkau berlembut (berkompromi), maka mereka juga akan berlembut.” — <strong>Al-Qalam 68:9</strong></div>
-      <p>📌 Hakikat: 👉 bukan mahu kebenaran, tetapi mahu kebenaran dicairkan</p>
-      
-      <h3>26.1.8 — Pola 7: Serangan Peribadi (Character Attack)</h3>
-      <p>📌 Bentuk Serangan: menyerang peribadi, menghina, memperlekeh</p>
-      <div class="arabic">﴿ إِنَّا كَفَيْنَـٰكَ ٱلْمُسْتَهْزِءِينَ ﴾</div>
-      <div class="translation">“Sesungguhnya Kami cukupkan (lindungi) engkau daripada orang-orang yang memperolok-olokkan.” — <strong>Al-Ḥijr 15:95</strong></div>
-      <p>📌 Hakikat: 👉 bila mesej tidak dapat dijatuhkan, mereka jatuhkan pembawa mesej</p>
-      
-      <h3>26.1.9 — Pola 8: Serangan Dalaman (Internal Undermining)</h3>
-      <p>📌 Bentuk Serangan: datang dari dalam, nampak seperti menyokong, tetapi melemahkan dari dalam</p>
-      <div class="arabic">﴿ وَمِنَ ٱلنَّاسِ مَن يَقُولُ ءَامَنَّا بِٱللَّهِ فَإِذَآ أُوذِىَ فِى ٱللَّهِ جَعَلَ فِتْنَةَ ٱلنَّاسِ كَعَذَابِ ٱللَّهِ ﴾</div>
-      <div class="translation">“Dan antara manusia ada yang berkata: Kami beriman kepada Allah; tetapi apabila dia disakiti kerana (agama) Allah, dia menjadikan tekanan manusia seperti azab Allah.” — <strong>Al-‘Ankabūt 29:10</strong></div>
-      <p>📌 Hakikat: 👉 ini paling halus dan paling berbahaya</p>
-      
-      <div class="insight-box">
-        <strong>🔒 RUMUSAN 26.1</strong>
-        <ul style="margin-top: 0.5rem;">
-          <li>Serangan terhadap kebenaran mempunyai pola tetap</li>
-          <li>Ia berulang dalam semua zaman</li>
-          <li>Bentuk berubah, hakikat sama</li>
+<header class="wrap" id="top">
+  <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+  <h1 id="page-title">BAB 26 — GLOBALISASI TAUHIDI</h1>
+  <div class="meta" id="category-line">Globalisasi Tauhidi &amp; Kebangkitan Umat | Tauhid Amali</div>
+</header>
+
+<div class="jump no-print">
+  <div class="wrap">
+    <div class="jump-inner" id="jump-links">
+      <strong>🧭 Lompat ke:</strong>
+      <a href="#26-0">26.0</a>
+      <a href="#26-1">26.1</a>
+      <a href="#26-2">26.2</a>
+      <a href="#26-3">26.3</a>
+      <a href="#26-4">26.4</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+    <article>
+      <!-- Badge pembuka bab -->
+      <div class="section">
+        <div class="badge">🟥 BAB 26 – GLOBALISASI TAUHIDI</div>
+        <p style="color:var(--muted);"><em>Globalisasi Tauhidi ialah penyebaran Nur, bukan peluasan kuasa.</em></p>
+      </div>
+
+      <!-- ===== SECTION 26.1 ===== -->
+      <section class="section" id="26-1">
+        <h2>26.1 Rantaian Tauhidi</h2>
+        <p style="font-weight:bold; color:var(--accent);">Tauhid → Amal → Sistem → Masyarakat → Syura → Nusrah</p>
+        <p>Bab ini mengunci satu rantaian Sunnatullah yang bersifat tetap, tidak berubah mengikut zaman, dan tidak tunduk kepada kuasa manusia.</p>
+        <p>Globalisasi Tauhidi bukan bermula dari sistem,<br>bukan dari kuasa,<br>bukan dari teknologi,<br>dan bukan dari dominasi geopolitik.</p>
+        <p>Ia bermula dari Tauhid, dan hanya bergerak ke hadapan mengikut tertib.</p>
+        <p>Jika tertib ini dilangkau, dipercepat, atau diterbalikkan, maka:<br>• sistem menjadi zalim,<br>• masyarakat menjadi rosak,<br>• syura menjadi kosmetik,<br>• dan Nusrah tidak turun.</p>
+
+        <hr>
+
+        <h3>26.1.1 Tauhid — Pusat Segala Pergerakan</h3>
+        <p>Tauhid dalam Kerangka 3 Asbab bukan slogan aqidah, tetapi:<br>• pemutusan pergantungan hati daripada makhluk,<br>• penetapan bahawa hanya Allah memberi kesan,<br>• dan ketaatan mutlak kepada wahyu.</p>
+        <p>Tanpa Tauhid yang hidup:<br>• amal menjadi aktiviti,<br>• sistem menjadi berhala,<br>• dan masyarakat menjadi alat.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا ٱللَّهَ مُخْلِصِينَ لَهُ ٱلدِّينَ ﴾</div>
+        <p>“Dan mereka tidak diperintahkan melainkan supaya menyembah Allah dengan mengikhlaskan agama kepada-Nya.”<br>(al-Bayyinah 98:5)</p>
+        <p>➡️ Tauhid ialah akar, bukan cabang.</p>
+
+        <hr>
+
+        <h3>26.1.2 Amal — Tauhid yang Bergerak</h3>
+        <p>Tauhid yang tidak melahirkan amal bukan Tauhid hidup.</p>
+        <p>Amal dalam rantaian Tauhidi:<br>• bukan hasil kreativiti manusia,<br>• bukan aktivisme moral,<br>• tetapi ketaatan praktikal mengikut wahyu dan tertib Rasulullah ﷺ.</p>
+        <p>Inilah sebab:<br>• iman sentiasa digandingkan dengan amal soleh dalam al-Qur’an,<br>• dan iman tanpa amal tidak menggerakkan sejarah.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ ﴾</div>
+        <p>“Sesungguhnya orang-orang yang beriman dan beramal soleh…”<br>(berulang kali dalam al-Qur’an)</p>
+        <p>➡️ Amal ialah jambatan antara Tauhid dan realiti.</p>
+
+        <hr>
+
+        <h3>26.1.3 Sistem — Amal yang Tersistem</h3>
+        <p>Sistem dalam Globalisasi Tauhidi bukan ciptaan awal, tetapi:<br>• hasil amal yang konsisten,<br>• lahir secara organik,<br>• dan tunduk kepada nilai Tauhidi.</p>
+        <p>Apabila sistem dibina sebelum amal:<br>• ia menjadi Asbab Zulumat,<br>• walaupun berlabel Islam.</p>
+        <p>Apabila sistem lahir daripada amal:<br>• ia menjadi khadam,<br>• bukan tuan.</p>
+        <p>Rasulullah ﷺ tidak membina sistem dahulu,<br>tetapi sistem Madinah lahir daripada iman dan amal sahabat.</p>
+        <p>➡️ Dalam Tauhidi: Amal melahirkan sistem, bukan sistem melahirkan iman.</p>
+
+        <hr>
+
+        <h3>26.1.4 Masyarakat — Sistem yang Menghidupkan Manusia</h3>
+        <p>Masyarakat Tauhidi bukan masyarakat yang:<br>• paling maju,<br>• paling kaya,<br>• atau paling berpengaruh.</p>
+        <p>Tetapi masyarakat yang:<br>• mudah taat,<br>• hidup amal ijtima’i,<br>• dan saling menolong agama Allah.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَٱلْمُؤْمِنُونَ وَٱلْمُؤْمِنَٰتُ بَعْضُهُمْ أَوْلِيَآءُ بَعْضٍۢ ﴾</div>
+        <p>“Orang-orang beriman lelaki dan perempuan saling menjadi penolong.”<br>(at-Tawbah 9:71)</p>
+        <p>➡️ Masyarakat Tauhidi diukur dengan ketaatan kolektif, bukan statistik.</p>
+
+        <hr>
+
+        <h3>26.1.5 Syura — Jantung Kehidupan Ijtima’i</h3>
+        <p>Syura bukan demokrasi,<br>bukan undian majoriti,<br>dan bukan legitimasi kuasa.</p>
+        <p>Syura ialah:<br>• mesyuarat iman,<br>• pencarian kehendak Allah,<br>• dan penyatuan fikir umat.</p>
+        <p>Tanpa syura:<br>• amal menjadi infradi,<br>• sistem menjadi diktator,<br>• dan masyarakat berpecah.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ ﴾</div>
+        <p>“Dan urusan mereka diputuskan dengan syura antara mereka.”<br>(ash-Shūrā 42:38)</p>
+        <p>➡️ Syura menghidupkan fikir jamaah, bukan ego individu.</p>
+
+        <hr>
+
+        <h3>26.1.6 Nusrah — Puncak Rantaian, Bukan Permulaan</h3>
+        <p>Nusrah tidak boleh dikejar.<br>Ia turun apabila rantaian di atas hidup dengan tertib.</p>
+        <p>Apabila:<br>• Tauhid hidup,<br>• amal sah ditegakkan,<br>• sistem tunduk,<br>• masyarakat bersatu,<br>• syura diamalkan,</p>
+        <p>maka:<br>• Nusrah turun sebagai bantuan Allah,<br>• sama ada dunia berubah atau tidak.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ ﴾</div>
+        <p>“Jika kamu menolong agama Allah, nescaya Allah akan menolong kamu.”<br>(Muḥammad 47:7)</p>
+        <p>➡️ Nusrah ialah natijah, bukan strategi.</p>
+
+        <hr>
+
+        <p><strong>Kesimpulan 26.1 (Dikunci)</strong></p>
+        <ol>
+          <li>Globalisasi Tauhidi bergerak mengikut rantaian tetap, bukan lompat-lompat.</li>
+          <li>Tauhid ialah punca; Nusrah ialah natijah.</li>
+          <li>Sistem yang mendahului amal pasti rosak.</li>
+          <li>Syura ialah jantung kehidupan umat.</li>
+          <li>Nusrah turun hanya apabila rantaian Tauhidi hidup sepenuhnya.</li>
+        </ol>
+
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- ===== SECTION 26.2 ===== -->
+      <section class="section" id="26-2">
+        <h2>26.2 — Lima Syarat Transformasi Asbab Tauhidi</h2>
+
+        <p>Bab ini mengunci mengapa sesuatu usaha yang kelihatan Islamik gagal menundukkan Asbab,<br>dan mengapa usaha kecil tetapi tepat tertibnya boleh mengubah arah sejarah.</p>
+        <p>Transformasi Asbab bukan berlaku secara automatik.<br>Ia bukan kesan niat baik,<br>bukan hasil kesungguhan,<br>dan bukan ganjaran kepada keletihan.</p>
+        <p>Dalam Kerangka 3 Asbab, transformasi hanya berlaku apabila lima syarat Tauhidi dipenuhi serentak.<br>Jika satu sahaja tercabut, Asbab tidak tunduk — malah boleh bertukar menjadi Asbab Zulumat yang lebih kuat.</p>
+
+        <hr>
+
+        <h3>26.2.1 Syarat Pertama: Nafy Kuasa Makhluk</h3>
+        <p>Transformasi Tauhidi mesti bermula dengan penafian.</p>
+        <p>Nafy bermaksud:<br>• menafikan bahawa Asbab Fitrah memberi kesan,<br>• menafikan bahawa Asbab Zulumat memberi kuasa,<br>• menafikan bahawa manusia, sistem, angka, atau teknologi menentukan natijah.</p>
+        <p>Tanpa nafy:<br>• Tauhid tinggal di lidah,<br>• amal bercampur syirik halus,<br>• dan sistem menjadi sandaran hati.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَمَا بِكُم مِّن نِّعْمَةٍۢ فَمِنَ ٱللَّهِ ﴾</div>
+        <p>“Dan apa sahaja nikmat yang ada pada kamu, maka ia adalah daripada Allah.”<br>(an-Naḥl 16:53)</p>
+        <p>➡️ Selagi kuasa makhluk tidak dinafikan, Asbab tidak akan tunduk.</p>
+
+        <hr>
+
+        <h3>26.2.2 Syarat Kedua: Isbat Kuasa Allah Sahaja</h3>
+        <p>Selepas nafy, mesti ada isbat.</p>
+        <p>Isbat bermaksud:<br>• menetapkan bahawa hanya Allah memberi kesan,<br>• hanya Allah menghidupkan dan mematikan,<br>• dan hanya Allah menentukan hasil.</p>
+        <p>Isbat tanpa nafy melahirkan:<br>• kebergantungan dua hala (Allah + sebab),<br>• Tauhid bercampur,<br>• dan kegagalan transformasi.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَٱللَّهُ غَالِبٌ عَلَىٰٓ أَمْرِهِۦ ﴾</div>
+        <p>“Dan Allah Maha Berkuasa atas urusan-Nya.”<br>(Yūsuf 12:21)</p>
+        <p>➡️ Isbat menjadikan hati berpaut, bukan sekadar percaya.</p>
+
+        <hr>
+
+        <h3>26.2.3 Syarat Ketiga: Ittiba’ Rasulullah ﷺ (Tertib, Bukan Idea)</h3>
+        <p>Inilah syarat yang paling banyak dilanggar.</p>
+        <p>Ramai:<br>• beriman kepada Allah,<br>• mengaku Allah Maha Kuasa,<br>• tetapi tidak tunduk kepada tertib Rasulullah ﷺ.</p>
+        <p>Dalam Kerangka 3 Asbab:<br>• amal yang tidak mengikut tertib Nabi ﷺ tidak boleh mentransformasikan Asbab,<br>• walaupun ayatnya betul,<br>• walaupun niatnya ikhlas.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَمَآ ءَاتَىٰكُمُ ٱلرَّسُولُ فَخُذُوهُ ﴾</div>
+        <p>“Apa yang Rasul berikan kepadamu, maka ambillah.”<br>(al-Ḥashr 59:7)</p>
+        <p>➡️ Ittiba’ ialah penentu sah atau rosak transformasi.</p>
+
+        <hr>
+
+        <h3>26.2.4 Syarat Keempat: Amal Ijtima’i (Syura & Jamaah)</h3>
+        <p>Asbab tidak tunduk kepada amal infradi yang terpisah.</p>
+        <p>Sunnatullah menunjukkan:<br>• transformasi besar sentiasa lahir daripada amal jamaah,<br>• yang hidup dengan syura,<br>• dan bersatu atas iman, bukan kepentingan.</p>
+        <p>Tanpa amal ijtima’i:<br>• amal menjadi individualistik,<br>• kebenaran menjadi opini,<br>• dan sistem berpecah.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَٱعْتَصِمُوا۟ بِحَبْلِ ٱللَّهِ جَمِيعًا ﴾</div>
+        <p>“Berpegang teguhlah kamu semua kepada tali Allah.”<br>(Āli ‘Imrān 3:103)</p>
+        <p>➡️ Asbab tunduk kepada jamaah yang bersatu, bukan individu yang hebat.</p>
+
+        <hr>
+
+        <h3>26.2.5 Syarat Kelima: Matlamat Redha Allah (Bukan Dunia)</h3>
+        <p>Ini ialah penentu akhir.</p>
+        <p>Jika matlamat tersasar:<br>• walaupun empat syarat sebelumnya dipenuhi secara zahir,<br>• transformasi akan terhenti di tengah jalan.</p>
+        <p>Apabila:<br>• kuasa,<br>• kemenangan,<br>• pengaruh,<br>• atau kejayaan dunia<br>menjadi tujuan, maka:<br>• Asbab kembali berkuasa,<br>• Nur padam,<br>• dan Nusrah terangkat.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَرِضْوَٰنٌۭ مِّنَ ٱللَّهِ أَكْبَرُ ﴾</div>
+        <p>“Dan keredhaan Allah itu lebih besar.”<br>(at-Tawbah 9:72)</p>
+        <p>➡️ Redha Allah ialah kompas terakhir transformasi Tauhidi.</p>
+
+        <hr>
+
+        <p><strong>Kesimpulan Muktamad 26.2 (Dikunci)</strong></p>
+        <ol>
+          <li>Transformasi Asbab tidak berlaku tanpa Nafy dan Isbat.</li>
+          <li>Ittiba’ Rasulullah ﷺ ialah penentu sah transformasi.</li>
+          <li>Amal infradi tidak menundukkan Asbab global.</li>
+          <li>Jamaah dan syura ialah syarat Sunnatullah.</li>
+          <li>Matlamat selain redha Allah akan mematikan Nur dan Nusrah.</li>
+        </ol>
+
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- ===== SECTION 26.3 ===== -->
+      <section class="section" id="26-3">
+        <h2>26.3 Globalisasi = Penyebaran Nur, Bukan Hegemoni Kuasa</h2>
+
+        <p>Bab ini membetulkan salah faham paling besar tentang globalisasi dalam wacana moden dan Islam kontemporari.</p>
+        <p>Globalisasi menurut kerangka dunia hari ini bermaksud:<br>• peluasan kuasa,<br>• penyatuan sistem,<br>• dominasi ekonomi, budaya, dan politik,<br>• serta penundukan pihak lain di bawah pusat kuasa tertentu.</p>
+        <p>Globalisasi Tauhidi bukan ini.</p>
+        <p>Dalam Islam, globalisasi bukan penyebaran kuasa, tetapi penyebaran Nur.</p>
+
+        <hr>
+
+        <h3>Globalisasi Barat: Kuasa Bergerak Keluar</h3>
+        <p>Dalam kerangka Barat:<br>• pusat menentukan nilai,<br>• sistem memaksa penerimaan,<br>• manusia dinilai melalui kepatuhan kepada struktur.</p>
+        <p>Hasilnya:<br>• budaya dijajah,<br>• pemikiran diseragamkan,<br>• dan manusia hilang fitrah kebebasan memilih.</p>
+        <p>Kuasa perlu dipertahankan,<br>kerana bila kuasa runtuh,<br>seluruh sistem runtuh.</p>
+
+        <hr>
+
+        <h3>Globalisasi Tauhidi: Nur Merebak Tanpa Memaksa</h3>
+        <p>Dalam kerangka Tauhidi:<br>• tiada pusat kuasa dunia,<br>• tiada paksaan sistem,<br>• tiada penjajahan akal atau hati.</p>
+        <p>Yang tersebar hanyalah:<br>• iman,<br>• amal soleh,<br>• dan Nur hasil penerimaan Allah.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ ٱللَّهُ وَلِىُّ ٱلَّذِينَ ءَامَنُوا۟ يُخْرِجُهُم مِّنَ ٱلظُّلُمَٰتِ إِلَى ٱلنُّورِ ﴾</div>
+        <p>“Allah adalah Pelindung orang-orang yang beriman; Dia mengeluarkan mereka daripada kegelapan kepada Nur.”<br>(al-Baqarah 2:257)【1】</p>
+        <p>➡️ Perhatikan: mengeluarkan, bukan menundukkan.</p>
+
+        <hr>
+
+        <h3>Nur Tidak Bergerak Seperti Kuasa</h3>
+        <p>Kuasa:<br>• bergerak melalui tekanan,<br>• memerlukan struktur,<br>• runtuh bila dilawan.</p>
+        <p>Nur:<br>• bergerak melalui hati,<br>• hidup dalam ketaatan,<br>• kekal walau ditekan.</p>
+        <p>Nur tidak memerlukan:<br>• tentera,<br>• propaganda,<br>• atau dominasi budaya.</p>
+        <p>Ia hidup apabila:<br>• iman hidup,<br>• amal sah,<br>• dan tertib Rasulullah ﷺ ditegakkan.</p>
+
+        <hr>
+
+        <h3>Sirah: Penyebaran Islam Tanpa Hegemoni</h3>
+        <p>Rasulullah ﷺ:<br>• tidak membina empayar,<br>• tidak memaksa iman,<br>• tidak menyeragamkan budaya.</p>
+        <p>Baginda ﷺ membina:<br>• manusia beriman,<br>• jamaah hidup,<br>• dan suasana Nur.</p>
+        <p>Allah menegaskan:</p>
+        <div class="arab">﴿ لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ ﴾</div>
+        <p>“Engkau bukan penguasa ke atas mereka.”<br>(al-Ghāshiyah 88:22)【2】</p>
+        <p>➡️ Dakwah Rasulullah ﷺ ialah penyampaian Nur, bukan penguasaan manusia.</p>
+
+        <hr>
+
+        <h3>Mengapa Nur Boleh Menjadi Global</h3>
+        <p>Nur menjadi global kerana:<br>• ia tidak terikat tempat,<br>• tidak terikat bangsa,<br>• tidak terikat struktur.</p>
+        <p>Di mana ada:<br>• iman yang hidup,<br>• amal soleh yang sah,<br>• dan ittiba’ Rasulullah ﷺ,</p>
+        <p>di situ:<br>• Nur muncul,<br>• suasana berubah,<br>• dan masyarakat hidup walaupun kecil.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ قَدْ جَآءَكُم مِّنَ ٱللَّهِ نُورٌۭ وَكِتَٰبٌۭ مُّبِينٌۭ ﴾</div>
+        <p>“Telah datang kepada kamu daripada Allah satu Nur dan Kitab yang jelas.”<br>(al-Mā’idah 5:15)【3】</p>
+
+        <hr>
+
+        <h3>Implikasi Tauhidi Globalisasi Nur</h3>
+        <p>Globalisasi Tauhidi:<br>• tidak mencari pengaruh,<br>• tidak mengejar kuasa,<br>• tidak menuntut penerimaan massal.</p>
+        <p>Ia hanya:<br>• menegakkan iman,<br>• menjaga amal,<br>• dan menyebarkan Nur melalui kehidupan.</p>
+        <p>Apabila Nur hidup:<br>• hati terbuka,<br>• akal jernih,<br>• dan manusia memilih dengan sedar.</p>
+
+        <hr>
+
+        <p><strong>Rumusan Tauhidi 26.3 (Dikunci)</strong></p>
+        <ol>
+          <li>Globalisasi Tauhidi ialah penyebaran Nur, bukan peluasan kuasa.</li>
+          <li>Nur tidak memaksa dan tidak menjajah.</li>
+          <li>Nur menerangkan dan mengeluarkan manusia daripada zulumat.</li>
+          <li>Rasulullah ﷺ menyebarkan iman, bukan membina hegemoni.</li>
+          <li>Globalisasi Tauhidi berlaku apabila iman dan amal hidup, bukan apabila kuasa diperoleh.</li>
+        </ol>
+
+        <hr>
+
+        <p><strong>Nota Kaki Bab 26.3</strong></p>
+        <ul>
+          <li>【1】al-Baqarah 2:257 — Fungsi Nur sebagai pengeluaran dari zulumat.</li>
+          <li>【2】al-Ghāshiyah 88:22 — Rasulullah ﷺ bukan penguasa hati manusia.</li>
+          <li>【3】al-Mā’idah 5:15 — Nur sebagai wahyu yang menerangkan, bukan memaksa.</li>
         </ul>
-        <p><strong>Pola utama:</strong> 1. Penafian, 2. Pelabelan, 3. Pemutaran, 4. Pengalihan fokus, 5. Tekanan sosial, 6. Tawaran kompromi, 7. Serangan peribadi, 8. Serangan dalaman</p>
-        <p>📌 Prinsip Besar: 👉 Jika pola dikenali, serangan tidak lagi mengejutkan. 👉 Jika hakikat difahami, emosi tidak terganggu. 👉 Jika tertib wahyu dipegang, serangan tidak memudaratkan.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- ================= 26.2 CARA MENJAWAB SERANGAN ================= -->
-  <section id="26-2">
-    <div class="badge-chapter">🔷 26.2 — CARA MENJAWAB SERANGAN MENGIKUT TERTIB WAHYU</div>
-    <div class="section-card">
-      <h3>26.2.1 — Premis: Jawapan Bukan Reaksi, Tetapi Tertib</h3>
-      <p>Apabila berhadapan serangan, kesilapan paling besar ialah: menjawab dengan emosi, menjawab untuk menang, menjawab untuk mempertahankan diri. Sedangkan Rasulullah ﷺ tidak menjawab serangan dengan cara ini.</p>
-      <p>📌 Penetapan Tauhidi: 👉 Jawapan kepada serangan bukan reaksi, tetapi tertib wahyu yang tetap.</p>
-      
-      <h3>26.2.2 — Prinsip 1: Kembali kepada Wahyu, Bukan Pendapat</h3>
-      <div class="arabic">﴿ فَإِن تَنَـٰزَعْتُمْ فِى شَىْءٍ فَرُدُّوهُ إِلَى ٱللَّهِ وَٱلرَّسُولِ ﴾</div>
-      <div class="translation">“Jika kamu berselisih dalam sesuatu perkara, maka kembalikanlah ia kepada Allah dan Rasul.” — <strong>An-Nisā’ 4:59</strong></div>
-      <p>📌 Prinsip: 👉 Jawapan bukan dari akal semata-mata, tetapi daripada wahyu. 📌 Aplikasi: jawab dengan ayat Qur’an, jawab dengan hadith, bukan dengan emosi atau logik kosong.</p>
-      
-      <h3>26.2.3 — Prinsip 2: Teruskan Dakwah, Bukan Bertengkar</h3>
-      <div class="arabic">﴿ فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌ ﴾</div>
-      <div class="translation">“Maka berilah peringatan; sesungguhnya engkau hanyalah pemberi peringatan.” — <strong>Al-Ghāshiyah 88:21</strong></div>
-      <p>📌 Prinsip: 👉 tugas kita bukan menang hujah, tetapi menyampaikan kebenaran. 📌 Aplikasi: jangan terperangkap dalam debat tanpa hujung, teruskan dakwah kepada manusia lain, fokus kepada yang menerima.</p>
-      
-      <h3>26.2.4 — Prinsip 3: Jawab dengan Hikmah, Bukan Kekerasan</h3>
-      <div class="arabic">﴿ ٱدْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِٱلْحِكْمَةِ وَٱلْمَوْعِظَةِ ٱلْحَسَنَةِ وَجَـٰدِلْهُم بِٱلَّتِى هِىَ أَحْسَنُ ﴾</div>
-      <div class="translation">“Serulah ke jalan Tuhanmu dengan hikmah, nasihat yang baik, dan berbahaslah dengan cara yang terbaik.” — <strong>An-Naḥl 16:125</strong></div>
-      <p>📌 Prinsip: 👉 bukan semua serangan perlu dilawan, tetapi perlu dijawab dengan cara terbaik. 📌 Aplikasi: lembut, bukan kasar; jelas, bukan emosi; tepat, bukan panjang.</p>
-      
-      <h3>26.2.5 — Prinsip 4: Abaikan Gangguan yang Tidak Membina</h3>
-      <div class="arabic">﴿ وَإِذَا خَاطَبَهُمُ ٱلْجَـٰهِلُونَ قَالُوا۟ سَلَـٰمًا ﴾</div>
-      <div class="translation">“Dan apabila orang-orang jahil berbicara dengan mereka, mereka berkata: ‘Salam.’” — <strong>Al-Furqān 25:63</strong></div>
-      <p>📌 Prinsip: 👉 tidak semua serangan perlu dijawab. 📌 Aplikasi: abaikan provokasi, tidak melayan troll, menjaga tenaga untuk dakwah.</p>
-      
-      <h3>26.2.6 — Prinsip 5: Sabar dan Istiqamah</h3>
-      <div class="arabic">﴿ وَٱصْبِرْ وَمَا صَبْرُكَ إِلَّا بِٱللَّهِ ﴾</div>
-      <div class="translation">“Dan bersabarlah; dan kesabaranmu itu hanya dengan pertolongan Allah.” — <strong>An-Naḥl 16:127</strong></div>
-      <p>📌 Prinsip: 👉 serangan tidak akan berhenti, maka sabar mesti berterusan. 📌 Aplikasi: tidak putus asa, tidak berhenti dakwah, terus istiqamah.</p>
-      
-      <h3>26.2.7 — Prinsip 6: Fokus Membina, Bukan Membalas</h3>
-      <p>Rasulullah ﷺ tidak membina Islam dengan menjawab semua serangan. Baginda ﷺ: membina iman manusia, membina jamaah, membina suasana.</p>
-      <p>📌 Prinsip: 👉 membina lebih penting daripada membalas. 📌 Aplikasi: bina halaqah, bina suasana iman, bina amal berjemaah.</p>
-      
-      <h3>26.2.8 — Prinsip 7: Bergantung kepada Allah, Bukan Hujah</h3>
-      <div class="arabic">﴿ إِنَّكَ لَا تَهْدِى مَنْ أَحْبَبْتَ وَلَـٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
-      <div class="translation">“Sesungguhnya engkau tidak dapat memberi hidayah kepada siapa yang engkau cintai, tetapi Allah memberi hidayah kepada siapa yang Dia kehendaki.” — <strong>Al-Qaṣaṣ 28:56</strong></div>
-      <p>📌 Prinsip: 👉 kita tidak memberi hidayah, kita hanya menyampaikan. 📌 Aplikasi: tidak kecewa bila ditolak, tidak bangga bila diterima, serah natijah kepada Allah.</p>
-      
-      <div class="insight-box">
-        <strong>🔒 FORMULASI MUKTAMAD (COUNTER-STRATEGY)</strong>
-        <p>Apabila diserang:</p>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
+
+      <!-- ===== SECTION 26.4 ===== -->
+      <section class="section" id="26-4">
+        <h2>26.4 Tanda Kebangkitan Global</h2>
+
+        <p>Bab ini menetapkan neraca Tauhidi untuk menilai kebangkitan global agar umat tidak tersalah arah, tersalah ukur, atau terpedaya dengan kejayaan palsu.</p>
+        <p>Dalam Kerangka 3 Asbab, kebangkitan global tidak diukur dengan kuasa, tetapi dengan hidupnya Nur hasil penerimaan Allah terhadap iman dan amal soleh yang sah.</p>
+        <p>Kebangkitan global bukan peristiwa sekali, tetapi keadaan yang berulang apabila syarat Tauhidi dipenuhi.</p>
+
+        <hr>
+
+        <h3>26.4.1 Tanda Pertama: Iman Hidup dalam Kelompok Kecil</h3>
+        <p>Kebangkitan global tidak bermula dengan majoriti, tetapi dengan kualiti.</p>
+        <p>Tandanya:<br>• iman terasa hidup,<br>• hati mudah kembali kepada Allah,<br>• dosa cepat dirasa berat,<br>• taat terasa perlu walau susah.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ كَم مِّن فِئَةٍۢ قَلِيلَةٍ غَلَبَتْ فِئَةًۭ كَثِيرَةًۢ بِإِذْنِ ٱللَّهِ ﴾</div>
+        <p>“Berapa banyak kelompok kecil mengalahkan kelompok besar dengan izin Allah.”<br>(al-Baqarah 2:249)</p>
+        <p>➡️ Kebangkitan bermula dengan iman hidup, bukan jumlah besar.</p>
+
+        <hr>
+
+        <h3>26.4.2 Tanda Kedua: Amal Soleh Mengikut Tertib Rasulullah ﷺ</h3>
+        <p>Apabila kebangkitan bermula, amal:<br>• kembali kepada wahyu,<br>• dijaga tertibnya,<br>• ditimbang sah atau tidak, bukan popular atau tidak.</p>
+        <p>Tandanya:<br>• dakwah didahulukan sebelum sistem,<br>• mujahadah mendahului hasil,<br>• sabar mendahului kemenangan.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+        <p>(al-Aḥzāb 33:71)</p>
+        <p>➡️ Kemenangan Tauhidi terikat kepada ketaatan, bukan inovasi.</p>
+
+        <hr>
+
+        <h3>26.4.3 Tanda Ketiga: Nur Hidup dalam Suasana Jamaah</h3>
+        <p>Kebangkitan global bukan fenomena individu, tetapi suasana kolektif.</p>
+        <p>Tandanya:<br>• masjid hidup,<br>• syura berfungsi,<br>• hati saling melembut,<br>• konflik diselesaikan dengan iman, bukan ego.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَأَلَّفَ بَيْنَ قُلُوبِهِمْ ﴾</div>
+        <p>“Dan Dia menyatukan hati-hati mereka.”<br>(al-Anfāl 8:63)</p>
+        <p>➡️ Penyatuan hati ialah tanda Nur hidup — bukan hasil perundingan politik.</p>
+
+        <hr>
+
+        <h3>26.4.4 Tanda Keempat: Asbab Fitrah dan Zulumat Kehilangan Kuasa</h3>
+        <p>Apabila Nur hidup:<br>• dunia tidak lagi menakutkan,<br>• tekanan tidak mematikan amal,<br>• kekalahan zahir tidak memadam iman.</p>
+        <p>Tandanya:<br>• sebab digunakan tanpa diyakini,<br>• sistem diurus tanpa disembah,<br>• hasil diserahkan tanpa dituntut.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَٰمُوا۟ لَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ ﴾</div>
+        <p>(al-Aḥqāf 46:13)</p>
+        <p>➡️ Hilangnya takut dan sedih dunia ialah tanda kebangkitan Tauhidi.</p>
+
+        <hr>
+
+        <h3>26.4.5 Tanda Kelima: Nusrah Turun Tanpa Dikejar</h3>
+        <p>Kebangkitan global tidak mengejar Nusrah — Nusrah datang sendiri.</p>
+        <p>Tandanya:<br>• bantuan muncul dari arah tidak disangka,<br>• pintu terbuka tanpa perancangan,<br>• musuh melemah tanpa dilawan secara langsung.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًۭا ۝ وَيَرْزُقْهُۥ مِنْ حَيْثُ لَا يَحْتَسِبُ ﴾</div>
+        <p>(aṭ-Ṭalāq 65:2–3)</p>
+        <p>➡️ Nusrah ialah output, bukan sasaran.</p>
+
+        <hr>
+
+        <h3>26.4.6 Tanda Keenam: Dunia Tunduk, Tetapi Tidak Diagungkan</h3>
+        <p>Apabila kebangkitan Tauhidi berlaku:<br>• dunia digunakan,<br>• tetapi tidak diagungkan,<br>• dan tidak menjadi pusat keputusan.</p>
+        <p>Tandanya:<br>• kuasa tidak memabukkan,<br>• pujian tidak menaikkan,<br>• penolakan tidak menjatuhkan.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ تِلْكَ ٱلدَّارُ ٱلْـَٔاخِرَةُ نَجْعَلُهَا لِلَّذِينَ لَا يُرِيدُونَ عُلُوًّۭا فِى ٱلْأَرْضِ وَلَا فَسَادًۭا ﴾</div>
+        <p>(al-Qaṣaṣ 28:83)</p>
+        <p>➡️ Kebangkitan tanpa kerendahan hati ialah kebangkitan palsu.</p>
+
+        <hr>
+
+        <h3>26.4.7 Tanda Ketujuh: Kejayaan Ditakrif Semula</h3>
+        <p>Dalam kebangkitan global Tauhidi:<br>• kejayaan ≠ menang,<br>• kejayaan = taat.</p>
+        <p>Tandanya:<br>• umat tidak kecewa bila kalah,<br>• tidak sombong bila menang,<br>• dan terus beramal walau hasil berubah.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+        <p>(al-Aḥzāb 33:71)</p>
+
+        <hr>
+
+        <p><strong>Rumusan Tauhidi 26.4 (Dikunci)</strong></p>
         <ol>
-          <li>Kembali kepada wahyu</li>
-          <li>Teruskan dakwah</li>
-          <li>Jawab dengan hikmah</li>
-          <li>Abaikan yang tidak perlu</li>
-          <li>Sabar dan istiqamah</li>
-          <li>Fokus membina</li>
-          <li>Bergantung kepada Allah</li>
+          <li>Kebangkitan global bermula dengan iman hidup, bukan jumlah besar.</li>
+          <li>Amal yang sah mengikut tertib Rasulullah ﷺ ialah nadi kebangkitan.</li>
+          <li>Nur hidup dalam jamaah, bukan individu.</li>
+          <li>Asbab dunia kehilangan kuasa apabila Nur hidup.</li>
+          <li>Nusrah turun tanpa dikejar.</li>
+          <li>Dunia tunduk tetapi tidak diagungkan.</li>
+          <li>Kejayaan ditakrif sebagai ketaatan, bukan kemenangan zahir.</li>
         </ol>
-        <p>📌 Kesimpulan Tauhidi: Jawapan kepada serangan bukan pada kekuatan hujah, tetapi pada ketepatan tertib wahyu. 👉 Bila tertib dijaga → dakwah hidup, 👉 Bila tertib ditinggalkan → serangan menguasai</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- ================= 26.3 KESILAPAN UMAT ================= -->
-  <section id="26-3">
-    <div class="badge-chapter">🔷 26.3 — KESILAPAN UMAT DALAM MENGHADAPI SERANGAN</div>
-    <div class="section-card">
-      <h3>26.3.1 — Premis: Masalah Bukan Serangan, Tetapi Cara Menghadapinya</h3>
-      <p>Serangan terhadap kebenaran adalah pasti. Namun dalam banyak keadaan, yang melemahkan dakwah bukan serangan itu sendiri, tetapi cara umat menghadapinya.</p>
-      <p>📌 Penetapan Tauhidi: 👉 Kebenaran tidak akan kalah kerana serangan, tetapi boleh lemah kerana kesilapan umat sendiri.</p>
-      
-      <h3>26.3.2 — Kesilapan 1: Menjawab dengan Emosi</h3>
-      <div class="arabic">﴿ وَقُولُوا۟ لِلنَّاسِ حُسْنًا ﴾</div>
-      <div class="translation">“Dan berkatalah kepada manusia dengan kata-kata yang baik.” — <strong>Al-Baqarah 2:83</strong></div>
-      <p>📌 Hakikat: emosi menutup cahaya kebenaran, manusia melihat sikap, bukan isi. 📌 Pembetulan: jawab dengan tenang, jaga adab sebelum hujah.</p>
-      
-      <h3>26.3.3 — Kesilapan 2: Terperangkap dalam Debat Tanpa Hujung</h3>
-      <div class="arabic">﴿ فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌ ﴾</div>
-      <div class="translation">“Maka berilah peringatan; sesungguhnya engkau hanyalah pemberi peringatan.” — <strong>Al-Ghāshiyah 88:21</strong></div>
-      <p>📌 Hakikat: tugas dakwah = menyampaikan, bukan memaksa orang menerima. 📌 Pembetulan: hentikan debat yang tidak membawa kepada hidayah, fokus kepada yang mahu mendengar.</p>
-      
-      <h3>26.3.4 — Kesilapan 3: Mengubah Mesej untuk Diterima</h3>
-      <div class="arabic">﴿ وَدُّوا۟ لَوْ تُدْهِنُ فَيُدْهِنُونَ ﴾</div>
-      <div class="translation">“Mereka suka jika engkau berkompromi, maka mereka juga akan berkompromi.” — <strong>Al-Qalam 68:9</strong></div>
-      <p>📌 Hakikat: apabila kebenaran diubah, ia kehilangan cahaya. 📌 Pembetulan: sampaikan wahyu sebagaimana adanya, bukan sebagaimana manusia mahu.</p>
-      
-      <h3>26.3.5 — Kesilapan 4: Fokus kepada Penentang, Bukan Dakwah</h3>
-      <div class="arabic">﴿ لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ ﴾</div>
-      <div class="translation">“Engkau bukanlah penguasa ke atas mereka.” — <strong>Al-Ghāshiyah 88:22</strong></div>
-      <p>📌 Hakikat: penentang tidak akan habis, tetapi manusia yang perlu diselamatkan ramai. 📌 Pembetulan: fokus kepada membina iman, bukan melawan semua serangan.</p>
-      
-      <h3>26.3.6 — Kesilapan 5: Bergerak Secara Individu (Infradi)</h3>
-      <div class="arabic">﴿ وَتَوَاصَوْا۟ بِٱلصَّبْرِ ﴾</div>
-      <div class="translation">“Dan mereka saling berwasiat dengan kesabaran.” — <strong>Al-‘Asr 103:3</strong></div>
-      <p>📌 Hakikat: individu mudah lemah, jamaah menguatkan iman. 📌 Pembetulan: kembali kepada amal ijtima’i, bina jamaah dan suasana.</p>
-      
-      <h3>26.3.7 — Kesilapan 6: Bergantung kepada Hujah, Bukan Allah</h3>
-      <div class="arabic">﴿ إِنَّكَ لَا تَهْدِى مَنْ أَحْبَبْتَ ﴾</div>
-      <div class="translation">“Sesungguhnya engkau tidak dapat memberi hidayah kepada siapa yang engkau cintai.” — <strong>Al-Qaṣaṣ 28:56</strong></div>
-      <p>📌 Hakikat: hujah tidak memberi hidayah, Allah yang memberi hidayah. 📌 Pembetulan: kuatkan tawakkal, serah natijah kepada Allah.</p>
-      
-      <h3>26.3.8 — Kesilapan 7: Meninggalkan Dakwah Kerana Tekanan</h3>
-      <div class="arabic">﴿ يَـٰٓأَيُّهَا ٱلْمُدَّثِّرُ قُمْ فَأَنذِرْ ﴾</div>
-      <div class="translation">“Wahai orang yang berselimut, bangunlah lalu berilah peringatan.” — <strong>Al-Muddaththir 74:1–2</strong></div>
-      <p>📌 Hakikat: dakwah bukan pilihan, tetapi perintah. 📌 Pembetulan: teruskan walaupun sedikit, istiqamah walaupun ditekan.</p>
-      
-      <div class="insight-box">
-        <strong>🔒 RUMUSAN 26.3 (VERSI MUKTAMAD)</strong>
-        <p>Kesilapan utama umat:</p>
-        <ol>
-          <li>Menjawab dengan emosi</li>
-          <li>Terperangkap dalam debat</li>
-          <li>Mengubah mesej wahyu</li>
-          <li>Fokus kepada penentang</li>
-          <li>Bergerak secara individu</li>
-          <li>Bergantung kepada hujah</li>
-          <li>Meninggalkan dakwah</li>
-        </ol>
-        <p>📌 Prinsip Besar: 👉 Serangan tidak melemahkan dakwah, tetapi kesilapan dalam menghadapi serangan yang melemahkannya.</p>
-      </div>
-<!-- ================= 26.3.9 ================= -->
-<h3>26.3.9 — Kesilapan 8: Menganggap Kritik Bentuk Sebagai Penentu Kebenaran</h3>
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
 
-<p>Satu lagi kesilapan besar umat dalam menghadapi serangan ialah menyangka bahawa kritik terhadap bentuk sudah cukup untuk membatalkan kebenaran.</p>
+      <!-- ===== SECTION 26.5 ===== -->
+      <section class="section" id="26-5">
+        <h2>26.5 Penutup: Kemenangan = Redha Allah</h2>
 
-<p>Sebahagian kritikan terhadap sesuatu kerangka atau dakwah tertumpu kepada:</p>
+        <p>Bab ini menutup keseluruhan perbincangan Globalisasi Tauhidi dengan satu neraca muktamad yang tidak boleh ditawar:</p>
+        <blockquote>Kemenangan bukan apa yang manusia capai, tetapi apa yang Allah redhai.</blockquote>
+        <p>Seluruh kerangka Tauhidi ini dibina untuk mematahkan satu kekeliruan terbesar umat: menyamakan hasil zahir dengan kejayaan hakiki.</p>
 
-<ul>
-  <li>istilah yang digunakan,</li>
-  <li>gaya penulisan,</li>
-  <li>susunan perbahasan,</li>
-  <li>atau bentuk pembentangan.</li>
-</ul>
+        <hr>
 
-<p>Perkara-perkara ini boleh diperbaiki, tetapi ia bukan penentu kebenaran.</p>
+        <h3>26.5.1 Kemenangan Bukan Dinilai oleh Dunia</h3>
+        <p>Dalam pandangan dunia:<br>• kemenangan = kuasa,<br>• kejayaan = pengaruh,<br>• kebangkitan = dominasi.</p>
+        <p>Dalam wahyu:<br>• kemenangan = ketaatan.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+        <p>“Dan sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.”<br>(al-Aḥzāb 33:71)【1】</p>
+        <p>➡️ Al-Qur’an tidak mengaitkan kemenangan dengan menang, tetapi dengan taat.</p>
 
-<p>Hakikatnya:</p>
+        <hr>
 
-<ul>
-  <li>kritik terhadap bentuk tidak semestinya membatalkan hakikat,</li>
-  <li>kritik terhadap gaya tidak semestinya menafikan kebenaran,</li>
-  <li>dan kelemahan pembentangan tidak semestinya menunjukkan kesalahan isi.</li>
-</ul>
+        <h3>26.5.2 Redha Allah Mendahului Segala Hasil</h3>
+        <p>Redha Allah bukan reaksi terhadap kejayaan, tetapi ganjaran terhadap ketaatan.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ﴾</div>
+        <p>“Allah redha terhadap mereka dan mereka pun redha terhadap-Nya.”<br>(al-Bayyinah 98:8)【2】</p>
+        <p>Perhatikan susunan wahyu:<br>• Allah redha terlebih dahulu,<br>• barulah hamba itu redha.</p>
+        <p>➡️ Ini menutup fahaman bahawa redha Allah datang selepas manusia berjaya.</p>
 
-<hr>
+        <hr>
 
-<h3>📌 Hakikat Tauhidi: Ukuran Kebenaran</h3>
+        <h3>26.5.3 Rasulullah ﷺ Sebagai Neraca Kemenangan</h3>
+        <p>Rasulullah ﷺ menang dan kalah secara zahir, tetapi tidak pernah gagal secara Tauhidi.<br>• Uhud: kalah zahir, tetapi iman dibersihkan.<br>• Ṭā’if: ditolak manusia, tetapi diterima langit.<br>• Ḥudaibiyah: kelihatan rugi, tetapi dinamakan fathan mubīna.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ إِنَّا فَتَحْنَا لَكَ فَتْحًۭا مُّبِينًۭا ﴾</div>
+        <p>“Sesungguhnya Kami telah memberikan kepadamu satu kemenangan yang nyata.”<br>(al-Fatḥ 48:1)【3】</p>
+        <p>➡️ Allah menamakan ketaatan dalam sabar sebagai kemenangan.</p>
 
-<p>Dalam neraca Tauhid, kebenaran tidak diukur dengan bentuk, tetapi dengan wahyu.</p>
+        <hr>
 
-<div class="arabic">﴿ فَإِن تَنَازَعْتُمْ فِي شَيْءٍ فَرُدُّوهُ إِلَى ٱللَّهِ وَٱلرَّسُولِ ﴾</div>
+        <h3>26.5.4 Kemenangan Tauhidi Tidak Pernah Ditangguh</h3>
+        <p>Dalam dunia:<br>• kejayaan boleh tertangguh,<br>• projek boleh gagal,<br>• usaha boleh sia-sia.</p>
+        <p>Dalam Tauhid:<br>• tiada amal soleh yang diterima tanpa kemenangan.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ إِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ ﴾</div>
+        <p>“Sesungguhnya Allah tidak mensia-siakan ganjaran orang-orang yang berbuat baik.”<br>(Hūd 11:115)【4】</p>
+        <p>➡️ Jika Allah menerima amal, kemenangan telah berlaku, walaupun dunia belum berubah.</p>
 
-<div class="translation">
-“Jika kamu berselisih dalam sesuatu perkara, maka kembalikanlah ia kepada Allah dan Rasul.” — <strong>An-Nisā’ 4:59</strong>【8】
-</div>
+        <hr>
 
-<p>Ayat ini menetapkan bahawa ukuran muktamad kebenaran ialah wahyu, bukan bentuk penyampaian.</p>
+        <h3>26.5.5 Globalisasi Tauhidi Diukur dengan Redha, Bukan Peta</h3>
+        <p>Globalisasi Tauhidi bukan penyebaran wilayah, tetapi penyebaran ketaatan dan Nur.</p>
+        <p>Tandanya:<br>• manusia kembali taat walau bersendirian,<br>• amal hidup walau ditekan,<br>• iman kekal walau tidak dipuji.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ لَيْسَ عَلَيْكَ هُدَىٰهُمْ وَلَٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
+        <p>“Bukan tanggungjawabmu memberi hidayah kepada mereka, tetapi Allah memberi hidayah kepada sesiapa yang Dia kehendaki.”<br>(al-Baqarah 2:272)【5】</p>
+        <p>➡️ Tugas manusia ialah taat dan menyampaikan, bukan memastikan hasil.</p>
 
-<hr>
+        <hr>
 
-<h3>📌 Analisis Tauhidi</h3>
+        <h3>26.5.6 Penutup Tauhidi: Kembali kepada Asas</h3>
+        <p>Kerangka 3 Asbab menutup dengan kembali kepada asas wahyu:<br>• Tauhid → asas<br>• Amal soleh → jalan<br>• Nur → tanda penerimaan<br>• Nusrah → bantuan<br>• Redha Allah → kemenangan</p>
+        <p>Tanpa Tauhid:<br>• amal menjadi rutin,<br>• sistem menjadi berhala,<br>• perjuangan menjadi keletihan.</p>
+        <p>Dengan Tauhid:<br>• sedikit menjadi cukup,<br>• kalah menjadi bersih,<br>• mati menjadi hidup.</p>
 
-<p>Kesilapan ini berlaku apabila umat:</p>
+        <hr>
 
-<ul>
-  <li>menilai kebenaran berdasarkan gaya,</li>
-  <li>menolak sesuatu kerana bentuk tidak biasa,</li>
-  <li>atau menerima sesuatu kerana nampak akademik.</li>
-</ul>
+        <p><strong>Kesimpulan Muktamad BAB 26</strong></p>
+        <p>Kemenangan bukan apa yang dunia lihat.<br>Kemenangan ialah apabila Allah berkata:<br>“Aku redha.”</p>
+        <p>Dan apabila Allah redha:<br>• dunia tunduk atau tidak, tidak lagi penting,<br>• hidup atau mati, kedua-duanya kemenangan.</p>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ رَّضِىَ ٱللَّهُ عَنْهُمْ وَرَضُوا۟ عَنْهُ ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْعَظِيمُ ﴾</div>
+        <p>“Allah redha terhadap mereka dan mereka pun redha terhadap-Nya. Itulah kemenangan yang agung.”<br>(al-Mā’idah 5:119)【6】</p>
 
-<div class="insight-box">
-  <strong>Penegasan Tauhidi:</strong><br>
-  Bentuk boleh diperbaiki,<br>
-  tetapi hakikat ditentukan oleh wahyu.
-</div>
+        <hr>
 
-<hr>
+        <p><strong>Nota Kaki Bab 26.5</strong></p>
+        <ul>
+          <li>【1】al-Aḥzāb 33:71 — Kemenangan dikaitkan dengan ketaatan.</li>
+          <li>【2】al-Bayyinah 98:8 — Redha Allah mendahului redha hamba.</li>
+          <li>【3】al-Fatḥ 48:1 — Ketaatan dinamakan kemenangan.</li>
+          <li>【4】Hūd 11:115 — Amal diterima tidak pernah sia-sia.</li>
+          <li>【5】al-Baqarah 2:272 — Hidayah milik Allah, bukan manusia.</li>
+          <li>【6】al-Mā’idah 5:119 — Redha Allah sebagai kemenangan hakiki.</li>
+        </ul>
 
-<h3>📌 Rumusan Tauhidi</h3>
+        
 
-<ol>
-  <li>Kritik bentuk tidak semestinya membatalkan kebenaran.</li>
-  <li>Ukuran kebenaran ialah wahyu, bukan gaya penyampaian.</li>
-  <li>Bentuk ialah alat, bukan hakim.</li>
-</ol>
+ 
+        <a class="toplink" href="#top">↑ Atas</a>
+      </section>
 
-<hr>
+    </article>
+  </main>
 
-<!-- ================= 26.3.10 ================= -->
-<h3>26.3.10 — Kesilapan 9: Menganggap Akademik Sebagai Sumber Kebenaran</h3>
-
-<p>Satu lagi kesilapan halus tetapi sangat besar dalam umat ialah menganggap bahawa kebenaran datang daripada kekuatan akademik.</p>
-
-<p>Akademik sering dijadikan ukuran:</p>
-
-<ul>
-  <li>istilah akademik → dianggap benar,</li>
-  <li>struktur ilmiah → dianggap sah,</li>
-  <li>gelaran & institusi → dianggap autoriti.</li>
-</ul>
-
-<p>Namun dalam neraca Tauhid, ini bukan sumber kebenaran.</p>
-
-<hr>
-
-<h3>📌 Hakikat Tauhidi: Sumber Kebenaran</h3>
-
-<div class="arabic">﴿ إِنِ ٱلْحُكْمُ إِلَّا لِلَّهِ ﴾</div>
-
-<div class="translation">
-“Sesungguhnya الحكم (penentuan hukum dan kebenaran) itu hanyalah milik Allah.” — <strong>Yūsuf 12:40</strong>【9】
-</div>
-
-<p>Kebenaran datang daripada wahyu, bukan daripada manusia.</p>
-
-<hr>
-
-<h3>📌 Analisis Tauhidi</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Peranan Akademik</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Menyusun pemikiran</td>
-      <td>Alat</td>
-    </tr>
-    <tr>
-      <td>Menjelaskan konsep</td>
-      <td>Alat</td>
-    </tr>
-    <tr>
-      <td>Menentukan kebenaran</td>
-      <td>❌ Bukan fungsi</td>
-    </tr>
-  </tbody>
-</table>
-
-<div class="insight-box">
-  <strong>Penegasan Tauhidi:</strong><br>
-  Akademik boleh menjelaskan,<br>
-  tetapi tidak menentukan kebenaran.
-</div>
-
-<hr>
-
-<h3>📌 Dalil</h3>
-
-<div class="arabic">﴿ أَفَرَأَيْتَ مَنِ ٱتَّخَذَ إِلَٰهَهُۥ هَوَىٰهُ وَأَضَلَّهُ ٱللَّهُ عَلَىٰ عِلْمٍ ﴾</div>
-
-<div class="translation">
-“Apakah engkau melihat orang yang menjadikan hawa nafsunya sebagai tuhan, dan Allah menyesatkannya atas dasar ilmu?” — <strong>Al-Jāthiyah 45:23</strong>【10】
-</div>
-
-<p>Ilmu tanpa wahyu boleh menyesatkan.</p>
-
-<hr>
-
-<h3>📌 Rumusan Tauhidi</h3>
-
-<ol>
-  <li>Akademik bukan sumber kebenaran.</li>
-  <li>Kebenaran datang daripada wahyu.</li>
-  <li>Akademik hanya alat memahami.</li>
-  <li>Mengangkat akademik sebagai hakim ialah kesilapan Tauhidi.</li>
-</ol>
-
-<hr>
-
-<!-- ================= RUMUSAN 26.3 ================= -->
-<div class="insight-box">
-  <strong>🔒 RUMUSAN 26.3 (VERSI LENGKAP)</strong>
-  <ol>
-    <li>Menjawab dengan emosi</li>
-    <li>Terperangkap dalam debat</li>
-    <li>Mengubah mesej wahyu</li>
-    <li>Fokus kepada penentang</li>
-    <li>Bergerak secara individu</li>
-    <li>Bergantung kepada hujah</li>
-    <li>Meninggalkan dakwah</li>
-    <li>Menganggap bentuk sebagai penentu kebenaran</li>
-    <li>Menganggap akademik sebagai sumber kebenaran</li>
-  </ol>
-
-  <p><strong>Prinsip Besar:</strong><br>
-  Serangan tidak melemahkan dakwah,<br>
-  tetapi kesilapan dalam menghadapinya yang melemahkannya.</p>
-</div>
-
-<!-- ================= NOTA KAKI 26.3 ================= -->
-<div class="footnote">
-  <p><strong>Nota Kaki 26.3</strong></p>
-  <p>
-    【8】 An-Nisā’ 4:59 — Kebenaran mesti dikembalikan kepada Allah dan Rasul.<br>
-    【9】 Yūsuf 12:40 — Penentuan hukum dan kebenaran hanya milik Allah.<br>
-    【10】 Al-Jāthiyah 45:23 — Ilmu tanpa wahyu boleh membawa kesesatan.
-  </p>
-</div>
-    </div>
-  </section>
-
-  <!-- ================= 26.4 PENUTUP ================= -->
-  <section id="26-4">
-    <div class="badge-chapter">🔷 26.4 — PENUTUP: KEMENANGAN BUKAN PADA TIADA SERANGAN, TETAPI ISTIQAMAH ATAS WAHYU</div>
-    <div class="section-card">
-      <h3>26.4.1 — Premis: Salah Faham Tentang Kemenangan</h3>
-      <p>Ramai manusia memahami kemenangan sebagai: tiada penentangan, semua orang menerima, keadaan menjadi mudah.</p>
-      <p>Namun al-Qur'an menunjukkan gambaran yang berbeza. Para Nabi tidak melalui jalan tanpa serangan, bahkan mereka menghadapi: penolakan, ejekan, tekanan, bahkan ancaman nyawa.</p>
-      <p>📌 Penetapan Tauhidi: 👉 Ketiadaan serangan bukan tanda kemenangan, dan kewujudan serangan bukan tanda kegagalan.</p>
-      
-      <p>📖 Dalil Qur’ani</p>
-      <div class="arabic">﴿ أَمْ حَسِبْتُمْ أَن تَدْخُلُوا۟ ٱلْجَنَّةَ وَلَمَّا يَأْتِكُم مَّثَلُ ٱلَّذِينَ خَلَوْا۟ مِن قَبْلِكُم مَّسَّتْهُمُ ٱلْبَأْسَآءُ وَٱلضَّرَّآءُ وَزُلْزِلُوا۟ حَتَّىٰ يَقُولَ ٱلرَّسُولُ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ مَتَىٰ نَصْرُ ٱللَّهِ أَلَآ إِنَّ نَصْرَ ٱللَّهِ قَرِيبٌ ﴾</div>
-      <div class="translation">“Adakah kamu menyangka kamu akan masuk syurga, padahal belum datang kepada kamu (ujian) seperti orang-orang sebelum kamu? Mereka ditimpa kesusahan dan penderitaan serta digoncangkan, sehingga Rasul dan orang-orang beriman berkata: ‘Bilakah pertolongan Allah?’ Ketahuilah, sesungguhnya pertolongan Allah itu dekat.” — <strong>Al-Baqarah 2:214</strong></div>
-      <p>📌 Analisis Tauhidi: jalan iman penuh ujian, bahkan para Nabi juga diuji, kemenangan datang selepas ujian, bukan sebelum.</p>
-      
-      <h3>26.4.2 — Hakikat Kemenangan dalam Wahyu</h3>
-      <p>Kemenangan dalam Islam bukan pada hasil zahir semata-mata.</p>
-      <div class="arabic">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
-      <div class="translation">“Dan sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.” — <strong>Al-Aḥzāb 33:71</strong></div>
-      <p>📌 Penetapan: 👉 Kemenangan sebenar ialah: istiqamah atas ketaatan, tetap di atas wahyu, walaupun dalam tekanan.</p>
-      
-      <h3>26.4.3 — Rantaian Tauhidi dalam Menghadapi Serangan</h3>
-      <p>Daripada keseluruhan Bab 26:</p>
-      <ul>
-        <li>Kebenaran pasti diserang (26.0)</li>
-        <li>Serangan mempunyai pola (26.1)</li>
-        <li>Wahyu memberi cara menjawab (26.2)</li>
-        <li>Kesilapan umat melemahkan dakwah (26.3)</li>
-      </ul>
-      <p>➡️ Maka rumusannya: 👉 Istiqamah atas wahyu ialah kunci kemenangan</p>
-      
-      <h3>26.4.4 — Dalil Sirah: Istiqamah Rasulullah ﷺ</h3>
-      <p>Sepanjang dakwah di Makkah: 13 tahun tanpa kemenangan zahir, tekanan sangat kuat, pengikut sedikit. Namun Rasulullah ﷺ: tidak berhenti, tidak mengubah mesej, tidak putus asa. ➡️ Akhirnya: Allah memberi kemenangan di Madinah.</p>
-      <p>📌 Pengajaran: 👉 kemenangan bukan pada cepat, tetapi pada istiqamah</p>
-      
-      <h3>26.4.5 — Penegasan Kritikal: Bahaya Salah Ukur Kemenangan</h3>
-      <p>Kesilapan besar umat: ❌ mengukur kemenangan dengan: jumlah pengikut, penerimaan manusia, kejayaan dunia.</p>
-      <p>📌 Hakikat Tauhidi: 👉 ukuran sebenar ialah: adakah kita di atas wahyu, adakah kita istiqamah</p>
-      
-      <h3>26.4.6 — Prinsip Muktamad</h3>
-      <p>👉 Jika tiada serangan, itu bukan tanda kebenaran</p>
-      <p>👉 Jika ada serangan, itu bukan tanda kesalahan</p>
-      <p>👉 Jika istiqamah atas wahyu, itulah kemenangan</p>
-      
-      <h3>26.4.7 — Penutup Tauhidi (High-Impact)</h3>
-      <p>Kebenaran tidak pernah dijamin tanpa ujian.</p>
-      <p>Namun Allah menjamin: 👉 sesiapa yang tetap di atas wahyu, 👉 walaupun dalam tekanan, 👉 walaupun dalam kesempitan, ➡️ dialah yang benar-benar menang.</p>
-      
-      <div class="insight-box">
-        <strong>🔒 KESIMPULAN MUKTAMAD BAB 26</strong>
-        <p>Kebenaran pasti diserang.</p>
-        <p>Namun serangan bukan untuk memusnahkan, tetapi untuk menapis: siapa yang benar, siapa yang sabar, siapa yang istiqamah.</p>
-        <p>Dan akhirnya: 👉 kemenangan bukan milik yang tidak diserang, tetapi milik yang tetap di atas wahyu.</p>
-      </div>
-    </div>
-  </section>
-
-  <hr />
-  <div id="footnotes" class="footnote">
-    <h3 style="font-size:1rem;">📎 Nota Kaki Bab 26</h3>
-    <p><strong>26.0.1:</strong> 【1】Al-Furqān 25:31 【2】Nūḥ 71:7 【3】Ash-Shu‘arā’ 26:27 【4】Al-Ḥijr 15:6</p>
-    <p><strong>26.0.2:</strong> 【1】Al-Baqarah 2:257 【2】Az-Zumar 39:22</p>
-    <p><strong>26.0.3:</strong> 【1】Yūsuf 12:108 【2】Al-Muzzammil 73:10 【3】Al-Ḥijr 15:94 【4】Al-Ghāshiyah 88:21–22 【5】At-Taubah 9:40</p>
-    <p><strong>26.1:</strong> 【1】Aẓ-Ẓāriyāt 51:52 【2】Qāf 50:5 【3】An-Nisā’ 4:46 【4】Fussilat 41:26 【5】Az-Zukhruf 43:22 【6】Al-Qalam 68:9 【7】Al-Ḥijr 15:95 【8】Al-‘Ankabūt 29:10</p>
-    <p><strong>26.2:</strong> 【1】An-Nisā’ 4:59 【2】Al-Ghāshiyah 88:21 【3】An-Naḥl 16:125 【4】Al-Furqān 25:63 【5】An-Naḥl 16:127 【6】Al-Qaṣaṣ 28:56</p>
-    <p><strong>26.3:</strong> 【1】Al-Baqarah 2:83 【2】Al-Ghāshiyah 88:21 【3】Al-Qalam 68:9 【4】Al-Ghāshiyah 88:22 【5】Al-‘Asr 103:3 【6】Al-Qaṣaṣ 28:56 【7】Al-Muddaththir 74:1–2</p>
-    <p><strong>26.4:</strong> 【1】Al-Baqarah 2:214 【2】Al-Aḥzāb 33:71</p>
-    <p>📌 Semua terjemahan berdasarkan maksud ayat. Kerangka 3 Asbab — selaras dengan Ahl al-Sunnah wa al-Jamā‘ah.</p>
-  </div>
-
-  <div style="margin: 1.8rem 0 0.5rem; text-align: right;">
-    <a href="#top" class="toplink" style="text-decoration: none; background: var(--accent-light); padding: 0.3rem 1rem; border-radius: 50px;">↑ Kembali ke atas ↑</a>
-  </div>
-
-
-    </main>
     <footer class="wrap">
       <div>© 3asbab.org — Kerangka 3 Asbab</div>
     </footer>
+
   </div>
+
   <script>
     function downloadPDF() {
       const btn = document.querySelector('.btn-pdf');
@@ -825,8 +1115,6 @@
       const originalText = btn.innerHTML;
       btn.innerHTML = '⏳ Menyediakan PDF...';
       btn.disabled = true;
-
-      document.body.classList.add('pdf-exporting');
 
       const coverTitle = document.getElementById('pdf-cover-title');
       const coverSubtitle = document.getElementById('pdf-cover-subtitle');
@@ -846,8 +1134,8 @@
 
       setTimeout(() => {
         window.print();
+
         setTimeout(() => {
-          document.body.classList.remove('pdf-exporting');
           btn.innerHTML = originalText;
           btn.disabled = false;
         }, 500);
