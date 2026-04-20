@@ -1,681 +1,274 @@
-<!DOCTYPE html><html lang="ms"><head>
-  <meta charset="UTF-8">
+<!DOCTYPE html><html lang="ms"><head><meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Bab 19 — RUMAH SAHABAT: PEMBINAAN KELUARGA BERIMAN | 3asbab.org</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }:root {
-–max-width: 920px;
-–border-light: #e2e8f0;
-–bg-soft: #fafcff;
-–muted: #4a5568;
-–accent: #0f7b4a;
-–accent-light: #e6f4ed;
-–text-dark: #1a202c;
-–shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
-–pdf-accent: #0f7b4a;
-–pdf-accent-soft: #e6f4ed;
-–pdf-border: #d9e2ec;
-–pdf-text: #1f2937;
-–pdf-muted: #5b6573;
-–pdf-paper: #fffefb;
-}
-html {
-scroll-behavior: smooth;
--webkit-text-size-adjust: 100%;
-}
-body {
-font-family: system-ui, -apple-system, “Segoe UI”, Roboto, “Noto Sans”, sans-serif;
-background: #ffffff;
-color: var(–text-dark);
-line-height: 1.75;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-text-rendering: optimizeLegibility;
-overflow-wrap: break-word;
-}
-.wrap {
-width: 100%;
-max-width: var(–max-width);
-margin: 0 auto;
-padding-left: clamp(1.15rem, 4vw, 1.8rem);
-padding-right: clamp(1.15rem, 4vw, 1.8rem);
-}
-.topbar {
-border-bottom: 1px solid var(–border-light);
-position: sticky;
-top: 0;
-z-index: 30;
-background: rgba(255,255,255,0.96);
-backdrop-filter: blur(6px);
-}
-.topbar nav {
-display: flex;
-gap: 1rem;
-flex-wrap: wrap;
-align-items: center;
-padding: 0.8rem 0;
-min-height: 56px;
-}
-.topbar a {
-text-decoration: none;
-font-size: 0.92rem;
-color: var(–text-dark);
-}
-.topbar a:hover {
-color: var(–accent);
-}
-.brand {
-font-weight: 700;
-margin-right: 0.5rem;
-}
-header {
-padding: 1.5rem 0 0.65rem;
-}
-h1 {
-font-size: clamp(1.85rem, 4vw, 2.45rem);
-line-height: 1.25;
-margin: 0.3rem 0 0.55rem;
-letter-spacing: -0.01em;
-}
-.meta {
-color: var(–muted);
-font-size: 0.9rem;
-border-left: 3px solid var(–accent);
-padding-left: 0.75rem;
-margin: 0.45rem 0;
-}
-.jump {
-border-bottom: 1px solid var(–border-light);
-position: sticky;
-top: 56px;
-z-index: 20;
-background: rgba(255,255,255,0.98);
-}
-.jump-inner {
-display: flex;
-flex-wrap: wrap;
-gap: 0.5rem;
-padding: 0.75rem 0;
-align-items: center;
-font-size: 0.82rem;
-}
-.jump a {
-padding: 0.24rem 0.72rem;
-border-radius: 999px;
-background: var(–bg-soft);
-border: 1px solid var(–border-light);
-text-decoration: none;
-font-weight: 500;
-transition: 0.12s ease;
-color: var(–text-dark);
-}
-.jump a:hover {
-border-color: var(–accent);
-background: var(–accent-light);
-color: var(–accent);
-}
-main {
-padding: 1.2rem 0 3rem;
-}
-.badge-chapter {
-display: inline-block;
-font-weight: 700;
-font-size: 0.8rem;
-background: #fef3c7;
-color: #b45309;
-padding: 0.22rem 0.82rem;
-border-radius: 999px;
-margin-bottom: 0.8rem;
-}
-h2 {
-font-size: 1.6rem;
-line-height: 1.35;
-margin: 1.8rem 0 0.75rem;
-border-left: 4px solid var(–accent);
-padding-left: 0.9rem;
-font-weight: 700;
-letter-spacing: -0.01em;
-}
-h3 {
-font-size: 1.24rem;
-line-height: 1.45;
-margin: 1.2rem 0 0.52rem;
-font-weight: 700;
-color: #0b3b2a;
-}
-h4 {
-font-size: 1.05rem;
-line-height: 1.5;
-margin: 1rem 0 0.45rem;
-font-weight: 700;
-color: #134e3a;
-}
-p {
-margin: 0.72rem 0;
-}
-ul,
-ol {
-margin: 0.55rem 0 0.95rem 1.4rem;
-padding-left: 0.2rem;
-}
-li {
-margin: 0.34rem 0;
-line-height: 1.75;
-}
-strong {
-font-weight: 700;
-}
-em {
-font-style: italic;
-}
-.section-card {
-background: var(–bg-soft);
-border-radius: 1.2rem;
-padding: 1.25rem 1.4rem;
-margin: 1.2rem 0;
-border: 1px solid var(–border-light);
-box-shadow: var(–shadow-sm);
-}
-.arab,
-.arabic {
-font-family: “Noto Naskh Arabic”, “Amiri”, “Traditional Arabic”, serif;
-color: #1e293b;
-}
-.arab {
-direction: rtl;
-unicode-bidi: embed;
-font-size: 1.12em;
-line-height: 1.9;
-white-space: normal;
-}
-.arabic {
-font-size: 1.62rem;
-line-height: 1.9;
-direction: rtl;
-text-align: right;
-margin: 0.85rem 0;
-}
-.translation {
-background: #f8fafc;
-padding: 0.7rem 1rem;
-border-radius: 0.8rem;
-margin: 0.55rem 0 1rem;
-border-left: 3px solid var(–accent);
-font-size: 0.96rem;
-line-height: 1.75;
-}
-blockquote {
-background: var(–accent-light);
-border-radius: 0.8rem;
-padding: 0.9rem 1.15rem;
-margin: 1rem 0;
-font-style: normal;
-line-height: 1.8;
-}
-.insight-box {
-background: #f1f5f9;
-padding: 0.9rem 1.15rem;
-border-radius: 1rem;
-margin: 1rem 0;
-line-height: 1.75;
-}
-.insight-box h3 {
-margin-top: 0;
-}
-table {
-width: 100%;
-border-collapse: collapse;
-margin: 1rem 0;
-font-size: 0.94rem;
-background: #fff;
-}
-th,
-td {
-border: 1px solid var(–border-light);
-padding: 0.68rem;
-text-align: left;
-vertical-align: top;
-line-height: 1.65;
-}
-th {
-background: #f1f5f9;
-font-weight: 700;
-}
-hr {
-margin: 1.5rem 0;
-border: 0;
-height: 1px;
-background: var(–border-light);
-}
-.footnote {
-font-size: 0.82rem;
-color: var(–muted);
-margin-top: 1.5rem;
-border-top: 1px dashed var(–border-light);
-padding-top: 1rem;
-}
-.footnotes {
-font-size: 0.82rem;
-color: var(–muted);
-margin-top: 1.5rem;
-border-top: 1px dashed var(–border-light);
-padding-top: 1rem;
-padding-left: 1.2rem;
-}
-.footnotes li {
-margin: 0.38rem 0;
-line-height: 1.65;
-}
-.footnotes a,
-.footnote a,
-sup a {
-color: var(–accent);
-text-decoration: none;
-}
-.toplink {
-font-size: 0.78rem;
-margin-top: 0.85rem;
-display: inline-block;
-color: var(–accent);
-text-decoration: none;
-}
-.toplink:hover {
-text-decoration: underline;
-}
-footer {
-border-top: 1px solid var(–border-light);
-padding: 1.5rem 0;
-color: var(–muted);
-font-size: 0.82rem;
-margin-top: 1rem;
-}
-.pdf-toolbar {
-display: flex;
-justify-content: flex-end;
-gap: 10px;
-margin: 14px 0 8px;
-}
-.btn-pdf {
-appearance: none;
-border: 1px solid var(–pdf-border);
-background: #fff;
-color: var(–pdf-text);
-padding: 10px 14px;
-border-radius: 999px;
-cursor: pointer;
-font: inherit;
-font-size: 0.95rem;
-font-weight: 600;
-transition: 0.15s ease;
-box-shadow: 0 1px 2px rgba(0,0,0,.04);
-}
-.btn-pdf:hover {
-border-color: var(–pdf-accent);
-background: var(–pdf-accent-soft);
-}
-.btn-pdf:active {
-transform: translateY(1px);
-}
-.no-print {
-display: block;
-}
-.pdf-only {
-display: none;
-}
-.pdf-exporting .pdf-only {
-display: block !important;
-}
-.pdf-exporting .no-print,
-.pdf-exporting .pdf-toolbar,
-.pdf-exporting .topbar,
-.pdf-exporting .jump,
-.pdf-exporting .toplink {
-display: none !important;
-}
-.pdf-shell {
-background: #fff;
-}
-.pdf-cover {
-display: none;
-}
-.pdf-cover-inner {
-min-height: 260mm;
-padding: 28mm 18mm 24mm;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-background: var(–pdf-paper);
-color: var(–pdf-text);
-}
-.pdf-cover-top {
-border-top: 4px solid var(–pdf-accent);
-padding-top: 12mm;
-}
-.pdf-cover-brand {
-font-size: 0.95rem;
-letter-spacing: 0.12em;
-text-transform: uppercase;
-color: var(–pdf-muted);
-margin-bottom: 10mm;
-}
-.pdf-cover-series {
-font-size: 1.1rem;
-font-weight: 700;
-margin: 0 0 6mm;
-}
-.pdf-cover-title {
-font-size: 2rem;
-line-height: 1.2;
-margin: 0 0 5mm;
-font-weight: 800;
-}
-.pdf-cover-subtitle {
-font-size: 1rem;
-color: var(–pdf-muted);
-margin: 0;
-}
-.pdf-cover-bottom {
-border-top: 1px solid var(–pdf-border);
-padding-top: 8mm;
-font-size: 0.95rem;
-color: var(–pdf-muted);
-}
-.pdf-meta-page {
-display: none;
-}
-.pdf-meta-inner {
-min-height: 240mm;
-padding: 20mm 16mm;
-background: #fff;
-color: var(–pdf-text);
-}
-.pdf-meta-inner h2 {
-border: 0;
-padding: 0;
-margin: 0 0 10mm;
-font-size: 1.4rem;
-}
-.pdf-meta-list p {
-margin: 0 0 6mm;
-}
-.pdf-break {
-break-before: page;
-page-break-before: always;
-}
-.pdf-avoid-break {
-break-inside: avoid;
-page-break-inside: avoid;
-}
-@media print {
-body {
-margin: 0;
-padding: 0;
-}
-.no-print,
-.pdf-toolbar,
-.topbar,
-.jump,
-.toplink {
-display: none !important;
-}
-.pdf-only,
-.pdf-cover,
-.pdf-meta-page {
-display: block !important;
-}
-.section-card,
-blockquote,
-.insight-box {
-break-inside: avoid;
-page-break-inside: avoid;
-}
-h2,
-h3,
-h4 {
-break-after: avoid;
-page-break-after: avoid;
-}
-}
-@media (max-width: 640px) {
-.wrap {
-padding-left: 1.1rem;
-padding-right: 1.1rem;
-}
-.topbar nav {
-gap: 0.75rem;
-min-height: 52px;
-}
-.jump {
-top: 52px;
-}
-.section-card {
-padding: 1rem 1rem;
-border-radius: 1rem;
-}
-h1 {
-font-size: 1.75rem;
-}
-h2 {
-font-size: 1.34rem;
-padding-left: 0.75rem;
-}
-h3 {
-font-size: 1.1rem;
-}
-h4 {
-font-size: 1rem;
-}
-.arab {
-font-size: 1.08em;
-}
-.arabic {
-font-size: 1.34rem;
-}
-table {
-font-size: 0.88rem;
-}
-th,
-td {
-padding: 0.58rem;
-}
-}
-</style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --max-width: 920px;
+      --border-light: #e2e8f0;
+      --bg-soft: #fafcff;
+      --muted: #4a5568;
+      --accent: #0f7b4a;
+      --accent-light: #e6f4ed;
+      --text-dark: #1a202c;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
+    }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; background: #ffffff; color: var(--text-dark); line-height: 1.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-wrap: break-word; }
+    .wrap { width: 100%; max-width: var(--max-width); margin: 0 auto; padding-left: clamp(1.15rem, 4vw, 1.8rem); padding-right: clamp(1.15rem, 4vw, 1.8rem); }
+    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
+    .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.8rem 0; min-height: 56px; }
+    .topbar a { text-decoration: none; font-size: 0.92rem; color: var(--text-dark); }
+    .topbar a:hover { color: var(--accent); }
+    .brand { font-weight: 700; margin-right: 0.5rem; }
+    header { padding: 1.5rem 0 0.65rem; }
+    h1 { font-size: clamp(1.85rem, 4vw, 2.45rem); line-height: 1.25; margin: 0.3rem 0 0.55rem; letter-spacing: -0.01em; }
+    .meta { color: var(--muted); font-size: 0.9rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; margin: 0.45rem 0; }
+    .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 56px; z-index: 20; background: rgba(255,255,255,0.98); }
+    .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem 0; align-items: center; font-size: 0.82rem; }
+    .jump a { padding: 0.24rem 0.72rem; border-radius: 999px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.12s ease; color: var(--text-dark); }
+    .jump a:hover { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
+    main { padding: 1.2rem 0 3rem; }
+    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.22rem 0.82rem; border-radius: 999px; margin-bottom: 0.8rem; }
+    h2 { font-size: 1.6rem; line-height: 1.35; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 700; letter-spacing: -0.01em; }
+    h3 { font-size: 1.24rem; line-height: 1.45; margin: 1.2rem 0 0.52rem; font-weight: 700; color: #0b3b2a; }
+    h4 { font-size: 1.05rem; line-height: 1.5; margin: 1rem 0 0.45rem; font-weight: 700; color: #134e3a; }
+    p { margin: 0.72rem 0; }
+    ul, ol { margin: 0.55rem 0 0.95rem 1.4rem; padding-left: 0.2rem; }
+    li { margin: 0.34rem 0; line-height: 1.75; }
+    strong { font-weight: 700; }
+    em { font-style: italic; }
+    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.25rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
+    .arab, .arabic { font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif; color: #1e293b; }
+    .arab { direction: rtl; unicode-bidi: embed; font-size: 1.12em; line-height: 1.9; white-space: normal; }
+    .arabic { font-size: 1.62rem; line-height: 1.9; direction: rtl; text-align: right; margin: 0.85rem 0; }
+    .translation { background: #f8fafc; padding: 0.7rem 1rem; border-radius: 0.8rem; margin: 0.55rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.96rem; line-height: 1.75; }
+    blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.9rem 1.15rem; margin: 1rem 0; font-style: normal; line-height: 1.8; }
+    .insight-box { background: #f1f5f9; padding: 0.9rem 1.15rem; border-radius: 1rem; margin: 1rem 0; line-height: 1.75; }
+    .insight-box h3 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.94rem; background: #fff; }
+    th, td { border: 1px solid var(--border-light); padding: 0.68rem; text-align: left; vertical-align: top; line-height: 1.65; }
+    th { background: #f1f5f9; font-weight: 700; }
+    hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
+    .footnote { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
+    .footnotes { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; padding-left: 1.2rem; }
+    .footnotes li { margin: 0.38rem 0; line-height: 1.65; }
+    .footnotes a, .footnote a, sup a { color: var(--accent); text-decoration: none; }
+    .toplink { font-size: 0.78rem; margin-top: 0.85rem; display: inline-block; color: var(--accent); text-decoration: none; }
+    .toplink:hover { text-decoration: underline; }
+    footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.82rem; margin-top: 1rem; }
+    .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
+    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
+    .btn-pdf:active { transform: translateY(1px); }
+    .no-print { display: block; }
+    .pdf-only { display: none; }
+    .pdf-exporting .pdf-only { display: block !important; }
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink { display: none !important; }
+    .pdf-shell { background: #fff; }
+    .pdf-cover { display: none; }
+    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
+    .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
+    .pdf-cover-brand { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
+    .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
+    .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
+    .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
+    .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
+    .pdf-meta-page { display: none; }
+    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
+    .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
+    .pdf-meta-list p { margin: 0 0 6mm; }
+    .pdf-break { break-before: page; page-break-before: always; }
+    .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
+    @media print {
+      body { margin: 0; padding: 0; }
+      .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
+      .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
+      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
+      h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+    }
+    @media (max-width: 640px) {
+      .wrap { padding-left: 1.1rem; padding-right: 1.1rem; }
+      .topbar nav { gap: 0.75rem; min-height: 52px; }
+      .jump { top: 52px; }
+      .section-card { padding: 1rem 1rem; border-radius: 1rem; }
+      h1 { font-size: 1.75rem; }
+      h2 { font-size: 1.34rem; padding-left: 0.75rem; }
+      h3 { font-size: 1.1rem; }
+      h4 { font-size: 1rem; }
+      .arab { font-size: 1.08em; }
+      .arabic { font-size: 1.34rem; }
+      table { font-size: 0.88rem; }
+      th, td { padding: 0.58rem; }
+    }
+  </style>
 </head>
 <body>
   <script>
     const DOC_META = {
       pageTitle: "Bab 19 — RUMAH SAHABAT: PEMBINAAN KELUARGA BERIMAN",
       shortTitle: "Bab 19",
-      subtitle: "Pembinaan Keluarga Beriman dalam Kerangka 3 Asbab",
+      subtitle: "Masjid melahirkan iman, rumah mengekalkan iman.",
       headerLine: "📖 Kerangka 3 Asbab — Arkib Baca Sahaja",
-      categoryLine: "Rumah Sahabat, Keluarga Beriman &amp; Suasana Iman | Tauhid Amali",
+      categoryLine: "Rumah Sahabat, Keluarga Beriman &amp; Suasana Iman",
       currentFile: "bab-19.html",
-      prevFile: "bab-18.html",
-      prevLabel: "Bab 18",
-      nextFile: "bab-20.html",
-      nextLabel: "Bab 20",
+      prevFile: "bab-20.html",
+      prevLabel: "Bab 20",
+      currentLabel: "Bab 19",
+      nextFile: "bab-22.html",
+      nextLabel: "Bab 22",
       jumpLinks: [
-        { id: "19-0", label: "19.0" },
         { id: "19-1", label: "19.1" },
         { id: "19-2", label: "19.2" },
         { id: "19-3", label: "19.3" },
         { id: "19-4", label: "19.4" },
         { id: "19-5", label: "19.5" },
-        { id: "19-6", label: "19.6" }
+        { id: "19-6", label: "19.6" },
+        { id: "19-7", label: "19.7" }
       ]
     };
-  </script><div class="topbar no-print">
+  </script>
+  <div class="topbar no-print">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a id="nav-prev" href="bab-18.html">← Bab 18</a>
+        <a id="nav-prev" href="bab-20.html">← Bab 20</a>
         <a id="nav-current" href="bab-19.html" style="font-weight:600;">Bab 19</a>
-        <a id="nav-next" href="bab-20.html">Bab 20 →</a>
+        <a id="nav-next" href="bab-22.html">Bab 22 →</a>
       </nav>
     </div>
-  </div><div class="wrap no-print">
+  </div>
+  <div class="wrap no-print">
     <div class="pdf-toolbar">
       <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
     </div>
-  </div><div id="pdf-shell" class="pdf-shell"><div class="pdf-cover pdf-only">
-  <div class="pdf-cover-inner">
-    <div class="pdf-cover-top">
-      <div class="pdf-cover-brand">3asbab.org</div>
-      <div class="pdf-cover-series">Kerangka 3 Asbab</div>
-      <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 19 — RUMAH SAHABAT: PEMBINAAN KELUARGA BERIMAN</h1>
-      <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Pembinaan Keluarga Beriman dalam Kerangka 3 Asbab</p>
-    </div>
-    <div class="pdf-cover-bottom">
-      <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
-      <div id="pdf-cover-footer-line2">© 3asbab.org</div>
-    </div>
   </div>
-</div><div class="pdf-meta-page pdf-only pdf-break">
-  <div class="pdf-meta-inner">
-    <h2>Maklumat Dokumen</h2>
-    <div class="pdf-meta-list">
-      <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 19 — RUMAH SAHABAT: PEMBINAAN KELUARGA BERIMAN</span></p>
-      <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
-      <p><strong>Laman:</strong> 3asbab.org</p>
-      <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
-      <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+  <div id="pdf-shell" class="pdf-shell">
+    <div class="pdf-cover pdf-only">
+      <div class="pdf-cover-inner">
+        <div class="pdf-cover-top">
+          <div class="pdf-cover-brand">3asbab.org</div>
+          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 19 — RUMAH SAHABAT: PEMBINAAN KELUARGA BERIMAN</h1>
+          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Masjid melahirkan iman, rumah mengekalkan iman.</p>
+        </div>
+        <div class="pdf-cover-bottom">
+          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+        </div>
+      </div>
     </div>
-  </div>
-</div><header class="wrap" id="top">
-  <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
-  <h1 id="page-title">Bab 19 — RUMAH SAHABAT: PEMBINAAN KELUARGA BERIMAN</h1>
-  <div class="meta" id="category-line">Rumah Sahabat, Keluarga Beriman &amp; Suasana Iman | Tauhid Amali</div>
-</header><div class="jump no-print">
-  <div class="wrap">
-    <div class="jump-inner" id="jump-links">
-      <strong>🧭 Lompat ke:</strong>
-      <a href="#19-0">19.0</a>
-      <a href="#19-1">19.1</a>
-      <a href="#19-2">19.2</a>
-      <a href="#19-3">19.3</a>
-      <a href="#19-4">19.4</a>
-      <a href="#19-5">19.5</a>
-      <a href="#19-6">19.6</a>
+    <div class="pdf-meta-page pdf-only pdf-break">
+      <div class="pdf-meta-inner">
+        <h2>Maklumat Dokumen</h2>
+        <div class="pdf-meta-list">
+          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 19 — RUMAH SAHABAT: PEMBINAAN KELUARGA BERIMAN</span></p>
+          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+          <p><strong>Laman:</strong> 3asbab.org</p>
+          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div><main class="wrap">
+    <header class="wrap" id="top">
+      <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+      <h1 id="page-title">Bab 19 — RUMAH SAHABAT: PEMBINAAN KELUARGA BERIMAN</h1>
+      <div class="meta" id="category-line">Rumah Sahabat, Keluarga Beriman &amp; Suasana Iman</div>
+    </header>
+    <div class="jump no-print">
+      <div class="wrap">
+        <div class="jump-inner" id="jump-links">
+          <strong>🧭 Lompat ke:</strong>
+          <a href="#19-1">19.1</a>
+          <a href="#19-2">19.2</a>
+          <a href="#19-3">19.3</a>
+          <a href="#19-4">19.4</a>
+          <a href="#19-5">19.5</a>
+          <a href="#19-6">19.6</a>
+          <a href="#19-7">19.7</a>
+        </div>
+      </div>
+    </div>
+    <main class="wrap">
     <article>
       <!-- Badge pembuka bab -->
       <div class="section">
-        <div class="badge">🟥 BAB 19 — RUMAH SAHABAT: PEMBINAAN KELUARGA BERIMAN</div>
-        <p style="color:var(--muted);"><em>Masjid melahirkan iman; rumah mengekalkan iman.</em></p>
+        <div class="badge">🟥 BAB 19 – RUMAH SAHABAT: PEMBINAAN KELUARGA BERIMAN</div>
+        <p style="color:var(--muted);"><em>Masjid melahirkan iman, rumah mengekalkan iman.</em></p>
       </div>
 
       <!-- ===== SECTION 19.1 ===== -->
       <section class="section" id="19-1">
         <h2>19.1 Rumah = Tapak Iman</h2>
-        <p><strong>Status Tauhidi (Dikunci)</strong></p>
-        <p>Dalam Kerangka 3 Asbab, rumah yang hidup dengan iman bukan sumber iman, tetapi tapak pemindahan, pemeliharaan, dan penetapan iman.</p>
-        <p>Rumah yang dihidupkan dengan iman dan amal jama‘i ialah Asbab Mutlak Terbitan —<br>iaitu hasil langsung daripada Asbab Mutlak Asli yang ditegakkan di masjid, seperti:<br>• dakwah,<br>• mujahadah,<br>• sabar,<br>• solat fardhu berjemaah di masjid,<br>• zikir,<br>• syura,<br>• dan suasana masjid.</p>
-        <p>➡️ Masjid melahirkan iman.<br>➡️ Rumah mengekalkan iman.</p>
-        <p>Rumah tidak pernah menjadi pengganti masjid, dan tidak sah sebagai sumber iman yang berdiri sendiri.</p>
+        <p>Rumah dalam Islam bukan ruang neutral, bukan sekadar tempat rehat, dan bukan semata‑mata institusi sosial. Rumah ialah tapak iman. Ia adalah tempat iman dipelihara selepas keluar dari masjid, distabilkan selepas mujahadah, dan diwariskan kepada generasi seterusnya.</p>
+        <p>Jika masjid ialah kilang iman, maka rumah ialah tapak pengekalan iman. Iman yang lahir di masjid akan hidup dan membesar di rumah, atau luntur dan mati di rumah. Tiada pilihan ketiga.</p>
 
         <hr>
 
-        <h3>Hakikat Rumah dalam Tauhid</h3>
-        <p>Islam tidak memulakan pembinaan iman daripada:<br>• sistem,<br>• sekolah,<br>• institusi,<br>• atau negara.</p>
-        <p>Ia bermula:<br>1. di hati,<br>2. ditegakkan secara ijtima‘i di masjid,<br>3. ditetapkan di rumah supaya iman tidak bocor dalam kehidupan harian.</p>
-        <p>Dalam tertib Tauhidi:<br>• Masjid = tempat iman ditekan dan dilahirkan<br>• Rumah = tempat iman dipelihara dan distabilkan</p>
-        <p>Rumah berfungsi sebagai:<br>• tempat iman dipelihara,<br>• tempat amal distabilkan,<br>• tempat Nur dikekalkan agar tidak dipadam oleh Asbab Fitrah (kesibukan, keletihan) dan Asbab Zulumat (budaya, media, tekanan ekonomi).</p>
-        <p>Tanpa rumah yang hidup dengan iman:<br>• iman yang lahir di masjid bocor di rumah,<br>• amal jamaah hilang kesinambungan,<br>• dan Nur padam dalam ruang peribadi.</p>
+        <h3>Rumah Bukan Tempat Membina Iman dari Sifar</h3>
+        <p>Dalam tertib Rasulullah ﷺ: iman dibina di masjid, iman diuji di medan, iman dipelihara di rumah. Kesalahan besar umat hari ini ialah menjadikan rumah sebagai pengganti masjid, atau mengharapkan iman anak lahir di rumah tanpa suasana masjid. Ini bercanggah dengan sunnah. Rumah tidak menggantikan masjid; rumah menyambung Nur masjid.</p>
 
         <hr>
 
-        <h3>Dalil al-Qur’an: Rumah sebagai Amanah Tauhidi</h3>
-        <div class="arab">﴿ يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ قُوا۟ أَنفُسَكُمْ وَأَهْلِيكُمْ نَارًۭا ﴾</div>
-        <p>“Wahai orang-orang yang beriman, peliharalah diri kamu dan ahli keluarga kamu daripada api neraka.”<br>(at-Taḥrīm 66:6)【1】</p>
-        <p>➡️ Perintah ini ditujukan terus kepada rumah dan keluarga, bukan kepada institusi luar, dan menetapkan rumah sebagai medan amanah iman, bukan ruang neutral. Ini mengunci bahawa iman tidak boleh ditinggalkan di masjid, tetapi mesti dijaga dan dipelihara di rumah.</p>
+        <h3>Dalil al‑Qur’an: Rumah sebagai Lanjutan Iman</h3>
+        <div class="arab">﴿ وَٱجْعَلُوا۟ بُيُوتَكُمْ قِبْلَةًۭ وَأَقِيمُوا۟ ٱلصَّلَوٰةَ ﴾</div>
+        <p>“Dan jadikanlah rumah-rumah kamu sebagai tempat ibadah, dan dirikanlah solat.” (Yūnus 10:87)【1】</p>
+        <p>Ayat ini tidak memerintahkan rumah menggantikan masjid, tetapi menjadikan rumah hidup dengan iman, solat, dan ketaatan. Rumah menjadi lanjutan suasana masjid, bukan pesaingnya.</p>
 
         <hr>
 
-        <h3>Rumah Sahabat: Asbab Mutlak Terbitan, Bukan Budaya</h3>
-        <p>Dalam sirah:<br>• Rasulullah ﷺ melahirkan iman di masjid,<br>• kemudian memindahkan kesan iman itu ke rumah para sahabat.</p>
-        <p>Rumah sahabat bukan rumah beriman kerana:<br>• hiasan Islam,<br>• simbol,<br>• atau identiti budaya.</p>
-        <p>Tetapi kerana:<br>• kesan solat fardhu berjemaah di masjid dibawa pulang ke rumah,<br>• zikir dan doa diteruskan di rumah,<br>• adab jamaah dipelihara dalam keluarga,<br>• perbincangan iman dan akhirat hidup di rumah.</p>
+        <h3>Dalil Hadith: Rumah Tanpa Iman = Kubur</h3>
+        <p>Rasulullah ﷺ bersabda:</p>
+        <blockquote>لَا تَجْعَلُوا بُيُوتَكُمْ مَقَابِرَ – “Janganlah kamu jadikan rumah-rumah kamu seperti kubur.” (Riwayat Muslim)【2】</blockquote>
+        <p>Kubur ialah tempat tiada amal. Maka rumah yang tiada solat, tiada zikir, tiada bacaan al‑Qur’an ialah kubur iman, walaupun dihuni manusia yang hidup.</p>
 
         <hr>
 
-        <h3>Penegasan Tauhidi (Dikunci)</h3>
-        <p>Yang “berlanjutan” di rumah ialah: KESAN solat fardhu berjemaah di masjid, bukan solat fardhu berjemaah itu sendiri. Solat fardhu berjemaah: hak masjid, bukan fungsi rumah.</p>
-        <p>Inilah maksud sebenar Asbab Mutlak Terbitan: Apabila Asbab Mutlak Asli diamalkan secara istiqamah di masjid, Allah mengizinkan rumah menjadi tapak iman yang hidup.</p>
+        <h3>Rumah Menentukan Nasib Iman Selepas Masjid</h3>
+        <p>Seorang Muslim boleh menangis di masjid, boleh lembut di majlis iman, boleh berazam dalam dakwah, tetapi rumah akan menentukan sama ada iman itu dipelihara, atau dipadam secara perlahan‑lahan. Jika di rumah dunia menjadi pusat, hiburan menjadi latar, perbualan kosong menjadi budaya, ketaatan dianggap beban, maka iman yang hidup di masjid akan mati secara senyap.</p>
 
         <hr>
 
-        <h3>Bahaya Memisahkan Rumah daripada Masjid</h3>
-        <p>Kesalahan besar umat ialah:<br>• menghidupkan masjid tetapi membiarkan rumah mati,<br>• membina program iman di luar tetapi rumah tanpa tertib.</p>
-        <p>Akibatnya:<br>• iman menjadi bermusim,<br>• amal menjadi terpisah-pisah,<br>• keluarga menjadi medan Asbab Zulumat yang memadam Nur.</p>
-        <p>Ini bukan kegagalan rumah, tetapi kegagalan memindahkan tertib masjid ke rumah.</p>
+        <h3>Kisah Sahabat: Rumah sebagai Tapak Iman</h3>
+        <p>Rumah para sahabat bukan rumah keselesaan, tetapi rumah iman. Contoh: Rumah Abu Darda’ r.a. Salman al‑Fārisī r.a. menegur Abu Darda’ r.a. tentang keseimbangan iman, ibadah, dan hak keluarga. Teguran itu berlaku di rumah, bukan di masjid semata‑mata. Apabila perkara ini disampaikan kepada Rasulullah ﷺ, Baginda ﷺ bersabda:</p>
+        <blockquote>صَدَقَ سَلْمَانُ – “Salman benar.” (Riwayat al‑Bukhārī)【3】</blockquote>
+        <p>Ini menunjukkan bahawa rumah sahabat ialah medan tarbiyah iman, tempat saling menasihati dalam ketaatan, dan ruang membetulkan amal agar terus hidup dan seimbang.</p>
 
         <hr>
 
-        <p><strong>Prinsip Tauhidi (Dikunci)</strong></p>
+        <h3>Rumah Sahabat Secara Umum</h3>
+        <p>Rumah para sahabat hidup dengan solat malam, basah dengan zikir dan al‑Qur’an, terbuka untuk tetamu dakwah, dan menjadi tempat latihan sabar dan pengorbanan. Rumah sahabat menyokong hijrah, bukan menghalangnya; menguatkan dakwah, bukan menahannya.</p>
+
+        <hr>
+
+        <p><strong>Prinsip Tauhidi 19.1 (Dikunci)</strong></p>
         <ol>
-          <li>Rumah bukan sumber iman — masjid sumbernya; rumah tapaknya.</li>
-          <li>Rumah ialah Asbab Mutlak Terbitan, bukan Asbab Fitrah atau budaya.</li>
-          <li>Iman yang tidak dipelihara di rumah akan bocor, walau kuat di masjid.</li>
-          <li>Keluarga beriman lahir daripada rumah beriman, bukan sekolah atau sistem.</li>
-          <li>Membina umat bermula dengan membina masjid, kemudian menetapkan iman di rumah.</li>
+          <li>Rumah bukan ruang neutral — ia sama ada menyokong iman atau mematikannya.</li>
+          <li>Iman dibina di masjid, tetapi dipelihara di rumah.</li>
+          <li>Rumah tidak menggantikan masjid; rumah menyambung Nur masjid.</li>
+          <li>Rumah yang tidak hidup dengan iman ialah kubur iman.</li>
+          <li>Pembinaan keluarga beriman bermula dengan menjadikan rumah tapak iman, bukan tapak dunia.</li>
         </ol>
 
         <hr>
 
-        <p><strong>Rumusan Tauhidi 19.1 (Dikunci)</strong></p>
+        <p><strong>Nota Kaki Bab 19.1</strong></p>
         <ul>
-          <li>• Masjid melahirkan iman.</li>
-          <li>• Rumah menetapkan iman.</li>
-          <li>• Tanpa rumah sebagai tapak iman, Nur tidak kekal.</li>
-          <li>• Rumah sahabat ialah hasil Asbab Mutlak, bukan hasil perancangan manusia.</li>
+          <li>【1】 al‑Qur’an, Yūnus 10:87</li>
+          <li>【2】 Ṣaḥīḥ Muslim, Kitāb Ṣalāt al‑Musāfirīn</li>
+          <li>【3】 Ṣaḥīḥ al‑Bukhārī, Kitāb aṣ‑Ṣawm / Kitāb al‑Adab</li>
         </ul>
-
-        <hr>
-
-        <h3>TUJUAN MESYUARAT & AMAL IJTIMA’I DI RUMAH (DIKUNCI)</h3>
-        <p>Tujuan utama semua amal ijtima’i di rumah ialah: Menghidupkan amal masjid di dalam rumah — bukan untuk menggantikan masjid, dan bukan untuk memindahkan fungsi masjid ke rumah.</p>
-
-        <h4>Penjelasan Tauhidi (Penting)</h4>
-        <p>1️⃣ Masjid = Sumber Asbab Mutlak Asli – Iman dilahirkan di masjid melalui dakwah, ta‘lim, ibadat berjemaah, mujahadah, sabar dan amal ijtima’i bersanad.<br>
-        2️⃣ Rumah = Asbab Mutlak Terbitan – Rumah berfungsi menyambung kesan amal masjid dan menghalang Nur daripada bocor dalam kehidupan harian.<br>
-        3️⃣ Tanpa Amal Ijtima’i di Rumah – Iman hidup di masjid tetapi mati di rumah — lalu rumah menjadi medan Asbab Zulumat walaupun masjid hidup.</p>
-
-        <h4>Definisi Rasmi (Untuk Buku)</h4>
-        <p>Amal ijtima’i di rumah ialah amal yang diadakan bukan untuk menggantikan masjid, tetapi untuk memastikan amal masjid berterusan, stabil, dan berkesan dalam kehidupan keluarga.</p>
-
-        <hr>
-
-        <h4>Peranan Mesyuarat Harian Rumah (Dikunci)</h4>
-        <p>Mesyuarat rumah diwujudkan bukan untuk mencipta amal baru, tetapi untuk:<br>• menyambung dakwah masjid → rumah,<br>• menyambung ta‘lim masjid → rumah,<br>• menyambung ibadat masjid → disiplin rumah,<br>• menyambung adab jamaah masjid → keluarga.</p>
-        <p>➡️ Mesyuarat rumah ialah jambatan masjid → kehidupan. Tanpa mesyuarat: amal tinggal niat, kesan masjid terputus, iman bocor tanpa disedari.</p>
-
-        <hr>
-
-        <h4>Ayat Kunci (Disyorkan Digunakan Berulang)</h4>
-        <p>“Rumah bukan alternatif kepada masjid. Rumah ialah tempat memastikan kesan masjid tidak hilang.”<br>Atau versi lebih tegas: “Jika masjid hidup tetapi rumah mati, iman umat tidak akan bertahan.”</p>
-
-        <hr>
-
-        <p><strong>Rumusan Tauhidi Akhir (Dikunci)</strong></p>
-        <ol>
-          <li>Tujuan amal ijtima’i di rumah ialah menghidupkan amal masjid di rumah.</li>
-          <li>Rumah tidak menggantikan masjid dan tidak boleh berdiri sendiri.</li>
-          <li>Amal masjid yang tidak disambung di rumah akan bocor.</li>
-          <li>Mesyuarat rumah ialah mekanisme menyambung amal masjid ke keluarga.</li>
-          <li>Inilah tertib Rasulullah ﷺ dalam membina sahabat dan umat.</li>
-        </ol>
-
-        <hr>
-
-        <p><strong>Nota Kaki</strong></p>
-        <ul><li>【1】 al-Qur’an, at-Taḥrīm 66:6</li></ul>
 
         <a class="toplink" href="#top">↑ Atas</a>
       </section>
@@ -683,67 +276,61 @@ padding: 0.58rem;
       <!-- ===== SECTION 19.2 ===== -->
       <section class="section" id="19-2">
         <h2>19.2 Rumah Rasulullah ﷺ</h2>
-        <p><strong>Status Tauhidi</strong><br>Rumah Rasulullah ﷺ bukan sumber iman, tetapi model tertinggi Asbab Mutlak Terbitan — iaitu rumah yang sepenuhnya tunduk kepada Asbab Mutlak Asli yang hidup di Masjid Nabawi.</p>
-        <p>➡️ Masjid Nabawi melahirkan iman.<br>➡️ Rumah Rasulullah ﷺ mengekalkan, menzahirkan, dan memurnikan iman.</p>
-        <p>Rumah Nabi ﷺ tidak pernah berdiri sendiri, dan tidak pernah mengambil alih fungsi masjid.</p>
+        <p>Rumah Rasulullah ﷺ bukan rumah contoh kemewahan, bukan model keselesaan dunia, dan bukan simbol kejayaan material. Rumah Baginda ﷺ ialah model rumah beriman. Ia dibina di sisi masjid, dalam kesederhanaan zahir, tetapi dengan kepadatan Nur, sabar, dan ketaatan. Jika Masjid Nabawi ialah kilang iman umat, maka rumah Rasulullah ﷺ ialah tapak pemeliharaan iman peribadi dan keluarga Baginda ﷺ.</p>
 
         <hr>
 
-        <h3>Kedudukan Rumah Rasulullah ﷺ dalam Tertib Tauhidi</h3>
-        <p>Dalam Kerangka 3 Asbab, tertib Rasulullah ﷺ sangat jelas:<br>1. Wahyu turun → iman hidup di hati<br>2. Iman ditegakkan secara ijtima‘i di masjid<br>3. Kesan iman dibawa pulang ke rumah</p>
-        <p>Rumah Nabi ﷺ berada pada peringkat ketiga, bukan pertama. Ini mengunci prinsip penting: Tiada rumah beriman tanpa masjid yang hidup.</p>
+        <h3>Rumah Paling Sederhana, Iman Paling Tinggi</h3>
+        <p>Rumah Rasulullah ﷺ sempit, berdinding tanah dan pelepah, beratap rendah, hampir kosong daripada harta dunia. Namun rumah itulah tempat turunnya wahyu, tempat doa dan tangisan malam, tempat pendidikan isteri dan sahabat, tempat sabar diuji hingga ke puncaknya. Sayyidatina ‘Ā’ishah r.a. meriwayatkan:</p>
+        <blockquote>مَا شَبِعَ آلُ مُحَمَّدٍ ﷺ مِنْ خُبْزِ شَعِيرٍ يَوْمَيْنِ مُتَتَابِعَيْنِ حَتَّى قُبِضَ – “Keluarga Muhammad ﷺ tidak pernah kenyang dengan roti barli selama dua hari berturut‑turut sehingga Baginda wafat.” (Riwayat al‑Bukhārī & Muslim)【1】</blockquote>
+        <p>Kekurangan dunia tidak menghalang ketaatan. Inilah definisi kehidupan yang baik (ḥayātan ṭayyibah) dalam kerangka Tauhidi.</p>
 
         <hr>
 
-        <h3>Ciri Utama Rumah Rasulullah ﷺ</h3>
-        <p>Rumah Rasulullah ﷺ tidak dibina dengan kemewahan, tetapi dengan kesinambungan amal masjid.</p>
-        <p>Ciri-cirinya:<br>• Kesederhanaan yang tinggi – rumah sempit, peralatan minimum, tiada kelebihan dunia.<br>• Kehidupan ibadah yang konsisten – qiyamullail, zikir, doa, tangisan munajat.<br>• Adab jamaah yang berterusan – disiplin masa, tunduk kepada wahyu, tiada ruang ego peribadi.</p>
-        <p>➡️ Semua ini bukan budaya, tetapi kesan langsung Asbab Mutlak Asli yang hidup di masjid.</p>
+        <h3>Rumah Rasulullah ﷺ Tidak Pernah Kosong daripada Iman</h3>
+        <p>Walaupun rumah Baginda ﷺ kecil dan sempit, ia tidak pernah kosong daripada amal. Sayyidatina ‘Ā’ishah r.a. berkata:</p>
+        <blockquote>“Apabila Rasulullah ﷺ masuk ke rumahnya, Baginda ﷺ membahagikan waktunya antara ibadah, keluarga, dan urusan umat.” (Riwayat Muslim – makna sahih)【2】</blockquote>
+        <p>Di dalam rumah Baginda ﷺ, solat malam ditegakkan, al‑Qur’an dibaca, zikir tidak terputus, akhlak paling mulia dizahirkan. Rumah Rasulullah ﷺ bukan tempat melarikan diri daripada umat, tetapi tempat menguatkan diri untuk kembali berkhidmat kepada umat.</p>
 
         <hr>
 
-        <h3>Rumah Nabi ﷺ Bukan Alternatif Masjid</h3>
-        <p>Rasulullah ﷺ:<br>• tidak menjadikan rumah sebagai pusat solat fardhu berjemaah,<br>• tidak memindahkan syura utama ke rumah,<br>• tidak membina jamaah berasingan dalam rumah.</p>
-        <p>Solat fardhu berjemaah ditunaikan di Masjid Nabawi; rumah hanya menerima kesan disiplin dan Nur daripada solat itu.</p>
-        <p>➡️ Ini menutup salah faham besar umat: rumah Nabi ﷺ bukan “mini masjid yang berdikari”, tetapi rumah yang hidup kerana masjid.</p>
+        <h3>Rumah Rasulullah ﷺ: Medan Sabar & Tarbiyah</h3>
+        <p>Rumah Rasulullah ﷺ juga ialah medan ujian: kesempitan hidup, tekanan emosi, fitnah masyarakat, dan cabaran rumah tangga. Namun semua itu ditangani dengan iman, bukan kemarahan. Allah Ta‘ala berfirman:</p>
+        <div class="arab">﴿ وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ ﴾</div>
+        <p>“Dan sesungguhnya engkau (wahai Muhammad) berada di atas akhlak yang sangat agung.” (al‑Qalam 68:4)【3】</p>
+        <p>Akhlak agung ini paling jelas dizahirkan di rumah, kerana di situlah ego manusia mudah muncul, emosi diuji tanpa saksi, dan akhlak sebenar terbongkar. Rumah Rasulullah ﷺ membuktikan bahawa iman sebenar hidup di ruang paling peribadi, bukan di pentas awam sahaja.</p>
 
         <hr>
 
-        <h3>Hubungan Masjid → Rumah dalam Kehidupan Nabi ﷺ</h3>
-        <p>Apa yang berlaku setiap hari dalam kehidupan Rasulullah ﷺ:<br>• Subuh berjemaah di masjid → disiplin masa hidup di rumah<br>• Ta‘lim di masjid → ilmu diamalkan dalam rumah<br>• Dakwah dan mujahadah di masjid → sabar dan akhlak terpancar di rumah<br>• Syura jamaah di masjid → ketaatan keluarga di rumah</p>
-        <p>➡️ Rumah Nabi ﷺ ialah pantulan hidup masjid, bukan pusat amal yang terpisah.</p>
+        <h3>Rumah yang Terikat dengan Masjid</h3>
+        <p>Rumah Rasulullah ﷺ dibina melekat dengan Masjid Nabawi. Ini bukan kebetulan seni bina, tetapi keputusan Tauhidi. Ia mengajar umat bahawa masjid ialah pusat, rumah ialah lanjutan, dan kedua‑duanya tidak boleh dipisahkan. Rasulullah ﷺ tidak membina rumah jauh daripada masjid, kerana iman tidak boleh dipisahkan daripada suasana iman. Rumah yang terpisah daripada masjid akan perlahan‑lahan terpisah daripada iman.</p>
 
         <hr>
 
-        <h3>Rumah Nabi ﷺ sebagai Model Keluarga Beriman</h3>
-        <p>Daripada rumah Rasulullah ﷺ lahir:<br>• Khadijah r.a. — pendukung dakwah tanpa syarat<br>• ‘Aisyah r.a. — sumber ilmu umat<br>• Fatimah r.a. — model zuhud dan ketaatan<br>• Ahlul Bait — contoh akhlak dan kesabaran</p>
-        <p>Semua ini bukan hasil sistem keluarga, tetapi hasil kesinambungan Asbab Mutlak daripada masjid.</p>
-
-        <hr>
-
-        <h3>Kesalahan Umat Hari Ini (Cermin Sirah)</h3>
-        <p>Ramai hari ini:<br>• mahu bina “rumah Islam” tanpa masjid hidup,<br>• mahu suasana iman di rumah tanpa keluar berjemaah,<br>• mahu keluarga soleh tanpa tertib masjid.</p>
-        <p>➡️ Ini terbalik tertib Rasulullah ﷺ. Rumah Nabi ﷺ lahir selepas masjid hidup, bukan sebaliknya.</p>
+        <h3>Rumah Rasulullah ﷺ sebagai Model Keluarga Beriman</h3>
+        <p>Daripada rumah inilah lahir isteri‑isteri mukminat yang menjadi guru umat, generasi sahabat yang memahami agama secara hidup, dan contoh rumah tangga yang taat tanpa bergantung kepada kesenangan dunia. Rasulullah ﷺ bersabda:</p>
+        <blockquote>خَيْرُكُمْ خَيْرُكُمْ لِأَهْلِهِ، وَأَنَا خَيْرُكُمْ لِأَهْلِي – “Sebaik‑baik kamu ialah yang paling baik terhadap keluarganya, dan aku adalah yang paling baik terhadap keluargaku.” (Riwayat at‑Tirmidhī)【4】</blockquote>
+        <p>Ukuran kebaikan iman bermula di rumah, bukan di mimbar.</p>
 
         <hr>
 
         <p><strong>Prinsip Tauhidi 19.2 (Dikunci)</strong></p>
         <ol>
-          <li>Rumah Rasulullah ﷺ ialah Asbab Mutlak Terbitan, bukan Asbab Mutlak Asli.</li>
-          <li>Rumah Nabi ﷺ hidup kerana masjid, bukan kerana struktur rumah itu sendiri.</li>
-          <li>Solat fardhu berjemaah adalah hak masjid, bukan fungsi rumah.</li>
-          <li>Rumah Nabi ﷺ memantulkan kesan amal masjid, bukan menggantikannya.</li>
-          <li>Keluarga beriman lahir apabila tertib masjid dijaga terlebih dahulu.</li>
+          <li>Rumah Rasulullah ﷺ paling sederhana secara dunia, tetapi paling tinggi nilai iman.</li>
+          <li>Kekurangan dunia tidak menghalang ketaatan jika iman hidup.</li>
+          <li>Rumah ialah medan akhlak sebenar, bukan pentas lakonan.</li>
+          <li>Rumah mesti terikat dengan masjid agar Nur tidak terputus.</li>
+          <li>Keluarga beriman dibina dengan sabar, zikir, solat, dan akhlak — bukan kemewahan.</li>
         </ol>
 
         <hr>
 
-        <p><strong>Rumusan Tauhidi 19.2 (Dikunci)</strong></p>
+        <p><strong>Nota Kaki Bab 19.2</strong></p>
         <ul>
-          <li>• Rasulullah ﷺ membina iman di masjid.</li>
-          <li>• Baginda ﷺ mengekalkan iman di rumah.</li>
-          <li>• Rumah Baginda ﷺ tidak berdiri sendiri, tetapi tunduk sepenuhnya kepada masjid.</li>
-          <li>• Inilah model rumah sahabat yang sebenar: rumah yang hidup kerana Asbab Mutlak.</li>
+          <li>【1】 Ṣaḥīḥ al‑Bukhārī & Ṣaḥīḥ Muslim – Bab Zuhd Rasulullah ﷺ</li>
+          <li>【2】 Ṣaḥīḥ Muslim – Bab Sifat Rumah Tangga Nabi ﷺ</li>
+          <li>【3】 al‑Qur’an, al‑Qalam 68:4</li>
+          <li>【4】 Sunan at‑Tirmidhī, Kitāb al‑Manāqib</li>
         </ul>
 
         <a class="toplink" href="#top">↑ Atas</a>
@@ -752,140 +339,155 @@ padding: 0.58rem;
       <!-- ===== SECTION 19.3 ===== -->
       <section class="section" id="19-3">
         <h2>19.3 Suami–Isteri sebagai Amal Tauhidi</h2>
-        <p><strong>Status Tauhidi (Dikunci)</strong></p>
-        <p>Dalam Kerangka 3 Asbab, hubungan suami–isteri bukan hubungan emosi, peranan sosial, atau kontrak budaya, tetapi satu amal Tauhidi.</p>
-        <p>Suami–isteri ialah:<br>• Asbab Mutlak Terbitan dalam pembinaan iman keluarga,<br>• yang hanya hidup dan berkesan apabila berpaut kepada Asbab Mutlak Asli (wahyu, sunnah, solat, zikir, dakwah, mujahadah, sabar, dan suasana masjid).</p>
-        <p>➡️ Perkahwinan tidak memberi kesan dengan sendirinya. Amal dalam perkahwinan yang menentukan hidup atau matinya iman.</p>
+        <p>Dalam Islam, perkahwinan bukan kontrak emosi, bukan sekadar perkongsian hidup, dan bukan institusi sosial yang dinilai dengan kebahagiaan zahir. Suami–isteri ialah amal Tauhidi. Ia adalah hubungan yang mengikat iman kepada Allah, menguji ketaatan dalam ruang paling dekat, dan menzahirkan Tauhid melalui sabar, khidmat, dan pengorbanan harian. Jika iman dibina di masjid dan dipelihara di rumah, maka hubungan suami–isteri ialah mekanisme utama penjagaan iman di rumah.</p>
 
         <hr>
 
-        <h3>Hakikat Suami–Isteri dalam Tauhid</h3>
-        <p>Al-Qur’an tidak mentakrifkan suami–isteri sebagai pasangan romantik semata-mata, pembahagian peranan ekonomi, atau struktur psikologi. Tetapi sebagai titik pertemuan iman dan amal.</p>
-        <div class="arab">﴿ وَمِنْ ءَايَـٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًۭا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةًۭ وَرَحْمَةًۭ ﴾</div>
-        <p>“Dan antara tanda-tanda kekuasaan-Nya, Dia menciptakan untuk kamu pasangan dari jenis kamu sendiri supaya kamu cenderung dan merasa tenang kepadanya, dan Dia menjadikan antara kamu kasih sayang dan rahmat.”<br>(ar-Rūm 30:21)【1】</p>
-        <p>➡️ Sakinah, mawaddah, dan rahmah bukan punca iman, tetapi KESAN iman yang hidup.</p>
+        <h3>Perkahwinan Bukan Tujuan, Tetapi Wadah Amal</h3>
+        <p>Kesalahan besar manusia ialah menjadikan perkahwinan sebagai destinasi kebahagiaan, pelarian daripada kesunyian, atau alat pemuasan diri. Sedangkan al‑Qur’an meletakkan perkahwinan sebagai wadah ibadah dan ketaatan. Allah Ta‘ala berfirman:</p>
+        <div class="arab">﴿ وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًۭا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةًۭ وَرَحْمَةًۭ ﴾</div>
+        <p>“Dan antara tanda‑tanda (kekuasaan)‑Nya ialah Dia menciptakan untuk kamu pasangan daripada diri kamu sendiri supaya kamu cenderung dan merasa tenang kepadanya, dan Dia menjadikan antara kamu kasih sayang dan rahmat.” (ar‑Rūm 30:21)【1】</p>
+        <p>Sakinah, mawaddah, dan rahmah bukan hasil teknik komunikasi, tetapi natijah ketaatan kepada Allah dalam peranan suami dan isteri.</p>
 
         <hr>
 
-        <h3>Suami–Isteri: Amal Infradi yang Bertemu Amal Ijtima’i</h3>
-        <p>Dalam tertib Tauhidi:<br>• Suami bertanggungjawab memimpin amal: membawa keluarga kepada masjid, menjaga solat fardhu berjemaah di masjid, memimpin disiplin iman di rumah, dan memastikan tertib wahyu mendahului nafsu.<br>• Isteri bertanggungjawab menjaga suasana: memelihara iman dalam ruang harian, menjaga adab, ketenangan, dan zikir, menghidupkan rumah sebagai tapak iman, dan melindungi iman anak-anak daripada Asbab Zulumat.</p>
-        <p>➡️ Apabila amal infradi suami dan amal infradi isteri bertemu, lahirlah amal ijtima’i keluarga.</p>
+        <h3>Suami–Isteri: Dua Hamba dalam Satu Amanah</h3>
+        <p>Dalam tertib Tauhidi, suami bukan penguasa mutlak, isteri bukan pelengkap emosi, kedua‑duanya ialah hamba Allah yang dipertemukan untuk saling menolong dalam iman. Allah Ta‘ala berfirman:</p>
+        <div class="arab">﴿ وَٱلْمُؤْمِنُونَ وَٱلْمُؤْمِنَٰتُ بَعْضُهُمْ أَوْلِيَآءُ بَعْضٍۢ ۚ يَأْمُرُونَ بِٱلْمَعْرُوفِ وَيَنْهَوْنَ عَنِ ٱلْمُنكَرِ ﴾</div>
+        <p>“Orang‑orang beriman lelaki dan perempuan, sebahagian mereka menjadi penolong kepada sebahagian yang lain; mereka menyuruh kepada yang makruf dan mencegah daripada yang mungkar.” (at‑Tawbah 9:71)【2】</p>
+        <p>Hubungan suami–isteri ialah wilayah iman, bukan persaingan ego atau rundingan kuasa.</p>
 
         <hr>
 
-        <h3>Perkahwinan Tanpa Amal = Asbab Fitrah Kosong</h3>
-        <p>Kesalahan besar umat hari ini ialah:<br>• menganggap perkahwinan itu sendiri membina iman,<br>• mengharap pasangan menjadi “penyelamat iman”,<br>• dan menggantikan amal dengan emosi.</p>
-        <p>Hakikat Tauhidi: perkahwinan ialah Asbab Fitrah, ia tidak memberi kesan akhir, dan boleh menjadi Asbab Zulumat jika iman tidak dijaga.</p>
-        <p>➡️ Tanpa amal Tauhidi: kasih sayang menjadi tuntutan, konflik menjadi pusat, dan rumah menjadi medan kegelapan.</p>
+        <h3>Akhlak di Rumah: Neraca Iman Sebenar</h3>
+        <p>Rasulullah ﷺ menilai iman bukan di khalayak, tetapi di dalam rumah. Baginda ﷺ bersabda:</p>
+        <blockquote>خَيْرُكُمْ خَيْرُكُمْ لِأَهْلِهِ، وَأَنَا خَيْرُكُمْ لِأَهْلِي – “Sebaik‑baik kamu ialah yang paling baik terhadap keluarganya, dan aku adalah yang paling baik terhadap keluargaku.” (Riwayat at‑Tirmidhī)【3】</blockquote>
+        <p>Akhlak suami–isteri ialah cermin iman, kerana di situlah manusia letih tanpa penonton, marah tanpa saksi, dan diuji tanpa pujian.</p>
 
         <hr>
 
-        <h3>Suami–Isteri sebagai Benteng Pertama Iman Anak</h3>
-        <p>Anak tidak mewarisi iman melalui nasihat, tetapi melalui suasana yang hidup.</p>
-        <p>Apabila:<br>• suami istiqamah dengan amal masjid,<br>• isteri istiqamah menjaga suasana iman di rumah,<br>maka iman anak tumbuh secara semula jadi, tanpa paksaan, tanpa ceramah panjang.</p>
-        <p>➡️ Suami–isteri ialah “madrasah pertama” anak-anak.</p>
+        <h3>Kisah Sahabat: ‘Alī & Fāṭimah r.a.</h3>
+        <p>Rumah Sayyidinā ‘Alī dan Sayyidatina Fāṭimah r.a. bukan rumah kesenangan. Ia rumah kerja berat, keletihan, dan kesempitan hidup. Namun Rasulullah ﷺ tidak menggantikan mujahadah dengan keselesaan. Apabila Fāṭimah r.a. meminta pembantu kerana keletihan, Rasulullah ﷺ bersabda:</p>
+        <blockquote>“Mahukah aku ajarkan sesuatu yang lebih baik daripada pembantu?” Baginda ﷺ mengajarkan tasbih, tahmid, dan takbir sebelum tidur. (Riwayat al‑Bukhārī & Muslim)【4】</blockquote>
+        <p>Rumah tangga tidak diselesaikan dengan mengurangkan beban dunia semata‑mata, tetapi dengan menambah kekuatan iman.</p>
 
         <hr>
 
-        <p><strong>Prinsip Tauhidi (Dikunci)</strong></p>
+        <h3>Suami–Isteri sebagai Benteng daripada Syaitan</h3>
+        <p>Rasulullah ﷺ bersabda:</p>
+        <blockquote>“Apabila seorang wanita menunaikan solat lima waktunya, berpuasa Ramadannya, menjaga kehormatannya, dan taat kepada suaminya, maka dikatakan kepadanya: masuklah ke syurga dari mana‑mana pintu yang kamu kehendaki.” (Riwayat Aḥmad)【5】</blockquote>
+        <p>Ketaatan suami–isteri bukan penindasan, tetapi susunan Tauhidi untuk menjaga iman daripada runtuh.</p>
+
+        <hr>
+
+        <h3>Perkahwinan sebagai Jalan Sabar & Mujahadah</h3>
+        <p>Tidak ada perkahwinan tanpa ujian: perbezaan tabiat, kelemahan pasangan, tekanan ekonomi, dan keletihan emosi. Namun semua ini bukan kegagalan, tetapi medan mujahadah paling hampir. Allah Ta‘ala berfirman:</p>
+        <div class="arab">﴿ وَتَعَاوَنُوا۟ عَلَى ٱلْبِرِّ وَٱلتَّقْوَىٰ ﴾</div>
+        <p>“Dan hendaklah kamu saling tolong‑menolong atas kebajikan dan ketakwaan.” (al‑Mā’idah 5:2)【6】</p>
+        <p>Suami–isteri tidak dituntut menjadi sempurna, tetapi saling menolong untuk taat.</p>
+
+        <hr>
+
+        <p><strong>Prinsip Tauhidi 19.3 (Dikunci)</strong></p>
         <ol>
-          <li>Suami–isteri ialah amal, bukan status.</li>
-          <li>Perkahwinan ialah Asbab Fitrah; yang menghidupkannya ialah Asbab Mutlak.</li>
-          <li>Sakinah ialah kesan iman, bukan punca iman.</li>
-          <li>Rumah beriman lahir daripada pasangan yang beramal, bukan yang serasi emosi.</li>
-          <li>Kerosakan keluarga berpunca daripada ketiadaan amal Tauhidi, bukan kelemahan personaliti.</li>
+          <li>Suami–isteri ialah amal Tauhidi, bukan kontrak emosi.</li>
+          <li>Perkahwinan ialah wadah sabar, khidmat, dan mujahadah.</li>
+          <li>Akhlak di rumah ialah neraca iman sebenar.</li>
+          <li>Ketaatan dalam peranan menjaga iman daripada runtuh.</li>
+          <li>Rumah tangga yang hidup dengan zikir dan solat lebih kuat daripada rumah yang hidup dengan keselesaan.</li>
         </ol>
 
         <hr>
 
-        <p><strong>Rumusan Tauhidi 19.3 (Dikunci)</strong></p>
+        <p><strong>Nota Kaki Bab 19.3</strong></p>
         <ul>
-          <li>• Suami–isteri bukan sekadar hidup bersama, tetapi beramal bersama.</li>
-          <li>• Amal Tauhidi suami–isteri melahirkan keluarga beriman.</li>
-          <li>• Tanpa amal, perkahwinan menjadi beban fitrah.</li>
-          <li>• Dengan amal, perkahwinan menjadi jalan menuju redha Allah.</li>
+          <li>【1】 al‑Qur’an, ar‑Rūm 30:21</li>
+          <li>【2】 al‑Qur’an, at‑Tawbah 9:71</li>
+          <li>【3】 Sunan at‑Tirmidhī, Kitāb al‑Manāqib</li>
+          <li>【4】 Ṣaḥīḥ al‑Bukhārī & Ṣaḥīḥ Muslim – Ḥadith Tasbih Fāṭimah</li>
+          <li>【5】 Musnad Aḥmad – Bab Faḍā’il an‑Nisā’</li>
+          <li>【6】 al‑Qur’an, al‑Mā’idah 5:2</li>
         </ul>
-
-        <hr>
-
-        <p><strong>Nota Kaki</strong></p>
-        <ul><li>【1】 al-Qur’an, ar-Rūm 30:21</li></ul>
 
         <a class="toplink" href="#top">↑ Atas</a>
       </section>
 
       <!-- ===== SECTION 19.4 ===== -->
       <section class="section" id="19-4">
-        <h2>19.4 Pendidikan Anak sebagai Amal Tauhidi</h2>
-        <p><strong>Status Tauhidi (Dikunci)</strong></p>
-        <p>Dalam Kerangka 3 Asbab, pendidikan anak bukan proses akademik, psikologi, atau pembangunan potensi, tetapi amal Tauhidi yang bertujuan memelihara dan menumbuhkan iman.</p>
-        <p>Pendidikan anak ialah Asbab Mutlak Terbitan — ia hanya hidup dan berkesan apabila berpaut kepada Asbab Mutlak Asli yang ditegakkan di masjid (dakwah, ta‘lim, ibadat berjemaah, mujahadah, sabar, dan suasana iman).</p>
-        <p>➡️ Anak tidak dibina untuk berjaya di dunia, tetapi untuk kekal taat kepada Allah dalam apa jua keadaan.</p>
+        <h2>19.4 Pendidikan Anak</h2>
+        <p>Dalam Islam, pendidikan anak bukan proses akademik, bukan pemindahan maklumat, dan bukan latihan tingkah laku semata‑mata. Pendidikan anak ialah proses memindahkan iman. Ia adalah usaha menghidupkan hati anak dengan Tauhid, membiasakan jiwa anak dengan ketaatan, dan membina rasa cinta, takut, harap dan yakin kepada Allah sebelum anak berhadapan dengan dunia. Jika iman ibu bapa hidup, anak menyerap iman sebelum mereka memahami teori.</p>
 
         <hr>
 
-        <h3>Hakikat Pendidikan Anak dalam Tauhid</h3>
-        <p>Islam tidak mentakrifkan pendidikan sebagai pemindahan maklumat, pembentukan kemahiran, atau pengurusan emosi. Tetapi sebagai proses memelihara fitrah iman.</p>
-        <div class="arab">﴿ وَٱللَّهُ أَخْرَجَكُم مِّنۢ بُطُونِ أُمَّهَـٰتِكُمْ لَا تَعْلَمُونَ شَيْـًۭٔا وَجَعَلَ لَكُمُ ٱلسَّمْعَ وَٱلْأَبْصَـٰرَ وَٱلْأَفْـِٔدَةَ لَعَلَّكُمْ تَشْكُرُونَ ﴾</div>
-        <p>“Dan Allah mengeluarkan kamu dari perut ibu kamu dalam keadaan kamu tidak mengetahui sesuatu pun, dan Dia menjadikan bagi kamu pendengaran, penglihatan dan hati agar kamu bersyukur.”<br>(an-Naḥl 16:78)【1】</p>
-        <p>➡️ Hati (af’idah) disebut sebagai pusat — bukan akal. Pendidikan Tauhidi bermula dengan menjaga hati, bukan memenuhkan kepala.</p>
+        <h3>Anak Tidak Dicipta Kosong, Tetapi Bertauhid</h3>
+        <p>Islam tidak melihat anak sebagai “kertas putih” tanpa arah. Setiap anak lahir membawa fitrah Tauhid. Rasulullah ﷺ bersabda:</p>
+        <blockquote>كُلُّ مَوْلُودٍ يُولَدُ عَلَى الْفِطْرَةِ، فَأَبَوَاهُ يُهَوِّدَانِهِ، أَوْ يُنَصِّرَانِهِ، أَوْ يُمَجِّسَانِهِ – “Setiap anak dilahirkan di atas fitrah, maka kedua ibu bapanyalah yang menjadikannya Yahudi, Nasrani atau Majusi.” (Riwayat al‑Bukhārī & Muslim)【1】</blockquote>
+        <p>Masalah iman anak bukan pada anak, tetapi pada suasana yang dibina oleh ibu bapa.</p>
 
         <hr>
 
-        <h3>Anak Dilahirkan dengan Iman, Bukan Kekosongan</h3>
-        <p>Rasulullah ﷺ bersabda:</p>
-        <blockquote>“Setiap anak dilahirkan di atas fitrah…” (Riwayat al-Bukhārī dan Muslim)【2】</blockquote>
-        <p>➡️ Anak tidak perlu ‘diberi iman’, tetapi dilindungi agar iman itu tidak rosak. Kerosakan iman anak bukan kerana kurang motivasi, kurang sokongan emosi, atau kurang kelas agama, tetapi kerana persekitaran Asbab Zulumat yang memadam Nur.</p>
+        <h3>Pendidikan Bermula dengan Suasana, Bukan Arahan</h3>
+        <p>Kesalahan besar umat hari ini ialah menasihati anak tanpa suasana iman, memerintah tanpa qudwah, dan mengajar hukum tanpa rasa. Sedangkan wahyu mendidik melalui suasana hidup. Allah Ta‘ala berfirman tentang nasihat Luqman kepada anaknya:</p>
+        <div class="arab">﴿ وَإِذْ قَالَ لُقْمَٰنُ لِٱبْنِهِۦ وَهُوَ يَعِظُهُۥ يَٰبُنَىَّ لَا تُشْرِكْ بِٱللَّهِ ﴾</div>
+        <p>“Dan (ingatlah) ketika Luqman berkata kepada anaknya, sedang dia menasihatinya: Wahai anakku, janganlah engkau mempersekutukan Allah.” (Luqmān 31:13)【2】</p>
+        <p>Pendidikan anak bermula dengan Tauhid, bukan dengan adab luaran atau pencapaian dunia.</p>
 
         <hr>
 
-        <h3>Peranan Ibu Bapa: Penjaga Suasana, Bukan Pengganti Hidayah</h3>
-        <p>Dalam Tauhid:<br>• ibu bapa bukan pemberi hidayah,<br>• bukan jurutera iman,<br>• dan bukan penentu hasil.</p>
-        <p>Peranan ibu bapa ialah menjaga suasana iman, menyambung kesan masjid ke rumah, memimpin amal, bukan menekan anak.</p>
-        <div class="arab">﴿ إِنَّكَ لَا تَهْدِى مَنْ أَحْبَبْتَ وَلَـٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
-        <p>“Sesungguhnya engkau tidak dapat memberi hidayah kepada siapa yang engkau cintai, tetapi Allah memberi hidayah kepada siapa yang Dia kehendaki.”<br>(al-Qaṣaṣ 28:56)【3】</p>
-        <p>➡️ Pendidikan anak ialah amanah amal, bukan jaminan hasil.</p>
+        <h3>Peranan Ibu Bapa: Penjaga Suasana Iman</h3>
+        <p>Ibu bapa bukan “guru sepenuh masa”, tetapi penjaga suasana. Anak belajar iman melalui apa yang mereka lihat setiap hari, apa yang dibiasakan di rumah, dan apa yang diulang tanpa dipaksa. Rasulullah ﷺ bersabda:</p>
+        <blockquote>مُرُوا أَوْلَادَكُمْ بِالصَّلَاةِ لِسَبْعٍ – “Perintahkanlah anak‑anak kamu solat ketika mereka berumur tujuh tahun.” (Riwayat Abū Dāwūd)【3】</blockquote>
+        <p>Perintah solat datang selepas suasana solat hidup, bukan sebelum.</p>
 
         <hr>
 
-        <h3>Tertib Pendidikan Tauhidi (Masjid → Rumah → Anak)</h3>
-        <p>Pendidikan anak tidak bermula di bilik belajar, tetapi melalui tertib berikut:<br>1. Masjid – Anak melihat solat berjemaah, mendengar al-Qur’an dibaca, menyaksikan orang dewasa tunduk kepada Allah.<br>2. Rumah – Kesan masjid dibawa pulang, zikir dan doa hidup, adab jamaah dijaga, perbincangan iman menjadi normal.<br>3. Ibu Bapa – Menjadi contoh amal, bukan pendebat teori, bukan penguatkuasa emosi.</p>
-        <p>➡️ Anak belajar melalui suasana, bukan arahan.</p>
+        <h3>Sirah Nabi: Pendidikan Anak Melalui Doa & Suasana</h3>
+        <p>Para Nabi tidak bergantung pada teknik, tetapi pada doa dan amal. Doa Nabi Ibrāhīm ‘alayhissalām:</p>
+        <div class="arab">﴿ رَبِّ ٱجْعَلْنِى مُقِيمَ ٱلصَّلَوٰةِ وَمِن ذُرِّيَّتِى ﴾</div>
+        <p>“Wahai Tuhanku, jadikanlah aku orang yang mendirikan solat dan juga daripada zuriatku.” (Ibrāhīm 14:40)【4】</p>
+        <p>Pendidikan anak bermula dengan ibu bapa yang solat, rumah yang hidup dengan solat, dan doa yang berterusan.</p>
 
         <hr>
 
-        <h3>Kesalahan Besar Pendidikan Moden</h3>
-        <p>Kesalahan besar umat hari ini ialah:<br>• memindahkan pendidikan iman ke sekolah,<br>• menggantikan amal dengan silibus,<br>• dan berharap sistem membina iman.</p>
-        <p>Akibatnya: anak pandai bercakap agama, tetapi lemah tunduk kepada Allah, tahu hukum tetapi berat beramal. Ini bukan kegagalan anak, tetapi kegagalan tertib Tauhidi.</p>
+        <h3>Kisah Sahabat: Anak‑Anak yang Dibina dalam Rumah Iman</h3>
+        <p>Anas bin Mālik r.a. masuk berkhidmat kepada Rasulullah ﷺ ketika masih kecil. Beliau berkata:</p>
+        <blockquote>“Aku berkhidmat kepada Rasulullah ﷺ selama sepuluh tahun. Baginda tidak pernah berkata kepadaku: ‘Mengapa kamu buat begini?’ dan tidak pernah berkata: ‘Kenapa kamu tidak buat begitu?’” (Riwayat al‑Bukhārī & Muslim)【5】</blockquote>
+        <p>Akhlak Nabi ﷺ mendidik lebih kuat daripada arahan. Anak dibina dengan sabar, kasih, dan qudwah, bukan dengan marah dan tekanan.</p>
 
         <hr>
 
-        <p><strong>Prinsip Tauhidi (Dikunci)</strong></p>
+        <h3>Pendidikan Anak Bukan Menjaga Anak, Tetapi Menyiapkan Amanah</h3>
+        <p>Anak bukan milik mutlak ibu bapa. Anak ialah amanah Allah untuk menjadi hamba Allah, pembawa agama, dan penyambung iman umat. Allah Ta‘ala berfirman:</p>
+        <div class="arab">﴿ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ قُوٓا۟ أَنفُسَكُمْ وَأَهْلِيكُمْ نَارًۭا ﴾</div>
+        <p>“Wahai orang‑orang yang beriman, peliharalah diri kamu dan keluarga kamu daripada api neraka.” (at‑Taḥrīm 66:6)【6】</p>
+        <p>Menyelamatkan anak bukan dengan kekayaan, tetapi dengan iman yang hidup.</p>
+
+        <hr>
+
+        <h3>Pendidikan Anak & Hubungannya dengan Masjid</h3>
+        <p>Rumah menyambung iman masjid. Anak yang melihat ibu bapa ke masjid, duduk di saf, mendengar al‑Qur’an, hidup dalam jamaah, akan membawa masjid ke dalam hatinya. Anak yang tidak dibawa ke masjid akan dibesarkan oleh dunia.</p>
+
+        <hr>
+
+        <p><strong>Prinsip Tauhidi 19.4 (Dikunci)</strong></p>
         <ol>
-          <li>Anak lahir dengan fitrah iman; tugas kita ialah memeliharanya.</li>
-          <li>Pendidikan anak ialah Asbab Mutlak Terbitan, bukan Asbab Fitrah.</li>
-          <li>Hidayah milik Allah; ibu bapa menjaga suasana.</li>
-          <li>Anak dibina melalui contoh amal, bukan tekanan emosi.</li>
-          <li>Pendidikan tanpa masjid melahirkan generasi rapuh iman.</li>
+          <li>Anak lahir di atas fitrah Tauhid.</li>
+          <li>Pendidikan anak ialah pemindahan iman, bukan maklumat.</li>
+          <li>Suasana rumah lebih kuat daripada arahan lisan.</li>
+          <li>Ibu bapa ialah penjaga suasana iman, bukan pengawal disiplin semata‑mata.</li>
+          <li>Anak diselamatkan dengan iman, bukan dengan dunia.</li>
         </ol>
 
         <hr>
 
-        <p><strong>Rumusan Tauhidi 19.4 (Dikunci)</strong></p>
+        <p><strong>Nota Kaki Bab 19.4</strong></p>
         <ul>
-          <li>• Pendidikan anak ialah amal Tauhidi.</li>
-          <li>• Anak dibesarkan dengan suasana, bukan silibus.</li>
-          <li>• Masjid melahirkan iman; rumah mengekalkannya; anak menyerapnya.</li>
-          <li>• Tanpa tertib ini, pendidikan menjadi maklumat tanpa Nur.</li>
-        </ul>
-
-        <hr>
-
-        <p><strong>Nota Kaki</strong></p>
-        <ul>
-          <li>【1】 al-Qur’an, an-Naḥl 16:78</li>
-          <li>【2】 Ṣaḥīḥ al-Bukhārī dan Ṣaḥīḥ Muslim — ḥadīth fitrah</li>
-          <li>【3】 al-Qur’an, al-Qaṣaṣ 28:56</li>
+          <li>【1】 Ṣaḥīḥ al‑Bukhārī & Ṣaḥīḥ Muslim – Ḥadith Fitrah</li>
+          <li>【2】 al‑Qur’an, Luqmān 31:13</li>
+          <li>【3】 Sunan Abī Dāwūd, Kitāb aṣ‑Ṣalāh</li>
+          <li>【4】 al‑Qur’an, Ibrāhīm 14:40</li>
+          <li>【5】 Ṣaḥīḥ al‑Bukhārī & Ṣaḥīḥ Muslim – Riwayat Anas bin Mālik</li>
+          <li>【6】 al‑Qur’an, at‑Taḥrīm 66:6</li>
         </ul>
 
         <a class="toplink" href="#top">↑ Atas</a>
@@ -893,75 +495,74 @@ padding: 0.58rem;
 
       <!-- ===== SECTION 19.5 ===== -->
       <section class="section" id="19-5">
-        <h2>19.5 Rumah sebagai Mini Masjid (Asbab Mutlak Terbitan)</h2>
-        <p><strong>Status Tauhidi (Dikunci)</strong></p>
-        <p>Dalam Kerangka 3 Asbab, rumah tidak pernah menjadi masjid, dan tidak boleh menggantikan masjid. Namun, apabila Asbab Mutlak Asli ditegakkan di masjid secara istiqamah, Allah mengizinkan rumah berfungsi sebagai Mini Masjid — iaitu Asbab Mutlak Terbitan yang menyambung, mengekalkan, dan melindungi kesan iman masjid dalam kehidupan harian.</p>
-        <p>➡️ Masjid = sumber iman; Rumah = pemegang kesan iman.</p>
-        <p>Rumah hanya menjadi “mini masjid” kerana taat kepada masjid, bukan kerana struktur atau niat semata-mata.</p>
+        <h2>19.5 Rumah sebagai Mini Masjid</h2>
+        <p>Rumah dalam Islam bukan ruang peribadi mutlak dan bukan wilayah bebas daripada agama. Rumah ialah mini masjid. Ia bukan masjid dari sudut hukum awam, tetapi masjid dari sudut fungsi iman dan suasana. Jika masjid ialah pusat utama pembinaan iman, maka rumah ialah cabang yang membawa Nur masjid ke dalam kehidupan harian. Tanpa rumah sebagai mini masjid, iman akan hidup seketika di masjid dan mati perlahan‑lahan di rumah.</p>
 
         <hr>
 
-        <h3>Definisi Tepat “Rumah sebagai Mini Masjid”</h3>
-        <p>“Rumah sebagai Mini Masjid” bermaksud: Rumah yang dihidupkan dengan kesan amal masjid, sehingga adab, suasana, dan tertib masjid terus hidup walaupun ahli keluarga berada di luar masjid.</p>
-        <p>Ia bukan bermaksud:<br>• solat fardhu berjemaah dipindahkan ke rumah,<br>• fungsi masjid dialihkan ke ruang peribadi,<br>• atau rumah berdiri sebagai pusat ibadat bebas.</p>
-        <p>⚠️ Penegasan Dikunci: Solat fardhu berjemaah tetap hak masjid. Rumah hanya memelihara kesan ketaatan kepada masjid.</p>
+        <h3>Rumah Mini Masjid ≠ Masjid Fizikal</h3>
+        <p>Menjadikan rumah sebagai mini masjid bukan bermaksud menggantikan masjid, tidak perlu ke masjid, atau memindahkan semua amal ke rumah. Sebaliknya: masjid membina iman, rumah mengekalkan iman, dan keduanya mesti bersambung. Rumah yang terputus daripada masjid akan menjadi tapak dunia, walaupun penghuninya rajin beribadah secara individu.</p>
 
         <hr>
 
-        <h3>Dalil al-Qur’an: Rumah yang Dihidupkan dengan Ibadah</h3>
-        <div class="arab">﴿ وَٱذْكُرِ ٱسْمَ رَبِّكَ فِى بَيْتِكَ ﴾</div>
-        <p>“Dan sebutlah nama Tuhanmu di rumahmu.” (al-Aḥzāb 33:34 – makna umum perintah zikir dalam rumah Rasulullah ﷺ)【1】</p>
-        <div class="arab">﴿ وَٱجْعَلُوا۟ بُيُوتَكُمْ قِبْلَةًۭ ﴾</div>
-        <p>“Dan jadikanlah rumah-rumah kamu sebagai tempat ibadah.” (Yūnus 10:87)【2】</p>
-        <p>➡️ Ayat ini tidak menafikan masjid, tetapi menetapkan bahawa rumah perlu hidup dengan ibadah, terutamanya ketika iman terancam atau ditekan.</p>
+        <h3>Dalil al‑Qur’an: Rumah Dihidupkan dengan Amal Masjid</h3>
+        <div class="arab">﴿ فِى بُيُوتٍ أَذِنَ ٱللَّهُ أَن تُرْفَعَ وَيُذْكَرَ فِيهَا ٱسْمُهُۥ ﴾</div>
+        <p>“Di rumah‑rumah yang Allah izinkan untuk dimuliakan dan disebut nama‑Nya di dalamnya.” (an‑Nūr 24:36)【1】</p>
+        <p>Ayat ini bukan hanya merujuk masjid awam, tetapi semua rumah yang hidup dengan zikir, solat dan ketaatan. Rumah menjadi mulia bukan kerana binaannya, tetapi kerana nama Allah disebut di dalamnya.</p>
 
         <hr>
 
-        <h3>Bagaimana Rumah Sahabat Menjadi Mini Masjid</h3>
-        <p>Rumah para sahabat menjadi mini masjid bukan kerana binaan, tetapi kerana tertib hidup mereka berpaut kepada masjid. Ciri-cirinya:<br>• Zikir dan doa diteruskan di rumah<br>• Taklim dan perbincangan iman menjadi kebiasaan<br>• Adab jamaah (mendengar, taat, rendah hati) dijaga<br>• Waktu disusun mengelilingi solat berjemaah di masjid<br>• Anak-anak dibesarkan dalam suasana taat, bukan arahan</p>
-        <p>➡️ Rumah sahabat menyimpan bau masjid — bukan bau dunia.</p>
+        <h3>Dalil Hadith: Jangan Jadikan Rumah Seperti Kubur</h3>
+        <p>Rasulullah ﷺ bersabda:</p>
+        <blockquote>اجْعَلُوا مِنْ صَلَاتِكُمْ فِي بُيُوتِكُمْ، وَلَا تَتَّخِذُوهَا قُبُورًا – “Jadikanlah sebahagian daripada solat kamu di rumah‑rumah kamu, dan janganlah kamu menjadikannya seperti kubur.” (Riwayat al‑Bukhārī & Muslim)【2】</blockquote>
+        <p>Kubur ialah tempat tiada amal, tiada solat, tiada zikir. Maka rumah tanpa amal ibadah ialah kubur iman, walaupun penuh aktiviti dunia.</p>
 
         <hr>
 
-        <h3>Peranan Amal Infradi & Ijtima’i di Rumah</h3>
-        <p><strong>Amal Infradi:</strong> Zikir harian, tilawah al-Qur’an, solat sunat, istighfar dan doa.</p>
-        <p><strong>Amal Ijtima’i:</strong> Mesyuarat harian rumah (ringkas, beradab), taklim wa ta‘allum keluarga, muzakarah iman & amal soleh, azam peribadi setiap ahli keluarga untuk taat (Muhajirin & Ansar).</p>
-        <p>➡️ Semua amal ini menyambung kesan masjid, bukan mencipta sistem baru.</p>
-
-        <hr>
-
-        <h3>Kesalahan Besar: Rumah Berfungsi Tanpa Masjid</h3>
-        <p>Kesalahan besar umat ialah:<br>• menjadikan rumah “Islamik” tetapi jarang ke masjid,<br>• menghidupkan aktiviti rumah tanpa amal masjid,<br>• memisahkan keluarga daripada jamaah.</p>
-        <p>Akibatnya: rumah menjadi ruang selesa, iman menjadi lembut tanpa arah, anak membesar tanpa roh jamaah.</p>
-        <p>➡️ Mini masjid tanpa masjid sebenar ialah ilusi.</p>
-
-        <hr>
-
-        <p><strong>Prinsip Tauhidi (Dikunci)</strong></p>
+        <h3>Empat Amal Masjid yang Dibawa ke Rumah</h3>
+        <p>Rumah menjadi mini masjid apabila empat amal utama masjid hidup di dalamnya:</p>
         <ol>
-          <li>Rumah tidak pernah menggantikan masjid.</li>
-          <li>Rumah menjadi mini masjid hanya kerana taat kepada masjid.</li>
-          <li>Mini masjid ialah Asbab Mutlak Terbitan, bukan Asbab Mutlak Asli.</li>
-          <li>Amal rumah mesti menyambung, bukan memutuskan amal masjid.</li>
-          <li>Tanpa masjid, rumah kehilangan Nur walau penuh aktiviti.</li>
+          <li><strong>Solat & Ibadah</strong> – solat berjemaah keluarga, solat sunat, zikir dan doa.</li>
+          <li><strong>Taklim wa Ta‘allum</strong> – bacaan al‑Qur’an, hadith, peringatan iman ringkas.</li>
+          <li><strong>Dakwah & Nasihat Iman</strong> – saling mengingatkan, mengajak kepada ketaatan, menegur dengan hikmah.</li>
+          <li><strong>Khidmat & Akhlak</strong> – sabar, saling membantu, mendahulukan orang lain.</li>
+        </ol>
+        <p>Tanpa empat amal ini, rumah hanyalah bangunan dunia, bukan mini masjid.</p>
+
+        <hr>
+
+        <h3>Sirah Rasulullah ﷺ: Rumah yang Paling Hidup dengan Iman</h3>
+        <p>Rumah Rasulullah ﷺ sangat kecil, tetapi paling hidup dengan iman. Di rumah Baginda ﷺ solat malam ditegakkan, al‑Qur’an dibaca, zikir berpanjangan, dan kasih sayang dilazimkan. Sayyidatina ‘Ā’ishah r.a. berkata bahawa Rasulullah ﷺ berzikir kepada Allah dalam setiap keadaan. (Riwayat Muslim)【3】</p>
+        <p>Rumah Nabi ﷺ bukan tempat rehat daripada agama, tetapi tempat agama diteruskan tanpa henti.</p>
+
+        <hr>
+
+        <h3>Rumah Sahabat: Mini Masjid yang Menyokong Dakwah</h3>
+        <p>Rumah para sahabat terbuka untuk tetamu iman, menjadi tempat bermesyuarat kecil, dan menjadi sokongan penuh kepada dakwah. Rumah tidak menghalang keluar fi sabilillah, tetapi menyediakan ketenangan, sokongan, dan doa. Isteri dan keluarga sahabat tidak menarik mereka ke dunia, tetapi menolak mereka kembali ke jalan Allah.</p>
+
+        <hr>
+
+        <h3>Rumah Mini Masjid & Pendidikan Anak</h3>
+        <p>Anak yang melihat solat di rumah, mendengar al‑Qur’an setiap hari, hidup dalam suasana zikir, akan membesar dengan iman sebagai “normal”. Tanpa perlu ceramah panjang, rumah itu sendiri menjadi pendidik iman.</p>
+
+        <hr>
+
+        <p><strong>Prinsip Tauhidi 19.5 (Dikunci)</strong></p>
+        <ol>
+          <li>Rumah ialah mini masjid, bukan ruang neutral.</li>
+          <li>Rumah tidak menggantikan masjid, tetapi menyambung Nur masjid.</li>
+          <li>Rumah tanpa solat dan zikir ialah kubur iman.</li>
+          <li>Empat amal masjid mesti hidup di rumah.</li>
+          <li>Rumah yang hidup dengan iman melahirkan keluarga yang sanggup berkorban untuk agama.</li>
         </ol>
 
         <hr>
 
-        <p><strong>Rumusan Tauhidi 19.5 (Dikunci)</strong></p>
+        <p><strong>Nota Kaki Bab 19.5</strong></p>
         <ul>
-          <li>• Masjid melahirkan iman.</li>
-          <li>• Rumah memegang iman.</li>
-          <li>• Rumah sebagai mini masjid ialah kesan ketaatan kepada masjid.</li>
-          <li>• Inilah tertib Rasulullah ﷺ dalam membina keluarga dan umat.</li>
-        </ul>
-
-        <hr>
-
-        <p><strong>Nota Kaki</strong></p>
-        <ul>
-          <li>【1】 al-Qur’an, al-Aḥzāb 33:34</li>
-          <li>【2】 al-Qur’an, Yūnus 10:87</li>
+          <li>【1】 al‑Qur’an, an‑Nūr 24:36</li>
+          <li>【2】 Ṣaḥīḥ al‑Bukhārī & Ṣaḥīḥ Muslim, Kitāb aṣ‑Ṣalāh</li>
+          <li>【3】 Ṣaḥīḥ Muslim, Kitāb adh‑Dhikr</li>
         </ul>
 
         <a class="toplink" href="#top">↑ Atas</a>
@@ -969,59 +570,62 @@ padding: 0.58rem;
 
       <!-- ===== SECTION 19.6 ===== -->
       <section class="section" id="19-6">
-        <h2>19.6 Dakwah → Mujahadah → Sabar</h2>
-        <p>Dalam Kerangka 3 Asbab, pembentukan iman tidak berlaku secara teori dan tidak bermula dari dalam hati tanpa amal. Ia berlaku melalui rantaian amal yang ditetapkan wahyu: Dakwah → Mujahadah → Sabar.</p>
-        <p>Rantaian ini ialah sunnatullah pembaikan hati. Memotong mana-mana satu daripadanya akan:<br>• mematikan kesan dakwah,<br>• menggugurkan mujahadah,<br>• dan menukar sabar kepada emosi pasif.</p>
-        <div class="arab">﴿ أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا أَن يَقُولُوٓا ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ ﴾</div>
-        <p>“Apakah manusia menyangka mereka akan dibiarkan berkata: ‘Kami beriman’ sedangkan mereka tidak diuji?”<br>(al-‘Ankabūt 29:2)【1】</p>
-        <p>➡️ Iman mesti diuji. Ujian iman berlaku melalui amal keluar, tekanan mujahadah, dan kesabaran dalam jamaah.</p>
+        <h2>19.6 Wanita Pemegang Kunci Hidayat</h2>
+        <p>Dalam pembinaan keluarga beriman, wanita bukan pelengkap kepada lelaki, dan bukan watak sampingan dalam sejarah iman. Wanita ialah pemegang kunci hidayat. Bukan kerana jawatan, tetapi kerana pengaruh suasana. Allah menjadikan wanita penjaga rumah, pembentuk suasana, dan pemelihara kesinambungan iman dalam keturunan. Apabila suasana rumah hidup dengan iman, iman mudah tumbuh. Apabila suasana rosak, iman mati walaupun ilmu banyak.</p>
 
         <hr>
 
-        <h3>19.6.1 Dalil “Bekas Rosak Tidak Menampung Amal”</h3>
-        <p>Prinsip Tauhidi yang dikunci: Hati yang rosak tidak mampu menampung amal, walau sebanyak mana amal ditambah.</p>
-        <div class="arab">﴿ أَفَمَن شَرَحَ ٱللَّهُ صَدْرَهُۥ لِلْإِسْلَـٰمِ فَهُوَ عَلَىٰ نُورٍۢ مِّن رَّبِّهِۦ ۚ فَوَيْلٌۭ لِّلْقَـٰسِيَةِ قُلُوبُهُم ﴾</div>
-        <p>“Maka apakah orang yang Allah lapangkan dadanya untuk Islam lalu dia berada di atas Nur daripada Tuhannya (sama dengan yang lain)? Maka celakalah orang yang keras hatinya.”<br>(az-Zumar 39:22)【2】</p>
-        <p>➡️ Masalah bukan kurang amal, tetapi bekas iman (hati) yang keras. Dakwah membuka bekas. Mujahadah membaikinya. Sabar menstabilkannya. Tanpa mujahadah, amal hanya bertambah di luar — tidak masuk ke hati.</p>
+        <h3>Dalil Prinsip: Pengaruh Terbesar di Ruang Paling Lama</h3>
+        <p>Rasulullah ﷺ bersabda:</p>
+        <blockquote>الدُّنْيَا مَتَاعٌ، وَخَيْرُ مَتَاعِهَا الْمَرْأَةُ الصَّالِحَةُ – “Dunia itu adalah perhiasan, dan sebaik‑baik perhiasannya ialah wanita yang solehah.” (Riwayat Muslim)【1】</blockquote>
+        <p>Wanita solehah disebut sebagai khayr al‑matā‘ kerana dia menjaga iman di tempat iman paling lama diuji: rumah.</p>
 
         <hr>
 
-        <h3>19.6.2 Hadith Segumpal Daging</h3>
-        <blockquote>“Ketahuilah, sesungguhnya dalam jasad ada segumpal daging. Jika ia baik, maka baiklah seluruh jasad. Jika ia rosak, maka rosaklah seluruh jasad. Ketahuilah, itulah hati.”<br>(Riwayat al-Bukhārī & Muslim)【3】</blockquote>
-        <p>➡️ Hati bukan diperbaiki dengan maklumat, tetapi dengan tekanan amal yang mematahkan nafsu. Dakwah tanpa mujahadah menambah maklumat, tidak membaiki hati. Mujahadah berlaku apabila keluar dari zon selesa, tunduk kepada arahan jamaah, dan sabar dalam tekanan sebenar.</p>
+        <h3>19.6.1 Isteri Nabi Nuh: Wanita yang Memutuskan Suasana Iman</h3>
+        <p>Allah berfirman:</p>
+        <div class="arab">﴿ ضَرَبَ ٱللَّهُ مَثَلًۭا لِّلَّذِينَ كَفَرُوا۟ ٱمْرَأَتَ نُوحٍۢ وَٱمْرَأَتَ لُوطٍۢ ﴾</div>
+        <p>“Allah membuat perumpamaan bagi orang‑orang kafir: isteri Nuh dan isteri Lut.” (at‑Taḥrīm 66:10)【2】</p>
+        <p>Isteri Nabi Nuh hidup bersama seorang Nabi, berada dalam rumah wahyu, tetapi merosakkan suasana iman. Dia tidak menyokong dakwah, tidak menjaga suasana rumah, dan menjadi saluran penentangan dari dalam. Ini membuktikan bahawa iman tidak diwarisi melalui status, dan wanita boleh menjadi pintu hidayat atau pintu kehancuran, walaupun bersama Nabi.</p>
 
         <hr>
 
-        <h3>19.6.3 Hadith Iman Lusuh</h3>
-        <blockquote>“Sesungguhnya iman itu boleh menjadi lusuh di dalam hati seseorang sebagaimana lusuhnya pakaian. Maka mintalah kepada Allah agar Dia memperbaharui iman dalam hati kamu.”<br>(Riwayat al-Ḥākim)【4】</blockquote>
-        <p>➡️ Iman boleh lusuh walaupun seseorang berilmu, beramal rutin, atau berada dalam suasana agama. Pembaharuan iman bukan dengan rehat, tetapi dengan dakwah yang berterusan, mujahadah yang menekan nafsu, dan sabar yang dipelihara dalam jamaah. Tanpa keluar, iman tidak diuji, lalu lusuh tanpa disedari.</p>
+        <h3>19.6.2 Sarah & Hajar: Wanita yang Menguatkan Rantaian Iman</h3>
+        <p><strong>Sarah</strong> (isteri Nabi Ibrahim a.s.) bersabar dengan ujian tidak memiliki anak, taat dalam hijrah, dan tidak menghalang jalan Allah walaupun diuji emosi. <strong>Hajar</strong> (isteri Nabi Ibrahim a.s.) ditinggalkan di lembah gersang tanpa bantahan, tidak menyalahkan suami, dan menyerahkan urusan sepenuhnya kepada Allah. Dialog Tauhidi Hajar: “Adakah ini perintah Allah?” Apabila dijawab “Ya”, Hajar berkata: “Jika begitu, Allah tidak akan mensia‑siakan kami.” Dari wanita inilah lahir Zamzam, ibadah sa‘ie, dan kesinambungan keturunan Tauhidi hingga Nabi Muhammad ﷺ.</p>
 
         <hr>
 
-        <h3>19.6.4 Hadith Hati Berkarat</h3>
-        <blockquote>“Sesungguhnya hati itu berkarat sebagaimana besi berkarat.” Para sahabat bertanya: “Apakah penggilapnya wahai Rasulullah?” Baginda bersabda: “Mengingati mati dan membaca al-Qur’an.”<br>(Riwayat al-Bayhaqī)【5】</blockquote>
-        <p>➡️ Karat hati tidak hilang dengan teori, tetapi dengan amal yang memaksa hati tunduk. Dalam Kerangka 3 Asbab: Dakwah → menggesek karat, Mujahadah → memecahkan lapisan karat, Sabar → mengekalkan kebersihan hati. Tanpa mujahadah, zikir menjadi lisan, Qur’an menjadi bacaan, hati kekal keras.</p>
+        <h3>19.6.3 Khadijah al‑Kubrā r.a.: Wanita Peneguh Dakwah</h3>
+        <p>Khadijah r.a. bukan sekadar isteri Rasulullah ﷺ, tetapi tiang pertama dakwah Islam. Peranannya menenangkan Rasulullah ﷺ selepas wahyu pertama, mengesahkan kenabian Baginda ﷺ, dan mengorbankan harta tanpa syarat. Matan dialog terkenal (makna):</p>
+        <blockquote>“Demi Allah, Allah tidak akan menghinakan engkau. Engkau menyambung silaturahim, membantu orang susah, memuliakan tetamu, dan menolong kebenaran.” (Riwayat al‑Bukhārī)【3】</blockquote>
+        <p>Tanpa Khadijah r.a., dakwah tidak terhenti, tetapi beban Rasulullah ﷺ jauh lebih berat. Inilah wanita yang menjaga suasana rumah, menenangkan Nabi, dan menjadikan rumah pusat kekuatan iman.</p>
 
         <hr>
 
-        <p><strong>Rumusan Tauhidi 19.6 (Dikunci)</strong></p>
+        <h3>19.6.4 Wanita sebagai Penjaga Suasana & Keturunan</h3>
+        <p>Wanita paling lama bersama anak, paling berpengaruh dalam emosi rumah, dan paling menentukan “normal” dalam keluarga. Jika wanita cinta dunia, rumah jadi tapak dunia; jika wanita cinta Allah, rumah jadi mini masjid. Rasulullah ﷺ bersabda:</p>
+        <blockquote>كُلُّكُمْ رَاعٍ وَكُلُّكُمْ مَسْؤُولٌ عَنْ رَعِيَّتِهِ – “Setiap kamu adalah penjaga, dan setiap kamu akan ditanya tentang yang dijaganya.” (Riwayat al‑Bukhārī & Muslim)【4】</blockquote>
+        <p>Wanita ialah penjaga suasana, dan suasana menentukan iman.</p>
+
+        <hr>
+
+        <p><strong>Prinsip Tauhidi 19.6 (Dikunci)</strong></p>
         <ol>
-          <li>Iman tidak hidup tanpa ujian.</li>
-          <li>Ujian iman berlaku melalui Dakwah → Mujahadah → Sabar.</li>
-          <li>Hati ialah bekas iman; bekas rosak tidak menampung amal.</li>
-          <li>Maklumat tidak membaiki hati — mujahadah membaikinya.</li>
-          <li>Tanpa keluar, mujahadah tidak berlaku; tanpa mujahadah, sabar palsu; tanpa sabar, Nur tidak turun.</li>
+          <li>Wanita ialah pemegang kunci hidayat dalam rumah.</li>
+          <li>Wanita membentuk suasana yang menghidupkan atau mematikan iman.</li>
+          <li>Isteri boleh menjadi sokongan dakwah atau halangan dakwah.</li>
+          <li>Sejarah iman bergerak melalui rahim dan suasana yang dijaga wanita.</li>
+          <li>Pembinaan umat bermula dengan wanita yang menjaga iman, bukan status.</li>
         </ol>
 
         <hr>
 
         <p><strong>Nota Kaki Bab 19.6</strong></p>
         <ul>
-          <li>【1】 al-‘Ankabūt 29:2</li>
-          <li>【2】 az-Zumar 39:22</li>
-          <li>【3】 Hadith segumpal daging — Riwayat al-Bukhārī & Muslim</li>
-          <li>【4】 Hadith iman lusuh — Riwayat al-Ḥākim</li>
-          <li>【5】 Hadith hati berkarat — Riwayat al-Bayhaqī</li>
+          <li>【1】 Ṣaḥīḥ Muslim, Kitāb ar‑Raḍā‘</li>
+          <li>【2】 al‑Qur’an, at‑Taḥrīm 66:10</li>
+          <li>【3】 Ṣaḥīḥ al‑Bukhārī, Bad’ al‑Waḥy</li>
+          <li>【4】 Ṣaḥīḥ al‑Bukhārī & Ṣaḥīḥ Muslim, Kitāb al‑Aḥkām</li>
         </ul>
 
         <a class="toplink" href="#top">↑ Atas</a>
@@ -1030,56 +634,52 @@ padding: 0.58rem;
       <!-- ===== SECTION 19.7 ===== -->
       <section class="section" id="19-7">
         <h2>19.7 Kesimpulan</h2>
-        <p><em>(Rumah Sahabat dalam Rantaian Tauhidi Kerangka 3 Asbab)</em></p>
-        <p>Bab ini menutup satu hakikat asas yang sering diabaikan dalam pembinaan umat: Umat tidak runtuh kerana masjid tiada, tetapi kerana iman tidak bertahan selepas keluar dari masjid.</p>
-        <p>Dalam Kerangka 3 Asbab, pembinaan keluarga beriman bukan fasa sampingan, tetapi lanjutan wajib selepas masjid.</p>
+        <p>Bab ini menutup satu hakikat Tauhidi yang sering diabaikan oleh umat: umat tidak dibina di medan awam terlebih dahulu, tetapi dibina di dalam rumah. Masjid melahirkan iman. Medan menguji iman. Rumah menentukan sama ada iman itu hidup atau mati.</p>
+
+        <p>Rumah dalam Islam bukan ruang neutral. Ia sama ada menjadi tapak pengekalan iman, atau menjadi kubur iman yang senyap. Tiada pilihan ketiga.</p>
+
+        <p>Rasulullah ﷺ tidak membina tamadun bermula dari sistem, tetapi bermula dengan masjid sebagai pusat iman, rumah sebagai tapak pemeliharaan iman, keluarga sebagai unit amal, dan wanita sebagai penjaga suasana. Apabila rumah rosak, masjid tidak mampu menampung kerosakan itu sendirian.</p>
+
+        <p>Bab ini menegaskan bahawa:</p>
+        <ul>
+          <li>Suami–isteri ialah amal Tauhidi, bukan kontrak sosial.</li>
+          <li>Anak bukan projek akademik, tetapi amanah iman.</li>
+          <li>Wanita ialah pemegang kunci hidayat, kerana dialah penjaga suasana rumah.</li>
+          <li>Rumah ialah mini masjid, tempat iman disambung setiap hari.</li>
+        </ul>
+        <p>Tanpa rumah beriman, tidak akan lahir jamaah yang kukuh, dan tanpa jamaah yang kukuh, tidak akan lahir sistem Tauhidi.</p>
 
         <hr>
 
-        <h3>Rantaian Tauhidi yang Lengkap (Dikunci)</h3>
-        <p>Pembinaan iman berjalan mengikut tertib berikut:<br>1. Iman dihidupkan di masjid melalui Asbab Mutlak Asli: dakwah, ta‘lim, ibadat berjemaah, mujahadah, sabar, syura, dan suasana masjid.<br>2. Iman dipindahkan ke rumah melalui Asbab Mutlak Terbitan: suasana rumah, adab keluarga, dan amal ijtima’i rumah.<br>3. Iman dikekalkan dalam keturunan melalui peranan wanita sebagai penjaga suasana iman.</p>
-        <p>Jika salah satu terputus: iman bocor, amal menjadi bermusim, dan umat tidak bertahan walaupun masjid hidup.</p>
-
-        <hr>
-
-        <h3>Rumah Bukan Alternatif, Tetapi Amanah</h3>
-        <p>Bab ini mengunci bahawa:<br>• rumah tidak menggantikan masjid,<br>• rumah tidak berdiri sendiri sebagai sumber iman,<br>• rumah tidak mencipta tertib baharu.</p>
-        <p>Sebaliknya: Rumah ialah amanah untuk memastikan kesan masjid tidak hilang. Apabila rumah gagal: masjid melahirkan individu, tetapi tidak melahirkan generasi.</p>
-
-        <hr>
-
-        <h3>Kegagalan Umat: Salah Letak Medan</h3>
-        <p>Kesalahan besar umat hari ini ialah:<br>• memusatkan iman di luar rumah,<br>• menyerahkan pembinaan anak kepada sistem,<br>• dan membiarkan rumah menjadi medan Asbab Zulumat.</p>
-        <p>Akibatnya: lelaki keluar berdakwah, wanita tidak menjaga suasana iman, anak membesar tanpa roh jamaah.</p>
-        <p>➡️ Ini bukan kegagalan dakwah, tetapi kegagalan memanjangkan dakwah ke dalam rumah.</p>
-
-        <hr>
-
-        <p><strong>Prinsip Penutup Bab 19 (Dikunci)</strong></p>
+        <p><strong>Rumusan Tauhidi Bab 19 (Dikunci)</strong></p>
         <ol>
-          <li>Masjid melahirkan iman, rumah menetapkan iman.</li>
-          <li>Rumah sahabat ialah Asbab Mutlak Terbitan, bukan budaya atau simbol.</li>
-          <li>Tanpa rumah beriman, masjid tidak melahirkan umat yang kekal.</li>
-          <li>Wanita ialah penjaga suasana iman dan penentu arah keturunan.</li>
-          <li>Membina umat mesti bermula dari masjid dan disempurnakan di rumah.</li>
+          <li>Rumah ialah tapak pengekalan iman selepas masjid.</li>
+          <li>Iman dibina di masjid, tetapi hidup atau mati di rumah.</li>
+          <li>Rumah Rasulullah ﷺ ialah model kesederhanaan dan kekuatan iman.</li>
+          <li>Suami–isteri ialah unit amal, bukan sekadar pasangan emosi.</li>
+          <li>Pendidikan anak ialah pewarisan iman, bukan pemindahan maklumat.</li>
+          <li>Wanita ialah penjaga suasana yang menentukan arah keturunan.</li>
+          <li>Rumah yang hidup dengan iman akan melahirkan umat yang hidup.</li>
         </ol>
 
         <hr>
 
-        <p><strong>Kesimpulan Muktamad Bab 19</strong></p>
-        <p>Umat tidak dibina dengan sistem yang besar, slogan agama, atau struktur luar. Umat dibina apabila masjid hidup, rumah menyambung kehidupan masjid, dan keturunan membesar dalam suasana iman.</p>
-        <p>Masjid tanpa rumah beriman melahirkan generasi sementara. Masjid dengan rumah beriman melahirkan umat yang kekal.</p>
-        <p>Dengan ini, Bab 19 menutup rantaian: Masjid → Rumah → Keturunan, dan membuka jalan kepada bab seterusnya dalam pembinaan masyarakat Tauhidi.</p>
+        <p><strong>Penutup Tauhidi</strong></p>
+        <p>Jika iman lemah → semak rumah.<br>Jika anak liar → semak suasana rumah.<br>Jika dakwah terhalang → semak sokongan rumah.<br>Jika umat rapuh → semak keluarga.</p>
+        <p>Masjid melahirkan manusia beriman. Rumah menentukan sama ada mereka kekal beriman. Dan apabila rumah kembali hidup dengan iman, maka umat akan bangkit tanpa perlu slogan, kerana iman yang hidup tidak perlukan promosi — ia akan bergerak sendiri dengan izin Allah.</p>
+        <p>Bab seterusnya akan membawa kita melihat bagaimana jamaah dan masyarakat Tauhidi terbina daripada rumah‑rumah beriman, dan bagaimana rantaian Masjid → Rumah → Jamaah → Sistem → Umat menjadi sunnah tetap kebangkitan Islam sepanjang zaman.</p>
 
         <a class="toplink" href="#top">↑ Atas</a>
       </section>
 
     </article>
   
-</main>
-<footer class="wrap">
-  <div>© 3asbab.org — Kerangka 3 Asbab</div>
-</footer></div><script>
+    </main>
+    <footer class="wrap">
+      <div>© 3asbab.org — Kerangka 3 Asbab</div>
+    </footer>
+  </div>
+  <script>
     function downloadPDF() {
       const btn = document.querySelector('.btn-pdf');
       if (!btn) return;
@@ -1117,5 +717,6 @@ padding: 0.58rem;
 }
 
 
-</script></body>
+</script>
+</body>
 </html>
