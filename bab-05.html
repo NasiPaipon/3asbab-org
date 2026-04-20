@@ -1,527 +1,660 @@
+
 <!DOCTYPE html>
 <html lang="ms">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN | 3asbab.org</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <title>BAB 5 — ITTIBA’ RASULULLAH ﷺ | 3asbab.org</title>
+
   <style>
-    *, *::before, *::after {
-      margin: 0; padding: 0; box-sizing: border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     :root {
-      --ink: #1c1917;
-      --ink-soft: #44403c;
-      --ink-muted: #78716c;
-      --ink-faint: #a8a29e;
-      --page: #faf9f7;
-      --page-warm: #f5f0e8;
-      --cream: #ede8df;
-      --rule: #d6cfc4;
-      --rule-light: #e8e3db;
-      --emerald: #065f46;
-      --emerald-mid: #059669;
-      --emerald-light: #d1fae5;
-      --emerald-pale: #ecfdf5;
-      --gold: #92400e;
-      --gold-light: #fef3c7;
-      --shadow: 0 2px 8px rgba(28,25,23,0.06), 0 1px 3px rgba(28,25,23,0.04);
-      --shadow-md: 0 4px 20px rgba(28,25,23,0.08), 0 2px 8px rgba(28,25,23,0.05);
-      --max: 780px;
+      --max-width: 920px;
+      --border-light: #e2e8f0;
+      --bg-soft: #fafcff;
+      --muted: #4a5568;
+      --accent: #0f7b4a;
+      --accent-light: #e6f4ed;
+      --text-dark: #1a202c;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+
+      --pdf-accent: #0f7b4a;
+      --pdf-accent-soft: #e6f4ed;
+      --pdf-border: #d9e2ec;
+      --pdf-text: #1f2937;
+      --pdf-muted: #5b6573;
+      --pdf-paper: #fffefb;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
 
     body {
-      font-family: 'Source Serif 4', 'Lora', Georgia, serif;
-      background: var(--page);
-      color: var(--ink);
-      line-height: 1.8;
-      font-size: 17px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+      background: #ffffff;
+      color: var(--text-dark);
+      line-height: 1.75;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-wrap: break-word;
     }
 
-    /* ── TOPBAR ── */
+    .wrap {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding-left: clamp(1.15rem, 4vw, 1.8rem);
+      padding-right: clamp(1.15rem, 4vw, 1.8rem);
+    }
+
     .topbar {
-      position: sticky; top: 0; z-index: 40;
-      background: rgba(250,249,247,0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--rule);
-    }
-    .topbar nav {
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      padding: 0.6rem 2rem;
-      display: flex; align-items: center; gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    .brand {
-      font-family: 'Lora', serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--emerald);
-      letter-spacing: 0.02em;
-      margin-right: 0.75rem;
-    }
-    .topbar a {
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.82rem;
-      color: var(--ink-soft);
-      text-decoration: none;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      transition: background 0.15s, color 0.15s;
-    }
-    .topbar a:hover { background: var(--cream); color: var(--emerald); }
-    .topbar a.active { font-weight: 600; color: var(--emerald); }
-
-    /* ── PDF TOOLBAR ── */
-    .pdf-toolbar {
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      padding: 0.8rem 2rem 0;
-      display: flex; justify-content: flex-end;
-    }
-    .btn-pdf {
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.82rem; font-weight: 600;
-      color: var(--emerald);
-      background: white;
-      border: 1px solid var(--emerald);
-      padding: 0.4rem 1rem;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: 0.15s ease;
-      box-shadow: var(--shadow);
-    }
-    .btn-pdf:hover { background: var(--emerald-pale); }
-    .btn-pdf:active { transform: translateY(1px); }
-
-    /* ── JUMP NAV ── */
-    .jump {
-      position: sticky; top: 44px; z-index: 30;
-      background: rgba(250,249,247,0.97);
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255,255,255,0.96);
       backdrop-filter: blur(6px);
-      border-bottom: 1px solid var(--rule-light);
     }
+
+    .topbar nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.8rem 0;
+      min-height: 56px;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      font-size: 0.92rem;
+      color: var(--text-dark);
+    }
+
+    .topbar a:hover {
+      color: var(--accent);
+    }
+
+    .brand {
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    header {
+      padding: 1.5rem 0 0.65rem;
+    }
+
+    h1 {
+      font-size: clamp(1.85rem, 4vw, 2.45rem);
+      line-height: 1.25;
+      margin: 0.3rem 0 0.55rem;
+      letter-spacing: -0.01em;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+      margin: 0.45rem 0;
+    }
+
+    .jump {
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 56px;
+      z-index: 20;
+      background: rgba(255,255,255,0.98);
+    }
+
     .jump-inner {
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      padding: 0.5rem 2rem;
-      display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem;
-      font-size: 0.78rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.75rem 0;
+      align-items: center;
+      font-size: 0.82rem;
     }
-    .jump-label {
-      font-weight: 600; color: var(--ink-muted);
-      font-size: 0.75rem; letter-spacing: 0.05em;
-      text-transform: uppercase; margin-right: 0.3rem;
-    }
+
     .jump a {
-      padding: 0.18rem 0.65rem;
-      border-radius: 40px;
-      background: white;
-      border: 1px solid var(--rule);
+      padding: 0.24rem 0.72rem;
+      border-radius: 999px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-light);
       text-decoration: none;
       font-weight: 500;
-      color: var(--ink-soft);
-      transition: 0.1s ease;
-      font-family: 'Source Serif 4', serif;
+      transition: 0.12s ease;
+      color: var(--text-dark);
     }
-    .jump a:hover { border-color: var(--emerald-mid); color: var(--emerald); background: var(--emerald-pale); }
 
-    /* ── HEADER ── */
-    .page-header {
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      padding: 2.5rem 2rem 1.5rem;
-      border-bottom: 1px solid var(--rule-light);
+    .jump a:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+      color: var(--accent);
     }
-    .chapter-eyebrow {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--emerald);
+
+    main {
+      padding: 1.2rem 0 3rem;
+    }
+
+    .badge-chapter {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.8rem;
+      background: #fef3c7;
+      color: #b45309;
+      padding: 0.22rem 0.82rem;
+      border-radius: 999px;
       margin-bottom: 0.8rem;
     }
-    .chapter-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 18px; height: 2px;
-      background: var(--emerald);
-      border-radius: 1px;
-    }
-    h1.page-title {
-      font-family: 'Lora', serif;
-      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--ink);
-      letter-spacing: -0.02em;
-      margin-bottom: 0.6rem;
-    }
-    .page-subtitle {
-      font-size: 0.88rem;
-      color: var(--ink-muted);
-      font-style: italic;
-    }
 
-    /* ── MAIN CONTENT ── */
-    main {
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      padding: 0 2rem 4rem;
-    }
-
-    /* ── SECTIONS ── */
-    section.section {
-      padding: 2.5rem 0;
-      border-bottom: 1px solid var(--rule-light);
-    }
-    section.section:last-child { border-bottom: none; }
-
-    /* ── HEADINGS ── */
     h2 {
-      font-family: 'Lora', serif;
-      font-size: 1.35rem;
+      font-size: 1.6rem;
+      line-height: 1.35;
+      margin: 1.8rem 0 0.75rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.9rem;
       font-weight: 700;
-      color: var(--ink);
-      margin: 0 0 0.3rem;
-      line-height: 1.3;
       letter-spacing: -0.01em;
     }
-    .h2-sub {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--emerald);
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
+
     h3 {
-      font-family: 'Lora', serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--emerald);
-      margin: 2rem 0 0.6rem;
-      letter-spacing: -0.01em;
-    }
-    h4 {
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.95rem;
+      font-size: 1.24rem;
+      line-height: 1.45;
+      margin: 1.2rem 0 0.52rem;
       font-weight: 700;
-      color: var(--ink);
-      margin: 1.5rem 0 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-size: 0.82rem;
+      color: #0b3b2a;
     }
 
-    p { margin-bottom: 0.85rem; }
-    p:last-child { margin-bottom: 0; }
-
-    em { color: var(--ink-soft); }
-
-    strong { font-weight: 700; color: var(--ink); }
-
-    /* ── DIVIDER ── */
-    hr {
-      border: none;
-      border-top: 1px solid var(--rule-light);
-      margin: 1.8rem 0;
-    }
-    .hr-ornament {
-      text-align: center;
-      margin: 1.8rem 0;
-      color: var(--ink-faint);
-      font-size: 0.8rem;
-      letter-spacing: 0.3em;
-    }
-    .hr-ornament::before { content: '— ✦ —'; }
-
-    /* ── ARABIC ── */
-    .arab, .arabic {
-      font-family: 'Amiri', 'Traditional Arabic', serif;
-      font-size: 1.65rem;
-      line-height: 2;
-      direction: rtl;
-      text-align: right;
-      color: var(--emerald);
-      background: linear-gradient(135deg, var(--emerald-pale), white);
-      border-right: 3px solid var(--emerald);
-      padding: 0.7rem 1rem 0.7rem 1.5rem;
-      border-radius: 0 0.5rem 0.5rem 0;
-      margin: 1rem 0 0.4rem;
-    }
-    .translation {
-      font-size: 0.88rem;
-      font-style: italic;
-      color: var(--ink-soft);
-      margin: 0 0 1rem;
-      padding-left: 1rem;
-      border-left: 2px solid var(--rule);
+    h4 {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin: 1rem 0 0.45rem;
+      font-weight: 700;
+      color: #134e3a;
     }
 
-    /* ── BLOCKQUOTE ── */
-    blockquote {
-      background: var(--page-warm);
-      border-left: 3px solid var(--gold);
-      border-radius: 0 0.6rem 0.6rem 0;
-      padding: 0.8rem 1.2rem;
-      margin: 1rem 0;
-      font-size: 0.92rem;
-      color: var(--ink-soft);
-    }
-    blockquote .arabic-hadith {
-      font-family: 'Amiri', serif;
-      font-size: 1.2rem;
-      direction: rtl;
-      text-align: right;
-      display: block;
-      color: var(--gold);
-      margin-bottom: 0.3rem;
+    p {
+      margin: 0.72rem 0;
     }
 
-    /* ── LISTS ── */
-    ul, ol {
-      padding-left: 1.4rem;
-      margin-bottom: 0.85rem;
+    ul,
+    ol {
+      margin: 0.55rem 0 0.95rem 1.4rem;
+      padding-left: 0.2rem;
     }
+
     li {
-      margin-bottom: 0.3rem;
-      line-height: 1.7;
-    }
-    li > ul, li > ol { margin-top: 0.3rem; margin-bottom: 0; }
-    ol > li { padding-left: 0.2rem; }
-
-    /* ── HIGHLIGHT BOX ── */
-    .insight-box {
-      background: var(--page-warm);
-      border: 1px solid var(--rule);
-      border-radius: 0.5rem;
-      padding: 0.9rem 1.1rem;
-      margin: 1rem 0;
-      font-size: 0.9rem;
+      margin: 0.34rem 0;
+      line-height: 1.75;
     }
 
-    /* ── BADGE ── */
-    .badge {
-      display: inline-flex; align-items: center;
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.75rem; font-weight: 700;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      background: var(--gold-light);
-      color: var(--gold);
-      border: 1px solid #fde68a;
-      padding: 0.25rem 0.85rem;
-      border-radius: 999px;
-      margin-bottom: 1.2rem;
+    strong {
+      font-weight: 700;
     }
 
-    /* ── SECTION OPENER ── */
-    .section-opener {
-      padding-bottom: 1.2rem;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid var(--rule-light);
-    }
-    .section-opener p {
-      font-size: 0.92rem;
-      color: var(--ink-soft);
+    em {
       font-style: italic;
     }
 
-    /* ── TABLE ── */
-    .table-wrap { overflow-x: auto; margin: 1rem 0; }
+    .section-card {
+      background: var(--bg-soft);
+      border-radius: 1.2rem;
+      padding: 1.25rem 1.4rem;
+      margin: 1.2rem 0;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .arab,
+    .arabic {
+      font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif;
+      color: #1e293b;
+    }
+
+    .arab {
+      direction: rtl;
+      unicode-bidi: embed;
+      font-size: 1.12em;
+      line-height: 1.9;
+      white-space: normal;
+    }
+
+    .arabic {
+      font-size: 1.62rem;
+      line-height: 1.9;
+      direction: rtl;
+      text-align: right;
+      margin: 0.85rem 0;
+    }
+
+    .translation {
+      background: #f8fafc;
+      padding: 0.7rem 1rem;
+      border-radius: 0.8rem;
+      margin: 0.55rem 0 1rem;
+      border-left: 3px solid var(--accent);
+      font-size: 0.96rem;
+      line-height: 1.75;
+    }
+
+    blockquote {
+      background: var(--accent-light);
+      border-radius: 0.8rem;
+      padding: 0.9rem 1.15rem;
+      margin: 1rem 0;
+      font-style: normal;
+      line-height: 1.8;
+    }
+
+    .insight-box {
+      background: #f1f5f9;
+      padding: 0.9rem 1.15rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+      line-height: 1.75;
+    }
+
+    .insight-box h3 {
+      margin-top: 0;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.88rem;
+      margin: 1rem 0;
+      font-size: 0.94rem;
+      background: #fff;
     }
-    th {
-      background: var(--page-warm);
-      border: 1px solid var(--rule);
-      padding: 0.55rem 0.85rem;
-      font-weight: 700;
-      text-align: left;
-      font-family: 'Source Serif 4', serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-    }
+
+    th,
     td {
-      border: 1px solid var(--rule);
-      padding: 0.55rem 0.85rem;
+      border: 1px solid var(--border-light);
+      padding: 0.68rem;
+      text-align: left;
       vertical-align: top;
-    }
-    tr:nth-child(even) td { background: var(--page-warm); }
-
-    /* ── FOOTNOTES ── */
-    .footnotes {
-      margin-top: 1.5rem;
-      padding-top: 1rem;
-      border-top: 1px dashed var(--rule);
-    }
-    .footnotes h3 {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--ink-muted);
-      font-family: 'Source Serif 4', serif;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-    }
-    .footnotes ul {
-      font-size: 0.8rem;
-      color: var(--ink-muted);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    /* ── BACK TO TOP ── */
-    .toplink {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      font-size: 0.78rem;
-      color: var(--ink-faint);
-      text-decoration: none;
-      margin-top: 1.5rem;
-      transition: color 0.15s;
-      font-family: 'Source Serif 4', serif;
+    th {
+      background: #f1f5f9;
+      font-weight: 700;
     }
-    .toplink:hover { color: var(--emerald); }
 
-    /* ── CALLOUT ── */
-    .callout {
-      background: var(--emerald-pale);
-      border: 1px solid #a7f3d0;
-      border-radius: 0.6rem;
-      padding: 1rem 1.2rem;
-      margin: 1.2rem 0;
-      font-size: 0.92rem;
-    }
-    .callout p:last-child { margin-bottom: 0; }
-
-    /* ── RUMUSAN BOX ── */
-    .rumusan {
-      background: var(--page-warm);
-      border: 1px solid var(--rule);
-      border-top: 3px solid var(--emerald);
-      border-radius: 0.6rem;
-      padding: 1.2rem 1.4rem;
+    hr {
       margin: 1.5rem 0;
+      border: 0;
+      height: 1px;
+      background: var(--border-light);
     }
-    .rumusan ol, .rumusan ul { margin-bottom: 0; }
 
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--rule);
-      padding: 1.5rem 2rem;
-      max-width: calc(var(--max) + 4rem);
-      margin: 0 auto;
-      color: var(--ink-muted);
+    .footnote {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
+    }
+
+    .footnotes {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    .footnotes li {
+      margin: 0.38rem 0;
+      line-height: 1.65;
+    }
+
+    .footnotes a,
+    .footnote a,
+    sup a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .toplink {
       font-size: 0.78rem;
-      font-family: 'Source Serif 4', serif;
+      margin-top: 0.85rem;
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
     }
 
-    /* ── PRINT / PDF ── */
-    .no-print { display: block; }
-    .pdf-only { display: none; }
-    .pdf-cover { display: none; }
-    .pdf-meta-page { display: none; }
+    .toplink:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 1.5rem 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 1rem;
+    }
+
+    .pdf-toolbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 14px 0 8px;
+    }
+
+    .btn-pdf {
+      appearance: none;
+      border: 1px solid var(--pdf-border);
+      background: #fff;
+      color: var(--pdf-text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    }
+
+    .btn-pdf:hover {
+      border-color: var(--pdf-accent);
+      background: var(--pdf-accent-soft);
+    }
+
+    .btn-pdf:active {
+      transform: translateY(1px);
+    }
+
+    .no-print {
+      display: block;
+    }
+
+    .pdf-only {
+      display: none;
+    }
+
+    .pdf-exporting .pdf-only {
+      display: block !important;
+    }
+
+    .pdf-exporting .no-print,
+    .pdf-exporting .pdf-toolbar,
+    .pdf-exporting .topbar,
+    .pdf-exporting .jump,
+    .pdf-exporting .toplink {
+      display: none !important;
+    }
+
+    .pdf-shell {
+      background: #fff;
+    }
+
+    .pdf-cover {
+      display: none;
+    }
 
     .pdf-cover-inner {
       min-height: 260mm;
       padding: 28mm 18mm 24mm;
-      display: flex; flex-direction: column;
+      display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      background: #fffefb; color: #1f2937;
+      background: var(--pdf-paper);
+      color: var(--pdf-text);
     }
-    .pdf-cover-top { border-top: 4px solid #065f46; padding-top: 12mm; }
-    .pdf-cover-brand { font-size: 0.9rem; letter-spacing: .1em; text-transform: uppercase; color: #6b7280; margin-bottom: 10mm; }
-    .pdf-cover-series { font-size: 1rem; font-weight: 700; margin: 0 0 5mm; }
-    .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
-    .pdf-cover-subtitle { font-size: 1rem; color: #6b7280; margin: 0; }
-    .pdf-cover-bottom { border-top: 1px solid #d1d5db; padding-top: 8mm; font-size: 0.9rem; color: #6b7280; }
-    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; }
-    .pdf-meta-inner h2 { margin: 0 0 10mm; font-size: 1.3rem; }
-    .pdf-meta-list p { margin: 0 0 5mm; }
-    .pdf-break { break-before: page; page-break-before: always; }
+
+    .pdf-cover-top {
+      border-top: 4px solid var(--pdf-accent);
+      padding-top: 12mm;
+    }
+
+    .pdf-cover-brand {
+      font-size: 0.95rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--pdf-muted);
+      margin-bottom: 10mm;
+    }
+
+    .pdf-cover-series {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0 6mm;
+    }
+
+    .pdf-cover-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 5mm;
+      font-weight: 800;
+    }
+
+    .pdf-cover-subtitle {
+      font-size: 1rem;
+      color: var(--pdf-muted);
+      margin: 0;
+    }
+
+    .pdf-cover-bottom {
+      border-top: 1px solid var(--pdf-border);
+      padding-top: 8mm;
+      font-size: 0.95rem;
+      color: var(--pdf-muted);
+    }
+
+    .pdf-meta-page {
+      display: none;
+    }
+
+    .pdf-meta-inner {
+      min-height: 240mm;
+      padding: 20mm 16mm;
+      background: #fff;
+      color: var(--pdf-text);
+    }
+
+    .pdf-meta-inner h2 {
+      border: 0;
+      padding: 0;
+      margin: 0 0 10mm;
+      font-size: 1.4rem;
+    }
+
+    .pdf-meta-list p {
+      margin: 0 0 6mm;
+    }
+
+    .pdf-break {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .pdf-avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
 
     @media print {
-      .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
-      .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
-      section.section { break-inside: avoid; }
-      h2, h3, h4 { break-after: avoid; }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .no-print,
+      .pdf-toolbar,
+      .topbar,
+      .jump,
+      .toplink {
+        display: none !important;
+      }
+
+      .pdf-only,
+      .pdf-cover,
+      .pdf-meta-page {
+        display: block !important;
+      }
+
+      .section-card,
+      blockquote,
+      .insight-box {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      h2,
+      h3,
+      h4 {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
     }
 
     @media (max-width: 640px) {
-      body { font-size: 16px; }
-      main, .page-header { padding-left: 1.2rem; padding-right: 1.2rem; }
-      .topbar nav, .jump-inner, .pdf-toolbar, footer { padding-left: 1.2rem; padding-right: 1.2rem; }
-      .arab, .arabic { font-size: 1.4rem; }
-      h2 { font-size: 1.2rem; }
+      .wrap {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+      }
+
+      .topbar nav {
+        gap: 0.75rem;
+        min-height: 52px;
+      }
+
+      .jump {
+        top: 52px;
+      }
+
+      .section-card {
+        padding: 1rem 1rem;
+        border-radius: 1rem;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      h2 {
+        font-size: 1.34rem;
+        padding-left: 0.75rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      .arab {
+        font-size: 1.08em;
+      }
+
+      .arabic {
+        font-size: 1.34rem;
+      }
+
+      table {
+        font-size: 0.88rem;
+      }
+
+      th,
+      td {
+        padding: 0.58rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- TOPBAR -->
+  <script>
+    const DOC_META = {
+      pageTitle: "BAB 5 — ITTIBA’ RASULULLAH ﷺ",
+      shortTitle: "BAB 5",
+      subtitle: "Tertib Transformasi Tauhidi",
+      headerLine: "📖 Kerangka 3 Asbab — Arkib Baca Sahaja",
+      categoryLine: "Ittiba’, Sunnah &amp; Transformasi Tauhidi | Tauhid Amali",
+      currentFile: "bab-5.html",
+      prevFile: "bab-12.html",
+      prevLabel: "Bab 12",
+      nextFile: "",
+      nextLabel: "",
+      jumpLinks: [
+        { id: "5-11", label: "5.11" }
+      ]
+    };
+  </script>
+
   <div class="topbar no-print">
-    <nav>
-      <span class="brand">3asbab.org</span>
-      <a href="index.html">🏠 Home</a>
-      <a href="bab-04.html">← Bab 4</a>
-      <a href="bab-05.html" class="active">Bab 5</a>
-      <a href="bab-06.html">Bab 6 →</a>
-    </nav>
-  </div>
-
-  <!-- PDF BUTTON -->
-  <div class="pdf-toolbar no-print">
-    <button class="btn-pdf" onclick="downloadPDF()">📄 Muat Turun PDF</button>
-  </div>
-
-  <!-- PDF COVER (print only) -->
-  <div class="pdf-cover pdf-only">
-    <div class="pdf-cover-inner">
-      <div class="pdf-cover-top">
-        <div class="pdf-cover-brand">3asbab.org</div>
-        <div class="pdf-cover-series">Kerangka 3 Asbab</div>
-        <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN</h1>
-        <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Memahami perbezaan Asbab Mutlak Asli dan Asbab Mutlak Terbitan</p>
-      </div>
-      <div class="pdf-cover-bottom">
-        <div>Edisi PDF untuk bacaan berfokus dan cetakan</div>
-        <div>© 3asbab.org</div>
-      </div>
+    <div class="wrap">
+      <nav>
+        <span class="brand">3asbab.org</span>
+        <a href="index.html">🏠 Home</a>
+        <a id="nav-prev" href="index.html">← Home</a>
+        <a id="nav-current" href="bab-0.html" style="font-weight:600;">Bab 0</a>
+        <a id="nav-next" href="bab-1.html">Bab 1 →</a>
+      </nav>
     </div>
   </div>
 
-  <!-- PDF META (print only) -->
-  <div class="pdf-meta-page pdf-only pdf-break">
-    <div class="pdf-meta-inner">
-      <h2>Maklumat Dokumen</h2>
-      <div class="pdf-meta-list">
-        <p><strong>Judul:</strong> Bab 5 — DUA LAPISAN ASBAB MUTLAK: ASLI DAN TERBITAN</p>
-        <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
-        <p><strong>Laman:</strong> 3asbab.org</p>
-        <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
-      </div>
+  <div class="wrap no-print">
+    <div class="pdf-toolbar">
+      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
     </div>
   </div>
 
-  <!-- PAGE HEADER -->
-  <div class="page-header" id="top">
-    <div class="chapter-eyebrow">Kerangka 3 Asbab — Arkib Baca Sahaja</div>
-    <h1 class="page-title">Bab 5 — Dua Lapisan Asbab Mutlak:<br>Asli dan Terbitan</h1>
-    <p class="page-subtitle">Asbab Mutlak Asli dan Terbitan &nbsp;·&nbsp; Tauhidi &amp; Pembinaan Iman</p>
-  </div>
+  <div id="pdf-shell" class="pdf-shell">
 
-  <!-- JUMP NAV -->
-  <div class="jump no-print">
-    <div class="jump-inner">
-      <span class="jump-label">Lompat ke</span>
+    <div class="pdf-cover pdf-only">
+      <div class="pdf-cover-inner">
+        <div class="pdf-cover-top">
+          <div class="pdf-cover-brand">3asbab.org</div>
+          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+          <h1 class="pdf-cover-title" id="pdf-cover-title">BAB 5 — ITTIBA’ RASULULLAH ﷺ</h1>
+          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Tertib Transformasi Tauhidi</p>
+        </div>
+        <div class="pdf-cover-bottom">
+          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pdf-meta-page pdf-only pdf-break">
+      <div class="pdf-meta-inner">
+        <h2>Maklumat Dokumen</h2>
+        <div class="pdf-meta-list">
+          <p><strong>Judul:</strong> <span id="pdf-meta-title">BAB 5 — ITTIBA’ RASULULLAH ﷺ</span></p>
+          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+          <p><strong>Laman:</strong> 3asbab.org</p>
+          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+        </div>
+      </div>
+    </div>
+
+    <header class="wrap" id="top">
+      <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+      <h1 id="page-title">BAB 5 — ITTIBA’ RASULULLAH ﷺ</h1>
+      <div class="meta" id="category-line">Ittiba’, Sunnah &amp; Transformasi Tauhidi | Tauhid Amali</div>
+    </header>
+
+<div class="jump no-print">
+  <div class="wrap">
+    <div class="jump-inner" id="jump-links">
+      <strong>🧭 Lompat ke:</strong>
+      <a href="#5-0">5.0</a>
       <a href="#5-1">5.1</a>
       <a href="#5-2">5.2</a>
       <a href="#5-3">5.3</a>
@@ -532,1166 +665,1890 @@
       <a href="#5-8">5.8</a>
       <a href="#5-9">5.9</a>
       <a href="#5-10">5.10</a>
+      <a href="#5-11">5.11</a>
     </div>
   </div>
+</div>
 
-  <main>
-    <article>
+    <main class="wrap">
 
-<!-- ═══════════════════════════════════════════
-     SECTION 5.1
-════════════════════════════════════════════ -->
+ 
+
+
+<div class="badge">🟥 BAB 5 – ITTIBA’ RASULULLAH ﷺ: TERTIB TRANSFORMASI TAUHIDI</div>
+
+<!-- 5.0 -->
+<section class="section" id="5-0">
+  <h2>5.0 Mukadimah Bab</h2>
+  <ul>
+    <li>Tauhid tidak hidup dengan Nafy–Isbat sahaja</li>
+    <li>Ittiba’ = tertib pelaksanaan Tauhid dalam kehidupan</li>
+  </ul>
+
+  <p><strong>Tanpa Ittiba’:</strong></p>
+  <ul>
+    <li>Tauhid menjadi teori</li>
+    <li>amal menjadi mekanikal</li>
+    <li>kehidupan kembali tunduk kepada sebab</li>
+  </ul>
+
+  <p>Bab ini mengunci satu hakikat asas dalam Tauhid Islam:</p>
+
+  <p>Tauhid tidak hidup dengan Nafy dan Isbat sahaja.<br>
+  Tauhid hanya menjadi hidup, berfungsi, dan berkesan apabila ia dilaksanakan melalui Ittiba’ Rasulullah ﷺ.</p>
+
+  <p>Jika:<br>
+  Nafy ialah penafian kuasa Asbab Fitrah dan Asbab Zulumat,<br>
+  Isbat ialah penetapan bahawa hanya Allah memberi kesan melalui janji-Nya,</p>
+
+  <p>maka Ittiba’ ialah:</p>
+
+  <p><strong>tertib pelaksanaan Tauhid dalam seluruh kehidupan manusia.</strong></p>
+
+  <p>Ittiba’ bukan tambahan kepada Tauhid,<br>
+  tetapi penyempurnaan Tauhid dalam bentuk amal.</p>
+
+  <p><strong>Tanpa Ittiba’:</strong><br>
+  Tauhid kekal sebagai maklumat dalam akal,<br>
+  Nafy menjadi penafian yang tidak mengubah pergantungan hati,<br>
+  Isbat menjadi dakwaan tanpa kesan,<br>
+  amal menjadi mekanikal tanpa ruh,<br>
+  dan kehidupan kembali ditentukan oleh sebab, sistem, dan logik manusia.</p>
+
+  <p><strong>Dengan Ittiba’:</strong><br>
+  Tauhid berpindah daripada lafaz kepada kehidupan,<br>
+  amal menjadi ketaatan,<br>
+  hati terikat kepada Allah,<br>
+  dan janji Allah mula berfungsi dalam realiti.</p>
+
+  <p>Bab ini akan membuktikan bahawa:</p>
+
+  <p><strong>Ittiba’ Rasulullah ﷺ ialah tertib hidup Tauhidi<br>
+  yang menghubungkan iman dengan amal,<br>
+  dan mengaktifkan janji Allah dalam kehidupan manusia.</strong></p>
+
+  <a class="toplink" href="#top">↑ Atas</a>
+</section>
+
+<!-- 5.1 -->
 <section class="section" id="5-1">
-  <div class="section-opener">
-    <div class="badge">🟥 Bab 5 — Dua Lapisan Asbab Mutlak: Asli dan Terbitan</div>
-    <h2>5.1 Mukadimah — Mengapa Mutlak Ada Dua Lapisan</h2>
-    <p><em>Asbab Mutlak Asli = Asas Wahyu. &nbsp; Asbab Mutlak Terbitan = Asbab Dunia yang tunduk kepada Wahyu.</em></p>
-  </div>
+  <h2>5.1 Ittiba’ sebagai Fasa Ketiga Tauhid</h2>
 
-  <h4>5.1.1 Mukadimah Tauhidi</h4>
+  <p>Bab ini menegaskan bahawa Tauhid tidak berhenti pada pembetulan aqidah,<br>
+  tetapi mesti bergerak kepada pelaksanaan yang sah melalui Ittiba’ Rasulullah ﷺ.</p>
 
-  <p>Asbab Mutlak ialah segala amal yang Allah sendiri ikat dengan janji-Nya — seperti dakwah, mujahadah, sabar, solat khusyuk, syura, infak, hijrah, zikir. Asbab ini mesti menghasilkan kesan, kerana janji Allah pasti benar.</p>
+  <p>Dalam Kerangka 3 Asbab, Tauhid tidak berdiri sebagai satu konsep,<br>
+  tetapi bergerak melalui tiga fasa berturutan yang tidak boleh dipisahkan:</p>
 
-  <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ قِيلًا ﴾</div>
-  <div class="translation">"Siapakah yang lebih benar perkataannya daripada Allah?" &nbsp;(An-Nisā' 4:122)【1】</div>
+  <h3>5.1.1 Nafy → Isbat → Ittiba’</h3>
+  <p><strong>Nafy</strong><br>
+  → membersihkan hati daripada pergantungan kepada Asbab Fitrah dan Asbab Zulumat,<br>
+  → menafikan bahawa sebab-sebab mempunyai kuasa memberi kesan.</p>
 
-  <p>Namun dalam kehidupan manusia, wujud dua jenis asbab:</p>
+  <p><strong>Isbat</strong><br>
+  → menetapkan bahawa hanya Allah memberi kesan,<br>
+  → dan segala natijah berlaku melalui janji-Nya, bukan melalui sebab.</p>
 
-  <p><strong>1. Asbab Wahyu</strong> — ia memang Asbab Mutlak Asli. Contoh: doa → Allah janji jawab; sabar → Allah janji bersama; dakwah → Allah janji nusrah.</p>
+  <p><strong>Ittiba’</strong><br>
+  → mengikat seluruh amal kepada cara Rasulullah ﷺ,<br>
+  → supaya Tauhid tidak tinggal sebagai kefahaman,<br>
+  → tetapi hidup dalam bentuk ketaatan yang sah.</p>
 
-  <p><strong>2. Asbab Dunia</strong> — makanan, modal, strategi, teknologi, tentera, data. Neutral (fitrah) atau gelap (zulumat), tetapi bila ditundukkan kepada wahyu → menjadi Asbab Mutlak Terbitan.</p>
+  <p>➡️ Nafy membersihkan pusat kuasa,<br>
+  ➡️ Isbat menetapkan sumber kesan,<br>
+  ➡️ Ittiba’ menentukan cara hidup yang benar.</p>
 
-  <div class="callout">
-    <strong>Kesimpulan:</strong> Asbab Mutlak mempunyai dua lapisan —<br>
-    1. Asbab Mutlak Asli: datang dari wahyu<br>
-    2. Asbab Mutlak Terbitan: datang dari dunia tetapi tunduk kepada wahyu
-  </div>
+  <p>Tanpa fasa ketiga ini:<br>
+  Tauhid kekal sebagai kefahaman,<br>
+  tetapi tidak menjadi realiti yang mengubah kehidupan.</p>
 
-  <hr>
+  <h3>5.1.2 Tauhid Terikat dengan Ittiba’</h3>
 
-  <h4>5.1.2 Mengapa Kita Perlu Membezakan Dua Lapisan?</h4>
+  <p>Tauhid tidak diukur dengan dakwaan cinta atau pengakuan iman,<br>
+  tetapi diikat secara langsung dengan Ittiba’ Rasulullah ﷺ.</p>
 
-  <p>Tanpa pembezaan ini, manusia masuk dalam dua ekstrem:</p>
-
-  <p><strong>(A) Ekstrem 1 — Menolak Asbab Dunia</strong> <em>(kesilapan sebahagian golongan zahid)</em></p>
-  <ul>
-    <li>Menganggap teknologi haram</li>
-    <li>Menganggap strategi tak perlu</li>
-    <li>Menganggap modal melemahkan tawakkal</li>
-  </ul>
-
-  <p>Sedangkan sirah menunjukkan Rasulullah ﷺ memakai baju besi, merancang strategi, bermesyuarat, berniaga, dan berhijrah dengan perancangan.</p>
-
-  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
-  <div class="translation">"Dan bersedialah kamu dengan segala kekuatan yang kamu mampu." &nbsp;(Al-Anfāl 8:60)【2】</div>
-
-  <p><strong>(B) Ekstrem 2 — Mengagungkan Asbab Dunia</strong> <em>(kesilapan umat moden)</em></p>
-  <ul>
-    <li>Sains diletakkan di atas wahyu</li>
-    <li>KPI di atas amal</li>
-    <li>Ekonomi di atas infak</li>
-    <li>Strategi di atas doa</li>
-    <li>Data di atas tawakkal</li>
-  </ul>
-
-  <div class="arab">﴿ وَظَنَنتُمْ ظَنَّ السَّوْءِ ﴾</div>
-  <div class="translation">"Kamu menyangka sangkaan buruk terhadap Allah." &nbsp;(Al-Fatḥ 48:12)【3】</div>
-
-  <p>Sangka buruk = menyangka asbab memberi kesan lebih daripada Allah.</p>
-
-  <hr>
-
-  <h4>5.1.3 Dua Lapisan Menghapuskan Dua Kesilapan</h4>
-
-  <p><strong>Asbab Mutlak Asli</strong> → membetulkan ekstrem moden. Mengajar hati: Allah memberi kesan, bukan sebab.</p>
-  <p><strong>Asbab Mutlak Terbitan</strong> → membetulkan ekstrem zahid. Mengajar: ambil sebab, tapi tundukkan sebab, jangan sujud kepada sebab.</p>
+  <p>Dalil asas:</p>
 
   <blockquote>
-    <span class="arabic-hadith">« اعْقِلْهَا وَتَوَكَّلْ »</span>
-    "Ikatlah unta dan bertawakkallah." &nbsp;(Tirmizi)【4】
+    <div class="arab">﴿ قُلْ إِن كُنتُمْ تُحِبُّونَ ٱللَّهَ فَٱتَّبِعُونِى يُحْبِبْكُمُ ٱللَّهُ ﴾</div>
+    “Katakanlah (wahai Muhammad): Jika kamu benar-benar mencintai Allah, maka ikutilah aku, nescaya Allah akan mencintai kamu.”<a class="footnote-ref" href="#fn-5-1-1">【1】</a>
   </blockquote>
 
-  <p>Ini menunjukkan dua lapisan: <strong>ambil sebab</strong> (Asbab Mutlak Terbitan) + <strong>hati pada Allah</strong> (Asbab Mutlak Asli).</p>
+  <p>➡️ Ayat ini menetapkan bahawa:<br>
+  cinta kepada Allah tidak sah tanpa Ittiba’,<br>
+  dan penerimaan Allah terikat dengan ketaatan kepada Rasulullah ﷺ.</p>
 
-  <hr>
+  <p>Maka:</p>
 
-  <h4>5.1.4 Mengapa Asbab Mutlak Terbitan Tidak Boleh Berdiri Sendiri?</h4>
+  <p><strong>Tauhid bukan sekadar mengenal Allah,<br>
+  tetapi mengikut Rasulullah ﷺ dalam seluruh kehidupan.</strong></p>
 
-  <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
-  <div class="translation">"Allah mencipta kamu dan apa yang kamu lakukan." &nbsp;(As-Saffāt 37:96)【5】</div>
+  <h3>5.1.3 Amal Tidak Sah Tanpa Ittiba’</h3>
 
-  <p>Sebab Allah cipta. Kesan Allah cipta. Manusia hanya pelaksana. Jika sebab dunia tidak tunduk kepada wahyu, ia menjadi <em>tuan bukan alat</em> — berhala bukan hamba.</p>
+  <p>Ittiba’ bukan pelengkap amal,<br>
+  tetapi penentu sah atau tertolaknya amal.</p>
 
-  <hr>
+  <p>Rasulullah ﷺ bersabda:</p>
 
-  <h4>5.1.5 Asbab Mutlak Asli = Cahaya. Asbab Mutlak Terbitan = Bayangan Cahaya.</h4>
+  <blockquote>
+    <div class="arab">مَنْ عَمِلَ عَمَلًا لَيْسَ عَلَيْهِ أَمْرُنَا فَهُوَ رَدٌّ</div>
+    “Sesiapa yang melakukan suatu amalan yang tidak ada perintah kami padanya, maka amalan itu tertolak.”<a class="footnote-ref" href="#fn-5-1-2">【2】</a>
+  </blockquote>
 
-  <p><strong>Asbab Mutlak Asli:</strong> datang dari langit. Janjinya pasti. Tidak bergantung dunia.</p>
-  <p><strong>Asbab Mutlak Terbitan:</strong> datang dari bumi, tetapi diangkat oleh cahaya wahyu.</p>
+  <p>➡️ Hadith ini mengunci bahawa:<br>
+  ikhlas sahaja tidak mencukupi,<br>
+  kesungguhan sahaja tidak menjamin penerimaan,<br>
+  dan kebaikan pada pandangan manusia tidak menjadi ukuran.</p>
 
-  <p><strong>Contoh:</strong> Tongkat Musa — objek fitrah. Bila dipukul ke laut atas perintah Allah → menjadi Asbab Mutlak Terbitan. Parit Salman al-Farisi — strategi fitrah. Bila tunduk sunnah & wahyu → Asbab Mutlak Terbitan.</p>
+  <p>Amal hanya bernilai apabila:<br>
+  perintahnya datang daripada Allah,<br>
+  dan caranya mengikuti Rasulullah ﷺ.</p>
 
-  <hr>
+  <p>Tanpa Ittiba’:<br>
+  amal kembali kepada ciptaan manusia,<br>
+  dan Tauhid kehilangan tertib pelaksanaannya.</p>
 
-  <h4>5.1.6 Kesimpulan Mukadimah Bab 5</h4>
-  <div class="rumusan">
-    <ol>
-      <li>Asbab Mutlak Asli = amal yang Allah ikat dengan janji langsung.</li>
-      <li>Asbab Mutlak Terbitan = sebab dunia yang tunduk melalui Nafy–Isbat–Ittiba'.</li>
-      <li>Tanpa Asli → Terbitan jadi gelap.</li>
-      <li>Tanpa Terbitan → manusia tak boleh berjalan dalam dunia.</li>
-      <li>Rasulullah ﷺ menggabungkan keduanya:</li>
-    </ol>
-    <div class="table-wrap" style="margin-top:1rem;">
-      <table>
-        <thead><tr><th>Asbab Mutlak Asli</th><th>Asbab Mutlak Terbitan</th></tr></thead>
-        <tbody>
-          <tr><td>Doa</td><td>Strategi</td></tr>
-          <tr><td>Sabar</td><td>Perancangan</td></tr>
-          <tr><td>Tawakkal</td><td>Ambil sebab</td></tr>
-          <tr><td>Dakwah</td><td>Perjalanan, logistik</td></tr>
-          <tr><td>Mujahadah</td><td>Senjata, modal</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="margin-top:0.7rem; font-weight:600; font-style:italic;">Ini Sunnah Kemenangan.</p>
-  </div>
+  <h4>🔒 Rumusan Tauhidi 5.1</h4>
+  <ul>
+    <li>Tauhid bergerak melalui tiga fasa: Nafy → Isbat → Ittiba’.</li>
+    <li>Nafy dan Isbat membetulkan aqidah; Ittiba’ menghidupkan amal.</li>
+    <li>Cinta kepada Allah disyaratkan dengan Ittiba’ Rasulullah ﷺ.</li>
+    <li>Amal tanpa Ittiba’ adalah tertolak walaupun ikhlas.</li>
+    <li>Ittiba’ ialah pintu masuk Tauhid ke dalam kehidupan sebenar.</li>
+  </ul>
 
   <div class="footnotes">
-    <h3>Nota Kaki 5.1</h3>
-    <ul>
-      <li>【1】 An-Nisā' 4:122 — Allah paling benar dalam janji-Nya</li>
-      <li>【2】 Al-Anfāl 8:60 — perintah mengambil sebab dunia</li>
-      <li>【3】 Al-Fatḥ 48:12 — sangkaan buruk terhadap Allah</li>
-      <li>【4】 Hadith "I'qil-hā wa tawakkal" — Tirmizi</li>
-      <li>【5】 As-Saffāt 37:96 — Allah mencipta sebab &amp; kesan</li>
-    </ul>
+    <h4>Nota Kaki Bab 5.1</h4>
+    <ol>
+      <li id="fn-5-1-1">Āli ‘Imrān 3:31 — Cinta kepada Allah disyaratkan dengan Ittiba’ Rasulullah ﷺ.</li>
+      <li id="fn-5-1-2">Ṣaḥīḥ Muslim — Penolakan amal yang tidak mengikut perintah Nabi ﷺ.</li>
+    </ol>
   </div>
 
-  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
+  <a class="toplink" href="#top">↑ Atas</a>
 </section>
+
+<!-- 5.2 -->
 <section class="section" id="5-2">
-  <div class="section-opener">
-    <h2>5.2 Integrasi Ilmu vs Fragmentasi Ilmu</h2>
-    <p><em>Wahyu tidak turun dalam serpihan yang terpisah, tetapi sebagai satu tertib yang menghubungkan hati, amal, jamaah, dan sistem.</em></p>
-  </div>
+  <h2>5.2 Prinsip Kritikal: Dua Lapisan Ittiba’</h2>
 
-  <h3>5.2.1 Masalah Bukan Pada Ilmu, Tetapi Pada Ilmu yang Terpisah</h3>
+  <p>Bab ini mengunci satu prinsip Tauhidi yang sangat halus tetapi menentukan:</p>
 
-  <p>Islam tidak diturunkan dalam bentuk disiplin yang saling terputus. Al-Qur’an menghubungkan iman dengan amal, amal dengan sabar, sabar dengan nusrah, nusrah dengan jamaah, jamaah dengan syura, dan syura dengan pembinaan masyarakat【1】.</p>
+  <p><strong>Ittiba’ Rasulullah ﷺ tidak berlaku pada satu lapisan sahaja,<br>
+  tetapi wujud dalam dua lapisan yang saling berkait:<br>
+  Ittiba’ sebagai syarat sah amal (zahir),<br>
+  dan Ittiba’ sebagai kesempurnaan hidup hati (batin).</strong></p>
 
-  <p>Apabila ilmu dipisahkan secara berlebihan, manusia mula melihat agama dalam serpihan:</p>
-  <ul>
-    <li>aqidah tanpa mekanisme pembinaan hati,</li>
-    <li>fiqh tanpa ruh dakwah dan mujahadah,</li>
-    <li>tasawuf tanpa amal ijtima'i,</li>
-    <li>sirah tanpa kaedah pembinaan sistem,</li>
-    <li>dan sistem tanpa iman.</li>
-  </ul>
+  <p>Kegagalan memahami perbezaan ini melahirkan dua kesilapan besar:<br>
+  beramal tanpa sunnah dengan alasan “yang penting ikhlas”,<br>
+  atau menunggu rasa sebelum taat kepada sunnah.</p>
 
-  <div class="callout">
-    <strong>Masalah besar umat hari ini:</strong><br>
-    bukan kekurangan maklumat agama, tetapi terputusnya hubungan antara ilmu, hati, amal, dan masyarakat.
-  </div>
+  <p>Kedua-duanya bercanggah dengan tertib Rasulullah ﷺ.</p>
 
-  <hr>
+  <h3>5.2.1 Ittiba’ sebagai SYARAT (Zahir)</h3>
 
-  <h3>5.2.2 Kerangka 3 Asbab Tidak Menolak Kepakaran</h3>
+  <p>Pada lapisan pertama, Ittiba’ ialah syarat sah bagi semua amal.</p>
 
-  <p>Kerangka 3 Asbab tidak menolak kepakaran, dan tidak menolak disiplin ilmu. Yang ditolak ialah <strong>fragmentasi</strong> — apabila bidang-bidang ilmu diperlakukan seolah-olah berdiri sendiri tanpa pusat yang menyatukan semuanya.</p>
+  <p>Segala amal:<br>
+  dakwah,<br>
+  ibadah,<br>
+  muamalat,<br>
+  pengorbanan,</p>
 
-  <p>Pusat itu ialah:</p>
-  <ul>
-    <li>iman yang tunduk kepada Allah,</li>
-    <li>amal yang mengikuti Rasulullah ﷺ,</li>
-    <li>dan tertib wahyu yang mengawal seluruh gerak manusia.</li>
-  </ul>
+  <p>mesti bermula dengan mengikuti cara Rasulullah ﷺ.</p>
+
+  <p>Tanpa Ittiba’ pada lapisan ini:<br>
+  amal tidak sah,<br>
+  amal tertolak walaupun ikhlas,<br>
+  dan amal kembali kepada ciptaan manusia.</p>
+
+  <p>Dalil asas:</p>
 
   <blockquote>
-    <p>Specialization diperlukan untuk khidmat.<br>
-    Integration diperlukan untuk hidayat.</p>
+    <div class="arab">مَنْ عَمِلَ عَمَلًا لَيْسَ عَلَيْهِ أَمْرُنَا فَهُوَ رَدٌّ</div>
+    “Sesiapa yang melakukan suatu amalan yang tidak ada perintah kami padanya, maka amalan itu tertolak.”<a class="footnote-ref" href="#fn-5-2-1">【1】</a>
   </blockquote>
 
-  <hr>
+  <p>➡️ Hadith ini menetapkan bahawa:<br>
+  sunnah ialah syarat sah amal,<br>
+  bukan pilihan tambahan,<br>
+  dan bukan pelengkap selepas berjaya.</p>
 
-  <h3>5.2.3 Mengapa Bab 5 Perlu Menjadi Tempat Integrasi Ini?</h3>
+  <p>Maka:</p>
 
-  <p>Bab 5 membicarakan Asbab Mutlak Asli dan Asbab Mutlak Terbitan. Ini sendiri menunjukkan bahawa agama tidak boleh dibaca dalam satu lapisan sahaja:</p>
-  <ul>
-    <li>ada lapisan wahyu,</li>
-    <li>ada lapisan amal,</li>
-    <li>ada lapisan dunia,</li>
-    <li>dan ada lapisan bagaimana dunia tunduk kepada wahyu.</li>
-  </ul>
+  <p><strong>Ittiba’ pada lapisan ini memastikan amal itu sah di sisi Allah,<br>
+  walaupun hati belum merasai sepenuhnya.</strong></p>
 
-  <p>Jika seseorang hanya melihat lapisan dunia, dia akan jatuh kepada Asbab Fitrah dan Asbab Zulumat. Jika seseorang hanya melihat lapisan amal tetapi menolak dunia, dia juga tersasar daripada sunnah【2】.</p>
+  <h3>5.2.2 Ittiba’ sebagai KESAN (Batin)</h3>
 
-  <p>Maka Bab 5 menjadi bukti bahawa:</p>
-  <div class="insight-box">
-    <ul>
-      <li>wahyu lebih tinggi daripada dunia,</li>
-      <li>dunia tidak dibuang,</li>
-      <li>dan kedua-duanya mesti dibaca dalam satu tertib Tauhidi.</li>
-    </ul>
+  <p>Pada lapisan kedua, Ittiba’ menjadi kesan daripada amal yang berterusan dalam tertib Nabawi.</p>
+
+  <p>Ittiba’ pada tahap ini tidak lagi sekadar bentuk zahir,<br>
+  tetapi menjadi kehidupan dalam hati.</p>
+
+  <p>Ia terhasil selepas:<br>
+  dakwah yang menggerakkan hati,<br>
+  mujahadah yang mematahkan nafsu,<br>
+  sabar yang meneguhkan ketaatan.</p>
+
+  <p>Apabila proses ini berlaku:<br>
+  hati mula mencintai sunnah,<br>
+  amal menjadi ringan,<br>
+  dan ketaatan menjadi hidup dengan rasa tunduk dan yakin.</p>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ قُلْ إِن كُنتُمْ تُحِبُّونَ ٱللَّهَ فَٱتَّبِعُونِى يُحْبِبْكُمُ ٱللَّهُ ﴾</div>
+    “Katakanlah: Jika kamu mencintai Allah, maka ikutilah aku, nescaya Allah mencintai kamu.”<a class="footnote-ref" href="#fn-5-2-2">【2】</a>
+  </blockquote>
+
+  <p>➡️ Ayat ini menunjukkan bahawa:<br>
+  Ittiba’ ialah syarat cinta kepada Allah,<br>
+  dan juga jalan untuk mendapatkan cinta Allah.</p>
+
+  <p>Apabila Allah mencintai hamba:<br>
+  hati menjadi hidup,<br>
+  amal menjadi ringan,<br>
+  dan sunnah menjadi sumber kelazatan.</p>
+
+  <h3>5.2.3 Penguncian Prinsip</h3>
+
+  <p><strong>Amal mesti bermula dengan Ittiba’,<br>
+  dan melalui amal itu, Ittiba’ menjadi hidup.</strong></p>
+
+  <p>Penjelasan:<br>
+  Ittiba’ bukan datang selepas amal,<br>
+  tetapi menjadi syarat sah amal sejak awal.<br>
+  Namun kesempurnaan Ittiba’ tidak berlaku serta-merta,<br>
+  tetapi dibentuk melalui dakwah, mujahadah, dan sabar.</p>
+
+  <p>➡️ Maka:<br>
+  beramal tanpa sunnah → tertolak,<br>
+  menunggu rasa sebelum ikut sunnah → tersasar.</p>
+
+  <p>Jalan yang sah ialah:<br>
+  bermula dengan Ittiba’ walaupun belum rasa,<br>
+  dan terus beramal sehingga Allah menghidupkan rasa itu.</p>
+
+  <div class="footnotes">
+    <h4>Nota Kaki Bab 5.2</h4>
+    <ol>
+      <li id="fn-5-2-1">Ṣaḥīḥ Muslim — مَنْ عَمِلَ عَمَلًا لَيْسَ عَلَيْهِ أَمْرُنَا فَهُوَ رَدٌّ</li>
+      <li id="fn-5-2-2">Āli ‘Imrān 3:31 — Ittiba’ sebagai syarat dan jalan mendapatkan cinta Allah.</li>
+    </ol>
   </div>
 
-  <hr>
+  <a class="toplink" href="#top">↑ Atas</a>
+</section>
 
-  <h3>5.2.4 Al-Qur’an Sendiri Bersifat Integratif</h3>
+<!-- 5.3 -->
+<section class="section" id="5-3">
+  <h2>5.3 Dalil Ittiba’ dalam al-Qur’an</h2>
 
-  <div class="arab">﴿ إِنَّ ٱلَّذِينَ آمَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ ﴾</div>
-  <div class="translation">“Sesungguhnya orang-orang yang beriman dan beramal soleh...” — ungkapan ini diulang berulang kali dalam al-Qur’an untuk mengikat iman dan amal sebagai satu kesatuan, bukan dua dunia yang terpisah【3】.</div>
-
-  <p>Begitu juga kisah para Nabi tidak dibentangkan sebagai sejarah kosong, tetapi sebagai:</p>
   <ul>
-    <li>aqidah,</li>
+    <li>Āli ‘Imrān 3:31 → syarat cinta</li>
+    <li>al-Aḥzāb 33:21 → model hidup</li>
+    <li>an-Nisā’ 4:80 → ukuran Tauhid</li>
+  </ul>
+
+  <p><strong>➡️ Ittiba’ = teras iman, bukan cabang</strong></p>
+
+  <p>Bab ini membuktikan bahawa Ittiba’ Rasulullah ﷺ bukan cabang kecil dalam agama,<br>
+  tetapi teras kepada struktur Tauhid dalam al-Qur’an.</p>
+
+  <h3>5.3.1 Āli ‘Imrān 3:31 — Ittiba’ sebagai Syarat Cinta kepada Allah</h3>
+
+  <blockquote>
+    <div class="arab">﴿ قُلْ إِن كُنتُمْ تُحِبُّونَ ٱللَّهَ فَٱتَّبِعُونِى يُحْبِبْكُمُ ٱللَّهُ ﴾</div>
+    “Katakanlah: Jika kamu benar-benar mencintai Allah, maka ikutilah aku; nescaya Allah mencintai kamu.”<a class="footnote-ref" href="#fn-5-3-1">【1】</a>
+  </blockquote>
+
+  <h3>5.3.2 al-Aḥzāb 33:21 — Rasulullah ﷺ sebagai Model Hidup</h3>
+
+  <blockquote>
+    <div class="arab">﴿ لَّقَدْ كَانَ لَكُمْ فِى رَسُولِ ٱللَّهِ أُسْوَةٌ حَسَنَةٌ ﴾</div>
+    “Sesungguhnya pada diri Rasulullah itu terdapat contoh teladan yang baik bagi kamu.”<a class="footnote-ref" href="#fn-5-3-2">【2】</a>
+  </blockquote>
+
+  <h3>5.3.3 an-Nisā’ 4:80 — Ukuran Tauhid</h3>
+
+  <blockquote>
+    <div class="arab">﴿ مَّن يُطِعِ ٱلرَّسُولَ فَقَدْ أَطَاعَ ٱللَّهَ ﴾</div>
+    “Sesiapa yang taat kepada Rasul, maka sesungguhnya dia telah taat kepada Allah.”<a class="footnote-ref" href="#fn-5-3-3">【3】</a>
+  </blockquote>
+
+  <h4>🔒 Rumusan Tauhidi 5.3</h4>
+  <ul>
+    <li>Ittiba’ ialah teras iman, bukan cabang.</li>
+    <li>Cinta kepada Allah disyaratkan dengan Ittiba’.</li>
+    <li>Rasulullah ﷺ ialah model hidup menyeluruh.</li>
+    <li>Ketaatan kepada Rasul ialah ukuran Tauhid sebenar.</li>
+  </ul>
+
+  <div class="footnotes">
+    <h4>Nota Kaki Bab 5.3</h4>
+    <ol>
+      <li id="fn-5-3-1">Āli ‘Imrān 3:31</li>
+      <li id="fn-5-3-2">al-Aḥzāb 33:21</li>
+      <li id="fn-5-3-3">an-Nisā’ 4:80</li>
+    </ol>
+  </div>
+
+  <a class="toplink" href="#top">↑ Atas</a>
+</section>
+
+
+<section class="section" id="5-4">
+  <h2>5.4 Sunnatullah Tertib Amal Nabi ﷺ</h2>
+
+  <p>Bab ini mengunci satu prinsip Tauhidi yang sering disalah fahami:</p>
+
+  <p>Istilah sunnatullah dalam al-Qur’an<br>
+  bukan merujuk kepada hukum alam atau pola sebab biasa,<br>
+  tetapi merujuk kepada ketetapan Allah yang pasti<br>
+  dalam urusan iman, dakwah, dan nusrah.</p>
+
+  <p>Dalam Kerangka 3 Asbab:</p>
+
+  <p>Sunnatullah hanya sah digunakan untuk Asbab Mutlak<br>
+  — iaitu sebab-sebab yang Allah sendiri tetapkan bersama janji-Nya.</p>
+
+  <p>Maka:</p>
+  <ul>
+    <li>Asbab Fitrah → berlaku dengan izin Allah, tetapi tiada janji,</li>
+    <li>Asbab Zulumat → lahir dari manusia, tiada kebenaran hakiki,</li>
+    <li>Asbab Mutlak → ditetapkan oleh wahyu dan disertakan janji Allah.</li>
+  </ul>
+
+  <p>➡️ Hanya Asbab Mutlak layak disebut sunnatullah.</p>
+
+  <h3>5.4.1 Definisi Sunnatullah (Asbab Mutlak sahaja)</h3>
+
+  <p>Sunnatullah dalam disiplin Tauhidi ialah:</p>
+
+  <p>Ketetapan Allah bahawa hidayah, pertolongan dan kemenangan<br>
+  hanya berlaku melalui tertib amal yang ditunjukkan oleh Rasulullah ﷺ.</p>
+
+  <p>Ia bukan:</p>
+  <ul>
+    <li>strategi dakwah,</li>
+    <li>formula kejayaan,</li>
+    <li>atau hukum sebab-musabab biasa.</li>
+  </ul>
+
+  <p>Tetapi:</p>
+
+  <p>hukum Tauhidi yang tetap dan tidak berubah.</p>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ فَلَن تَجِدَ لِسُنَّتِ ٱللَّهِ تَبْدِيلًۭا وَلَن تَجِدَ لِسُنَّتِ ٱللَّهِ تَحْوِيلًۭا ﴾</div>
+    “Maka engkau tidak akan mendapati bagi sunnatullah itu sebarang perubahan, dan engkau tidak akan mendapati baginya sebarang peralihan.”
+    <a class="footnote-ref" href="#fn-5-4-1">【1】</a>
+  </blockquote>
+
+  <p>➡️ Ayat ini merujuk kepada ketetapan Allah dalam urusan agama,<br>
+  bukan kepada hukum alam seperti fizik atau biologi.</p>
+
+  <h3>5.4.2 Rantaian Tetap Sunnatullah</h3>
+
+  <p>Sepanjang sirah Rasulullah ﷺ, tertib amal tidak pernah berubah:</p>
+
+  <p>Dakwah → Mujahadah → Sabar → Nusrah</p>
+
+  <h4>1️⃣ Dakwah — Permulaan Semua Perubahan</h4>
+
+  <p>Rasulullah ﷺ tidak memulakan dengan:</p>
+  <ul>
+    <li>sistem,</li>
+    <li>kuasa,</li>
+    <li>pendidikan formal,</li>
+    <li>atau pembaikan ekonomi.</li>
+  </ul>
+
+  <p>Baginda ﷺ memulakan dengan menyeru manusia kepada Allah.</p>
+
+  <p>Dalil:</p>
+
+  <blockquote>
+    <div class="arab">﴿ يَٰٓأَيُّهَا ٱلْمُدَّثِّرُ ۝ قُمْ فَأَنذِرْ ﴾</div>
+    “Wahai orang yang berselimut! Bangunlah, lalu berilah peringatan.”
+    <a class="footnote-ref" href="#fn-5-4-2">【2】</a>
+  </blockquote>
+
+  <p>➡️ Dakwah ialah Asbab Mutlak Asli pertama.</p>
+
+  <h4>2️⃣ Mujahadah — Harga Ketaatan</h4>
+
+  <p>Dakwah pasti melahirkan penentangan.</p>
+
+  <p>Ketika itu Allah tidak memberi jalan pintas,<br>
+  tetapi memerintahkan mujahadah:</p>
+  <ul>
+    <li>mematahkan ego,</li>
+    <li>memutuskan cinta dunia,</li>
+    <li>mengaktifkan hati untuk menerima Nur.</li>
+  </ul>
+
+  <p>Dalil:</p>
+
+  <blockquote>
+    <div class="arab">﴿ وَٱلَّذِينَ جَٰهَدُوا۟ فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
+    “Dan orang-orang yang bermujahadah pada jalan Kami, pasti Kami akan tunjukkan kepada mereka jalan-jalan Kami.”
+    <a class="footnote-ref" href="#fn-5-4-3">【3】</a>
+  </blockquote>
+
+  <p>➡️ Hidayah ialah natijah mujahadah, bukan permulaan.</p>
+
+  <h4>3️⃣ Sabar — Pengunci Iman</h4>
+
+  <p>Selepas mujahadah, datang fasa menunggu keputusan Allah.</p>
+
+  <p>Sabar ialah:</p>
+  <ul>
+    <li>kekal taat tanpa mengubah tertib,</li>
+    <li>tidak mengejar hasil,</li>
+    <li>tidak putus asa.</li>
+  </ul>
+
+  <p>Dalil:</p>
+
+  <blockquote>
+    <div class="arab">﴿ وَٱصْبِرْ وَمَا صَبْرُكَ إِلَّا بِٱللَّهِ ﴾</div>
+    “Dan bersabarlah; dan tidaklah kesabaranmu itu melainkan dengan pertolongan Allah.”
+    <a class="footnote-ref" href="#fn-5-4-4">【4】</a>
+  </blockquote>
+
+  <p>➡️ Tanpa sabar:</p>
+  <ul>
+    <li>mujahadah menjadi keletihan,</li>
+    <li>dakwah menjadi tekanan.</li>
+  </ul>
+
+  <h4>4️⃣ Nusrah — Janji Allah, Bukan Sasaran</h4>
+
+  <p>Dalam sunnatullah Nabawi:</p>
+  <ul>
+    <li>nusrah tidak dirancang,</li>
+    <li>tidak dipercepat,</li>
+    <li>dan tidak dijadikan KPI.</li>
+  </ul>
+
+  <p>Ia turun apabila:</p>
+  <ul>
+    <li>dakwah dilakukan,</li>
+    <li>mujahadah ditempuh,</li>
+    <li>sabar dikekalkan.</li>
+  </ul>
+
+  <p>Dalil:</p>
+
+  <blockquote>
+    <div class="arab">﴿ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ ﴾</div>
+    “Jika kamu menolong (agama) Allah, nescaya Dia akan menolong kamu.”
+    <a class="footnote-ref" href="#fn-5-4-5">【5】</a>
+  </blockquote>
+
+  <p>➡️ Nusrah ialah balasan Tauhidi, bukan alat strategik.</p>
+
+  <h3>5.4.3 Penguncian Prinsip</h3>
+
+  <p>Daripada keseluruhan tertib ini, lahirlah hukum Tauhidi yang tidak boleh diubah:</p>
+  <ul>
+    <li>tertib Dakwah → Mujahadah → Sabar → Nusrah adalah tetap dan tidak berubah,</li>
+    <li>ia bukan pilihan strategi,</li>
+    <li>bukan pendekatan alternatif,</li>
+    <li>tetapi sunnatullah yang Allah tetapkan.</li>
+  </ul>
+
+  <p>➡️ Melanggar tertib ini:</p>
+  <ul>
+    <li>mungkin menghasilkan kejayaan zahir sementara,</li>
+    <li>tetapi pasti gagal dari sudut Tauhidi.</li>
+  </ul>
+
+  <p>Dalil penguat:</p>
+
+  <blockquote>
+    <div class="arab">﴿ وَلَن تَجِدَ لِسُنَّتِ ٱللَّهِ تَبْدِيلًۭا ﴾</div>
+    “Dan engkau tidak akan mendapati bagi sunnatullah itu sebarang perubahan.”
+    <a class="footnote-ref" href="#fn-5-4-6">【6】</a>
+  </blockquote>
+
+  <h4>🔒 Rumusan Tauhidi 5.4</h4>
+  <ol>
+    <li>Sunnatullah hanya merujuk kepada Asbab Mutlak, bukan hukum alam.</li>
+    <li>Tertib amal Nabi ﷺ ialah sunnatullah yang tetap.</li>
+    <li>Rantaian Tauhidi ialah:
+      <ul>
+        <li>Dakwah → Mujahadah → Sabar → Nusrah</li>
+      </ul>
+    </li>
+    <li>Hidayah dan pertolongan hanya datang melalui tertib ini.</li>
+    <li>Melanggar tertib ini bermaksud melanggar ketetapan Allah.</li>
+  </ol>
+
+  <div class="footnotes">
+    <h4>Nota Kaki Bab 5.4</h4>
+    <ol>
+      <li id="fn-5-4-1">Fāṭir 35:43 — Sunnatullah sebagai ketetapan Allah yang tidak berubah.</li>
+      <li id="fn-5-4-2">al-Muddaththir 74:1–2 — Dakwah sebagai perintah pertama Nabi ﷺ.</li>
+      <li id="fn-5-4-3">al-‘Ankabūt 29:69 — Hidayah sebagai natijah mujahadah.</li>
+      <li id="fn-5-4-4">an-Naḥl 16:127 — Sabar sebagai pengunci iman.</li>
+      <li id="fn-5-4-5">Muḥammad 47:7 — Nusrah sebagai balasan menolong agama Allah.</li>
+      <li id="fn-5-4-6">al-Aḥzāb 33:62 — Sunnatullah tidak berubah sepanjang zaman.</li>
+    </ol>
+  </div>
+
+  <a class="toplink" href="#top">↑ Atas</a>
+</section>
+<div class="badge">🟤 5.5 Tiga Dimensi Ittiba’</div>
+
+<section class="section" id="5-5">
+  <h2>(Surah – Sirah – Sarirah)</h2>
+
+  <p>Bab ini mengunci kerangka sah bagi Ittiba’ Rasulullah ﷺ.</p>
+
+  <p>Ittiba’ tidak berlaku pada satu dimensi sahaja,<br>
+  tetapi mesti hidup serentak dalam tiga dimensi:</p>
+
+  <h3>5.5.1 Surah → Apa yang Diperintah</h3>
+  <p>Wahyu menentukan:<br>
+  apa yang halal dan haram<br>
+  apa yang diperintah dan dilarang</p>
+  <p>Menjawab soalan:<br>
+  “Apa yang Allah kehendaki?”</p>
+
+  <h3>5.5.2 Sirah → Bagaimana Dilaksanakan</h3>
+  <p>Cara Rasulullah ﷺ menentukan:<br>
+  tertib amal<br>
+  keutamaan<br>
+  susunan tindakan</p>
+  <p>Menjawab soalan:<br>
+  “Bagaimana perintah itu diamalkan?”</p>
+
+  <h3>5.5.3 Sarirah → Suasana Iman</h3>
+  <p>Keadaan hati dan suasana jamaah:<br>
+  cinta, takut, yakin, tawakkal<br>
+  kehidupan dalam masjid dan jamaah</p>
+  <p>Menjawab soalan:<br>
+  “Dalam keadaan iman bagaimana amal itu hidup?”</p>
+
+  <h3>🔒 Penguncian Prinsip 5.5</h3>
+  <p>➡️ Ketiga-tiganya:<br>
+  bukan asbab<br>
+  tidak memberi kesan<br>
+  tidak mencipta hasil</p>
+
+  <p>Tetapi:<br>
+  penentu sah atau rosaknya amal<br>
+  pengawal Tauhid dalam kehidupan<br>
+  kerangka yang memastikan amal berpaut kepada wahyu</p>
+
+  <h3>⚠️ Kesalahan Besar Umat</h3>
+  <p>Surah tanpa Sirah → literalisme kering<br>
+  Sirah tanpa Sarirah → aktivisme letih<br>
+  Sarirah tanpa Surah → spiritualisme tersasar</p>
+
+  <p>➡️ Ittiba’ hanya sah apabila ketiga-tiganya hidup serentak</p>
+
+  <h3>⚙️ BLOK APLIKASI</h3>
+  <p>(Flow Sirah Nabawi — Tertib Kehidupan Tauhidi)</p>
+
+  <p>Susunan di bawah bukan teori,<br>
+  tetapi diambil terus daripada tertib sirah Rasulullah ﷺ.</p>
+
+  <p>Ia menunjukkan bagaimana Ittiba’ hidup dalam realiti:</p>
+
+  <ol>
+    <li><strong>Dakwah</strong><br>→ permulaan semua perubahan</li>
+    <li><strong>Hidayah</strong><br>→ urusan Allah dalam tertib dakwah</li>
+    <li><strong>Pengorbanan</strong><br>→ harga ketaatan</li>
+    <li><strong>Ibadah</strong><br>→ pengukuhan hubungan dengan Allah</li>
+    <li><strong>Kehidupan Menyeluruh</strong><br>→ akhlak, muamalat, syariat, politik</li>
+  </ol>
+
+  <h3>🔒 Penguncian Flow</h3>
+  <p>➡️ Susunan ini:<br>
+  bukan pilihan<br>
+  bukan strategi<br>
+  tetapi tertib yang lahir daripada sirah Nabi ﷺ</p>
+
+  <p>➡️ Mengubah susunan ini:<br>
+  mengubah cara Nabi ﷺ<br>
+  dan membuka pintu kepada Asbab Fitrah dan Zulumat</p>
+
+  <p>Ittiba’ bukan sekadar ikut apa yang Nabi ﷺ buat,<br>
+  tetapi ikut urutan bagaimana Baginda ﷺ melakukannya.</p>
+
+  <a class="toplink" href="#top">↑ Atas</a>
+</section>
+
+<div class="badge">🟠 5.6 Ittiba’ dalam Dakwah</div>
+
+<section class="section" id="5-6">
+
+  <p>Bab ini mengunci satu hakikat penting:</p>
+
+  <p>Dakwah ialah medan pertama dan paling jelas<br>
+  untuk menguji keaslian Ittiba’ Rasulullah ﷺ.</p>
+
+  <p>Dalam ibadah peribadi, seseorang masih boleh kelihatan taat.<br>
+  Dalam ilmu, seseorang masih boleh kelihatan betul.</p>
+
+  <p>Namun dalam dakwah:</p>
+
+  <p>segala kepura-puraan Tauhid akan terbongkar.</p>
+
+  <p>Kerana dakwah:<br>
+  melibatkan manusia,<br>
+  berdepan penolakan,<br>
+  dan menuntut kesabaran tanpa hasil segera.</p>
+
+  <p>Dalam Kerangka 3 Asbab:</p>
+
+  <p>Dakwah hanya sah sebagai amal Tauhidi<br>
+  apabila dilakukan mengikut cara Rasulullah ﷺ,<br>
+  bukan sekadar membawa mesej yang benar.</p>
+
+  <h3>5.6.1 Hakikat Dakwah</h3>
+
+  <p>Dakwah bukan:<br>
+  komunikasi,<br>
+  penyampaian maklumat,<br>
+  perbahasan intelektual,<br>
+  atau aktivisme sosial.</p>
+
+  <p>Dakwah ialah:</p>
+
+  <p>ketaatan kepada perintah Allah<br>
+  yang dilaksanakan mengikut tertib Rasulullah ﷺ</p>
+
+  <p>dengan tujuan:<br>
+  memindahkan hati manusia kepada Allah,<br>
+  bukan memenangkan idea, aliran, atau kumpulan.</p>
+
+  <blockquote>
+    <div class="arab">﴿ ٱدْعُ إِلَىٰ سَبِيلِ رَبِّكَ ﴾</div>
+    <p>“Serulah (manusia) ke jalan Tuhanmu.”</p>
+    <p>(an-Naḥl 16:125)<a class="footnote-ref">【1】</a></p>
+  </blockquote>
+
+  <p>➡️ Arah dakwah jelas:<br>
+  kepada Allah,<br>
+  bukan kepada pendakwah,<br>
+  bukan kepada sistem,<br>
+  bukan kepada gerakan.</p>
+
+  <h3>5.6.2 Cara Lebih Penting daripada Isi</h3>
+
+  <p>Kesilapan besar dalam dakwah ialah:</p>
+
+  <p>menganggap kebenaran isi mencukupi<br>
+  walaupun cara bercanggah dengan sunnah.</p>
+
+  <p>Dalam sirah Rasulullah ﷺ:<br>
+  Baginda ﷺ tidak memulakan dengan hukum,<br>
+  tidak memulakan dengan kecaman,<br>
+  tidak memulakan dengan membongkar kesalahan masyarakat.</p>
+
+  <p>Baginda ﷺ memulakan dengan:<br>
+  mengajak kepada Allah,<br>
+  membina iman dalam hati,<br>
+  membentuk jamaah kecil yang hidup dengan iman.</p>
+
+  <blockquote>
+    <div class="arab">﴿ قُلْ هَٰذِهِۦ سَبِيلِىٓ أَدْعُوٓا۟ إِلَى ٱللَّهِ عَلَىٰ بَصِيرَةٍ ﴾</div>
+    <p>“Katakanlah: Inilah jalanku, aku menyeru kepada Allah dengan basirah.”</p>
+    <p>(Yūsuf 12:108)<a class="footnote-ref">【2】</a></p>
+  </blockquote>
+
+  <p>➡️ Basirah ialah:<br>
+  kefahaman tertib dakwah Nabi ﷺ,<br>
+  bukan kepetahan bercakap,<br>
+  bukan kekuatan hujah.</p>
+
+  <h3>5.6.3 Tertib Dakwah Nabawi</h3>
+
+  <p>Dalam dakwah Rasulullah ﷺ, tertibnya tidak pernah berubah:<br>
+  iman didahulukan sebelum hukum,<br>
+  pembinaan hati sebelum perubahan masyarakat,<br>
+  jamaah sebelum sistem,<br>
+  sabar sebelum kemenangan.</p>
+
+  <p>Ini bukan strategi,<br>
+  tetapi tertib yang Allah tetapkan melalui Rasulullah ﷺ.</p>
+
+  <blockquote>
+    <div class="arab">﴿ يَٰٓأَيُّهَا ٱلْمُدَّثِّرُ ۝ قُمْ فَأَنذِرْ ﴾</div>
+    <p>“Wahai orang yang berselimut! Bangunlah, lalu berilah peringatan.”</p>
+    <p>(al-Muddaththir 74:1–2)<a class="footnote-ref">【3】</a></p>
+  </blockquote>
+
+  <p>➡️ Dakwah didahulukan sebelum:<br>
+  kuasa,<br>
+  sistem,<br>
+  undang-undang.</p>
+
+  <h3>5.6.4 Akhlak Pendakwah</h3>
+
+  <p>Ittiba’ dalam dakwah bukan hanya pada apa yang dibuat,<br>
+  tetapi bagaimana pendakwah membawa dirinya.</p>
+
+  <p>Rasulullah ﷺ berdakwah:<br>
+  dengan sabar ketika ditolak,<br>
+  dengan rahmah ketika dihina,<br>
+  tanpa memaksa,<br>
+  tanpa menghina manusia.</p>
+
+  <blockquote>
+    <div class="arab">﴿ فَبِمَا رَحْمَةٍۢ مِّنَ ٱللَّهِ لِنتَ لَهُمْ ﴾</div>
+    <p>“Maka dengan rahmat daripada Allah engkau bersikap lemah lembut terhadap mereka.”</p>
+    <p>(Āli ‘Imrān 3:159)<a class="footnote-ref">【4】</a></p>
+  </blockquote>
+
+  <p>➡️ Kelembutan bukan strategi,<br>
+  tetapi ketaatan kepada sunnah Nabi ﷺ.</p>
+
+  <h3>5.6.5 Bahaya Dakwah Tanpa Ittiba’</h3>
+
+  <p>Apabila dakwah tidak mengikuti tertib Rasulullah ﷺ:<br>
+  manusia dihukum sebelum diajak,<br>
+  perubahan dituntut sebelum iman,<br>
+  hasil dikejar sebelum sabar,<br>
+  kejayaan diukur dengan angka dan pengaruh.</p>
+
+  <p>Akibatnya:<br>
+  pendakwah cepat letih,<br>
+  masyarakat menjauh,<br>
+  dakwah kehilangan nur.</p>
+
+  <blockquote>
+    <div class="arab">﴿ أَفَأَنتَ تُكْرِهُ ٱلنَّاسَ حَتَّىٰ يَكُونُوا۟ مُؤْمِنِينَ ﴾</div>
+    <p>“Maka adakah engkau hendak memaksa manusia sehingga mereka menjadi orang beriman?”</p>
+    <p>(Yūnus 10:99)<a class="footnote-ref">【5】</a></p>
+  </blockquote>
+
+  <p>➡️ Paksaan ialah tanda hilangnya Ittiba’.</p>
+
+  <h3>🔒 Penguncian Prinsip 5.6</h3>
+  <p>Dakwah ialah medan ujian Ittiba’ paling awal.<br>
+  Dakwah sah hanya apabila mengikut cara Rasulullah ﷺ.<br>
+  Cara lebih penting daripada isi dalam menilai kesahihan dakwah.<br>
+  Tertib dakwah tidak boleh diubah walaupun tekanan realiti.<br>
+  Dakwah tanpa Ittiba’ melahirkan keletihan dan kehilangan nur.</p>
+
+  <h3>🔥 Rumusan Tauhidi 5.6</h3>
+  <p>Dakwah bukan kerja pendakwah,<br>
+  tetapi mekanisme Allah untuk memecahkan kebergantungan hati kepada makhluk.</p>
+
+  <div class="footnotes">
+    <p>📌 Nota Kaki Bab 5.6</p>
+    <ol>
+      <li>an-Naḥl 16:125 — Perintah dakwah kepada jalan Allah.</li>
+      <li>Yūsuf 12:108 — Dakwah Rasulullah ﷺ atas basirah.</li>
+      <li>al-Muddaththir 74:1–2 — Dakwah sebagai perintah awal.</li>
+      <li>Āli ‘Imrān 3:159 — Kelembutan dalam dakwah.</li>
+      <li>Yūnus 10:99 — Larangan memaksa iman.</li>
+    </ol>
+  </div>
+
+  <a class="toplink" href="#top">↑ Atas</a>
+</section>
+
+<div class="badge">🟢 5.7 Ittiba’ dalam Usaha Hidayah</div>
+
+<section class="section" id="5-7">
+
+  <h2>(Ruh Bertemu Ruh)</h2>
+
+  <p>Bab ini mengunci satu hakikat Tauhidi yang sangat halus tetapi paling menentukan:</p>
+
+  <p>Hidayah bukan hasil usaha manusia,<br>
+  tetapi urusan Allah yang berlaku dalam tertib Rasulullah ﷺ.</p>
+
+  <p>Kesilapan besar umat ialah menyangka bahawa:<br>
+  mesej yang betul akan menghasilkan hidayah,<br>
+  hujah yang kuat akan menundukkan hati,<br>
+  medium yang luas akan melahirkan penerimaan.</p>
+
+  <p>Sedangkan al-Qur’an memutuskan semua andaian ini.</p>
+
+  <p>Dalam Kerangka 3 Asbab:</p>
+
+  <p>Hidayah milik Allah,<br>
+  tetapi tertib hidayah ditunjukkan oleh Rasulullah ﷺ.</p>
+
+  <h3>5.7.1 Hidayah Milik Allah</h3>
+
+  <p>Hidayah bukan:<br>
+  perubahan pendapat,<br>
+  persetujuan intelektual,<br>
+  atau penerimaan hujah.</p>
+
+  <p>Hidayah ialah:</p>
+
+  <p>perpindahan hati daripada bergantung kepada makhluk<br>
+  kepada bergantung sepenuhnya kepada Allah.</p>
+
+  <p>Perpindahan ini:<br>
+  tidak berlaku dengan hujah semata-mata,<br>
+  tidak berlaku dengan paksaan,<br>
+  tidak berlaku dengan teknik.</p>
+
+  <blockquote>
+    <div class="arab">﴿ إِنَّكَ لَا تَهْدِى مَنْ أَحْبَبْتَ وَلَٰكِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ ﴾</div>
+    <p>“Sesungguhnya engkau tidak dapat memberi hidayah kepada orang yang engkau kasihi, tetapi Allah memberi hidayah kepada siapa yang Dia kehendaki.”</p>
+    <p>(al-Qaṣaṣ 28:56)<a class="footnote-ref">【1】</a></p>
+  </blockquote>
+
+  <p>➡️ Rasulullah ﷺ sendiri tidak memiliki kuasa memberi hidayah.</p>
+
+  <h3>5.7.2 Tertib Hidayah Nabi ﷺ</h3>
+
+  <p>Walaupun hidayah milik Allah,<br>
+  Allah menetapkan tertibnya melalui Rasulullah ﷺ.</p>
+
+  <p>Dalam sirah:<br>
+  Baginda ﷺ hadir bersama manusia,<br>
+  hidup bersama manusia,<br>
+  bersabar bersama manusia.</p>
+
+  <p>Tidak pernah berlaku:<br>
+  dakwah tanpa kehadiran insan,<br>
+  hidayah melalui jarak tanpa hubungan.</p>
+
+  <blockquote>
+    <div class="arab">﴿ لَقَدْ جَآءَكُمْ رَسُولٌۭ مِّنْ أَنفُسِكُمْ ﴾</div>
+    <p>“Sesungguhnya telah datang kepada kamu seorang Rasul dari kalangan kamu sendiri.”</p>
+    <p>(at-Tawbah 9:128)<a class="footnote-ref">【2】</a></p>
+  </blockquote>
+
+  <p>➡️ Hidayah berlaku melalui insan yang hadir,<br>
+  bukan melalui sistem atau medium.</p>
+
+  <h3>5.7.3 Kehadiran Insan vs Medium</h3>
+
+  <p>Dalam disiplin Tauhidi:</p>
+
+  <p>Media tidak boleh menjadi dakwah.<br>
+  Media hanya khadam kepada suasana dakwah.</p>
+
+  <p>Media:<br>
+  menyampaikan maklumat,<br>
+  memperluas capaian,</p>
+
+  <p>tetapi:<br>
+  tidak memindahkan iman,<br>
+  tidak memindahkan pengorbanan,<br>
+  tidak memindahkan kesabaran.</p>
+
+  <p>Sirah membuktikan:<br>
+  iman sahabat lahir daripada kebersamaan dengan Nabi ﷺ,<br>
+  bukan daripada maklumat semata-mata.</p>
+
+  <blockquote>
+    <div class="arab">﴿ وَٱلَّذِينَ ءَاوَوْا۟ وَنَصَرُوٓا۟ أُو۟لَٰٓئِكَ هُمُ ٱلْمُؤْمِنُونَ حَقًّا ﴾</div>
+    <p>“Dan orang-orang yang memberi tempat dan pertolongan, merekalah orang-orang yang benar-benar beriman.”</p>
+    <p>(al-Anfāl 8:74)<a class="footnote-ref">【3】</a></p>
+  </blockquote>
+
+  <p>➡️ Iman hakiki lahir dalam kebersamaan, bukan jarak.</p>
+
+  <h3>5.7.4 Peranan Pendakwah</h3>
+
+  <p>Pendakwah bukan:<br>
+  pemberi hidayah,<br>
+  pengubah hati,<br>
+  atau penentu hasil.</p>
+
+  <p>Pendakwah hanyalah:</p>
+
+  <p>hamba yang menyampaikan dalam tertib ketaatan.</p>
+
+  <blockquote>
+    <div class="arab">﴿ فَذَكِّرْ إِنَّمَآ أَنتَ مُذَكِّرٌۭ ﴾</div>
+    <p>“Maka berilah peringatan; sesungguhnya engkau hanyalah seorang pemberi peringatan.”</p>
+    <p>(al-Ghāshiyah 88:21)<a class="footnote-ref">【4】</a></p>
+  </blockquote>
+
+  <p>➡️ Peranan pendakwah:<br>
+  hadir,<br>
+  menyampaikan,<br>
+  dan menyerahkan hasil kepada Allah.</p>
+
+ <h3>5.7.5 Dakwah Tanpa Tuntut Hasil</h3>
+
+<p>Salah satu tanda paling jelas Ittiba’ ialah:<br>
+berdakwah tanpa menuntut hasil.</p>
+
+<p>Rasulullah ﷺ:<br>
+terus berdakwah walaupun ditolak,<br>
+tidak mengubah cara untuk penerimaan,<br>
+tidak mengejar hasil segera.</p>
+
+<blockquote>
+  <div class="arab">﴿ فَإِنَّمَا عَلَيْكَ ٱلْبَلَٰغُ وَعَلَيْنَا ٱلْحِسَابُ ﴾</div>
+  <p>“Maka sesungguhnya kewajipanmu hanyalah menyampaikan, dan kewajipan Kami adalah perhitungan.”</p>
+  <p>(ar-Ra‘d 13:40)<a class="footnote-ref">【5】</a></p>
+</blockquote>
+
+<blockquote>
+  <div class="arab">﴿ ٱتَّبِعُوا۟ مَن لَّا يَسْـَٔلُكُمْ أَجْرًا وَهُم مُّهْتَدُونَ ﴾</div>
+  <p>“Ikutlah orang yang tidak meminta upah daripada kamu, dan mereka pula orang yang mendapat petunjuk.”</p>
+  <p>(Yāsīn 36:21)<a class="footnote-ref">【6】</a></p>
+</blockquote>
+
+<p>➡️ Menuntut hasil atau balasan menunjukkan:<br>
+hati masih bergantung kepada makhluk.</p>
+  <h3>🔒 Penguncian Prinsip 5.7</h3>
+  <p>Hidayah milik Allah sepenuhnya.<br>
+  Rasulullah ﷺ menunjukkan tertib hidayah, bukan kuasanya.<br>
+  Hidayah berlaku melalui pertemuan insan dalam suasana iman.<br>
+  Media tidak boleh menggantikan kehadiran manusia.<br>
+  Pendakwah hanya menyampaikan, bukan memberi hidayah.<br>
+  Menuntut hasil menandakan hilangnya Ittiba’.</p>
+
+  <h3>🔥 Rumusan Tauhidi 5.7</h3>
+  <p>Hidayah bukan terhasil daripada usaha manusia,<br>
+  tetapi berlaku apabila usaha itu tunduk kepada tertib Rasulullah ﷺ.</p>
+
+  <div class="footnotes">
+    <p>📌 Nota Kaki Bab 5.7</p>
+    <ol>
+      <li>al-Qaṣaṣ 28:56 — Hidayah milik Allah, bukan manusia.</li>
+      <li>at-Tawbah 9:128 — Rasulullah ﷺ hadir sebagai insan.</li>
+      <li>al-Anfāl 8:74 — Iman hakiki lahir dalam kebersamaan.</li>
+      <li>al-Ghāshiyah 88:21 — Pendakwah sebagai pemberi peringatan.</li>
+      <li>ar-Ra‘d 13:40 — Tanggungjawab menyampaikan dan penyerahan hasil.</li>
+    </ol>
+  </div>
+
+  <a class="toplink" href="#top">↑ Atas</a>
+</section>
+<section class="section" id="5-8">
+  <h2>🔵 5.8 Ittiba’ dalam Pengorbanan</h2>
+
+  <p>Bab ini mengunci satu prinsip besar dalam Kerangka 3 Asbab:</p>
+
+  <p>Ittiba’ Rasulullah ﷺ tidak pernah terpisah daripada pengorbanan.</p>
+
+  <p>Sesiapa yang mendakwa mengikuti Nabi ﷺ tanpa pengorbanan,
+  hakikatnya hanya meniru bentuk — bukan tertib.</p>
+
+  <p>Dalam seluruh sirah:</p>
+  <ul>
+    <li>Ittiba’ diuji melalui kehilangan,</li>
+    <li>bukan keselesaan,</li>
+    <li>bukan keuntungan,</li>
+    <li>dan bukan hasil zahir.</li>
+  </ul>
+
+  <p>Pengorbanan bukan tambahan dalam agama,
+  tetapi:</p>
+
+  <p>medan ujian sama ada Ittiba’ itu benar atau hanya dakwaan.</p>
+
+  <h3>5.8.1 Prinsip Pengorbanan</h3>
+
+  <p>Pengorbanan dalam Islam bukan:</p>
+  <ul>
+    <li>penderitaan kosong,</li>
+    <li>romantisme kesusahan,</li>
+    <li>atau penafian diri tanpa arah.</li>
+  </ul>
+
+  <p>Pengorbanan ialah:</p>
+
+  <p>ketaatan kepada perintah Allah
+  walaupun ia mematahkan kepentingan diri, harta dan rasa selamat.</p>
+
+  <p>Dalam disiplin Tauhidi:</p>
+  <ul>
+    <li>pengorbanan bukan sebab memberi kesan,</li>
+    <li>pengorbanan bukan alat memaksa kemenangan,</li>
+  </ul>
+
+  <p>tetapi:</p>
+
+  <p>bukti bahawa hati telah tunduk sepenuhnya kepada Allah.</p>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ لَن تَنَالُوا۟ ٱلْبِرَّ حَتَّىٰ تُنفِقُوا۟ مِمَّا تُحِبُّونَ ﴾</div>
+    “Kamu tidak akan mencapai kebajikan sehingga kamu menginfakkan apa yang kamu cintai.”
+    (Āli ‘Imrān 3:92)<a class="footnote-ref" href="#fn-5-8-1">【1】</a>
+  </blockquote>
+
+  <p>➡️ Cinta kepada Allah diuji pada apa yang kita sanggup lepaskan.</p>
+
+  <h3>5.8.2 Hijrah — Pengorbanan Diri Sebelum Sistem</h3>
+
+  <p>Hijrah bukan sekadar perpindahan tempat,
+  tetapi pemutusan hati daripada:</p>
+  <ul>
+    <li>keselamatan,</li>
+    <li>sokongan sosial,</li>
+    <li>status,</li>
+    <li>dan kebiasaan hidup.</li>
+  </ul>
+
+  <p>Rasulullah ﷺ tidak menggunakan mukjizat untuk berhijrah,
+  walaupun Baginda ﷺ mampu.</p>
+
+  <p>Baginda ﷺ:</p>
+  <ul>
+    <li>mengambil sebab,</li>
+    <li>bersembunyi di Gua Thur,</li>
+    <li>merancang perjalanan,</li>
+  </ul>
+
+  <p>namun hati:</p>
+  <ul>
+    <li>tidak bergantung kepada sebab,</li>
+    <li>tetapi sepenuhnya kepada Allah.</li>
+  </ul>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ إِلَّا تَنصُرُوهُ فَقَدْ نَصَرَهُ ٱللَّهُ إِذْ أَخْرَجَهُ ٱلَّذِينَ كَفَرُوا۟ ثَانِىَ ٱثْنَيْنِ إِذْ هُمَا فِى ٱلْغَارِ ﴾</div>
+    “Jika kamu tidak menolongnya, maka Allah telah pun menolongnya ketika orang-orang kafir mengusirnya, sedang dia salah seorang daripada dua orang ketika mereka berada di dalam gua.”
+    (at-Tawbah 9:40)<a class="footnote-ref" href="#fn-5-8-2">【2】</a>
+  </blockquote>
+
+  <p>➡️ Hijrah mengajar:</p>
+
+  <p>taat dahulu, selamat kemudian — jika Allah kehendaki.</p>
+
+  <h3>5.8.3 Badar — Pengorbanan Tanpa Kekuatan Zahir</h3>
+
+  <p>Badar berlaku dalam keadaan:</p>
+  <ul>
+    <li>bilangan sedikit,</li>
+    <li>persenjataan lemah,</li>
+    <li>pengalaman hampir tiada.</li>
+  </ul>
+
+  <p>Namun Rasulullah ﷺ tidak menunggu cukup sebab zahir.
+  Baginda ﷺ tetap taat kepada perintah Allah.</p>
+
+  <p>Baginda ﷺ menyempurnakan tertib:</p>
+  <ul>
+    <li>syura,</li>
+    <li>saf,</li>
+    <li>doa,</li>
+    <li>tawakkal.</li>
+  </ul>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ وَلَقَدْ نَصَرَكُمُ ٱللَّهُ بِبَدْرٍ وَأَنتُمْ أَذِلَّةٌۭ ﴾</div>
+    “Dan sesungguhnya Allah telah menolong kamu dalam peperangan Badar, sedang kamu dalam keadaan lemah.”
+    (Āli ‘Imrān 3:123)<a class="footnote-ref" href="#fn-5-8-3">【3】</a>
+  </blockquote>
+
+  <p>➡️ Badar mengunci prinsip:</p>
+
+  <p>kemenangan datang selepas ketaatan,
+  bukan kerana kecukupan sebab.</p>
+
+  <h3>5.8.4 Uhud — Pengorbanan Tidak Menjamin Kemenangan Zahir</h3>
+
+  <p>Uhud menunjukkan satu hakikat halus:</p>
+
+  <p>Para sahabat:</p>
+  <ul>
+    <li>telah berkorban,</li>
+    <li>telah taat pada awalnya,</li>
+  </ul>
+
+  <p>tetapi:</p>
+  <ul>
+    <li>melanggar tertib Rasulullah ﷺ</li>
+    <li>dengan mengutamakan sebab zahir (ghanimah).</li>
+  </ul>
+
+  <p>Kesannya:</p>
+  <ul>
+    <li>kekalahan zahir berlaku,</li>
+    <li>walaupun iman mereka tidak tertolak.</li>
+  </ul>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ حَتَّىٰٓ إِذَا فَشِلْتُمْ وَتَنَٰزَعْتُمْ فِى ٱلْأَمْرِ وَعَصَيْتُم مِّنۢ بَعْدِ مَآ أَرَىٰكُم مَّا تُحِبُّونَ ﴾</div>
+    “Sehingga apabila kamu lemah dan berselisih dalam urusan itu serta kamu menderhakai setelah Allah memperlihatkan kepada kamu apa yang kamu sukai.”
+    (Āli ‘Imrān 3:152)<a class="footnote-ref" href="#fn-5-8-4">【4】</a>
+  </blockquote>
+
+  <p>➡️ Uhud mengajar:</p>
+  <ul>
+    <li>pengorbanan tanpa ittiba’ tidak melahirkan nusrah,</li>
+    <li>hasil zahir bukan ukuran penerimaan Allah.</li>
+  </ul>
+
+  <h3>5.8.5 Tabuk — Pengorbanan Tanpa Hasil Zahir</h3>
+
+  <p>Tabuk ialah ujian paling halus:</p>
+  <ul>
+    <li>panas terik,</li>
+    <li>jarak jauh,</li>
+    <li>bekalan sedikit,</li>
+    <li>tiada peperangan berlaku.</li>
+  </ul>
+
+  <p>Secara logik manusia:
+  “Untuk apa berkorban jika tiada hasil?”</p>
+
+  <p>Namun Rasulullah ﷺ tetap keluar
+  kerana perintah Allah, bukan hasil.</p>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ ٱنفِرُوا۟ خِفَافًۭا وَثِقَالًۭا وَجَٰهِدُوا۟ بِأَمْوَٰلِكُمْ وَأَنفُسِكُمْ ﴾</div>
+    “Berangkatlah kamu baik dalam keadaan ringan ataupun berat, dan berjihadlah dengan harta dan diri kamu.”
+    (at-Tawbah 9:41)<a class="footnote-ref" href="#fn-5-8-5">【5】</a>
+  </blockquote>
+
+  <p>➡️ Tabuk mengunci prinsip tertinggi:</p>
+
+  <p>ketaatan tanpa hasil zahir
+  ialah Ittiba’ paling murni.</p>
+
+  <h4>🔒 Penguncian Prinsip 5.8</h4>
+  <ol>
+    <li>Ittiba’ sentiasa diuji melalui pengorbanan.</li>
+    <li>Pengorbanan mendahului nusrah.</li>
+    <li>Pengorbanan tidak menjamin kemenangan zahir.</li>
+    <li>Pengorbanan tanpa ittiba’ melahirkan kegagalan.</li>
+    <li>Ketaatan tanpa hasil ialah bentuk Ittiba’ paling tinggi.</li>
+  </ol>
+
+  <h4>🔥 Rumusan Tauhidi 5.8</h4>
+
+  <p>Pengorbanan bukan sebab perubahan,
+  tetapi bukti bahawa hati telah tunduk kepada Allah.</p>
+
+  <div class="footnotes">
+    <h4>📌 Nota Kaki Bab 5.8</h4>
+    <ol>
+      <li id="fn-5-8-1">Āli ‘Imrān 3:92 — Pengorbanan sebagai syarat mencapai kebaikan.</li>
+      <li id="fn-5-8-2">at-Tawbah 9:40 — Hijrah dan nusrah Allah.</li>
+      <li id="fn-5-8-3">Āli ‘Imrān 3:123 — Kemenangan Badar dalam keadaan lemah.</li>
+      <li id="fn-5-8-4">Āli ‘Imrān 3:152 — Pelanggaran tertib dalam Uhud.</li>
+      <li id="fn-5-8-5">at-Tawbah 9:41 — Seruan berjihad tanpa melihat hasil.</li>
+    </ol>
+  </div>
+
+  <a class="toplink" href="#top">↑ Atas</a>
+</section>
+
+<section class="section" id="5-9">
+  <h2>🟡 5.9 Ittiba’ dalam Ibadah</h2>
+
+  <p>Bab ini mengunci satu hakikat yang sering terlepas dalam perbahasan ibadah:</p>
+
+  <p>Ibadah yang sah tidak diukur pada rasa, kesungguhan, atau kesan zahir,
+  tetapi pada ketaatan kepada perintah Allah
+  yang dilaksanakan mengikut tertib Rasulullah ﷺ.</p>
+
+  <p>Ramai beribadah:</p>
+  <ul>
+    <li>dengan niat yang baik,</li>
+    <li>dengan disiplin tinggi,</li>
+    <li>dengan semangat yang kuat,</li>
+  </ul>
+
+  <p>namun tanpa Ittiba’, ibadah itu:</p>
+  <ul>
+    <li>menjadi ritual,</li>
+    <li>menjadi pengalaman peribadi,</li>
+    <li>atau menjadi alat menilai diri dan orang lain.</li>
+  </ul>
+
+  <p>Dalam Kerangka 3 Asbab:</p>
+
+  <p>Ibadah ialah medan paling halus
+  kerana syirik halus paling mudah masuk melalui cara beramal.</p>
+
+  <h3>5.9.1 Hakikat Ibadah</h3>
+
+  <p>Ibadah bukan:</p>
+  <ul>
+    <li>teknik ketenangan,</li>
+    <li>latihan spiritual bebas,</li>
+    <li>atau alat membina imej kesolehan.</li>
+  </ul>
+
+  <p>Ibadah ialah:</p>
+
+  <p>ketaatan kepada perintah Allah
+  yang dilaksanakan mengikut cara Rasulullah ﷺ
+  dengan objektif mendapatkan keredhaan Allah.</p>
+
+  <p>Di sinilah ikhlas dikunci:</p>
+
+  <p>Ikhlas = tunduk kepada perintah Allah
+  dengan tujuan mendapatkan redha Allah.</p>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ وَمَآ أُمِرُوٓا۟ إِلَّا لِيَعْبُدُوا۟ ٱللَّهَ مُخْلِصِينَ لَهُ ٱلدِّينَ ﴾</div>
+    “Dan mereka tidak diperintahkan melainkan supaya menyembah Allah dengan mengikhlaskan ketaatan kepada-Nya.”
+    (al-Bayyinah 98:5)<a class="footnote-ref" href="#fn-5-9-1">【1】</a>
+  </blockquote>
+
+  <p>➡️ Ibadah sah apabila:</p>
+  <ul>
+    <li>perintahnya dari wahyu,</li>
+    <li>caranya ikut sunnah,</li>
+    <li>hatinya tunduk kepada Allah.</li>
+  </ul>
+
+  <h3>5.9.2 Ittiba’ Menentukan Bentuk</h3>
+
+  <p>Dalam ibadah:</p>
+  <ul>
+    <li>niat sahaja tidak mencukupi,</li>
+    <li>kesungguhan sahaja tidak menjamin penerimaan.</li>
+  </ul>
+
+  <p>Ittiba’ menentukan:</p>
+  <ul>
+    <li>apa yang diibadahkan,</li>
+    <li>bila dilakukan,</li>
+    <li>bagaimana dilaksanakan,</li>
+    <li>dan berapa kadarnya.</li>
+  </ul>
+
+  <p>Tanpa Ittiba’:</p>
+  <ul>
+    <li>ibadah menjadi ciptaan manusia,</li>
+    <li>manusia menyangka dirinya mendekat kepada Allah
+    dengan cara yang Allah tidak perintahkan.</li>
+  </ul>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ مَّن يُطِعِ ٱلرَّسُولَ فَقَدْ أَطَاعَ ٱللَّهَ ﴾</div>
+    “Sesiapa yang taat kepada Rasul, maka sesungguhnya dia telah taat kepada Allah.”
+    (an-Nisā’ 4:80)<a class="footnote-ref" href="#fn-5-9-2">【2】</a>
+  </blockquote>
+
+  <p>➡️ Ketaatan kepada Allah hanya sah melalui Rasulullah ﷺ.</p>
+
+  <h3>5.9.3 Ibadah vs Bid‘ah</h3>
+
+  <p>Perbezaan antara ibadah dan bid‘ah bukan pada niat,
+  tetapi pada:</p>
+  <ul>
+    <li>sumber perintah,</li>
+    <li>dan cara pelaksanaan.</li>
+  </ul>
+
+  <p>Bid‘ah lahir apabila:</p>
+  <ul>
+    <li>perintah tidak datang daripada wahyu,</li>
+    <li>atau cara tidak mengikut sunnah,
+    walaupun tujuannya “baik”.</li>
+  </ul>
+
+  <p>Hadith asas:</p>
+
+  <blockquote>
+    <div class="arab">مَنْ أَحْدَثَ فِي أَمْرِنَا هَذَا مَا لَيْسَ مِنْهُ فَهُوَ رَدٌّ</div>
+    “Sesiapa yang mengada-adakan dalam urusan kami ini sesuatu yang bukan daripadanya, maka ia tertolak.”
+    (Riwayat al-Bukhārī & Muslim)<a class="footnote-ref" href="#fn-5-9-3">【3】</a>
+  </blockquote>
+
+  <p>➡️ Ibadah tanpa Ittiba’ bukan kurang sempurna,
+  tetapi tertolak.</p>
+
+  <h3>5.9.4 Rasa Bukan Penentu</h3>
+
+  <p>Kesalahan besar dalam ibadah ialah:</p>
+  <ul>
+    <li>menjadikan khusyuk, tenang, nikmat, atau sedih
+    sebagai penentu sah ibadah.</li>
+  </ul>
+
+  <p>Dalam Ittiba’ Rasulullah ﷺ:</p>
+  <ul>
+    <li>Baginda ﷺ beribadah kerana perintah,</li>
+    <li>bukan kerana rasa.</li>
+  </ul>
+
+  <p>Rasa:</p>
+  <ul>
+    <li>adalah janji Allah,</li>
+    <li>adalah anugerah Allah,</li>
+  </ul>
+
+  <p>tetapi:</p>
+  <ul>
+    <li>bukan syarat sah amal,</li>
+    <li>bukan sebab untuk berhenti beramal.</li>
+  </ul>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ ۝ ٱلَّذِينَ هُمْ فِى صَلَاتِهِمْ خَٰشِعُونَ ﴾</div>
+    “Sesungguhnya berjayalah orang-orang beriman, iaitu mereka yang khusyuk dalam solat mereka.”
+    (al-Mu’minūn 23:1–2)<a class="footnote-ref" href="#fn-5-9-4">【4】</a>
+  </blockquote>
+
+  <p>➡️ Khusyuk ialah sifat orang beriman,
+  bukan syarat sah solat.</p>
+
+  <h3>5.9.5 Ibadah Infradi & Ijtima‘i</h3>
+
+  <p>Rasulullah ﷺ tidak membina ibadah sebagai pengalaman individu semata-mata.</p>
+
+  <p>Baginda ﷺ:</p>
+  <ul>
+    <li>menghidupkan solat berjamaah,</li>
+    <li>memakmurkan masjid,</li>
+    <li>membina suasana iman secara ijtima‘i.</li>
+  </ul>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ وَٱرْكَعُوا۟ مَعَ ٱلرَّٰكِعِينَ ﴾</div>
+    “Dan rukuklah kamu bersama orang-orang yang rukuk.”
+    (al-Baqarah 2:43)<a class="footnote-ref" href="#fn-5-9-5">【5】</a>
+  </blockquote>
+
+  <p>➡️ Ittiba’ menolak:</p>
+  <ul>
+    <li>individualisme rohani,</li>
+    <li>ibadah terasing daripada jamaah.</li>
+  </ul>
+
+  <p>Dalam Kerangka 3 Asbab:</p>
+  <ul>
+    <li>Amal infradi → hidupkan hati</li>
+    <li>Amal ijtima‘i → hidupkan suasana</li>
+  </ul>
+
+  <h4>🔒 Penguncian Prinsip 5.9</h4>
+  <ol>
+    <li>Ibadah sah hanya dengan Ittiba’ Rasulullah ﷺ.</li>
+    <li>Ikhlas ialah tunduk kepada perintah Allah, bukan sekadar niat baik.</li>
+    <li>Ittiba’ menentukan bentuk, masa dan cara ibadah.</li>
+    <li>Rasa ialah anugerah, bukan penentu sah amal.</li>
+    <li>Ibadah tanpa Ittiba’ melahirkan bid‘ah dan syirik halus.</li>
+    <li>Ibadah mesti hidup dalam dimensi infradi dan ijtima‘i.</li>
+  </ol>
+
+  <h4>🔥 Rumusan Tauhidi 5.9</h4>
+
+  <p>Ibadah tanpa Ittiba’ bukan jalan kepada Allah,
+  tetapi jalan yang manusia cipta menuju dirinya sendiri.</p>
+
+  <div class="footnotes">
+    <h4>📌 Nota Kaki Bab 5.9</h4>
+    <ol>
+      <li id="fn-5-9-1">al-Bayyinah 98:5 — Ikhlas sebagai ketaatan kepada perintah Allah.</li>
+      <li id="fn-5-9-2">an-Nisā’ 4:80 — Ketaatan kepada Rasul sebagai ukuran ketaatan kepada Allah.</li>
+      <li id="fn-5-9-3">Hadith al-Bukhārī & Muslim — Penolakan bid‘ah.</li>
+      <li id="fn-5-9-4">al-Mu’minūn 23:1–2 — Khusyuk sebagai sifat orang beriman.</li>
+      <li id="fn-5-9-5">al-Baqarah 2:43 — Ibadah dalam jamaah.</li>
+    </ol>
+  </div>
+
+  <a class="toplink" href="#top">↑ Atas</a>
+</section>
+
+<div class="badge">🔴 5.10 Ittiba’ dalam Kehidupan Menyeluruh</div>
+
+<section class="section" id="5-10">
+  <h2>🔴 5.10 Ittiba’ dalam Kehidupan Menyeluruh</h2>
+
+  <p>Bab ini mengunci satu hakikat besar yang sering dipecahkan dalam wacana moden:</p>
+
+  <p>Ittiba’ Rasulullah ﷺ tidak terhad kepada ibadah,<br>
+  tetapi merangkumi seluruh kehidupan manusia.</p>
+
+  <p>Memisahkan agama kepada:</p>
+  <ul>
+    <li>ibadah peribadi,</li>
+    <li>akhlak sebagai nilai umum,</li>
+    <li>muamalat sebagai urusan dunia,</li>
+    <li>dan politik sebagai wilayah bebas wahyu,</li>
+  </ul>
+
+  <p>bukan ajaran Rasulullah ﷺ,<br>
+  tetapi warisan pemikiran yang memisahkan hidup daripada Tauhid.</p>
+
+  <p>Dalam Kerangka 3 Asbab:</p>
+
+  <p>Ittiba’ mesti hidup dalam semua bidang,<br>
+  atau Tauhid akan runtuh secara senyap.</p>
+
+  <h3>5.10.1 Ittiba’ dalam Akhlak</h3>
+
+  <p>Akhlak dalam Islam bukan:</p>
+  <ul>
+    <li>teknik komunikasi,</li>
+    <li>nilai universal terpisah daripada iman,</li>
+    <li>atau strategi untuk diterima manusia.</li>
+  </ul>
+
+  <p>Akhlak ialah:</p>
+
+  <p>buah ketaatan kepada Allah<br>
+  yang lahir daripada iman<br>
+  dan dipelihara melalui Ittiba’ Rasulullah ﷺ.</p>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ ﴾</div>
+    “Dan sesungguhnya engkau benar-benar berada di atas akhlak yang agung.”
+    (al-Qalam 68:4)<a class="footnote-ref">【1】</a>
+  </blockquote>
+
+  <p>➡️ Akhlak Nabi ﷺ bukan strategi,<br>
+  tetapi manifestasi Tauhid.</p>
+
+  <p>Tanpa Ittiba’:</p>
+  <ul>
+    <li>akhlak menjadi topeng,</li>
+    <li>sabar menjadi kepura-puraan,</li>
+    <li>kelembutan menjadi alat manipulasi.</li>
+  </ul>
+
+  <h3>5.10.2 Ittiba’ dalam Muamalat</h3>
+
+  <p>Muamalat bukan:</p>
+  <ul>
+    <li>ruang neutral,</li>
+    <li>bukan sekadar kontrak sosial,</li>
+    <li>bukan medan kreativiti bebas.</li>
+  </ul>
+
+  <p>Muamalat ialah:</p>
+
+  <p>medan ketaatan<br>
+  dan ujian amanah di hadapan Allah.</p>
+
+  <p>Rasulullah ﷺ mengikat muamalat dengan iman:</p>
+  <ul>
+    <li>jujur dalam jual beli,</li>
+    <li>amanah dalam hutang,</li>
+    <li>adil dalam timbang dan ukur.</li>
+  </ul>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ وَأَوْفُوا۟ ٱلْكَيْلَ وَٱلْمِيزَانَ بِٱلْقِسْطِ ﴾</div>
+    “Dan sempurnakanlah sukatan dan timbangan dengan adil.”
+    (al-An‘ām 6:152)<a class="footnote-ref">【2】</a>
+  </blockquote>
+
+  <p>➡️ Muamalat tanpa Ittiba’:</p>
+  <ul>
+    <li>melahirkan kezaliman yang disahkan sistem.</li>
+  </ul>
+
+  <p>Dalam Kerangka 3 Asbab:</p>
+  <ul>
+    <li>keuntungan ≠ kebenaran</li>
+    <li>kestabilan ≠ redha Allah</li>
+  </ul>
+
+  <h3>5.10.3 Ittiba’ dalam Syariat</h3>
+
+  <p>Syariat bukan:</p>
+  <ul>
+    <li>budaya Arab,</li>
+    <li>pilihan peribadi,</li>
+    <li>atau sesuatu yang boleh diubah mengikut zaman.</li>
+  </ul>
+
+  <p>Syariat ialah:</p>
+
+  <p>perintah Allah<br>
+  yang diterjemahkan oleh Rasulullah ﷺ<br>
+  dan wajib ditaati tanpa rundingan.</p>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ وَمَا كَانَ لِمُؤْمِنٍۢ وَلَا مُؤْمِنَةٍ إِذَا قَضَى ٱللَّهُ وَرَسُولُهُۥٓ أَمْرًا أَن يَكُونَ لَهُمُ ٱلْخِيَرَةُ مِنْ أَمْرِهِمْ ﴾</div>
+    “Dan tidaklah patut bagi seorang mukmin lelaki atau perempuan, apabila Allah dan Rasul-Nya telah menetapkan suatu urusan, mereka mempunyai pilihan lain dalam urusan mereka.”
+    (al-Aḥzāb 33:36)<a class="footnote-ref">【3】</a>
+  </blockquote>
+
+  <p>➡️ Ittiba’ menafikan rundingan dengan wahyu.</p>
+
+  <p>Menangguhkan syariat atas nama:</p>
+  <ul>
+    <li>maslahat,</li>
+    <li>kestabilan,</li>
+    <li>realiti semasa,</li>
+  </ul>
+
+  <p>ialah tanda:</p>
+
+  <p>sebab telah kembali menguasai keputusan.</p>
+
+  <h3>5.10.4 Ittiba’ dalam Politik</h3>
+
+  <p>Politik dalam Islam bukan:</p>
+  <ul>
+    <li>perebutan kuasa,</li>
+    <li>permainan pengaruh,</li>
+    <li>atau alat mencapai agenda kelompok.</li>
+  </ul>
+
+  <p>Politik Nabawi ialah:</p>
+
+  <p>amanah untuk menegakkan perintah Allah<br>
+  dan menjaga keadilan.</p>
+
+  <p>Rasulullah ﷺ:</p>
+  <ul>
+    <li>tidak mengejar kuasa,</li>
+    <li>tidak berkompromi dengan batil,</li>
+    <li>tidak menggadaikan prinsip demi sokongan.</li>
+  </ul>
+
+  <p>Kuasa datang selepas:</p>
+  <ul>
     <li>dakwah,</li>
     <li>mujahadah,</li>
     <li>sabar,</li>
-    <li>jamaah,</li>
-    <li>dan perubahan masyarakat【4】.</li>
+    <li>pengorbanan.</li>
   </ul>
 
-  <p>Maka pendekatan integratif bukan bidaah metodologi; ia lebih dekat kepada cara wahyu sendiri mendidik manusia.</p>
-
-  <hr>
-
-  <h3>5.2.5 Rumusan Tauhidi 5.2</h3>
-  <div class="rumusan">
-    <ol>
-      <li>Ilmu Islam bukan serpihan yang terpisah, tetapi satu tertib hidup.</li>
-      <li>Kepakaran diterima, tetapi fragmentasi ditolak.</li>
-      <li>Kerangka 3 Asbab berfungsi menghubungkan semula hati, amal, wahyu, dan sistem.</li>
-      <li>Bab 5 membuktikan bahawa dunia hanya betul apabila tunduk kepada wahyu.</li>
-      <li>Integration lebih hampir kepada struktur al-Qur’an daripada pemisahan disiplin yang beku.</li>
-    </ol>
-  </div>
-
-  <div class="footnotes">
-    <h3>Nota Kaki 5.2</h3>
-    <ul>
-      <li>【1】 Lihat pola pengikatan iman dan amal dalam al-Qur’an, serta hubungan sabar dan nusrah, seperti al-'Aṣr 103:1–3, al-Baqarah 2:153, Muḥammad 47:7, dan ash-Shūrā 42:38.</li>
-      <li>【2】 Al-Anfāl 8:60 menunjukkan kewajipan mengambil sebab dunia, manakala keseluruhan sirah Rasulullah ﷺ menunjukkan dunia mesti tunduk kepada wahyu, bukan menggantikannya.</li>
-      <li>【3】 Frasa “alladhīna āmanū wa 'amilūṣ-ṣāliḥāt” merupakan antara struktur paling berulang dalam al-Qur’an dan menjadi dalil bahawa iman dan amal dibina sebagai satu kesatuan.</li>
-      <li>【4】 Kisah para Nabi dalam al-Qur’an sentiasa menghubungkan Tauhid, dakwah, sabar, penentangan, jamaah, hijrah, dan nusrah; lihat misalnya kisah Nūḥ, Mūsā, dan Rasulullah ﷺ sebagai tertib perubahan umat.</li>
-    </ul>
-  </div>
-
-  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<section class="section" id="5-3">
-  <div class="section-opener">
-    <h2>5.3 Jenis-Jenis Bukti dalam Kerangka Tauhidi</h2>
-    <p><em>Tidak semua kebenaran dibuktikan dengan satu neraca yang sama.</em></p>
-  </div>
-
-  <h3>5.3.1 Kesilapan Moden: Menjadikan Satu Jenis Bukti sebagai Hakim Mutlak</h3>
-
-  <p>Antara kesilapan besar zaman moden ialah memaksa semua kebenaran tunduk kepada satu neraca sahaja — biasanya data, angka, eksperimen, statistik, atau pemerhatian zahir.</p>
-
-  <p>Sedangkan dalam agama, jenis bukti tidak tunggal. Ada perkara yang dibuktikan dengan:</p>
-  <ul>
-    <li>wahyu,</li>
-    <li>sirah,</li>
-    <li>athar sahabat,</li>
-    <li>mushahadah amal,</li>
-    <li>dan ada juga yang dibantu oleh pemerhatian dunia【1】.</li>
-  </ul>
+  <p>Dalil asas:</p>
 
   <blockquote>
-    <p>Bila satu jenis bukti dimahkotakan atas semua yang lain, manusia mula meletakkan Asbab Fitrah sebagai hakim ke atas wahyu.</p>
+    <div class="arab">﴿ ٱلَّذِينَ إِن مَّكَّنَّٰهُمْ فِى ٱلْأَرْضِ أَقَامُوا۟ ٱلصَّلَوٰةَ وَءَاتَوُا۟ ٱلزَّكَوٰةَ وَأَمَرُوا۟ بِٱلْمَعْرُوفِ وَنَهَوْا۟ عَنِ ٱلْمُنكَرِ ﴾</div>
+    “Iaitu orang-orang yang jika Kami berikan mereka kekuasaan di bumi, mereka mendirikan solat, menunaikan zakat, menyuruh kepada yang makruf dan mencegah yang mungkar.”
+    (al-Ḥajj 22:41)<a class="footnote-ref">【4】</a>
   </blockquote>
 
-  <hr>
-
-  <h3>5.3.2 Bukti Tertinggi: Wahyu</h3>
-
-  <p>Dalam Kerangka Tauhidi, al-Qur’an dan sunnah ialah neraca tertinggi. Bukan kerana manusia “merasakan” ia tinggi, tetapi kerana Allah ialah Yang Maha Mengetahui, Maha Benar, dan Maha Menguasai sebab-sebab seluruh alam.</p>
-
-  <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ حَدِيثًا ﴾</div>
-  <div class="translation">“Siapakah yang lebih benar perkataannya daripada Allah?” &nbsp;(An-Nisā’ 4:87)【2】</div>
-
-  <p>Maka jika wahyu memberitahu bahawa dakwah menghidupkan hati, sabar menarik ma‘iyyah Allah, dan doa membuka pertolongan, maka itu adalah bukti yang paling tinggi — walaupun seluruh dunia belum mampu mengukurnya dengan alat zahir.</p>
-
-  <hr>
-
-  <h3>5.3.3 Bukti Kedua: Sirah Rasulullah ﷺ</h3>
-
-  <p>Sirah ialah tafsir praktikal kepada wahyu. Ia menunjukkan bagaimana ayat-ayat Allah hidup dalam sejarah, keputusan, peperangan, hijrah, muamalah, keluarga, masjid, dan jamaah【3】.</p>
-
-  <p>Sebab itu sirah lebih tinggi daripada teori manusia tentang perubahan. Teori cuba menjelaskan realiti. Sirah menunjukkan realiti yang dibina terus di bawah bimbingan wahyu.</p>
-
-  <div class="callout">
-    <strong>Prinsip penting:</strong><br>
-    Sirah bukan kisah inspirasi semata-mata, tetapi bukti hidup bagi tertib Tauhidi.
-  </div>
-
-  <hr>
-
-  <h3>5.3.4 Bukti Ketiga: Athar Sahabat dan Mushahadah Amal</h3>
-
-  <p>Athar sahabat menunjukkan bagaimana wahyu diterjemahkan selepas Rasulullah ﷺ. Mushahadah amal pula menunjukkan bagaimana janji Allah terus hidup apabila umat kembali kepada tertib yang benar【4】.</p>
-
-  <p>Ini bukan “subjektif” dalam erti emosi liar, tetapi pengalaman amal yang berpaut kepada wahyu.</p>
-
-  <p>Contohnya:</p>
+  <p>➡️ Kuasa ialah:</p>
   <ul>
-    <li>dakwah menghidupkan rasa,</li>
-    <li>mujahadah mematahkan cinta dunia,</li>
-    <li>sabar meneguhkan hati,</li>
-    <li>syura menyatukan fikir,</li>
-    <li>suasana masjid melembutkan jiwa.</li>
+    <li>balasan amanah,</li>
+    <li>bukan alat mencapai kebenaran.</li>
   </ul>
 
-  <p>Semua ini boleh disaksikan oleh orang yang masuk ke dalam gelanggang amal, bukan hanya berdiri di tepi sebagai pemerhati.</p>
-
-  <hr>
-
-  <h3>5.3.5 Bukti Keempat: Data dan Pemerhatian Dunia</h3>
-
-  <p>Kerangka 3 Asbab tidak menolak data, angka, atau pemerhatian dunia. Semua itu diterima pada tempatnya sebagai alat bantu membaca lapisan zahir kehidupan.</p>
-
-  <p>Namun data tidak boleh menjadi hakim mutlak. Ia hanya berguna pada perkara yang memang boleh diukur secara zahir.</p>
-
-  <ul>
-    <li>Data boleh mengukur jualan,</li>
-    <li>tetapi tidak boleh mengukur ikhlas.</li>
-    <li>Data boleh mengukur jumlah,</li>
-    <li>tetapi tidak boleh menjadi hakim kepada nusrah Allah.</li>
-    <li>Data boleh mengukur reaksi manusia,</li>
-    <li>tetapi tidak boleh menentukan nilai amal di sisi Allah【5】.</li>
-  </ul>
-
-  <hr>
-
-  <h3>5.3.6 Susunan Neraca Bukti dalam Kerangka Tauhidi</h3>
-
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Jenis Bukti</th>
-          <th>Kedudukan</th>
-          <th>Fungsi</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Wahyu</strong></td>
-          <td>Tertinggi</td>
-          <td>Menentukan hakikat, nilai, dan kebenaran</td>
-        </tr>
-        <tr>
-          <td><strong>Sirah Rasulullah ﷺ</strong></td>
-          <td>Tafsir عملي</td>
-          <td>Menunjukkan bagaimana wahyu hidup</td>
-        </tr>
-        <tr>
-          <td><strong>Athar Sahabat / Mushahadah Amal</strong></td>
-          <td>Pengukuh hidup</td>
-          <td>Memperlihatkan kesinambungan tertib wahyu</td>
-        </tr>
-        <tr>
-          <td><strong>Data / Pemerhatian Dunia</strong></td>
-          <td>Alat bantu</td>
-          <td>Membaca lapisan zahir, bukan menentukan hakikat akhir</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <hr>
-
-  <h3>5.3.7 Rumusan Tauhidi 5.3</h3>
-  <div class="rumusan">
-    <ol>
-      <li>Tidak semua kebenaran dibuktikan oleh satu jenis bukti sahaja.</li>
-      <li>Wahyu ialah bukti tertinggi dalam Kerangka Tauhidi.</li>
-      <li>Sirah ialah tafsir praktikal kepada wahyu.</li>
-      <li>Athar sahabat dan mushahadah amal ialah pengukuh hidup kepada tertib wahyu.</li>
-      <li>Data diterima sebagai alat bantu, bukan hakim mutlak.</li>
-      <li>Apabila data dijadikan hakim ke atas wahyu, Asbab Fitrah telah dimahkotakan atas Asbab Mutlak.</li>
-    </ol>
-  </div>
-
-  <div class="footnotes">
-    <h3>Nota Kaki 5.3</h3>
-    <ul>
-      <li>【1】 Dalam tradisi Islam, dalil tidak terbatas kepada eksperimen zahir; wahyu, sunnah, sirah, ijma', qiyas yang sah, dan mushahadah amal masing-masing mempunyai wilayah hujah yang berbeza.</li>
-      <li>【2】 An-Nisā’ 4:87 — Allah ialah sumber perkhabaran yang paling benar; kerana itu wahyu menjadi neraca tertinggi.</li>
-      <li>【3】 Sirah Rasulullah ﷺ ialah tafsir عملي kepada al-Qur’an; lihat juga al-Aḥzāb 33:21 tentang Rasulullah ﷺ sebagai uswah hasanah.</li>
-      <li>【4】 Athar sahabat dan mushahadah amal menunjukkan kesinambungan hidup tertib wahyu dalam masyarakat, bukan sekadar pada teks.</li>
-      <li>【5】 Natijah zahir bukan dalil muktamad kebenaran; tertib amal di sisi Allah lebih tinggi daripada ukuran angka, jumlah, atau reaksi manusia.</li>
-    </ul>
-  </div>
-
-  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
-</section>
-<!-- ═══════════════════════════════════════════
-     SECTION 5.4
-════════════════════════════════════════════ -->
-<section class="section" id="5-4">
-  <div class="section-opener">
-    <h2>5.4 Asbab Mutlak Asli (Asas Wahyu)</h2>
-    <p><em>Asbab yang datang terus daripada Allah — berjanji hasil, memberi kesan walau dunia melawan.</em></p>
-  </div>
-
-  <h3>5.4.1 Takrif Tauhidi</h3>
-
-  <p>Asbab Mutlak Asli ialah segala amal yang Allah sendiri ikat dengan janji langsung dalam Qur'an dan Hadith, di mana kesan datang terus daripada Allah — tidak bergantung dunia, logik, bilangan, masa, atau situasi. Ia adalah asbab dari langit, bukan dari bumi.</p>
-
-  <p><strong>Asbab Mutlak Asli termasuk:</strong> Doa, Dakwah, Mujahadah, Sabar, Solat khusyuk, Hijrah, Syura, Zikir, Infak, dan Surah-Sirah-Sarīrah Rasulullah ﷺ.</p>
-
-  <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ حَدِيثًا ﴾</div>
-  <div class="translation">"Siapakah yang lebih benar perkataannya daripada Allah?" &nbsp;(An-Nisā' 4:87)【1】</div>
-
-  <hr>
-
-  <h3>5.4.2 Kenapa Asbab Mutlak Asli Mesti Menghasilkan Kesan?</h3>
-
-  <p>Kerana Allah meletakkan janji-Nya terus kepada amal-amal ini.</p>
-
-  <p><strong>(1) Doa</strong></p>
-  <div class="arab">﴿ ادْعُونِي أَسْتَجِبْ لَكُمْ ﴾</div>
-  <div class="translation">"Berdoalah kepada-Ku, pasti Aku perkenankan." &nbsp;(Ghāfir 40:60)【2】</div>
-
-  <p><strong>(2) Dakwah</strong></p>
-  <div class="arab">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
-  <div class="translation">"Siapa yang lebih baik perkataannya daripada orang yang mengajak kepada Allah?" &nbsp;(Fuṣṣilat 41:33)【3】</div>
-
-  <p><strong>(3) Mujahadah</strong></p>
-  <div class="arab">﴿ وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ﴾</div>
-  <div class="translation">"Dan orang yang bermujahadah pada jalan Kami — pasti Kami beri mereka petunjuk." &nbsp;(Al-'Ankabūt 29:69)【4】</div>
-  <p><em>Lanhdiyannahum</em> = "pasti Kami beri".</p>
-
-  <p><strong>(4) Sabar</strong></p>
-  <div class="arab">﴿ إِنَّ اللَّهَ مَعَ الصَّابِرِينَ ﴾</div>
-  <div class="translation">"Sesungguhnya Allah bersama orang-orang yang sabar." &nbsp;(Al-Baqarah 2:153)【5】</div>
-
-  <p><strong>(5) Solat Khusyuk</strong></p>
-  <div class="arab">﴿ قَدْ أَفْلَحَ الْمُؤْمِنُونَ ۝ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ ﴾</div>
-  <div class="translation">"Berjayalah orang beriman — iaitu mereka yang khusyuk dalam solat." &nbsp;(Al-Mu'minūn 23:1–2)【6】</div>
-
-  <hr>
-
-  <h3>5.4.3 Sunnah Sirah sebagai Asbab Mutlak Asli</h3>
-
-  <p>Asbab Mutlak Asli bukan hanya ibadah, tetapi seluruh tertib sirah Rasulullah ﷺ — hijrah, syura, zikir, infak, membina suasana masjid, menghidupkan jamaah, membina keluarga beriman, mendidik manusia melalui kasih dan dakwah.</p>
-
-  <div class="arab">﴿ إِنَّ الَّذِينَ آمَنُوا وَالَّذِينَ هَاجَرُوا وَجَاهَدُوا فِي سَبِيلِ اللَّهِ … أُولَٰئِكَ هُمُ الْمُؤْمِنُونَ حَقًّا ﴾</div>
-  <div class="translation">"Sesungguhnya orang yang beriman, berhijrah dan berjihad – mereka itulah orang beriman sebenar." &nbsp;(Al-Anfāl 8:74)【7】</div>
-
-  <hr>
-
-  <h3>5.4.4 Surah – Sirah – Sarīrah Rasulullah ﷺ</h3>
-
-  <p><strong>(1) Surah</strong> = penampilan, ketenangan, aura, hikmah yang terpancar dari Baginda.</p>
-  <blockquote>
-    <span class="arabic-hadith">"مَنْ رَآهُ بَدِيهَةً هَابَهُ"</span>
-    "Sesiapa yang melihat Rasulullah ﷺ secara tiba-tiba akan terasa segan dan hormat." &nbsp;(Syamā'il Muhammadiyyah)【11】
-  </blockquote>
-
-  <p><strong>(2) Sirah</strong> = perjalanan hidup Baginda, tertib wahyu, strategi dakwah, sunnah amal.</p>
-  <blockquote>
-    <span class="arabic-hadith">« صَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي »</span>
-    "Solatlah kamu seperti kamu melihat aku solat." &nbsp;(Bukhari)【12】
-  </blockquote>
-
-  <p><strong>(3) Sarīrah</strong> = keadaan batin Baginda — kasih, takut, harap, yakin, tawadhu', ikhlas.</p>
-  <blockquote>
-    <span class="arabic-hadith">« أَنَا سَيِّدُ وَلَدِ آدَمَ وَلَا فَخْر »</span>
-    "Aku pemimpin anak Adam – bukan untuk bermegah." &nbsp;(Muslim)【13】
-  </blockquote>
-
-  <hr>
-
-  <h3>5.4.5 Rumusan Tauhidi 5.4</h3>
-  <div class="rumusan">
-    <ol>
-      <li>Asbab Mutlak Asli datang terus daripada wahyu.</li>
-      <li>Asbab ini mempunyai janji Allah yang pasti benar.</li>
-      <li>Kesan berlaku walau dunia menolak.</li>
-      <li>Asbab ini mengubah takdir dunia seperti Badar &amp; Fathu Makkah.</li>
-      <li>Surah – Sirah – Sarīrah Rasulullah ﷺ menjadi pusat pembentukan umat.</li>
-      <li>Inilah cahaya asal yang memandu semua Asbab Mutlak Terbitan.</li>
-    </ol>
-  </div>
-
-  <div class="callout" style="text-align:center; font-style:italic;">
-    Tanpa Asbab Mutlak Asli → dunia menelan iman.<br>
-    Dengan Asbab Mutlak Asli → dunia tunduk di bawah iman.
-  </div>
-
-  <div class="footnotes">
-    <h3>Nota Kaki 5.4</h3>
-    <ul>
-      <li>【1】 An-Nisā' 4:87 &nbsp;【2】 Ghāfir 40:60 &nbsp;【3】 Fuṣṣilat 41:33 &nbsp;【4】 Al-'Ankabūt 29:69</li>
-      <li>【5】 Al-Baqarah 2:153 &nbsp;【6】 Al-Mu'minūn 23:1–2 &nbsp;【7】 Al-Anfāl 8:74</li>
-      <li>【8】 Ash-Shūrā 42:38 &nbsp;【9】 Ar-Ra'd 13:28 &nbsp;【10】 Saba' 34:39</li>
-      <li>【11】 Syamā'il Muhammadiyyah &nbsp;【12】 Bukhari &nbsp;【13】 Muslim</li>
-    </ul>
-  </div>
-
-  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 5.5
-════════════════════════════════════════════ -->
-<section class="section" id="5-5">
-  <div class="section-opener">
-    <h2>5.5 Asbab Mutlak Terbitan (Asbab Fitrah/Zulumat yang Ditundukkan)</h2>
-  </div>
-
-  <p>Asbab Mutlak Terbitan ialah asbab dunia (Asbab Fitrah &amp; Asbab Zulumat) yang asalnya tiada nilai rohani, tetapi ditundukkan oleh Asbab Mutlak Asli melalui:</p>
-  <ol>
-    <li><strong>Nafy</strong> – menafikan kuasa asbab dunia</li>
-    <li><strong>Isbat</strong> – menetapkan hanya Allah memberi kesan</li>
-    <li><strong>Ittiba'</strong> – mengambil asbab mengikut sunnah Rasulullah ﷺ</li>
-    <li><strong>Ikhlas</strong> – objektif amal ialah mendapatkan keredhaan Allah</li>
-    <li><strong>Tunduk syarak</strong> – tidak melanggar hukum Allah</li>
-  </ol>
-
-  <div class="callout">
-    <strong>Hasilnya:</strong> Asbab dunia tadi menjadi Asbab Mutlak Terbitan — ia berfungsi kerana disandarkan kepada janji Allah, bukan kepada logik dunia.
-  </div>
-
-  <hr>
-
-  <h3>5.5.1 Mengapa Asbab Dunia Perlu Ditundukkan?</h3>
-
-  <p>Asbab dunia seperti teknologi, modal, strategi, ekonomi, media, statistik — tidak haram, tetapi tidak suci.</p>
-  <ul>
-    <li>Jika ditinggalkan → umat menjadi lemah</li>
-    <li>Jika diagungkan → umat menjadi rosak</li>
-    <li>Jika ditundukkan → ia menjadi alat hidayat</li>
-  </ul>
-
-  <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
-  <div class="translation">"Allah mencipta kamu dan apa yang kamu lakukan." &nbsp;(As-Saffāt 37:96)【1】</div>
-
-  <hr>
-
-  <h3>5.5.4 Tiga Sifat Asbab Dunia</h3>
+  <h3>🔒 Penguncian Prinsip 5.10</h3>
 
   <ol>
-    <li><strong>Asbab Fitrah</strong> – tetap &amp; konsisten (makanan, air, api, strategi, kepakaran, perubatan)</li>
-    <li><strong>Asbab Zulumat</strong> – dibentuk oleh nilai masyarakat (politik, media, reputasi, undang-undang sekular, ekonomi kapitalis)</li>
-    <li>Kedua-duanya neutral atau gelap, tidak mengangkat manusia kepada Allah — kecuali apabila ditundukkan oleh Asbab Mutlak Asli.</li>
+    <li>Ittiba’ merangkumi seluruh kehidupan, bukan ibadah sahaja.</li>
+    <li>Akhlak, muamalat, syariat dan politik semuanya tertakluk kepada wahyu.</li>
+    <li>Memisahkan bidang kehidupan daripada Ittiba’ ialah kesalahan Tauhidi.</li>
+    <li>Syariat tidak tunduk kepada realiti; realiti tunduk kepada syariat.</li>
+    <li>Kuasa datang selepas ketaatan, bukan sebagai matlamat.</li>
   </ol>
 
-  <hr>
+  <h3>🔥 BLOK PENUTUP (Peralihan ke 5.11)</h3>
 
-  <h3>5.5.5 Bagaimana Asbab Dunia Menjadi Asbab Mutlak Terbitan</h3>
+  <p>Bab ini membawa kepada satu kesimpulan yang sangat penting:</p>
 
-  <p><strong>(1) NAFY</strong> — Contoh penafian Tauhidi: teknologi tidak memberi rezeki; modal tidak menentukan kejayaan; pasaran tidak menentukan untung rugi.</p>
-  <div class="arab">﴿ قُل لَّا أَمْلِكُ لِنَفْسِي نَفْعًا وَلَا ضَرًّا ﴾</div>
-  <div class="translation">"Katakan: aku tidak memiliki manfaat dan mudarat walau untuk diriku." &nbsp;(Al-A'rāf 7:188)【2】</div>
+  <p>Masalah umat bukan pada kekurangan amal,<br>
+  tetapi pada pemisahan Ittiba’ dalam kehidupan.</p>
 
-  <p><strong>(2) ISBAT</strong></p>
-  <div class="arab">﴿ إِنَّ الْقُوَّةَ لِلَّهِ جَمِيعًا ﴾</div>
-  <div class="translation">"Kekuatan semuanya milik Allah." &nbsp;(Fāṭir 35:10)【3】</div>
-
-  <p><strong>(3) ITTIBA'</strong> — Menggunakan asbab dunia mengikut sunnah Nabi ﷺ: memakai baju besi, menggali parit (Khandaq), berhijrah dengan strategi, perjanjian Hudaibiyyah, menyusun saf Badar.</p>
-  <div class="arab">﴿ لَّقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ ﴾</div>
-  <div class="translation">"Pada Rasulullah ada contoh terbaik." &nbsp;(Al-Aḥzāb 33:21)【4】</div>
-
-  <p><strong>(4) IKHLAS</strong></p>
-  <blockquote>
-    <span class="arabic-hadith">« إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ »</span>
-    "Sesungguhnya amal bergantung pada niat." &nbsp;(Muttafaq 'alaih)【5】
-  </blockquote>
-
-  <p><strong>(5) TUNDUK SYARAK</strong> — Asbab haram tidak boleh ditransformasi: riba, zina, sihir, arak, muzik maksiat, politik zalim.</p>
-  <div class="arab">﴿ قُلْ إِنَّمَا حَرَّمَ رَبِّيَ… ﴾</div>
-  <div class="translation">"Katakanlah: Tuhanku mengharamkan… (segala dosa)." &nbsp;(Al-A'rāf 7:33)【6】</div>
-
-  <hr>
-
-  <h3>5.5.4 Contoh Transformasi</h3>
-
-  <ol>
-    <li><strong>Parit (Khandaq)</strong> — Asal: strategi perang (Asbab Fitrah). Bila tunduk melalui syura &amp; ittiba' → menyelamatkan umat dari kehancuran.</li>
-    <li><strong>Baju besi Rasulullah ﷺ</strong> — Asal: teknologi perang (Asbab Fitrah). Bila digabung dengan tawakkal &amp; sabar → Asbab Mutlak Terbitan.</li>
-    <li><strong>Tongkat Musa</strong> — Asal: kayu mati (Asbab Fitrah). Bila digunakan atas perintah Allah → laut terbelah.</li>
-    <li><strong>Diplomasi Hudaibiyyah</strong> — Asal: sistem politik Arab. Bila tunduk kepada sabar, syura dan wahyu → Allah turunkan ayat kemenangan.</li>
-  </ol>
-
-  <div class="arab">﴿ إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا ﴾</div>
-  <div class="translation">"Kami membuka bagimu kemenangan yang nyata." &nbsp;(Al-Fatḥ 48:1)【8】</div>
-
-  <hr>
-
-  <h3>5.5.5 Rumusan Tauhidi</h3>
-  <div class="rumusan">
-    <ol>
-      <li>Asbab dunia tidak dibuang, tetapi ditundukkan.</li>
-      <li>Asbab dunia tidak dipercayai, tetapi diambil sebagai alat.</li>
-      <li>Asbab dunia jadi hidayat apabila tunduk kepada Asbab Mutlak Asli.</li>
-      <li>Bila Asbab Mutlak Asli hidup dalam hati → Asbab dunia tunduk dan menjadi Asbab Mutlak Terbitan.</li>
-      <li>Seluruh sirah membuktikan: Sains, teknologi, ekonomi, strategi, politik — semuanya boleh menjadi hamba. Tetapi hanya bila Asbab Mutlak menjadi tuan.</li>
-    </ol>
-  </div>
-
-  <div class="footnotes">
-    <h3>Nota Kaki 5.5</h3>
-    <ul>
-      <li>【1】 As-Saffāt 37:96 &nbsp;【2】 Al-A'rāf 7:188 &nbsp;【3】 Fāṭir 35:10 &nbsp;【4】 Al-Aḥzāb 33:21</li>
-      <li>【5】 Muttafaq 'alaih &nbsp;【6】 Al-A'rāf 7:33 &nbsp;【7】 Ash-Shu'arā 26:63 &nbsp;【8】 Al-Fatḥ 48:1</li>
-    </ul>
-  </div>
-
-  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 5.6
-════════════════════════════════════════════ -->
-<section class="section" id="5-6">
-  <div class="section-opener">
-    <h2>5.6 Perbezaan Kritis</h2>
-    <p><strong>Asbab Mutlak Asli vs Asbab Mutlak Terbitan</strong></p>
-  </div>
-
-  <p>Bab ini adalah salah satu bahagian yang paling penting dalam seluruh Kerangka 3 Asbab. Jika umat tidak membezakan dua lapisan Asbab Mutlak, mereka akan salah faham sunnah, takdir, tawakkal, amal, dan hubungan dunia–akhirat — lalu tersesat dalam dua jurang.</p>
-
-  <div class="callout">
-    <strong>Jurang 1</strong> — Mengagungkan dunia: teknologi, ekonomi, modal, KPI, sains, data dianggap "penentu".<br><br>
-    <strong>Jurang 2</strong> — Melarikan diri dari dunia: tidak mahu strategi, pengurusan, usaha, atau asbab dunia langsung.
-  </div>
-
-  <hr>
-
-  <h3>5.6.1 Perbezaan Pertama – Sumber Kuasa Ruhani</h3>
-
-  <p><strong>A. Asbab Mutlak Asli</strong> — datang terus daripada wahyu (perintah Allah, sunnah Rasulullah ﷺ, amal para Nabi, janji Allah yang pasti turun).</p>
-
-  <div class="arab">﴿ وَمَنْ أَصْدَقُ مِنَ اللَّهِ قِيلًا ﴾</div>
-  <div class="translation">"Siapa lagi yang lebih benar perkataannya daripada Allah?" &nbsp;(An-Nisā' 4:122)【1】</div>
-
-  <p><strong>B. Asbab Mutlak Terbitan</strong> — asalnya tidak mempunyai kuasa rohani (teknologi, ekonomi, pengurusan, politik, strategi, statistik, kemahiran, tentera, media). Ia hanya berubah menjadi Asbab Mutlak Terbitan apabila ditundukkan melalui Nafy, Isbat, Ittiba', Ikhlas, dan Tunduk syarak.</p>
-
-  <div class="arab">﴿ وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ ﴾</div>
-  <div class="translation">"Allah mencipta kamu dan apa yang kamu lakukan." &nbsp;(As-Saffāt 37:96)【2】</div>
-
-  <hr>
-
-  <h3>5.6.2 Perbezaan Kedua – Cara Memberi Kesan</h3>
-
-  <p><strong>A. Asbab Mutlak Asli memberi kesan tanpa syarat dunia</strong> — solat menenangkan hati walaupun miskin, tanpa modal. Dakwah membuka hati tanpa banner atau kamera. Sabar mendapat pertolongan Allah terus.</p>
-
-  <p><strong>B. Asbab Mutlak Terbitan hanya memberi kesan setelah ditundukkan</strong> — Parit Khandaq (strategi + tunduk wahyu), baju besi Rasulullah ﷺ (teknologi + tawakkal), Tongkat Musa (kayu + perintah Allah).</p>
-
-  <div class="arab">﴿ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
-  <div class="translation">"Pukullah laut itu dengan tongkatmu." &nbsp;(Ash-Shu'arā 26:63)【5】</div>
-
-  <p><em>Kayu tidak membelah laut. Kayu + wahyu = Asbab Mutlak Terbitan.</em></p>
-
-  <hr>
-
-  <h3>5.6.3 Peranan Hati, Diri &amp; Harta</h3>
-
-  <p><strong>A. Asbab Mutlak Asli membina hati &amp; diri</strong> — memasukkan iman, menguatkan yakin, menundukkan ego, menenangkan jiwa, membersihkan penyakit hati.</p>
-
-  <div class="arab">﴿ هُوَ ٱلَّذِیٓ أَنزَلَ ٱلسَّكِینَةَ فِی قُلُوبِ ٱلۡمُؤۡمِنِینَ ﴾</div>
-  <div class="translation">"Dialah yang menurunkan ketenangan dalam hati orang-orang beriman." &nbsp;(Al-Fatḥ 48:4)【6】</div>
-
-  <div class="arab">﴿ إِنَّ ٱللَّهَ ٱشۡتَرَىٰ مِنَ ٱلۡمُؤۡمِنِینَ أَنفُسَهُمۡ وَأَمۡوَ ٰلَهُم بِأَنَّ لَهُمُ ٱلۡجَنَّةَ ﴾</div>
-  <div class="translation">"Sesungguhnya Allah telah membeli dari orang-orang beriman, diri-diri mereka dan harta-harta mereka dengan (balasan) syurga untuk mereka." &nbsp;(At-Tawbah 9:111)【7】</div>
-
-  <p>Susunan ayat: <em>أَنفُسَهُمۡ</em> (diri) datang dahulu, kemudian <em>أَمۡوَ ٰلَهُم</em> (harta). Ini menunjukkan diri ialah medan pertama Asbab Mutlak Asli.</p>
-
-  <p><strong>B. Asbab Mutlak Terbitan menggunakan harta sebagai bahan utama</strong> — teknologi, sistem, logistik, perang, pentadbiran, media, pendidikan, infrastruktur semuanya memerlukan harta.</p>
-
-  <div class="arab">﴿ لَن تَنَالُوا۟ ٱلۡبِرَّ حَتَّىٰ تُنفِقُوا۟ مِمَّا تُحِبُّونَ ﴾</div>
-  <div class="translation">"Kamu tidak akan mencapai kebaikan yang sempurna sehingga kamu menginfakkan apa yang kamu cintai." &nbsp;(Āli 'Imrān 3:92)【8】</div>
-
-  <blockquote>
-    <span class="arabic-hadith">« سَبَقَ دِرْهَمٌ مِائَةَ أَلْفِ دِرْهَمٍ »</span>
-    "Satu dirham telah mendahului seratus ribu dirham (dalam nilai di sisi Allah)." &nbsp;(Al-Nasā'ī)【9】
-  </blockquote>
-
-  <p><strong>C. Prinsip gabungan:</strong> Apabila harta dan diri dikorbankan serentak, cinta dunia dan cinta diri keluar dari hati, lalu cinta Allah masuk.</p>
-
-  <hr>
-
-  <h4>5.6.3.1 Analogi: "Minum Kopi di KL vs Kutub Utara"</h4>
-
-  <p><strong>1. Kopi di KL</strong> — RM2, tanpa pengorbanan. Seperti ilmu tanpa mujahadah.</p>
-
-  <p><strong>2. Kopi di Kutub Utara</strong> — tiket, hotel, pakaian sejuk, logistik, masa, stamina. Inilah gambaran dakwah, mujahadah dan sabar ijtima'i.</p>
-
-  <div class="arab">﴿ وَالْعَصْرِ ﴾</div>
-  <div class="translation">"Demi masa." &nbsp;(Al-'Aṣr 103:1)【10】</div>
-
-  <div class="arab">﴿ تُؤْمِنُونَ بِاللَّهِ وَرَسُولِهِ وَتُجَاهِدُونَ فِي سَبِيلِ اللَّهِ بِأَمْوَالِكُمْ وَأَنفُسِكُمْ ﴾</div>
-  <div class="translation">"…kamu beriman kepada Allah dan Rasul-Nya, dan kamu berjihad di jalan Allah dengan harta kamu dan diri kamu…" &nbsp;(As-Saff 61:11)【11】</div>
-
-  <p><strong>3. Kopi di Kutub Utara ramai-ramai?</strong> — Jawapannya satu perkataan: <strong>MESYUARAT (الشُّورَى)</strong>. Tanpa syura, dakwah tidak tersusun, mujahadah tidak terarah, sabar tidak bertahan, jamaah tidak terbina.</p>
-
-  <hr>
-
-  <h3>5.6.4 Perbezaan Keempat – Keperluan Modal Dunia</h3>
-
-  <p><strong>Asbab Mutlak Asli</strong> → berfungsi tanpa syarat dunia. Solat, zikir, doa, sabar, mujahadah, dakwah tidak perlukan modal sebagai syarat sah. (Haji &amp; Zakat memerlukan harta sebagai syarat luar, tetapi nilai Asbab Mutlak Asli di dalamnya adalah pada tazkiyah hati, bukan pada harta atau perjalanan.)</p>
-
-  <p><strong>Asbab Mutlak Terbitan</strong> → memerlukan dunia (terutamanya harta): membina masjid, madrasah, hospital, media, platform dakwah, logistik, makanan, peralatan.</p>
-
-  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
-  <div class="translation">"Dan bersedialah untuk mereka dengan segala kekuatan yang kamu mampu." &nbsp;(Al-Anfāl 8:60)【12】</div>
-
-  <hr>
-
-  <h3>5.6.5 Perbezaan Kelima – Cara Allah Menurunkan Pertolongan</h3>
-
-  <p><strong>Asbab Mutlak Asli</strong> → pertolongan turun terus dari langit: Badar (malaikat turun), Uhud (sabar menentukan), Hunain (bilangan tidak membantu), Hudaibiyyah ("kalah" menjadi kemenangan).</p>
-
-  <div class="arab">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ ﴾</div>
-  <div class="translation">"Jika kamu menolong agama Allah, Dia akan menolong kamu." &nbsp;(Muhammad 47:7)【13】</div>
-
-  <p><strong>Asbab Mutlak Terbitan</strong> → pertolongan turun selepas ia disucikan. Bukan parit yang menang di Khandaq — Allah yang menang, parit hanya hamba.</p>
-
-  <div class="arab">﴿ وَرَدَّ اللَّهُ الَّذِينَ كَفَرُوا بِغَيْظِهِمْ ﴾</div>
-  <div class="translation">"Dan Allah menghalau orang-orang kafir itu dengan penuh kegeraman mereka (tanpa hasil)." &nbsp;(Al-Ahzāb 33:25)【14】</div>
-
-  <hr>
-
-  <h3>5.6.6 Peranan dalam Pembinaan Tamadun</h3>
-
-  <p><strong>Asbab Mutlak Asli membina manusia.</strong> Tanpa Asbab Mutlak Asli: tiada iman, mujahadah, sabar, syura, nur, suasana masjid. Tamadun jatuh walaupun teknologinya tinggi.</p>
-
-  <p><strong>Asbab Mutlak Terbitan membina struktur selepas hati dibina.</strong></p>
-
-  <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</div>
-  <div class="translation">"Sesungguhnya Allah tidak mengubah apa yang ada pada sesuatu kaum sehingga mereka mengubah apa yang ada pada diri mereka." &nbsp;(Ar-Ra'd 13:11)【15】</div>
-
-  <hr>
-
-  <h3>5.6.7 Rumusan Tauhidi (Versi Muktamad)</h3>
-  <div class="rumusan">
-    <ol>
-      <li>Asbab Mutlak Asli = cahaya wahyu yang bekerja utama atas diri (hati, masa, tenaga).</li>
-      <li>Asbab Mutlak Terbitan = bayangan cahaya apabila harta &amp; asbab dunia tunduk kepada wahyu.</li>
-      <li>Asbab Mutlak Asli memberi kesan tanpa bergantung dunia; ia menghidupkan iman dan menyucikan diri.</li>
-      <li>Asbab Mutlak Terbitan hanya berfungsi bila dikawal Asbab Mutlak Asli dan disucikan melalui Nafy, Isbat, Ittiba', Ikhlas, dan Tunduk syarak.</li>
-      <li>Diri adalah tempat jatuh bangun Asbab Mutlak Asli; harta adalah bahan utama bagi Asbab Mutlak Terbitan.</li>
-      <li>Bila hanya harta dikorbankan tanpa diri → timbul kibir &amp; riya'.</li>
-      <li>Bila hanya diri dikorbankan tanpa harta → timbul berharap kepada makhluk.</li>
-      <li>Bila diri dan harta dikorbankan serentak kerana Allah, cinta dunia dan cinta diri keluar dari hati, lalu cinta Allah memenuhi seluruh jiwa.</li>
-      <li>Tamadun Islam runtuh apabila harta dan sistem (Asbab Mutlak Terbitan) menggantikan iman &amp; amal (Asbab Mutlak Asli) sebagai pusat.</li>
-      <li>Kerangka 3 Asbab datang untuk membetulkan neraca ini.</li>
-    </ol>
-  </div>
-
-  <div class="footnotes">
-    <h3>Nota Kaki 5.6</h3>
-    <ul>
-      <li>【1】 An-Nisā' 4:122 &nbsp;【2】 As-Saffāt 37:96 &nbsp;【3】 Ar-Ra'd 13:28 &nbsp;【4】 Al-Baqarah 2:153 &nbsp;【5】 Ash-Shu'arā 26:63</li>
-      <li>【6】 Al-Fatḥ 48:4 &nbsp;【7】 At-Tawbah 9:111 &nbsp;【8】 Āli 'Imrān 3:92 &nbsp;【9】 Al-Nasā'ī &nbsp;【10】 Al-'Aṣr 103:1</li>
-      <li>【11】 As-Saff 61:11 &nbsp;【12】 Al-Anfāl 8:60 &nbsp;【13】 Muhammad 47:7 &nbsp;【14】 Al-Ahzāb 33:25 &nbsp;【15】 Ar-Ra'd 13:11</li>
-    </ul>
-  </div>
-
-  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 5.7
-════════════════════════════════════════════ -->
-<section class="section" id="5-7">
-  <div class="section-opener">
-    <h2>5.7 Dalil Sirah: Transformasi Asbab Fitrah → Asbab Mutlak Terbitan</h2>
-  </div>
-
-  <p>Bab ini menghimpunkan empat contoh besar bagaimana Asbab Fitrah ditransformasikan menjadi Asbab Mutlak Terbitan apabila datang perintah Allah, hati hidup dengan Nafy &amp; Isbat, amal mengikut Ittiba' Rasul, niat ikhlas, dan tertib syarak dijaga.</p>
-
-  <hr>
-
-  <h3>5.7.1 Tongkat Musa — Kayu Menjadi Asbab Mutlak Terbitan</h3>
-
-  <div class="arab">﴿ وَمَا تِلْكَ بِيَمِينِكَ يَا مُوسَىٰ ﴾</div>
-  <div class="translation">"Apakah itu yang di tangan kananmu, wahai Musa?" &nbsp;(Ṭāhā 20:17)【1】</div>
-
-  <div class="arab">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ ﴾</div>
-  <div class="translation">"Lalu Kami wahyukan kepada Musa: Pukullah laut dengan tongkatmu." &nbsp;(Ash-Shu'arā 26:63)【2】</div>
-
-  <div class="insight-box">
-    Tongkat = kayu (Asbab Fitrah) &nbsp;→&nbsp; Pukul laut atas perintah Allah = Asbab Mutlak Asli (wahyu) &nbsp;→&nbsp; Laut terbelah = kesan melalui Asbab Mutlak Terbitan.
-  </div>
-
-  <p><strong>Pelajaran:</strong> Benda biasa hari ini (duit, teknologi, kamera, mikrofon) boleh menjadi Asbab Mutlak Terbitan jika digunakan dengan Nafy + Isbat + Ittiba' + Ikhlas + Tunduk syarak.</p>
-
-  <hr>
-
-  <h3>5.7.2 Baju Besi Rasulullah ﷺ — Teknologi di Bawah Tawakkal</h3>
-
-  <p>Rasulullah ﷺ memakai dua lapis baju besi di Uhud, namun hati baginda tidak bergantung pada baju besi, sebaliknya pada Allah.</p>
-
-  <blockquote>
-    <span class="arabic-hadith">« اِعْقِلْهَا وَتَوَكَّلْ »</span>
-    "Ikatlah unta, kemudian bertawakkallah." &nbsp;(at-Tirmiżī)【4】
-  </blockquote>
-
-  <p><strong>Pelajaran:</strong> Mengambil teknologi bukan tanda lemah iman. Bergantung kepada teknologi tanpa Asbab Mutlak Asli itulah tanda penyakit iman.</p>
-
-  <hr>
-
-  <h3>5.7.3 Parit Salman al-Farisi — Strategi Menjadi Asbab Mutlak Terbitan</h3>
-
-  <p>Parit menjadi Asbab Mutlak Terbitan kerana: diusulkan dalam syura, dilaksanakan dengan mujahadah (sahabat menggali sendiri, kelaparan, berzikir), disertai doa &amp; tawakkal — bukan yakin parit melindungi, tetapi Allah yang melindungi.</p>
-
-  <div class="arab">﴿ وَرَدَّ اللَّهُ الَّذِينَ كَفَرُوا بِغَيْظِهِمْ لَمْ يَنَالُوا خَيْرًا ۚ وَكَفَى اللَّهُ الْمُؤْمِنِينَ الْقِتَالَ ﴾</div>
-  <div class="translation">"Dan Allah mengembalikan orang kafir dengan kemarahan (kecewa), mereka tidak mendapat apa-apa kebaikan; dan cukuplah Allah bagi orang beriman daripada (perlu) berperang." &nbsp;(Al-Aḥzāb 33:25)【5】</div>
-
-  <p>Allah tidak menyebut parit sebagai penentu, tetapi menyandarkan kemenangan kepada-Nya sendiri.</p>
-
-  <hr>
-
-  <h3>5.7.4 Ilmu Perubatan Sahabat — Asbab Fitrah yang Disucikan</h3>
-
-  <p>Sahabat meruqyah ketua kabilah dengan Surah al-Fātiḥah. Ketua itu sembuh.</p>
-
-  <blockquote>
-    <span class="arabic-hadith">« وَمَا يُدْرِيكَ أَنَّهَا رُقْيَةٌ »</span>
-    "Bagaimana engkau tahu (al-Fātiḥah) itu adalah ruqyah?" &nbsp;(al-Bukhārī)【6】
-  </blockquote>
-
-  <div class="arab">﴿ وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ ﴾</div>
-  <div class="translation">"Dan apabila aku sakit, Dialah (Allah) yang menyembuhkan aku." &nbsp;(Ash-Shu'arā 26:80)【7】</div>
-
-  <p>Asbab perubatan hanya hamba; Doktor hanya hamba; Yang menyembuhkan hanyalah Allah.</p>
-
-  <hr>
-
-  <h3>5.7.5 Rumusan Tauhidi</h3>
-  <div class="rumusan">
-    <ol>
-      <li>Asbab Fitrah tidak dibuang — ia dijadikan tunggangan.</li>
-      <li>Asbab Mutlak Asli tidak boleh diganti oleh teknologi atau strategi.</li>
-      <li>Bila Asbab Fitrah ditundukkan di bawah Asbab Mutlak Asli, ia berubah status menjadi Asbab Mutlak Terbitan.</li>
-      <li>Inilah cara para Nabi dan Sahabat membina sejarah.</li>
-    </ol>
-  </div>
-
-  <div class="footnotes">
-    <h3>Nota Kaki 5.7</h3>
-    <ul>
-      <li>【1】 Ṭāhā 20:17 &nbsp;【2】 Ash-Shu'arā 26:63 &nbsp;【3】 Musnad Aḥmad (baju besi Uhud)</li>
-      <li>【4】 at-Tirmiżī &nbsp;【5】 Al-Aḥzāb 33:25 &nbsp;【6】 Ṣaḥīḥ al-Bukhārī &nbsp;【7】 Ash-Shu'arā 26:80</li>
-    </ul>
-  </div>
-
-  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 5.8
-════════════════════════════════════════════ -->
-<section class="section" id="5-8">
-  <div class="section-opener">
-    <h2>5.8 Dalil Qur'an (Al-Anfāl 8:60): Fusion Asbab Fitrah &amp; Asbab Mutlak dalam Satu Ayat</h2>
-  </div>
-
-  <p>Ayat ini adalah <em>manual Qur'ani</em> untuk Bab 5 — membuktikan bahawa Asbab Fitrah mesti diambil, Asbab Mutlak mesti menjadi pusat, dan kedua-duanya mesti digabungkan seperti tertib para Nabi.</p>
-
-  <hr>
-
-  <h3>5.8.1 Teks Ayat</h3>
-
-  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ وَمِن رِّبَاطِ الْخَيْلِ تُرْهِبُونَ بِهِ عَدُوَّ اللَّهِ وَعَدُوَّكُمْ ۚ وَآخَرِينَ مِن دُونِهِمْ لَا تَعْلَمُونَهُمُ اللَّهُ يَعْلَمُهُمْ ۚ وَمَا تُنفِقُوا مِن شَيْءٍ فِي سَبِيلِ اللَّهِ يُوَفَّ إِلَيْكُمْ وَأَنتُمْ لَا تُظْلَمُونَ ﴾</div>
-  <div class="translation">(Al-Anfāl 8:60)</div>
-
-  <hr>
-
-  <h3>5.8.2 Hukum Pertama — Asbab Fitrah Adalah Perintah Allah</h3>
-
-  <div class="arab">﴿ وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ ﴾</div>
-  <div class="translation">"Dan siapkanlah segala bentuk kekuatan yang kamu mampu."</div>
-
-  <p>Strategi, persiapan, logistik, teknologi, peralatan, kemahiran, pengurusan — semua ini Asbab Fitrah yang wajib diambil. Tetapi ia bukan pusat.</p>
-
-  <div class="callout">
-    <strong>Tegasan Kerangka 3 Asbab:</strong> Ambil sebab (fitrah), bukan bergantung pada sebab.
-  </div>
-
-  <hr>
-
-  <h3>5.8.3 Hukum Kedua — Asbab Fitrah Mesti Diikhlaskan dengan "Fi Sabilillah"</h3>
-
-  <div class="arab">﴿ وَمَا تُنفِقُوا مِن شَيْءٍ فِي سَبِيلِ اللَّهِ ﴾</div>
-  <div class="translation">"Apa sahaja yang kamu belanjakan di jalan Allah…"</div>
-
-  <p>Inilah titik transformasi: Asbab Fitrah + niat dunia → kekal fitrah. Asbab Fitrah + ikhlas (redha Allah) → menjadi Asbab Mutlak Terbitan.</p>
-
-  <hr>
-
-  <h3>5.8.4 Hukum Ketiga — Kesan Akhir Bukan Ditentukan Asbab Fitrah</h3>
-
-  <div class="arab">﴿ وَأَنتُمْ لَا تُظْلَمُونَ ﴾</div>
-  <div class="translation">"Dan kamu tidak akan dizalimi."</div>
-
-  <div class="callout">
-    Asbab Fitrah → menentukan suasana.<br>
-    Asbab Mutlak → menentukan kesan akhir.
-  </div>
-
-  <hr>
-
-  <h3>5.8.5 Hukum Keempat — Janji Allah Hanya Turun Bila Asbab Fitrah Tunduk Wahyu</h3>
-
-  <div class="arab">﴿ يُوَفَّ إِلَيْكُمْ ﴾</div>
-  <div class="translation">"Allah akan menyempurnakannya kepada kamu."</div>
-
-  <p>Makna "menyempurnakan" (Tafsir Ibn Kathir, Qurtubi, Tabari): memberi nusrah, membuka jalan, memberi kemenangan, memalukan musuh, menukar sebab kecil menjadi hasil besar.</p>
-
-  <hr>
-
-  <h3>5.8.6 Al-Anfāl 8:60 Mengikat Seluruh Bab 5</h3>
-
-  <p>Metodologi seluruh sirah Rasulullah ﷺ:</p>
+  <p>Apabila Ittiba’ dipilih-pilih:</p>
   <ul>
-    <li>Badar → ambil strategi (fitrah), menang kerana malaikat (mutlak).</li>
-    <li>Khandaq → gali parit (fitrah), Allah kirim angin (mutlak).</li>
-    <li>Uhud → pakai baju besi (fitrah), ujian datang dari langgar perintah (mutlak).</li>
-    <li>Tabuk → ambil unta (fitrah), kemenangan tanpa peperangan (mutlak).</li>
+    <li>ibadah ikut sunnah, tetapi muamalat ikut sistem,</li>
+    <li>akhlak Islam, tetapi politik sekular,</li>
   </ul>
 
-  <p>Al-Anfal 8:60 adalah "payung besar" bagi semua peristiwa ini.</p>
+  <p>maka lahirlah:</p>
+  <ul>
+    <li>individu yang kelihatan baik,</li>
+    <li>tetapi masyarakat yang rosak.</li>
+  </ul>
 
-  <hr>
-
-  <h3>5.8.7 Rumusan Tauhidi Ayat 8:60</h3>
-  <div class="rumusan">
-    <ol>
-      <li>Asbab Fitrah wajib diambil, bukan ditinggalkan.</li>
-      <li>Asbab Fitrah menjadi bernilai hanya apabila diniatkan kerana Allah.</li>
-      <li>Asbab Fitrah tidak menentukan kesan akhir.</li>
-      <li>Allah menentukan hasil berdasarkan ketaatan, bukan kekuatan dunia.</li>
-      <li>Apabila Asbab Fitrah tunduk pada wahyu → ia naik taraf menjadi Asbab Mutlak Terbitan.</li>
-      <li>Ayat ini menyempurnakan keseluruhan Bab 5.</li>
-    </ol>
-  </div>
-
-  <div class="footnotes">
-    <h3>Nota Kaki 5.8</h3>
-    <ul>
-      <li>【1】 Al-Qur'an, Surah al-Anfāl 8:60. Rujukan tafsir: al-Tabari, Jāmi' al-Bayān; Ibn Kathir, Tafsīr al-Qur'ān al-'Azīm; al-Qurtubi, al-Jāmi' li Ahkām al-Qur'ān.</li>
-    </ul>
-  </div>
-
-  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- ═══════════════════════════════════════════
-     SECTION 5.9
-════════════════════════════════════════════ -->
-<section class="section" id="5-9">
-  <div class="section-opener">
-    <h2>5.9 Rumusan Tauhidi</h2>
-  </div>
+  <p>Dalil peringatan:</p>
 
   <blockquote>
-    Tidak semua sebab itu sama.<br>
-    Tidak semua usaha itu bernilai.<br>
-    Tidak semua tindakan itu diterima.
+    <div class="arab">﴿ أَفَتُؤْمِنُونَ بِبَعْضِ ٱلْكِتَٰبِ وَتَكْفُرُونَ بِبَعْضٍۢ ﴾</div>
+    “Apakah kamu beriman kepada sebahagian Kitab dan kufur kepada sebahagian yang lain?”
+    (al-Baqarah 2:85)<a class="footnote-ref">【5】</a>
   </blockquote>
 
-  <hr>
+  <p>➡️ Ittiba’ terpilih ialah punca keruntuhan umat.</p>
 
-  <h3>5.9.1 Mutlak Asli = Cahaya Wahyu</h3>
+  <h3>🔥 Rumusan Tauhidi 5.10</h3>
 
-  <p>Asbab Mutlak Asli adalah sebab yang datang terus dari wahyu, diamalkan para Nabi &amp; Sahabat, mempunyai janji Allah yang pasti, dan mengandungi nur yang menghidupkan hati dan mengubah dunia.</p>
-
-  <p>Ia dinamakan cahaya kerana ia memberi kesan walau tanpa dunia, menghidupkan hati terlebih dahulu, menjadi pusat kepada semua sistem, dan menerangi semua asbab lain.</p>
-
-  <div class="arab">﴿ يَهْدِي اللَّهُ لِنُورِهِ مَن يَشَاءُ ﴾</div>
-  <div class="translation">"Allah memberi petunjuk kepada cahaya-Nya sesiapa yang Dia kehendaki." &nbsp;(An-Nūr 24:35)【1】</div>
-
-  <hr>
-
-  <h3>5.9.2 Asbab Mutlak Terbitan = Bayangan Cahaya</h3>
-
-  <blockquote>
-    Asbab dunia (fitrah &amp; zulumat) yang ditundukkan kepada wahyu melalui Nafy, Isbat, Ittiba', Ikhlas &amp; Syarak.
-  </blockquote>
-
-  <p>Ia tidak mempunyai cahaya sendiri. Ia hanya bercahaya apabila berada di belakang Mutlak Asli. Ia tidak boleh menjadi pusat. Ia berfungsi hanya apabila hati sudah hidup.</p>
-
-  <div class="callout">
-    Asbab Mutlak Asli menerangi dunia.<br>
-    Asbab Mutlak Terbitan memanjangkan cahaya itu ke dalam sistem.
-  </div>
-
-  <hr>
-
-  <h3>5.9.3 Asbab Fitrah &amp; Zulumat (tanpa transformasi) = Gelap</h3>
-
-  <p>Kedua-duanya neutral dari sudut roh, gelap dari sudut iman, tidak membawa manusia kepada Allah, tidak mempunyai nur, tidak mampu memberi kesan akhir.</p>
-
-  <div class="arab">﴿ ظُلُمَاتٌ بَعْضُهَا فَوْقَ بَعْضٍ ﴾</div>
-  <div class="translation">"Kegelapan yang bertindih-tindih." &nbsp;(An-Nūr 24:40)【2】</div>
-
-  <hr>
-
-  <h3>5.9.4 Rumusan Besar Bab 5</h3>
-
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Jenis Asbab</th><th>Sifat</th><th>Fungsi</th></tr></thead>
-      <tbody>
-        <tr><td><strong>Mutlak Asli</strong></td><td>Cahaya wahyu</td><td>Menghidupkan iman, mengubah tamadun, pusat seluruh amal</td></tr>
-        <tr><td><strong>Mutlak Terbitan</strong></td><td>Bayangan cahaya</td><td>Membina sistem setelah hati dibina, berfungsi bila cahaya Asli menerangi</td></tr>
-        <tr><td><strong>Fitrah/Zulumat</strong></td><td>Gelap</td><td>Konsisten tetapi tidak suci; menjadi berhala jika menjadi pusat</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <hr>
-
-  <h3>5.9.5 Penutup: Rumusan Tauhidi Paling Tinggi</h3>
-
-  <div class="callout" style="text-align:center;">
-    <p>Cahaya (Mutlak Asli) menerangi manusia.<br>
-    Bayangan cahaya (Mutlak Terbitan) membentuk dunia.<br>
-    Gelap (Fitrah &amp; Zulumat) tidak memberi nilai akhirat.</p>
-    <hr style="margin:0.8rem 0; border-color: #a7f3d0;">
-    <p><strong>Apabila Iman menjadi pusat → sebab tunduk.<br>
-    Apabila sebab menjadi pusat → iman tenggelam.</strong></p>
-  </div>
+  <p>Ittiba’ tidak boleh dipisahkan mengikut bidang,<br>
+  kerana kehidupan manusia tidak terpisah di sisi Allah.</p>
 
   <div class="footnotes">
-    <h3>Nota Kaki 5.9</h3>
-    <ul>
-      <li>【1】 An-Nūr 24:35 &nbsp;【2】 An-Nūr 24:40</li>
-    </ul>
+    <p>【1】al-Qalam 68:4 — Akhlak Rasulullah ﷺ sebagai manifestasi iman.</p>
+    <p>【2】al-An‘ām 6:152 — Keadilan dalam muamalat.</p>
+    <p>【3】al-Aḥzāb 33:36 — Tiada pilihan selepas keputusan Allah.</p>
+    <p>【4】al-Ḥajj 22:41 — Kuasa sebagai amanah menegakkan agama.</p>
+    <p>【5】al-Baqarah 2:85 — Bahaya beriman secara terpilih.</p>
   </div>
 
-  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
+  <a class="toplink" href="#top">↑ Atas</a>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     SECTION 5.10
-════════════════════════════════════════════ -->
-<section class="section" id="5-10">
-  <div class="section-opener">
-    <h2>5.10 Kesimpulan Bab 5</h2>
-  </div>
+<section class="section" id="5-11">
+  <h2>🟣 5.11 Ittiba’ sebagai Kunci Transformasi Asbab</h2>
+
+  <p>Bab ini menutup satu persoalan paling besar dalam umat:</p>
+
+  <p>Mengapa amal banyak,<br>
+  tetapi perubahan tidak berlaku?</p>
+
+  <p>Jawapannya bukan kerana:</p>
+  <ul>
+    <li>kurang ilmu,</li>
+    <li>kurang strategi,</li>
+    <li>kurang teknologi,</li>
+    <li>atau kurang perancangan.</li>
+  </ul>
+
+  <p>Semua itu boleh wujud serentak,<br>
+  namun transformasi tetap tidak berlaku.</p>
+
+  <p>Jawapannya ialah:</p>
+
+  <p>Ittiba’ Rasulullah ﷺ tidak hidup secara sebenar.</p>
+
+  <p>Dalam Kerangka 3 Asbab:</p>
+
+  <p>Asbab hanya tunduk apabila amal dilakukan<br>
+  dalam tertib Rasulullah ﷺ.</p>
+
+  <h3>5.11.1 Masalah Sebenar Umat</h3>
+
+  <p>Masalah umat bukan:</p>
+  <ul>
+    <li>kekurangan amal,</li>
+    <li>bukan kelemahan usaha,</li>
+  </ul>
+
+  <p>tetapi:</p>
+
+  <p>amal tidak hidup dalam Ittiba’.</p>
+
+  <p>Inilah sebab:</p>
+  <ul>
+    <li>dakwah meluas tetapi iman tidak hidup,</li>
+    <li>ibadah banyak tetapi masyarakat tidak berubah,</li>
+    <li>usaha besar tetapi natijah kecil.</li>
+  </ul>
+
+  <p>Dalil asas:</p>
 
   <blockquote>
-    Tidak semua sebab adalah sama.<br>
-    Tidak semua sebab bernilai.<br>
-    Tidak semua sebab diterima Allah.
+    <div class="arab">﴿ وَمَن يُطِعِ ٱللَّهَ وَرَسُولَهُۥ فَقَدْ فَازَ فَوْزًا عَظِيمًا ﴾</div>
+    “Dan sesiapa yang taat kepada Allah dan Rasul-Nya, maka sesungguhnya dia telah mencapai kemenangan yang besar.”
+    (al-Aḥzāb 33:71)<a class="footnote-ref">【1】</a>
   </blockquote>
 
-  <div class="callout">
-    <strong>Intipati bab ini:</strong><br>
-    Untuk mengubah dunia, Allah tidak memerlukan dunia.<br>
-    Untuk mengubah hati, manusia mesti kembali kepada Mutlak Asli.<br>
-    Untuk membina sistem, dunia mesti tunduk kepada Mutlak Asli.
-  </div>
+  <p>➡️ Al-Qur’an tidak mengaitkan kemenangan dengan banyaknya amal,<br>
+  tetapi dengan ketaatan.</p>
 
-  <hr>
+  <h3>5.11.2 Transformasi Bukan pada Amal, tetapi pada Tertib Amal</h3>
 
-  <h3>5.10.1 Hakikat Pertama: Mutlak Asli Adalah Pusat Seluruh Tamadun</h3>
+  <p>Kesilapan besar umat ialah menyangka:</p>
+  <ul>
+    <li>banyak amal → perubahan berlaku</li>
+    <li>amal berat → pertolongan datang</li>
+    <li>amal ikhlas → kesan automatik</li>
+  </ul>
 
-  <p>Dakwah, sabar, doa, mujahadah, solat khusyuk, syura, hijrah — semua ini adalah "jantung" tamadun Islam. Ia membina manusia sebelum membina dunia.</p>
+  <p>Sedangkan hakikat Nabawi:</p>
 
-  <div class="arab">﴿ إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ ﴾</div>
-  <div class="translation">"Allah tidak mengubah sesuatu kaum sehingga mereka mengubah apa yang dalam diri mereka." &nbsp;(Ar-Ra'd 13:11)【1】</div>
+  <p>Amal yang sama boleh menghasilkan natijah berbeza<br>
+  kerana tertibnya berbeza.</p>
 
-  <hr>
+  <p>Tanpa Ittiba’:</p>
+  <ul>
+    <li>amal kekal sebagai usaha manusia,</li>
+    <li>tidak menembusi Asbab Fitrah,</li>
+    <li>tidak mematahkan Asbab Zulumat.</li>
+  </ul>
 
-  <h3>5.10.2 Hakikat Kedua: Asbab Mutlak Terbitan Hanya Berfungsi Bila Ditundukkan</h3>
+  <p>Dengan Ittiba’:</p>
+  <ul>
+    <li>amal menjadi ketaatan,</li>
+    <li>ketaatan mengaktifkan janji Allah,</li>
+    <li>dan dunia tunduk tanpa dipaksa.</li>
+  </ul>
 
-  <p>Tongkat Musa tidak berkuasa. Parit Khandaq tidak berkuasa. Baju besi tidak berkuasa. Strategi Badar tidak berkuasa. Semua itu gelap sehingga ia ditundukkan kepada wahyu, disucikan dari syirik asbab, ditetapkan kepada kuasa Allah, diniatkan untuk redha Allah, dan dipastikan halal.</p>
+  <p>➡️ Transformasi berlaku pada cara amal,<br>
+  bukan pada kuantiti amal.</p>
 
-  <div class="callout">
-    Asbab fitrah → Asbab Mutlak Terbitan.<br>
-    Asbab dunia menjadi hamba iman.
-  </div>
+  <h3>5.11.3 Ittiba’ vs Sebab</h3>
 
-  <hr>
+  <p>Setiap amal manusia hanya akan tunduk kepada satu pusat:</p>
+  <ol>
+    <li>tunduk kepada wahyu (Ittiba’)</li>
+    <li>tunduk kepada sebab (logik, sistem, tekanan realiti)</li>
+  </ol>
 
-  <h3>5.10.3 Hakikat Ketiga: Asbab Fitrah &amp; Zulumat Tidak Pernah Memberi Kesan Akhir</h3>
+  <p>Tiada keadaan ketiga.</p>
 
-  <p>Dunia boleh mencipta suasana — kenyang, lapar, sihat, sakit, kuat, lemah. Tetapi dunia tidak boleh memberi kesan akhir (hasil yang Allah nilai).</p>
+  <p>Tanpa Ittiba’:</p>
+  <ul>
+    <li>sebab kelihatan berkuasa,</li>
+    <li>sistem menjadi penentu,</li>
+    <li>Tauhid tinggal sebagai slogan.</li>
+  </ul>
 
-  <div class="arab">﴿ قُلْ كُلٌّ مِّنْ عِندِ ٱللَّهِ ﴾</div>
-  <div class="translation">"Katakanlah: semuanya dari sisi Allah." &nbsp;(An-Nisā' 4:78)【2】</div>
+  <p>Dengan Ittiba’:</p>
+  <ul>
+    <li>sebab digunakan tanpa diyakini,</li>
+    <li>hasil diserahkan tanpa dituntut,</li>
+    <li>dan ketaatan menjadi pusat keputusan.</li>
+  </ul>
 
-  <hr>
+  <p>Dalil asas:</p>
 
-  <h3>5.10.4 Intipati Tertinggi: Cahaya, Bayangan, dan Gelap</h3>
+  <blockquote>
+    <div class="arab">﴿ قُلْ إِن كُنتُمْ تُحِبُّونَ ٱللَّهَ فَٱتَّبِعُونِى يُحْبِبْكُمُ ٱللَّهُ ﴾</div>
+    “Katakanlah: Jika kamu mencintai Allah, maka ikutilah aku, nescaya Allah mencintai kamu.”
+    (Āli ‘Imrān 3:31)<a class="footnote-ref">【2】</a>
+  </blockquote>
 
-  <div class="table-wrap">
-    <table>
-      <tbody>
-        <tr><td><strong>Dengan cahaya</strong></td><td>kita mengenal jalan</td></tr>
-        <tr><td><strong>Dengan bayangan</strong></td><td>kita menggerakkan dunia</td></tr>
-        <tr><td><strong>Dalam gelap</strong></td><td>manusia sesat walaupun memegang teknologi</td></tr>
-      </tbody>
-    </table>
-  </div>
+  <p>➡️ Ittiba’ memindahkan amal daripada sebab kepada Allah.</p>
 
-  <hr>
+  <h3>5.11.4 Tiga Ikatan Tauhidi</h3>
 
-  <h3>5.10.5 Penutup: Rantaian Perubahan Tauhidi</h3>
+  <p>Transformasi hanya berlaku apabila tiga ikatan ini hidup serentak:</p>
+  <ol>
+    <li>Niat → tunduk kepada perintah Allah</li>
+    <li>Cara → mengikut tertib Rasulullah ﷺ</li>
+    <li>Hasil → diserahkan sepenuhnya kepada Allah</li>
+  </ol>
 
-  <div class="callout">
-    Hati dahulu → dunia selepas itu.<br>
-    Iman dahulu → strategi selepas itu.<br>
-    Sunnah dahulu → teknologi selepas itu.
-  </div>
+  <p>Jika salah satu terputus:</p>
+  <ul>
+    <li>amal kehilangan kesahihan Tauhidi,</li>
+    <li>dan sebab kembali mengambil tempat Allah.</li>
+  </ul>
 
-  <div class="rumusan" style="margin-top:1.5rem;">
-    <p><strong>Rantaian Mutlak Asli:</strong></p>
-    <p style="color:var(--emerald); font-style:italic;">Dakwah → Mujahadah → Sabar → Solat Khusyuk → Redha Allah</p>
-    <br>
-    <p><strong>Rantaian Mutlak Terbitan:</strong></p>
-    <p style="color:var(--emerald); font-style:italic;">Strategi → Sistem → Struktur → Tamadun</p>
-    <br>
-    <p>Jika tertib ini disusun semula, tamadun runtuh seperti berlaku hari ini.</p>
-  </div>
+  <p>Dalil asas:</p>
 
-  <div class="callout" style="margin-top:1.5rem; text-align:center;">
-    <p>Asbab Mutlak Asli membentuk manusia.<br>
-    Asbab Mutlak Terbitan membentuk dunia.<br>
-    Asbab Fitrah &amp; Zulumat tidak membentuk apa-apa tanpa iman.</p>
-    <hr style="margin:0.8rem 0; border-color: #a7f3d0;">
-    <p><strong>Apabila iman menjadi pusat — sebab tunduk.<br>
-    Apabila sebab menjadi pusat — iman tenggelam.</strong></p>
-  </div>
+  <blockquote>
+    <div class="arab">﴿ وَمَا عَلَى ٱلرَّسُولِ إِلَّا ٱلْبَلَٰغُ ٱلْمُبِينُ ﴾</div>
+    “Dan tidaklah kewajipan ke atas Rasul melainkan menyampaikan dengan jelas.”
+    (an-Nūr 24:54)<a class="footnote-ref">【3】</a>
+  </blockquote>
+
+  <p>➡️ Penyerahan hasil ialah sebahagian daripada Tauhid,<br>
+  bukan sikap pasif.</p>
+
+  <h3>5.11.5 Pemutus Kebergantungan</h3>
+
+  <p>Hakikat paling dalam Ittiba’ ialah ini:</p>
+
+  <p>Ia memutuskan kebergantungan hati kepada makhluk.</p>
+
+  <p>Apabila hati tunduk kepada tertib Rasulullah ﷺ:</p>
+  <ul>
+    <li>pujian tidak menaikkan,</li>
+    <li>penolakan tidak menjatuhkan,</li>
+    <li>kegagalan zahir tidak mematikan amal,</li>
+    <li>kejayaan tidak melahirkan rasa memiliki.</li>
+  </ul>
+
+  <p>Ini kerana:</p>
+
+  <p>pusat kehidupan bukan hasil,<br>
+  tetapi keredhaan Allah.</p>
+
+  <p>Dalil asas:</p>
+
+  <blockquote>
+    <div class="arab">﴿ وَرِضْوَٰنٌۭ مِّنَ ٱللَّهِ أَكْبَرُ ﴾</div>
+    “Dan keredhaan Allah itu lebih besar.”
+    (at-Tawbah 9:72)<a class="footnote-ref">【4】</a>
+  </blockquote>
+
+  <p>➡️ Redha Allah ialah kemuncak transformasi Tauhidi.</p>
+
+  <h3>🔒 Penguncian Prinsip 5.11</h3>
+
+  <ol>
+    <li>Masalah umat bukan kurang amal, tetapi tiada Ittiba’ hidup.</li>
+    <li>Transformasi tidak berlaku pada amal, tetapi pada tertib amal.</li>
+    <li>Amal hanya tunduk kepada wahyu atau kepada sebab.</li>
+    <li>Tiga ikatan Tauhidi (niat–cara–hasil) mesti hidup serentak.</li>
+    <li>Ittiba’ memutuskan kebergantungan kepada makhluk.</li>
+  </ol>
+
+  <h3>🔥 Rumusan Tauhidi 5.11</h3>
+
+  <p>Ittiba’ bukan pelengkap amal,<br>
+  tetapi kunci yang menghidupkan amal<br>
+  dan menundukkan seluruh sebab kepada kehendak Allah.</p>
 
   <div class="footnotes">
-    <h3>Nota Kaki 5.10</h3>
-    <ul>
-      <li>【1】 Ar-Ra'd 13:11 &nbsp;【2】 An-Nisā' 4:78</li>
-    </ul>
+    <p>【1】al-Aḥzāb 33:71 — Kemenangan sebagai hasil ketaatan.</p>
+    <p>【2】Āli ‘Imrān 3:31 — Ittiba’ sebagai bukti cinta kepada Allah.</p>
+    <p>【3】an-Nūr 24:54 — Penyerahan hasil kepada Allah.</p>
+    <p>【4】at-Tawbah 9:72 — Keredhaan Allah sebagai matlamat tertinggi.</p>
   </div>
 
-  <a class="toplink no-print" href="#top">↑ Kembali ke atas</a>
+  <a class="toplink" href="#top">↑ Atas</a>
 </section>
 
-    </article>
-  </main>
+</main>
 
-  <footer>
-    <p>© 3asbab.org — Arkib bacaan sahaja. Dua Lapisan Asbab Mutlak: Asli dan Terbitan.</p>
-  </footer>
+    <footer class="wrap">
+      <div>© 3asbab.org — Kerangka 3 Asbab</div>
+    </footer>
+
+  </div>
 
   <script>
     function downloadPDF() {
       const btn = document.querySelector('.btn-pdf');
-      const orig = btn.innerHTML;
+      if (!btn) return;
+
+      const originalText = btn.innerHTML;
       btn.innerHTML = '⏳ Menyediakan PDF...';
       btn.disabled = true;
+
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+      const pageTitle = document.getElementById('page-title');
+      const categoryLine = document.getElementById('category-line');
+      const headerLine = document.getElementById('header-line');
+
+      if (typeof DOC_META !== "undefined") {
+        if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
+        if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
+        if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
+        if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
+        if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
+        if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
+      }
+
       setTimeout(() => {
         window.print();
-        setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 500);
-      }, 100);
+
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 120);
     }
   </script>
-
 </body>
 </html>
