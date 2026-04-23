@@ -1,10 +1,12 @@
-
-<!DOCTYPE html><html lang="ms"><head>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA | 3asbab.org</title>
+  <title>Bab 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA | 3asbab.org</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     :root {
       --max-width: 920px;
       --border-light: #e2e8f0;
@@ -14,775 +16,845 @@
       --accent-light: #e6f4ed;
       --text-dark: #1a202c;
       --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
-      --pdf-accent: #0f7b4a;
-      --pdf-accent-soft: #e6f4ed;
-      --pdf-border: #d9e2ec;
-      --pdf-text: #1f2937;
-      --pdf-muted: #5b6573;
-      --pdf-paper: #fffefb;
+      --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --danger-soft: #fff5f5;
+      --warn-soft: #fffbea;
+      --rose-soft: #fff1f2;
+      --blue-soft: #eff6ff;
+      --purple-soft: #faf5ff;
+      --orange-soft: #fff7ed;
+      --teal-soft: #f0fdfa;
     }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; background: #ffffff; color: var(--text-dark); line-height: 1.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-wrap: break-word; }
-    .wrap { width: 100%; max-width: var(--max-width); margin: 0 auto; padding-left: clamp(1.15rem, 4vw, 1.8rem); padding-right: clamp(1.15rem, 4vw, 1.8rem); }
-    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
-    .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.8rem 0; min-height: 56px; }
-    .topbar a { text-decoration: none; font-size: 0.92rem; color: var(--text-dark); }
-    .topbar a:hover { color: var(--accent); }
-    .brand { font-weight: 700; margin-right: 0.5rem; }
-    header { padding: 1.5rem 0 0.65rem; }
-    h1 { font-size: clamp(1.85rem, 4vw, 2.45rem); line-height: 1.25; margin: 0.3rem 0 0.55rem; letter-spacing: -0.01em; }
-    .meta { color: var(--muted); font-size: 0.9rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; margin: 0.45rem 0; }
-    .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 56px; z-index: 20; background: rgba(255,255,255,0.98); }
-    .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem 0; align-items: center; font-size: 0.82rem; }
-    .jump a { padding: 0.24rem 0.72rem; border-radius: 999px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.12s ease; color: var(--text-dark); }
-    .jump a:hover { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
-    main { padding: 1.2rem 0 3rem; }
-    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.22rem 0.82rem; border-radius: 999px; margin-bottom: 0.8rem; }
-    h2 { font-size: 1.6rem; line-height: 1.35; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 700; letter-spacing: -0.01em; }
-    h3 { font-size: 1.24rem; line-height: 1.45; margin: 1.2rem 0 0.52rem; font-weight: 700; color: #0b3b2a; }
-    h4 { font-size: 1.05rem; line-height: 1.5; margin: 1rem 0 0.45rem; font-weight: 700; color: #134e3a; }
-    p { margin: 0.72rem 0; }
-    ul, ol { margin: 0.55rem 0 0.95rem 1.4rem; padding-left: 0.2rem; }
-    li { margin: 0.34rem 0; line-height: 1.75; }
-    strong { font-weight: 700; }
-    em { font-style: italic; }
-    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.25rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
-    .arab, .arabic { font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif; color: #1e293b; }
-    .arab { direction: rtl; unicode-bidi: embed; font-size: 1.12em; line-height: 1.9; white-space: normal; }
-    .arabic { font-size: 1.62rem; line-height: 1.9; direction: rtl; text-align: right; margin: 0.85rem 0; }
-    .translation { background: #f8fafc; padding: 0.7rem 1rem; border-radius: 0.8rem; margin: 0.55rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.96rem; line-height: 1.75; }
-    blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.9rem 1.15rem; margin: 1rem 0; font-style: normal; line-height: 1.8; }
-    .insight-box { background: #f1f5f9; padding: 0.9rem 1.15rem; border-radius: 1rem; margin: 1rem 0; line-height: 1.75; }
-    .insight-box h3 { margin-top: 0; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.94rem; background: #fff; }
-    th, td { border: 1px solid var(--border-light); padding: 0.68rem; text-align: left; vertical-align: top; line-height: 1.65; }
-    th { background: #f1f5f9; font-weight: 700; }
-    hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
-    .footnote { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
-    .footnotes { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; padding-left: 1.2rem; }
-    .footnotes li { margin: 0.38rem 0; line-height: 1.65; }
-    .footnotes a, .footnote a, sup a { color: var(--accent); text-decoration: none; }
-    .toplink { font-size: 0.78rem; margin-top: 0.85rem; display: inline-block; color: var(--accent); text-decoration: none; }
-    .toplink:hover { text-decoration: underline; }
-    footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.82rem; margin-top: 1rem; }
-    .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
-    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
-    .btn-pdf:active { transform: translateY(1px); }
-    .no-print { display: block; }
-    .pdf-only { display: none; }
-    .pdf-exporting .pdf-only { display: block !important; }
-    .pdf-exporting .no-print,
-    .pdf-exporting .pdf-toolbar,
-    .pdf-exporting .topbar,
-    .pdf-exporting .jump,
-    .pdf-exporting .toplink { display: none !important; }
-    .pdf-shell { background: #fff; }
-    .pdf-cover { display: none; }
-    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
-    .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
-    .pdf-cover-brand { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
-    .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
-    .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
-    .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
-    .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
-    .pdf-meta-page { display: none; }
-    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
-    .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
-    .pdf-meta-list p { margin: 0 0 6mm; }
-    .pdf-break { break-before: page; page-break-before: always; }
-    .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
-    @media print {
-      body { margin: 0; padding: 0; }
-      .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
-      .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
-      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
-      h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+      background: #f8fafc;
+      color: var(--text-dark);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.75;
     }
+
+    a { color: inherit; text-decoration: none; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.92);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .topbar-inner,
+    .wrap {
+      width: min(var(--max-width), calc(100% - 24px));
+      margin: 0 auto;
+    }
+
+    .topbar-inner {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.2px;
+    }
+
+    .header {
+      padding: 28px 0 18px;
+    }
+
+    .chapter-badge {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #fee2e2;
+      color: #991b1b;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .header-line {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .jump {
+      position: sticky;
+      top: 58px;
+      z-index: 40;
+      background: rgba(248,250,252,0.95);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid #f1f5f9;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .jump-inner {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 12px 0;
+      font-size: 14px;
+    }
+
+    .jump-inner strong {
+      color: var(--muted);
+      margin-right: 2px;
+    }
+
+    .jump-inner a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    main {
+      padding: 24px 0 48px;
+    }
+
+    .section-card {
+      background: white;
+      border: 1px solid var(--border-light);
+      border-radius: 18px;
+      padding: 24px 20px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 18px;
+      overflow-wrap: break-word;
+    }
+
+    .section-card h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .section-card h3 {
+      font-size: 20px;
+      line-height: 1.35;
+      margin: 18px 0 10px;
+    }
+
+    .section-card h4 {
+      font-size: 17px;
+      line-height: 1.45;
+      margin: 14px 0 8px;
+    }
+
+    p { margin: 10px 0; }
+
+    ul, ol {
+      margin: 10px 0 10px 22px;
+    }
+
+    li { margin: 6px 0; }
+
+    .sep {
+      text-align: center;
+      color: #94a3b8;
+      margin: 8px 0 2px;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+
+    .lead {
+      font-size: 17px;
+    }
+
+    .center-line {
+      text-align: center;
+      font-weight: 700;
+      margin: 14px 0;
+    }
+
+    .arrow-line {
+      margin: 6px 0;
+      font-weight: 600;
+    }
+
+    .note-box,
+    .insight-box,
+    .dalil-box,
+    .key-box {
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      border: 1px solid var(--border-light);
+    }
+
+    .note-box { background: var(--warn-soft); }
+    .insight-box { background: var(--accent-light); }
+    .dalil-box { background: var(--blue-soft); }
+    .key-box { background: var(--purple-soft); }
+
+    .subtle {
+      color: var(--muted);
+    }
+
+    .arabic {
+      direction: rtl;
+      text-align: right;
+      font-size: clamp(25px, 4vw, 34px);
+      line-height: 1.95;
+      font-family: "Amiri", "Noto Naskh Arabic", "Scheherazade New", serif;
+      margin: 10px 0 12px;
+    }
+
+    .translation {
+      background: #f8fafc;
+      border-left: 4px solid var(--accent);
+      padding: 12px 14px;
+      border-radius: 10px;
+      color: #334155;
+      margin: 10px 0 14px;
+    }
+
+    .quote {
+      border-left: 4px solid #cbd5e1;
+      padding-left: 14px;
+      color: #334155;
+      margin: 12px 0;
+    }
+
+    .tight p { margin: 7px 0; }
+
+    .footnote {
+      font-size: 14px;
+      color: #334155;
+      background: #f8fafc;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 8px 0 30px;
+    }
+
     @media (max-width: 640px) {
-      .wrap { padding-left: 1.1rem; padding-right: 1.1rem; }
-      .topbar nav { gap: 0.75rem; min-height: 52px; }
-      .jump { top: 52px; }
-      .section-card { padding: 1rem 1rem; border-radius: 1rem; }
-      h1 { font-size: 1.75rem; }
-      h2 { font-size: 1.34rem; padding-left: 0.75rem; }
-      h3 { font-size: 1.1rem; }
-      h4 { font-size: 1rem; }
-      .arab { font-size: 1.08em; }
-      .arabic { font-size: 1.34rem; }
-      table { font-size: 0.88rem; }
-      th, td { padding: 0.58rem; }
+      .section-card {
+        padding: 20px 16px;
+        border-radius: 16px;
+      }
+
+      .jump-inner {
+        font-size: 13px;
+      }
+
+      .arabic {
+        font-size: 28px;
+      }
+    }
+
+    @media print {
+      .topbar, .jump { display: none !important; }
+      body { background: white; }
+      .section-card {
+        box-shadow: none;
+        break-inside: avoid;
+      }
     }
   </style>
 </head>
 <body>
-  <script>
-    const DOC_META = {
-      pageTitle: "BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA",
-      shortTitle: "BAB 21",
-      subtitle: "Aplikasi Kerangka 3 Asbab pada Institusi Rumah",
-      headerLine: "📖 Kerangka 3 Asbab — Arkib Baca Sahaja",
-      categoryLine: "Rumah, Keluarga &amp; Suasana Iman | Aplikasi Tauhid",
-      currentFile: "bab-21.html",
-      prevFile: "bab-21.html",
-      prevLabel: "Bab 21",
-      currentLabel: "BAB 21",
-      nextFile: "bab-23.html",
-      nextLabel: "Bab 23",
-      jumpLinks: [
-        { id: "21-1", label: "21.1" },
-        { id: "21-2", label: "21.2" },
-        { id: "21-3", label: "21.3" },
-        { id: "21-4", label: "21.4" },
-        { id: "21-5", label: "21.5" },
-        { id: "21-6", label: "21.6" },
-        { id: "21-7", label: "21.7" },
-        { id: "21-8", label: "21.8" }
-      ]
-    };
-  </script>
-  <div class="topbar no-print">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+      <div class="subtle">3asbab.org</div>
+    </div>
+  </div>
+
+  <header class="header">
     <div class="wrap">
-      <nav>
-        <span class="brand">3asbab.org</span>
-        <a href="index.html">🏠 Home</a>
-        <a id="nav-prev" href="bab-21.html">← Bab 21</a>
-        <a id="nav-current" href="bab-21.html" style="font-weight:600;">BAB 21</a>
-        <a id="nav-next" href="bab-23.html">Bab 23 →</a>
-      </nav>
+      <div class="chapter-badge">🟥 BAB 21</div>
+      <h1>BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</h1>
+      <div class="subtitle">Subtitle: Dari memelihara iman → menghidupkan dakwah</div>
+    </div>
+  </header>
+
+  <div class="jump">
+    <div class="wrap">
+      <div class="jump-inner">
+        <strong>🧭 Lompat ke:</strong>
+        <a href="#21-1">21.1</a>
+        <a href="#21-2">21.2</a>
+        <a href="#21-3">21.3</a>
+        <a href="#21-4">21.4</a>
+        <a href="#21-5">21.5</a>
+        <a href="#21-6">21.6</a>
+        <a href="#21-7">21.7</a>
+        <a href="#21-8">21.8</a>
+        <a href="#21-9">21.9</a>
+        <a href="#21-10">21.10</a>
+        <a href="#21-11">21.11</a>
+        <a href="#21-12">21.12</a>
+      </div>
     </div>
   </div>
-  <div class="wrap no-print">
-    <div class="pdf-toolbar">
-      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
-    </div>
-  </div>
-  <div id="pdf-shell" class="pdf-shell">
-    <div class="pdf-cover pdf-only">
-      <div class="pdf-cover-inner">
-        <div class="pdf-cover-top">
-          <div class="pdf-cover-brand">3asbab.org</div>
-          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
-          <h1 class="pdf-cover-title" id="pdf-cover-title">BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</h1>
-          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Aplikasi Kerangka 3 Asbab pada Institusi Rumah</p>
+
+  <main>
+    <div class="wrap">
+
+      <section class="section-card" id="21-1">
+        <h2>21.1 Status Tauhidi: Rumah = Markaz Dakwah</h2>
+
+        <p>Rumah bukan sekadar tempat menyimpan iman, tetapi:</p>
+
+        <div class="center-line">markaz dakwah keluarga</div>
+
+        <p class="arrow-line">➡️ Masjid → melahirkan iman</p>
+        <p class="arrow-line">➡️ Rumah → menghidupkan dakwah</p>
+
+        <p>Rumah ialah titik peralihan daripada:</p>
+        <ul>
+          <li>iman yang disimpan → kepada iman yang bergerak</li>
+        </ul>
+
+        <h3>Penjelasan Tauhidi:</h3>
+
+        <p>Masjid ialah tempat iman dibina melalui Asbab Mutlak seperti solat berjemaah, zikir, dan taklim.
+        Namun iman itu tidak berhenti di masjid.</p>
+
+        <p>Rumah berfungsi sebagai:</p>
+
+        <p class="arrow-line">➡️ tempat iman diuji</p>
+        <p class="arrow-line">➡️ tempat iman diamalkan secara berterusan</p>
+        <p class="arrow-line">➡️ tempat iman disebarkan dalam unit paling kecil (keluarga)</p>
+
+        <div class="note-box">
+          <p>📌 Jika masjid melahirkan iman tetapi rumah tidak menghidupkannya:</p>
+          <p class="arrow-line">➡️ iman akan menjadi maklumat, bukan kehidupan</p>
         </div>
-        <div class="pdf-cover-bottom">
-          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
-          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
+
+        <h3>📌 Dalil:</h3>
+
+        <div class="dalil-box">
+          <div class="arabic">﴿ وَأْمُرْ أَهْلَكَ بِٱلصَّلَوٰةِ وَٱصْطَبِرْ عَلَيْهَا ﴾</div>
+          <div class="translation">“Perintahkanlah keluargamu mendirikan solat dan bersabarlah atasnya.”【1】</div>
         </div>
-      </div>
-    </div>
-    <div class="pdf-meta-page pdf-only pdf-break">
-      <div class="pdf-meta-inner">
-        <h2>Maklumat Dokumen</h2>
-        <div class="pdf-meta-list">
-          <p><strong>Judul:</strong> <span id="pdf-meta-title">BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</span></p>
-          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
-          <p><strong>Laman:</strong> 3asbab.org</p>
-          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
-          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+
+        <p class="arrow-line">➡️ Ayat ini menunjukkan:</p>
+        <p>iman mesti dihidupkan dalam rumah melalui usaha berterusan (mujahadah &amp; sabar)</p>
+      </section>
+
+      <section class="section-card" id="21-2">
+        <h2>🔑 21.2 Definisi Amal Ijtima’i (Dikunci)</h2>
+
+        <p class="center-line">Amal ijtima’i ialah amal yang lahir daripada mesyuarat (syura)</p>
+
+        <p>Ia bukan:</p>
+        <ul>
+          <li>sekadar buat bersama</li>
+          <li>sekadar berkumpul</li>
+          <li>sekadar aktiviti keluarga</li>
+        </ul>
+
+        <p>Tetapi:</p>
+
+        <div class="center-line">diputuskan melalui mesyuarat → dilaksanakan secara bersama → dengan niat menghidupkan agama</div>
+
+        <h3>Penjelasan Tauhidi</h3>
+
+        <p>Amal ijtima’i ialah Asbab Mutlak Terbitan yang lahir daripada:</p>
+
+        <p class="arrow-line">➡️ fikir jamaah</p>
+        <p class="arrow-line">➡️ keputusan syura</p>
+        <p class="arrow-line">➡️ pengorbanan bersama</p>
+
+        <div class="note-box">
+          <p>📌 Tanpa mesyuarat:</p>
+          <p class="arrow-line">➡️ amal menjadi emosi individu</p>
+          <p class="arrow-line">➡️ tiada keseragaman</p>
+          <p class="arrow-line">➡️ tiada kesinambungan</p>
         </div>
-      </div>
-    </div>
-    <header class="wrap" id="top">
-      <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
-      <h1 id="page-title">BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</h1>
-      <div class="meta" id="category-line">Rumah, Keluarga &amp; Suasana Iman | Aplikasi Tauhid</div>
-    </header>
-    <div class="jump no-print">
-      <div class="wrap">
-        <div class="jump-inner" id="jump-links">
-          <strong>🧭 Lompat ke:</strong>
-          <a href="#21-1">21.1</a>
-          <a href="#21-2">21.2</a>
-          <a href="#21-3">21.3</a>
-          <a href="#21-4">21.4</a>
-          <a href="#21-5">21.5</a>
-          <a href="#21-6">21.6</a>
-          <a href="#21-7">21.7</a>
-          <a href="#21-8">21.8</a>
+
+        <div class="insight-box">
+          <p>📌 Dengan mesyuarat:</p>
+          <p class="arrow-line">➡️ amal menjadi tertib Rasulullah ﷺ</p>
+          <p class="arrow-line">➡️ hati disatukan</p>
+          <p class="arrow-line">➡️ bantuan Allah (nusrah) ditarik</p>
         </div>
-      </div>
+
+        <h3>Penegasan Tauhidi</h3>
+
+        <p>✔️ Tanpa mesyuarat → tiada amal ijtima’i</p>
+        <p>✔️ Tanpa amal ijtima’i → tiada jamaah</p>
+        <p>✔️ Tanpa jamaah → dakwah tidak bergerak</p>
+
+        <p class="center-line">Mesyuarat ialah asas semua amal ijtima’i dalam Islam</p>
+
+        <h3>📌 Dalil:</h3>
+
+        <div class="dalil-box">
+          <div class="arabic">﴿ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ ﴾【2】</div>
+        </div>
+
+        <p class="arrow-line">➡️ Ini bukan cadangan, tetapi struktur hidup umat</p>
+      </section>
+
+      <section class="section-card" id="21-3">
+        <h2>🧕 21.3 Tertib Amal Ijtima’i Wanita (Dikunci)</h2>
+
+        <p>Dakwah ialah tanggungjawab:</p>
+
+        <div class="center-line">lelaki dan wanita</div>
+
+        <p>Namun tertibnya berbeza.</p>
+
+        <h3>Penjelasan Tauhidi</h3>
+
+        <p>Dalam K3A:</p>
+
+        <p class="arrow-line">➡️ Dakwah = Asbab Mutlak</p>
+        <p class="arrow-line">➡️ Wanita tidak dikecualikan daripada Asbab Mutlak</p>
+
+        <p>Tetapi:</p>
+
+        <p class="arrow-line">➡️ tertib amal wanita mengikut sunnah &amp; hikmah syarak</p>
+
+        <h3>Prinsip Tauhidi</h3>
+
+        <p>✔️ Wanita juga membina iman melalui amal ijtima’i</p>
+        <p>✔️ Amal ijtima’i wanita mesti melalui mesyuarat</p>
+        <p>✔️ Mesyuarat berlaku bersama mahram</p>
+        <p>✔️ Lelaki memimpin, wanita menghidupkan suasana</p>
+
+        <div class="note-box">
+          <p>📌 Ini bukan perbezaan nilai, tetapi:</p>
+          <p class="arrow-line">➡️ pembahagian peranan untuk memastikan dakwah berjalan sempurna</p>
+        </div>
+
+        <h3>Mekanisme Amal Ijtima’i Wanita</h3>
+
+        <p>Wanita:</p>
+        <ul>
+          <li>bermesyuarat dengan suami / mahram</li>
+          <li>menyusun amal rumah</li>
+          <li>menghidupkan suasana iman</li>
+          <li>menyokong dakwah keluarga</li>
+        </ul>
+
+        <div class="insight-box">
+          <p>📌 Peranan sebenar wanita:</p>
+          <p class="arrow-line">➡️ bukan sekadar “ikut”</p>
+          <p class="arrow-line">➡️ tetapi menghidupkan suasana iman dalam rumah</p>
+        </div>
+
+        <div class="key-box">
+          <p><strong>Ayat Kunci</strong></p>
+          <p>“Amal ijtima’i tidak lahir daripada semangat, tetapi daripada mesyuarat.”</p>
+        </div>
+      </section>
+
+      <section class="section-card" id="21-4">
+        <h2>21.4 Bentuk Amal Ijtima’i Rumah</h2>
+
+        <p>Amal ijtima’i rumah dizahirkan melalui:</p>
+
+        <ul>
+          <li>Mesyuarat keluarga</li>
+          <li>Dakwah di antara ahli keluarga</li>
+          <li>Taklim wa ta‘allum</li>
+          <li>Muzakarah iman</li>
+          <li>Azam amal setiap ahli keluarga</li>
+        </ul>
+
+        <p class="arrow-line">➡️ Rumah berubah daripada tempat tinggal → kepada gelanggang amal</p>
+
+        <h3>Penjelasan Tauhidi</h3>
+
+        <p>Amal ini bukan berdiri sendiri, tetapi membentuk rantaian hidup Tauhidi dalam rumah:</p>
+
+        <h3>0) Dakwah → menggerakkan hati (Asas Rantaian)</h3>
+
+        <p class="arrow-line">➡️ Mengajak ahli keluarga kepada Allah</p>
+        <p class="arrow-line">➡️ Menghidupkan kalimah Tauhid dalam rumah</p>
+        <p class="arrow-line">➡️ Mengeluarkan hati daripada dunia kepada akhirat</p>
+
+        <div class="note-box">
+          <p>📌 Dakwah ialah:</p>
+          <p>Asbab Mutlak Asli yang menghidupkan semua amal</p>
+          <p class="arrow-line">➡️ Tanpa dakwah:</p>
+          <p class="arrow-line">➡️ semua amal menjadi rutin, bukan kehidupan</p>
+        </div>
+
+        <div class="dalil-box">
+          <p>📌 Dalil:</p>
+          <div class="arabic">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى ٱللَّهِ ﴾【1】</div>
+        </div>
+
+        <h3>1) Mesyuarat → menjadikan amal ijtima’i</h3>
+
+        <p class="arrow-line">➡️ Menyatukan fikir seluruh ahli keluarga</p>
+        <p class="arrow-line">➡️ Menentukan amal secara jamaah</p>
+        <p class="arrow-line">➡️ Mengikat hati kepada keputusan bersama</p>
+
+        <div class="note-box">
+          <p>📌 Di sinilah beza:</p>
+          <p class="arrow-line">➡️ Amal infradi → individu buat sendiri</p>
+          <p class="arrow-line">➡️ Amal ijtima’i → lahir daripada mesyuarat</p>
+          <p class="arrow-line">➡️ Tanpa mesyuarat:</p>
+          <p class="arrow-line">➡️ tiada jamaah, walaupun ramai orang beramal</p>
+        </div>
+
+        <h3>2) Taklim → memberi ilmu &amp; iman</h3>
+
+        <p class="arrow-line">➡️ Membaca dan menyampaikan wahyu</p>
+        <p class="arrow-line">➡️ Memasukkan kebesaran Allah dalam hati</p>
+        <p class="arrow-line">➡️ Menukar ilmu → menjadi iman</p>
+
+        <div class="dalil-box">
+          <p>📌 Dalil:</p>
+          <div class="arabic">﴿ يَتْلُوا۟ عَلَيْهِمْ ءَايَٰتِهِ ﴾</div>
+        </div>
+
+        <p class="arrow-line">➡️ Taklim ialah pintu masuk iman</p>
+
+        <h3>3) Muzakarah / Tazkiyah → menghidupkan rasa iman</h3>
+
+        <p class="arrow-line">➡️ Berkongsi pengalaman iman</p>
+        <p class="arrow-line">➡️ Membersihkan hati daripada dunia</p>
+        <p class="arrow-line">➡️ Menghidupkan cinta, takut, yakin kepada Allah</p>
+
+        <div class="dalil-box">
+          <p>📌 Dalil:</p>
+          <div class="arabic">﴿ وَيُزَكِّيهِمْ ﴾</div>
+        </div>
+
+        <p class="arrow-line">➡️ Tazkiyah menjadikan iman itu hidup dalam hati</p>
+
+        <h3>4) Taklim lanjutan → تثبيت (pengukuhan)</h3>
+
+        <p class="arrow-line">➡️ Menguatkan kefahaman agama</p>
+        <p class="arrow-line">➡️ Menjadikan iman stabil</p>
+        <p class="arrow-line">➡️ Mengelakkan salah faham</p>
+
+        <div class="dalil-box">
+          <p>📌 Dalil:</p>
+          <div class="arabic">﴿ وَيُعَلِّمُهُمُ ٱلْكِتَٰبَ وَٱلْحِكْمَةَ ﴾</div>
+        </div>
+
+        <p class="arrow-line">➡️ Hikmah = amal yang tepat pada tempatnya (khidmat)</p>
+
+        <h3>5) Azam amal → menggerakkan tindakan</h3>
+
+        <p class="arrow-line">➡️ Setiap ahli keluarga berazam untuk beramal</p>
+        <p class="arrow-line">➡️ Amal dilakukan dengan mujahadah dan sabar</p>
+        <p class="arrow-line">➡️ Amal mengikut tertib Rasulullah ﷺ</p>
+
+        <p class="arrow-line">📌 Di sinilah:</p>
+        <p class="arrow-line">➡️ iman bertukar menjadi realiti kehidupan</p>
+
+        <h3>Struktur Lengkap Ayat (Rujukan Tauhidi)</h3>
+
+        <div class="dalil-box">
+          <div class="arabic">﴿ يَتْلُوا۟ عَلَيْهِمْ ءَايَٰتِهِ وَيُزَكِّيهِمْ وَيُعَلِّمُهُمُ ٱلْكِتَٰبَ ﴾【3】</div>
+          <p><strong>Terjemahannya:</strong></p>
+          <div class="translation">“Yang membacakan kepada mereka ayat-ayat-Nya, mensucikan mereka, dan mengajarkan kepada mereka al-Kitab.”</div>
+          <p>﴿ يَتْلُوا۟ عَلَيْهِمْ ءَايَٰتِهِ ﴾ → Dakwah</p>
+          <p>﴿ وَيُزَكِّيهِمْ ﴾ → Tazkiyah (ibadat &amp; muzakarah)</p>
+          <p>﴿ وَيُعَلِّمُهُمُ ٱلْكِتَٰبَ ﴾ → Taklim</p>
+          <p>﴿ وَٱلْحِكْمَةَ ﴾ → Hikmah (khidmat &amp; amal)</p>
+        </div>
+
+        <h3>Kesimpulan Tauhidi (Diperbetulkan)</h3>
+
+        <p class="arrow-line">➡️ Dakwah menghidupkan hati</p>
+        <p class="arrow-line">➡️ Mesyuarat menyatukan amal</p>
+        <p class="arrow-line">➡️ Taklim membina iman</p>
+        <p class="arrow-line">➡️ Tazkiyah menghidupkan rasa</p>
+        <p class="arrow-line">➡️ Hikmah mengarahkan amal</p>
+        <p class="arrow-line">➡️ Azam amal menggerakkan kehidupan</p>
+
+        <p>Inilah rantaian sebenar rumah beriman:</p>
+
+        <div class="center-line">👉 Dakwah → Mesyuarat → Taklim → Tazkiyah → Hikmah → Azam Amal</div>
+
+        <h3>Kunci Besar (Correction penting)</h3>
+
+        <p>❌ Salah faham biasa:</p>
+        <p class="arrow-line">➡️ Mesyuarat dianggap permulaan</p>
+
+        <p>✔️ Hakikat Tauhidi:</p>
+        <p class="arrow-line">➡️ Dakwah adalah permulaan</p>
+        <p class="arrow-line">➡️ Mesyuarat menjadikan amal itu ijtima’i</p>
+
+        <h3>Penutup Tajam</h3>
+
+        <p>Rumah tidak hidup dengan aktiviti.</p>
+
+        <p>Rumah hidup apabila:</p>
+
+        <p class="arrow-line">➡️ Dakwah menggerakkan hati</p>
+        <p class="arrow-line">➡️ Mesyuarat menyatukan amal</p>
+        <p class="arrow-line">➡️ Amal berjalan dengan tertib Rasulullah ﷺ</p>
+
+        <p>✔️ letak dakwah di tempat yang betul (paling awal)</p>
+      </section>
+
+      <section class="section-card" id="21-5">
+        <h2>21.5 Sirah: Rumah Sahabat sebagai Markaz Dakwah</h2>
+
+        <h3>1. Rumah Abu Ayyub al-Ansari r.a.</h3>
+        <ul>
+          <li>Rasulullah ﷺ tinggal selepas hijrah</li>
+          <li>rumah menjadi:</li>
+          <li>tempat wahyu</li>
+          <li>tempat sahabat berkumpul</li>
+          <li>pusat dakwah awal Madinah</li>
+        </ul>
+
+        <p class="arrow-line">➡️ Rumah = markaz dakwah sebenar</p>
+
+        <div class="note-box">
+          <p>📌 Ini membuktikan:</p>
+          <p class="arrow-line">➡️ rumah boleh menjadi pusat perubahan umat</p>
+        </div>
+
+        <h3>2. Rumah Al-Arqam ibn Abi al-Arqam r.a.</h3>
+        <ul>
+          <li>digunakan secara rahsia</li>
+          <li>sahabat dibina iman</li>
+          <li>generasi awal Islam lahir</li>
+        </ul>
+
+        <p class="arrow-line">➡️ Rumah = pusat pembinaan iman</p>
+
+        <div class="note-box">
+          <p>📌 Di sinilah:</p>
+          <p class="arrow-line">➡️ iman generasi pertama Islam dibentuk</p>
+        </div>
+
+        <h3>3. Rumah Abu Bakr r.a.</h3>
+        <ul>
+          <li>keluarga terlibat dalam dakwah</li>
+          <li>semasa hijrah:</li>
+          <li>Asma’ binti Abu Bakr bantu logistik</li>
+          <li>Abdullah ibn Abu Bakr bawa maklumat</li>
+        </ul>
+
+        <p class="arrow-line">➡️ Rumah = pusat operasi dakwah</p>
+
+        <div class="note-box">
+          <p>📌 Ini menunjukkan:</p>
+          <p class="arrow-line">➡️ seluruh ahli keluarga terlibat dalam dakwah</p>
+        </div>
+      </section>
+
+      <section class="section-card" id="21-6">
+        <h2>⚔️ 21.6 Rumah Menyokong Dakwah (Sirah Hidup)</h2>
+
+        <h3>Khadijah radhiallahu anha</h3>
+        <ul>
+          <li>menyokong Rasulullah ﷺ sepenuhnya</li>
+          <li>menenangkan baginda</li>
+          <li>mengorbankan harta</li>
+        </ul>
+
+        <p class="arrow-line">➡️ Rumah = sumber kekuatan dakwah</p>
+
+        <div class="note-box">
+          <p>📌 Tanpa rumah yang kuat:</p>
+          <p class="arrow-line">➡️ dakwah menjadi lemah</p>
+        </div>
+
+        <h3>Amr ibn al-Jamuh r.a.</h3>
+        <ul>
+          <li>keluarga tidak menghalang</li>
+          <li>malah menyokong keluar ke medan</li>
+        </ul>
+
+        <p class="arrow-line">➡️ Rumah = menghantar ke jalan Allah</p>
+
+        <div class="note-box">
+          <p>📌 Sokongan keluarga:</p>
+          <p class="arrow-line">➡️ membuka pintu nusrah Allah</p>
+        </div>
+      </section>
+
+      <section class="section-card" id="21-7">
+        <h2>🧕 21.7 Wanita sebagai Penggerak Dakwah (Sirah)</h2>
+
+        <h3>1. Hajar ‘alaihas-salam</h3>
+        <ul>
+          <li>ditinggalkan di padang pasir</li>
+          <li>tidak menahan Nabi Ibrahim</li>
+          <li>yakin kepada Allah</li>
+        </ul>
+
+        <p class="arrow-line">➡️ melahirkan:</p>
+        <ul>
+          <li>Zamzam</li>
+          <li>Ismail</li>
+          <li>umat</li>
+        </ul>
+
+        <div class="note-box">
+          <p>📌 Pengorbanan wanita:</p>
+          <p class="arrow-line">➡️ melahirkan sejarah umat</p>
+        </div>
+
+        <h3>2. Al-Khansa’ radhiallahu anha</h3>
+        <ul>
+          <li>menggalakkan anak keluar</li>
+          <li>anak syahid</li>
+        </ul>
+
+        <p class="arrow-line">➡️ wanita membina generasi pengorbanan</p>
+
+        <h3>3. Ummu Haram radhiallahu anha</h3>
+        <ul>
+          <li>keluar dalam ekspedisi</li>
+          <li>syahid di Cyprus</li>
+        </ul>
+
+        <p class="arrow-line">➡️ wanita juga pelaku dakwah</p>
+      </section>
+
+      <section class="section-card" id="21-8">
+        <h2>🔒 21.8 Prinsip Dakwah Lelaki &amp; Wanita (Dikunci)</h2>
+
+        <p class="center-line">Dakwah ialah tanggungjawab bersama — dengan tertib berbeza</p>
+
+        <h3>📌 Dalil:</h3>
+
+        <div class="dalil-box">
+          <div class="arabic">﴿ وَٱلْمُؤْمِنُونَ وَٱلْمُؤْمِنَٰتُ بَعْضُهُمْ أَوْلِيَآءُ بَعْضٍ ﴾【4】</div>
+        </div>
+
+        <p class="arrow-line">➡️ Lelaki &amp; wanita:</p>
+        <ul>
+          <li>saling menyokong</li>
+          <li>saling menguatkan</li>
+          <li>saling melengkapkan</li>
+        </ul>
+      </section>
+
+      <section class="section-card" id="21-9">
+        <h2>🔥 21.9 Prinsip Pengorbanan Wanita (Dikunci)</h2>
+
+        <p>Wanita beriman:</p>
+
+        <p>✔️ membina iman diri</p>
+        <p>✔️ tidak menghalang suami keluar</p>
+        <p>✔️ tidak melemahkan anak dengan dunia</p>
+        <p>✔️ membina generasi yang sanggup berkorban</p>
+        <p>✔️ menjadikan rumah sebagai markaz iman</p>
+
+        <div class="note-box">
+          <p>📌 Pengorbanan wanita:</p>
+          <p class="arrow-line">➡️ menentukan masa depan umat</p>
+        </div>
+
+        <div class="key-box">
+          <p><strong>Ayat Kunci</strong></p>
+          <p>“Wanita beriman tidak membina rumah untuk keselesaan dunia, tetapi untuk melahirkan pengorbanan di jalan Allah.”</p>
+        </div>
+      </section>
+
+      <section class="section-card" id="21-10">
+        <h2>🚀 21.10 Rumah sebagai Enjin Dakwah</h2>
+
+        <p>Apabila rumah hidup:</p>
+        <ul>
+          <li>suami kuat</li>
+          <li>isteri kuat</li>
+          <li>anak kuat</li>
+        </ul>
+
+        <p class="arrow-line">➡️ rumah menjadi:</p>
+
+        <div class="center-line">enjin dakwah umat</div>
+
+        <h3>Penjelasan Tauhidi</h3>
+
+        <p>Rumah yang hidup menghasilkan:</p>
+
+        <p class="arrow-line">➡️ individu beriman</p>
+        <p class="arrow-line">➡️ keluarga beriman</p>
+        <p class="arrow-line">➡️ jamaah beriman</p>
+
+        <div class="note-box">
+          <p>📌 Dari rumah → terbina masyarakat</p>
+        </div>
+      </section>
+
+      <section class="section-card" id="21-11">
+        <h2>❌ 21.11 Kesalahan Umat Hari Ini</h2>
+
+        <p>Rumah telah disalahfungsikan menjadi:</p>
+        <ul>
+          <li>stor simpan barang</li>
+          <li>panggung hiburan</li>
+          <li>hotel rehat</li>
+          <li>restoran makan</li>
+        </ul>
+
+        <p class="arrow-line">➡️ tiada amal → tiada iman → rumah jadi kosong</p>
+
+        <div class="note-box">
+          <p>📌 Masalah sebenar:</p>
+          <p class="arrow-line">➡️ rumah dipenuhi asbab zulumat</p>
+          <p class="arrow-line">➡️ tetapi kosong daripada asbab mutlak</p>
+        </div>
+      </section>
+
+      <section class="section-card" id="21-12">
+        <h2>🔒 21.12 Rumusan Tauhidi Bab 21 (Dikunci)</h2>
+
+        <ol>
+          <li>Rumah ialah markaz dakwah keluarga</li>
+          <li>Amal ijtima’i lahir daripada mesyuarat</li>
+          <li>Wanita ialah penggerak utama suasana iman</li>
+          <li>Rumah menyokong dakwah, bukan menghalang</li>
+          <li>Dari rumah → lahir jamaah</li>
+        </ol>
+
+        <h3>Penutup Tauhidi</h3>
+
+        <p>Masjid melahirkan iman<br>Rumah menyimpan iman</p>
+
+        <p>Tetapi:</p>
+
+        <p class="center-line">Rumah yang hidup akan menggerakkan iman</p>
+
+        <div class="footnote">
+          <p><strong>📌 Nota Kaki (Standard K3A)</strong></p>
+          <p>【1】Surah Ṭāhā 20:132</p>
+          <p>【2】Surah asy-Syūrā 42:38</p>
+          <p>【3】Surah al-Baqarah 2:129</p>
+          <p>【4】Surah at-Taubah 9:71</p>
+        </div>
+      </section>
+
+      <div class="footer-note">Laman ini arkib baca sahaja.</div>
     </div>
-    <main class="wrap">
-
-    <article>
-      <!-- Badge pembuka bab -->
-      <div class="section">
-        <div class="badge">🟥 BAB 21 – RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</div>
-        <p style="color:var(--muted);"><em>Aplikasi Kerangka 3 Asbab pada Institusi Rumah</em></p>
-      </div>
-
-      <!-- ===== SECTION 21.1 ===== -->
-      <section class="section" id="21-1">
-        <h2>21.1 Mukadimah: Rumah Tempat Lahir Nur</h2>
-        <p>Dalam Kerangka 3 Asbab, rumah bukan sumber Nur secara automatik. Ia bukan Asbab Mutlak Asli seperti masjid, dan ia juga tidak semestinya Asbab Zulumat dengan sendirinya.</p>
-        <p>Rumah hanya melahirkan dan mengekalkan Nur apabila ia diaktifkan sebagai Asbab Mutlak Terbitan — iaitu apabila rumah digunakan untuk amal yang Allah tetapkan, mengikut tertib Rasulullah ﷺ. Tanpa Asbab Mutlak: rumah hanyalah struktur fizikal (Asbab Fitrah), atau berubah menjadi pusat emosi, status, dan budaya keluarga (Asbab Zulumat).</p>
-        <p>➡️ Nur tidak lahir daripada struktur. Nur hanya lahir daripada Asbab Mutlak.</p>
-
-        <h3>Kedudukan Rumah dalam Kerangka 3 Asbab</h3>
-        <p>Dalam tertib Tauhidi yang diajarkan Rasulullah ﷺ:</p>
-        <ul>
-          <li>Masjid ialah Asbab Mutlak Asli → tempat Nur diturunkan, iman dihidupkan, jamaah dibina, dan solat fardhu berjemaah ditegakkan.</li>
-          <li>Rumah ialah Asbab Mutlak Terbitan → tempat Nur dipelihara, distabilkan, dan diwariskan kepada keluarga.</li>
-        </ul>
-        <p>Apabila Nur keluar dari masjid, ia tidak boleh dibiarkan tergantung. Ia mesti mendarat di rumah. Jika rumah tidak dihidupkan sebagai markaz dakwah keluarga, Nur akan: bocor secara perlahan, luntur tanpa disedari, dan akhirnya mati walaupun keluarga masih beridentiti Islam.</p>
-        <div class="arab">﴿ فِى بُيُوتٍ أَذِنَ ٱللَّهُ أَن تُرْفَعَ وَيُذْكَرَ فِيهَا ٱسْمُهُۥ ﴾</div>
-        <p>“Di rumah-rumah yang Allah izinkan untuk ditinggikan dan disebut nama-Nya di dalamnya.” (an-Nūr 24:36)【1】</p>
-        <p>➡️ Ayat ini menunjukkan bahawa rumah mempunyai peranan langsung dalam membawa Nur, apabila ia dihidupkan dengan amal yang Allah izinkan, bukan sekadar label.</p>
-
-        <h4>Prinsip Tauhidi Asas (Dikunci)</h4>
-        <ul>
-          <li>Asbab Fitrah tidak melahirkan Nur.</li>
-          <li>Asbab Zulumat memadam Nur.</li>
-          <li>Hanya Asbab Mutlak melahirkan dan mengekalkan Nur.</li>
-        </ul>
-        <p>Maka persoalan Tauhidi bagi setiap rumah ialah: ❓ Adakah rumah ini berfungsi sebagai Asbab Mutlak Terbitan, atau sekadar Asbab Fitrah yang sedang dikuasai Asbab Zulumat?</p>
-
-        <hr>
-
-        <h3>Kesalahan Besar Zaman Ini (Audit Asbab)</h3>
-        <p>Kesalahan utama umat hari ini ialah:</p>
-        <ul>
-          <li>mengharapkan struktur keluarga melahirkan iman (Asbab Fitrah),</li>
-          <li>mengharapkan emosi keibubapaan menjaga iman anak (Asbab Zulumat),</li>
-          <li>mengharapkan sistem pendidikan menggantikan dakwah rumah (Asbab Zulumat).</li>
-        </ul>
-        <p>Sedangkan tiada satu pun daripada ini mempunyai janji Allah.</p>
-        <div class="arab">﴿ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ قُوٓا۟ أَنفُسَكُمْ وَأَهْلِيكُمْ نَارًۭا ﴾</div>
-        <p>“Wahai orang-orang yang beriman, peliharalah diri kamu dan keluarga kamu daripada api neraka.” (at-Taḥrīm 66:6)【2】</p>
-        <p>➡️ Ayat ini meletakkan tanggungjawab iman keluarga ke atas amal, bukan ke atas sistem luaran.</p>
-        <p>Tanpa: dakwah keluarga, syura rumah, mujahadah dan sabar, serta penghidupan amal-amal sunat secara berjemaah di rumah (sebagai kesinambungan kepada solat fardhu berjemaah di masjid), maka: rumah kekal sebagai Asbab Fitrah yang tidak diaktifkan, iman anak tidak dipelihara secara berterusan, dan keluarga mudah hanyut oleh arus dunia walaupun beridentiti Islam.</p>
-
-        <h3>Rumah Sebagai Markaz Dakwah Keluarga</h3>
-        <p>Dalam Kerangka 3 Asbab: Dakwah ialah Asbab Mutlak Asli, Rumah yang menghidupkan dakwah menjadi Asbab Mutlak Terbitan.</p>
-        <p>Rasulullah ﷺ bersabda:</p>
-        <blockquote>« بَلِّغُوا عَنِّي وَلَوْ آيَةً » – “Sampaikanlah daripadaku walaupun satu ayat.” (Riwayat al-Bukhārī)【3】</blockquote>
-        <p>➡️ Dakwah tidak bermula di mimbar besar, tetapi bermula di rumah. Maka rumah bukan sekadar tempat tinggal, tetapi: markaz dakwah paling hampir, madrasah iman paling berterusan, dan benteng terakhir Nur sebelum keluarga berdepan dunia.</p>
-
-        <hr>
-
-        <p><strong>Rumusan Tauhidi 21.1 (Dikunci)</strong></p>
-        <ol>
-          <li>Rumah tidak melahirkan Nur secara automatik — Nur lahir melalui Asbab Mutlak.</li>
-          <li>Rumah menjadi berkat hanya apabila berfungsi sebagai Asbab Mutlak Terbitan.</li>
-          <li>Rumah tanpa dakwah akan tunduk kepada Asbab Zulumat walaupun kelihatan Islam.</li>
-          <li>Markaz dakwah keluarga ialah sambungan langsung kepada Masjid Nabawi.</li>
-          <li>Di sinilah medan sebenar kelangsungan iman umat ditentukan.</li>
-        </ol>
-
-        <hr>
-
-        <p><strong>Nota Kaki Bab 21.1</strong></p>
-        <ul>
-          <li>【1】 al-Qur’an, Surah an-Nūr 24:36</li>
-          <li>【2】 al-Qur’an, Surah at-Taḥrīm 66:6</li>
-          <li>【3】 Ṣaḥīḥ al-Bukhārī, Kitāb Aḥādīth al-Anbiyā’</li>
-        </ul>
-
-        <a class="toplink" href="#top">↑ Atas</a>
-      </section>
-
-      <!-- ===== SECTION 21.2 ===== -->
-      <section class="section" id="21-2">
-        <h2>21.2 Mesyuarat Harian Keluarga (Syura Rumah) 🔒</h2>
-        <p><em>Syura sebagai Asbab Mutlak & Rumah sebagai Asbab Mutlak Terbitan</em></p>
-
-        <p>Dalam Kerangka 3 Asbab, mesyuarat keluarga bukan alat pengurusan, bukan teknik komunikasi, dan bukan kaedah psikologi moden. Mesyuarat keluarga ialah amal syura. Dan syura ialah Asbab Mutlak yang Allah tetapkan untuk: mengikat iman, menyatukan hati, dan menurunkan keberkatan keputusan.</p>
-        <p>Apabila syura diamalkan secara konsisten dalam rumah, rumah yang asalnya Asbab Fitrah ditransformasikan menjadi Asbab Mutlak Terbitan. Tanpa syura: rumah bergerak dengan kehendak individu, keputusan dipandu emosi, dan Nur yang masuk dari masjid akan berpecah lalu bocor.</p>
-
-        <h3>Kedudukan Syura dalam Kerangka 3 Asbab (Dikunci)</h3>
-        <ul>
-          <li>Syura → Asbab Mutlak (ada janji Allah)</li>
-          <li>Arahan sehala / emosi / kuasa ibu bapa → Asbab Zulumat</li>
-          <li>Struktur keluarga tanpa syura → Asbab Fitrah kosong</li>
-          <li>Rumah yang menghidupkan syura → Asbab Mutlak Terbitan</li>
-        </ul>
-        <p>Allah tidak meletakkan janji-Nya pada: niat baik semata-mata, kasih sayang semata-mata, atau autoriti semata-mata, tetapi pada amal yang disusun melalui syura.</p>
-
-        <h3>Dalil al-Qur’an: Syura sebagai Ciri Orang Beriman</h3>
-        <div class="arab">﴿ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ ﴾</div>
-        <p>“Dan urusan mereka diputuskan melalui syura sesama mereka.” (ash-Shūrā 42:38)【1】</p>
-        <p>➡️ Ayat ini bukan khusus kepada negara atau peperangan. Ia menetapkan syura sebagai DNA kehidupan orang beriman — termasuk dalam rumah. Keluarga tanpa syura bukan keluarga Tauhidi, tetapi sekadar kumpulan individu yang tinggal bersama.</p>
-
-        <h3>Dalil Hadith: Keberkatan Jamaah & Keputusan Bersama</h3>
-        <p>Rasulullah ﷺ bersabda:</p>
-        <blockquote>يَدُ اللَّهِ مَعَ الْجَمَاعَةِ – “Tangan Allah bersama jamaah.” (Riwayat at-Tirmidhī)【2】</blockquote>
-        <p>➡️ Apabila keluarga duduk bermesyuarat: mereka menjadi jamaah, keputusan tidak lagi milik individu, dan tangan Allah bersama mereka. Tanpa syura, rumah kehilangan jamaah. Tanpa jamaah, tiada jaminan pertolongan Allah.</p>
-
-        <h3>Syura Rumah ≠ Mesyuarat Korporat</h3>
-        <p>Syura rumah bukan: sesi debat siapa betul, tempat meluahkan emosi, atau medan menguatkan autoriti ibu bapa. Syura rumah ialah: duduk bersama dengan adab, mendengar tanpa memotong, bercakap untuk mencari redha Allah, menerima keputusan walaupun bertentangan kehendak diri. ➡️ Inilah mujahadah paling halus dalam keluarga.</p>
-
-        <h3>Sirah Rasulullah ﷺ: Syura Bermula di Dalam Rumah</h3>
-        <p><strong>Kisah Umm Salamah r.a. – Perjanjian Hudaibiyah</strong><br>Apabila para Sahabat berat melaksanakan arahan selepas Hudaibiyah, Rasulullah ﷺ masuk ke rumah dan bermesyuarat dengan Umm Salamah r.a. Cadangan Umm Salamah r.a.: “Wahai Rasulullah, keluarlah tanpa berkata apa-apa, sembelihlah haiwanmu dan bercukurlah. Mereka akan mengikutimu.” Rasulullah ﷺ menerima pandangan itu, dan krisis umat selesai tanpa paksaan dan tanpa perpecahan. ➡️ Keputusan besar umat bermula daripada syura di dalam rumah. Ini mengunci hakikat: Rumah Rasulullah ﷺ ialah markaz syura, bukan ruang peribadi kosong.</p>
-
-        <h3>Kisah Sahabat: Syura Rumah Melahirkan Keberanian Umat</h3>
-        <p><strong>Keluarga Asmā’ binti Abī Bakr r.a. → ‘Abdullah bin Zubair r.a.</strong><br>Asmā’ r.a. tidak membesarkan anak dengan emosi, tetapi dengan keputusan iman yang lahir daripada syura rumah. Apabila ‘Abdullah bin Zubair r.a. ditekan untuk tunduk kepada kebatilan, beliau kembali kepada ibunya. Nasihat terakhir Asmā’ r.a.: jangan tunduk kepada kebatilan, lebih baik mati mulia daripada hidup hina. Asmā’ r.a. tidak merayu atas dasar kasih ibu, tetapi meletakkan keputusan itu di neraca akhirat. 📌 Ini contoh syura rumah berasaskan iman, bukan perasaan ibu semata-mata. ➡️ Keputusan rumah → keberanian anak di medan umat.</p>
-
-        <h3>Kisah Salman al-Farisi r.a. & Abu Darda’ r.a.</h3>
-        <p>Salman r.a. bermalam di rumah Abu Darda’ r.a. dan melihat beliau menekan diri dalam ibadah hingga mengabaikan hak isteri dan tubuh. Salman r.a. menasihati di dalam rumah: “Sesungguhnya Tuhanmu ada hak ke atasmu, dirimu ada hak ke atasmu, dan keluargamu ada hak ke atasmu. Maka berikanlah setiap yang berhak akan haknya.” Apabila perkara ini disampaikan kepada Rasulullah ﷺ, Baginda ﷺ bersabda: « صَدَقَ سَلْمَانُ » – “Salman benar.” (Riwayat al-Bukhārī)【3】 ➡️ Ini membuktikan: rumah Sahabat ialah medan syura iman, tempat menasihati sebelum amal rosak, dan ruang pembetulan yang disahkan Rasulullah ﷺ.</p>
-
-        <h3>Fungsi Mesyuarat Harian Keluarga</h3>
-        <ul>
-          <li>menyatukan niat kepada Allah,</li>
-          <li>menyelesaikan isu kecil sebelum jadi dosa besar,</li>
-          <li>melatih anak adab jamaah,</li>
-          <li>mematahkan ego ibu bapa dan anak,</li>
-          <li>memastikan Nur bersambung dari masjid ke rumah.</li>
-        </ul>
-        <p>Tempohnya tidak perlu lama — yang penting konsisten dan bersanad.</p>
-
-        <h3>Kesalahan Besar Zaman Ini</h3>
-        <p>Kesalahan umum hari ini: keputusan dibuat secara senyap, arahan turun tanpa syura, masalah disimpan hingga meletup, diganti dengan “family group WhatsApp”. Akibatnya: anak belajar autoriti, bukan jamaah; pasangan belajar bertahan, bukan bersyura; rumah menjadi medan emosi, bukan medan iman.</p>
-
-        <hr>
-
-        <p><strong>Prinsip Tauhidi 21.2 (Dikunci)</strong></p>
-        <ol>
-          <li>Syura ialah Asbab Mutlak — bukan teknik komunikasi.</li>
-          <li>Rumah tanpa syura ialah rumah tanpa jamaah.</li>
-          <li>Keputusan tanpa syura tidak dijamin keberkatan.</li>
-          <li>Syura rumah melatih mujahadah paling asas sebelum dakwah luar.</li>
-          <li>Anak yang dibesarkan dengan syura membesar sebagai ahli jamaah, bukan individu ego.</li>
-        </ol>
-
-        <hr>
-
-        <p><strong>Rumusan Tauhidi 21.2 (Dikunci)</strong></p>
-        <p>Jika keluarga mahu Nur kekal → syura mesti hidup. Jika syura hidup: jamaah hidup, ego mengecil, rumah menjadi markaz dakwah paling stabil. Syura rumah bukan tambahan kecil, ia nadi Tauhidi yang menentukan sama ada rumah itu: Asbab Mutlak Terbitan, atau sekadar struktur yang menunggu runtuh.</p>
-
-        <hr>
-
-        <p><strong>Nota Kaki Bab 21.2</strong></p>
-        <ul>
-          <li>【1】 al-Qur’an, ash-Shūrā 42:38</li>
-          <li>【2】 Sunan at-Tirmidhī, Kitāb al-Fitan</li>
-          <li>【3】 Ṣaḥīḥ al-Bukhārī, Kitāb aṣ-Ṣawm / Kitāb al-Adab — Kisah Salman r.a. & Abu Darda’ r.a.</li>
-        </ul>
-
-        <a class="toplink" href="#top">↑ Atas</a>
-      </section>
-
-      <!-- ===== SECTION 21.3 ===== -->
-      <section class="section" id="21-3">
-        <h2>21.3 Halaqah Qur’an Harian</h2>
-        <p><em>Asbab Mutlak Penghidup Nur & Penentu Transformasi Rumah</em></p>
-
-        <p>Dalam Kerangka 3 Asbab, al-Qur’an bukan bahan bacaan, bukan silibus pendidikan, dan bukan teks untuk kecemerlangan akademik. Al-Qur’an ialah wahyu hidup. Dan halaqah al-Qur’an — bacaan dan pendengaran wahyu secara ijtima’i — ialah Asbab Mutlak yang Allah tetapkan untuk: menghidupkan iman, membersihkan hati, menyatukan keluarga, dan mengekalkan Nur yang turun dari masjid.</p>
-        <p>Tanpa amal Asbab Mutlak ini, rumah tidak mampu mengekalkan Nur — walaupun strukturnya Islamik dan ahlinya berniat baik.</p>
-
-        <h3>Kedudukan Tepat dalam Kerangka 3 Asbab (Dikunci)</h3>
-        <ul>
-          <li>al-Qur’an → Asbab Mutlak Asli (wahyu Allah)</li>
-          <li>Halaqah al-Qur’an (amal ijtima’i) → Asbab Mutlak</li>
-          <li>Rumah (asal) → Asbab Fitrah</li>
-          <li>Rumah yang menampung Halaqah Qur’an secara konsisten → Asbab Mutlak Terbitan</li>
-          <li>Buku agama / motivasi / silibus → Asbab Zulumat jika menggantikan al-Qur’an</li>
-        </ul>
-        <p>➡️ Bukan halaqah Qur’an yang menjadi terbitan. Rumahlah yang ditransformasikan menjadi Asbab Mutlak Terbitan kerana ia tunduk kepada amal Asbab Mutlak.</p>
-
-        <p>Nur tidak hidup dengan kefahaman mental semata-mata. Nur hidup apabila wahyu dibacakan, didengar, dan diulang dalam suasana ketaatan berjamaah.</p>
-
-        <h3>Dalil al-Qur’an: Wahyu Dihidupkan dengan Bacaan</h3>
-        <div class="arab">﴿ وَرَتِّلِ ٱلْقُرْءَانَ تَرْتِيلًا ﴾</div>
-        <p>“Dan bacalah al-Qur’an itu dengan tartil.” (al-Muzzammil 73:4)【1】</p>
-        <p>➡️ Perintah ini ialah perintah amal, bukan teori, dan ia berlaku di mana wahyu dibaca — termasuk di rumah.</p>
-
-        <div class="arab">﴿ ٱللَّهُ نَزَّلَ أَحْسَنَ ٱلْحَدِيثِ كِتَـٰبًۭا مُّتَشَـٰبِهًۭا مَّثَانِىَ تَقْشَعِرُّ مِنْهُ جُلُودُ ٱلَّذِينَ يَخْشَوْنَ رَبَّهُمْ ﴾</div>
-        <p>“Allah telah menurunkan sebaik-baik perkataan, iaitu Kitab yang serupa ayat-ayatnya, diulang-ulang, yang menyebabkan gementar kulit orang yang takut kepada Tuhan mereka.” (az-Zumar 39:23)【2】</p>
-        <p>➡️ Kesan iman lahir daripada bacaan dan pengulangan wahyu, bukan semata-mata analisis atau perbincangan akal.</p>
-
-        <h3>Dalil Hadith: Halaqah Qur’an Menarik Sakinah & Malaikat</h3>
-        <p>Rasulullah ﷺ bersabda:</p>
-        <blockquote>مَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ وَذَكَرَهُمُ اللَّهُ فِيمَنْ عِنْدَهُ – “Tidaklah suatu kaum berkumpul di salah satu rumah Allah, membaca Kitab Allah dan saling mempelajarinya, melainkan turun kepada mereka ketenangan, mereka diliputi rahmat, dikelilingi malaikat, dan Allah menyebut mereka di sisi makhluk-Nya.” (Riwayat Muslim)【3】</blockquote>
-        <p>➡️ Apabila rumah dijadikan tempat halaqah Qur’an, rumah itu mengambil hukum suasana masjid bukan kerana bangunannya, tetapi kerana amal Asbab Mutlak yang berlaku di dalamnya.</p>
-
-        <h3>Halaqah Qur’an ≠ Kelas Mengaji</h3>
-        <p>Halaqah Qur’an keluarga bukan: kelas akademik, sesi pembetulan tajwid semata-mata, atau silibus berperingkat. Halaqah Qur’an ialah: membaca bersama, mendengar bersama, diam bersama di hadapan wahyu, dan membiarkan al-Qur’an menekan iman ke dalam qalb. Tidak semua ayat perlu dihuraikan panjang. Cukup dibaca, didengar, dan dihadirkan hati.</p>
-
-        <h3>Sirah Sahabat: Rumah Hidup dengan al-Qur’an</h3>
-        <p><strong>Keluarga Fāṭimah r.a. & ‘Alī r.a. (Hasan & Husain r.a.)</strong><br>Rumah Fāṭimah r.a. dan ‘Alī r.a. bukan rumah yang dibina dengan keselesaan dunia, tetapi rumah yang hidup dengan wahyu. Rumah ini hidup dengan: ayat al-Qur’an, zikir, dan kesedaran akhirat. Antara gambaran paling kuat ialah kisah mereka memberi makan orang miskin, yatim, dan tawanan walaupun mereka sendiri lapar yang dikaitkan dengan Surah al-Insān.【5】 📌 Anak-anak dibesarkan dalam suasana Qur’an hidup, bukan silibus. ➡️ Qur’an → membentuk rasa, bukan sekadar hafazan.</p>
-
-        <p><strong>Rumah ‘Abdullah bin Mas‘ūd r.a.</strong><br>‘Abdullah bin Mas‘ūd r.a. terkenal dengan bacaan Qur’an yang hidup, dan bacaan itu berlaku dalam kehidupan harian, termasuk di rumah. Rasulullah ﷺ bersabda: “Sesiapa yang ingin membaca al-Qur’an segar seperti ia diturunkan, maka bacalah seperti bacaan Ibn Ummi ‘Abd.” (Riwayat Aḥmad)【4】 ➡️ Ini menunjukkan Qur’an hidup dalam suasana rumah Sahabat, bukan hanya dalam majlis rasmi.</p>
-
-        <p><strong>Rumah Rasulullah ﷺ</strong><br>Rumah Baginda ﷺ dipenuhi bacaan al-Qur’an, qiyām al-layl, dan wahyu yang berulang. Rumah Baginda ﷺ tidak sunyi daripada Qur’an — dan kerana itu ia menjadi sumber Nur umat.</p>
-
-        <h3>Fungsi Halaqah Qur’an Harian dalam Keluarga</h3>
-        <ul>
-          <li>membersihkan hati tanpa ceramah panjang,</li>
-          <li>melembutkan anak tanpa paksaan,</li>
-          <li>menenangkan rumah tanpa motivasi,</li>
-          <li>menyatukan keluarga tanpa debat.</li>
-        </ul>
-        <p>Tempoh tidak perlu lama: 10–15 minit sudah mencukupi, yang penting setiap hari dan berjamaah.</p>
-
-        <h3>Kesalahan Besar Zaman Ini</h3>
-        <p>Kesalahan biasa umat hari ini: Qur’an diserahkan kepada sekolah sahaja, rumah sunyi daripada bacaan wahyu, al-Qur’an hanya dibuka ketika musibah. Akibatnya: anak kenal teori Islam, tetapi tidak rasa iman; rumah Islam beridentiti, tetapi kosong Nur; keluarga mudah tunduk kepada Asbab Zulumat.</p>
-
-        <hr>
-
-        <p><strong>Prinsip Tauhidi 21.3 (Dikunci)</strong></p>
-        <ol>
-          <li>Al-Qur’an ialah Asbab Mutlak penghidup iman.</li>
-          <li>Halaqah Qur’an ialah amal Asbab Mutlak, bukan terbitan.</li>
-          <li>Rumah menjadi Asbab Mutlak Terbitan apabila ia menampung Halaqah Qur’an.</li>
-          <li>Rumah yang dibacakan Qur’an mengambil hukum suasana masjid.</li>
-          <li>Rumah tanpa Qur’an akan tunduk kepada Asbab Zulumat walaupun berlabel Islam.</li>
-        </ol>
-
-        <hr>
-
-        <p><strong>Rumusan Tauhidi 21.3 (Dikunci)</strong></p>
-        <p>Jika rumah mahu mengekalkan Nur: Qur’an mesti hidup setiap hari. Apabila Qur’an hidup: hati lembut, ego surut, iman diwariskan tanpa paksaan. Halaqah Qur’an harian bukan amalan tambahan. Ia ialah nadi transformasi rumah daripada Asbab Fitrah menjadi Asbab Mutlak Terbitan dalam Kerangka 3 Asbab.</p>
-
-        <hr>
-
-        <p><strong>Nota Kaki Bab 21.3</strong></p>
-        <ul>
-          <li>【1】 al-Qur’an, al-Muzzammil 73:4</li>
-          <li>【2】 al-Qur’an, az-Zumar 39:23</li>
-          <li>【3】 Ṣaḥīḥ Muslim, Kitāb adh-Dhikr wa ad-Du‘ā’</li>
-          <li>【4】 Musnad Aḥmad, Faḍā’il al-Qur’an</li>
-          <li>【5】 al-Qur’an, al-Insān 76:8–9 — Kisah memberi makan miskin, yatim & tawanan kerana Allah</li>
-        </ul>
-
-        <a class="toplink" href="#top">↑ Atas</a>
-      </section>
-
-      <!-- ===== SECTION 21.4 ===== -->
-      <section class="section" id="21-4">
-        <h2>21.4 Majlis Ilmu Harian 🔒</h2>
-
-        <p>Majlis ilmu harian bukan program sokongan, bukan aktiviti tambahan, dan bukan pengisian masa lapang. Ia adalah nadi hidup rumah beriman. Jika solat menjaga hubungan individu dengan Allah, maka majlis ilmu harian menjaga kesinambungan iman dalam suasana keluarga dan jamaah kecil.【1】 Tanpa majlis ilmu: iman mudah menjadi teori, amal menjadi rutin, dan rumah terdedah kepada asbab zulumat walaupun beridentiti Islam.</p>
-
-        <h3>21.4.1 Definisi Majlis Ilmu Harian</h3>
-        <p>Majlis ilmu harian ialah: perhimpunan tetap ahli rumah (atau jamaah kecil) untuk mendengar, membaca, dan mengingati agama Allah, dengan tujuan menghidupkan iman, bukan mengumpul maklumat. Ilmu dalam majlis ini: bukan untuk diperdebatkan, bukan untuk dianalisis secara akademik, tetapi untuk menyentuh hati dan menggerakkan amal.【2】 📌 Ilmu yang tidak menghidupkan iman akan berubah menjadi beban hujah.</p>
-
-        <h3>21.4.2 Asas Syar‘i Majlis Ilmu</h3>
-        <p>Rasulullah ﷺ bersabda:</p>
-        <blockquote>مَا اجْتَمَعَ قَوْمٌ فِي بَيْتٍ مِنْ بُيُوتِ اللَّهِ يَتْلُونَ كِتَابَ اللَّهِ وَيَتَدَارَسُونَهُ بَيْنَهُمْ إِلَّا نَزَلَتْ عَلَيْهِمُ السَّكِينَةُ وَغَشِيَتْهُمُ الرَّحْمَةُ وَحَفَّتْهُمُ الْمَلَائِكَةُ وَذَكَرَهُمُ اللَّهُ فِيمَنْ عِنْدَهُ【3】</blockquote>
-        <p>📌 Kesan majlis ilmu bukan pada kefahaman akal, tetapi pada turunnya sakinah dan rahmat.</p>
-
-        <h3>21.4.3 Fungsi Tauhidi Majlis Ilmu Harian</h3>
-        <ol>
-          <li><strong>Pemberat Iman</strong> – iman tidak stabil tanpa pengulangan dan suasana.【4】</li>
-          <li><strong>Penjaga Tertib Amal</strong> – amal mudah tersasar apabila ilmu tidak dihidupkan secara jamaah.【5】</li>
-          <li><strong>Pemecah Ego Individu</strong> – mendengar bersama melembutkan hati dan menundukkan rasa diri.【6】</li>
-          <li><strong>Pengikat Rumah dengan Masjid</strong> – rumah menjadi lanjutan suasana masjid, bukan dunia yang terpisah.【7】</li>
-        </ol>
-
-        <h3>21.4.4 Kedudukan Majlis Ilmu dalam Kerangka 3 Asbab</h3>
-        <ul>
-          <li>Majlis ilmu = Asbab Mutlak</li>
-          <li>Ia mempunyai janji Allah: sakinah, rahmat, kehadiran malaikat, dan zikrullah.</li>
-          <li>Ia tidak boleh digantikan oleh: bacaan bersendirian, video ceramah, kelas atas talian.【8】</li>
-        </ul>
-        <p>📌 Ilmu jarak jauh memberi maklumat. 📌 Majlis ilmu memberi suasana iman.</p>
-
-        <h3>21.4.5 Sirah Sahabat: Rumah yang Memilih Majlis Ilmu sebagai Pusat Tarbiyah</h3>
-        <p><strong>Keluarga Ummu Sulaim r.a. → Anas bin Mālik r.a.</strong><br>Ummu Sulaim r.a. ialah contoh ibu yang membina rumah berasaskan majlis ilmu, bukan perlindungan emosi. Beliau menyerahkan anaknya Anas bin Mālik r.a. ketika masih kecil untuk berkhidmat dan belajar terus daripada Rasulullah ﷺ, menjadikan majlis Nabi ﷺ sebagai pusat tarbiyah anaknya, dan memilih suasana ilmu dan dakwah berbanding keselesaan rumah. 📌 Rumah ini tidak menjaga anak jauh daripada dakwah, tetapi menghantar anak ke jantung majlis ilmu. Hasilnya: Anas bin Mālik r.a. hidup dalam suasana ilmu yang berterusan, meriwayatkan ribuan hadith, dan menjadi saksi hidup akhlak Rasulullah ﷺ selama bertahun-tahun. ➡️ Keputusan rumah → kualiti anak di medan umat. 📌 Ini bukti bahawa majlis ilmu bukan sekadar pengisian, tetapi kilang pembentukan manusia dakwah.</p>
-
-        <h3>21.4.6 Bentuk Majlis Ilmu Harian (Ringkas & Hidup)</h3>
-        <p>Majlis ilmu harian tidak memerlukan masa panjang: 10–20 minit sudah mencukupi. Isi yang ringkas: ayat al-Qur’an, hadith, kisah Nabi ﷺ, kisah para Sahabat. Disampaikan dengan: niat membesarkan Allah, bukan menunjukkan pandai, bukan menghukum pendengar.【9】 📌 Yang penting istiqamah, bukan kepanjangan.</p>
-
-        <h3>21.4.7 Kesan Jika Majlis Ilmu Tiada</h3>
-        <p>Apabila majlis ilmu harian ditinggalkan: iman menjadi teori, amal menjadi rutin kosong, rumah hilang sakinah, anak-anak membesar dengan ilmu tanpa rasa, agama tanpa ruh.【10】 📌 Kerosakan iman sering bermula bukan kerana maksiat besar, tetapi kerana majlis ilmu kecil ditinggalkan.</p>
-
-        <hr>
-
-        <p><strong>Rumusan Tauhidi 21.4 (Dikunci)</strong><br>Rumah yang tiada majlis ilmu akan dipenuhi suara dunia dan asbab zulumat. Rumah yang hidup dengan majlis ilmu akan dipenuhi malaikat, rahmat, dan sakinah. Majlis ilmu harian bukan usaha manusia semata-mata, tetapi pintu yang Allah buka untuk menurunkan iman ke dalam rumah.</p>
-
-        <hr>
-
-        <p><strong>Nota Kaki</strong></p>
-        <ul>
-          <li>【1】 Al-Anfāl 8:2 — Iman bertambah melalui bacaan ayat Allah dalam suasana jamaah.</li>
-          <li>【2】 Ṣaḥīḥ Muslim — Iman ialah aktiviti hati, bukan sekadar maklumat akal.</li>
-          <li>【3】 Ṣaḥīḥ Muslim, Kitāb adh-Dhikr — Janji sakinah, rahmat, malaikat, dan zikrullah dalam majlis ilmu.</li>
-          <li>【4】 Al-Baqarah 2:45 — Iman memerlukan pemberat melalui pengulangan amal.</li>
-          <li>【5】 As-Ṣaff 61:4 — Amal yang dicintai Allah ialah amal berjamaah dengan tertib.</li>
-          <li>【6】 Al-Ḥujurāt 49:10 — Suasana persaudaraan mematahkan ego.</li>
-          <li>【7】 At-Taubah 9:18 — Memakmurkan rumah Allah sebagai tanda iman hidup.</li>
-          <li>【8】 Prinsip Kerangka 3 Asbab — Asbab Mutlak tidak boleh diganti oleh Asbab Fitrah atau Zulumat.</li>
-          <li>【9】 An-Naḥl 16:125 — Ilmu disampaikan dengan hikmah dan kelembutan.</li>
-          <li>【10】 Al-An‘ām 6:122 — Hidup mati hati ditentukan oleh nur iman, bukan maklumat.</li>
-        </ul>
-
-        <a class="toplink" href="#top">↑ Atas</a>
-      </section>
-
-      <!-- ===== SECTION 21.5 ===== -->
-      <section class="section" id="21-5">
-        <h2>21.5 Muzakarah Iman Harian</h2>
-
-        <p>Muzakarah iman harian bukan sesi perbincangan bebas, bukan medan pertukaran pendapat, dan bukan ruang meluahkan pandangan peribadi. Ia adalah proses menghidupkan iman secara berjamaah. Jika majlis ilmu menurunkan iman ke dalam suasana, maka muzakarah iman mengekalkan iman agar tidak bocor dari hati.【1】</p>
-
-        <h3>21.5.1 Definisi Muzakarah Iman Harian</h3>
-        <p>Muzakarah iman harian ialah: perbincangan ringkas dan terarah dalam kalangan ahli rumah atau jamaah kecil untuk saling mengingatkan tentang Allah, akhirat, dan tanggungjawab iman, dengan tujuan menjaga istiqamah amal, bukan menambah ilmu baharu. Muzakarah ini: tidak bertujuan melahirkan hujah, tidak membuka ruang khilaf, tidak menilai siapa betul atau salah, tetapi menguatkan rasa iman yang sama.【2】</p>
-
-        <h3>21.5.2 Asas Syar‘i Muzakarah Iman</h3>
-        <div class="arab">وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ</div>
-        <p>“Dan mereka saling berpesan-pesan dengan kebenaran dan saling berpesan-pesan dengan kesabaran.” (al-‘Aṣr 103:3)【3】</p>
-        <p>📌 Muzakarah iman ialah bentuk praktikal tawāṣaw bil-ḥaqq waṣ-ṣabr yang dilakukan secara kecil, istiqamah, dan berterusan.</p>
-
-        <h3>21.5.3 Sirah Rasulullah ﷺ: Muzakarah Sebagai Amalan Hidup</h3>
-        <p>Dalam sirah Rasulullah ﷺ: Baginda kerap mengulangi peringatan yang sama kepada para Sahabat, bukan dengan variasi hujah, tetapi dengan pengulangan rasa iman sehingga ia melekat di hati. Antara amalan Baginda ﷺ: mengingatkan tentang akhirat dalam suasana santai, mengulang ayat yang sama dalam majlis berbeza, menyentuh iman melalui soalan ringkas dan peringatan lembut. 📌 Sirah menunjukkan bahawa iman dipelihara dengan ingat-mengingat, bukan dengan ceramah panjang atau perbahasan.【4】</p>
-
-        <h3>21.5.4 Kisah Sahabat: Muzakarah sebagai Penjaga Iman</h3>
-        <p>Para Sahabat r.a. memahami bahawa iman boleh naik dan turun. Mereka berkata: “Marilah kita duduk sejenak untuk beriman.” Ungkapan ini bukan bermaksud belajar perkara baharu, atau membahaskan hukum, tetapi saling mengingatkan Allah, menghidupkan rasa takut dan harap, menstabilkan iman yang goyah.【5】 📌 Inilah muzakarah iman dalam bentuk paling asli menurut generasi Sahabat.</p>
-
-        <h3>21.5.5 Fungsi Tauhidi Muzakarah Iman Harian</h3>
-        <ol>
-          <li><strong>Penampal Kebocoran Iman</strong> – iman yang turun melalui majlis ilmu perlu dipelihara melalui saling ingat-mengingat.【6】</li>
-          <li><strong>Pengikat Amal dengan Niat</strong> – muzakarah menyemak arah hati, bukan hasil amal.【7】</li>
-          <li><strong>Pematah Rasa Bersendirian</strong> – iman lemah apabila dipikul seorang diri.【8】</li>
-          <li><strong>Penyelaras Rasa dalam Rumah</strong> – ahli rumah bergerak dengan rasa iman yang sehala.【9】</li>
-        </ol>
-
-        <h3>21.5.6 Kedudukan Muzakarah dalam Kerangka 3 Asbab</h3>
-        <ul>
-          <li>Muzakarah iman = Asbab Mutlak</li>
-          <li>Ia menjaga kelangsungan iman, bukan pencetus awal iman</li>
-          <li>Ia berfungsi selepas: majlis ilmu, solat berjamaah, amal harian</li>
-        </ul>
-        <p>📌 Tanpa muzakarah, iman mudah bocor walaupun ilmu banyak.【10】</p>
-
-        <h3>21.5.7 Bentuk Muzakarah Iman Harian (Ringkas & Selamat)</h3>
-        <p>Muzakarah iman harian: boleh dilakukan 5–10 minit, biasanya selepas solat, majlis ilmu, atau sebelum tidur. Isi muzakarah: apa yang menyentuh iman hari ini, satu peringatan akhirat, satu niat untuk amal esok, satu doa bersama. Disampaikan dengan: nada rendah, tanpa mengarah, tanpa mengkritik, tanpa memaksa. 📌 Muzakarah bukan ceramah kecil, tetapi peringatan bersama.【11】</p>
-
-        <h3>21.5.8 Kesan Jika Muzakarah Iman Tiada</h3>
-        <p>Apabila muzakarah iman harian ditinggalkan: iman cepat turun naik, amal dibuat tanpa rasa, nasihat mudah terasa keras, rumah sunyi walaupun beraktiviti agama. 📌 Ilmu tanpa muzakarah melahirkan individu, muzakarah melahirkan suasana.【12】</p>
-
-        <hr>
-
-        <p><strong>Kesimpulan Tauhidi</strong><br>Majlis ilmu ialah Asbab Mutlak yang Allah jadikan tempat turunnya rahmat iman, dan muzakarah iman ialah Asbab Mutlak yang menjaga rahmat itu. Kedua-duanya tidak boleh dipisahkan. Muzakarah iman harian ialah penjaga senyap yang memastikan iman terus hidup di dalam rumah, keluarga, dan jamaah kecil.</p>
-
-        <hr>
-
-        <p><strong>Nota Kaki</strong></p>
-        <ul>
-          <li>【1】 Al-Anfāl 8:2 — Iman naik dan turun; ia perlu dipelihara dalam suasana jamaah.</li>
-          <li>【2】 Muslim — Iman ialah aktiviti hati, bukan hasil perdebatan akal.</li>
-          <li>【3】 Al-‘Aṣr 103:3 — Prinsip tawāṣaw bil-ḥaqq waṣ-ṣabr sebagai asas kelangsungan iman.</li>
-          <li>【4】 Sirah Nabawiyyah — Rasulullah ﷺ mengulang peringatan iman sebagai kaedah tarbiyah hati.</li>
-          <li>【5】 Atsar Sahabat — “Ta‘ālaw nu’min sā‘ah” sebagai amalan menjaga iman.</li>
-          <li>【6】 Al-Baqarah 2:45 — Iman memerlukan peneguhan berterusan melalui amal dan peringatan.</li>
-          <li>【7】 Al-Mulk 67:2 — Amal dinilai pada niat dan keikhlasan, bukan hasil zahir.</li>
-          <li>【8】 Al-Ḥujurāt 49:10 — Persaudaraan iman menguatkan hati dan menghilangkan rasa bersendirian.</li>
-          <li>【9】 At-Taḥrīm 66:6 — Tanggungjawab menjaga iman diri dan ahli rumah.</li>
-          <li>【10】 Prinsip Kerangka 3 Asbab — Asbab Mutlak memerlukan penjagaan istiqamah agar kesannya berterusan.</li>
-          <li>【11】 An-Naḥl 16:125 — Peringatan iman mesti disampaikan dengan hikmah dan kelembutan.</li>
-          <li>【12】 Al-An‘ām 6:122 — Nur iman menentukan hidup atau matinya hati dan suasana.</li>
-        </ul>
-
-        <a class="toplink" href="#top">↑ Atas</a>
-      </section>
-
-      <!-- ===== SECTION 21.6 ===== -->
-      <section class="section" id="21-6">
-        <h2>21.6 Rumah Sebagai Markaz Dakwah</h2>
-
-        <p>Rumah dalam Islam bukan ruang neutral, bukan sekadar tempat rehat, dan bukan institusi sosial semata-mata. Ia adalah markaz dakwah paling awal dan paling kekal. Jika masjid ialah pusat penghidupan iman jamaah besar, maka rumah ialah markaz dakwah pertama yang menentukan hidup atau matinya iman dalam keluarga.【1】</p>
-
-        <h3>21.6.1 Peranan Suami</h3>
-        <p>Suami ialah amir dakwah dalam rumah. Peranannya bukan sekadar pencari nafkah, ketua pentadbiran keluarga, tetapi penjaga arah iman, penentu suasana, orang pertama yang memikul tanggungjawab dakwah di dalam rumah.【2】</p>
-        <p><strong>Sirah Rasulullah ﷺ</strong><br>Rasulullah ﷺ memulakan dakwah di rumah Khadijah r.a., membina iman keluarga sebelum masyarakat, dan menjadikan rumah sebagai tapak awal risalah. Baginda ﷺ memimpin solat di rumah, mendidik dengan qudwah, dan memastikan rumah hidup dengan zikir dan peringatan.【3】 📌 Suami berdakwah bukan dengan arahan, tetapi dengan istiqamah amal.</p>
-        <p><strong>Kisah Sahabat</strong><br>‘Umar ibn al-Khaṭṭāb r.a. apabila menerima Islam, berubah dahulu dalam rumahnya, memimpin ahli keluarga atas iman, sebelum tampil sebagai pembela Islam di luar. 📌 Kepimpinan dakwah bermula di ruang paling dekat.【4】</p>
-
-        <h3>21.6.2 Peranan Isteri</h3>
-        <p>Isteri ialah penjaga suasana iman dalam rumah. Peranannya bukan pelengkap, tetapi pemegang kunci hidayah suasana. Isteri menentukan nada rumah, menjaga adab, melembutkan suasana, dan memastikan amal harian berjalan dengan tenang.【5】</p>
-        <p><strong>Sirah Rasulullah ﷺ</strong><br>Sayyidatina Khadijah al-Kubrā r.a. orang pertama membenarkan Rasulullah ﷺ, penenang hati Baginda ﷺ, dan pendukung dakwah dengan jiwa dan harta. 📌 Tanpa suasana yang dijaga oleh isteri, dakwah dalam rumah tidak stabil.【6】</p>
-        <p><strong>Kisah Sahabat</strong><br>Tiada satu pun sahabiah yang murtad. Keteguhan iman wanita menjadi benteng anak-anak, benteng rumah, dan benteng masyarakat. 📌 Wanita bukan sasaran dakwah semata-mata, tetapi penjaga kesinambungan dakwah.【7】</p>
-
-        <h3>21.6.3 Peranan Anak-Anak</h3>
-        <p>Anak-anak bukan penonton dakwah, tetapi amanah dakwah. Peranan anak-anak: dibiasakan dengan suasana iman, dilibatkan dalam majlis ilmu dan muzakarah, dididik melalui contoh, bukan tekanan. Anak-anak belajar iman bukan melalui arahan, tetapi melalui suasana hidup yang mereka lihat setiap hari.【8】</p>
-        <p><strong>Sirah Rasulullah ﷺ</strong><br>Rasulullah ﷺ memuliakan kanak-kanak, menyapa mereka, dan membesarkan generasi dengan kasih dan qudwah. 📌 Anak dibina dengan iman yang hidup, bukan disiplin kosong.【9】</p>
-        <p><strong>Kisah Sahabat</strong><br>Anas ibn Mālik r.a. berkhidmat kepada Rasulullah ﷺ sejak kecil: tidak dimarahi, tidak dihina, tetapi dibentuk melalui akhlak. 📌 Dakwah kepada anak ialah dakwah jangka panjang.【10】</p>
-
-        <hr>
-
-        <p><strong>Kesimpulan Tauhidi</strong><br>Rumah yang menjadi markaz dakwah akan melahirkan generasi yang menjaga iman. Rumah yang kosong dari dakwah akan diwarisi oleh dunia dan nafsu. Suami memimpin arah, isteri menjaga suasana, anak-anak menyambung warisan. Inilah rumah sebagai markaz dakwah — markaz paling kecil, tetapi paling menentukan masa depan umat.</p>
-
-        <hr>
-
-        <p><strong>Nota Kaki</strong></p>
-        <ul>
-          <li>【1】 At-Taḥrīm 66:6 — Tanggungjawab menjaga iman diri dan ahli rumah.</li>
-          <li>【2】 An-Nisā’ 4:34 — Suami sebagai pemimpin amanah, bukan penguasa.</li>
-          <li>【3】 Sirah Nabawiyyah — Rumah Rasulullah ﷺ sebagai tapak awal dakwah.</li>
-          <li>【4】 Sirah Sahabat — Transformasi ‘Umar r.a. bermula dalam rumah.</li>
-          <li>【5】 Al-Aḥzāb 33:33 — Peranan wanita menjaga kesucian dan suasana rumah.</li>
-          <li>【6】 Sirah Khadijah r.a. — Wanita sebagai pendukung utama dakwah.</li>
-          <li>【7】 Sirah Sahabiah — Keteguhan iman wanita sebagai benteng umat.</li>
-          <li>【8】 An-Naḥl 16:78 — Manusia dibentuk melalui pengalaman dan suasana.</li>
-          <li>【9】 Sirah Nabawiyyah — Kasih Rasulullah ﷺ terhadap kanak-kanak.</li>
-          <li>【10】 Sirah Anas ibn Mālik r.a. — Pembentukan iman melalui qudwah, bukan paksaan.</li>
-        </ul>
-
-        <a class="toplink" href="#top">↑ Atas</a>
-      </section>
-
-      <!-- ===== SECTION 21.7 ===== -->
-      <section class="section" id="21-7">
-        <h2>21.7 Mujahadah Setiap Ahli Keluarga</h2>
-
-        <p>Mujahadah dalam rumah bukan paksaan, bukan tekanan emosi, dan bukan beban ke atas ahli keluarga. Ia adalah proses mengaktifkan iman dalam diri setiap individu. Jika rumah ialah markaz dakwah, maka mujahadah ialah tenaga dalaman yang menghidupkan dakwah itu dalam setiap hati.【1】</p>
-
-        <h3>21.7.1 Definisi Mujahadah Keluarga</h3>
-        <p>Mujahadah setiap ahli keluarga ialah: usaha sedar dan berterusan untuk menundukkan nafsu, dunia, dan rasa diri supaya hati kekal berpaut kepada Allah dan amal dapat dilakukan dengan istiqamah. Mujahadah ini: tidak seragam bentuknya, tidak sama kadar tekanannya, dan tidak boleh dipaksa, tetapi wajib wujud pada setiap individu mengikut kemampuan dan keadaan masing-masing.【2】 📌 Tiada iman hidup tanpa mujahadah.</p>
-
-        <h3>21.7.2 Asas Syar‘i Mujahadah</h3>
-        <div class="arab">وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا</div>
-        <p>“Dan orang-orang yang bersungguh-sungguh bermujahadah pada jalan Kami, nescaya Kami akan tunjukkan kepada mereka jalan-jalan Kami.” (al-‘Ankabūt 29:69)【3】</p>
-        <p>📌 Hidayah tidak turun sebelum mujahadah, tetapi selepas mujahadah dimulakan.</p>
-
-        <h3>21.7.3 Sirah Rasulullah ﷺ: Mujahadah Bermula dari Rumah</h3>
-        <p>Rasulullah ﷺ bangun malam walaupun diampuni dosanya, menahan diri dari kesenangan dunia, dan menghidupkan rumah dengan ibadah, sabar, dan doa. Baginda ﷺ tidak memaksa ahli keluarga, tetapi mengajak dengan qudwah: solat malam, puasa sunat, kesederhanaan hidup. 📌 Sirah menunjukkan mujahadah dipimpin dengan contoh, bukan arahan.【4】</p>
-
-        <h3>21.7.4 Kisah Sahabat: Mujahadah dalam Lingkaran Keluarga</h3>
-        <p>Para Sahabat r.a. memahami bahawa iman tidak diwarisi secara automatik, tetapi dibina melalui pengorbanan. Contoh: Abu Bakr r.a. mendahulukan dakwah walaupun berkorban harta, keluarga beliau turut merasai kesederhanaan dan sabar. 📌 Mujahadah Sahabat bukan individualistik, tetapi melibatkan seluruh rumah.【5】</p>
-
-        <h3>21.7.5 Bentuk Mujahadah Mengikut Peranan</h3>
-        <p><strong>a) Mujahadah Suami</strong> – menahan ego kepimpinan, mendahulukan iman atas keselesaan, istiqamah dalam solat berjamaah dan dakwah.<br>
-        <strong>b) Mujahadah Isteri</strong> – menjaga adab dan emosi, sabar dalam mengurus rumah, menahan rungutan dan membina suasana.<br>
-        <strong>c) Mujahadah Anak-Anak</strong> – belajar taat dan disiplin iman, menahan kehendak nafsu kecil, dibimbing dengan kasih, bukan herdikan.</p>
-        <p>📌 Mujahadah tidak sama bentuk, tetapi sama arah — Allah.【6】</p>
-
-        <h3>21.7.6 Kedudukan Mujahadah dalam Kerangka 3 Asbab</h3>
-        <ul>
-          <li>Mujahadah = Asbab Mutlak</li>
-          <li>Ia ialah syarat pembuka nur</li>
-          <li>Tanpanya: ilmu menjadi maklumat, dakwah menjadi aktivisme, rumah menjadi struktur kosong.</li>
-        </ul>
-        <p>📌 Mujahadah ialah butang “ON” iman.【7】</p>
-
-        <h3>21.7.7 Kesan Jika Mujahadah Tiada</h3>
-        <p>Apabila mujahadah tidak dihidupkan dalam keluarga: iman kekal lemah walaupun ilmu ada, konflik kecil membesar, amal mudah ditinggalkan, anak-anak mencari makna di luar rumah. 📌 Masalah keluarga jarang berpunca daripada kurang ilmu, tetapi daripada kurang mujahadah.【8】</p>
-
-        <hr>
-
-        <p><strong>Kesimpulan Tauhidi</strong><br>Dakwah menggerakkan rumah, mujahadah menghidupkan hati. Setiap ahli keluarga tidak diminta sempurna, tetapi diminta berusaha. Kerana di situlah janji Allah bermula — bukan pada hasil, tetapi pada mujahadah.</p>
-
-        <hr>
-
-        <p><strong>Nota Kaki</strong></p>
-        <ul>
-          <li>【1】 At-Taḥrīm 66:6 — Kewajipan menjaga iman diri dan ahli keluarga memerlukan mujahadah.</li>
-          <li>【2】 Al-Baqarah 2:286 — Mujahadah dituntut mengikut kemampuan, bukan paksaan.</li>
-          <li>【3】 Al-‘Ankabūt 29:69 — Janji hidayah Allah terikat dengan mujahadah.</li>
-          <li>【4】 Sirah Nabawiyyah — Mujahadah Rasulullah ﷺ dalam ibadah dan kesederhanaan hidup.</li>
-          <li>【5】 Sirah Sahabat — Pengorbanan Abu Bakr r.a. melibatkan seluruh keluarga.</li>
-          <li>【6】 Al-Aḥzāb 33:35 — Mujahadah berbeza peranan tetapi sama nilai di sisi Allah.</li>
-          <li>【7】 Prinsip Kerangka 3 Asbab — Mujahadah sebagai Asbab Mutlak pembuka nur iman.</li>
-          <li>【8】 Al-Ḥadīd 57:16 — Hati menjadi keras apabila iman tidak diteguhkan dengan mujahadah.</li>
-        </ul>
-
-        <a class="toplink" href="#top">↑ Atas</a>
-      </section>
-
-      <!-- ===== SECTION 21.8 ===== -->
-      <section class="section" id="21-8">
-        <h2>21.8 Rumusan Tauhidi Rumah</h2>
-
-        <p>Rumah tidak menjadi beriman kerana binaannya, tidak menjadi mulia kerana saiznya, dan tidak menjadi kuat kerana sokongan Asbab Fitrah seperti ekonomi, struktur, atau sistem sosial. Rumah menjadi hidup apabila amal Tauhidi dihidupkan secara harian. Apabila amal hidup, Allah menurunkan barakah, dan Asbab Zulumat tunduk tanpa diagungkan.【1】</p>
-
-        <h3>21.8.1 Rumah dengan 5 Amalan Harian → Rumah Sahabat</h3>
-        <p>Rumah Sahabat bukan rumah yang unggul dari sudut Asbab Fitrah, tetapi rumah yang hidup dengan amal Asbab Mutlak yang sama setiap hari. Lima amalan harian yang membentuk Rumah Sahabat ialah:</p>
-        <ol>
-          <li><strong>Perbanyak Solat Sunat</strong> – mengikat rumah dengan Allah dan masjid. Solat sunat membuka hubungan peribadi dengan Allah di luar kewajipan formal, menghidupkan rumah dengan ibadah yang tidak digerakkan oleh jadual sistem, memastikan rumah tidak terputus daripada suasana masjid walaupun fizikal berada di luar masjid. 📌 Solat fardu menjaga hukum, solat sunat menghidupkan hubungan.【2】</li>
-          <li><strong>Majlis Ilmu Harian</strong> – Asbab Mutlak yang Allah jadikan sebagai tempat turunnya rahmat iman dalam suasana rumah, bukan alat peningkatan maklumat atau kelebihan intelektual.【3】</li>
-          <li><strong>Muzakarah Iman Harian</strong> – Asbab Mutlak yang menjaga rahmat iman agar iman tidak bocor akibat tekanan Asbab Zulumat harian.【4】</li>
-          <li><strong>Rumah sebagai Markaz Dakwah</strong> – dakwah bermula dengan Islah iman ahli rumah, sebelum berhadapan dengan masyarakat dan sistem luar.【5】</li>
-          <li><strong>Mujahadah Setiap Ahli Keluarga</strong> – mengaktifkan iman dengan menundukkan nafsu, dan mematahkan kebergantungan hati kepada Asbab Fitrah dan Zulumat.【6】</li>
-        </ol>
-        <p>📌 Apabila lima amal ini istiqamah, fungsi rumah berubah daripada tempat rehat fitrah kepada medan dakwah Tauhidi.</p>
-
-        <h4>Bukti Hidup: Pola Berulang Rumah Sahabat</h4>
-        <ul>
-          <li><strong>Khansā’ r.a.</strong> – membesarkan anak dengan iman dan akhirat, melahirkan anak-anak syahid yang tidak tunduk kepada Asbab Zulumat ketakutan dan keselamatan diri.</li>
-          <li><strong>Ummu Sulaim r.a.</strong> – menjadikan majlis Nabi ﷺ sebagai pusat tarbiyah rumah, melahirkan Anas bin Mālik r.a., perawi ilmu yang hidup dalam suasana iman, bukan kelas formal.</li>
-          <li><strong>Asmā’ binti Abī Bakr r.a.</strong> – membina rumah dengan keputusan iman, bukan tekanan emosi atau keselamatan politik, melahirkan ‘Abdullah bin Zubair r.a., yang menolak tunduk kepada Asbab Zulumat kekuasaan.</li>
-          <li><strong>Fāṭimah r.a. & ‘Alī r.a.</strong> – rumah hidup dengan al-Qur’an, zikir, dan kesedaran akhirat, melahirkan Hasan & Husain r.a., dibentuk oleh suasana wahyu hidup, bukan silibus Asbab Fitrah.</li>
-          <li><strong>Abu Bakr aṣ-Ṣiddīq r.a.</strong> – seluruh rumah bergerak bersama dakwah; isteri, anak-anak, dan hamba berkorban harta dan diri, bukan bergantung kepada jaminan sistem.</li>
-        </ul>
-        <p>📌 Rumah-rumah ini tidak disatukan oleh darah atau struktur sosial, tetapi oleh amal Tauhidi yang dihidupkan setiap hari.<br>
-        📌 Rumah Sahabat bukan hasil perancangan sistem, tetapi hasil istiqamah Asbab Mutlak.【7】</p>
-
-        <h3>21.8.2 Barakah Turun, Asbab Zulumat Tunduk</h3>
-        <p>Barakah bukan hasil perancangan manusia, dan bukan ganjaran Asbab Fitrah yang dituntut. Barakah turun apabila: iman dihidupkan, amal dijaga, dan hati menafikan kuasa Asbab Fitrah dan Zulumat, serta menetapkan kuasa hanya pada Allah. Allah ﷻ melapangkan dan menyempitkan urusan Asbab Fitrah bukan kerana kekuatan sistem, tetapi kerana iman dan ketaatan.【8】</p>
-        <p>Apabila barakah turun: ketaatan kepada Allah tetap hidup walaupun Asbab Fitrah sempit, amal sunnah Rasulullah ﷺ tetap terjaga walaupun tekanan sosial dan ujian wujud, keputusan hidup tetap berpaut kepada Allah walaupun Asbab Zulumat mengelilingi dari sudut zahir.</p>
-        <p>📌 Asbab Zulumat tidak kehilangan kuasa kerana ia dilawan atau dihapuskan, tetapi kerana ia tidak lagi menghalang ketaatan kepada Allah dan ittibā‘ Rasulullah ﷺ.【9】</p>
-
-        <hr>
-
-        <p><strong>Kesimpulan Tauhidi (Penutup Bab)</strong><br>Rumah yang menjaga iman akan dijaga oleh Allah. Rumah yang meninggalkan amal Tauhidi akan dikuasai oleh Asbab Zulumat walaupun berlabel Islam. Rumah Sahabat bukan nostalgia sejarah, tetapi model hidup yang boleh diulang apabila tertib Tauhidi dijaga.</p>
-
-        <p><strong>Rumusan muktamad Bab Rumah Beriman:</strong><br>Bila amal hidup, barakah turun. Bila barakah turun, Asbab Zulumat tunduk.</p>
-
-        <hr>
-
-        <p><strong>Nota Kaki</strong></p>
-        <ul>
-          <li>【1】 Al-A‘rāf 7:96 — Barakah turun apabila iman dan taqwa dihidupkan.</li>
-          <li>【2】 Al-Baqarah 2:43 — Solat sebagai asas pengikatan iman.</li>
-          <li>【3】 Ṣaḥīḥ Muslim, Kitāb al-Dhikr — Majlis ilmu sebagai tempat turunnya sakinah, rahmat, dan zikrullah.</li>
-          <li>【4】 Al-‘Aṣr 103:3 — Tawāṣaw bil-ḥaqq waṣ-ṣabr sebagai penjaga iman.</li>
-          <li>【5】 At-Taḥrīm 66:6 — Islah iman bermula dengan ahli rumah.</li>
-          <li>【6】 Al-‘Ankabūt 29:69 — Mujahadah mematahkan kebergantungan kepada selain Allah.</li>
-          <li>【7】 Sirah Nabawiyyah & Sahabat — Istiqamah Asbab Mutlak melahirkan generasi beriman.</li>
-          <li>【8】 Ar-Ra‘d 13:26 — Allah menguasai peluasan dan penyempitan Asbab Fitrah.</li>
-          <li>【9】 Aṭ-Ṭalāq 65:2–3 — Taqwa sebagai Asbab Mutlak yang menundukkan Asbab Zulumat.</li>
-        </ul>
-
-        <a class="toplink" href="#top">↑ Atas</a>
-      </section>
-
-    </article>
-</main>
-<footer class="wrap">
-  <div>© 3asbab.org — Kerangka 3 Asbab</div>
-</footer>
-
-
-</div>
-  <script>
-    function downloadPDF() {
-      const btn = document.querySelector('.btn-pdf');
-      if (!btn) return;
-
-  const originalText = btn.innerHTML;
-  btn.innerHTML = '⏳ Menyediakan PDF...';
-  btn.disabled = true;
-
-  document.body.classList.add('pdf-exporting');
-
-  const coverTitle = document.getElementById('pdf-cover-title');
-  const coverSubtitle = document.getElementById('pdf-cover-subtitle');
-  const metaTitle = document.getElementById('pdf-meta-title');
-  const pageTitle = document.getElementById('page-title');
-  const categoryLine = document.getElementById('category-line');
-  const headerLine = document.getElementById('header-line');
-
-  if (typeof DOC_META !== "undefined") {
-    if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
-    if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
-    if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
-    if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
-    if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
-    if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
-  }
-
-  setTimeout(() => {
-    window.print();
-    setTimeout(() => {
-      document.body.classList.remove('pdf-exporting');
-      btn.innerHTML = originalText;
-      btn.disabled = false;
-    }, 500);
-  }, 120);
-}
-
-
-</script>
+  </main>
 </body>
 </html>
