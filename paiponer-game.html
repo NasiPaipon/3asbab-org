@@ -276,13 +276,31 @@ html,body{width:100%;height:100%;background:var(--bg);overflow:hidden;font-famil
 .btn-funnel:active{transform:scale(.97);opacity:.85}
 
 ::-webkit-scrollbar{width:2px}::-webkit-scrollbar-track{background:var(–bg)}::-webkit-scrollbar-thumb{background:var(–gdim);border-radius:2px}
-</style>
 
+.sb-wrap{background:var(–bg3);border:1px solid var(–bdr);border-radius:4px;padding:12px;margin-bottom:8px;transition:all .3s}
+.sb-wrap.dom{border-color:var(–rasta-gold);background:rgba(255,215,0,.06)}
+.sb-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:3px}
+.sb-fn{font-family:‘Orbitron’,sans-serif;font-size:12px;color:var(–gold2)}
+.sb-val{font-family:‘Orbitron’,sans-serif;font-size:14px;font-weight:700;color:var(–gold2)}
+.sb-desc{font-size:12px;color:var(–tdim2);margin-bottom:7px}
+.sb-track{height:5px;background:var(–bg4);border-radius:3px;overflow:hidden}
+.sb-fill{height:100%;border-radius:3px;transition:width .5s}
+
+</style>
 <style>
 body::before{content:'';position:fixed;top:0;left:0;right:0;height:5px;z-index:999;pointer-events:none;
   background:linear-gradient(90deg,#CC0000 33.3%,#FFD700 33.3%,#FFD700 66.6%,#00AA33 66.6%)}
-</style>
 
+.sb-wrap{background:var(–bg3);border:1px solid var(–bdr);border-radius:4px;padding:12px;margin-bottom:8px;transition:all .3s}
+.sb-wrap.dom{border-color:var(–rasta-gold);background:rgba(255,215,0,.06)}
+.sb-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:3px}
+.sb-fn{font-family:‘Orbitron’,sans-serif;font-size:12px;color:var(–gold2)}
+.sb-val{font-family:‘Orbitron’,sans-serif;font-size:14px;font-weight:700;color:var(–gold2)}
+.sb-desc{font-size:12px;color:var(–tdim2);margin-bottom:7px}
+.sb-track{height:5px;background:var(–bg4);border-radius:3px;overflow:hidden}
+.sb-fill{height:100%;border-radius:3px;transition:width .5s}
+
+</style>
 </head>
 <body>
 <div id="app">
@@ -473,6 +491,143 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;height:5px;z-index:9
   </div>
 </div>
 
+  <!-- LIFE TAB -->
+
+  <div id="tab-life" class="panel">
+    <div class="p-title">CASHFLOW SHEET</div>
+    <div style="font-size:12px;letter-spacing:2px;color:var(--gdim);margin-bottom:8px;text-transform:uppercase;font-family:'Orbitron',sans-serif">INCOME</div>
+    <div id="life-income"></div>
+    <div style="font-size:12px;letter-spacing:2px;color:var(--gdim);margin:10px 0 8px;text-transform:uppercase;font-family:'Orbitron',sans-serif">EXPENSES</div>
+    <div id="life-expenses"></div>
+    <div style="font-size:12px;letter-spacing:2px;color:var(--gdim);margin:10px 0 8px;text-transform:uppercase;font-family:'Orbitron',sans-serif">ASSETS</div>
+    <div id="life-assets"></div>
+    <div id="life-total" style="display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:3px;margin-top:10px;border:1px solid rgba(0,255,136,.3);background:rgba(0,255,136,.05)">
+      <div style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:1px;color:var(--green)">NET CASHFLOW / BULAN</div>
+      <div style="font-family:'Orbitron',sans-serif;font-size:18px;font-weight:700;color:var(--green)" id="life-net">+RM300</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:3px;margin-top:5px;border:1px solid rgba(0,204,68,.25);background:rgba(0,204,68,.04)">
+      <div style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:1px;color:var(--neon)">GIFT INCOME / BULAN</div>
+      <div style="font-family:'Orbitron',sans-serif;font-size:18px;font-weight:700;color:var(--neon)" id="life-gift">RM0</div>
+    </div>
+  </div>
+
+  <!-- STATE TAB -->
+
+  <div id="tab-state" class="panel">
+    <div class="p-title">STATE &amp; ATTRACTION</div>
+    <div style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gdim);margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid var(--bdr)">FUNCTIONAL STATE</div>
+    <div style="text-align:center;padding:10px;background:rgba(255,215,0,.07);border:1px solid var(--bdr);border-radius:4px;margin-bottom:12px">
+      <div style="font-family:'Orbitron',sans-serif;font-size:11px;color:var(--gdim);letter-spacing:1px">DOMINANT STATE SEMASA</div>
+      <div style="font-family:'Orbitron',sans-serif;font-size:16px;color:var(--gold2);margin-top:3px" id="dom-state">G4 &mdash; EXECUTOR</div>
+    </div>
+    <div class="sb-wrap dom" id="sb-g1"><div class="sb-hdr"><div class="sb-fn">G1 &mdash; ACTIVATOR</div><div class="sb-val" id="sv-g1">0</div></div><div class="sb-desc">Ada duit &middot; Boleh gerakkan duit sendiri</div><div class="sb-track"><div class="sb-fill" id="sf-g1" style="width:0%;background:var(--gold)"></div></div></div>
+    <div class="sb-wrap" id="sb-g2"><div class="sb-hdr"><div class="sb-fn">G2 &mdash; HOLDER</div><div class="sb-val" id="sv-g2">15</div></div><div class="sb-desc">Ada duit &middot; Tidak boleh gerakkan</div><div class="sb-track"><div class="sb-fill" id="sf-g2" style="width:15%;background:var(--amber)"></div></div></div>
+    <div class="sb-wrap" id="sb-g3"><div class="sb-hdr"><div class="sb-fn">G3 &mdash; CONNECTOR</div><div class="sb-val" id="sv-g3">0</div></div><div class="sb-desc">Tiada duit &middot; Boleh gerakkan duit orang</div><div class="sb-track"><div class="sb-fill" id="sf-g3" style="width:0%;background:var(--neon)"></div></div></div>
+    <div class="sb-wrap" id="sb-g4"><div class="sb-hdr"><div class="sb-fn">G4 &mdash; EXECUTOR</div><div class="sb-val" id="sv-g4">60</div></div><div class="sb-desc">Tiada duit &middot; Execute sahaja</div><div class="sb-track"><div class="sb-fill" id="sf-g4" style="width:60%;background:var(--tdim2)"></div></div></div>
+    <div style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gdim);margin:14px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--bdr)">HUMAN ATTRACTION</div>
+    <div class="sb-wrap"><div class="sb-hdr"><div class="sb-fn">ATTENTION</div><div class="sb-val" id="sv-att">0</div></div><div class="sb-desc">Berapa ramai perhatikan anda</div><div class="sb-track"><div class="sb-fill" id="sf-att" style="width:0%;background:var(--rasta-gold)"></div></div></div>
+    <div class="sb-wrap"><div class="sb-hdr"><div class="sb-fn">LIKEABILITY</div><div class="sb-val" id="sv-lik">20</div></div><div class="sb-desc">Berapa ramai suka kepada anda</div><div class="sb-track"><div class="sb-fill" id="sf-lik" style="width:20%;background:var(--rasta-green)"></div></div></div>
+    <div class="sb-wrap"><div class="sb-hdr"><div class="sb-fn">INSPIRATION</div><div class="sb-val" id="sv-ins">20</div></div><div class="sb-desc">Berapa ramai terinspirasi oleh anda</div><div class="sb-track"><div class="sb-fill" id="sf-ins" style="width:20%;background:var(--blue)"></div></div></div>
+    <div class="sb-wrap"><div class="sb-hdr"><div class="sb-fn">FANDOM</div><div class="sb-val" id="sv-fan">0</div></div><div class="sb-desc">Penyokong setia anda</div><div class="sb-track"><div class="sb-fill" id="sf-fan" style="width:0%;background:var(--purple)"></div></div></div>
+    <div class="sb-wrap"><div class="sb-hdr"><div class="sb-fn">CHARISMA</div><div class="sb-val" id="sv-cha">20</div></div><div class="sb-desc">Pengaruh semula jadi anda</div><div class="sb-track"><div class="sb-fill" id="sf-cha" style="width:20%;background:var(--rasta-gold)"></div></div></div>
+    <div class="sb-wrap"><div class="sb-hdr"><div class="sb-fn">CONTROVERSY</div><div class="sb-val" id="sv-con">0</div></div><div class="sb-desc">Polarisation &mdash; dua-mata pedang</div><div class="sb-track"><div class="sb-fill" id="sf-con" style="width:0%;background:var(--rasta-red)"></div></div></div>
+    <div style="background:rgba(204,0,0,.06);border:1px solid rgba(204,0,0,.2);border-radius:4px;padding:12px;margin-top:12px;text-align:center">
+      <div style="font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;color:var(--rasta-red);margin-bottom:4px">HUMAN SCORE</div>
+      <div style="font-family:'Orbitron',sans-serif;font-size:22px;font-weight:700;color:var(--rasta-gold)"><span id="hs-val">0</span> <span style="font-size:13px;color:var(--tdim2)">/ 500</span></div>
+      <div style="height:5px;background:var(--bg4);border-radius:3px;overflow:hidden;margin-top:8px"><div id="hs-fill" style="height:100%;border-radius:3px;background:var(--rasta-gold);transition:width .5s;width:0%"></div></div>
+    </div>
+  </div>
+
+  <!-- ECO TAB -->
+
+  <div id="tab-eco" class="panel">
+    <div class="p-title">ECOSYSTEM</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px">
+      <div style="background:var(--bg3);border:1px solid var(--bdr);border-radius:4px;padding:10px;text-align:center"><div style="font-size:9px;color:var(--tdim);text-transform:uppercase;letter-spacing:.5px">SAIZ</div><div style="font-family:'Orbitron',sans-serif;font-size:20px;font-weight:700;color:var(--gold2)" id="eco-size">0</div><div style="font-size:11px;color:var(--tdim)">anggota</div></div>
+      <div style="background:var(--bg3);border:1px solid var(--bdr);border-radius:4px;padding:10px;text-align:center"><div style="font-size:9px;color:var(--tdim);text-transform:uppercase;letter-spacing:.5px">HEALTH</div><div style="font-family:'Orbitron',sans-serif;font-size:20px;font-weight:700;color:var(--gold2)" id="eco-hv">0</div><div style="font-size:11px" id="eco-hlbl">-</div></div>
+      <div style="background:var(--bg3);border:1px solid var(--bdr);border-radius:4px;padding:10px;text-align:center"><div style="font-size:9px;color:var(--tdim);text-transform:uppercase;letter-spacing:.5px">MULTIPLIER</div><div style="font-family:'Orbitron',sans-serif;font-size:20px;font-weight:700;color:var(--gold2)" id="eco-mult">&times;1.0</div><div style="font-size:11px;color:var(--tdim)">human x</div></div>
+      <div style="background:var(--bg3);border:1px solid var(--bdr);border-radius:4px;padding:10px;text-align:center"><div style="font-size:9px;color:var(--tdim);text-transform:uppercase;letter-spacing:.5px">DEPLOY</div><div style="font-family:'Orbitron',sans-serif;font-size:20px;font-weight:700;color:var(--gold2)" id="eco-dep">0</div><div style="font-size:11px;color:var(--tdim)" id="eco-brk">0 broken</div></div>
+    </div>
+    <div style="background:var(--bg3);border:1px solid var(--bdr);border-radius:4px;padding:10px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">
+        <div style="font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:1px;color:var(--tdim)">ECOSYSTEM HEALTH</div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:14px;font-weight:700;color:var(--green)" id="eco-hv2">0%</div>
+      </div>
+      <div style="height:5px;background:var(--bg4);border-radius:3px;overflow:hidden"><div id="eco-hfill" style="height:100%;border-radius:3px;background:var(--rasta-green);transition:width .5s;width:0%"></div></div>
+    </div>
+    <div style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gdim);margin-bottom:7px">SUPPORTERS</div>
+    <div id="eco-supporters" style="font-size:14px;color:var(--tdim);padding:6px 0 10px">Belum ada supporter.</div>
+    <div style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gdim);margin-bottom:7px">ANGGOTA</div>
+    <div id="eco-members" style="font-size:14px;color:var(--tdim);padding:6px 0 10px">Belum ada anggota.</div>
+    <div style="height:1px;background:var(--bdr);margin:10px 0"></div>
+    <div style="font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gdim);margin-bottom:7px">SCAR AKTIF</div>
+    <div id="eco-scars" style="font-size:14px;color:var(--rasta-green);padding:6px 0">&#10003; Tiada scar aktif.</div>
+  </div>
+
+  <!-- SCORE TAB -->
+
+  <div id="tab-score" class="panel">
+    <div class="p-title">SCORE GUIDE</div>
+    <div style="background:var(--bg3);border:1px solid var(--bdr);border-radius:5px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+        <div><div style="font-family:'Orbitron',sans-serif;font-size:13px;color:var(--gold2);letter-spacing:1px;margin-bottom:2px">&#128176; CAPITAL SCORE</div><div style="font-size:12px;color:var(--tdim)">Sasaran: 1,000</div></div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:24px;font-weight:700;color:var(--gold2)" id="sgv-cap">0</div>
+      </div>
+      <div style="height:5px;background:var(--bg4);border-radius:3px;overflow:hidden;margin-bottom:10px"><div id="sgf-cap" style="height:100%;border-radius:3px;background:var(--rasta-gold);transition:width .5s;width:0%"></div></div>
+      <div style="background:var(--bg4);border-radius:4px;padding:10px;margin-bottom:8px">
+        <div style="font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:2px;color:var(--gdim);margin-bottom:8px">KOMPONEN</div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Cash tunai</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-cash">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Nilai Asset &times; 10</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-asset">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Passive Income &times; 20</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-passive">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span style="font-size:13px;color:var(--tdim2)">Gift Income &times; 10</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-gift">0</span></div>
+      </div>
+      <div style="font-size:13px;color:var(--tdim2);line-height:1.6;padding:8px;background:rgba(255,215,0,.04);border-radius:3px;border-left:2px solid var(--gdim)">&#128161; Beli asset untuk passive income. Bina supporter untuk gift income. Kedua-dua naikkan Capital Score tanpa kerja aktif.</div>
+    </div>
+    <div style="background:var(--bg3);border:1px solid var(--bdr);border-radius:5px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+        <div><div style="font-family:'Orbitron',sans-serif;font-size:13px;color:var(--gold2);letter-spacing:1px;margin-bottom:2px">&#127760; MOVEMENT SCORE</div><div style="font-size:12px;color:var(--tdim)">Sasaran: 1,000</div></div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:24px;font-weight:700;color:var(--rasta-gold)" id="sgv-mov">0</div>
+      </div>
+      <div style="height:5px;background:var(--bg4);border-radius:3px;overflow:hidden;margin-bottom:8px"><div id="sgf-mov" style="height:100%;border-radius:3px;background:var(--rasta-gold);transition:width .5s;width:0%"></div></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(0,170,51,.05);border:1px solid rgba(0,170,51,.2);border-radius:3px;padding:8px 10px;margin-bottom:8px">
+        <span style="font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:1px;color:var(--rasta-green)">HUMAN MULTIPLIER AKTIF</span>
+        <span style="font-family:'Orbitron',sans-serif;font-size:18px;font-weight:700;color:var(--rasta-green)" id="sfc-mult">&times;1.0</span>
+      </div>
+      <div style="background:var(--bg4);border-radius:4px;padding:10px;margin-bottom:8px">
+        <div style="font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:2px;color:var(--gdim);margin-bottom:8px">KOMPONEN</div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Eco &times; Health &times; MovQ</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-eco">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Trust &times; 4</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-trust">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Reputation &times; 4</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-rep">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Attraction &times; 4</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-attr">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Fandom &times; 3</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-fan">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span style="font-size:13px;color:var(--tdim2)">Attention &times; 2</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-att">0</span></div>
+      </div>
+      <div style="font-size:13px;color:var(--tdim2);line-height:1.6;padding:8px;background:rgba(255,215,0,.04);border-radius:3px;border-left:2px solid var(--gdim)">&#128161; Human Multiplier adalah kunci. G2 connection boleh multiply score sehingga &times;5. Bina ecosystem dulu.</div>
+    </div>
+    <div style="background:var(--bg3);border:1px solid var(--bdr);border-radius:5px;padding:14px;margin-bottom:10px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+        <div><div style="font-family:'Orbitron',sans-serif;font-size:13px;color:var(--gold2);letter-spacing:1px;margin-bottom:2px">&#128101; HUMAN SCORE</div><div style="font-size:12px;color:var(--tdim)">Sasaran: 500</div></div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:24px;font-weight:700;color:var(--rasta-red)" id="sgv-hum">0</div>
+      </div>
+      <div style="height:5px;background:var(--bg4);border-radius:3px;overflow:hidden;margin-bottom:10px"><div id="sgf-hum" style="height:100%;border-radius:3px;background:var(--rasta-red);transition:width .5s;width:0%"></div></div>
+      <div style="background:var(--bg4);border-radius:4px;padding:10px;margin-bottom:8px">
+        <div style="font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:2px;color:var(--gdim);margin-bottom:8px">KOMPONEN</div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Likeability &times; 3</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-lik">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Fandom &times; 3</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-fan2">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Attention &times; 2</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-att2">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Inspiration &times; 2</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-ins">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Attraction &times; 2</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-attr2">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.04)"><span style="font-size:13px;color:var(--tdim2)">Positioning &times; 1</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-green)" id="sfc-pos">0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:4px 0"><span style="font-size:13px;color:var(--rasta-red)">Controversy &times; 1 &#9888;</span><span style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--rasta-red)" id="sfc-con">0</span></div>
+      </div>
+      <div style="font-size:13px;color:var(--tdim2);line-height:1.6;padding:8px;background:rgba(255,215,0,.04);border-radius:3px;border-left:2px solid var(--gdim)">&#128161; Likeability dan Fandom paling cepat naikkan Human Score. Elak Controversy tinggi.</div>
+    </div>
+    <div style="background:rgba(0,170,51,.04);border:1px solid rgba(0,170,51,.2);border-radius:4px;padding:12px;margin-bottom:10px">
+      <div style="font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;color:var(--rasta-green);margin-bottom:10px">&#127919; APA YANG PERLU ANDA LAKUKAN SEKARANG</div>
+      <div id="sg-advice-content" style="font-size:14px;color:var(--tdim2);line-height:1.8">Mula bermain untuk lihat nasihat.</div>
+    </div>
+  </div>
+
 <!-- GAME OVER -->
 
 <div id="gameover" class="screen">
@@ -579,6 +734,16 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;height:5px;z-index:9
     <button class="btn-outline" style="border-color:var(--red);color:var(--red)" onclick="CO('ov-scar')">FAHAM &rarr;</button>
   </div>
 </div>
+</div>
+
+<div class="ovl" id="ov-rankup">
+  <div class="ovl-box" style="border:1px solid var(--rasta-green)">
+    <div class="ob-icon" id="ru-icon">&#128279;</div>
+    <div class="ob-ey">FUNGSI BERUBAH</div>
+    <div class="ob-title" id="ru-title" style="color:var(--rasta-green)">G3 &mdash; CONNECTOR</div>
+    <div class="ob-sub" id="ru-sub">Pattern anda terbukti. Langkah seterusnya: attract G2.</div>
+    <button class="btn-main full" onclick="CO('ov-rankup')">TERUSKAN &rarr;</button>
+  </div>
 </div>
 
 <script>
@@ -1238,6 +1403,98 @@ function updateUI(){
 }
 
 // ── NAV ──
+
+// ── SCORE GUIDE ──────────────────────────────
+function updateScoreTab(){
+  recalc();
+  const av=gs.assets.reduce((s,a)=>s+a.v,0);
+  const mq=calcMovQ();
+  const mult=calcMult();
+  const ecoC=Math.round(gs.eco.size*gs.eco.health*mq);
+  const ps=Math.round(calcPosScore());
+  document.getElementById('sgv-cap').textContent=gs.capitalScore;
+  document.getElementById('sgf-cap').style.width=Math.min(100,gs.capitalScore/10)+'%';
+  document.getElementById('sfc-cash').textContent=gs.cash;
+  document.getElementById('sfc-asset').textContent=av*10;
+  document.getElementById('sfc-passive').textContent=gs.passiveIncome*20;
+  document.getElementById('sfc-gift').textContent=gs.giftIncome*10;
+  document.getElementById('sgv-mov').textContent=gs.movementScore;
+  document.getElementById('sgf-mov').style.width=Math.min(100,gs.movementScore/10)+'%';
+  document.getElementById('sfc-mult').textContent='×'+mult.toFixed(1);
+  document.getElementById('sfc-eco').textContent=ecoC;
+  document.getElementById('sfc-trust').textContent=gs.trust*4;
+  document.getElementById('sfc-rep').textContent=gs.reputation*4;
+  document.getElementById('sfc-attr').textContent=gs.attraction*4;
+  document.getElementById('sfc-fan').textContent=gs.fandom*3;
+  document.getElementById('sfc-att').textContent=gs.attention*2;
+  document.getElementById('sgv-hum').textContent=gs.humanScore;
+  document.getElementById('sgf-hum').style.width=Math.min(100,gs.humanScore/5)+'%';
+  document.getElementById('sfc-lik').textContent=gs.likeability*3;
+  document.getElementById('sfc-fan2').textContent=gs.fandom*3;
+  document.getElementById('sfc-att2').textContent=gs.attention*2;
+  document.getElementById('sfc-ins').textContent=gs.inspiration*2;
+  document.getElementById('sfc-attr2').textContent=gs.attraction*2;
+  document.getElementById('sfc-pos').textContent=ps;
+  const conEl=document.getElementById('sfc-con');
+  conEl.textContent=gs.controversy;
+  conEl.style.color=gs.controversy>0?'var(--rasta-red)':'var(--rasta-green)';
+  document.getElementById('sg-advice-content').innerHTML=generateAdvice();
+}
+
+function generateAdvice(){
+  const rows=[];
+  const capN=Math.max(0,1000-gs.capitalScore);
+  const movN=Math.max(0,1000-gs.movementScore);
+  const humN=Math.max(0,500-gs.humanScore);
+  const mult=calcMult();
+  if(capN>0){
+    if(gs.assets.length===0) rows.push({i:'&#128176;',t:'<strong>Capital</strong> kurang <span style="color:var(--rasta-red)">'+capN+'</span> lagi. Belum ada asset. Cari event peluang asset.'});
+    else rows.push({i:'&#128176;',t:'<strong>Capital</strong> kurang <span style="color:var(--rasta-red)">'+capN+'</span> lagi. Teruskan kumpul cash dan passive income.'});
+  } else rows.push({i:'&#10003;',t:'<strong style="color:var(--rasta-green)">Capital Score</strong> dah capai sasaran!'});
+  if(movN>0){
+    if(mult<=1.0) rows.push({i:'&#127760;',t:'<strong>Movement</strong> kurang <span style="color:var(--rasta-red)">'+movN+'</span> lagi. Human Multiplier masih <span style="color:var(--rasta-red)">×'+mult.toFixed(1)+'</span>. Bina ecosystem dan connect dengan G2.'});
+    else rows.push({i:'&#127760;',t:'<strong>Movement</strong> kurang <span style="color:var(--rasta-red)">'+movN+'</span> lagi. Naikkan Trust, Reputation, dan Attraction.'});
+  } else rows.push({i:'&#10003;',t:'<strong style="color:var(--rasta-green)">Movement Score</strong> dah capai sasaran!'});
+  if(humN>0){
+    if(gs.fandom<20) rows.push({i:'&#128101;',t:'<strong>Human Score</strong> kurang <span style="color:var(--rasta-red)">'+humN+'</span> lagi. Fandom rendah. Buat content berkualiti dan terima supporter.'});
+    else if(gs.controversy>30) rows.push({i:'&#128101;',t:'<strong>Human Score</strong> kurang <span style="color:var(--rasta-red)">'+humN+'</span> lagi. Controversy tinggi. Elak pilihan yang naikkan controversy.'});
+    else rows.push({i:'&#128101;',t:'<strong>Human Score</strong> kurang <span style="color:var(--rasta-red)">'+humN+'</span> lagi. Naikkan Likeability dan Inspiration.'});
+  } else rows.push({i:'&#10003;',t:'<strong style="color:var(--rasta-green)">Human Score</strong> dah capai sasaran!'});
+  if(capN===0&&movN===0&&humN===0) rows.push({i:'&#128081;',t:'<strong style="color:var(--rasta-gold)">Semua sasaran tercapai! Anda menang!</strong>'});
+  return rows.map(r=>'<div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:14px;line-height:1.55"><div style="font-size:16px;flex-shrink:0">'+r.i+'</div><div style="color:var(--tdim2)">'+r.t+'</div></div>').join('');
+}
+
+function generateCoaching(eff,prevState){
+  if(!eff)return'';
+  const rows=[];
+  const mult=calcMult();
+  if(eff.cash&&eff.cash!==0){
+    if(eff.cash>0) rows.push({i:'&#128176;',t:'<strong>Cash +RM'+eff.cash+'</strong> &mdash; <span style="color:var(--rasta-green)">Capital Score naik</span>.'});
+    else rows.push({i:'&#128176;',t:'<strong>Cash -RM'+Math.abs(eff.cash)+'</strong> &mdash; <span style="color:var(--rasta-red)">Capital Score turun</span>. Kos jangka pendek.'});
+  }
+  if(eff.addAsset) rows.push({i:'&#128200;',t:'<strong>Asset baru: '+eff.addAsset.name+'</strong> &mdash; <span style="color:var(--rasta-green)">+RM'+eff.addAsset.r+' passive income setiap bulan</span>.'});
+  if(eff.addLiability) rows.push({i:'&#9888;',t:'<strong>Liabiliti baru</strong> &mdash; <span style="color:var(--rasta-red)">-RM'+eff.addLiability.d+' dari cashflow setiap bulan</span>.'});
+  if(eff.movQ){
+    const parts=[];
+    if(eff.movQ.breadth>0)parts.push('Breadth +'+eff.movQ.breadth);
+    if(eff.movQ.depth>0)parts.push('Depth +'+eff.movQ.depth);
+    if(eff.movQ.velocity>0)parts.push('Velocity +'+eff.movQ.velocity);
+    if(parts.length>0) rows.push({i:'&#127760;',t:'<strong>Movement Quality naik</strong> ('+parts.join(', ')+') &mdash; <span style="color:var(--rasta-green)">Movement Score naik</span>. Multiplier aktif: ×'+mult.toFixed(1)+'.'});
+  }
+  if(eff.trust&&eff.trust>0) rows.push({i:'&#129309;',t:'<strong>Trust +'+eff.trust+'</strong> &mdash; <span style="color:var(--rasta-green)">Movement Score +'+(eff.trust*4)+'</span>.'});
+  if(eff.trust&&eff.trust<0) rows.push({i:'&#128148;',t:'<strong>Trust '+eff.trust+'</strong> &mdash; <span style="color:var(--rasta-red)">Movement Score '+(eff.trust*4)+'</span>. Trust susah dibina, mudah hilang.'});
+  if(eff.fandom&&eff.fandom>0) rows.push({i:'&#128101;',t:'<strong>Fandom +'+eff.fandom+'</strong> &mdash; <span style="color:var(--rasta-green)">Human Score +'+(eff.fandom*3)+'</span>.'});
+  if(eff.likeability&&eff.likeability>0) rows.push({i:'&#128101;',t:'<strong>Likeability +'+eff.likeability+'</strong> &mdash; <span style="color:var(--rasta-green)">Human Score +'+(eff.likeability*3)+'</span>.'});
+  if(eff.controversy&&eff.controversy>0) rows.push({i:'&#9888;',t:'<strong>Controversy +'+eff.controversy+'</strong> &mdash; <span style="color:var(--rasta-red)">Human Score -'+eff.controversy+'</span>. Elak controversy tinggi.'});
+  if(eff.addScar) rows.push({i:'&#128148;',t:'<strong>Scar aktif</strong> &mdash; <span style="color:var(--rasta-red)">Block G2 attraction</span>. 3 scars serentak = Game Over.'});
+  if(eff.giftIncome&&eff.giftIncome>0) rows.push({i:'&#128184;',t:'<strong>Gift Income +RM'+eff.giftIncome+'/bulan</strong> &mdash; <span style="color:var(--rasta-green)">Masuk Capital Score secara automatik</span>.'});
+  if(!rows.length)return'';
+  return '<div style="background:rgba(0,170,51,.04);border:1px solid rgba(0,170,51,.15);border-radius:4px;padding:12px;margin-bottom:9px">'
+    +'<div style="font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;color:var(--rasta-green);margin-bottom:9px">&#128200; KENAPA SCORE BERUBAH</div>'
+    +rows.map(r=>'<div style="display:flex;align-items:flex-start;gap:7px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:13px;line-height:1.5"><div style="font-size:14px;flex-shrink:0">'+r.i+'</div><div style="color:var(--tdim2)">'+r.t+'</div></div>').join('')
+    +'</div>';
+}
+
 function SS(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
 function ST(t){
   document.querySelectorAll('.tab-btn').forEach((b,i)=>b.classList.toggle('active',['main','posisi','survival','teori'][i]===t));
