@@ -1,1 +1,1610 @@
 
+<!DOCTYPE html>
+
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>PAIPONER</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#c9a84c;--gold2:#f0c060;--gdim:#7a5e28;
+  --neon:#00ffe0;--blue:#00bfff;--purple:#a78bfa;
+  --red:#ff3a3a;--green:#00ff88;--amber:#ffb347;--orange:#ff9f43;
+  --bg:#07090e;--bg2:#0c1018;--bg3:#111620;--bg4:#161d28;
+  --txt:#ddd8cc;--tdim:#58606e;--tdim2:#8a9099;
+  --bdr:rgba(201,168,76,.15);--bdrn:rgba(0,255,224,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{width:100%;height:100%;background:var(--bg);overflow:hidden;font-family:'Rajdhani',sans-serif;color:var(--txt)}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:repeating-linear-gradient(0deg,transparent,transparent 48px,rgba(0,255,224,.007) 48px,rgba(0,255,224,.007) 49px),
+             repeating-linear-gradient(90deg,transparent,transparent 48px,rgba(0,255,224,.007) 48px,rgba(0,255,224,.007) 49px)}
+#app{position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column}
+.screen{display:none;flex-direction:column;height:100%;width:100%;overflow:hidden}
+.screen.active{display:flex}
+@keyframes FI{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes PLS{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.18);opacity:1}}
+@keyframes SBR{0%,100%{opacity:.2;transform:scaleY(.35)}50%{opacity:1;transform:scaleY(1)}}
+@keyframes BCE{from{transform:scale(.9)}to{transform:scale(1.1)}}
+@keyframes GLW{0%,100%{box-shadow:0 0 20px rgba(201,168,76,.15)}50%{box-shadow:0 0 40px rgba(201,168,76,.4)}}
+
+/* SPLASH */
+#splash{align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 35%,#0c1a2e,var(–bg) 65%)}
+.sp-glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.07),transparent 70%);animation:PLS 4s ease-in-out infinite}
+.sp-wrap{text-align:center;z-index:2;padding:0 26px}
+.sp-ey{font-family:‘Orbitron’,sans-serif;font-size:7px;letter-spacing:5px;color:var(–gdim);margin-bottom:8px}
+.sp-title{font-family:‘Orbitron’,sans-serif;font-size:48px;font-weight:900;letter-spacing:6px;line-height:1;
+background:linear-gradient(135deg,var(–gold2),var(–gold) 45%,#5a3c10);
+-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+filter:drop-shadow(0 0 26px rgba(201,168,76,.4))}
+.sp-sub{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:4px;color:var(–neon);opacity:.65;margin-top:6px}
+.sp-tag{font-size:11px;color:var(–gdim);margin-top:5px;letter-spacing:1px}
+.sp-pills{display:flex;align-items:center;justify-content:center;gap:8px;margin:18px 0;flex-wrap:wrap}
+.sp-pill{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:1px;padding:5px 9px;border-radius:2px;border:1px solid}
+.sp-pill.k{color:var(–orange);border-color:rgba(255,159,67,.3);background:rgba(255,159,67,.06)}
+.sp-pill.p{color:var(–neon);border-color:var(–bdrn);background:rgba(0,255,224,.04)}
+.sp-x{color:var(–gdim);font-size:14px;font-weight:700}
+.sp-bars{display:flex;gap:3px;justify-content:center;margin:16px 0}
+.sp-bar{width:2px;background:var(–gold);border-radius:2px;animation:SBR 1.4s ease-in-out infinite}
+.sp-bar:nth-child(1){height:7px;animation-delay:0s}.sp-bar:nth-child(2){height:15px;animation-delay:.12s}
+.sp-bar:nth-child(3){height:24px;animation-delay:.24s}.sp-bar:nth-child(4){height:15px;animation-delay:.36s}
+.sp-bar:nth-child(5){height:7px;animation-delay:.48s}
+
+/* BUTTONS */
+.btn-gold{font-family:‘Orbitron’,sans-serif;font-weight:700;letter-spacing:3px;border-radius:2px;cursor:pointer;
+border:1px solid var(–gold);background:linear-gradient(135deg,#140f00,#221900);color:var(–gold2);
+transition:all .2s;animation:GLW 3s ease-in-out infinite}
+.btn-gold:active{transform:scale(.96);opacity:.85}
+.btn-gold.lg{font-size:12px;padding:14px 36px}
+.btn-gold.full{font-size:11px;padding:13px;width:100%}
+.btn-neon{font-family:‘Orbitron’,sans-serif;font-weight:700;letter-spacing:2px;border-radius:2px;cursor:pointer;
+border:1px solid var(–neon);background:rgba(0,255,224,.06);color:var(–neon);font-size:10px;
+padding:11px;width:100%;transition:all .2s;animation:none}
+.btn-neon:active{transform:scale(.97)}
+
+/* SHARED */
+.divider{height:1px;background:var(–bdr);margin:12px 0}
+.scroll-y{overflow-y:auto}
+.scroll-y::-webkit-scrollbar{width:2px}
+.scroll-y::-webkit-scrollbar-thumb{background:var(–gdim);border-radius:2px}
+.pill{font-size:10px;padding:3px 7px;border-radius:2px;border:1px solid;display:inline-block;line-height:1.4}
+.pill.g{color:var(–green);border-color:rgba(0,255,136,.25);background:rgba(0,255,136,.07)}
+.pill.r{color:var(–red);border-color:rgba(255,58,58,.25);background:rgba(255,58,58,.07)}
+.pill.a{color:var(–amber);border-color:rgba(255,179,71,.25);background:rgba(255,179,71,.07)}
+.pill.b{color:var(–blue);border-color:rgba(0,191,255,.25);background:rgba(0,191,255,.07)}
+.pill.gold{color:var(–gold2);border-color:var(–bdr);background:rgba(201,168,76,.07)}
+.pill.p{color:var(–purple);border-color:rgba(167,139,250,.25);background:rgba(167,139,250,.07)}
+.sec-lbl{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:3px;color:var(–gdim);margin-bottom:8px;text-transform:uppercase}
+
+/* INTRO */
+#intro{overflow-y:auto;background:var(–bg)}
+#intro::-webkit-scrollbar{width:2px}
+#intro::-webkit-scrollbar-thumb{background:var(–gdim)}
+.i-hdr{padding:20px 16px 0;background:linear-gradient(180deg,var(–bg2),transparent)}
+.i-lbl{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:3px;color:var(–gdim)}
+.i-title{font-family:‘Orbitron’,sans-serif;font-size:20px;color:var(–gold2);margin:4px 0 5px}
+.i-sub{font-size:12px;color:var(–tdim2);margin-bottom:16px;line-height:1.6}
+.i-body{padding:0 16px 90px}
+.ibox{background:var(–bg3);border:1px solid var(–bdr);border-radius:5px;padding:14px;margin-bottom:9px;position:relative;overflow:hidden}
+.ibox::before{content:’’;position:absolute;left:0;top:0;bottom:0;width:3px;background:var(–gdim)}
+.ibox.hi::before{background:var(–neon)}.ibox.hi{border-color:rgba(0,255,224,.2)}
+.ibox.fm{border-color:rgba(167,139,250,.2);background:rgba(167,139,250,.03)}.ibox.fm::before{background:var(–purple)}
+.ib-id{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:2px;color:var(–gdim);margin-bottom:3px}
+.ib-name{font-size:17px;font-weight:700;color:var(–gold2);margin-bottom:5px}
+.ib-tags{display:flex;gap:5px;margin-bottom:6px;flex-wrap:wrap}
+.ib-desc{font-size:12px;color:var(–tdim2);line-height:1.65}
+.ib-desc strong{color:var(–gold)}
+.path-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap;padding:7px 0 3px}
+.path-box{background:var(–bg4);border:1px solid var(–bdr);border-radius:3px;padding:5px 9px;text-align:center}
+.path-box span{display:block;font-family:‘Orbitron’,sans-serif;font-size:10px;color:var(–gold2)}
+.path-box small{font-size:9px;color:var(–tdim)}
+.path-arr{color:var(–gdim);font-size:13px}
+.path-combo{border:1px solid var(–gdim);border-radius:3px;padding:5px 9px;background:rgba(201,168,76,.07);text-align:center}
+.path-combo span{display:block;font-family:‘Orbitron’,sans-serif;font-size:10px;color:var(–gold2)}
+.path-combo small{font-size:9px;color:var(–gold)}
+.path-warn{font-size:11px;color:var(–tdim2);padding-top:7px;border-top:1px solid var(–bdr);margin-top:7px}
+.path-warn strong{color:var(–red)}
+
+/* SETUP */
+#setup{overflow-y:auto;background:var(–bg)}
+#setup::-webkit-scrollbar{width:2px}
+.s-hdr{padding:20px 16px 0;background:linear-gradient(180deg,var(–bg2),transparent)}
+.s-lbl{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:3px;color:var(–gdim)}
+.s-title{font-family:‘Orbitron’,sans-serif;font-size:20px;color:var(–gold2);margin:4px 0 5px}
+.s-sub{font-size:12px;color:var(–tdim2);margin-bottom:16px}
+.s-body{padding:0 16px 90px}
+.pos-card{background:var(–bg3);border:2px solid var(–bdr);border-radius:5px;padding:13px;margin-bottom:7px;cursor:pointer;transition:all .2s;position:relative}
+.pos-card:active{transform:scale(.98)}
+.pos-card.sel{border-color:var(–gold);background:rgba(201,168,76,.07);animation:GLW 2s ease-in-out infinite}
+.pc-icon{font-size:20px;margin-bottom:4px}
+.pc-name{font-family:‘Orbitron’,sans-serif;font-size:12px;color:var(–gold2);margin-bottom:3px}
+.pc-bonus{font-size:11px;color:var(–neon);margin-bottom:2px}
+.pc-trade{font-size:10px;color:var(–tdim)}
+.pc-check{position:absolute;top:10px;right:10px;font-size:15px;display:none}
+.pos-card.sel .pc-check{display:block}
+
+/* GAME HUD */
+#game{background:var(–bg);flex-direction:column}
+.hud{background:var(–bg2);border-bottom:1px solid var(–bdr);padding:8px 12px;flex-shrink:0}
+.hud-r1{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.hud-fn{font-family:‘Orbitron’,sans-serif;font-size:10px;color:var(–gold2);letter-spacing:1px}
+.hud-right{display:flex;align-items:center;gap:5px}
+.hud-season{font-family:‘Orbitron’,sans-serif;font-size:7px;letter-spacing:1px;padding:2px 6px;border-radius:2px;border:1px solid}
+.hud-season.boom{color:var(–green);border-color:rgba(0,255,136,.3)}
+.hud-season.stagnation{color:var(–amber);border-color:rgba(255,179,71,.3)}
+.hud-season.recession{color:var(–red);border-color:rgba(255,58,58,.3)}
+.hud-season.disruption{color:var(–purple);border-color:rgba(167,139,250,.3)}
+.hud-month{font-family:‘Orbitron’,sans-serif;font-size:8px;color:var(–tdim2)}
+.hud-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:4px}
+.hstat{background:var(–bg3);border:1px solid var(–bdr);border-radius:3px;padding:4px 5px}
+.hstat .hl{font-size:7px;color:var(–tdim);text-transform:uppercase;letter-spacing:.5px}
+.hstat .hv{font-family:‘Orbitron’,sans-serif;font-size:11px;font-weight:700;color:var(–gold2)}
+.hstat.ht .hv{color:var(–neon)}.hstat.hm .hv{color:var(–blue)}.hstat.hs .hv{color:var(–purple)}.hstat.hat .hv{color:var(–orange)}
+.win-bars{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-bottom:4px}
+.wb{background:var(–bg3);border:1px solid var(–bdr);border-radius:3px;padding:4px 6px}
+.wb .wbl{font-size:7px;color:var(–tdim)}
+.wb .wbv{font-family:‘Orbitron’,sans-serif;font-size:8px;color:var(–gold2)}
+.wb-track{height:2px;background:var(–bg4);border-radius:2px;overflow:hidden;margin-top:2px}
+.wb-fill{height:100%;border-radius:2px;transition:width .5s}
+.alerts-row{display:flex;gap:3px;flex-wrap:wrap;min-height:16px}
+.abadge{font-size:8px;padding:2px 5px;border-radius:2px;font-family:‘Orbitron’,sans-serif;letter-spacing:.3px}
+.abadge.warn{background:rgba(255,58,58,.12);color:var(–red);border:1px solid rgba(255,58,58,.2)}
+.abadge.ok{background:rgba(0,255,136,.1);color:var(–green);border:1px solid rgba(0,255,136,.2)}
+.abadge.info{background:rgba(255,179,71,.1);color:var(–amber);border:1px solid rgba(255,179,71,.2)}
+
+/* TABS */
+.tab-bar{display:flex;background:var(–bg2);border-bottom:1px solid var(–bdr);flex-shrink:0}
+.tab-btn{flex:1;padding:8px 2px;text-align:center;cursor:pointer;font-family:‘Orbitron’,sans-serif;font-size:6px;letter-spacing:.3px;color:var(–tdim);border-bottom:2px solid transparent;transition:all .2s}
+.tab-btn.active{color:var(–gold2);border-bottom-color:var(–gold)}
+
+/* PANELS */
+.panel{display:none;flex:1;flex-direction:column;overflow-y:auto;padding:11px 12px 80px}
+.panel.active{display:flex}
+.panel::-webkit-scrollbar{width:2px}
+.panel::-webkit-scrollbar-thumb{background:var(–gdim)}
+.p-title{font-family:‘Orbitron’,sans-serif;font-size:11px;color:var(–gold2);letter-spacing:2px;margin-bottom:11px}
+
+/* EVENT */
+.ev-card{background:var(–bg3);border:1px solid var(–bdr);border-radius:5px;padding:13px;margin-bottom:9px;position:relative;overflow:hidden;animation:FI .3s ease}
+.ev-card::before{content:’’;position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(–gold),var(–neon),var(–gold))}
+.ev-card.cf::before{background:linear-gradient(90deg,var(–orange),var(–gold))}
+.ev-card.sc::before{background:var(–red)}.ev-card.sc{border-color:rgba(255,58,58,.2)}
+.ev-card.g1::before{background:linear-gradient(90deg,var(–purple),var(–gold2))}.ev-card.g1{border-color:rgba(167,139,250,.2)}
+.ev-card.cr::before{background:linear-gradient(90deg,var(–blue),var(–neon))}.ev-card.cr{border-color:rgba(0,191,255,.15)}
+.ev-cat{font-family:‘Orbitron’,sans-serif;font-size:7px;letter-spacing:2px;padding:2px 7px;border-radius:2px;display:inline-block;margin-bottom:8px}
+.ev-cat.CASHFLOW{background:rgba(255,159,67,.1);color:var(–orange);border:1px solid rgba(255,159,67,.2)}
+.ev-cat.MOVEMENT{background:rgba(0,191,255,.1);color:var(–blue);border:1px solid rgba(0,191,255,.2)}
+.ev-cat.TRUST{background:rgba(0,255,136,.1);color:var(–green);border:1px solid rgba(0,255,136,.2)}
+.ev-cat.DEPLOYMENT{background:rgba(201,168,76,.1);color:var(–gold2);border:1px solid var(–bdr)}
+.ev-cat.COMBINATION{background:rgba(167,139,250,.15);color:var(–purple);border:1px solid rgba(167,139,250,.3)}
+.ev-cat.SURVIVAL{background:rgba(255,58,58,.1);color:var(–red);border:1px solid rgba(255,58,58,.2)}
+.ev-cat.SEASON{background:rgba(255,179,71,.1);color:var(–amber);border:1px solid rgba(255,179,71,.2)}
+.ev-cat.ACTIVATOR{background:rgba(167,139,250,.1);color:var(–purple);border:1px solid rgba(167,139,250,.2)}
+.ev-cat.SCAM{background:rgba(255,58,58,.15);color:var(–red);border:1px solid rgba(255,58,58,.3)}
+.ev-cat.GIFT{background:rgba(0,255,136,.08);color:var(–green);border:1px solid rgba(0,255,136,.15)}
+.ev-cat.CREATOR{background:rgba(0,191,255,.1);color:var(–blue);border:1px solid rgba(0,191,255,.2)}
+.ev-cat.FOLLOWER{background:rgba(167,139,250,.1);color:var(–purple);border:1px solid rgba(167,139,250,.2)}
+.ev-cat.CHALLENGE{background:rgba(255,179,71,.1);color:var(–amber);border:1px solid rgba(255,179,71,.2)}
+.ev-cat.REACTION{background:rgba(255,58,58,.08);color:var(–amber);border:1px solid rgba(255,58,58,.15)}
+.ev-title{font-size:16px;font-weight:700;color:var(–txt);margin-bottom:5px;line-height:1.3}
+.ev-ctx{font-size:12px;color:var(–tdim2);line-height:1.65;margin-bottom:8px}
+.ev-lesson{background:rgba(0,255,224,.04);border-left:2px solid var(–neon);padding:6px 9px;margin-bottom:9px;font-size:11px;color:var(–neon);line-height:1.55;border-radius:0 3px 3px 0}
+
+/* CHOICES */
+.ch-wrap{display:flex;flex-direction:column;gap:6px;margin-bottom:9px}
+.ch-btn{background:var(–bg4);border:1px solid var(–bdr);border-radius:4px;padding:11px 12px;cursor:pointer;text-align:left;transition:all .15s}
+.ch-btn:active{transform:scale(.98);border-color:var(–gdim);background:rgba(201,168,76,.06)}
+.ch-label{font-size:13px;font-weight:600;color:var(–txt);margin-bottom:3px;line-height:1.3}
+.ch-hint{font-size:10px;color:var(–tdim2)}
+
+/* OUTCOME */
+.oc-card{background:var(–bg3);border:1px solid var(–bdrn);border-radius:5px;padding:12px;margin-bottom:8px;animation:FI .3s ease}
+.oc-title{font-family:‘Orbitron’,sans-serif;font-size:9px;letter-spacing:2px;margin-bottom:5px}
+.oc-title.win{color:var(–green)}.oc-title.lose{color:var(–red)}.oc-title.neutral{color:var(–neon)}
+.oc-text{font-size:12px;color:var(–txt);line-height:1.65;margin-bottom:7px}
+.oc-effects{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
+.oc-insight{font-size:11px;color:var(–gold);font-style:italic;line-height:1.5;padding-top:6px;border-top:1px solid var(–bdr)}
+
+/* LIFE TAB */
+.cf-row{display:flex;justify-content:space-between;align-items:center;padding:7px 9px;background:var(–bg3);border-radius:3px;margin-bottom:4px;border:1px solid var(–bdr)}
+.cf-row .cr-n{font-size:12px;color:var(–tdim2)}
+.cf-row .cr-v{font-family:‘Orbitron’,sans-serif;font-size:12px;font-weight:700}
+.cf-total{display:flex;justify-content:space-between;align-items:center;padding:9px;border-radius:3px;margin-top:5px;border:1px solid}
+.cf-total.pos{border-color:rgba(0,255,136,.3);background:rgba(0,255,136,.05)}
+.cf-total.neg{border-color:rgba(255,58,58,.3);background:rgba(255,58,58,.05)}
+.cf-total .ct-n{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:1px}
+.cf-total.pos .ct-n{color:var(–green)}.cf-total.neg .ct-n{color:var(–red)}
+.cf-total .ct-v{font-family:‘Orbitron’,sans-serif;font-size:17px;font-weight:700}
+.cf-total.pos .ct-v{color:var(–green)}.cf-total.neg .ct-v{color:var(–red)}
+.asset-row{padding:7px 9px;background:var(–bg3);border:1px solid var(–bdr);border-radius:3px;margin-bottom:4px}
+.ar-n{font-size:11px;color:var(–tdim2);margin-bottom:2px}
+.ar-stats{display:flex;gap:8px}
+.ar-s{font-size:10px;color:var(–gold)}
+
+/* STATE TAB */
+.state-section{margin-bottom:14px}
+.state-section-title{font-family:‘Orbitron’,sans-serif;font-size:9px;letter-spacing:2px;color:var(–gdim);margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(–bdr)}
+.dom-label{text-align:center;padding:9px;background:rgba(201,168,76,.07);border:1px solid var(–bdr);border-radius:4px;margin-bottom:10px}
+.dl-t{font-family:‘Orbitron’,sans-serif;font-size:9px;color:var(–tdim);letter-spacing:1px}
+.dl-v{font-family:‘Orbitron’,sans-serif;font-size:15px;color:var(–gold2);margin-top:2px}
+.sb-wrap{background:var(–bg3);border:1px solid var(–bdr);border-radius:4px;padding:11px;margin-bottom:7px;transition:all .3s}
+.sb-wrap.dom{border-color:var(–gold);background:rgba(201,168,76,.06);box-shadow:0 0 16px rgba(201,168,76,.1)}
+.sb-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:3px}
+.sb-fn{font-family:‘Orbitron’,sans-serif;font-size:10px;color:var(–gold2)}
+.sb-val{font-family:‘Orbitron’,sans-serif;font-size:13px;font-weight:700;color:var(–gold2)}
+.sb-desc{font-size:10px;color:var(–tdim2);margin-bottom:6px}
+.sb-track{height:5px;background:var(–bg4);border-radius:3px;overflow:hidden}
+.sb-fill{height:100%;border-radius:3px;transition:width .5s}
+.human-score-box{background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.25);border-radius:4px;padding:10px;margin-top:10px;text-align:center}
+.hs-label{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:2px;color:var(–purple);margin-bottom:3px}
+.hs-val{font-family:‘Orbitron’,sans-serif;font-size:18px;font-weight:700;color:var(–purple)}
+.hs-max{font-size:10px;color:var(–tdim2)}
+.hs-bar-wrap{margin-top:6px}
+.hs-bar{height:4px;background:var(–bg4);border-radius:2px;overflow:hidden}
+.hs-fill{height:100%;border-radius:2px;background:var(–purple);transition:width .5s}
+
+/* ECO TAB */
+.eco-summary{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.eco-stat{background:var(–bg3);border:1px solid var(–bdr);border-radius:4px;padding:9px;text-align:center}
+.eco-stat .es-l{font-size:7px;color:var(–tdim);text-transform:uppercase;letter-spacing:.5px}
+.eco-stat .es-v{font-family:‘Orbitron’,sans-serif;font-size:18px;font-weight:700;color:var(–gold2)}
+.eco-stat .es-s{font-size:9px;margin-top:2px}
+.hbw{background:var(–bg3);border:1px solid var(–bdr);border-radius:4px;padding:9px;margin-bottom:9px}
+.hbw-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.hbw-lbl{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:1px;color:var(–tdim)}
+.hbw-val{font-family:‘Orbitron’,sans-serif;font-size:12px;font-weight:700}
+.hbw-track{height:4px;background:var(–bg4);border-radius:2px;overflow:hidden}
+.hbw-fill{height:100%;border-radius:2px;transition:width .5s}
+.member-card{background:var(–bg3);border:1px solid var(–bdr);border-radius:4px;padding:9px;margin-bottom:5px}
+.mc-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+.mc-role{font-family:‘Orbitron’,sans-serif;font-size:9px;color:var(–gold)}
+.mc-health{font-size:9px;color:var(–tdim2)}
+.mc-bars{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.mc-bar{display:flex;flex-direction:column;gap:2px}
+.mc-bar .mb-l{font-size:7px;color:var(–tdim)}
+.mc-bar .mb-t{height:3px;background:var(–bg4);border-radius:2px;overflow:hidden}
+.mc-bar .mb-f{height:100%;border-radius:2px;transition:width .4s}
+.scar-card{background:rgba(255,58,58,.06);border:1px solid rgba(255,58,58,.2);border-radius:4px;padding:9px;margin-bottom:5px}
+.scar-t{font-family:‘Orbitron’,sans-serif;font-size:8px;color:var(–red);margin-bottom:3px}
+.scar-d{font-size:11px;color:var(–tdim2)}
+.scar-c{font-family:‘Orbitron’,sans-serif;font-size:9px;color:var(–amber);margin-top:3px}
+
+/* THEORY TAB */
+.th-card{background:rgba(201,168,76,.03);border:1px solid var(–bdr);border-radius:4px;padding:11px;margin-bottom:8px}
+.th-lbl{font-family:‘Orbitron’,sans-serif;font-size:7px;letter-spacing:2px;color:var(–gdim);margin-bottom:6px}
+.th-txt{font-size:12px;color:var(–tdim2);line-height:1.75}
+.th-txt strong{color:var(–gold)}.th-txt .kiy{color:var(–orange)}.th-txt .pmt{color:var(–neon)}.th-txt .hat{color:var(–purple)}
+.fn-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:8px}
+.fn-card{background:var(–bg3);border:1px solid var(–bdr);border-radius:4px;padding:9px;text-align:center}
+.fn-id{font-family:‘Orbitron’,sans-serif;font-size:13px;color:var(–gold2);margin-bottom:3px}
+.fn-name{font-size:10px;color:var(–tdim2);margin-bottom:4px}
+.fn-p{font-size:9px;line-height:1.7}
+.fn-p .y{color:var(–green)}.fn-p .n{color:var(–red)}
+
+/* OVERLAYS */
+.ovl{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.92);align-items:center;justify-content:center;padding:20px}
+.ovl.show{display:flex;animation:FI .25s}
+.ovl-box{background:var(–bg2);border-radius:6px;max-width:330px;width:100%;padding:22px 18px;text-align:center}
+.ob-icon{font-size:48px;margin-bottom:9px;animation:BCE .6s ease infinite alternate}
+.ob-ey{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:3px;color:var(–gdim);margin-bottom:4px}
+.ob-title{font-family:‘Orbitron’,sans-serif;font-size:20px;color:var(–gold2);margin-bottom:5px}
+.ob-sub{font-size:12px;color:var(–tdim2);line-height:1.65;margin-bottom:16px}
+.ob-sub strong{color:var(–gold)}
+.mo-rows{text-align:left;margin-bottom:14px}
+.mo-row{display:flex;justify-content:space-between;padding:5px 9px;background:var(–bg3);border-radius:3px;margin-bottom:3px;border:1px solid var(–bdr)}
+.mo-row .ml{font-size:11px;color:var(–tdim2)}
+.mo-row .mv{font-family:‘Orbitron’,sans-serif;font-size:11px}
+.mo-msg{padding:9px;border-radius:3px;margin-bottom:12px;font-size:12px;line-height:1.5;text-align:center;border:1px solid}
+.mo-msg.ok{background:rgba(0,255,136,.05);border-color:rgba(0,255,136,.2);color:var(–green)}
+.mo-msg.warn{background:rgba(255,179,71,.05);border-color:rgba(255,179,71,.2);color:var(–amber)}
+.mo-msg.danger{background:rgba(255,58,58,.05);border-color:rgba(255,58,58,.2);color:var(–red)}
+
+/* END SCREENS */
+#gameover{align-items:center;justify-content:center;overflow-y:auto;background:radial-gradient(ellipse at 50% 40%,#1e0505,var(–bg))}
+#winscreen{align-items:center;justify-content:center;overflow-y:auto;background:radial-gradient(ellipse at 50% 40%,#051a08,var(–bg))}
+.end-wrap{text-align:center;padding:30px 18px;width:100%;max-width:340px}
+.end-icon{font-size:56px;margin-bottom:10px}
+.end-icon.bounce{animation:BCE 1s ease infinite alternate}
+.end-ey{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:4px;color:var(–gdim)}
+.end-title{font-family:‘Orbitron’,sans-serif;font-size:26px;margin:7px 0}
+.end-sub{font-size:12px;color:var(–tdim2);margin-bottom:18px;line-height:1.65}
+.end-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:20px}
+.end-stat{background:var(–bg2);border:1px solid var(–bdr);border-radius:4px;padding:9px;text-align:center}
+.end-stat .esl{font-size:8px;color:var(–tdim)}
+.end-stat .esv{font-family:‘Orbitron’,sans-serif;font-size:17px;color:var(–gold2)}
+.end-lesson{background:rgba(201,168,76,.06);border:1px solid var(–bdr);border-radius:4px;padding:11px;margin-bottom:16px;font-size:12px;color:var(–gold);line-height:1.65;font-style:italic}
+
+/* SCORE GUIDE */
+.sg-card{background:var(–bg3);border:1px solid var(–bdr);border-radius:5px;padding:13px;margin-bottom:10px}
+.sg-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px}
+.sg-name{font-family:‘Orbitron’,sans-serif;font-size:11px;color:var(–gold2);letter-spacing:1px;margin-bottom:2px}
+.sg-target{font-size:10px;color:var(–tdim)}
+.sg-score{font-family:‘Orbitron’,sans-serif;font-size:22px;font-weight:700}
+.sg-bar-wrap{margin-bottom:10px}
+.sg-bar{height:5px;background:var(–bg4);border-radius:3px;overflow:hidden}
+.sg-fill{height:100%;border-radius:3px;transition:width .5s}
+.sg-formula{background:var(–bg4);border-radius:4px;padding:9px;margin-bottom:8px}
+.sf-title{font-family:‘Orbitron’,sans-serif;font-size:7px;letter-spacing:2px;color:var(–gdim);margin-bottom:7px}
+.sf-row{display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.sf-row:last-child{border-bottom:none}
+.sf-item{font-size:11px;color:var(–tdim2)}
+.sf-val{font-family:‘Orbitron’,sans-serif;font-size:11px;font-weight:700;color:var(–green)}
+.sf-val.neg{color:var(–red)}
+.sg-mult{display:flex;justify-content:space-between;align-items:center;background:rgba(0,255,224,.05);border:1px solid var(–bdrn);border-radius:3px;padding:7px 9px;margin-bottom:8px}
+.sm-lbl{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:1px;color:var(–neon)}
+.sm-val{font-family:‘Orbitron’,sans-serif;font-size:16px;font-weight:700;color:var(–neon)}
+.sg-tip{font-size:11px;color:var(–tdim2);line-height:1.6;padding:8px;background:rgba(201,168,76,.04);border-radius:3px;border-left:2px solid var(–gdim)}
+.sg-advice{background:rgba(0,255,224,.04);border:1px solid var(–bdrn);border-radius:4px;padding:11px;margin-bottom:10px}
+.sa-title{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:2px;color:var(–neon);margin-bottom:9px}
+.sa-row{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:11px;line-height:1.55}
+.sa-row:last-child{border-bottom:none}
+.sa-icon{font-size:14px;flex-shrink:0}
+.sa-text{color:var(–tdim2)}
+.sa-text strong{color:var(–txt)}
+.sa-text .up{color:var(–green)}.sa-text .dn{color:var(–red)}.sa-text .neu{color:var(–amber)}
+/* COACHING BOX */
+.cb-box{background:rgba(0,255,224,.04);border:1px solid var(–bdrn);border-radius:4px;padding:11px;margin-bottom:9px;animation:FI .3s ease}
+.cb-title{font-family:‘Orbitron’,sans-serif;font-size:8px;letter-spacing:2px;color:var(–neon);margin-bottom:8px}
+.cb-row{display:flex;align-items:flex-start;gap:7px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:11px;line-height:1.5}
+.cb-row:last-child{border-bottom:none}
+.cb-icon{font-size:12px;flex-shrink:0;margin-top:1px}
+.cb-txt{color:var(–tdim2)}
+.cb-txt strong{color:var(–txt)}
+.cb-txt .up{color:var(–green)}.cb-txt .dn{color:var(–red)}.cb-txt .neu{color:var(–amber)}
+
+</style>
+</head>
+<body>
+<div id="app">
+
+<!-- SPLASH -->
+
+<div id="splash" class="screen active">
+  <div class="sp-glow"></div>
+  <div class="sp-wrap">
+    <div class="sp-ey">UNDERGROUND ECONOMY SIMULATOR</div>
+    <div class="sp-title">PAIPONER</div>
+    <div class="sp-sub">MONEY MOVES THROUGH PEOPLE</div>
+    <div class="sp-tag">Cashflow &times; Paipon Money Theory</div>
+    <div class="sp-pills">
+      <div class="sp-pill k">INSTRUMENT LAYER</div>
+      <div class="sp-x">&times;</div>
+      <div class="sp-pill p">PMT LAYER</div>
+    </div>
+    <div class="sp-bars"><div class="sp-bar"></div><div class="sp-bar"></div><div class="sp-bar"></div><div class="sp-bar"></div><div class="sp-bar"></div></div>
+    <button class="btn-gold lg" onclick="SS('intro')">MULA GAME</button>
+  </div>
+</div>
+
+<!-- INTRO -->
+
+<div id="intro" class="screen">
+  <div class="i-hdr">
+    <div class="i-lbl">PHASE 1 &middot; AI MODE &middot; BRIEFING</div>
+    <div class="i-title">REALITI DUNIA PAIPONER</div>
+    <div class="i-sub">Duit tidak bergerak kerana kerja kuat.<br>Duit bergerak kerana keputusan manusia &mdash; trust, attraction, movement, dan gabungan yang betul.</div>
+  </div>
+  <div class="i-body">
+    <div class="ibox hi">
+      <div class="ib-id">WIN CONDITION &mdash; TIGA DIMENSI</div>
+      <div class="ib-desc"><strong>Capital &ge; 1000</strong> &nbsp;+&nbsp; <strong>Movement &ge; 1000</strong> &nbsp;+&nbsp; <strong>Human Score &ge; 500</strong><br><br>Capital sahaja tidak cukup. Movement sahaja tidak cukup. Attraction tanpa sistem tidak kekal. <strong>Ketiga-tiga mesti tercapai serentak.</strong></div>
+    </div>
+    <div class="ibox" style="border-left-color:var(--neon);border-left-width:3px">
+      <div class="ib-id">KAMU &mdash; MULA SINI</div>
+      <div class="ib-name">G4 &mdash; EXECUTOR</div>
+      <div class="ib-tags"><span class="pill r">&#10060; Tiada Duit</span><span class="pill r">&#10060; Tak Boleh Gerak</span></div>
+      <div class="ib-desc">Ada kerja, ada gaji &mdash; tapi ada hutang, expenses, dan pressure. Anda dalam <strong>kerja-upah cycle.</strong></div>
+    </div>
+    <div class="ibox">
+      <div class="ib-id">FUNGSI 3</div><div class="ib-name">G3 &mdash; CONNECTOR</div>
+      <div class="ib-tags"><span class="pill r">&#10060; Tiada Duit</span><span class="pill g">&#10003; Boleh Gerak</span></div>
+      <div class="ib-desc">Gerakkan wang orang lain melalui trust dan movement. Bina 7 pattern, attract G2.</div>
+    </div>
+    <div class="ibox">
+      <div class="ib-id">FUNGSI 2</div><div class="ib-name">G2 &mdash; HOLDER</div>
+      <div class="ib-tags"><span class="pill g">&#10003; Ada Duit</span><span class="pill r">&#10060; Tak Boleh Gerak</span></div>
+      <div class="ib-desc">Ada capital tapi beku. <strong>G1 yang tidak aktif jatuh jadi G2.</strong></div>
+    </div>
+    <div class="ibox">
+      <div class="ib-id">FUNGSI 1 &mdash; TRUE WIN</div><div class="ib-name">G1 &mdash; ACTIVATOR</div>
+      <div class="ib-tags"><span class="pill g">&#10003; Ada Duit</span><span class="pill g">&#10003; Boleh Gerak</span></div>
+      <div class="ib-desc">Lahir apabila <strong>G3 bergabung dengan G2.</strong> Duit mengalir <em>melalui</em> anda.</div>
+    </div>
+    <div class="divider"></div>
+    <div class="ibox fm">
+      <div class="ib-id">PATH TO WIN</div>
+      <div class="path-row">
+        <div class="path-box"><span>G4</span><small>Kerja</small></div>
+        <div class="path-arr">&rarr;</div>
+        <div class="path-box"><span>G3</span><small>Pattern</small></div>
+        <div class="path-arr">&rarr;</div>
+        <div class="path-combo"><span>G3+G2</span><small>=G1</small></div>
+        <div class="path-arr">&rarr;</div>
+        <div class="path-box"><span>WIN</span><small>3 Score</small></div>
+      </div>
+      <div class="path-warn">&#9888; <strong>Fungsi bukan identiti.</strong> Fungsi berubah ikut transaksi.</div>
+    </div>
+    <button class="btn-gold full" onclick="SS('setup')" style="margin-top:12px">TERUSKAN &rarr;</button>
+  </div>
+</div>
+
+<!-- SETUP -->
+
+<div id="setup" class="screen">
+  <div class="s-hdr">
+    <div class="s-lbl">CHARACTER SETUP</div>
+    <div class="s-title">Pilih Positioning Anda</div>
+    <div class="s-sub">Kelebihan awal anda. Bukan class tetap &mdash; titik permulaan sahaja.</div>
+  </div>
+  <div class="s-body">
+    <div class="pos-card" onclick="selPos('market',this)"><div class="pc-check">&#10003;</div><div class="pc-icon">&#127919;</div><div class="pc-name">MARKET</div><div class="pc-bonus">G2 attract +30% lebih cepat</div><div class="pc-trade">Trade-off: reach terhad pada niche</div></div>
+    <div class="pos-card" onclick="selPos('social',this)"><div class="pc-check">&#10003;</div><div class="pc-icon">&#129309;</div><div class="pc-name">SOCIAL</div><div class="pc-bonus">Ecosystem growth &times;1.5 &middot; Likeability +15</div><div class="pc-trade">Trade-off: loyalty anggota lebih rendah</div></div>
+    <div class="pos-card" onclick="selPos('authority',this)"><div class="pc-check">&#10003;</div><div class="pc-icon">&#128081;</div><div class="pc-name">AUTHORITY</div><div class="pc-bonus">Trust +20 &middot; Inspiration +15</div><div class="pc-trade">Trade-off: lambat bina movement breadth</div></div>
+    <div class="pos-card" onclick="selPos('viral',this)"><div class="pc-check">&#10003;</div><div class="pc-icon">&#128226;</div><div class="pc-name">VIRAL</div><div class="pc-bonus">Breadth &times;2 &middot; Attention +20 &middot; Fandom +10</div><div class="pc-trade">Trade-off: loyalty -20% &middot; controversy risk</div></div>
+    <div class="pos-card" onclick="selPos('operator',this)"><div class="pc-check">&#10003;</div><div class="pc-icon">&#9881;</div><div class="pc-name">OPERATOR</div><div class="pc-bonus">Deploy success +40% &middot; Structure +10</div><div class="pc-trade">Trade-off: G2 attract lebih lambat</div></div>
+    <div style="margin-top:12px"><button class="btn-gold full" id="start-btn" onclick="startGame()" disabled style="opacity:.4">START SEBAGAI G4 &rarr;</button></div>
+  </div>
+</div>
+
+<!-- GAME -->
+
+<div id="game" class="screen">
+  <div class="hud">
+    <div class="hud-r1">
+      <div class="hud-fn" id="hud-fn">G4 &middot; EXECUTOR</div>
+      <div class="hud-right">
+        <div class="hud-month" id="hud-month">B1&middot;R1</div>
+        <div class="hud-season boom" id="hud-season">BOOM</div>
+      </div>
+    </div>
+    <div class="hud-stats">
+      <div class="hstat"><div class="hl">CASH</div><div class="hv" id="h-cash">500</div></div>
+      <div class="hstat ht"><div class="hl">TRUST</div><div class="hv" id="h-trust">20</div></div>
+      <div class="hstat hm"><div class="hl">MOVE</div><div class="hv" id="h-move">0</div></div>
+      <div class="hstat hat"><div class="hl">ATTRACT</div><div class="hv" id="h-attract">20</div></div>
+    </div>
+    <div class="win-bars">
+      <div class="wb"><div class="wbl">CAPITAL</div><div class="wbv"><span id="h-cap">0</span>/1000</div><div class="wb-track"><div class="wb-fill" id="cap-fill" style="width:0%;background:var(--gold)"></div></div></div>
+      <div class="wb"><div class="wbl">MOVEMENT</div><div class="wbv"><span id="h-mvscore">0</span>/1000</div><div class="wb-track"><div class="wb-fill" id="mv-fill" style="width:0%;background:var(--blue)"></div></div></div>
+      <div class="wb"><div class="wbl">HUMAN</div><div class="wbv"><span id="h-human">0</span>/500</div><div class="wb-track"><div class="wb-fill" id="hm-fill" style="width:0%;background:var(--purple)"></div></div></div>
+    </div>
+    <div class="alerts-row" id="alerts-row"></div>
+  </div>
+  <div class="tab-bar">
+    <div class="tab-btn active" onclick="ST('main')">&#127918; GAME</div>
+    <div class="tab-btn" onclick="ST('life')">&#128184; LIFE</div>
+    <div class="tab-btn" onclick="ST('state')">&#9889; STATE</div>
+    <div class="tab-btn" onclick="ST('eco')">&#127760; ECO</div>
+    <div class="tab-btn" onclick="ST('score')">&#128200; SCORE</div>
+    <div class="tab-btn" onclick="ST('theory')">&#128218; TEORI</div>
+  </div>
+
+  <!-- GAME TAB -->
+
+  <div id="tab-main" class="panel active">
+    <div class="sec-lbl" id="ev-lbl">&#9656; EVENT SEMASA</div>
+    <div id="ev-wrap"></div>
+    <div id="ch-wrap" class="ch-wrap"></div>
+    <div id="oc-wrap"></div>
+  </div>
+
+  <!-- LIFE TAB -->
+
+  <div id="tab-life" class="panel">
+    <div class="p-title">CASHFLOW SHEET</div>
+    <div class="sec-lbl">INCOME</div><div id="life-income"></div>
+    <div class="sec-lbl" style="margin-top:9px">EXPENSES &amp; LIABILITIES</div><div id="life-expenses"></div>
+    <div class="sec-lbl" style="margin-top:9px">ASSETS</div><div id="life-assets"></div>
+    <div id="life-total" class="cf-total pos" style="margin-top:9px">
+      <div class="ct-n">NET CASHFLOW / BULAN</div>
+      <div class="ct-v" id="life-net">+RM300</div>
+    </div>
+    <div class="cf-total pos" style="margin-top:5px;border-color:rgba(0,255,224,.25);background:rgba(0,255,224,.04)">
+      <div class="ct-n" style="color:var(--neon)">GIFT INCOME / BULAN</div>
+      <div class="ct-v" id="life-gift" style="color:var(--neon)">RM0</div>
+    </div>
+  </div>
+
+  <!-- STATE TAB -->
+
+  <div id="tab-state" class="panel">
+    <div class="p-title">STATE &amp; ATTRACTION</div>
+    <div class="state-section">
+      <div class="state-section-title">FUNCTIONAL STATE</div>
+      <div class="dom-label"><div class="dl-t">DOMINANT STATE SEMASA</div><div class="dl-v" id="dom-state">G4 &mdash; EXECUTOR</div></div>
+      <div class="sb-wrap dom" id="sb-g1"><div class="sb-hdr"><div class="sb-fn">G1 &mdash; ACTIVATOR</div><div class="sb-val" id="sv-g1">0</div></div><div class="sb-desc">Ada duit &middot; Boleh gerakkan duit sendiri</div><div class="sb-track"><div class="sb-fill" id="sf-g1" style="width:0%;background:var(--gold)"></div></div></div>
+      <div class="sb-wrap" id="sb-g2"><div class="sb-hdr"><div class="sb-fn">G2 &mdash; HOLDER</div><div class="sb-val" id="sv-g2">15</div></div><div class="sb-desc">Ada duit &middot; Tidak boleh gerakkan</div><div class="sb-track"><div class="sb-fill" id="sf-g2" style="width:15%;background:var(--orange)"></div></div></div>
+      <div class="sb-wrap" id="sb-g3"><div class="sb-hdr"><div class="sb-fn">G3 &mdash; CONNECTOR</div><div class="sb-val" id="sv-g3">0</div></div><div class="sb-desc">Tiada duit &middot; Boleh gerakkan duit orang</div><div class="sb-track"><div class="sb-fill" id="sf-g3" style="width:0%;background:var(--neon)"></div></div></div>
+      <div class="sb-wrap" id="sb-g4"><div class="sb-hdr"><div class="sb-fn">G4 &mdash; EXECUTOR</div><div class="sb-val" id="sv-g4">60</div></div><div class="sb-desc">Tiada duit &middot; Execute sahaja</div><div class="sb-track"><div class="sb-fill" id="sf-g4" style="width:60%;background:var(--tdim2)"></div></div></div>
+    </div>
+    <div class="state-section">
+      <div class="state-section-title">HUMAN ATTRACTION LAYER</div>
+      <div class="sb-wrap" id="sb-att"><div class="sb-hdr"><div class="sb-fn">ATTENTION</div><div class="sb-val" id="sv-att">0</div></div><div class="sb-desc">Berapa ramai perhatikan anda</div><div class="sb-track"><div class="sb-fill" id="sf-att" style="width:0%;background:var(--orange)"></div></div></div>
+      <div class="sb-wrap" id="sb-lik"><div class="sb-hdr"><div class="sb-fn">LIKEABILITY</div><div class="sb-val" id="sv-lik">20</div></div><div class="sb-desc">Berapa ramai suka kepada anda</div><div class="sb-track"><div class="sb-fill" id="sf-lik" style="width:20%;background:var(--green)"></div></div></div>
+      <div class="sb-wrap" id="sb-ins"><div class="sb-hdr"><div class="sb-fn">INSPIRATION</div><div class="sb-val" id="sv-ins">20</div></div><div class="sb-desc">Berapa ramai terinspirasi oleh anda</div><div class="sb-track"><div class="sb-fill" id="sf-ins" style="width:20%;background:var(--blue)"></div></div></div>
+      <div class="sb-wrap" id="sb-fan"><div class="sb-hdr"><div class="sb-fn">FANDOM</div><div class="sb-val" id="sv-fan">0</div></div><div class="sb-desc">Penyokong setia anda</div><div class="sb-track"><div class="sb-fill" id="sf-fan" style="width:0%;background:var(--purple)"></div></div></div>
+      <div class="sb-wrap" id="sb-cha"><div class="sb-hdr"><div class="sb-fn">CHARISMA</div><div class="sb-val" id="sv-cha">20</div></div><div class="sb-desc">Pengaruh semula jadi anda terhadap manusia</div><div class="sb-track"><div class="sb-fill" id="sf-cha" style="width:20%;background:var(--amber)"></div></div></div>
+      <div class="sb-wrap" id="sb-con"><div class="sb-hdr"><div class="sb-fn">CONTROVERSY</div><div class="sb-val" id="sv-con">0</div></div><div class="sb-desc">Polarisation &mdash; boleh jadi dua-mata pedang</div><div class="sb-track"><div class="sb-fill" id="sf-con" style="width:0%;background:var(--red)"></div></div></div>
+      <div class="human-score-box">
+        <div class="hs-label">HUMAN SCORE</div>
+        <div class="hs-val"><span id="hs-val">0</span> <span class="hs-max">/ 500</span></div>
+        <div class="hs-bar-wrap"><div class="hs-bar"><div class="hs-fill" id="hs-fill" style="width:0%"></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ECO TAB -->
+
+  <div id="tab-eco" class="panel">
+    <div class="p-title">ECOSYSTEM</div>
+    <div class="eco-summary">
+      <div class="eco-stat"><div class="es-l">SAIZ</div><div class="es-v" id="eco-size">1</div><div class="es-s" style="color:var(--tdim)">anggota</div></div>
+      <div class="eco-stat"><div class="es-l">HEALTH</div><div class="es-v" id="eco-hv">0</div><div class="es-s" id="eco-hlbl" style="color:var(--tdim)">&#8212;</div></div>
+      <div class="eco-stat"><div class="es-l">MULTIPLIER</div><div class="es-v" id="eco-mult">&times;1.0</div><div class="es-s" style="color:var(--tdim)">human x</div></div>
+      <div class="eco-stat"><div class="es-l">DEPLOY</div><div class="es-v" id="eco-dep">0</div><div class="es-s" id="eco-brk" style="color:var(--tdim)">0 broken</div></div>
+    </div>
+    <div class="hbw"><div class="hbw-row"><div class="hbw-lbl">ECOSYSTEM HEALTH</div><div class="hbw-val" id="eco-hv2" style="color:var(--green)">0%</div></div><div class="hbw-track"><div class="hbw-fill" id="eco-hfill" style="width:0%;background:var(--green)"></div></div></div>
+    <div class="sec-lbl">SUPPORTERS</div>
+    <div id="eco-supporters" style="font-size:12px;color:var(--tdim);padding:6px 0 10px">Belum ada supporter.</div>
+    <div class="sec-lbl">ANGGOTA</div>
+    <div id="eco-members" style="font-size:12px;color:var(--tdim);padding:6px 0 10px">Belum ada anggota.</div>
+    <div class="divider"></div>
+    <div class="sec-lbl">SCAR AKTIF</div>
+    <div id="eco-scars" style="font-size:12px;color:var(--green);padding:6px 0">&#10003; Tiada scar aktif.</div>
+  </div>
+
+  <!-- SCORE TAB -->
+
+  <div id="tab-score" class="panel">
+    <div class="p-title">SCORE GUIDE</div>
+
+```
+<div class="sg-card">
+  <div class="sg-hdr">
+    <div><div class="sg-name">&#128176; CAPITAL SCORE</div><div class="sg-target">Sasaran: 1,000</div></div>
+    <div class="sg-score" id="sgv-cap" style="color:var(--gold2)">0</div>
+  </div>
+  <div class="sg-bar-wrap"><div class="sg-bar"><div class="sg-fill" id="sgf-cap" style="width:0%;background:var(--gold)"></div></div></div>
+  <div class="sg-formula">
+    <div class="sf-title">KOMPONEN</div>
+    <div class="sf-row"><span class="sf-item">Cash tunai</span><span class="sf-val" id="sfc-cash">0</span></div>
+    <div class="sf-row"><span class="sf-item">Nilai Asset &times; 10</span><span class="sf-val" id="sfc-asset">0</span></div>
+    <div class="sf-row"><span class="sf-item">Passive Income &times; 20</span><span class="sf-val" id="sfc-passive">0</span></div>
+    <div class="sf-row"><span class="sf-item">Gift Income &times; 10</span><span class="sf-val" id="sfc-gift">0</span></div>
+  </div>
+  <div class="sg-tip">&#128161; Beli asset untuk passive income. Bina supporter untuk gift income. Kedua-dua naikkan Capital Score tanpa kerja aktif setiap bulan.</div>
+</div>
+
+<div class="sg-card">
+  <div class="sg-hdr">
+    <div><div class="sg-name">&#127960; MOVEMENT SCORE</div><div class="sg-target">Sasaran: 1,000</div></div>
+    <div class="sg-score" id="sgv-mov" style="color:var(--blue)">0</div>
+  </div>
+  <div class="sg-bar-wrap"><div class="sg-bar"><div class="sg-fill" id="sgf-mov" style="width:0%;background:var(--blue)"></div></div></div>
+  <div class="sg-mult">
+    <span class="sm-lbl">HUMAN MULTIPLIER AKTIF</span>
+    <span class="sm-val" id="sfc-mult">&times;1.0</span>
+  </div>
+  <div class="sg-formula">
+    <div class="sf-title">KOMPONEN</div>
+    <div class="sf-row"><span class="sf-item">Eco &times; Health &times; MovQ</span><span class="sf-val" id="sfc-eco">0</span></div>
+    <div class="sf-row"><span class="sf-item">Trust &times; 4</span><span class="sf-val" id="sfc-trust">0</span></div>
+    <div class="sf-row"><span class="sf-item">Reputation &times; 4</span><span class="sf-val" id="sfc-rep">0</span></div>
+    <div class="sf-row"><span class="sf-item">Attraction &times; 4</span><span class="sf-val" id="sfc-attr">0</span></div>
+    <div class="sf-row"><span class="sf-item">Fandom &times; 3</span><span class="sf-val" id="sfc-fan">0</span></div>
+    <div class="sf-row"><span class="sf-item">Attention &times; 2</span><span class="sf-val" id="sfc-att">0</span></div>
+  </div>
+  <div class="sg-tip">&#128161; Human Multiplier adalah kunci. Ecosystem sihat dengan G2 connection boleh multiply score sehingga &times;5. Bina ecosystem dulu &mdash; baru score explode.</div>
+</div>
+
+<div class="sg-card">
+  <div class="sg-hdr">
+    <div><div class="sg-name">&#128101; HUMAN SCORE</div><div class="sg-target">Sasaran: 500</div></div>
+    <div class="sg-score" id="sgv-hum" style="color:var(--purple)">0</div>
+  </div>
+  <div class="sg-bar-wrap"><div class="sg-bar"><div class="sg-fill" id="sgf-hum" style="width:0%;background:var(--purple)"></div></div></div>
+  <div class="sg-formula">
+    <div class="sf-title">KOMPONEN</div>
+    <div class="sf-row"><span class="sf-item">Likeability &times; 3</span><span class="sf-val" id="sfc-lik">0</span></div>
+    <div class="sf-row"><span class="sf-item">Fandom &times; 3</span><span class="sf-val" id="sfc-fan2">0</span></div>
+    <div class="sf-row"><span class="sf-item">Attention &times; 2</span><span class="sf-val" id="sfc-att2">0</span></div>
+    <div class="sf-row"><span class="sf-item">Inspiration &times; 2</span><span class="sf-val" id="sfc-ins">0</span></div>
+    <div class="sf-row"><span class="sf-item">Attraction &times; 2</span><span class="sf-val" id="sfc-attr2">0</span></div>
+    <div class="sf-row"><span class="sf-item">Positioning &times; 1</span><span class="sf-val" id="sfc-pos">0</span></div>
+    <div class="sf-row"><span class="sf-item" style="color:var(--red)">Controversy &times; 1 &#9888;</span><span class="sf-val neg" id="sfc-con">0</span></div>
+  </div>
+  <div class="sg-tip">&#128161; Likeability dan Fandom adalah cara paling cepat naikkan Human Score. Elak Controversy tinggi &mdash; ia tolak balik score Anda.</div>
+</div>
+
+<div class="sg-advice">
+  <div class="sa-title">&#127919; APA YANG PERLU ANDA LAKUKAN SEKARANG</div>
+  <div id="sg-advice-content" style="font-size:12px;color:var(--tdim2);line-height:1.8">Mula bermain untuk lihat nasihat.</div>
+</div>
+```
+
+  </div>
+
+  <!-- THEORY TAB -->
+
+  <div id="tab-theory" class="panel">
+    <div class="p-title">PAIPON MONEY THEORY</div>
+    <div class="fn-grid">
+      <div class="fn-card"><div class="fn-id">G1</div><div class="fn-name">ACTIVATOR</div><div class="fn-p"><span class="y">&#10003; Ada duit</span><br><span class="y">&#10003; Boleh gerak</span></div></div>
+      <div class="fn-card"><div class="fn-id">G2</div><div class="fn-name">HOLDER</div><div class="fn-p"><span class="y">&#10003; Ada duit</span><br><span class="n">&#10060; Tak boleh gerak</span></div></div>
+      <div class="fn-card"><div class="fn-id">G3</div><div class="fn-name">CONNECTOR</div><div class="fn-p"><span class="n">&#10060; Tiada duit</span><br><span class="y">&#10003; Boleh gerak</span></div></div>
+      <div class="fn-card"><div class="fn-id">G4</div><div class="fn-name">EXECUTOR</div><div class="fn-p"><span class="n">&#10060; Tiada duit</span><br><span class="n">&#10060; Tak boleh gerak</span></div></div>
+    </div>
+    <div class="th-card"><div class="th-lbl">CORE LAW v3.2</div><div class="th-txt"><strong>Keputusan manusia &rarr; Duit bergerak.</strong><br>Keputusan dipengaruhi oleh: <span class="pmt">trust</span>, <span class="hat">likeability</span>, <span class="hat">attention</span>, <span class="hat">inspiration</span>, <span class="pmt">positioning</span>, reputation, structure.<br><br><span class="kiy">&#9679; INSTRUMENT</span> &mdash; Linear growth.<br><span class="pmt">&#9679; ORANG (PMT)</span> &mdash; Multiplier growth.<br><span class="hat">&#9679; ATTRACTION (Human)</span> &mdash; Decision catalyst.</div></div>
+    <div class="th-card"><div class="th-lbl">FORMULA UTAMA</div><div class="th-txt"><strong>G2 + G3 + Trust + Structure = G1 Baru</strong><br><br>G2 ada duit tapi beku. G3 boleh gerakkan. Gabungan = G1.</div></div>
+    <div class="th-card"><div class="th-lbl">GABUNGAN BETUL vs SALAH</div><div class="th-txt"><strong>&#10003; G2 + G3</strong> &rarr; G1 lahir<br><strong>&#10003; G1 + G4</strong> &rarr; Mega execution<br><strong>&#9888; G3 + G1</strong> &rarr; Kebolehan dicuri<br><strong>&#9888; G2 + G4</strong> &rarr; Duit tanpa arah<br><strong>&#10060; G3 + G3</strong> &rarr; Idea ada, duit tiada<br><strong>&#10060; G2 + G2</strong> &rarr; Duit ada, movement mati</div></div>
+    <div class="th-card"><div class="th-lbl">7 PATTERN G3</div><div class="th-txt"><strong>1.</strong> Start Tanpa Modal &nbsp;<strong>2.</strong> Prospect Setiap Hari<br><strong>3.</strong> Output Walaupun Kecil &nbsp;<strong>4.</strong> Repeat &mdash; Ada Ritma<br><strong>5.</strong> Tahan Tolak &nbsp;<strong>6.</strong> Improve Cara &nbsp;<strong>7.</strong> Risk Kecil</div></div>
+    <div class="th-card"><div class="th-lbl">HUMAN ATTRACTION</div><div class="th-txt"><span class="hat">Attention</span> &mdash; berapa ramai nampak anda.<br><span class="hat">Likeability</span> &mdash; berapa ramai suka anda.<br><span class="hat">Inspiration</span> &mdash; berapa ramai terinspirasi.<br><span class="hat">Fandom</span> &mdash; penyokong setia.<br><span class="hat">Controversy</span> &mdash; polarising &mdash; dua-mata pedang.<br><br><strong>Human Score &ge; 500 adalah syarat WIN ketiga.</strong></div></div>
+  </div>
+</div>
+
+<!-- GAME OVER -->
+
+<div id="gameover" class="screen">
+  <div class="end-wrap">
+    <div class="end-icon">&#128128;</div>
+    <div class="end-ey">SIMULATION TAMAT</div>
+    <div class="end-title" style="color:var(--red)">GAME OVER</div>
+    <div class="end-sub" id="go-reason">&#8212;</div>
+    <div class="end-lesson" id="go-lesson">&#8212;</div>
+    <div class="end-grid">
+      <div class="end-stat"><div class="esl">STATE</div><div class="esv" id="go-state">G4</div></div>
+      <div class="end-stat"><div class="esl">CASH</div><div class="esv" id="go-cash">0</div></div>
+      <div class="end-stat"><div class="esl">TRUST</div><div class="esv" id="go-trust">0</div></div>
+      <div class="end-stat"><div class="esl">ROUND</div><div class="esv" id="go-round">0</div></div>
+    </div>
+    <button class="btn-gold full" onclick="SS('splash')">&#8635; CUBA LAGI</button>
+  </div>
+</div>
+
+<!-- WIN -->
+
+<div id="winscreen" class="screen">
+  <div class="end-wrap">
+    <div class="end-icon bounce">&#128081;</div>
+    <div class="end-ey">SIMULATION SELESAI</div>
+    <div class="end-title" style="color:var(--gold2)">YOU WIN</div>
+    <div class="end-sub">Anda bukan sekadar kaya.<br>Anda bukan sekadar ada movement.<br>Manusia sudah mahu bergerak melalui anda.</div>
+    <div class="end-grid">
+      <div class="end-stat"><div class="esl">CAPITAL</div><div class="esv" id="win-cap">0</div></div>
+      <div class="end-stat"><div class="esl">MOVEMENT</div><div class="esv" id="win-mv">0</div></div>
+      <div class="end-stat"><div class="esl">HUMAN</div><div class="esv" id="win-hm">0</div></div>
+      <div class="end-stat"><div class="esl">TRUST</div><div class="esv" id="win-trust">0</div></div>
+      <div class="end-stat"><div class="esl">ECO</div><div class="esv" id="win-eco">0</div></div>
+      <div class="end-stat"><div class="esl">STATE</div><div class="esv" id="win-state">G1</div></div>
+    </div>
+    <button class="btn-gold full" onclick="SS('splash')">&#8635; MAIN LAGI</button>
+  </div>
+</div>
+
+<!-- OVERLAYS -->
+
+<div class="ovl" id="ov-monthly">
+  <div class="ovl-box" style="border:1px solid var(--bdr)">
+    <div class="ob-icon" id="mo-icon">&#128202;</div>
+    <div class="ob-ey">MONTHLY REVIEW</div>
+    <div class="ob-title" id="mo-title">Bulan 1</div>
+    <div class="mo-rows" id="mo-rows"></div>
+    <div class="mo-msg ok" id="mo-msg">&#8212;</div>
+    <button class="btn-gold full" onclick="closeMonthly()">TERUSKAN &rarr;</button>
+  </div>
+</div>
+<div class="ovl" id="ov-rankup">
+  <div class="ovl-box" style="border:1px solid var(--neon)">
+    <div class="ob-icon" id="ru-icon">&#128279;</div>
+    <div class="ob-ey">FUNGSI BERUBAH</div>
+    <div class="ob-title" id="ru-title">G3 &mdash; CONNECTOR</div>
+    <div class="ob-sub" id="ru-sub">Pattern anda terbukti.</div>
+    <button class="btn-neon" onclick="CO('ov-rankup')">TERUSKAN &rarr;</button>
+  </div>
+</div>
+<div class="ovl" id="ov-g1born">
+  <div class="ovl-box" style="border:1px solid var(--purple);box-shadow:0 0 40px rgba(167,139,250,.2)">
+    <div class="ob-icon">&#128081;</div>
+    <div class="ob-ey">GABUNGAN BERJAYA</div>
+    <div class="ob-title" style="background:linear-gradient(135deg,var(--purple),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent">G1 &mdash; ACTIVATOR</div>
+    <div class="ob-sub"><strong>G3 + G2 = G1 baru lahir.</strong><br>Kini duit bergerak melalui anda. Tapi G1 yang berhenti bergerak jatuh jadi G2.</div>
+    <button class="btn-gold full" onclick="closeG1Born()">TERUSKAN &rarr;</button>
+  </div>
+</div>
+<div class="ovl" id="ov-scar">
+  <div class="ovl-box" style="border:1px solid var(--red)">
+    <div class="ob-icon">&#128148;</div>
+    <div class="ob-ey">SCAR AKTIF</div>
+    <div class="ob-title" style="color:var(--red)" id="scar-title">Broken Deployment</div>
+    <div class="ob-sub" id="scar-sub">Scar akan tinggal dalam reputation anda.</div>
+    <button class="btn-neon" style="border-color:var(--red);color:var(--red);background:rgba(255,58,58,.06)" onclick="CO('ov-scar')">FAHAM &rarr;</button>
+  </div>
+</div>
+</div>
+<script>
+// ══════════════════════════════════════════
+// PAIPONER ENGINE v3.2
+// ══════════════════════════════════════════
+let gs={}, selP=null;
+
+const C={
+WIN_CAP:1000,WIN_MOV:1000,WIN_HUM:500,
+NEG_DEBUFF:{trust:-5,movement:-3},
+SR:{boom:6,stagnation:5,recession:4,disruption:3},
+SO:[‘boom’,‘stagnation’,‘recession’,‘disruption’],
+SD:{broken_deployment:20,ghost_partner:15,fake_proof:999,scam:999,abandon_eco:10},
+G2S:{outputStreak:3,trust:40,g3State:35},
+G2M:{deploymentsComplete:1,reputation:60,trust:60,movement:150},
+G2B:{ecoSize:5,ecoHealth:70,deploymentsComplete:2,reputation:80,trust:75},
+};
+
+function initGame(){
+gs={
+pos:selP,round:0,month:1,sIdx:0,sRound:0,
+cash:500,salary:3500,expenses:3200,passiveIncome:0,
+assets:[],liabilities:[],negativeMonths:0,
+trust:20,reputation:50,movement:0,structure:30,
+attention:0,likeability:20,charisma:20,inspiration:20,fandom:0,controversy:0,attraction:20,
+giftIncome:0,supporters:[],
+state:{g1:0,g2:15,g3:0,g4:60},
+posTrack:{market:0,social:0,authority:0,viral:0,operator:0},
+movQ:{breadth:0,depth:0,velocity:0},
+eco:{members:[],health:0,size:0},
+scars:[],capitalScore:0,movementScore:0,humanScore:0,
+g2S:false,g2M:false,g2B:false,
+outputStreak:0,deploymentsComplete:0,deploymentsBroken:0,
+hasG2:false,g1Pending:false,g3Notified:false,g1InactRounds:0,
+log:[],usedEv:new Set(),curEv:null,
+};
+applyPosBonus();
+recalc();
+}
+
+function applyPosBonus(){
+const p=gs.pos;
+gs.posTrack[p]=20;
+if(p===‘authority’){gs.trust+=20;gs.inspiration+=15;}
+else if(p===‘social’){gs.likeability+=15;}
+else if(p===‘viral’){gs.attention+=20;gs.fandom+=10;gs.movQ.breadth+=10;}
+else if(p===‘operator’){gs.structure+=10;}
+}
+
+// ── FORMULAS ──────────────────────────────
+function netCF(){
+return gs.salary+gs.passiveIncome+gs.giftIncome
++gs.assets.reduce((s,a)=>s+a.r,0)
+-gs.expenses-gs.liabilities.reduce((s,l)=>s+l.d,0);
+}
+function calcEcoHealth(){
+if(!gs.eco.members.length)return 0;
+return Math.round(gs.eco.members.reduce((s,m)=>(s+(m.trust+m.loyalty+m.compat+m.stability+m.fit)/5),0)/gs.eco.members.length);
+}
+function calcMult(){
+const sz=gs.eco.size,h=gs.eco.health;
+if(sz===0)return 1.0;
+if(sz>=5&&h>=80)return Math.min(10,1.0+(sz*0.4)*(h/100));
+if(gs.hasG2&&h>=70)return 5.0;
+if(sz>=2&&h>=70)return 2.5;
+if(sz>=1&&h>=60)return 1.5;
+return Math.max(0.5,h/100);
+}
+function calcMovQ(){
+const raw=(gs.movQ.breadth*.2)+(gs.movQ.depth*.5)+(gs.movQ.velocity*.3);
+return Math.round(raw*calcMult());
+}
+function calcPosScore(){
+const t=gs.posTrack;
+return(t.market+t.social+t.authority+t.viral+t.operator)/5;
+}
+function calcHumanDecision(){
+return(gs.trust*.25)+(gs.likeability*.20)+(gs.reputation*.20)+(gs.attention*.15)+(gs.inspiration*.10)+(calcPosScore()*.10);
+}
+function calcHumanDecisionScore(){
+const ps=calcPosScore();
+return(gs.trust*.25)+(gs.likeability*.20)+(gs.reputation*.20)+(gs.attention*.15)+(gs.inspiration*.10)+(ps*.10);
+}
+function calcGiftPotential(){
+const sm=Math.max(1,gs.supporters.length);
+return calcHumanDecisionScore()*gs.fandom*calcMovQ()*sm;
+}
+function calcHumanScore(){
+const ps=calcPosScore();
+return Math.round(
+(gs.attention*2)+(gs.likeability*3)+(gs.fandom*3)+(gs.inspiration*2)+(gs.attraction*2)+(ps*1)-(gs.controversy*1)
+);
+}
+function recalc(){
+const av=gs.assets.reduce((s,a)=>s+a.v,0);
+gs.capitalScore=Math.max(0,Math.round(gs.cash+(av*10)+(gs.passiveIncome*20)+(gs.giftIncome*10)));
+gs.eco.health=calcEcoHealth();
+gs.eco.size=gs.eco.members.length;
+const mq=calcMovQ();
+// FIX 4: attraction updated FIRST, then humanScore uses updated value
+gs.attraction=Math.min(100,Math.max(0,Math.round((gs.likeability+gs.charisma+gs.inspiration+Math.min(gs.fandom*2,40)+Math.max(0,gs.attention-gs.controversy))/4)));
+gs.movementScore=Math.max(0,Math.round((gs.eco.size*gs.eco.health*mq)+(gs.trust*4)+(gs.reputation*4)+(gs.attraction*4)+(gs.fandom*3)+(gs.attention*2)));
+gs.humanScore=calcHumanScore();
+gs.attraction=Math.min(100,Math.max(0,gs.attraction));
+}
+function getSeason(){return C.SO[gs.sIdx];}
+function getSeasonMod(){
+const s=getSeason();
+if(s===‘boom’)return{mm:1.2,gm:1.2,em:1};
+if(s===‘stagnation’)return{mm:.8,gm:.8,em:1.05};
+if(s===‘recession’)return{mm:.5,gm:.6,em:1.2};
+return{mm:.3+Math.random()*1.7,gm:.5+Math.random()*1.5,em:1.1};
+}
+function domState(){
+const s=gs.state;let mx=-1,d=‘g4’;
+for(const k of[‘g1’,‘g2’,‘g3’,‘g4’])if(s[k]>mx){mx=s[k];d=k;}
+return d;
+}
+function domLabel(k){return{g1:‘G1 \u2014 ACTIVATOR’,g2:‘G2 \u2014 HOLDER’,g3:‘G3 \u2014 CONNECTOR’,g4:‘G4 \u2014 EXECUTOR’}[k];}
+
+// ── G2 GATES ─────────────────────────────
+function checkGates(){
+if(!gs.g2S){
+const g=C.G2S,ns=!gs.scars.find(s=>s.c>0);
+if(gs.outputStreak>=g.outputStreak&&gs.trust>=g.trust&&gs.state.g3>=g.g3State&&ns){
+gs.g2S=true;addLog(’✓ G2 Kecil unlocked!’,‘special’);
+}
+}
+if(!gs.g2M){
+const g=C.G2M;
+if(gs.deploymentsComplete>=g.deploymentsComplete&&gs.reputation>=g.reputation&&gs.trust>=g.trust&&gs.movement>=g.movement){
+gs.g2M=true;addLog(’✓ G2 Sederhana unlocked!’,‘special’);
+}
+}
+if(!gs.g2B){
+const g=C.G2B;
+if(gs.eco.size>=g.ecoSize&&gs.eco.health>=g.ecoHealth&&gs.deploymentsComplete>=g.deploymentsComplete&&gs.reputation>=g.reputation&&gs.trust>=g.trust){
+gs.g2B=true;addLog(’✓ G2 Besar unlocked!’,‘special’);
+}
+}
+}
+
+// ── SCAR SYSTEM ───────────────────────────
+function addScar(type){
+const dur=C.SD[type]||10;
+gs.scars.push({type,c:dur});
+const lbl={broken_deployment:‘Broken Deployment’,ghost_partner:‘Ghost Partner’,fake_proof:‘Fake Proof (Permanent)’,scam:‘Scam (Permanent)’,abandon_eco:‘Abandon Ecosystem’};
+const dsc={broken_deployment:‘G2 Attraction -60% selama ‘+dur+’ pusingan.’,ghost_partner:‘Trust regen -50%.’,fake_proof:‘Verified ban. Permanent.’,scam:‘Ecosystem flagged. Permanent.’,abandon_eco:‘Loyalty baru -30%.’};
+document.getElementById(‘scar-title’).textContent=lbl[type]||type;
+document.getElementById(‘scar-sub’).textContent=dsc[type]||‘Scar aktif.’;
+SO(‘ov-scar’);addLog(’Scar: ’+(lbl[type]||type),‘bad’);
+}
+function tickScars(){gs.scars=gs.scars.filter(s=>{if(s.c===999)return true;s.c–;return s.c>0;});}
+
+// ── APPLY EFFECT ─────────────────────────
+function applyEff(e){
+if(!e)return;
+const cl=(v,lo,hi)=>Math.min(hi,Math.max(lo,v));
+if(e.cash!==undefined)gs.cash=Math.max(0,gs.cash+e.cash);
+if(e.trust!==undefined)gs.trust=cl(gs.trust+e.trust,0,100);
+if(e.reputation!==undefined)gs.reputation=cl(gs.reputation+e.reputation,0,100);
+if(e.movement!==undefined)gs.movement=Math.max(0,gs.movement+e.movement);
+if(e.structure!==undefined)gs.structure=cl(gs.structure+e.structure,0,100);
+if(e.salary!==undefined)gs.salary=Math.max(0,gs.salary+e.salary);
+if(e.passiveIncome!==undefined)gs.passiveIncome=Math.max(0,gs.passiveIncome+e.passiveIncome);
+if(e.giftIncome!==undefined)gs.giftIncome=Math.max(0,gs.giftIncome+e.giftIncome);
+if(e.attention!==undefined)gs.attention=cl(gs.attention+e.attention,0,100);
+if(e.likeability!==undefined)gs.likeability=cl(gs.likeability+e.likeability,0,100);
+if(e.charisma!==undefined)gs.charisma=cl(gs.charisma+e.charisma,0,100);
+if(e.inspiration!==undefined)gs.inspiration=cl(gs.inspiration+e.inspiration,0,100);
+if(e.fandom!==undefined)gs.fandom=cl(gs.fandom+e.fandom,0,100);
+if(e.controversy!==undefined)gs.controversy=cl(gs.controversy+e.controversy,0,100);
+if(e.outputStreak!==undefined)gs.outputStreak=Math.max(0,gs.outputStreak+e.outputStreak);
+if(e.deploymentsComplete)gs.deploymentsComplete++;
+if(e.deploymentsBroken)gs.deploymentsBroken++;
+if(e.hasG2)gs.hasG2=true;
+if(e.g1Pending)gs.g1Pending=true;
+if(e.addSupporter)gs.supporters.push({type:e.addSupporter,id:Date.now()});
+if(e.state)for(const k of[‘g1’,‘g2’,‘g3’,‘g4’])if(e.state[k]!==undefined)gs.state[k]=cl(gs.state[k]+e.state[k],0,100);
+if(e.movQ)for(const k of[‘breadth’,‘depth’,‘velocity’])if(e.movQ[k]!==undefined)gs.movQ[k]=Math.max(0,gs.movQ[k]+e.movQ[k]);
+if(e.addAsset)gs.assets.push(e.addAsset);
+if(e.addLiability)gs.liabilities.push(e.addLiability);
+if(e.addMember){const m=Object.assign({id:Date.now()},e.addMember);gs.eco.members.push(m);}
+if(e.addScar)addScar(e.addScar);
+recalc();checkGates();checkStateTransition();
+}
+
+// ── STATE TRANSITIONS ─────────────────────
+function checkStateTransition(){
+const d=domState();
+if(d===‘g3’&&gs.state.g3>=60&&gs.round>3&&!gs.g3Notified){
+gs.g3Notified=true;
+document.getElementById(‘ru-icon’).textContent=’🔗’;
+document.getElementById(‘ru-title’).textContent=‘G3 \u2014 CONNECTOR’;
+document.getElementById(‘ru-sub’).textContent=‘G3-state dominant. Pattern anda terbukti. Langkah seterusnya: attract G2.’;
+SO(‘ov-rankup’);addLog(‘G3-state dominant!’,‘special’);
+}
+if(gs.g1Pending){
+gs.g1Pending=false;
+gs.state.g1=Math.min(100,gs.state.g1+40);
+gs.state.g3=Math.max(0,gs.state.g3-20);
+gs.hasG2=true;
+SO(‘ov-g1born’);addLog(‘G1 ACTIVATOR lahir!’,‘special’);
+}
+const dn=domState();
+if(dn===‘g1’)gs.g1InactRounds=0;
+else if(gs.state.g1>50){
+gs.g1InactRounds++;
+if(gs.g1InactRounds>=4){
+gs.state.g1=Math.max(0,gs.state.g1-10);
+gs.state.g2=Math.min(100,gs.state.g2+8);
+addLog(‘G1-state decay \u2014 tidak aktif.’,‘bad’);
+}
+}
+}
+
+// ── MONTHLY REVIEW ────────────────────────
+function runMonthly(){
+const net=netCF();
+gs.cash=Math.max(0,gs.cash+net);
+tickScars();
+gs.eco.members.forEach(m=>{m.loyalty=Math.max(0,m.loyalty-2);m.stability=Math.max(0,m.stability-1);});
+gs.eco.health=calcEcoHealth();
+gs.sRound++;
+const dur=C.SR[getSeason()];
+if(gs.sRound>=dur){gs.sRound=0;gs.sIdx=(gs.sIdx+1)%4;addLog(‘Musim: ‘+getSeason().toUpperCase(),‘info’);}
+let msg,cls,icon;
+if(net>=0){
+gs.negativeMonths=0;
+msg=‘Cashflow positif. Survive bulan ini. +RM’+net;cls=‘ok’;icon=’📊’;
+}else{
+gs.negativeMonths++;
+if(gs.negativeMonths===1){
+gs.trust=Math.max(0,gs.trust-5);gs.movement=Math.max(0,gs.movement-3);
+msg=‘CF negatif. Stress debuff: Trust -5, Movement -3.’;cls=‘warn’;icon=’⚠’;
+}else if(gs.negativeMonths===2){
+gs.trust=Math.max(0,gs.trust-10);gs.reputation=Math.max(0,gs.reputation-10);gs.movement=Math.max(0,gs.movement-10);
+msg=‘Bulan ke-2 negatif. Semua stat -10. Warning kritikal!’;cls=‘warn’;icon=’🚨’;
+}else{
+msg=‘Bulan ke-3 negatif! Forced liquidation atau Game Over!’;cls=‘danger’;icon=’💀’;
+}
+}
+recalc();
+const rows=[
+{l:‘Net Cashflow’,v:(net>=0?’+’:’’)+net,c:net>=0?‘var(–green)’:‘var(–red)’},
+{l:‘Cash semasa’,v:‘RM’+gs.cash,c:‘var(–gold2)’},
+{l:‘Bulan Negatif’,v:gs.negativeMonths+’/3’,c:gs.negativeMonths>0?‘var(–amber)’:‘var(–green)’},
+{l:‘Musim’,v:getSeason().toUpperCase(),c:‘var(–blue)’},
+{l:‘Scars Aktif’,v:gs.scars.filter(s=>s.c>0).length,c:gs.scars.length>0?‘var(–red)’:‘var(–green)’},
+{l:‘Eco Health’,v:gs.eco.health+’%’,c:‘var(–neon)’},
+{l:‘Human Score’,v:gs.humanScore+’/500’,c:‘var(–purple)’},
+];
+document.getElementById(‘mo-rows’).innerHTML=rows.map(r=>`<div class="mo-row"><div class="ml">${r.l}</div><div class="mv" style="color:${r.c}">${r.v}</div></div>`).join(’’);
+document.getElementById(‘mo-msg’).textContent=msg;
+document.getElementById(‘mo-msg’).className=’mo-msg ’+cls;
+document.getElementById(‘mo-icon’).textContent=icon;
+document.getElementById(‘mo-title’).textContent=’Monthly Review \u2014 Bulan ’+gs.month;
+SO(‘ov-monthly’);gs.month++;
+if(gs.negativeMonths>=3&&gs.cash<=0)setTimeout(()=>triggerLose(‘Anda bankrupt. Expenses menang.’,‘Prinsip asas: tanpa positive cashflow, kebebasan financial semakin jauh.’),1200);
+}
+function closeMonthly(){CO(‘ov-monthly’);nextEvent();}
+
+// ── WIN / LOSE ────────────────────────────
+function checkWinLose(){
+if(gs.trust<=0)return triggerLose(‘Tiada siapa percaya anda. Ekosistem runtuh.’,‘Trust adalah matawang utama PMT.’);
+if(gs.reputation<=0)return triggerLose(‘Nama anda hitam. G2 tidak akan approach lagi.’,‘Reputation ada memory.’);
+if(gs.eco.members.length>0&&gs.eco.health<=5)return triggerLose(‘Semua orang tinggalkan anda. Movement mati.’,‘Ecosystem lemah adalah liability.’);
+if(gs.scars.filter(s=>s.c>0).length>=3)return triggerLose(‘Terlalu banyak janji pecah. Sistem tolak anda.’,‘Setiap scar adalah rekod kekal.’);
+if(gs.capitalScore>=C.WIN_CAP&&gs.movementScore>=C.WIN_MOV&&gs.humanScore>=C.WIN_HUM)return triggerWin();
+}
+function triggerLose(r,l){
+recalc();
+document.getElementById(‘go-reason’).textContent=r;
+document.getElementById(‘go-lesson’).textContent=l||’’;
+document.getElementById(‘go-state’).textContent=domLabel(domState());
+document.getElementById(‘go-cash’).textContent=‘RM’+gs.cash;
+document.getElementById(‘go-trust’).textContent=gs.trust;
+document.getElementById(‘go-round’).textContent=gs.round;
+SS(‘gameover’);
+}
+function triggerWin(){
+document.getElementById(‘win-cap’).textContent=gs.capitalScore;
+document.getElementById(‘win-mv’).textContent=gs.movementScore;
+document.getElementById(‘win-hm’).textContent=gs.humanScore;
+document.getElementById(‘win-trust’).textContent=gs.trust;
+document.getElementById(‘win-eco’).textContent=gs.eco.size;
+document.getElementById(‘win-state’).textContent=domLabel(domState());
+SS(‘winscreen’);
+}
+function closeG1Born(){CO(‘ov-g1born’);checkWinLose();}
+
+// ══════════════════════════════════════════
+// EVENTS - 30 events, 3 layers
+// ══════════════════════════════════════════
+const EV=[
+// ── G4 ──
+{id:‘g4_01’,cat:‘CASHFLOW’,for:[‘g4’,‘any’],
+title:‘Gaji Masuk \u2014 Tapi Duit Terus Habis’,
+ctx:‘Gaji RM3,500 masuk. Tapi sewa, ansuran, makan, bil. Tinggal RM300.’,
+lesson:‘Kerja-upah cycle: anda tukar masa untuk duit. Duit masuk, duit keluar. Tiada movement, tiada multiplier.’,
+ch:[
+{l:’💸 Belanja seperti biasa’,h:‘G4-state naik \u2191 \u00b7 velocity turun \u2193’,e:{cash:-200,state:{g4:5},movQ:{velocity:-2}},o:‘Cycle tidak putus bila anda tidak sedar anda dalam cycle.’,t:‘lose’},
+{l:’📊 Set budget ketat \u2014 simpan RM500’,h:‘Cash naik \u2191 \u00b7 G2-state naik’,e:{cash:500,state:{g2:8},structure:5},o:‘G2-state naik \u2014 anda mula pegang modal. Tapi simpan sahaja tidak cukup.’,t:‘neutral’},
+{l:’🚀 Simpan RM300 dan labur masa dalam output’,h:‘G3-state naik \u2191 \u00b7 streak \u2191’,e:{cash:300,state:{g3:10,g4:-5},movQ:{velocity:5},outputStreak:1},o:‘Anda buat pilihan G3. Kurang duit \u2014 tapi movement mula terbentuk.’,t:‘win’}
+]},
+{id:‘g4_02’,cat:‘MOVEMENT’,for:[‘g4’,‘any’],
+title:‘Idea Pertama \u2014 Tanpa Modal’,
+ctx:‘Anda ada idea yang boleh dimulakan hari ini. Tiada modal. Tapi ada telefon, kenalan, kemahiran.’,
+lesson:‘Pattern G3 #1: Start Tanpa Modal. Kondisi sempurna tidak datang sebelum langkah pertama.’,
+ch:[
+{l:’⏲ Tunggu ada modal dulu’,h:‘G4-state naik \u2191 \u00b7 momentum lost’,e:{state:{g4:5},movQ:{velocity:-3}},o:‘Modal tidak datang kepada orang yang menunggu.’,t:‘lose’},
+{l:’📋 Plan dulu dengan teliti’,h:‘Structure naik \u2191 \u00b7 movement tiada’,e:{state:{g3:3},structure:8},o:‘Plan tanpa tindakan kekal dokumen.’,t:‘neutral’},
+{l:’🚀 Mula sekarang \u2014 versi paling kecil’,h:‘G3-state naik \u2191 \u00b7 movement mula’,e:{state:{g3:12},movQ:{breadth:5,depth:3,velocity:8},outputStreak:1,trust:5},o:‘Pattern pertama terbentuk. G3-state naik.’,t:‘win’}
+]},
+{id:‘g4_03’,cat:‘TRUST’,for:[‘g4’,‘any’],
+title:‘Orang Minta Tolong \u2014 Tiada Bayaran’,
+ctx:‘Kenalan minta reviewkan kerja dia. Tiada bayaran.’,
+lesson:‘Pattern G3 #2: Hadir dahulu sebelum meminta. Orang ingat siapa yang beri sebelum ambil.’,
+ch:[
+{l:’🚫 Tolak \u2014 tiada masa’,h:‘Trust turun \u2193’,e:{trust:-5,state:{g4:3}},o:‘G4 mindset: masa=duit. G3 mindset: masa=trust.’,t:‘lose’},
+{l:’😐 Tolong tapi setengah hati’,h:‘Trust sikit \u2191’,e:{trust:3,movQ:{depth:1}},o:‘Orang rasa half-hearted help.’,t:‘neutral’},
+{l:’🤝 Tolong sepenuhnya’,h:‘Trust naik \u2191 \u00b7 reputation \u2191’,e:{trust:12,movQ:{depth:8},state:{g3:8},reputation:5},o:‘Anda beri lebih dari yang diminta. Trust compound dari sini.’,t:‘win’}
+]},
+{id:‘g4_04’,cat:‘SURVIVAL’,for:[‘g4’,‘any’],
+title:‘Kereta Rosak \u2014 Emergency RM800’,
+ctx:‘Workshop kata RM800. Cash anda RM500.’,
+lesson:‘Emergency fund bukan pilihan \u2014 ia keperluan sistem.’,
+ch:[
+{l:’💳 Pakai credit card’,h:‘Liability baru aktif’,e:{addLiability:{name:‘Credit Card’,d:150}},o:‘Liability baru. Cashflow lebih ketat.’,t:‘neutral’},
+{l:’📱 Pinjam dari kawan tanpa struktur’,h:‘Trust turun \u2193 \u00b7 structure turun’,e:{cash:300,trust:-8,structure:-10},o:‘Pinjam tanpa struktur adalah trust leak.’,t:‘neutral’},
+{l:’🔧 Nego dengan workshop \u2014 2 ansuran’,h:‘G3-state naik \u2191 \u00b7 structure \u2191’,e:{cash:-400,state:{g3:5},structure:8,trust:5},o:‘Anda negotiate. G3 skill \u2014 selesaikan melalui komunikasi.’,t:‘win’}
+]},
+{id:‘g4_05’,cat:‘MOVEMENT’,for:[‘g4’],
+title:‘Penolakan Pertama’,
+ctx:’“Nanti saya fikir.” Dua minggu berlalu.’,
+lesson:‘Pattern G3 #5: Tahan Tolak. Penolakan adalah data, bukan kegagalan.’,
+ch:[
+{l:’😨 Berputus asa’,h:‘G3-state turun \u2193 \u00b7 streak hilang’,e:{state:{g4:8,g3:-5},movQ:{velocity:-8},outputStreak:-2},o:‘Satu penolakan tidak mentakrifkan anda.’,t:‘lose’},
+{l:’😡 Marah tapi teruskan’,h:‘velocity sikit \u2191’,e:{movQ:{velocity:3},state:{g3:3}},o:‘Consistency lebih penting dari mood.’,t:‘neutral’},
+{l:’📊 Ambil sebagai data \u2014 buat pelarasan’,h:‘G3-state naik \u2191 \u00b7 streak \u2191’,e:{state:{g3:10},movQ:{depth:5,velocity:8},trust:5,outputStreak:1},o:‘Anda extract pelajaran. Kitaran seterusnya lebih sharp.’,t:‘win’}
+]},
+{id:‘g4_06’,cat:‘SCAM’,for:[‘any’],
+title:‘Tawaran “Peluang Besar” Tanpa Struktur’,
+ctx:’“Kita trust je, tak payah contract. Return 200% dalam 3 bulan.”’,
+lesson:‘Signal bahaya: “kita trust je, tak perlu struktur.” Struktur adalah bentuk kepercayaan matang.’,
+ch:[
+{l:’💸 Join \u2014 sounds amazing’,h:‘Scar aktif \u00b7 cash hilang’,e:{cash:-300,trust:-20,reputation:-15,addScar:‘scam’,state:{g4:10}},o:‘Duit hilang. Scar aktif.’,t:‘lose’},
+{l:’🔍 Investigate dulu’,h:‘Trust naik \u2191 \u00b7 structure \u2191’,e:{trust:5,structure:8,state:{g3:5}},o:‘Red flag makin jelas. Anda elak.’,t:‘neutral’},
+{l:’🚫 Tolak \u2014 jelas scam’,h:‘Trust naik \u2191 \u00b7 reputation \u2191’,e:{trust:10,reputation:5,state:{g3:8},structure:5},o:‘Pattern scam dikenali. Keputusan tepat.’,t:‘win’}
+]},
+{id:‘g4_07’,cat:‘MOVEMENT’,for:[‘g4’],
+title:‘Output Ketiga \u2014 Ritma Terbentuk’,
+ctx:‘Output ketiga dalam 3 minggu. Konsisten. Ada yang respond.’,
+lesson:‘Pattern G3 #4: Ritma lebih berharga dari semangat besar yang tidak konsisten.’,
+ch:[
+{l:’🛌 Rehat \u2014 dah 3 kali’,h:‘Ritma putus \u00b7 streak hilang’,e:{movQ:{velocity:-10},outputStreak:-1,state:{g3:-5}},o:‘Ritma putus susah dibina semula.’,t:‘lose’},
+{l:’😅 Publish tapi kualiti kurang’,h:‘streak terjaga \u00b7 quality jatuh’,e:{movQ:{velocity:3,depth:-2},outputStreak:1},o:‘Ritma terjaga tapi score tidak naik setimpal.’,t:‘neutral’},
+{l:’🔥 Teruskan dan improve satu perkara’,h:‘G3-state naik \u2191 \u00b7 movQ \u2191’,e:{movQ:{velocity:8,depth:6},outputStreak:1,state:{g3:10},trust:5},o:‘Pattern #6 aktif: Improve Cara.’,t:‘win’}
+]},
+{id:‘g4_08’,cat:‘CASHFLOW’,for:[‘any’],
+title:‘Side Income Pertama’,
+ctx:‘RM200 untuk kerja kecil. Masa: 1 minggu.’,
+lesson:‘Income aktif boleh jadi modal pertama. Deploy atau simpan?’,
+ch:[
+{l:’💰 Simpan sahaja’,h:‘G2-state naik’,e:{cash:200,state:{g2:8}},o:‘Cash naik. Tapi simpan sahaja tidak multiply.’,t:‘neutral’},
+{l:’📈 Reinvest dalam output’,h:‘breadth naik \u2191 \u00b7 streak \u2191’,e:{cash:100,movQ:{breadth:8},state:{g3:8},outputStreak:1},o:‘Deploy modal kecil untuk tambah reach.’,t:‘win’},
+{l:’🎮 Belanja \u2014 reward diri’,h:‘Momentum hilang’,e:{cash:0,state:{g4:5},movQ:{velocity:-3}},o:‘Enjoy. Tapi peluang multiply hilang.’,t:‘neutral’}
+]},
+{id:‘g4_09’,cat:‘CREATOR’,for:[‘any’],
+title:‘Output Anda Jadi Viral \u2014 Attention Spike’,
+ctx:‘Satu post dapat 10x views biasa. DM masuk. Notification tak berhenti.’,
+lesson:‘Attention adalah bahan bakar attraction. Tapi attention tanpa depth adalah noise.’,
+ch:[
+{l:’📢 Follow up hard \u2014 capitalise semua’,h:‘attention naik \u2191 \u00b7 breadth \u2191’,e:{attention:20,movQ:{breadth:15,velocity:8},fandom:5,outputStreak:1},o:‘Attention explode. Breadth naik. Fandom mula terbentuk.’,t:‘win’},
+{l:’🎯 Fokus 5 conversation terbaik sahaja’,h:‘depth naik \u2191 \u00b7 likeability \u2191’,e:{movQ:{depth:12,velocity:5},likeability:10,trust:8,fandom:8},o:‘Depth over breadth. Fandom yang dibina lebih setia.’,t:‘win’},
+{l:’👀 Tengok je \u2014 impressed sendiri’,h:‘Momentum hilang’,e:{attention:5,movQ:{velocity:-3}},o:‘Attention datang dan pergi. Window tutup.’,t:‘lose’}
+]},
+{id:‘g4_10’,cat:‘SURVIVAL’,for:[‘any’],
+title:‘Pressure Keluarga \u2014 Bagi Duit Lebih’,
+ctx:‘Keluarga minta RM400 tambahan. Cashflow dah ketat.’,
+lesson:‘Family pressure adalah liabilities yang paling susah di-manage.’,
+ch:[
+{l:’❤ Bagi penuh \u2014 family first’,h:‘Cashflow terjejas’,e:{cash:-400,trust:5},o:‘Family okay. Tapi cashflow negatif bulan ini.’,t:‘neutral’},
+{l:’📊 Bagi RM200 \u2014 explain situasi’,h:‘Trust naik \u2191 \u00b7 structure \u2191’,e:{cash:-200,structure:8,trust:8,state:{g3:5}},o:‘Communicate matang. Structure naik.’,t:‘win’},
+{l:’📈 Cari income tambahan untuk cover’,h:‘G3-state naik \u2191 \u00b7 movement’,e:{cash:200,trust:8,state:{g3:8},movQ:{velocity:5}},o:‘Solve dengan movement. G3 mindset.’,t:‘win’}
+]},
+// ── G3 ──
+{id:‘g3_01’,cat:‘MOVEMENT’,for:[‘g3’],
+title:‘G2 Mula Perhatikan Anda’,
+ctx:‘Seorang yang ada modal mula follow output anda. Dia belum cakap apa-apa.’,
+lesson:‘G2 tidak dicari. G2 tertarik kepada pattern. Peringkat 1: Observation.’,
+ch:[
+{l:’📱 DM dia terus’,h:‘Trust turun \u2193 \u00b7 terlalu awal’,e:{trust:-5,state:{g4:5}},o:‘Terlalu awal. G2 betul tidak suka di-approach sebelum ready.’,t:‘lose’},
+{l:’📢 Tingkatkan output \u2014 tunjuk lebih’,h:‘streak \u2191 \u00b7 G3-state naik’,e:{movQ:{breadth:5,velocity:5},outputStreak:1,state:{g3:8}},o:‘Consistency lebih convincing dari satu show besar.’,t:‘neutral’},
+{l:’🎯 Buat output address masalah dalam bidang dia’,h:‘depth naik \u2191 \u00b7 trust \u2191 \u00b7 inspiration \u2191’,e:{movQ:{depth:12},trust:10,state:{g3:12},reputation:8,inspiration:8},o:‘Anda tunjuk cara berfikir \u2014 bukan sekadar activity. G2 impressed.’,t:‘win’}
+]},
+{id:‘g3_02’,cat:‘TRUST’,for:[‘g3’],
+title:‘Perbualan Pertama dengan G2’,
+ctx:‘G2 reach out. Ini evaluation \u2014 dia tengok cara berfikir.’,
+lesson:‘Peringkat 2: Conversation. G2 nilai cara berfikir \u2014 bukan pitch.’,
+ch:[
+{l:’📢 Pitch idea besar’,h:‘Trust turun \u2193’,e:{trust:-5,state:{g4:3}},o:‘G2 betul tidak cari excitement \u2014 dia cari kematangan.’,t:‘lose’},
+{l:’🧠 Bincang sistem dan mekanik’,h:‘Trust naik \u2191 \u00b7 G3-state \u2191’,e:{trust:20,state:{g3:15},structure:10,movQ:{depth:10},hasG2:true},o:‘Anda bercakap tentang sistem. G2 impressed dengan cara berfikir.’,t:‘win’},
+{l:’😶 Banyak diam \u2014 takut salah’,h:‘Trust turun \u2193’,e:{trust:-3,state:{g4:5}},o:‘G2 tidak dapat evaluate anda.’,t:‘lose’}
+]},
+{id:‘g3_03’,cat:‘DEPLOYMENT’,for:[‘g3’],
+title:‘G2 Kecil Bersedia \u2014 Tapi Mahu Tanpa Kontrak’,
+ctx:’“Kita trust je, kawan-kawan kan?” G2 kecil (RM15K) bersedia.’,
+lesson:‘Struktur bukan tanda tidak percaya. Struktur adalah tanda kepercayaan yang matang.’,
+ch:[
+{l:’🤝 Proceed tanpa kontrak’,h:‘Scar risk \u00b7 structure turun \u2193’,e:{cash:500,trust:-10,structure:-20,addScar:‘broken_deployment’,deploymentsBroken:1},o:‘Deployment tanpa struktur. Masalah timbul tanpa rujukan. Scar aktif.’,t:‘lose’},
+{l:’📄 Minta perjanjian bertulis’,h:‘G1-state naik \u2191 \u00b7 deploy complete’,e:{trust:15,structure:25,cash:500,deploymentsComplete:1,state:{g1:15,g3:10}},o:‘G2 setuju. Asas kukuh. G1-state mula naik.’,t:‘win’},
+{l:’⏲ Tunggu G2 yang lebih besar’,h:‘Peluang lepas’,e:{state:{g4:5},movQ:{velocity:-5}},o:‘Modal mesti sepadan dengan bukti.’,t:‘lose’}
+]},
+{id:‘g3_04’,cat:‘COMBINATION’,for:[‘g3’],
+title:‘Kawan G3 Ajak Join’,
+ctx:‘Kawan G3-state ajak join project. Dua-dua tiada modal.’,
+lesson:‘Gabungan salah: G3+G3 = movement ada, duit tiada. No scaling.’,
+ch:[
+{l:’🔥 Join sepenuhnya’,h:‘Movement ada \u00b7 tiada G2’,e:{movQ:{breadth:5},state:{g3:5},trust:5},o:‘Dua G3 tanpa G2 \u2014 no scaling lock aktif.’,t:‘neutral’},
+{l:’🤝 Join tapi cari G2 sekali’,h:‘structure \u2191 \u00b7 G3-state \u2191’,e:{state:{g3:8},movQ:{depth:8},structure:10,trust:10},o:‘Anda nampak apa yang missing. Complete the triangle.’,t:‘win’},
+{l:’🚫 Tolak \u2014 fokus G2’,h:‘G3-state sikit \u2191’,e:{state:{g3:3},movQ:{velocity:3}},o:‘Kekal fokus. Peluang network terlepas.’,t:‘neutral’}
+]},
+{id:‘g3_05’,cat:‘TRUST’,for:[‘g3’],
+title:‘Trust Crisis \u2014 Gosip Dalam Network’,
+ctx:‘Ada orang spread cerita tak betul. Kenalan mula tanya.’,
+lesson:‘Trust boleh dibina berbulan \u2014 hilang dalam beberapa hari.’,
+ch:[
+{l:’😤 Ignore’,h:‘Trust turun \u2193 \u00b7 reputation \u2193’,e:{trust:-25,reputation:-15,state:{g4:5}},o:‘Trust tidak dijaga tidak pulih sendiri.’,t:‘lose’},
+{l:’💬 Address openly’,h:‘Trust naik \u2191 \u00b7 reputation \u2191’,e:{trust:10,reputation:8,state:{g3:8},movQ:{depth:5}},o:‘Cara handle krisis tunjukkan karakter.’,t:‘win’},
+{l:’🤝 Jumpa orang yang spread secara private’,h:‘Trust sikit \u2191’,e:{trust:5,reputation:3,structure:8},o:‘Situation settle secara private.’,t:‘neutral’}
+]},
+{id:‘g3_06’,cat:‘DEPLOYMENT’,for:[‘g3’],
+title:‘G2 Sederhana \u2014 Tunjukkan Track Record’,
+ctx:’“Tunjukkan bukti \u2014 bukan cerita.” G2 sederhana (RM80K).’,
+lesson:‘G2 sederhana tidak beli cerita. Dia beli track record.’,
+ch:[
+{l:’📊 Tunjuk dokumentasi lengkap’,h:‘Trust naik \u2191 \u00b7 G1-state \u2191’,e:{trust:25,cash:1500,deploymentsComplete:1,state:{g1:20,g3:10},reputation:15,structure:15},o:‘Dokumentasi meyakinkan. G2 sederhana masuk.’,t:‘win’},
+{l:’🗣 Cerita verbal sahaja’,h:‘Trust sikit \u2191’,e:{trust:8,cash:300,state:{g3:5}},o:‘Kurang yakin tanpa dokumentasi.’,t:‘neutral’},
+{l:’🙅 Takut dedah \u2014 tolak’,h:‘Reputation turun \u2193’,e:{reputation:-5,movQ:{velocity:-3}},o:‘Takut dedah bermakna anda tidak yakin dengan kerja sendiri.’,t:‘lose’}
+]},
+{id:‘g3_07’,cat:‘FOLLOWER’,for:[‘g3’],
+title:‘Pertama 1,000 Followers’,
+ctx:‘Anda capai 1,000 followers. Ramai yang mulai mention nama anda.’,
+lesson:‘Followers adalah attention. Tapi attention tanpa trust tidak create movement.’,
+ch:[
+{l:’💰 Monetize terus \u2014 jual sesuatu’,h:‘Cash naik \u00b7 tapi terlalu awal’,e:{cash:300,attention:15,fandom:-5,trust:-8},o:‘Anda jual terlalu awal. Followers rasa anda commercial. Trust turun.’,t:‘lose’},
+{l:’🎭 Buat content lebih dalam \u2014 bina trust dulu’,h:‘depth naik \u2191 \u00b7 likeability \u2191’,e:{movQ:{depth:10,velocity:5},likeability:12,inspiration:8,fandom:10},o:‘Followers mula jadi fans. Fandom terbentuk.’,t:‘win’},
+{l:’📋 Announce big project \u2014 ambil momentum’,h:‘attention naik \u00b7 controversy risk’,e:{attention:20,controversy:10,fandom:5,movQ:{breadth:10}},o:‘Attention naik. Tapi controversy juga naik \u2014 ada yang setuju, ada yang tidak.’,t:‘neutral’}
+]},
+{id:‘g3_08’,cat:‘GIFT’,for:[‘g3’],
+title:‘Pertama Kali Orang Bagi “Gift”’,
+ctx:‘Seorang follower transferkan RM50 dengan nota: “Terima kasih atas content anda.”’,
+lesson:‘Gift economy lahir dari genuine value yang anda beri. Ia adalah signal bahawa manusia bersedia bayar untuk pengaruh anda.’,
+ch:[
+{l:’🙏 Terima dengan gembira \u2014 thank publicly’,h:‘fandom naik \u2191 \u00b7 likeability \u2191’,e:{cash:50,giftIncome:50,fandom:15,likeability:10,addSupporter:‘basic’},o:‘Fandom naik. Signal bahawa gift economy mula terbentuk.’,t:‘win’},
+{l:’💬 Thank secara private \u2014 tak nak public’,h:‘fandom sikit \u2191’,e:{cash:50,giftIncome:50,fandom:5,likeability:5},o:‘Humble approach. Tapi peluang untuk amplify signal terlepas.’,t:‘neutral’},
+{l:’👀 Ignore \u2014 awkward tak tahu nak reply’,h:‘Fandom turun \u2193’,e:{cash:50,fandom:-5,likeability:-3},o:‘Supporter rasa tak dihargai. Mereka tidak akan bagi lagi.’,t:‘lose’}
+]},
+{id:‘g3_09’,cat:‘COMBINATION’,for:[‘g3’],
+title:‘G1 Offer Anda Kerja Dalam Ecosystem Dia’,
+ctx:‘G1 established offer anda masuk ecosystem dia. Movement anda akan credit kepada ecosystem dia.’,
+lesson:‘Gabungan bahaya: G3+G1 = kebolehan digunakan. Movement boleh dicuri.’,
+ch:[
+{l:’✓ Accept \u2014 G1 offer besar’,h:‘G3-state turun \u2193 \u00b7 G4-state naik’,e:{cash:800,trust:-5,state:{g4:15,g3:-10},movQ:{velocity:-5}},o:‘Duit ada \u2014 tapi movement anda milik ecosystem dia. Anda rasa G4 semula.’,t:‘lose’},
+{l:’📋 Negotiate \u2014 terima tapi kekal separate’,h:‘structure naik \u2191 \u00b7 balance terjaga’,e:{cash:400,trust:5,structure:15,state:{g3:5}},o:‘Boundary jelas. Duit ada, movement terjaga.’,t:‘win’},
+{l:’🚫 Tolak \u2014 bina sendiri’,h:‘G3-state naik \u2191’,e:{state:{g3:10},movQ:{velocity:5},trust:5},o:‘Lebih lambat \u2014 tapi movement adalah milik anda.’,t:‘win’}
+]},
+{id:‘g3_10’,cat:‘TRUST’,for:[‘g3’],
+title:‘Ecosystem Member Pertama’,
+ctx:‘Ada orang minta join ecosystem anda. Ini anggota pertama.’,
+lesson:‘Ecosystem health lebih penting dari size. Satu anggota betul multiply lebih kuat dari sepuluh yang salah.’,
+ch:[
+{l:’🎉 Accept terus!’,h:‘member masuk \u00b7 health sederhana’,e:{addMember:{role:‘G4’,trust:50,loyalty:40,compat:60,stability:50,fit:55},state:{g3:5}},o:‘Member masuk tanpa evaluate. Health score sederhana.’,t:‘neutral’},
+{l:’🔍 Evaluate dulu \u2014 function fit dan commitment’,h:‘member masuk \u00b7 health tinggi’,e:{addMember:{role:‘G4’,trust:70,loyalty:75,compat:80,stability:70,fit:75},trust:10,structure:10,state:{g3:10}},o:‘Member dengan health score tinggi. Multiplier lebih kuat.’,t:‘win’},
+{l:’⏲ Tunggu \u2014 nak pastikan committed’,h:‘Trust sikit \u2191’,e:{trust:5,state:{g3:3}},o:‘Berhati-hati okay. Tapi ecosystem tidak berkembang kalau anda tidak ambil langkah.’,t:‘neutral’}
+]},
+// ── G1 ──
+{id:‘g1_01’,cat:‘ACTIVATOR’,for:[‘g1’],
+title:‘Ecosystem Conflict \u2014 Dua Anggota Tension’,
+ctx:‘Dua anggota ada friction. Tidak diuruskan \u2014 movement slow 30%.’,
+lesson:‘Activator Pressure: makin tinggi G1-state, makin berat tanggungjawab.’,
+ch:[
+{l:’😶 Ignore \u2014 depa dewasa’,h:‘movement turun \u2193 \u00b7 G1-state turun’,e:{movQ:{velocity:-15},trust:-10,state:{g1:-10}},o:‘G1 yang tidak urus ekosistem jatuh jadi G2.’,t:‘lose’},
+{l:’📷 Hantar message dari jauh’,h:‘sikit better’,e:{trust:5,movQ:{velocity:-5},structure:5},o:‘Ada improvement tapi conflict masih di bawah permukaan.’,t:‘neutral’},
+{l:’🤝 Hold session \u2014 address langsung’,h:‘Trust naik \u2191 \u00b7 ecosystem stable’,e:{trust:20,movQ:{velocity:10},structure:15,state:{g1:10},reputation:8},o:‘Conflict selesai. Ecosystem lebih kuat.’,t:‘win’}
+]},
+{id:‘g1_02’,cat:‘ACTIVATOR’,for:[‘g1’],
+title:‘G1 Inactivity Warning’,
+ctx:‘3 pusingan tiada deployment baru. Ecosystem rasa anda tidak aktif.’,
+lesson:‘G1 yang tidak aktif jatuh jadi G2.’,
+ch:[
+{l:’🛌 Rehat lagi’,h:‘G1 decay \u00b7 G2-state naik’,e:{state:{g1:-20,g2:15},movQ:{velocity:-10}},o:‘Ecosystem mula stagnate. Jatuh ke arah G2.’,t:‘lose’},
+{l:’📋 Plan \u2014 bulan depan mula’,h:‘structure sikit \u2191’,e:{state:{g1:-5},structure:5},o:‘Plan tanpa action tidak hentikan decay.’,t:‘neutral’},
+{l:’🚀 Aktifkan deployment baru sekarang’,h:‘G1-state naik \u2191 \u00b7 movement aktif’,e:{state:{g1:15},movQ:{velocity:12},cash:500,trust:10,reputation:8},o:‘Ecosystem hidup balik. Anda kekal G1.’,t:‘win’}
+]},
+{id:‘g1_03’,cat:‘ACTIVATOR’,for:[‘g1’],
+title:‘Wrong Deployment \u2014 ROI Jauh Dari Jangkaan’,
+ctx:‘Deployment 4 pusingan lepas jauh di bawah jangkaan. G2 mula tanya soalan.’,
+lesson:‘Wrong deployment adalah ujian karakter dan sistem.’,
+ch:[
+{l:’🙅 Defend \u2014 market yang salah’,h:‘Scar aktif \u00b7 trust turun \u2193’,e:{trust:-20,reputation:-15,state:{g1:-10},addScar:‘broken_deployment’},o:‘G2 tidak percaya excuse. Trust jatuh.’,t:‘lose’},
+{l:’📊 Own outcome \u2014 present learning’,h:‘Trust naik \u2191 \u00b7 reputation \u2191’,e:{trust:15,structure:15,state:{g1:10},reputation:10},o:‘G2 impressed dengan cara anda handle kegagalan.’,t:‘win’},
+{l:’😶 Diam \u2014 harap mereka lupa’,h:‘Trust turun \u2193’,e:{trust:-10,reputation:-8,state:{g1:-5}},o:‘Silence dalam leadership adalah signal bahaya.’,t:‘lose’}
+]},
+{id:‘g1_04’,cat:‘ACTIVATOR’,for:[‘g1’],
+title:‘G4 Dalam Ecosystem Mahu Keluar’,
+ctx:‘G4 yang anda recruit dapat offer dari ecosystem lain.’,
+lesson:‘Loyalty tidak datang sendiri \u2014 ia perlu dibina aktif.’,
+ch:[
+{l:’😤 Biarkan \u2014 banyak G4 lain’,h:‘Loyalty ecosystem turun \u2193’,e:{movQ:{velocity:-8},trust:-5,state:{g1:-5}},o:‘Cara handle ini nampak oleh anggota lain.’,t:‘lose’},
+{l:’💬 Bincang \u2014 faham kenapa’,h:‘Trust naik \u2191 \u00b7 structure \u2191’,e:{trust:10,structure:10,state:{g1:5}},o:‘Anda dengar. Anda faham root cause. Leadership sebenar.’,t:‘win’},
+{l:’💰 Offer lebih duit’,h:‘Cash turun \u2193 \u00b7 loyalty palsu’,e:{cash:-300,trust:-5,state:{g4:5}},o:‘Loyalty untuk duit adalah loyalty palsu.’,t:‘neutral’}
+]},
+{id:‘g1_05’,cat:‘SEASON’,for:[‘g1’,‘any’],
+title:‘Recession Hit \u2014 G2 Retreat’,
+ctx:‘Recession bermula. G2 tarik balik. Expenses naik.’,
+lesson:‘Player yang adapt survive. Recession adalah selection event.’,
+ch:[
+{l:’❄ Freeze semua aktiviti’,h:‘G1-state decay \u00b7 movement stop’,e:{state:{g1:-15,g2:10},movQ:{velocity:-15},trust:-8},o:‘G1 yang beku semasa recession jatuh G2 sebelum boom kembali.’,t:‘lose’},
+{l:’🎯 Fokus pada ecosystem health’,h:‘Trust naik \u2191 \u00b7 structure \u2191’,e:{trust:15,structure:15,state:{g1:5},movQ:{depth:10}},o:‘Bila boom kembali \u2014 anda dalam posisi lebih kuat.’,t:‘win’},
+{l:’🔍 Cari peluang tersembunyi’,h:‘Cash naik \u2191 \u00b7 G1-state \u2191’,e:{cash:800,trust:10,state:{g1:10,g3:8},reputation:10},o:‘Anda posisikan semasa orang lain retreat. Skill G1 sebenar.’,t:‘win’}
+]},
+// ── UNIVERSAL ──
+{id:‘any_01’,cat:‘SEASON’,for:[‘any’],
+title:‘Market Crash \u2014 Panic Everywhere’,
+ctx:‘Market crash 35%. Semua orang panic.’,
+lesson:‘Market crash adalah transfer of wealth dari orang yang panic kepada orang yang faham.’,
+ch:[
+{l:’😨 Panic sell’,h:‘Cash hilang \u00b7 reputation turun’,e:{cash:-200,state:{g2:-10},reputation:-5},o:‘Anda lock in kerugian.’,t:‘lose’},
+{l:’🥂 Hold \u2014 tenang’,h:‘G2-state naik \u2191’,e:{state:{g2:10},trust:5,structure:5},o:‘Tenang dalam chaos. Market akan recover.’,t:‘neutral’},
+{l:’💎 Deploy capital semasa panic’,h:‘Asset masuk \u2191 \u00b7 G1-state \u2191’,e:{cash:-300,addAsset:{name:‘Market Position’,v:600,r:60},state:{g1:15},reputation:10},o:‘Asset double bila market recover.’,t:‘win’}
+]},
+{id:‘any_02’,cat:‘TRUST’,for:[‘any’],
+title:‘Partner Minta Pinjam Tanpa Struktur’,
+ctx:’“Kita kawan \u2014 tak payah tulis-tulis.” RM1,000.’,
+lesson:‘Struktur melindungi hubungan. Kawan yang benar tidak lari dari struktur.’,
+ch:[
+{l:’💸 Bagi terus’,h:‘structure turun \u2193’,e:{cash:-1000,trust:-5,structure:-15},o:‘3 bulan berlalu. Tiada bayaran.’,t:‘lose’},
+{l:’📄 Bagi tapi tulis perjanjian’,h:‘structure naik \u2191 \u00b7 trust \u2191’,e:{cash:-1000,trust:10,structure:20},o:‘Pembayaran berlaku ikut jadual.’,t:‘win’},
+{l:’🚫 Tolak’,h:‘Cash selamat’,e:{trust:-3,cash:0},o:‘Duit selamat. Ada ketegangan sikit.’,t:‘neutral’}
+]},
+{id:‘any_03’,cat:‘CASHFLOW’,for:[‘any’],
+title:‘Peluang Asset Pertama’,
+ctx:‘Sewa kedai kecil. Modal RM2,000. Monthly return RM250.’,
+lesson:‘Asset letak duit dalam poket anda setiap bulan.’,
+ch:[
+{l:’💰 Beli’,h:‘Asset masuk \u2191 \u00b7 passive income \u2191’,e:{cash:-2000,addAsset:{name:‘Kedai Sewa Kecil’,v:2000,r:250},state:{g2:10,g1:5}},o:‘Asset aktif. RM250 sebulan masuk.’,t:‘win’},
+{l:’⏲ Tunggu research lebih’,h:‘structure sikit \u2191’,e:{structure:5,trust:3},o:‘Research bagus. Tapi peluang mungkin ditangkap orang lain.’,t:‘neutral’},
+{l:’🚫 Fokus PMT layer’,h:‘G3-state sikit \u2191’,e:{state:{g3:5}},o:‘Paiponer menang bila kedua-dua layer aktif.’,t:‘neutral’}
+]},
+{id:‘any_04’,cat:‘GIFT’,for:[‘any’],
+title:‘Ada Orang Sponsor Anda’,
+ctx:‘Seorang follower setia offer nak “sponsor” content anda dengan RM100/bulan.’,
+lesson:‘Supporter economy adalah ketika manusia rela bayar untuk kehadiran anda.’,
+ch:[
+{l:’🙏 Terima dengan gembira’,h:‘giftIncome naik \u2191 \u00b7 fandom \u2191’,e:{giftIncome:100,fandom:20,likeability:10,addSupporter:‘premium’},o:‘Supporter pertama. Gift economy mula aktif.’,t:‘win’},
+{l:’💬 Terima tapi humble \u2014 “tak perlu”’,h:‘fandom sikit \u2191’,e:{giftIncome:50,fandom:8,likeability:5},o:‘Humble tapi miss signal kuat. Supporter rasa kurang dihargai.’,t:‘neutral’},
+{l:’🚫 Tolak \u2014 tak selesa terima duit’,h:‘Fandom turun \u2193’,e:{fandom:-8,likeability:-5},o:‘Anda reject keputusan manusia yang nak support anda.’,t:‘lose’}
+]},
+{id:‘any_05’,cat:‘CHALLENGE’,for:[‘any’],
+title:‘Orang Challenge Anda Secara Terbuka’,
+ctx:‘Seseorang dalam network challenge pandangan anda secara public. Ramai tengah tengok.’,
+lesson:‘Controversy boleh jadi dua-mata pedang. Handle dengan matang \u2014 ia boleh naikkan positioning.’,
+ch:[
+{l:’😡 Balas dengan emosi’,h:‘controversy naik \u2191 \u00b7 likeability turun’,e:{controversy:20,likeability:-15,trust:-8,attention:10},o:‘Controversy naik. Ramai nampak tapi bukan semua support anda.’,t:‘lose’},
+{l:’🧠 Balas dengan fakta dan matang’,h:‘reputation naik \u2191 \u00b7 authority \u2191’,e:{reputation:15,inspiration:12,trust:10,attention:8,likeability:8},o:‘Anda handle dengan matang. Authority positioning naik.’,t:‘win’},
+{l:’😶 Ignore terus’,h:‘attention neutral’,e:{attention:-5},o:‘Orang persoal kenapa anda diam. Tapi conflict dielak.’,t:‘neutral’}
+]},
+];
+
+// ──────────────────────────────────────────
+// EVENT ENGINE
+// ──────────────────────────────────────────
+function getPool(){
+const d=domState();
+let pool=EV.filter(ev=>{
+if(gs.usedEv.has(ev.id))return false;
+if(ev.for.includes(‘any’))return true;
+if(ev.for.includes(d))return true;
+if(ev.for.includes(‘g1’)&&gs.state.g1>=50)return true;
+return false;
+});
+if(!gs.g2S)pool=pool.filter(e=>e.id!==‘g3_03’);
+if(!gs.g2M)pool=pool.filter(e=>e.id!==‘g3_06’);
+if(!pool.length){gs.usedEv.clear();return getPool();}
+return pool;
+}
+
+function nextEvent(){
+gs.round++;
+if(gs.round>0&&gs.round%5===0){runMonthly();return;}
+const pool=getPool();
+const ev=pool[Math.floor(Math.random()*pool.length)];
+gs.curEv=ev;gs.usedEv.add(ev.id);
+renderEv(ev);ST(‘main’);updateUI();
+}
+
+function renderEv(ev){
+const cc=ev.cat===‘SCAM’?‘ev-card sc’:ev.cat===‘ACTIVATOR’?‘ev-card g1’:
+ev.cat===‘CREATOR’||ev.cat===‘GIFT’||ev.cat===‘FOLLOWER’||ev.cat===‘CHALLENGE’||ev.cat===‘REACTION’?‘ev-card cr’:
+ev.cat===‘SURVIVAL’||ev.cat===‘CASHFLOW’?‘ev-card cf’:‘ev-card’;
+document.getElementById(‘ev-lbl’).textContent=’\u25B8 EVENT ‘+gs.round;
+document.getElementById(‘ev-wrap’).innerHTML=`<div class="${cc}"><div class="ev-cat ${ev.cat}">${ev.cat}</div><div class="ev-title">${ev.title}</div><div class="ev-ctx">${ev.ctx}</div><div class="ev-lesson">&#128214; ${ev.lesson}</div></div>`;
+document.getElementById(‘ch-wrap’).innerHTML=ev.ch.map((c,i)=>`<div class="ch-btn" onclick="pick(${i})"><div class="ch-label">${c.l}</div><div class="ch-hint">${c.h}</div></div>`).join(’’);
+document.getElementById(‘oc-wrap’).innerHTML=’’;
+}
+
+function pick(i){
+const ev=gs.curEv,ch=ev.ch[i];
+document.getElementById(‘ch-wrap’).innerHTML=’’;
+applyEff(ch.e);
+const sm=getSeasonMod();
+if(ch.e&&(ch.e.movQ||ch.e.movement))gs.movement=Math.round(gs.movement*sm.mm);
+if(ch.e&&ch.e.giftIncome)gs.giftIncome=Math.round(gs.giftIncome*sm.gm);
+recalc();
+const tags=buildTags(ch.e);
+const titles={win:’✓ OUTCOME’,lose:’⚠ OUTCOME’,neutral:’ⓘ OUTCOME’};
+const coaching=generateCoaching(ch.e, null);
+document.getElementById(‘oc-wrap’).innerHTML=`<div class="oc-card"><div class="oc-title ${ch.t}">${titles[ch.t]}</div><div class="oc-text">${ch.o}</div><div class="oc-effects">${tags}</div><div class="oc-insight">&#128161; ${ev.lesson.substring(0,90)}${ev.lesson.length>90?'\u2026':''}</div></div>${coaching}<button class="btn-gold full" onclick="nextEvent()" style="margin-top:8px">&#9654; EVENT SETERUSNYA</button>`;
+addLog(’[R’+gs.round+’] ‘+ev.title+’ \u2192 ’+ch.t,‘log’);
+updateUI();checkWinLose();
+}
+
+function buildTags(e){
+if(!e)return’’;const t=[];
+if(e.cash)t.push(`<span class="pill ${e.cash>0?'g':'r'}">${e.cash>0?'+':''}RM${e.cash}</span>`);
+if(e.trust)t.push(`<span class="pill ${e.trust>0?'g':'r'}">${e.trust>0?'+':''}Trust ${e.trust}</span>`);
+if(e.reputation)t.push(`<span class="pill ${e.reputation>0?'g':'r'}">${e.reputation>0?'+':''}Rep ${e.reputation}</span>`);
+if(e.structure)t.push(`<span class="pill ${e.structure>0?'b':'r'}">${e.structure>0?'+':''}Struct ${e.structure}</span>`);
+if(e.attention)t.push(`<span class="pill ${e.attention>0?'a':'r'}">${e.attention>0?'+':''}Attn ${e.attention}</span>`);
+if(e.likeability)t.push(`<span class="pill ${e.likeability>0?'g':'r'}">${e.likeability>0?'+':''}Like ${e.likeability}</span>`);
+if(e.fandom)t.push(`<span class="pill ${e.fandom>0?'p':'r'}">${e.fandom>0?'+':''}Fandom ${e.fandom}</span>`);
+if(e.inspiration)t.push(`<span class="pill ${e.inspiration>0?'b':'r'}">${e.inspiration>0?'+':''}Insp ${e.inspiration}</span>`);
+if(e.controversy)t.push(`<span class="pill ${e.controversy>0?'r':'g'}">${e.controversy>0?'+':''}Contr ${e.controversy}</span>`);
+if(e.giftIncome)t.push(`<span class="pill g">+Gift RM${e.giftIncome}/bln</span>`);
+if(e.state)for(const k in e.state)if(e.state[k])t.push(`<span class="pill ${e.state[k]>0?'p':'r'}">${e.state[k]>0?'+':''}${k.toUpperCase()} ${e.state[k]}</span>`);
+if(e.addAsset)t.push(`<span class="pill g">+Asset: ${e.addAsset.name}</span>`);
+if(e.addLiability)t.push(`<span class="pill r">+Liab: ${e.addLiability.name}</span>`);
+if(e.addMember)t.push(`<span class="pill p">+Member: ${e.addMember.role}</span>`);
+if(e.addScar)t.push(`<span class="pill r">&#128148; ${e.addScar}</span>`);
+if(e.addSupporter)t.push(`<span class="pill g">+Supporter</span>`);
+if(e.hasG2)t.push(`<span class="pill gold">G2 Connect!</span>`);
+if(e.g1Pending)t.push(`<span class="pill p">&#128081; G1 Lahir!</span>`);
+if(e.outputStreak>0)t.push(`<span class="pill g">+Streak</span>`);
+if(e.deploymentsComplete)t.push(`<span class="pill g">+Deploy</span>`);
+return t.join(’’);
+}
+
+// ──────────────────────────────────────────
+// UI UPDATE
+// ──────────────────────────────────────────
+function updateUI(){
+recalc();
+const d=domState();
+document.getElementById(‘hud-fn’).textContent=domLabel(d);
+document.getElementById(‘hud-month’).textContent=‘B’+gs.month+’\u00B7R’+gs.round;
+const s=getSeason();
+const sel=document.getElementById(‘hud-season’);sel.textContent=s.toUpperCase();sel.className=‘hud-season ‘+s;
+document.getElementById(‘h-cash’).textContent=gs.cash;
+document.getElementById(‘h-trust’).textContent=gs.trust;
+document.getElementById(‘h-move’).textContent=gs.movement;
+document.getElementById(‘h-attract’).textContent=gs.attraction;
+document.getElementById(‘h-cap’).textContent=gs.capitalScore;
+document.getElementById(‘h-mvscore’).textContent=gs.movementScore;
+document.getElementById(‘h-human’).textContent=gs.humanScore;
+document.getElementById(‘cap-fill’).style.width=Math.min(100,gs.capitalScore/10)+’%’;
+document.getElementById(‘mv-fill’).style.width=Math.min(100,gs.movementScore/10)+’%’;
+document.getElementById(‘hm-fill’).style.width=Math.min(100,gs.humanScore/5)+’%’;
+// Alerts
+const al=[];const net=netCF();
+if(net<0)al.push(’<span class="abadge warn">⚠ CF-</span>’);
+if(gs.scars.filter(s=>s.c>0).length>0)al.push(’<span class="abadge warn">💔 Scar</span>’);
+if(gs.structure<30)al.push(’<span class="abadge warn">⚠ Struct</span>’);
+if(gs.eco.health>0&&gs.eco.health<30)al.push(’<span class="abadge warn">⚠ Eco-</span>’);
+if(gs.state.g1>50)al.push(’<span class="abadge warn">⚠ G1 Pressure</span>’);
+if(gs.controversy>40)al.push(’<span class="abadge warn">⚠ Controversy</span>’);
+if(gs.g2S)al.push(’<span class="abadge ok">G2K</span>’);
+if(gs.g2M)al.push(’<span class="abadge ok">G2M</span>’);
+if(gs.g2B)al.push(’<span class="abadge ok">G2B</span>’);
+if(gs.supporters.length>0)al.push(’<span class="abadge info">’+gs.supporters.length+’ Supporter</span>’);
+document.getElementById(‘alerts-row’).innerHTML=al.join(’’);
+// State bars
+for(const k of[‘g1’,‘g2’,‘g3’,‘g4’]){
+document.getElementById(‘sv-’+k).textContent=gs.state[k];
+document.getElementById(‘sf-’+k).style.width=gs.state[k]+’%’;
+document.getElementById(‘sb-’+k).className=‘sb-wrap’+(k===d?’ dom’:’’);
+}
+document.getElementById(‘dom-state’).textContent=domLabel(d);
+// Human attraction bars
+const ha={att:gs.attention,lik:gs.likeability,cha:gs.charisma,ins:gs.inspiration,fan:gs.fandom,con:gs.controversy};
+for(const k in ha){
+document.getElementById(‘sv-’+k).textContent=ha[k];
+document.getElementById(‘sf-’+k).style.width=ha[k]+’%’;
+}
+document.getElementById(‘hs-val’).textContent=gs.humanScore;
+document.getElementById(‘hs-fill’).style.width=Math.min(100,gs.humanScore/5)+’%’;
+// Life tab
+document.getElementById(‘life-income’).innerHTML=
+`<div class="cf-row"><div class="cr-n">Gaji</div><div class="cr-v" style="color:var(--green)">+RM${gs.salary}</div></div>`+
+(gs.passiveIncome>0?`<div class="cf-row"><div class="cr-n">Passive Income</div><div class="cr-v" style="color:var(--green)">+RM${gs.passiveIncome}</div></div>`:’’);
+document.getElementById(‘life-expenses’).innerHTML=
+`<div class="cf-row"><div class="cr-n">Living Expenses</div><div class="cr-v" style="color:var(--red)">-RM${gs.expenses}</div></div>`+
+gs.liabilities.map(l=>`<div class="cf-row"><div class="cr-n">${l.name}</div><div class="cr-v" style="color:var(--red)">-RM${l.d}</div></div>`).join(’’);
+document.getElementById(‘life-assets’).innerHTML=gs.assets.length?
+gs.assets.map(a=>`<div class="asset-row"><div class="ar-n">${a.name}</div><div class="ar-stats"><span class="ar-s">Value: RM${a.v}</span><span class="ar-s">+RM${a.r}/bln</span></div></div>`).join(’’):
+‘<div style="font-size:12px;color:var(--tdim);padding:6px 0">Belum ada asset.</div>’;
+const nc=netCF();
+document.getElementById(‘life-net’).textContent=(nc>=0?’+’:’’)+‘RM’+nc;
+document.getElementById(‘life-total’).className=‘cf-total ‘+(nc>=0?‘pos’:‘neg’);
+document.getElementById(‘life-gift’).textContent=‘RM’+gs.giftIncome;
+// Eco tab
+document.getElementById(‘eco-size’).textContent=gs.eco.size;
+document.getElementById(‘eco-hv’).textContent=gs.eco.health;
+const hl=gs.eco.health;
+const hlbl=hl>=80?‘Stabil’:hl>=60?‘Sihat’:hl>=40?‘Fragile’:hl>=20?‘At Risk’:‘Collapse!’;
+const hcol=hl>=80?‘var(–green)’:hl>=60?‘var(–neon)’:hl>=40?‘var(–amber)’:‘var(–red)’;
+document.getElementById(‘eco-hlbl’).textContent=hlbl;document.getElementById(‘eco-hlbl’).style.color=hcol;
+document.getElementById(‘eco-hv2’).textContent=hl+’%’;document.getElementById(‘eco-hv2’).style.color=hcol;
+document.getElementById(‘eco-hfill’).style.width=hl+’%’;document.getElementById(‘eco-hfill’).style.background=hcol;
+document.getElementById(‘eco-mult’).textContent=’\u00D7’+calcMult().toFixed(1);
+document.getElementById(‘eco-dep’).textContent=gs.deploymentsComplete;
+document.getElementById(‘eco-brk’).textContent=gs.deploymentsBroken+’ broken’;
+document.getElementById(‘eco-supporters’).innerHTML=gs.supporters.length?
+gs.supporters.map(s=>`<div style="font-size:11px;padding:5px 8px;background:var(--bg3);border:1px solid var(--bdr);border-radius:3px;margin-bottom:4px;color:var(--purple)">&#128591; Supporter (${s.type})</div>`).join(’’):
+‘<div style="font-size:12px;color:var(--tdim);padding:6px 0">Belum ada supporter.</div>’;
+document.getElementById(‘eco-members’).innerHTML=gs.eco.members.length?
+gs.eco.members.map(m=>`<div class="member-card"><div class="mc-hdr"><div class="mc-role">${m.role}</div><div class="mc-health">Health: ${Math.round((m.trust+m.loyalty+m.compat+m.stability+m.fit)/5)}</div></div><div class="mc-bars"><div class="mc-bar"><div class="mb-l">Trust ${m.trust}</div><div class="mb-t"><div class="mb-f" style="width:${m.trust}%;background:var(--neon)"></div></div></div><div class="mc-bar"><div class="mb-l">Loyalty ${m.loyalty}</div><div class="mb-t"><div class="mb-f" style="width:${m.loyalty}%;background:var(--gold)"></div></div></div><div class="mc-bar"><div class="mb-l">Compat ${m.compat}</div><div class="mb-t"><div class="mb-f" style="width:${m.compat}%;background:var(--blue)"></div></div></div><div class="mc-bar"><div class="mb-l">Stability ${m.stability}</div><div class="mb-t"><div class="mb-f" style="width:${m.stability}%;background:var(--green)"></div></div></div></div></div>`).join(’’):
+‘<div style="font-size:12px;color:var(--tdim);padding:6px 0">Belum ada anggota.</div>’;
+const as=gs.scars.filter(s=>s.c>0);
+document.getElementById(‘eco-scars’).innerHTML=as.length?
+as.map(s=>`<div class="scar-card"><div class="scar-t">&#128148; ${s.type.replace(/_/g,' ').toUpperCase()}</div><div class="scar-d">Aktif dalam reputation anda.</div><div class="scar-c">${s.c===999?'PERMANENT':s.c+' pusingan lagi'}</div></div>`).join(’’):
+‘<div style="font-size:12px;color:var(--green);padding:6px 0">✓ Tiada scar aktif.</div>’;
+}
+
+// ──────────────────────────────────────────
+// NAV UTILS
+// ──────────────────────────────────────────
+
+// ── SCORE GUIDE ──────────────────────────────
+function updateScoreTab(){
+recalc();
+const av=gs.assets.reduce((s,a)=>s+a.v,0);
+const mq=calcMovQ();
+const mult=calcMult();
+const ecoC=Math.round(gs.eco.size*gs.eco.health*mq);
+const ps=Math.round(calcPosScore());
+
+// Capital breakdown
+document.getElementById(‘sgv-cap’).textContent=gs.capitalScore;
+document.getElementById(‘sgf-cap’).style.width=Math.min(100,gs.capitalScore/10)+’%’;
+document.getElementById(‘sfc-cash’).textContent=gs.cash;
+document.getElementById(‘sfc-asset’).textContent=av*10;
+document.getElementById(‘sfc-passive’).textContent=gs.passiveIncome*20;
+document.getElementById(‘sfc-gift’).textContent=gs.giftIncome*10;
+
+// Movement breakdown
+document.getElementById(‘sgv-mov’).textContent=gs.movementScore;
+document.getElementById(‘sgf-mov’).style.width=Math.min(100,gs.movementScore/10)+’%’;
+document.getElementById(‘sfc-mult’).textContent=‘×’+mult.toFixed(1);
+document.getElementById(‘sfc-eco’).textContent=ecoC;
+document.getElementById(‘sfc-trust’).textContent=gs.trust*4;
+document.getElementById(‘sfc-rep’).textContent=gs.reputation*4;
+document.getElementById(‘sfc-attr’).textContent=gs.attraction*4;
+document.getElementById(‘sfc-fan’).textContent=gs.fandom*3;
+document.getElementById(‘sfc-att’).textContent=gs.attention*2;
+
+// Human breakdown
+document.getElementById(‘sgv-hum’).textContent=gs.humanScore;
+document.getElementById(‘sgf-hum’).style.width=Math.min(100,gs.humanScore/5)+’%’;
+document.getElementById(‘sfc-lik’).textContent=gs.likeability*3;
+document.getElementById(‘sfc-fan2’).textContent=gs.fandom*3;
+document.getElementById(‘sfc-att2’).textContent=gs.attention*2;
+document.getElementById(‘sfc-ins’).textContent=gs.inspiration*2;
+document.getElementById(‘sfc-attr2’).textContent=gs.attraction*2;
+document.getElementById(‘sfc-pos’).textContent=ps;
+const conEl=document.getElementById(‘sfc-con’);
+conEl.textContent=gs.controversy;
+conEl.className=‘sf-val’+(gs.controversy>0?’ neg’:’’);
+
+// Advice
+document.getElementById(‘sg-advice-content’).innerHTML=generateAdvice();
+}
+
+function generateAdvice(){
+const rows=[];
+const capN=Math.max(0,1000-gs.capitalScore);
+const movN=Math.max(0,1000-gs.movementScore);
+const humN=Math.max(0,500-gs.humanScore);
+const mult=calcMult();
+
+if(capN>0){
+if(gs.assets.length===0)
+rows.push({i:’💰’,t:’<strong>Capital</strong> masih kurang <span class="dn">’+capN+’</span>. Anda belum ada asset. Cari event peluang asset untuk tambah passive income.’});
+else
+rows.push({i:’💰’,t:’<strong>Capital</strong> masih kurang <span class="dn">’+capN+’</span>. Teruskan kumpul cash dan bina passive income dari asset.’});
+} else {
+rows.push({i:’✓’,t:’<strong class="up">Capital Score</strong> dah capai sasaran!’});
+}
+
+if(movN>0){
+if(mult<=1.0)
+rows.push({i:’🌐’,t:’<strong>Movement</strong> masih kurang <span class="dn">’+movN+’</span>. Human Multiplier Anda masih <span class="dn">×’+mult.toFixed(1)+’</span>. Bina ecosystem dan connect dengan G2 untuk multiply score.’});
+else if(gs.eco.size===0)
+rows.push({i:’🌐’,t:’<strong>Movement</strong> masih kurang <span class="dn">’+movN+’</span>. Anda belum ada anggota ecosystem. Recruit ahli pertama untuk aktifkan multiplier.’});
+else
+rows.push({i:’🌐’,t:’<strong>Movement</strong> masih kurang <span class="dn">’+movN+’</span>. Naikkan Trust, Reputation, dan Attraction untuk tambah score.’});
+} else {
+rows.push({i:’✓’,t:’<strong class="up">Movement Score</strong> dah capai sasaran!’});
+}
+
+if(humN>0){
+if(gs.fandom<20)
+rows.push({i:’👥’,t:’<strong>Human Score</strong> masih kurang <span class="dn">’+humN+’</span>. Fandom Anda rendah. Buat content berkualiti dan terima supporter untuk naikkan Fandom.’});
+else if(gs.controversy>30)
+rows.push({i:’👥’,t:’<strong>Human Score</strong> masih kurang <span class="dn">’+humN+’</span>. Controversy Anda tinggi — ia tolak balik Human Score. Elak pilihan yang naikkan controversy.’});
+else
+rows.push({i:’👥’,t:’<strong>Human Score</strong> masih kurang <span class="dn">’+humN+’</span>. Naikkan Likeability dan Inspiration melalui pilihan yang beri nilai kepada orang lain.’});
+} else {
+rows.push({i:’✓’,t:’<strong class="up">Human Score</strong> dah capai sasaran!’});
+}
+
+if(capN===0&&movN===0&&humN===0)
+rows.push({i:’👑’,t:’<strong class="up">Semua sasaran tercapai!</strong> Anda sudah menang. Tahniah!’});
+
+return rows.map(r=>’<div class="sa-row"><div class="sa-icon">’+r.i+’</div><div class="sa-text">’+r.t+’</div></div>’).join(’’);
+}
+
+// ── AFTER-CHOICE COACHING ────────────────────
+function generateCoaching(eff, prevState){
+if(!eff) return ‘’;
+const rows=[];
+const mult=calcMult();
+
+// Capital coaching
+if(eff.cash&&eff.cash!==0){
+if(eff.cash>0) rows.push({i:’💰’,t:’<strong>Cash +RM’+eff.cash+’</strong> — <span class="up">Capital Score naik</span>. Cash langsung tambah ke Capital Score.’});
+else rows.push({i:’💰’,t:’<strong>Cash -RM’+Math.abs(eff.cash)+’</strong> — <span class="dn">Capital Score turun</span>. Ini kos jangka pendek — kalau ada asset atau passive income, ia akan recover.’});
+}
+if(eff.addAsset) rows.push({i:’📈’,t:’<strong>Asset baru: ‘+eff.addAsset.name+’</strong> — <span class="up">+RM’+eff.addAsset.r+’ passive income setiap bulan</span>. Ini akan tambah Capital Score secara kekal.’});
+if(eff.addLiability) rows.push({i:’⚠’,t:’<strong>Liability baru: ‘+eff.addLiability.name+’</strong> — <span class="dn">-RM’+eff.addLiability.d+’ dari cashflow setiap bulan</span>. Ini akan terus drain cash kalau tidak diselesaikan.’});
+
+// Movement coaching
+if(eff.movQ){
+const parts=[];
+if(eff.movQ.breadth>0) parts.push(‘Breadth +’+eff.movQ.breadth);
+if(eff.movQ.depth>0) parts.push(‘Depth +’+eff.movQ.depth);
+if(eff.movQ.velocity>0) parts.push(‘Velocity +’+eff.movQ.velocity);
+if(parts.length>0) rows.push({i:’🌐’,t:’<strong>Movement Quality naik</strong> (’+parts.join(’, ‘)+’) — <span class="up">Movement Score naik</span>. Dengan Human Multiplier ×’+mult.toFixed(1)+’, setiap point MovQ bernilai lebih.’});
+}
+if(eff.trust&&eff.trust>0) rows.push({i:’🤝’,t:’<strong>Trust +’+eff.trust+’</strong> — <span class="up">Movement Score +’+eff.trust*4+’</span>. Trust adalah asas — ia juga diperlukan untuk unlock G2 gate.’});
+if(eff.trust&&eff.trust<0) rows.push({i:’💔’,t:’<strong>Trust ‘+eff.trust+’</strong> — <span class="dn">Movement Score ’+eff.trust*4+’</span>. Trust susah dibina dan mudah hilang. Jaga dengan baik.’});
+if(eff.addMember) rows.push({i:’🌐’,t:’<strong>Anggota baru dalam ecosystem</strong> — Human Multiplier Anda mungkin naik. Jaga ecosystem health supaya multiplier kekal tinggi.’});
+
+// Human coaching
+if(eff.fandom&&eff.fandom>0) rows.push({i:’👥’,t:’<strong>Fandom +’+eff.fandom+’</strong> — <span class="up">Human Score +’+(eff.fandom*3)+’</span>. Fandom adalah nilai tertinggi dalam Human Score — ia juga tambah Movement Score.’});
+if(eff.likeability&&eff.likeability>0) rows.push({i:’👥’,t:’<strong>Likeability +’+eff.likeability+’</strong> — <span class="up">Human Score +’+(eff.likeability*3)+’</span>. Likeability adalah komponen terbesar Human Score.’});
+if(eff.controversy&&eff.controversy>0) rows.push({i:’⚠’,t:’<strong>Controversy +’+eff.controversy+’</strong> — <span class="dn">Human Score -’+eff.controversy+’</span>. Controversy tinggi tolak balik Human Score Anda.’});
+if(eff.addSupporter) rows.push({i:’🙏’,t:’<strong>Supporter baru!</strong> — Gift potential Anda naik. Lebih ramai supporter = lebih banyak gift income yang boleh masuk ke Capital Score.’});
+if(eff.giftIncome&&eff.giftIncome>0) rows.push({i:’💸’,t:’<strong>Gift Income +RM’+eff.giftIncome+’/bulan</strong> — <span class="up">Masuk dalam Capital Score dan Net Cashflow</span>. Ini adalah duit yang datang kerana keputusan manusia bukan kerja aktif.’});
+
+// Scar warning
+if(eff.addScar) rows.push({i:’💔’,t:’<strong>Scar aktif</strong> — Ini akan block G2 attraction dan affect reputation Anda untuk beberapa pusingan. 3 scars serentak = Game Over.’});
+
+if(rows.length===0) return ‘’;
+return ‘<div class="cb-box"><div class="cb-title">📈 KENAPA SCORE BERUBAH</div>’+
+rows.map(r=>’<div class="cb-row"><div class="cb-icon">’+r.i+’</div><div class="cb-txt">’+r.t+’</div></div>’).join(’’)+
+‘</div>’;
+}
+
+function SS(id){document.querySelectorAll(’.screen’).forEach(s=>s.classList.remove(‘active’));document.getElementById(id).classList.add(‘active’);}
+function ST(t){
+document.querySelectorAll(’.tab-btn’).forEach((b,i)=>b.classList.toggle(‘active’,[‘main’,‘life’,‘state’,‘eco’,‘score’,‘theory’][i]===t));
+document.querySelectorAll(’.panel’).forEach(p=>p.classList.remove(‘active’));
+document.getElementById(‘tab-’+t).classList.add(‘active’);
+if(t===‘score’) updateScoreTab();
+}
+function SO(id){document.getElementById(id).classList.add(‘show’);}
+function CO(id){document.getElementById(id).classList.remove(‘show’);}
+function selPos(p,el){selP=p;document.querySelectorAll(’.pos-card’).forEach(c=>c.classList.remove(‘sel’));el.classList.add(‘sel’);const b=document.getElementById(‘start-btn’);b.disabled=false;b.style.opacity=‘1’;}
+function startGame(){if(!selP)return;initGame();SS(‘game’);nextEvent();}
+function addLog(m,t=‘info’){gs.log.unshift({m,t});if(gs.log.length>50)gs.log.pop();}
+</script>
+
+</body>
+</html>
