@@ -1,4 +1,5 @@
 <!DOCTYPE html><html lang="ms"><head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA | 3asbab.org</title>
@@ -21,9 +22,16 @@
       --pdf-paper: #fffefb;
     }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; background: #ffffff; color: var(--text-dark); line-height: 1.75; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-wrap: break-word; }
-    .wrap { width: 100%; max-width: var(--max-width); margin: 0 auto; padding-left: clamp(1.15rem, 4vw, 1.8rem); padding-right: clamp(1.15rem, 4vw, 1.8rem); }
-    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+      background: #ffffff; color: var(--text-dark); line-height: 1.75;
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility; overflow-wrap: break-word;
+    }
+    .wrap { width: 100%; max-width: var(--max-width); margin: 0 auto;
+      padding-left: clamp(1.15rem, 4vw, 1.8rem); padding-right: clamp(1.15rem, 4vw, 1.8rem); }
+    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 30;
+      background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
     .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.8rem 0; min-height: 56px; }
     .topbar a { text-decoration: none; font-size: 0.92rem; color: var(--text-dark); }
     .topbar a:hover { color: var(--accent); }
@@ -33,11 +41,14 @@
     .meta { color: var(--muted); font-size: 0.9rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; margin: 0.45rem 0; }
     .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 56px; z-index: 20; background: rgba(255,255,255,0.98); }
     .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem 0; align-items: center; font-size: 0.82rem; }
-    .jump a { padding: 0.24rem 0.72rem; border-radius: 999px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.12s ease; color: var(--text-dark); }
+    .jump a { padding: 0.24rem 0.72rem; border-radius: 999px; background: var(--bg-soft); border: 1px solid var(--border-light);
+      text-decoration: none; font-weight: 500; transition: 0.12s ease; color: var(--text-dark); }
     .jump a:hover { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
     main { padding: 1.2rem 0 3rem; }
-    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.22rem 0.82rem; border-radius: 999px; margin-bottom: 0.8rem; }
-    h2 { font-size: 1.6rem; line-height: 1.35; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 700; letter-spacing: -0.01em; }
+    .badge { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #dcfce7; color: #166534;
+      padding: 0.22rem 0.82rem; border-radius: 999px; margin-bottom: 0.8rem; }
+    h2 { font-size: 1.6rem; line-height: 1.35; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent);
+      padding-left: 0.9rem; font-weight: 700; letter-spacing: -0.01em; }
     h3 { font-size: 1.24rem; line-height: 1.45; margin: 1.2rem 0 0.52rem; font-weight: 700; color: #0b3b2a; }
     h4 { font-size: 1.05rem; line-height: 1.5; margin: 1rem 0 0.45rem; font-weight: 700; color: #134e3a; }
     p { margin: 0.72rem 0; }
@@ -45,40 +56,36 @@
     li { margin: 0.34rem 0; line-height: 1.75; }
     strong { font-weight: 700; }
     em { font-style: italic; }
-    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.25rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
-    .arab, .arabic { font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif; color: #1e293b; }
-    .arab { direction: rtl; unicode-bidi: embed; font-size: 1.12em; line-height: 1.9; white-space: normal; }
-    .arabic { font-size: 1.62rem; line-height: 1.9; direction: rtl; text-align: right; margin: 0.85rem 0; }
-    .translation { background: #f8fafc; padding: 0.7rem 1rem; border-radius: 0.8rem; margin: 0.55rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.96rem; line-height: 1.75; }
+    .section { margin: 1.2rem 0; }
+    .arab { font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif; color: #1e293b;
+      direction: rtl; unicode-bidi: embed; font-size: 1.32rem; line-height: 2.1; text-align: right; white-space: normal; margin: 0.85rem 0; }
+    .translation { background: #f8fafc; padding: 0.7rem 1rem; border-radius: 0.8rem; margin: 0.55rem 0 1rem;
+      border-left: 3px solid var(--accent); font-size: 0.96rem; line-height: 1.75; }
     blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.9rem 1.15rem; margin: 1rem 0; font-style: normal; line-height: 1.8; }
-    .insight-box { background: #f1f5f9; padding: 0.9rem 1.15rem; border-radius: 1rem; margin: 1rem 0; line-height: 1.75; }
-    .insight-box h3 { margin-top: 0; }
     table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.94rem; background: #fff; }
     th, td { border: 1px solid var(--border-light); padding: 0.68rem; text-align: left; vertical-align: top; line-height: 1.65; }
     th { background: #f1f5f9; font-weight: 700; }
     hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
-    .footnote { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
-    .footnotes { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; padding-left: 1.2rem; }
+    .footnotes { font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light);
+      padding-top: 1rem; padding-left: 1.2rem; }
     .footnotes li { margin: 0.38rem 0; line-height: 1.65; }
-    .footnotes a, .footnote a, sup a { color: var(--accent); text-decoration: none; }
     .toplink { font-size: 0.78rem; margin-top: 0.85rem; display: inline-block; color: var(--accent); text-decoration: none; }
     .toplink:hover { text-decoration: underline; }
     footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.82rem; margin-top: 1rem; }
     .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
-    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text);
+      padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600;
+      transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
     .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
     .btn-pdf:active { transform: translateY(1px); }
     .no-print { display: block; }
     .pdf-only { display: none; }
     .pdf-exporting .pdf-only { display: block !important; }
-    .pdf-exporting .no-print,
-    .pdf-exporting .pdf-toolbar,
-    .pdf-exporting .topbar,
-    .pdf-exporting .jump,
-    .pdf-exporting .toplink { display: none !important; }
+    .pdf-exporting .no-print, .pdf-exporting .pdf-toolbar, .pdf-exporting .topbar, .pdf-exporting .jump, .pdf-exporting .toplink { display: none !important; }
     .pdf-shell { background: #fff; }
     .pdf-cover { display: none; }
-    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
+    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column;
+      justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
     .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
     .pdf-cover-brand { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
     .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
@@ -95,683 +102,870 @@
       body { margin: 0; padding: 0; }
       .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
       .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
-      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
+      .section, blockquote { break-inside: avoid; page-break-inside: avoid; }
       h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
     }
     @media (max-width: 640px) {
       .wrap { padding-left: 1.1rem; padding-right: 1.1rem; }
       .topbar nav { gap: 0.75rem; min-height: 52px; }
       .jump { top: 52px; }
-      .section-card { padding: 1rem 1rem; border-radius: 1rem; }
       h1 { font-size: 1.75rem; }
       h2 { font-size: 1.34rem; padding-left: 0.75rem; }
       h3 { font-size: 1.1rem; }
       h4 { font-size: 1rem; }
-      .arab { font-size: 1.08em; }
-      .arabic { font-size: 1.34rem; }
+      .arab { font-size: 1.18rem; }
       table { font-size: 0.88rem; }
       th, td { padding: 0.58rem; }
     }
   </style>
 </head>
 <body>
+  <script>
+    const DOC_META = {
+      pageTitle: "BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA",
+      shortTitle: "BAB 21",
+      subtitle: "Rumah Yang Membekalkan Generasi Pengorbanan Untuk Umat",
+      headerLine: "📖 Kerangka 3 Asbab — Arkib Baca Sahaja",
+      categoryLine: "Rumah Sebagai Markaz Dakwah, Manpower Umat &amp; Generasi Pengorbanan | Tauhid Amali",
+      currentFile: "bab-21.html",
+      prevFile: "bab-20.html", prevLabel: "Bab 20",
+      nextFile: "bab-22.html", nextLabel: "Bab 22",
+      jumpLinks: [
+        { id: "21-1", label: "21.1" }, { id: "21-2", label: "21.2" }, { id: "21-3", label: "21.3" },
+        { id: "21-4", label: "21.4" }, { id: "21-5", label: "21.5" }, { id: "21-6", label: "21.6" },
+        { id: "21-7", label: "21.7" }, { id: "21-8", label: "21.8" }, { id: "21-9", label: "21.9" }
+      ]
+    };
+  </script>
+
   <div class="topbar no-print">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
         <a href="index.html">🏠 Home</a>
-        <a id="nav-prev" href="bab-21.html">← Bab 21</a>
+        <a id="nav-prev" href="bab-20.html">← Bab 20</a>
         <a id="nav-current" href="bab-21.html" style="font-weight:600;">BAB 21</a>
-        <a id="nav-next" href="bab-23.html">Bab 23 →</a>
+        <a id="nav-next" href="bab-22.html">Bab 22 →</a>
       </nav>
     </div>
   </div>
+
   <div class="wrap no-print">
     <div class="pdf-toolbar">
       <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
     </div>
   </div>
+
   <div id="pdf-shell" class="pdf-shell">
-    <div class="pdf-cover pdf-only">
-      <div class="pdf-cover-inner">
-        <div class="pdf-cover-top">
-          <div class="pdf-cover-brand">3asbab.org</div>
-          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
-          <h1 class="pdf-cover-title" id="pdf-cover-title">BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</h1>
-          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Aplikasi Kerangka 3 Asbab pada Institusi Rumah</p>
-        </div>
-        <div class="pdf-cover-bottom">
-          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
-          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
-        </div>
-      </div>
-    </div>
-    <div class="pdf-meta-page pdf-only pdf-break">
-      <div class="pdf-meta-inner">
-        <h2>Maklumat Dokumen</h2>
-        <div class="pdf-meta-list">
-          <p><strong>Judul:</strong> <span id="pdf-meta-title">BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</span></p>
-          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
-          <p><strong>Laman:</strong> 3asbab.org</p>
-          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
-          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
-        </div>
-      </div>
-    </div>
-    <header class="wrap" id="top">
-      <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
- 
-    <main class="wrap">
 
-
-      <div class="chapter-badge">🟥 BAB 21</div>
-      <h1>BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</h1>
-      <div class="subtitle">Subtitle: Dari memelihara iman → menghidupkan dakwah</div>
+```
+<div class="pdf-cover pdf-only">
+  <div class="pdf-cover-inner">
+    <div class="pdf-cover-top">
+      <div class="pdf-cover-brand">3asbab.org</div>
+      <div class="pdf-cover-series">Kerangka 3 Asbab</div>
+      <h1 class="pdf-cover-title" id="pdf-cover-title">BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</h1>
+      <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Rumah Yang Membekalkan Generasi Pengorbanan Untuk Umat</p>
     </div>
-  </header>
-
-  <div class="jump">
-    <div class="wrap">
-      <div class="jump-inner">
-        <strong>🧭 Lompat ke:</strong>
-        <a href="#21-1">21.1</a>
-        <a href="#21-2">21.2</a>
-        <a href="#21-3">21.3</a>
-        <a href="#21-4">21.4</a>
-        <a href="#21-5">21.5</a>
-        <a href="#21-6">21.6</a>
-        <a href="#21-7">21.7</a>
-        <a href="#21-8">21.8</a>
-        <a href="#21-9">21.9</a>
-        <a href="#21-10">21.10</a>
-        <a href="#21-11">21.11</a>
-        <a href="#21-12">21.12</a>
-      </div>
+    <div class="pdf-cover-bottom">
+      <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
+      <div id="pdf-cover-footer-line2">© 3asbab.org</div>
     </div>
   </div>
-
-  <main>
-    <div class="wrap">
-
-      <section class="section-card" id="21-1">
-        <h2>21.1 Status Tauhidi: Rumah = Markaz Dakwah</h2>
-
-        <p>Rumah bukan sekadar tempat menyimpan iman, tetapi:</p>
-
-        <div class="center-line">markaz dakwah keluarga</div>
-
-        <p class="arrow-line">➡️ Masjid → melahirkan iman</p>
-        <p class="arrow-line">➡️ Rumah → menghidupkan dakwah</p>
-
-        <p>Rumah ialah titik peralihan daripada:</p>
-        <ul>
-          <li>iman yang disimpan → kepada iman yang bergerak</li>
-        </ul>
-
-        <h3>Penjelasan Tauhidi:</h3>
-
-        <p>Masjid ialah tempat iman dibina melalui Asbab Mutlak seperti solat berjemaah, zikir, dan taklim.
-        Namun iman itu tidak berhenti di masjid.</p>
-
-        <p>Rumah berfungsi sebagai:</p>
-
-        <p class="arrow-line">➡️ tempat iman diuji</p>
-        <p class="arrow-line">➡️ tempat iman diamalkan secara berterusan</p>
-        <p class="arrow-line">➡️ tempat iman disebarkan dalam unit paling kecil (keluarga)</p>
-
-        <div class="note-box">
-          <p>📌 Jika masjid melahirkan iman tetapi rumah tidak menghidupkannya:</p>
-          <p class="arrow-line">➡️ iman akan menjadi maklumat, bukan kehidupan</p>
-        </div>
-
-        <h3>📌 Dalil:</h3>
-
-        <div class="dalil-box">
-          <div class="arabic">﴿ وَأْمُرْ أَهْلَكَ بِٱلصَّلَوٰةِ وَٱصْطَبِرْ عَلَيْهَا ﴾</div>
-          <div class="translation">“Perintahkanlah keluargamu mendirikan solat dan bersabarlah atasnya.”【1】</div>
-        </div>
-
-        <p class="arrow-line">➡️ Ayat ini menunjukkan:</p>
-        <p>iman mesti dihidupkan dalam rumah melalui usaha berterusan (mujahadah &amp; sabar)</p>
-      </section>
-
-      <section class="section-card" id="21-2">
-        <h2>🔑 21.2 Definisi Amal Ijtima’i (Dikunci)</h2>
-
-        <p class="center-line">Amal ijtima’i ialah amal yang lahir daripada mesyuarat (syura)</p>
-
-        <p>Ia bukan:</p>
-        <ul>
-          <li>sekadar buat bersama</li>
-          <li>sekadar berkumpul</li>
-          <li>sekadar aktiviti keluarga</li>
-        </ul>
-
-        <p>Tetapi:</p>
-
-        <div class="center-line">diputuskan melalui mesyuarat → dilaksanakan secara bersama → dengan niat menghidupkan agama</div>
-
-        <h3>Penjelasan Tauhidi</h3>
-
-        <p>Amal ijtima’i ialah Asbab Mutlak Terbitan yang lahir daripada:</p>
-
-        <p class="arrow-line">➡️ fikir jamaah</p>
-        <p class="arrow-line">➡️ keputusan syura</p>
-        <p class="arrow-line">➡️ pengorbanan bersama</p>
-
-        <div class="note-box">
-          <p>📌 Tanpa mesyuarat:</p>
-          <p class="arrow-line">➡️ amal menjadi emosi individu</p>
-          <p class="arrow-line">➡️ tiada keseragaman</p>
-          <p class="arrow-line">➡️ tiada kesinambungan</p>
-        </div>
-
-        <div class="insight-box">
-          <p>📌 Dengan mesyuarat:</p>
-          <p class="arrow-line">➡️ amal menjadi tertib Rasulullah ﷺ</p>
-          <p class="arrow-line">➡️ hati disatukan</p>
-          <p class="arrow-line">➡️ bantuan Allah (nusrah) ditarik</p>
-        </div>
-
-        <h3>Penegasan Tauhidi</h3>
-
-        <p>✔️ Tanpa mesyuarat → tiada amal ijtima’i</p>
-        <p>✔️ Tanpa amal ijtima’i → tiada jamaah</p>
-        <p>✔️ Tanpa jamaah → dakwah tidak bergerak</p>
-
-        <p class="center-line">Mesyuarat ialah asas semua amal ijtima’i dalam Islam</p>
-
-        <h3>📌 Dalil:</h3>
-
-        <div class="dalil-box">
-          <div class="arabic">﴿ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ ﴾【2】</div>
-        </div>
-
-        <p class="arrow-line">➡️ Ini bukan cadangan, tetapi struktur hidup umat</p>
-      </section>
-
-      <section class="section-card" id="21-3">
-        <h2>🧕 21.3 Tertib Amal Ijtima’i Wanita (Dikunci)</h2>
-
-        <p>Dakwah ialah tanggungjawab:</p>
-
-        <div class="center-line">lelaki dan wanita</div>
-
-        <p>Namun tertibnya berbeza.</p>
-
-        <h3>Penjelasan Tauhidi</h3>
-
-        <p>Dalam K3A:</p>
-
-        <p class="arrow-line">➡️ Dakwah = Asbab Mutlak</p>
-        <p class="arrow-line">➡️ Wanita tidak dikecualikan daripada Asbab Mutlak</p>
-
-        <p>Tetapi:</p>
-
-        <p class="arrow-line">➡️ tertib amal wanita mengikut sunnah &amp; hikmah syarak</p>
-
-        <h3>Prinsip Tauhidi</h3>
-
-        <p>✔️ Wanita juga membina iman melalui amal ijtima’i</p>
-        <p>✔️ Amal ijtima’i wanita mesti melalui mesyuarat</p>
-        <p>✔️ Mesyuarat berlaku bersama mahram</p>
-        <p>✔️ Lelaki memimpin, wanita menghidupkan suasana</p>
-
-        <div class="note-box">
-          <p>📌 Ini bukan perbezaan nilai, tetapi:</p>
-          <p class="arrow-line">➡️ pembahagian peranan untuk memastikan dakwah berjalan sempurna</p>
-        </div>
-
-        <h3>Mekanisme Amal Ijtima’i Wanita</h3>
-
-        <p>Wanita:</p>
-        <ul>
-          <li>bermesyuarat dengan suami / mahram</li>
-          <li>menyusun amal rumah</li>
-          <li>menghidupkan suasana iman</li>
-          <li>menyokong dakwah keluarga</li>
-        </ul>
-
-        <div class="insight-box">
-          <p>📌 Peranan sebenar wanita:</p>
-          <p class="arrow-line">➡️ bukan sekadar “ikut”</p>
-          <p class="arrow-line">➡️ tetapi menghidupkan suasana iman dalam rumah</p>
-        </div>
-
-        <div class="key-box">
-          <p><strong>Ayat Kunci</strong></p>
-          <p>“Amal ijtima’i tidak lahir daripada semangat, tetapi daripada mesyuarat.”</p>
-        </div>
-      </section>
-
-      <section class="section-card" id="21-4">
-        <h2>21.4 Bentuk Amal Ijtima’i Rumah</h2>
-
-        <p>Amal ijtima’i rumah dizahirkan melalui:</p>
-
-        <ul>
-          <li>Mesyuarat keluarga</li>
-          <li>Dakwah di antara ahli keluarga</li>
-          <li>Taklim wa ta‘allum</li>
-          <li>Muzakarah iman</li>
-          <li>Azam amal setiap ahli keluarga</li>
-        </ul>
-
-        <p class="arrow-line">➡️ Rumah berubah daripada tempat tinggal → kepada gelanggang amal</p>
-
-        <h3>Penjelasan Tauhidi</h3>
-
-        <p>Amal ini bukan berdiri sendiri, tetapi membentuk rantaian hidup Tauhidi dalam rumah:</p>
-
-        <h3>0) Dakwah → menggerakkan hati (Asas Rantaian)</h3>
-
-        <p class="arrow-line">➡️ Mengajak ahli keluarga kepada Allah</p>
-        <p class="arrow-line">➡️ Menghidupkan kalimah Tauhid dalam rumah</p>
-        <p class="arrow-line">➡️ Mengeluarkan hati daripada dunia kepada akhirat</p>
-
-        <div class="note-box">
-          <p>📌 Dakwah ialah:</p>
-          <p>Asbab Mutlak Asli yang menghidupkan semua amal</p>
-          <p class="arrow-line">➡️ Tanpa dakwah:</p>
-          <p class="arrow-line">➡️ semua amal menjadi rutin, bukan kehidupan</p>
-        </div>
-
-        <div class="dalil-box">
-          <p>📌 Dalil:</p>
-          <div class="arabic">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى ٱللَّهِ ﴾【1】</div>
-        </div>
-
-        <h3>1) Mesyuarat → menjadikan amal ijtima’i</h3>
-
-        <p class="arrow-line">➡️ Menyatukan fikir seluruh ahli keluarga</p>
-        <p class="arrow-line">➡️ Menentukan amal secara jamaah</p>
-        <p class="arrow-line">➡️ Mengikat hati kepada keputusan bersama</p>
-
-        <div class="note-box">
-          <p>📌 Di sinilah beza:</p>
-          <p class="arrow-line">➡️ Amal infradi → individu buat sendiri</p>
-          <p class="arrow-line">➡️ Amal ijtima’i → lahir daripada mesyuarat</p>
-          <p class="arrow-line">➡️ Tanpa mesyuarat:</p>
-          <p class="arrow-line">➡️ tiada jamaah, walaupun ramai orang beramal</p>
-        </div>
-
-        <h3>2) Taklim → memberi ilmu &amp; iman</h3>
-
-        <p class="arrow-line">➡️ Membaca dan menyampaikan wahyu</p>
-        <p class="arrow-line">➡️ Memasukkan kebesaran Allah dalam hati</p>
-        <p class="arrow-line">➡️ Menukar ilmu → menjadi iman</p>
-
-        <div class="dalil-box">
-          <p>📌 Dalil:</p>
-          <div class="arabic">﴿ يَتْلُوا۟ عَلَيْهِمْ ءَايَٰتِهِ ﴾</div>
-        </div>
-
-        <p class="arrow-line">➡️ Taklim ialah pintu masuk iman</p>
-
-        <h3>3) Muzakarah / Tazkiyah → menghidupkan rasa iman</h3>
-
-        <p class="arrow-line">➡️ Berkongsi pengalaman iman</p>
-        <p class="arrow-line">➡️ Membersihkan hati daripada dunia</p>
-        <p class="arrow-line">➡️ Menghidupkan cinta, takut, yakin kepada Allah</p>
-
-        <div class="dalil-box">
-          <p>📌 Dalil:</p>
-          <div class="arabic">﴿ وَيُزَكِّيهِمْ ﴾</div>
-        </div>
-
-        <p class="arrow-line">➡️ Tazkiyah menjadikan iman itu hidup dalam hati</p>
-
-        <h3>4) Taklim lanjutan → تثبيت (pengukuhan)</h3>
-
-        <p class="arrow-line">➡️ Menguatkan kefahaman agama</p>
-        <p class="arrow-line">➡️ Menjadikan iman stabil</p>
-        <p class="arrow-line">➡️ Mengelakkan salah faham</p>
-
-        <div class="dalil-box">
-          <p>📌 Dalil:</p>
-          <div class="arabic">﴿ وَيُعَلِّمُهُمُ ٱلْكِتَٰبَ وَٱلْحِكْمَةَ ﴾</div>
-        </div>
-
-        <p class="arrow-line">➡️ Hikmah = amal yang tepat pada tempatnya (khidmat)</p>
-
-        <h3>5) Azam amal → menggerakkan tindakan</h3>
-
-        <p class="arrow-line">➡️ Setiap ahli keluarga berazam untuk beramal</p>
-        <p class="arrow-line">➡️ Amal dilakukan dengan mujahadah dan sabar</p>
-        <p class="arrow-line">➡️ Amal mengikut tertib Rasulullah ﷺ</p>
-
-        <p class="arrow-line">📌 Di sinilah:</p>
-        <p class="arrow-line">➡️ iman bertukar menjadi realiti kehidupan</p>
-
-        <h3>Struktur Lengkap Ayat (Rujukan Tauhidi)</h3>
-
-        <div class="dalil-box">
-          <div class="arabic">﴿ يَتْلُوا۟ عَلَيْهِمْ ءَايَٰتِهِ وَيُزَكِّيهِمْ وَيُعَلِّمُهُمُ ٱلْكِتَٰبَ ﴾【3】</div>
-          <p><strong>Terjemahannya:</strong></p>
-          <div class="translation">“Yang membacakan kepada mereka ayat-ayat-Nya, mensucikan mereka, dan mengajarkan kepada mereka al-Kitab.”</div>
-          <p>﴿ يَتْلُوا۟ عَلَيْهِمْ ءَايَٰتِهِ ﴾ → Dakwah</p>
-          <p>﴿ وَيُزَكِّيهِمْ ﴾ → Tazkiyah (ibadat &amp; muzakarah)</p>
-          <p>﴿ وَيُعَلِّمُهُمُ ٱلْكِتَٰبَ ﴾ → Taklim</p>
-          <p>﴿ وَٱلْحِكْمَةَ ﴾ → Hikmah (khidmat &amp; amal)</p>
-        </div>
-
-        <h3>Kesimpulan Tauhidi (Diperbetulkan)</h3>
-
-        <p class="arrow-line">➡️ Dakwah menghidupkan hati</p>
-        <p class="arrow-line">➡️ Mesyuarat menyatukan amal</p>
-        <p class="arrow-line">➡️ Taklim membina iman</p>
-        <p class="arrow-line">➡️ Tazkiyah menghidupkan rasa</p>
-        <p class="arrow-line">➡️ Hikmah mengarahkan amal</p>
-        <p class="arrow-line">➡️ Azam amal menggerakkan kehidupan</p>
-
-        <p>Inilah rantaian sebenar rumah beriman:</p>
-
-        <div class="center-line">👉 Dakwah → Mesyuarat → Taklim → Tazkiyah → Hikmah → Azam Amal</div>
-
-        <h3>Kunci Besar (Correction penting)</h3>
-
-        <p>❌ Salah faham biasa:</p>
-        <p class="arrow-line">➡️ Mesyuarat dianggap permulaan</p>
-
-        <p>✔️ Hakikat Tauhidi:</p>
-        <p class="arrow-line">➡️ Dakwah adalah permulaan</p>
-        <p class="arrow-line">➡️ Mesyuarat menjadikan amal itu ijtima’i</p>
-
-        <h3>Penutup Tajam</h3>
-
-        <p>Rumah tidak hidup dengan aktiviti.</p>
-
-        <p>Rumah hidup apabila:</p>
-
-        <p class="arrow-line">➡️ Dakwah menggerakkan hati</p>
-        <p class="arrow-line">➡️ Mesyuarat menyatukan amal</p>
-        <p class="arrow-line">➡️ Amal berjalan dengan tertib Rasulullah ﷺ</p>
-
-        <p>✔️ letak dakwah di tempat yang betul (paling awal)</p>
-      </section>
-
-      <section class="section-card" id="21-5">
-        <h2>21.5 Sirah: Rumah Sahabat sebagai Markaz Dakwah</h2>
-
-        <h3>1. Rumah Abu Ayyub al-Ansari r.a.</h3>
-        <ul>
-          <li>Rasulullah ﷺ tinggal selepas hijrah</li>
-          <li>rumah menjadi:</li>
-          <li>tempat wahyu</li>
-          <li>tempat sahabat berkumpul</li>
-          <li>pusat dakwah awal Madinah</li>
-        </ul>
-
-        <p class="arrow-line">➡️ Rumah = markaz dakwah sebenar</p>
-
-        <div class="note-box">
-          <p>📌 Ini membuktikan:</p>
-          <p class="arrow-line">➡️ rumah boleh menjadi pusat perubahan umat</p>
-        </div>
-
-        <h3>2. Rumah Al-Arqam ibn Abi al-Arqam r.a.</h3>
-        <ul>
-          <li>digunakan secara rahsia</li>
-          <li>sahabat dibina iman</li>
-          <li>generasi awal Islam lahir</li>
-        </ul>
-
-        <p class="arrow-line">➡️ Rumah = pusat pembinaan iman</p>
-
-        <div class="note-box">
-          <p>📌 Di sinilah:</p>
-          <p class="arrow-line">➡️ iman generasi pertama Islam dibentuk</p>
-        </div>
-
-        <h3>3. Rumah Abu Bakr r.a.</h3>
-        <ul>
-          <li>keluarga terlibat dalam dakwah</li>
-          <li>semasa hijrah:</li>
-          <li>Asma’ binti Abu Bakr bantu logistik</li>
-          <li>Abdullah ibn Abu Bakr bawa maklumat</li>
-        </ul>
-
-        <p class="arrow-line">➡️ Rumah = pusat operasi dakwah</p>
-
-        <div class="note-box">
-          <p>📌 Ini menunjukkan:</p>
-          <p class="arrow-line">➡️ seluruh ahli keluarga terlibat dalam dakwah</p>
-        </div>
-      </section>
-
-      <section class="section-card" id="21-6">
-        <h2>⚔️ 21.6 Rumah Menyokong Dakwah (Sirah Hidup)</h2>
-
-        <h3>Khadijah radhiallahu anha</h3>
-        <ul>
-          <li>menyokong Rasulullah ﷺ sepenuhnya</li>
-          <li>menenangkan baginda</li>
-          <li>mengorbankan harta</li>
-        </ul>
-
-        <p class="arrow-line">➡️ Rumah = sumber kekuatan dakwah</p>
-
-        <div class="note-box">
-          <p>📌 Tanpa rumah yang kuat:</p>
-          <p class="arrow-line">➡️ dakwah menjadi lemah</p>
-        </div>
-
-        <h3>Amr ibn al-Jamuh r.a.</h3>
-        <ul>
-          <li>keluarga tidak menghalang</li>
-          <li>malah menyokong keluar ke medan</li>
-        </ul>
-
-        <p class="arrow-line">➡️ Rumah = menghantar ke jalan Allah</p>
-
-        <div class="note-box">
-          <p>📌 Sokongan keluarga:</p>
-          <p class="arrow-line">➡️ membuka pintu nusrah Allah</p>
-        </div>
-      </section>
-
-      <section class="section-card" id="21-7">
-        <h2>🧕 21.7 Wanita sebagai Penggerak Dakwah (Sirah)</h2>
-
-        <h3>1. Hajar ‘alaihas-salam</h3>
-        <ul>
-          <li>ditinggalkan di padang pasir</li>
-          <li>tidak menahan Nabi Ibrahim</li>
-          <li>yakin kepada Allah</li>
-        </ul>
-
-        <p class="arrow-line">➡️ melahirkan:</p>
-        <ul>
-          <li>Zamzam</li>
-          <li>Ismail</li>
-          <li>umat</li>
-        </ul>
-
-        <div class="note-box">
-          <p>📌 Pengorbanan wanita:</p>
-          <p class="arrow-line">➡️ melahirkan sejarah umat</p>
-        </div>
-
-        <h3>2. Al-Khansa’ radhiallahu anha</h3>
-        <ul>
-          <li>menggalakkan anak keluar</li>
-          <li>anak syahid</li>
-        </ul>
-
-        <p class="arrow-line">➡️ wanita membina generasi pengorbanan</p>
-
-        <h3>3. Ummu Haram radhiallahu anha</h3>
-        <ul>
-          <li>keluar dalam ekspedisi</li>
-          <li>syahid di Cyprus</li>
-        </ul>
-
-        <p class="arrow-line">➡️ wanita juga pelaku dakwah</p>
-      </section>
-
-      <section class="section-card" id="21-8">
-        <h2>🔒 21.8 Prinsip Dakwah Lelaki &amp; Wanita (Dikunci)</h2>
-
-        <p class="center-line">Dakwah ialah tanggungjawab bersama — dengan tertib berbeza</p>
-
-        <h3>📌 Dalil:</h3>
-
-        <div class="dalil-box">
-          <div class="arabic">﴿ وَٱلْمُؤْمِنُونَ وَٱلْمُؤْمِنَٰتُ بَعْضُهُمْ أَوْلِيَآءُ بَعْضٍ ﴾【4】</div>
-        </div>
-
-        <p class="arrow-line">➡️ Lelaki &amp; wanita:</p>
-        <ul>
-          <li>saling menyokong</li>
-          <li>saling menguatkan</li>
-          <li>saling melengkapkan</li>
-        </ul>
-      </section>
-
-      <section class="section-card" id="21-9">
-        <h2>🔥 21.9 Prinsip Pengorbanan Wanita (Dikunci)</h2>
-
-        <p>Wanita beriman:</p>
-
-        <p>✔️ membina iman diri</p>
-        <p>✔️ tidak menghalang suami keluar</p>
-        <p>✔️ tidak melemahkan anak dengan dunia</p>
-        <p>✔️ membina generasi yang sanggup berkorban</p>
-        <p>✔️ menjadikan rumah sebagai markaz iman</p>
-
-        <div class="note-box">
-          <p>📌 Pengorbanan wanita:</p>
-          <p class="arrow-line">➡️ menentukan masa depan umat</p>
-        </div>
-
-        <div class="key-box">
-          <p><strong>Ayat Kunci</strong></p>
-          <p>“Wanita beriman tidak membina rumah untuk keselesaan dunia, tetapi untuk melahirkan pengorbanan di jalan Allah.”</p>
-        </div>
-      </section>
-
-      <section class="section-card" id="21-10">
-        <h2>🚀 21.10 Rumah sebagai Enjin Dakwah</h2>
-
-        <p>Apabila rumah hidup:</p>
-        <ul>
-          <li>suami kuat</li>
-          <li>isteri kuat</li>
-          <li>anak kuat</li>
-        </ul>
-
-        <p class="arrow-line">➡️ rumah menjadi:</p>
-
-        <div class="center-line">enjin dakwah umat</div>
-
-        <h3>Penjelasan Tauhidi</h3>
-
-        <p>Rumah yang hidup menghasilkan:</p>
-
-        <p class="arrow-line">➡️ individu beriman</p>
-        <p class="arrow-line">➡️ keluarga beriman</p>
-        <p class="arrow-line">➡️ jamaah beriman</p>
-
-        <div class="note-box">
-          <p>📌 Dari rumah → terbina masyarakat</p>
-        </div>
-      </section>
-
-      <section class="section-card" id="21-11">
-        <h2>❌ 21.11 Kesalahan Umat Hari Ini</h2>
-
-        <p>Rumah telah disalahfungsikan menjadi:</p>
-        <ul>
-          <li>stor simpan barang</li>
-          <li>panggung hiburan</li>
-          <li>hotel rehat</li>
-          <li>restoran makan</li>
-        </ul>
-
-        <p class="arrow-line">➡️ tiada amal → tiada iman → rumah jadi kosong</p>
-
-        <div class="note-box">
-          <p>📌 Masalah sebenar:</p>
-          <p class="arrow-line">➡️ rumah dipenuhi asbab zulumat</p>
-          <p class="arrow-line">➡️ tetapi kosong daripada asbab mutlak</p>
-        </div>
-      </section>
-
-      <section class="section-card" id="21-12">
-        <h2>🔒 21.12 Rumusan Tauhidi Bab 21 (Dikunci)</h2>
-
-        <ol>
-          <li>Rumah ialah markaz dakwah keluarga</li>
-          <li>Amal ijtima’i lahir daripada mesyuarat</li>
-          <li>Wanita ialah penggerak utama suasana iman</li>
-          <li>Rumah menyokong dakwah, bukan menghalang</li>
-          <li>Dari rumah → lahir jamaah</li>
-        </ol>
-
-        <h3>Penutup Tauhidi</h3>
-
-        <p>Masjid melahirkan iman<br>Rumah menyimpan iman</p>
-
-        <p>Tetapi:</p>
-
-        <p class="center-line">Rumah yang hidup akan menggerakkan iman</p>
-
-        <div class="footnote">
-          <p><strong>📌 Nota Kaki (Standard K3A)</strong></p>
-          <p>【1】Surah Ṭāhā 20:132</p>
-          <p>【2】Surah asy-Syūrā 42:38</p>
-          <p>【3】Surah al-Baqarah 2:129</p>
-          <p>【4】Surah at-Taubah 9:71</p>
-        </div>
-      </section>
+</div>
+
+<div class="pdf-meta-page pdf-only pdf-break">
+  <div class="pdf-meta-inner">
+    <h2>Maklumat Dokumen</h2>
+    <div class="pdf-meta-list">
+      <p><strong>Judul:</strong> <span id="pdf-meta-title">BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</span></p>
+      <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
+      <p><strong>Laman:</strong> 3asbab.org</p>
+      <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
+      <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
+    </div>
+  </div>
+</div>
+
+<header class="wrap" id="top">
+  <div class="meta" id="header-line">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
+  <h1 id="page-title">BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</h1>
+  <div class="meta" id="category-line">Rumah Sebagai Markaz Dakwah, Manpower Umat &amp; Generasi Pengorbanan | Tauhid Amali</div>
+</header>
+
+<div class="jump no-print">
+  <div class="wrap">
+    <div class="jump-inner" id="jump-links">
+      <strong>🧭 Lompat ke:</strong>
+      <a href="#21-1">21.1</a> <a href="#21-2">21.2</a> <a href="#21-3">21.3</a>
+      <a href="#21-4">21.4</a> <a href="#21-5">21.5</a> <a href="#21-6">21.6</a>
+      <a href="#21-7">21.7</a> <a href="#21-8">21.8</a> <a href="#21-9">21.9</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <article>
+
+    <div class="section">
+      <div class="badge">🟩 BAB 21 — RUMAH SEBAGAI MARKAZ DAKWAH KELUARGA</div>
+      <p style="color:var(--muted);"><em>Masjid Nabawi menghantar jemaah; rumah sahabat membekalkan manusia untuk dihantar.</em></p>
+    </div>
+
+    <!-- ===== SECTION 21.1 ===== -->
+    <section class="section" id="21-1">
+      <h2>21.1 Krisis Rumah Umat: Rumah Menahan atau Menghantar?</h2>
+
+      <h3>Masalah Dunia</h3>
+      <p>Hari ini rumah umat semakin besar, pendidikan semakin tinggi, dan peluang kehidupan semakin luas. Ramai ibu bapa bekerja keras supaya anak-anak berjaya.</p>
+      <p>Lahir daripada rumah umat:</p>
+      <ul><li>graduan</li><li>profesional</li><li>pekerja mahir</li><li>usahawan</li><li>pentadbir</li><li>pakar dalam pelbagai bidang</li></ul>
+      <p>Ini bukan kesalahan. Malah umat memang memerlukan:</p>
+      <ul><li>guru yang mendidik</li><li>doktor yang merawat</li><li>jurutera yang membina</li><li>peniaga yang amanah</li><li>pentadbir yang adil</li><li>ahli teknologi yang memberi manfaat</li></ul>
+      <p>Namun timbul satu persoalan besar:</p>
+      <blockquote>Jika rumah umat semakin berjaya, kenapa umat semakin lemah? Kenapa masjid kekurangan manusia untuk berkhidmat? Kenapa dakwah kekurangan pengorbanan? Kenapa umat semakin ramai tetapi terasa semakin kurang manusia yang hidup untuk umat?</blockquote>
+      <p>Masalahnya bukan pada ilmu, profesion atau kejayaan. Masalahnya berlaku apabila rumah berhenti pada kejayaan individu tetapi tidak melahirkan fikir agama dan umat.</p>
+      <p>Akibatnya, lahirlah manusia yang berjaya untuk diri sendiri tetapi sedikit yang melihat ilmu, harta, masa dan kepakaran mereka sebagai amanah untuk agama dan masyarakat.</p>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ قُوٓا۟ أَنفُسَكُمْ وَأَهْلِيكُمْ نَارًۭا</div>
+      <div class="translation"><em>“Wahai orang-orang yang beriman! Peliharalah diri kamu dan ahli keluarga kamu daripada api neraka.”</em>【1】</div>
+      <p>Ayat ini menunjukkan bahawa rumah bukan sekadar tempat menjaga makan, pendidikan dan keselamatan dunia, tetapi tempat membina manusia yang selamat pada agama dan akhirat.</p>
+
+      <hr>
+
+      <h3>Rumah Dalam Sirah</h3>
+      <p>Hari ini ramai melihat rumah sebagai:</p>
+      <ul><li>tempat berehat</li><li>tempat privasi</li><li>tempat survival keluarga</li><li>tempat mengejar keselesaan</li><li>tempat membesarkan anak untuk kejayaan individu</li></ul>
+      <p>Tetapi rumah para sahabat radhiallahu ‘anhum berfungsi secara sangat berbeza. Rumah mereka bukan tempat melarikan diri daripada dakwah. Rumah mereka ialah <strong>markaz pembinaan manusia untuk agama</strong>.</p>
+      <p>Masjid Nabawi membina suasana umum umat. Tetapi rumah sahabat mengekalkan, menghidupkan dan melipatgandakan suasana itu.</p>
+      <p>Rumah mereka hidup dengan:</p>
+      <ul><li>fikir dakwah</li><li>fikir umat</li><li>sokongan pengorbanan</li><li>kesediaan berkhidmat</li><li>pembinaan generasi yang rela hidup untuk agama</li></ul>
+      <p>Maka rumah tidak menjadi tempat manusia “disimpan”. Sebaliknya, rumah menjadi tempat manusia disediakan untuk dihantar kepada umat.</p>
+      <p>Rasulullah sallallahu alaihi wa alihi wa sallam bersabda:</p>
+      <div class="arab">كُلُّكُمْ رَاعٍ وَكُلُّكُمْ مَسْئُولٌ عَنْ رَعِيَّتِهِ</div>
+      <div class="translation"><em>“Setiap kamu ialah pemimpin, dan setiap kamu akan dipersoalkan tentang yang dipimpinnya.”</em>【2】</div>
+      <p>Dalam hadith ini, rumah bukan sekadar unit keluarga. Rumah ialah amanah pembinaan manusia.</p>
+
+      <hr>
+
+      <h3>Rumah Menahan atau Menghantar?</h3>
+      <p>Inilah perbezaan paling besar antara rumah biasa dan rumah dakwah.</p>
+      <p>Rumah biasa bertanya: <em>“Bagaimana keluarga aku hidup selesa dan berjaya?”</em></p>
+      <p>Rumah dakwah bertanya: <em>“Bagaimana keluarga ini menjadi manfaat kepada agama dan umat?”</em></p>
+      <p>Rumah biasa berakhir pada kejayaan individu. Rumah dakwah melihat kejayaan individu sebagai alat khidmat kepada umat.</p>
+      <p>Rumah biasa takut kehilangan manusia. Rumah dakwah membina manusia yang rela berkorban.</p>
+      <p>Rumah biasa menahan. Rumah dakwah menghantar.</p>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">ٱنفِرُوا۟ خِفَافًۭا وَثِقَالًۭا وَجَـٰهِدُوا۟ بِأَمْوَٰلِكُمْ وَأَنفُسِكُمْ فِى سَبِيلِ ٱللَّهِ ۚ ذَٰلِكُمْ خَيْرٌۭ لَّكُمْ إِن كُنتُمْ تَعْلَمُونَ</div>
+      <div class="translation"><em>“Berangkatlah kamu sama ada dalam keadaan ringan atau berat, dan berjihadlah dengan harta dan diri kamu pada jalan Allah. Itulah yang lebih baik bagi kamu jika kamu mengetahui.”</em>【3】</div>
+      <p>Ayat ini menunjukkan bahawa agama berkembang melalui manusia yang sanggup berkorban dengan diri dan harta. Maka rumah yang hidup dengan agama bukan rumah yang menahan manusia daripada amal umat, tetapi rumah yang melahirkan manusia yang rela dihantar untuk agama.</p>
+
+      <hr>
+
+      <h3>Rumah Sahabat: Supplier Manpower Umat</h3>
+      <p>Secara sejarah, rumah-rumah sahabat melahirkan manusia yang kemudiannya menghidupkan dakwah, ilmu, pemerintahan, khidmat dan pembinaan masyarakat Islam.</p>
+      <p>Daripada rumah-rumah sahabat lahir:</p>
+      <ul><li>sahabat pengorbanan</li><li>anak-anak sahabat</li><li>tabi‘in</li><li>ahli ilmu</li><li>pentadbir</li><li>pembawa dakwah</li><li>manusia yang bergerak ke seluruh Jazirah Arab dan kemudian ke Syam, Iraq, Mesir, Parsi, Afrika Utara dan wilayah-wilayah lain</li></ul>
+      <p>Maka secara sejarah, rumah sahabat berfungsi sebagai supplier manpower kepada pengorbanan dakwah umat merentas generasi. Secara pedagogi sirah: <strong>Masjid Nabawi menghantar jemaah; rumah sahabat membekalkan manusia untuk dihantar.</strong></p>
+
+      <hr>
+
+      <h3>Krisis Rumah Umat Hari Ini</h3>
+      <p>Hari ini ramai rumah berjaya melahirkan manusia berjaya. Tetapi sedikit rumah melahirkan:</p>
+      <ul><li>manusia fikir dakwah</li><li>manusia pengorbanan</li><li>manusia fikir umat</li><li>manusia yang melihat profesion sebagai amanah umat</li><li>manusia yang rela berkhidmat untuk agama</li></ul>
+      <p>Akibatnya, masjid mahu menghantar jemaah, tetapi rumah tidak lagi membekalkan manpower kepada umat.</p>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">إِنَّ ٱللَّهَ ٱشْتَرَىٰ مِنَ ٱلْمُؤْمِنِينَ أَنفُسَهُمْ وَأَمْوَٰلَهُم بِأَنَّ لَهُمُ ٱلْجَنَّةَ</div>
+      <div class="translation"><em>“Sesungguhnya Allah telah membeli daripada orang-orang beriman diri mereka dan harta mereka dengan balasan syurga.”</em>【4】</div>
+      <p>Rumah yang hidup dengan agama melahirkan manusia yang memahami bahawa kehidupan bukan untuk diri sendiri semata-mata, tetapi untuk khidmat kepada Allah dan umat.</p>
+
+      <hr>
+
+      <p><strong>Rumusan Tauhidi 21.1</strong></p>
+      <p>Rumah yang hidup bukan rumah yang besar, tetapi rumah yang melahirkan manusia yang hidup untuk agama. Rumah dalam sirah bukan tempat menahan manusia, tetapi tempat membina generasi pengorbanan untuk dihantar kepada umat. Masjid Nabawi menghantar jemaah; rumah sahabat membekalkan manusia untuk dihantar.</p>
+
+      <hr>
+
+      <p><strong>Nota Kaki</strong></p>
+      <ul class="footnotes">
+        <li>【1】 Surah al-Taḥrīm (66:6).</li>
+        <li>【2】 Hadith riwayat al-Bukhārī dan Muslim: “Kullukum rā‘in wa kullukum mas’ūlun ‘an ra‘iyyatih.”</li>
+        <li>【3】 Surah al-Tawbah (9:41).</li>
+        <li>【4】 Surah al-Tawbah (9:111).</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Atas</a>
+    </section>
+
+    <!-- ===== SECTION 21.2 ===== -->
+    <section class="section" id="21-2">
+      <h2>21.2 Rumah Sahabat: Sambungan Masjid Nabawi</h2>
+      <p>Selepas para sahabat radhiallahu ‘anhum dibina di Masjid Nabawi, mereka tidak meninggalkan agama di masjid. Mereka membawa pulang suasana itu ke rumah.</p>
+      <p>Inilah antara rahsia besar bagaimana dakwah Rasulullah sallallahu alaihi wa alihi wa sallam tidak berhenti pada satu generasi, tetapi berkembang ke seluruh Jazirah Arab dan kemudian ke seluruh dunia Islam.</p>
+      <p>Hari ini agama sering dipisahkan: masjid untuk agama, rumah untuk dunia. Tetapi dalam sirah, rumah sahabat bukan dunia yang terpisah daripada Masjid Nabawi. Sebaliknya, rumah sahabat ialah sambungan kepada Masjid Nabawi.</p>
+      <p>Masjid Nabawi membina suasana umum umat. Rumah sahabat mengekalkan, menghidupkan dan melipatgandakan suasana itu.</p>
+      <p>Apa yang hidup di Masjid Nabawi dibawa pulang ke rumah:</p>
+      <ul><li>fikir dakwah</li><li>fikir umat</li><li>sokongan kepada pengorbanan</li><li>kasih kerana Allah</li><li>adab dan akhlak</li><li>semangat khidmat</li><li>kesediaan hidup untuk agama</li></ul>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">وَٱذْكُرْنَ مَا يُتْلَىٰ فِى بُيُوتِكُنَّ مِنْ ءَايَـٰتِ ٱللَّهِ وَٱلْحِكْمَةِ</div>
+      <div class="translation"><em>“Dan ingatlah apa yang dibacakan di rumah-rumah kamu daripada ayat-ayat Allah dan hikmah.”</em>【1】</div>
+      <p>Ayat ini menunjukkan bahawa rumah Rasulullah sallallahu alaihi wa alihi wa sallam ialah rumah yang hidup dengan wahyu, ilmu, tarbiyah dan fikir agama.</p>
+      <p>Begitulah rumah para sahabat. Rumah mereka bukan tempat berehat daripada agama. Sebaliknya, rumah menjadi tempat agama terus hidup selepas keluar dari masjid.</p>
+      <p>Rasulullah sallallahu alaihi wa alihi wa sallam bersabda:</p>
+      <div class="arab">كُلُّكُمْ رَاعٍ وَكُلُّكُمْ مَسْئُولٌ عَنْ رَعِيَّتِهِ</div>
+      <div class="translation"><em>“Setiap kamu ialah pemimpin, dan setiap kamu akan dipersoalkan tentang yang dipimpinnya.”</em>【2】</div>
+      <p>Maka rumah dalam sirah bukan sekadar tempat tinggal. Rumah ialah amanah pembinaan manusia.</p>
+
+      <hr>
+
+      <h3>Rumah Sahabat Sebagai Supplier Manpower Umat</h3>
+      <p>Secara sejarah, rumah-rumah sahabat bukan sekadar membesarkan keluarga. Rumah mereka melahirkan manusia pengorbanan, ilmu, dakwah, khidmat dan kepimpinan yang akhirnya tersebar ke seluruh dunia Islam.</p>
+
+      <h4>Rumah Rasulullah ﷺ &amp; Khadijah radhiallahu ‘anha</h4>
+      <p>Dari rumah kecil inilah lahir asas dakwah Islam. Rumah ini menjadi tempat:</p>
+      <ul><li>wahyu turun</li><li>dakwah awal bergerak</li><li>pengorbanan berlaku</li><li>sahabat awal dibina</li></ul>
+      <p>Di rumah ini juga dibesarkan generasi awal Islam yang hidup bersama dakwah dan pengorbanan. Rumah kecil ini akhirnya melahirkan perubahan global.</p>
+
+      <h4>Rumah Abu Bakr radhiallahu ‘anhu</h4>
+      <p>Rumah Abu Bakr melahirkan keluarga yang menyokong dakwah dengan ilmu dan pengorbanan. Daripadanya lahir:</p>
+      <ul><li>Sayyidatina Aisyah radhiallahu ‘anha, antara guru terbesar umat</li><li>Asma’ binti Abu Bakr radhiallahu ‘anha, penyokong Hijrah yang membawa makanan kepada Rasulullah ﷺ</li><li>Abdullah ibn Abu Bakr, yang membantu operasi Hijrah dengan membawa maklumat【3】</li></ul>
+      <p>Rumah ini bukan sekadar rumah keluarga. Ia rumah yang membekalkan manusia kepada dakwah.</p>
+
+      <h4>Rumah Umar ibn al-Khattab radhiallahu ‘anhu</h4>
+      <p>Rumah Umar melahirkan disiplin, ilmu dan tadbir umat. Daripadanya lahir:</p>
+      <ul><li>Hafsah radhiallahu ‘anha, penjaga mushaf al-Qur’an</li><li>Abdullah ibn Umar radhiallahu ‘anhu, ilmuan besar umat【4】</li></ul>
+      <p>Rumah ini melahirkan manusia yang membantu pembinaan masyarakat Islam pada skala besar.</p>
+
+      <h4>Rumah Ali ibn Abi Talib &amp; Fatimah radhiallahu ‘anhuma</h4>
+      <p>Rumah ini hidup dengan kesederhanaan, kesabaran dan pengorbanan. Daripadanya lahir:</p>
+      <ul><li>Hasan radhiallahu ‘anhu</li><li>Husayn radhiallahu ‘anhu</li></ul>
+      <p>serta generasi ilmu, pengorbanan dan kepimpinan umat【5】. Rumah kecil yang sederhana ini menjadi bukti bahawa rumah yang kuat bukan rumah yang mewah, tetapi rumah yang melahirkan manusia untuk agama.</p>
+
+      <h4>Rumah al-Khansāʾ radhiallahu ‘anha: Rumah Yang Menghantar Anak Untuk Agama</h4>
+      <p>Antara contoh paling kuat rumah yang hidup dengan fikir agama ialah rumah al-Khansāʾ radhiallahu ‘anha. Dalam peperangan al-Qadisiyyah, beliau mempunyai empat orang anak lelaki. Pada malam sebelum peperangan, beliau menghimpunkan anak-anaknya lalu berkata:</p>
+      <div class="arab">يَا بَنِيَّ، إِنَّكُمْ أَسْلَمْتُمْ طَائِعِينَ، وَهَاجَرْتُمْ مُخْتَارِينَ… فَإِذَا رَأَيْتُمُ الْحَرْبَ قَدْ شَمَّرَتْ عَنْ سَاقِهَا، وَاضْطَرَمَتْ لَظَىٰ عَلَىٰ سِيَاقِهَا، فَتَيَمَّمُوا وَطِيسَهَا، وَجَالِدُوا رَئِيسَهَا</div>
+      <div class="translation"><em>“Wahai anak-anakku, sesungguhnya kamu memeluk Islam dengan rela dan berhijrah dengan pilihan sendiri… Apabila kamu melihat peperangan telah memuncak dan api pertempuran menyala, masuklah ke tengah-tengahnya dan hadapilah pemimpinnya.”</em>【6】</div>
+      <p>Keesokan harinya, keempat-empat anaknya gugur. Apabila berita itu sampai kepada beliau, al-Khansāʾ berkata:</p>
+      <div class="arab">ٱلْحَمْدُ لِلَّٰهِ ٱلَّذِي شَرَّفَنِي بِقَتْلِهِمْ، وَأَرْجُو مِنْ رَبِّي أَنْ يَجْمَعَنِي بِهِمْ فِي مُسْتَقَرِّ رَحْمَتِهِ</div>
+      <div class="translation"><em>“Segala puji bagi Allah yang telah memuliakan aku dengan kematian mereka. Aku berharap Tuhanku menghimpunkan aku bersama mereka dalam tempat rahmat-Nya.”</em>【7】</div>
+      <p>Kisah ini menunjukkan bahawa rumah dalam sirah bukan sekadar tempat membesarkan anak. Rumah menjadi tempat melahirkan manusia yang rela hidup dan berkorban untuk agama. Anak tidak dilihat sekadar sebagai kebanggaan keluarga. Sebaliknya, anak dilihat sebagai amanah untuk agama dan umat.</p>
+
+      <h4>Rumah Ansar</h4>
+      <p>Rumah-rumah Ansar membuka pintu mereka kepada Muhajirin. Rumah mereka menjadi tempat:</p>
+      <ul><li>menerima saudara seagama</li><li>menyokong dakwah</li><li>berkongsi harta</li><li>membina jamaah</li><li>menghidupkan suasana iman</li></ul>
+      <p>Rumah mereka membekalkan suasana, logistik dan manusia kepada umat.</p>
+      <p>Daripada rumah-rumah seperti inilah lahir:</p>
+      <ul><li>sahabat pengorbanan</li><li>anak-anak sahabat</li><li>tabi‘in</li><li>ahli ilmu</li><li>pentadbir umat</li><li>pembawa dakwah</li></ul>
+      <p>yang kemudian bergerak ke Syam, Iraq, Mesir, Parsi, Afrika Utara dan wilayah-wilayah lain. Maka secara sejarah, rumah sahabat berfungsi sebagai supplier manpower kepada pengorbanan dakwah umat merentas generasi. Dan secara pedagogi sirah: <strong>Masjid Nabawi menghantar jemaah; rumah sahabat membekalkan manusia untuk dihantar.</strong></p>
+
+      <hr>
+
+      <p><strong>Rumusan Tauhidi 21.2</strong></p>
+      <p>Rumah sahabat bukan rumah yang terpisah daripada Masjid Nabawi, tetapi sambungannya. Masjid membina suasana umum umat; rumah sahabat mengekalkan dan melipatgandakan suasana itu sehingga lahir generasi pengorbanan. Masjid Nabawi menghantar jemaah; rumah sahabat membekalkan manusia untuk dihantar.</p>
+
+      <hr>
+
+      <p><strong>Nota Kaki</strong></p>
+      <ul class="footnotes">
+        <li>【1】 Surah al-Aḥzāb (33:34).</li>
+        <li>【2】 Hadith riwayat al-Bukhārī dan Muslim.</li>
+        <li>【3】 Riwayat sirah Hijrah dalam Ibn Hishām dan Ibn Kathīr.</li>
+        <li>【4】 Biografi Hafsah dan Abdullah ibn Umar dalam kitab ṭabaqāt dan sirah.</li>
+        <li>【5】 Biografi Ahl al-Bayt dalam kitab sirah dan ṭabaqāt.</li>
+        <li>【6】 Riwayat ucapan al-Khansāʾ kepada anak-anaknya sebelum al-Qadisiyyah dalam karya sejarah seperti al-Bidāyah wa al-Nihāyah.</li>
+        <li>【7】 Riwayat reaksi al-Khansāʾ selepas kesyahidan anak-anaknya dalam sumber sejarah Islam.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Atas</a>
+    </section>
+
+    <!-- ===== SECTION 21.3 ===== -->
+    <section class="section" id="21-3">
+      <h2>21.3 Apa Itu Rumah Sebagai Markaz Dakwah?</h2>
+      <p>Selepas melihat bagaimana rumah sahabat menjadi sambungan kepada Masjid Nabawi, timbul satu persoalan penting: Apakah sebenarnya yang dimaksudkan dengan rumah sebagai markaz dakwah?</p>
+      <p>Adakah ia rumah yang penuh ceramah? Adakah rumah yang semua orang sentiasa bercakap tentang agama? Adakah rumah yang meninggalkan urusan dunia?</p>
+      <p>Jawapannya: bukan. Rumah sebagai markaz dakwah bukan rumah yang menolak dunia. Rumah sebagai markaz dakwah ialah rumah yang mengatur dunia supaya agama hidup.</p>
+
+      <hr>
+
+      <h3>Takrif Rumah Sebagai Markaz Dakwah</h3>
+      <p>Rumah sebagai markaz dakwah ialah rumah yang membina iman, amal, pengorbanan dan fikir umat sehingga ahli keluarga menjadi manusia yang siap dihantar untuk khidmat agama dan umat.</p>
+      <p>Rumah seperti ini tidak melihat agama sebagai aktiviti sampingan. Agama menjadi budaya rumah. Rumah tidak berhenti pada:</p>
+      <ul><li>makan minum</li><li>pendidikan dunia</li><li>keselesaan hidup</li><li>kejayaan individu</li></ul>
+      <p>Sebaliknya rumah bergerak dengan satu fikir: <em>“Bagaimana keluarga ini menjadi manfaat kepada agama dan umat?”</em></p>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ قُوٓا۟ أَنفُسَكُمْ وَأَهْلِيكُمْ نَارًۭا</div>
+      <div class="translation"><em>“Wahai orang-orang yang beriman! Peliharalah diri kamu dan ahli keluarga kamu daripada api neraka.”</em>【1】</div>
+      <p>Ayat ini menunjukkan bahawa rumah bukan sekadar tempat menjaga keselamatan dunia keluarga. Rumah ialah tempat membina manusia yang selamat agamanya.</p>
+      <p>Rasulullah sallallahu alaihi wa alihi wa sallam bersabda:</p>
+      <div class="arab">كُلُّكُمْ رَاعٍ وَكُلُّكُمْ مَسْئُولٌ عَنْ رَعِيَّتِهِ</div>
+      <div class="translation"><em>“Setiap kamu ialah pemimpin, dan setiap kamu akan dipersoalkan tentang yang dipimpinnya.”</em>【2】</div>
+      <p>Maka rumah bukan sekadar tempat tinggal. Rumah ialah amanah pembinaan manusia.</p>
+
+      <hr>
+
+      <h3>Rumah Biasa vs Rumah Markaz Dakwah</h3>
+      <table>
+        <thead><tr><th>Rumah Biasa</th><th>Rumah Markaz Dakwah</th></tr></thead>
+        <tbody>
+          <tr><td>Fokus survival keluarga</td><td>Fokus pembinaan umat</td></tr>
+          <tr><td>Anak dibesarkan untuk kerjaya sahaja</td><td>Anak dibesarkan untuk khidmat agama &amp; umat</td></tr>
+          <tr><td>Rumah tempat berehat</td><td>Rumah tempat pembinaan manusia</td></tr>
+          <tr><td>Dakwah episodik</td><td>Dakwah menjadi budaya rumah</td></tr>
+          <tr><td>Agama berlaku ketika lapang</td><td>Agama menjadi pusat keputusan keluarga</td></tr>
+          <tr><td>Kejayaan diukur pada pencapaian individu</td><td>Kejayaan diukur pada manfaat kepada agama &amp; umat</td></tr>
+          <tr><td>Takut kehilangan anak kepada dunia</td><td>Redha anak berkhidmat untuk agama</td></tr>
+        </tbody>
+      </table>
+      <p>Perbezaannya bukan pada rupa rumah. Bukan pada besar atau kecil. Bukan pada kaya atau miskin. Perbezaannya pada <strong>fikir yang hidup di dalam rumah</strong>.</p>
+      <p>Rumah biasa bertanya: <em>“Macam mana keluarga aku berjaya?”</em></p>
+      <p>Rumah markaz dakwah bertanya: <em>“Macam mana keluarga ini menjadi kekuatan agama dan umat?”</em></p>
+
+      <hr>
+
+      <h3>Rumah Yang Membina Manusia Untuk Dihantar</h3>
+      <p>Rumah markaz dakwah tidak melihat anak, pasangan atau keluarga sekadar aset peribadi. Rumah melihat keluarga sebagai amanah. Amanah untuk:</p>
+      <ul><li>membina iman</li><li>membina amal</li><li>membina pengorbanan</li><li>membina fikir umat</li><li>membina manusia yang sedia berkhidmat</li></ul>
+      <p>Kerana itu rumah sahabat melahirkan manusia yang apabila agama memanggil, mereka bersedia pergi. Ada yang keluar berdakwah. Ada yang membawa ilmu. Ada yang mentadbir umat. Ada yang membantu pengorbanan. Ada yang menyokong saf dakwah dari belakang. Tetapi semuanya mempunyai satu fikir: <em>“Hidup ini untuk agama dan umat.”</em></p>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">إِنَّ ٱللَّهَ ٱشْتَرَىٰ مِنَ ٱلْمُؤْمِنِينَ أَنفُسَهُمْ وَأَمْوَٰلَهُم بِأَنَّ لَهُمُ ٱلْجَنَّةَ</div>
+      <div class="translation"><em>“Sesungguhnya Allah telah membeli daripada orang-orang beriman diri mereka dan harta mereka dengan balasan syurga.”</em>【3】</div>
+      <p>Maka rumah markaz dakwah bukan rumah yang menahan manusia daripada agama. Sebaliknya, rumah menjadi tempat manusia disediakan untuk dihantar kepada umat.</p>
+
+      <hr>
+
+      <p><strong>Rumusan Tauhidi 21.3</strong></p>
+      <p>Rumah sebagai markaz dakwah ialah rumah yang membina iman, amal, pengorbanan dan fikir umat sehingga lahir manusia yang siap berkhidmat kepada agama. Rumah sahabat tidak hidup untuk survival semata-mata, tetapi untuk pembinaan manusia bagi umat. Rumah biasa menahan manusia; rumah markaz dakwah menyediakan manusia untuk dihantar.</p>
+
+      <hr>
+
+      <p><strong>Nota Kaki</strong></p>
+      <ul class="footnotes">
+        <li>【1】 Surah al-Taḥrīm (66:6).</li>
+        <li>【2】 Hadith riwayat al-Bukhārī dan Muslim.</li>
+        <li>【3】 Surah al-Tawbah (9:111).</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Atas</a>
+    </section>
+
+    <!-- ===== SECTION 21.4 ===== -->
+    <section class="section" id="21-4">
+      <h2>21.4 Fungsi Rumah Sebagai Kilang Manpower Umat</h2>
+      <p>Selepas memahami bahawa rumah sahabat ialah sambungan Masjid Nabawi, timbul satu persoalan besar: Apakah sebenarnya fungsi rumah sehingga mampu melahirkan generasi pengorbanan untuk umat?</p>
+      <p>Rumah dalam sirah bukan sekadar tempat tinggal. Rumah ialah tempat pembinaan manusia. Rumah menjadi <strong>kilang manpower umat</strong>.</p>
+      <p>Bukan kilang pekerja semata-mata. Bukan kilang graduan semata-mata. Bukan kilang kejayaan individu semata-mata. Tetapi tempat lahirnya manusia yang mempunyai iman, akhlak, pengorbanan dan fikir umat sehingga siap dihantar untuk khidmat agama.</p>
+
+      <hr>
+
+      <h3>(1) Kilang Iman</h3>
+      <p>Fungsi pertama rumah ialah melahirkan hati yang hidup. Rumah sahabat tidak hidup terpisah daripada suasana Masjid Nabawi. Apa yang dipelajari di masjid dihidupkan di rumah. Rumah hidup dengan:</p>
+      <ul><li>taklim rumah</li><li>zikir</li><li>doa</li><li>peringatan akhirat</li><li>perbualan iman dan agama</li><li>suasana kasih kerana Allah</li><li>sokongan terhadap amal dakwah dan ibadah</li></ul>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">وَٱذْكُرْنَ مَا يُتْلَىٰ فِى بُيُوتِكُنَّ مِنْ ءَايَـٰتِ ٱللَّهِ وَٱلْحِكْمَةِ</div>
+      <div class="translation"><em>“Dan ingatlah apa yang dibacakan di rumah-rumah kamu daripada ayat-ayat Allah dan hikmah.”</em>【1】</div>
+      <p>Rumah menjadi tempat iman terus hidup selepas keluar dari masjid. Tujuannya bukan melahirkan manusia berilmu semata-mata, tetapi melahirkan hati yang mencintai Allah dan hidup untuk agama.</p>
+
+      <hr>
+
+      <h3>(2) Kilang Akhlak &amp; Khidmat</h3>
+      <p>Fungsi kedua rumah ialah melatih manusia supaya boleh berkhidmat. Rumah melatih:</p>
+      <ul><li>khidmat kepada ibu bapa</li><li>khidmat sesama ahli keluarga</li><li>disiplin</li><li>amanah</li><li>sabar</li><li>adab</li><li>tanggungjawab</li></ul>
+      <p>Di rumah manusia belajar memberi sebelum menerima. Di rumah manusia belajar memikul beban. Di rumah manusia belajar hidup untuk orang lain.</p>
+      <p>Rasulullah sallallahu alaihi wa alihi wa sallam bersabda:</p>
+      <div class="arab">خَيْرُكُمْ خَيْرُكُمْ لِأَهْلِهِ</div>
+      <div class="translation"><em>“Sebaik-baik kamu ialah yang paling baik terhadap keluarganya.”</em>【2】</div>
+      <p>Prinsip besar rumah dakwah ialah: orang yang tidak mampu khidmat rumah, sukar khidmat umat. Kerana umat dibina daripada manusia yang belajar berkhidmat sejak kecil.</p>
+
+      <hr>
+
+      <h3>(3) Kilang Mujahadah</h3>
+      <p>Fungsi ketiga rumah ialah melatih jiwa pengorbanan. Rumah sahabat tidak membesarkan anak dalam budaya selesa semata-mata. Rumah melatih:</p>
+      <ul><li>pengorbanan masa</li><li>pengorbanan harta</li><li>kesabaran dalam kesusahan</li><li>keluar daripada zon selesa</li><li>fikir orang lain lebih dahulu</li></ul>
+      <p>Anak-anak melihat:</p>
+      <ul><li>ayah keluar untuk agama</li><li>ibu menyokong pengorbanan</li><li>keluarga hidup dengan fikir dakwah</li><li>pengorbanan dianggap kemuliaan, bukan kerugian</li></ul>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">إِنَّ ٱللَّهَ ٱشْتَرَىٰ مِنَ ٱلْمُؤْمِنِينَ أَنفُسَهُمْ وَأَمْوَٰلَهُم بِأَنَّ لَهُمُ ٱلْجَنَّةَ</div>
+      <div class="translation"><em>“Sesungguhnya Allah telah membeli daripada orang-orang beriman diri mereka dan harta mereka dengan balasan syurga.”</em>【3】</div>
+      <p>Rumah dakwah melahirkan manusia yang memahami: hidup bukan untuk disimpan, tetapi untuk dikorbankan di jalan Allah.</p>
+
+      <hr>
+
+      <h3>(4) Kilang Fikir Umat</h3>
+      <p>Fungsi keempat rumah ialah melahirkan hati yang tidak hidup untuk diri sendiri. Rumah dakwah bercakap tentang:</p>
+      <ul><li>keadaan umat</li><li>fikir hidayah manusia</li><li>jiran tetangga</li><li>keluarga besar</li><li>masyarakat</li><li>dakwah dan khidmat</li></ul>
+      <p>Rumah tidak berpusat pada “aku, keluarga aku, hidup aku” tetapi bergerak kepada “bagaimana kita menjadi manfaat kepada umat?”</p>
+      <p>Rasulullah sallallahu alaihi wa alihi wa sallam bersabda:</p>
+      <div class="arab">مَنْ لَا يَهْتَمُّ بِأَمْرِ الْمُسْلِمِينَ فَلَيْسَ مِنْهُمْ</div>
+      <div class="translation"><em>“Sesiapa yang tidak mengambil berat urusan kaum Muslimin maka dia bukan daripada kalangan mereka.”</em>【4】</div>
+      <p>Maka rumah dakwah melahirkan manusia yang hatinya memikul beban umat.</p>
+
+      <hr>
+
+      <h3>(5) Kilang Penghantaran (Manpower Factory)</h3>
+      <p>Inilah fungsi paling penting. Rumah dakwah bukan sekadar melahirkan orang baik. Rumah dakwah melahirkan manusia yang:</p>
+      <ul><li>boleh dihantar untuk dakwah</li><li>boleh khidmat jamaah</li><li>boleh menjadi guru</li><li>boleh menjadi pembina masyarakat</li><li>boleh menjadi pemimpin amanah</li><li>boleh menjadi pedagang yang membawa manfaat</li><li>boleh menjadi penyokong amal agama</li></ul>
+      <p>Rumah tidak sekadar membina “anak berjaya”. Rumah membina manusia yang siap dihantar untuk khidmat agama dan umat.</p>
+      <p>Sebab itu rumah sahabat melahirkan:</p>
+      <ul><li>ahli ilmu</li><li>pentadbir</li><li>pedagang amanah</li><li>tentera Islam</li><li>pendakwah</li><li>tabi‘in</li><li>pembina masyarakat</li></ul>
+      <p>yang akhirnya bergerak ke seluruh Jazirah Arab, Syam, Iraq, Mesir, Parsi dan wilayah-wilayah lain. Maka secara sejarah, rumah sahabat ialah kilang manpower umat. Masjid Nabawi menghantar jemaah. Rumah sahabat membekalkan manusia untuk dihantar.</p>
+
+      <hr>
+
+      <p><strong>Rumusan Tauhidi 21.4</strong></p>
+      <p>Rumah yang hidup bukan rumah yang besar, tetapi rumah yang melahirkan manusia untuk agama. Rumah dakwah membina iman, akhlak, pengorbanan dan fikir umat sehingga lahir manusia yang siap berkhidmat. Masjid Nabawi menghantar jemaah; rumah sahabat membekalkan manpower untuk dihantar.</p>
+
+      <hr>
+
+      <p><strong>Nota Kaki</strong></p>
+      <ul class="footnotes">
+        <li>【1】 Surah al-Aḥzāb (33:34).</li>
+        <li>【2】 Hadith riwayat al-Tirmidhī.</li>
+        <li>【3】 Surah al-Tawbah (9:111).</li>
+        <li>【4】 Diriwayatkan dalam al-Mu‘jam al-Awsaṭ oleh al-Ṭabarānī; dinilai lemah oleh sebahagian muhaddithin namun sering disebut pada bab keprihatinan umat.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Atas</a>
+    </section>
+
+    <!-- ===== SECTION 21.5 ===== -->
+    <section class="section" id="21-5">
+      <h2>21.5 Fungsi Rumah Sebagai Kilang Generasi Dakwah</h2>
+      <p>Selepas memahami bahawa rumah sahabat ialah sambungan kepada Masjid Nabawi, persoalan seterusnya ialah: Apakah fungsi sebenar rumah sehingga mampu melahirkan generasi yang menyambung dakwah Rasulullah ﷺ merentas zaman?</p>
+      <p>Rumah dalam sirah bukan sekadar tempat tinggal. Rumah ialah tempat pembinaan generasi. Rumah menjadi <strong>kilang generasi dakwah</strong>. Daripada rumah-rumah inilah lahir sahabat, tabi‘in dan generasi selepas mereka yang memikul agama ke seluruh dunia.</p>
+
+      <hr>
+
+      <h3>(1) Kilang Dakwah &amp; Iman</h3>
+      <p>Fungsi pertama rumah ialah melahirkan hati yang hidup dengan dakwah dan iman. Rumah hidup dengan:</p>
+      <ul><li>fikir dakwah</li><li>fikir hidayah manusia</li><li>taklim rumah</li><li>zikir dan doa</li><li>sokongan kepada amal jemaah</li><li>mendorong lelaki ke masjid dan dakwah</li><li>suasana kasih kerana Allah</li></ul>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">وَٱذْكُرْنَ مَا يُتْلَىٰ فِى بُيُوتِكُنَّ مِنْ ءَايَـٰتِ ٱللَّهِ وَٱلْحِكْمَةِ</div>
+      <div class="translation"><em>“Dan ingatlah apa yang dibacakan di rumah-rumah kamu daripada ayat-ayat Allah dan hikmah.”</em>【1】</div>
+      <p>Tujuannya bukan sekadar melahirkan manusia yang mengetahui agama, tetapi melahirkan hati yang mahu agama hidup pada manusia.</p>
+
+      <hr>
+
+      <h3>(2) Kilang Sokongan Pengorbanan</h3>
+      <p>Fungsi kedua rumah ialah membina budaya yang menyokong agama. Rumah membiasakan ahli keluarga untuk:</p>
+      <ul><li>menyokong orang keluar dakwah</li><li>sabar dengan kesusahan agama</li><li>mendahulukan agama</li><li>menghormati amal umat</li><li>memuliakan pengorbanan di jalan Allah</li></ul>
+      <p>Rumah tidak melihat dakwah sebagai gangguan kepada kehidupan. Sebaliknya, dakwah menjadi sebahagian daripada kehidupan keluarga.</p>
+      <p>Prinsipnya: <strong>Rumah dakwah memudahkan dakwah — bukan menghalangnya.</strong></p>
+
+      <hr>
+
+      <h3>(3) Kilang Akhlak &amp; Khidmat</h3>
+      <p>Fungsi ketiga rumah ialah melahirkan manusia yang tahu berkhidmat. Rumah melatih:</p>
+      <ul><li>khidmat kepada ibu bapa</li><li>amanah</li><li>disiplin</li><li>sabar</li><li>adab</li><li>tanggungjawab</li></ul>
+      <p>Rasulullah sallallahu alaihi wa alihi wa sallam bersabda:</p>
+      <div class="arab">خَيْرُكُمْ خَيْرُكُمْ لِأَهْلِهِ</div>
+      <div class="translation"><em>“Sebaik-baik kamu ialah yang paling baik terhadap keluarganya.”</em>【2】</div>
+      <p>Prinsipnya: <strong>Yang gagal khidmat rumah sukar khidmat umat.</strong> Kerana umat dibina oleh manusia yang belajar berkhidmat sejak kecil.</p>
+
+      <hr>
+
+      <h3>(4) Kilang Mujahadah</h3>
+      <p>Fungsi keempat rumah ialah melatih jiwa pengorbanan. Rumah membiasakan ahli keluarga dengan:</p>
+      <ul><li>korban masa</li><li>korban harta</li><li>keluar dari zon selesa</li><li>mendahulukan orang lain</li><li>memikul beban agama</li></ul>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">إِنَّ ٱللَّهَ ٱشْتَرَىٰ مِنَ ٱلْمُؤْمِنِينَ أَنفُسَهُمْ وَأَمْوَٰلَهُم بِأَنَّ لَهُمُ ٱلْجَنَّةَ</div>
+      <div class="translation"><em>“Sesungguhnya Allah telah membeli daripada orang-orang beriman diri mereka dan harta mereka dengan balasan syurga.”</em>【3】</div>
+      <p>Tujuannya ialah melahirkan manusia pengorbanan. Manusia yang rela memberi, bukan sekadar menerima.</p>
+
+      <hr>
+
+      <h3>(5) Kilang Generasi Umat</h3>
+      <p>Inilah fungsi terbesar rumah dakwah. Rumah dakwah tidak berhenti pada melahirkan individu yang berjaya. Rumah dakwah melahirkan generasi yang menyambung agama.</p>
+      <p>Daripada rumah seperti inilah lahir:</p>
+      <ul><li>sahabat</li><li>tabi‘in</li><li>tabi‘ tabi‘in</li><li>guru</li><li>amir</li><li>pembina masyarakat</li><li>pendakwah</li><li>penyokong amal agama</li></ul>
+      <p>Mereka berbeza profesion, kemampuan dan peranan. Tetapi mereka mempunyai satu persamaan: hidup mereka digunakan untuk agama dan umat.</p>
+      <p>Prinsipnya: <strong>Rumah dakwah bukan melahirkan individu berjaya semata-mata, tetapi generasi yang menyambung agama.</strong> Sebab itu rumah sahabat menjadi sumber manpower umat merentas generasi. Masjid Nabawi menghantar jemaah. Rumah sahabat membekalkan generasi yang akan dihantar.</p>
+
+      <hr>
+
+      <p><strong>Rumusan Tauhidi 21.5</strong></p>
+      <p>Rumah sebagai markaz dakwah bukan sekadar membina keluarga yang baik, tetapi membina generasi yang menyambung agama. Rumah melahirkan iman, sokongan kepada pengorbanan, akhlak, mujahadah dan fikir dakwah sehingga lahir manusia yang hidup untuk umat. Masjid Nabawi menghantar jemaah; rumah sahabat membekalkan generasi untuk dihantar.</p>
+
+      <hr>
+
+      <p><strong>Nota Kaki</strong></p>
+      <ul class="footnotes">
+        <li>【1】 Surah al-Aḥzāb (33:34).</li>
+        <li>【2】 Hadith riwayat al-Tirmidhī.</li>
+        <li>【3】 Surah al-Tawbah (9:111).</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Atas</a>
+    </section>
+
+    <!-- ===== SECTION 21.6 ===== -->
+    <section class="section" id="21-6">
+      <h2>21.6 Wanita Sebagai Penjaga Markaz Rumah</h2>
+
+      <h3>21.6.1 Wanita dan Rahsia Kesinambungan Hidayat</h3>
+      <p>Apabila manusia melihat sejarah para Nabi, perhatian biasanya tertumpu kepada para Rasul. Kita melihat:</p>
+      <ul><li>Nabi Nuh alaihissalam berdakwah 950 tahun</li><li>Nabi Ibrahim alaihissalam membina Kaabah</li><li>Rasulullah sallallahu alaihi wa alihi wa sallam membawa Islam ke seluruh dunia</li></ul>
+      <p>Tetapi apabila diteliti lebih mendalam, terdapat satu pola besar yang sering tidak disedari. Di belakang setiap rumah yang menjadi sumber hidayat kepada manusia, terdapat wanita yang menjaga rumah itu. Dan apabila wanita tidak bersama perjuangan agama, kesan dakwah kepada generasi menjadi lemah.</p>
+      <p>Seolah-olah Allah sedang menunjukkan satu sunnatullah: lelaki sering membawa dakwah keluar dari rumah, tetapi wanita menentukan sama ada dakwah itu hidup di dalam rumah.</p>
+      <p>Lelaki menghantar. Wanita mengekalkan. Lelaki membuka jalan. Wanita memastikan jalan itu terus hidup kepada generasi seterusnya. Kerana itu, wanita bukan sekadar penghuni rumah. Wanita ialah penjaga kesinambungan hidayat dalam rumah.</p>
+
+      <hr>
+
+      <h3>21.6.2 Isteri Nabi Nuh alaihissalam: Apabila Rumah Tidak Menyokong Dakwah</h3>
+      <p>Nabi Nuh alaihissalam merupakan antara Rasul yang paling lama berdakwah.</p>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">فَلَبِثَ فِيهِمْ أَلْفَ سَنَةٍ إِلَّا خَمْسِينَ عَامًا</div>
+      <div class="translation"><em>“Maka dia tinggal dalam kalangan mereka seribu tahun kurang lima puluh tahun.”</em>【1】</div>
+      <p>Sembilan ratus lima puluh tahun. Namun selepas tempoh yang begitu panjang, hanya sedikit manusia yang beriman. Lebih menyedihkan, isteri baginda sendiri tidak beriman.</p>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">ضَرَبَ ٱللَّهُ مَثَلًا لِّلَّذِينَ كَفَرُوا ٱمْرَأَتَ نُوحٍ</div>
+      <div class="translation"><em>“Allah membuat perumpamaan bagi orang-orang kafir dengan isteri Nuh.”</em>【2】</div>
+      <p>Akibatnya, bahkan anak baginda sendiri tidak mengikut jalan iman. Allah merakamkan dialog yang sangat menyayat hati ketika banjir besar:</p>
+      <div class="arab">يَـٰبُنَىَّ ٱرْكَب مَّعَنَا وَلَا تَكُن مَّعَ ٱلْكَـٰفِرِينَ</div>
+      <div class="translation"><em>“Wahai anakku! Naiklah bersama kami dan janganlah engkau bersama orang-orang kafir.”</em>【3】</div>
+      <p>Tetapi anaknya menolak. Lalu tenggelam bersama orang-orang yang ingkar.</p>
+      <p>Bayangkan. Seorang Rasul yang berdakwah selama 950 tahun. Tetapi rumahnya sendiri tidak menjadi markaz hidayat yang sempurna. Ini bukan mengurangkan kemuliaan Nabi Nuh alaihissalam. Sebaliknya ia menunjukkan betapa besarnya kesan seorang wanita terhadap generasi.</p>
+
+      <hr>
+
+      <h3>21.6.3 Sarah dan Hajar: Wanita Yang Membina Sejarah Umat</h3>
+      <p>Kemudian Allah menunjukkan contoh yang bertentangan melalui Nabi Ibrahim alaihissalam. Jika Nabi Nuh menunjukkan bahayanya rumah yang tidak menyokong dakwah, maka Nabi Ibrahim menunjukkan kekuatan rumah yang menyokong dakwah.</p>
+      <p>Sarah radhiallahu anha berdiri bersama Nabi Ibrahim alaihissalam dalam perjuangan agama. Hajar radhiallahu anha pula menerima ujian yang hampir tidak mampu difikirkan manusia biasa. Ditinggalkan di lembah tandus. Tiada manusia. Tiada tanaman. Tiada sumber kehidupan.</p>
+      <p>Allah merakamkan doa Nabi Ibrahim:</p>
+      <div class="arab">رَّبَّنَآ إِنِّىٓ أَسْكَنتُ مِن ذُرِّيَّتِى بِوَادٍ غَيْرِ ذِى زَرْعٍ</div>
+      <div class="translation"><em>“Wahai Tuhan kami, sesungguhnya aku telah menempatkan sebahagian zuriatku di sebuah lembah yang tidak mempunyai tanaman.”</em>【4】</div>
+      <p>Namun Hajar tidak memprotes. Tidak menghalang. Tidak meminta Nabi Ibrahim memilih keluarga atau agama. Sebaliknya beliau menerima pengorbanan itu kerana Allah.</p>
+      <p>Daripada rumah ini lahir Nabi Ismail alaihissalam. Daripada keturunan Ismail lahir Rasulullah sallallahu alaihi wa alihi wa sallam. Daripada Sarah pula lahir keturunan para Nabi Bani Israil. Maka sebahagian besar sejarah kenabian manusia lahir daripada dua wanita yang menyokong perjuangan agama.</p>
+
+      <hr>
+
+      <h3>21.6.4 Khadijah radhiallahu anha: Penjaga Markaz Dakwah Pertama Islam</h3>
+      <p>Apabila wahyu pertama turun, Rasulullah sallallahu alaihi wa alihi wa sallam pulang dalam keadaan menggigil. Orang pertama yang baginda temui bukan Abu Bakr. Bukan Umar. Bukan Ali. Tetapi seorang wanita. Iaitu Khadijah radhiallahu anha.【5】</p>
+      <p>Beliau bukan sekadar mendengar. Beliau membenarkan. Beliau menenangkan. Beliau menyokong. Beliau mengorbankan dirinya. Beliau mengorbankan hartanya. Beliau mengorbankan kehidupannya. Beliau menjadikan rumahnya markaz pertama dakwah Islam.</p>
+      <p>Ketika Quraisy memboikot Rasulullah ﷺ, Khadijah bersama baginda. Ketika dakwah belum mempunyai pengikut yang ramai, Khadijah bersama baginda. Ketika dakwah belum menjanjikan kemenangan dunia, Khadijah bersama baginda.</p>
+      <p>Sebab itu para ulama sering menyebut bahawa Khadijah adalah antara manusia yang paling besar jasanya terhadap perkembangan Islam pada fasa awal. Rumah Rasulullah ﷺ dan Khadijah bukan sekadar rumah suami isteri. Ia markaz pertama yang melahirkan umat Islam.</p>
+
+      <hr>
+
+      <h3>21.6.5 Wanita Menentukan Suasana Rumah</h3>
+      <p>Lelaki mungkin keluar ke masjid. Lelaki mungkin keluar berdakwah. Lelaki mungkin keluar berjihad. Tetapi suasana rumah hampir sentiasa berada di bawah pengaruh wanita.</p>
+      <p>Wanita menentukan:</p>
+      <ul><li>suasana kasih atau permusuhan</li><li>suasana iman atau kelalaian</li><li>suasana pengorbanan atau kemewahan</li><li>suasana dakwah atau dunia</li></ul>
+      <p>Kerana itu wanita bukan sekadar membina anak. Wanita membina suasana yang membina anak. Dan suasana lebih kuat daripada arahan. Anak belajar bukan hanya daripada apa yang didengar, tetapi daripada apa yang dilihat setiap hari.</p>
+      <p>Jika rumah memuliakan dakwah, anak akan memuliakan dakwah. Jika rumah memuliakan pengorbanan, anak akan memuliakan pengorbanan. Jika rumah memuliakan agama, anak akan memuliakan agama.</p>
+
+      <hr>
+
+      <h3>21.6.6 Wanita Sebagai Penjaga Kilang Manpower Umat</h3>
+      <p>Apabila lelaki keluar untuk agama, siapakah yang menjaga rumah? Apabila dakwah memerlukan pengorbanan, siapakah yang menstabilkan keluarga? Apabila anak-anak sedang dibina, siapakah yang memastikan suasana iman terus hidup?</p>
+      <p>Jawapannya ialah wanita. Kerana itu wanita bukan sekadar penjaga rumah. Wanita ialah penjaga markaz rumah. Dan rumah ialah kilang manpower umat.</p>
+      <p>Maka secara tidak langsung, wanita menjaga kilang yang menghasilkan manpower umat. Jika kilang itu rosak, generasi rosak. Jika kilang itu hidup, umat hidup.</p>
+
+      <hr>
+
+      <p><strong>Rumusan Tauhidi 21.6</strong></p>
+      <p>Lelaki sering dilihat sebagai penghantar dakwah. Tetapi wanita ialah penjaga markaz yang melahirkan generasi dakwah. Nabi Nuh menunjukkan bahayanya apabila rumah tidak bersama dakwah. Sarah, Hajar dan Khadijah menunjukkan bagaimana wanita yang menyokong agama mampu mengubah sejarah umat. Wanita bukan sekadar penjaga rumah. Wanita ialah penjaga kesinambungan hidayat dan penjaga kilang manpower umat.</p>
+
+      <hr>
+
+      <p><strong>Nota Kaki</strong></p>
+      <ul class="footnotes">
+        <li>【1】 Surah al-‘Ankabūt (29:14).</li>
+        <li>【2】 Surah al-Taḥrīm (66:10).</li>
+        <li>【3】 Surah Hūd (11:42).</li>
+        <li>【4】 Surah Ibrāhīm (14:37).</li>
+        <li>【5】 Hadith permulaan wahyu dalam Ṣaḥīḥ al-Bukhārī.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Atas</a>
+    </section>
+
+    <!-- ===== SECTION 21.7 ===== -->
+    <section class="section" id="21-7">
+      <h2>21.7 Anak Sebagai Amanah Umat</h2>
+
+      <h3>21.7.1 Paradigm Shift: Anak Milik Siapa?</h3>
+      <p>Kebanyakan manusia melihat anak sebagai milik keluarga. Lalu matlamat pembesaran anak menjadi:</p>
+      <ul><li>mendapat pendidikan yang baik</li><li>memperoleh pekerjaan yang baik</li><li>mempunyai pendapatan yang tinggi</li><li>mencapai kedudukan yang dihormati</li><li>menikmati kehidupan yang selesa</li></ul>
+      <p>Semua ini bukanlah sesuatu yang salah. Namun al-Qur’an dan sirah para Nabi menunjukkan satu pandangan yang lebih besar. Anak bukan sekadar amanah kepada ibu bapa. Anak ialah amanah Allah untuk agama dan umat. Ibu bapa hanyalah penjaga sementara. Pemilik sebenar anak ialah Allah.</p>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">وَلِلَّهِ مُلْكُ السَّمَاوَاتِ وَالْأَرْضِ ۚ يَخْلُقُ مَا يَشَاءُ ۚ يَهَبُ لِمَن يَشَاءُ إِنَاثًا وَيَهَبُ لِمَن يَشَاءُ الذُّكُورَ</div>
+      <div class="translation"><em>“Dan milik Allah kerajaan langit dan bumi. Dia menciptakan apa yang Dia kehendaki. Dia mengurniakan anak perempuan kepada sesiapa yang Dia kehendaki dan mengurniakan anak lelaki kepada sesiapa yang Dia kehendaki.”</em>【1】</div>
+      <p>Perkataan <span lang="ar" dir="rtl" style="font-family:'Noto Naskh Arabic','Amiri',serif;">يَهَبُ</span> (mengurniakan) menunjukkan bahawa anak ialah pemberian Allah. Dan setiap pemberian Allah datang bersama amanah.</p>
+      <p>Kerana itu rumah dakwah tidak hanya bertanya: <em>“Bagaimana anak ini berjaya?”</em> Sebaliknya rumah dakwah bertanya: <em>“Bagaimana anak ini menjadi manfaat kepada agama dan umat?”</em></p>
+
+      <hr>
+
+      <h3>21.7.2 Soalan Rumah Biasa dan Rumah Dakwah</h3>
+      <p>Rumah biasa melihat anak sebagai projek kejayaan keluarga. Rumah dakwah melihat anak sebagai amanah umat.</p>
+      <table>
+        <thead><tr><th>Rumah Biasa</th><th>Rumah Dakwah</th></tr></thead>
+        <tbody>
+          <tr><td>Anak sebagai kebanggaan keluarga</td><td>Anak sebagai amanah agama</td></tr>
+          <tr><td>Fokus kepada kerjaya</td><td>Fokus kepada khidmat kepada agama dan umat</td></tr>
+          <tr><td>Ukuran kejayaan = pencapaian individu</td><td>Ukuran kejayaan = manfaat kepada manusia</td></tr>
+          <tr><td>Fikir masa depan keluarga</td><td>Fikir masa depan umat</td></tr>
+          <tr><td>Membina individu berjaya</td><td>Membina penyambung agama</td></tr>
+        </tbody>
+      </table>
+      <p>Rumah dakwah tetap mahu anak berjaya. Tetapi kejayaan itu bukan matlamat akhir. Kejayaan hanyalah alat. Matlamat yang lebih besar ialah agama Allah terus hidup melalui generasi seterusnya.</p>
+
+      <hr>
+
+      <h3>21.7.3 Para Nabi Membina Generasi, Bukan Individu</h3>
+      <p>Apabila kita melihat doa para Nabi, kita dapati mereka bukan sekadar memikirkan diri mereka sendiri. Mereka memikirkan generasi.</p>
+      <p>Nabi Ibrahim alaihissalam berdoa:</p>
+      <div class="arab">رَبِّ اجْعَلْنِي مُقِيمَ الصَّلَاةِ وَمِن ذُرِّيَّتِي</div>
+      <div class="translation"><em>“Wahai Tuhanku, jadikanlah aku orang yang mendirikan solat dan juga daripada zuriatku.”</em>【2】</div>
+      <p>Nabi Zakaria alaihissalam pula berdoa:</p>
+      <div class="arab">فَهَبْ لِي مِن لَّدُنكَ وَلِيًّا ۝ يَرِثُنِي وَيَرِثُ مِنْ آلِ يَعْقُوبَ</div>
+      <div class="translation"><em>“Maka kurniakanlah kepadaku daripada sisi-Mu seorang pewaris yang akan mewarisiku dan mewarisi keluarga Ya‘qub.”</em>【3】</div>
+      <p>Para Nabi memahami bahawa agama tidak berhenti pada satu generasi. Agama mesti dipikul dan disambung oleh generasi seterusnya. Kerana itu mereka membina generasi, bukan sekadar membina individu.</p>
+
+      <hr>
+
+      <h3>21.7.4 Rumah Sahabat Melahirkan Penyalur Hidayat</h3>
+      <p>Rumah sahabat tidak hanya melahirkan anak yang soleh untuk keluarga mereka. Rumah sahabat melahirkan manusia yang menjadi saluran hidayat kepada umat.</p>
+      <p>Selepas kewafatan Rasulullah sallallahu alaihi wa alihi wa sallam, para sahabat tersebar ke seluruh Jazirah Arab, Syam, Iraq, Mesir, Afrika Utara dan wilayah-wilayah lain. Daripada rumah-rumah mereka lahir generasi yang meneruskan tugas tersebut.</p>
+
+      <h4>Abdullah bin Umar radhiallahu anhuma</h4>
+      <p>Anak kepada Umar bin al-Khattab radhiallahu anhu. Beliau menjadi antara sahabat yang paling banyak meriwayatkan hadith Rasulullah ﷺ. Ribuan manusia belajar agama melalui beliau.</p>
+
+      <h4>Abdullah bin Abbas radhiallahu anhuma</h4>
+      <p>Sepupu Rasulullah ﷺ yang dibesarkan dekat dengan wahyu. Rasulullah ﷺ mendoakan beliau:</p>
+      <div class="arab">اللَّهُمَّ فَقِّهْهُ فِي الدِّينِ وَعَلِّمْهُ التَّأْوِيلَ</div>
+      <div class="translation"><em>“Ya Allah, berikanlah kefahaman agama kepadanya dan ajarkanlah kepadanya tafsir al-Qur’an.”</em>【4】</div>
+      <p>Beliau menjadi tokoh tafsir terbesar dalam kalangan sahabat. Daripada beliau lahir ramai tokoh tabi‘in yang menyebarkan ilmu ke seluruh dunia Islam.</p>
+
+      <h4>Abdullah bin Zubair radhiallahu anhuma</h4>
+      <p>Anak kepada al-Zubair bin al-Awwam dan Asma’ binti Abu Bakr. Beliau dibesarkan dalam rumah yang penuh pengorbanan dan dakwah. Kemudian menjadi pemimpin umat dan tokoh besar dalam sejarah Islam.</p>
+
+      <h4>Urwah bin al-Zubair rahimahullah</h4>
+      <p>Anak kepada al-Zubair bin al-Awwam dan Asma’ binti Abu Bakr. Beliau termasuk dalam kalangan Fuqaha Tujuh Madinah. Melalui beliau, ilmu para sahabat sampai kepada generasi tabi‘in.</p>
+
+      <h4>Al-Qasim bin Muhammad rahimahullah</h4>
+      <p>Cucu kepada Abu Bakr al-Siddiq radhiallahu anhu. Beliau menjadi salah seorang ulama terbesar Madinah. Daripada beliau, ilmu dan kefahaman agama tersebar kepada ribuan manusia.</p>
+
+      <h4>Generasi Tabi‘in</h4>
+      <p>Daripada rumah-rumah sahabat lahirlah generasi tabi‘in seperti:</p>
+      <ul><li>Sa‘id bin al-Musayyib</li><li>Urwah bin al-Zubair</li><li>Salim bin Abdullah bin Umar</li><li>Al-Qasim bin Muhammad</li><li>ramai lagi</li></ul>
+      <p>Mereka menjadi jambatan yang menyampaikan agama kepada generasi selepas mereka. Daripada mereka, hidayat bergerak ke seluruh dunia Islam.</p>
+
+      <hr>
+
+      <h3>21.7.5 Anak Sebagai Pelaburan Umat</h3>
+      <p>Rumah dakwah tidak melihat anak sebagai aset keluarga semata-mata. Rumah dakwah melihat anak sebagai pelaburan umat. Seorang anak yang dibina dengan iman boleh menjadi:</p>
+      <ul><li>pendakwah</li><li>guru</li><li>ulama</li><li>pemimpin amanah</li><li>pedagang yang membawa manfaat</li><li>doktor yang berkhidmat</li><li>jurutera yang membantu umat</li><li>penyokong amal agama</li></ul>
+      <p>Manfaatnya boleh berterusan selepas ibu bapanya meninggal dunia.</p>
+      <p>Rasulullah sallallahu alaihi wa alihi wa sallam bersabda:</p>
+      <div class="arab">إِذَا مَاتَ ابْنُ آدَمَ انْقَطَعَ عَمَلُهُ إِلَّا مِنْ ثَلَاثٍ… أَوْ وَلَدٍ صَالِحٍ يَدْعُو لَهُ</div>
+      <div class="translation"><em>“Apabila manusia meninggal dunia, terputus amalannya kecuali tiga perkara… atau anak soleh yang mendoakannya.”</em>【5】</div>
+      <p>Kerana itu pembinaan anak bukan pelaburan dunia semata-mata. Ia pelaburan akhirat dan pelaburan umat.</p>
+
+      <hr>
+
+      <h3>21.7.6 Generasi Yang Menyambung Agama</h3>
+      <p>Rumah dakwah tidak hanya mahu melahirkan anak yang baik. Rumah dakwah mahu melahirkan generasi yang menyambung agama.</p>
+      <p>Daripada rumah seperti inilah lahir:</p>
+      <blockquote>Sahabat → Tabi‘in → Tabi‘ Tabi‘in → Ulama → Pendakwah → Pembina Umat</blockquote>
+      <p>yang menjadi saluran hidayat kepada manusia sepanjang zaman. Mereka mungkin berbeza pekerjaan. Mereka mungkin hidup di tempat yang berbeza. Tetapi mereka mempunyai satu persamaan: hidup mereka digunakan untuk agama dan umat.</p>
+      <p>Itulah sebabnya rumah sahabat menghasilkan kesan yang jauh melampaui rumah mereka sendiri. Rumah-rumah itu melahirkan generasi yang akhirnya membawa Islam ke seluruh dunia.</p>
+
+      <hr>
+
+      <p><strong>Rumusan Tauhidi 21.7</strong></p>
+      <p>Anak bukan projek kejayaan keluarga semata-mata. Anak ialah amanah Allah kepada ibu bapa dan amanah kepada umat. Rumah dakwah tidak hanya bertanya bagaimana anak itu berjaya dalam kehidupan. Rumah dakwah bertanya: <em>“Bagaimana anak ini menjadi sebab manusia mengenal Allah?”</em></p>
+      <p>Rumah sahabat melahirkan anak-anak yang menjadi saluran hidayat kepada umat. Sebahagian mereka menjadi sahabat, sebahagian menjadi tabi‘in, sebahagian menjadi ulama dan pembina masyarakat. Maka rumah dakwah bukan membina generasi untuk keluarga semata-mata, tetapi membina generasi yang menyambung tugas para Nabi membawa manusia kepada Allah.</p>
+
+      <hr>
+
+      <p><strong>Nota Kaki</strong></p>
+      <ul class="footnotes">
+        <li>【1】 Surah al-Syūrā (42:49).</li>
+        <li>【2】 Surah Ibrāhīm (14:40).</li>
+        <li>【3】 Surah Maryam (19:5–6).</li>
+        <li>【4】 Hadith riwayat al-Bukhārī.</li>
+        <li>【5】 Hadith riwayat Muslim.</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Atas</a>
+    </section>
+
+    <!-- ===== SECTION 21.8 ===== -->
+    <section class="section" id="21-8">
+      <h2>21.8 Kenapa Rumah Hari Ini Tidak Lagi Membekalkan Generasi Dakwah?</h2>
+
+      <h3>21.8.1 Krisis Rumah Umat</h3>
+      <p>Apabila kita melihat sirah Rasulullah sallallahu alaihi wa alihi wa sallam, kita dapati bahawa Masjid Nabawi sentiasa menghantar manusia keluar untuk agama. Masjid menghantar:</p>
+      <ul><li>pendakwah</li><li>guru</li><li>mujahid</li><li>pemimpin</li><li>pedagang amanah</li><li>pembina masyarakat</li></ul>
+      <p>Tetapi persoalannya: Dari mana datangnya manusia-manusia itu? Jawapannya: Dari rumah-rumah sahabat.</p>
+      <p>Rumah sahabat membekalkan manusia. Masjid menghantar manusia. Kedua-duanya bergerak sebagai satu sistem.</p>
+      <p>Hari ini masjid masih ada. Tetapi rumah tidak lagi berfungsi seperti dahulu. Maka berlaku satu krisis besar: <strong>Masjid mahu menghantar jemaah, tetapi rumah tidak lagi membekalkan manusia.</strong></p>
+
+      <hr>
+
+      <h3>21.8.2 Rumah Bertukar Fungsi</h3>
+      <p>Rumah tidak berhenti wujud. Rumah menjadi semakin besar. Semakin cantik. Semakin lengkap. Tetapi fungsinya berubah — daripada markaz pembinaan umat kepada pusat kehidupan peribadi. Hari ini banyak rumah berfungsi sebagai:</p>
+
+      <h4>Rumah Sebagai Entertainment Centre</h4>
+      <p>Rumah dipenuhi:</p>
+      <ul><li>televisyen</li><li>telefon pintar</li><li>media sosial</li><li>permainan</li><li>hiburan tanpa had</li></ul>
+      <p>Masa keluarga dihabiskan untuk menerima hiburan. Bukan membina fikir agama. Bukan membina fikir umat. Bukan membina pengorbanan.</p>
+
+      <h4>Rumah Sebagai Hotel</h4>
+      <p>Rumah hanya menjadi tempat tidur, mandi, berehat. Ahli keluarga keluar pagi, pulang malam. Masing-masing hidup dalam dunia sendiri. Rumah tidak lagi menjadi tempat pembinaan manusia. Hanya tempat persinggahan sementara.</p>
+
+      <h4>Rumah Sebagai Showroom</h4>
+      <p>Rumah menjadi simbol status. Tujuan utama rumah ialah menunjukkan kejayaan, kemewahan, pencapaian. Tenaga dan fikiran dicurahkan kepada imej, sedangkan pembinaan generasi semakin terpinggir.</p>
+
+      <h4>Rumah Sebagai Stor Barang</h4>
+      <p>Rumah dipenuhi barang. Semakin banyak barang. Semakin banyak ruang penyimpanan. Tetapi semakin sedikit ruang untuk fikir umat. Rumah menjadi tempat menyimpan harta, bukan tempat melahirkan manusia untuk agama.</p>
+
+      <h4>Rumah Sebagai Restoran</h4>
+      <p>Rumah menjadi tempat memenuhi keperluan makan dan minum. Perbualan keluarga berkisar makanan, hiburan, pekerjaan, percutian. Jarang sekali berkisar tentang dakwah, umat, pengorbanan dan hidayah manusia.</p>
+
+      <h4>Rumah Sebagai Tempat Menternak Anak</h4>
+      <p>Anak dibesarkan. Diberi makan. Dihantar ke sekolah. Dihantar ke universiti. Kemudian dihantar ke pasaran pekerjaan. Namun soalan paling penting tidak lagi ditanya: <em>“Bagaimana anak ini menjadi manfaat kepada agama dan umat?”</em> Anak menjadi projek kerjaya, bukan amanah dakwah.</p>
+
+      <hr>
+
+      <h3>21.8.3 Survival Menggantikan Risalah</h3>
+      <p>Rumah sahabat hidup dengan satu fikir: <em>Bagaimana agama sampai kepada manusia?</em> Rumah hari ini hidup dengan satu fikir: <em>Bagaimana keluarga ini selamat?</em></p>
+      <p>Maka seluruh tenaga dicurahkan kepada pendidikan dunia, pekerjaan, pendapatan, aset dan keselesaan. Akibatnya rumah menjadi semakin kuat untuk survival, tetapi semakin lemah untuk risalah.</p>
+
+      <hr>
+
+      <h3>21.8.4 Fikir Dakwah Hilang</h3>
+      <p>Rumah sahabat sentiasa bercakap tentang iman, dakwah, pengorbanan, umat dan hidayah manusia. Hari ini banyak rumah tidak lagi mempunyai perbualan seperti itu.</p>
+      <p>Anak-anak membesar tanpa pernah mendengar: <em>“Bagaimana kita boleh membawa manusia kepada Allah?”</em> Mereka mendengar: <em>“Bagaimana kamu boleh berjaya?”</em> Perubahan soalan melahirkan perubahan generasi.</p>
+
+      <hr>
+
+      <h3>21.8.5 Rumah Terpisah Daripada Masjid</h3>
+      <p>Pada zaman Rasulullah ﷺ, rumah dan masjid saling bersambung. Masjid membina. Rumah menyambung pembinaan. Masjid menghantar. Rumah membekalkan manusia.</p>
+      <p>Hari ini hubungan itu semakin lemah. Masjid bergerak sendiri. Rumah bergerak sendiri. Akibatnya pembinaan umat menjadi terputus.</p>
+
+      <hr>
+
+      <h3>21.8.6 Budaya Pengorbanan Mati</h3>
+      <p>Rumah sahabat memuliakan pengorbanan harta, pengorbanan masa, pengorbanan tenaga dan pengorbanan untuk agama. Hari ini budaya yang dimuliakan ialah keselesaan, keselamatan, kemudahan dan hiburan.</p>
+      <p>Anak-anak jarang melihat pengorbanan untuk agama sebagai sesuatu yang mulia. Mereka lebih banyak melihat pengorbanan untuk dunia. Sedangkan generasi dakwah lahir daripada pengorbanan, bukan daripada keselesaan.</p>
+
+      <hr>
+
+      <h3>21.8.7 Akibat: Krisis Manpower Umat</h3>
+      <p>Inilah natijah akhirnya. Masjid masih mahu menghantar manusia. Dakwah masih memerlukan manusia. Umat masih memerlukan manusia yang berkorban. Tetapi rumah tidak lagi menghasilkan mereka.</p>
+      <p>Maka berlakulah krisis manpower umat. Bukan kerana umat kekurangan manusia, tetapi kerana rumah tidak lagi menghasilkan manusia untuk agama.</p>
+      <p>Rumah menghasilkan:</p>
+      <ul><li>graduan</li><li>profesional</li><li>pekerja</li><li>usahawan</li></ul>
+      <p>Tetapi terlalu sedikit rumah yang sengaja menghasilkan:</p>
+      <ul><li>pendakwah</li><li>penyokong dakwah</li><li>pembina masyarakat</li><li>manusia pengorbanan</li><li>generasi penyambung agama</li></ul>
+
+      <hr>
+
+      <p><strong>Rumusan Tauhidi 21.8</strong></p>
+      <p>Krisis umat hari ini bukan sekadar krisis masjid. Ia bermula dengan krisis rumah. Apabila rumah kehilangan fikir dakwah, budaya pengorbanan dan hubungan dengan masjid, rumah tidak lagi membekalkan generasi dakwah. Maka masjid mahu menghantar jemaah, tetapi rumah tidak lagi membekalkan manusia. Sebab itu pembaikan umat mesti bermula dengan menghidupkan semula rumah sebagai markaz dakwah keluarga.</p>
+
+      <a class="toplink" href="#top">↑ Atas</a>
+    </section>
+
+    <!-- ===== SECTION 21.9 ===== -->
+    <section class="section" id="21-9">
+      <h2>21.9 Jamaah dan Suasana Iman</h2>
+
+      <h3>21.9.1 Rumah Bukan Destinasi Akhir</h3>
+      <p>Selepas rumah berjaya melahirkan generasi dakwah, timbul satu persoalan penting: Adakah rumah sahaja sudah mencukupi?</p>
+      <p>Jawapannya: tidak. Rumah ialah tempat pembinaan. Tetapi pembinaan tidak lengkap sehingga manusia itu masuk ke dalam jamaah dan suasana iman. Sebagaimana benih memerlukan tanah untuk hidup, manusia yang dibina oleh rumah memerlukan suasana yang menjaga dan mengembangkan iman mereka.</p>
+      <p>Kerana itu rumah sahabat sentiasa bersambung dengan Masjid Nabawi. Rumah tidak bergerak bersendirian. Rumah menjadi sebahagian daripada usaha umat yang lebih besar.</p>
+
+      <hr>
+
+      <h3>21.9.2 Jamaah Sebagai Tempat Pembesaran Iman</h3>
+      <p>Rumah melahirkan manusia. Jamaah membesarkan manusia. Di dalam jamaah manusia belajar:</p>
+      <ul><li>fikir bersama</li><li>mesyuarat</li><li>pengorbanan bersama</li><li>khidmat bersama</li><li>sabar bersama</li><li>dakwah bersama</li></ul>
+      <p>Allah Ta‘ala berfirman:</p>
+      <div class="arab">وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا</div>
+      <div class="translation"><em>“Dan berpegang teguhlah kamu semuanya kepada tali Allah dan janganlah kamu berpecah-belah.”</em>【1】</div>
+      <p>Iman yang dibina di rumah diperkuatkan melalui kebersamaan. Kerana itu para sahabat tidak hidup secara individu. Mereka hidup sebagai umat.</p>
+
+      <hr>
+
+      <h3>21.9.3 Suasana Iman Menjaga Generasi</h3>
+      <p>Manusia sangat dipengaruhi oleh suasana. Rumah yang baik boleh melahirkan anak yang baik. Tetapi tanpa suasana iman yang berterusan, generasi itu boleh lemah apabila berhadapan dengan dunia.</p>
+      <p>Kerana itu Rasulullah sallallahu alaihi wa alihi wa sallam membina:</p>
+      <ul><li>masjid</li><li>jamaah</li><li>amal ijtima’i</li><li>syura</li><li>dakwah</li><li>pengorbanan bersama</li></ul>
+      <p>Semua ini mewujudkan suasana yang menjaga iman. Generasi sahabat bukan hanya dibina oleh individu. Mereka dibina oleh suasana.</p>
+
+      <hr>
+
+      <h3>21.9.4 Amal Ijtima’i Melahirkan Umat</h3>
+      <p>Rumah melahirkan manusia. Tetapi amal ijtima’i melahirkan umat. Melalui amal ijtima’i:</p>
+      <ul><li>fikir menjadi fikir bersama</li><li>pengorbanan menjadi pengorbanan bersama</li><li>dakwah menjadi dakwah umat</li><li>khidmat menjadi khidmat masyarakat</li></ul>
+      <p>Inilah yang menjadikan Islam berkembang daripada beberapa keluarga di Madinah kepada sebuah umat yang menyebarkan hidayat ke seluruh dunia.</p>
+
+      <hr>
+
+      <h3>21.9.5 Rantaian Pembinaan Umat</h3>
+      <p>Apabila diperhatikan sirah Rasulullah sallallahu alaihi wa alihi wa sallam, rantaian pembinaan umat berlaku secara tersusun:</p>
+      <blockquote>Masjid → Rumah → Jamaah → Penghantaran Umat</blockquote>
+      <p>Masjid membina iman. Rumah membina generasi. Jamaah membesarkan generasi. Kemudian generasi itu dihantar kepada umat manusia.</p>
+      <p>Daripada rantaian inilah lahir:</p>
+      <ul><li>para sahabat</li><li>anak-anak sahabat</li><li>tabi‘in</li><li>tabi‘ tabi‘in</li><li>ulama</li><li>pendakwah</li><li>pembina masyarakat</li></ul>
+      <p>yang membawa Islam ke seluruh dunia.</p>
+
+      <hr>
+
+      <p><strong>Rumusan Tauhidi Bab 21</strong></p>
+      <p>Rumah yang hidup bukan rumah yang besar atau selesa, tetapi rumah yang melahirkan generasi pengorbanan untuk agama. Masjid Nabawi menghantar jemaah; rumah sahabat membekalkan manusia untuk dihantar. Dari rumah sahabat lahir sahabat, anak-anak sahabat, tabi‘in dan generasi yang membawa agama ke seluruh dunia.</p>
+      <p>Namun rumah sahaja tidak mencukupi. Generasi yang lahir mesti masuk ke dalam jamaah, suasana iman dan amal ijtima’i supaya mereka terus membesar dalam agama dan menjadi saluran hidayat kepada manusia.</p>
+      <p>Kerana itu pembinaan umat bergerak melalui rantaian:</p>
+      <blockquote>Masjid → Rumah → Jamaah → Penghantaran Umat</blockquote>
+      <p>Dan daripada rantaian inilah Allah menghidupkan agama-Nya di muka bumi.</p>
+
+      <hr>
+
+      <p><strong>Nota Kaki</strong></p>
+      <ul class="footnotes">
+        <li>【1】 Surah Āli ‘Imrān (3:103).</li>
+      </ul>
+      <a class="toplink" href="#top">↑ Atas</a>
+    </section>
+
+  </article>
 </main>
+
 <footer class="wrap">
   <div>© 3asbab.org — Kerangka 3 Asbab</div>
 </footer>
+```
 
+  </div>
 
-</div>
   <script>
     function downloadPDF() {
       const btn = document.querySelector('.btn-pdf');
       if (!btn) return;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '⏳ Menyediakan PDF...';
+      btn.disabled = true;
+      document.body.classList.add('pdf-exporting');
+      const coverTitle = document.getElementById('pdf-cover-title');
+      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
+      const metaTitle = document.getElementById('pdf-meta-title');
+      const pageTitle = document.getElementById('page-title');
+      const categoryLine = document.getElementById('category-line');
+      const headerLine = document.getElementById('header-line');
+      if (typeof DOC_META !== "undefined") {
+        if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
+        if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
+        if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
+        if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
+        if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
+        if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
+      }
+      setTimeout(() => {
+        window.print();
+        setTimeout(() => {
+          document.body.classList.remove('pdf-exporting');
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 500);
+      }, 120);
+    }
+  </script>
 
-  const originalText = btn.innerHTML;
-  btn.innerHTML = '⏳ Menyediakan PDF...';
-  btn.disabled = true;
-
-  document.body.classList.add('pdf-exporting');
-
-  const coverTitle = document.getElementById('pdf-cover-title');
-  const coverSubtitle = document.getElementById('pdf-cover-subtitle');
-  const metaTitle = document.getElementById('pdf-meta-title');
-  const pageTitle = document.getElementById('page-title');
-  const categoryLine = document.getElementById('category-line');
-  const headerLine = document.getElementById('header-line');
-
-  if (typeof DOC_META !== "undefined") {
-    if (coverTitle) coverTitle.textContent = DOC_META.pageTitle || '';
-    if (coverSubtitle) coverSubtitle.textContent = DOC_META.subtitle || '';
-    if (metaTitle) metaTitle.textContent = DOC_META.pageTitle || '';
-    if (pageTitle) pageTitle.textContent = DOC_META.pageTitle || '';
-    if (categoryLine) categoryLine.innerHTML = DOC_META.categoryLine || '';
-    if (headerLine) headerLine.innerHTML = DOC_META.headerLine || '';
-  }
-
-  setTimeout(() => {
-    window.print();
-    setTimeout(() => {
-      document.body.classList.remove('pdf-exporting');
-      btn.innerHTML = originalText;
-      btn.disabled = false;
-    }, 500);
-  }, 120);
-}
-
-
-</script>
 </body>
 </html>
-
-
-
