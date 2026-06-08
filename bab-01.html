@@ -95,6 +95,7 @@
   @media print {
     body { background:#fff; font-size:11pt; }
     body::before { display:none; }
+    .reveal { opacity:1 !important; transform:none !important; animation:none !important; }
     .topbar, .jump, .pdf-toolbar, .toplink, .hero-tags { display:none !important; }
     .hero { background:#fff !important; color:var(--ink) !important; padding:0 0 1rem; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     .hero::before, .hero::after { display:none; }
@@ -1297,6 +1298,16 @@
       <p>3asbab.org · Kerangka 3 Asbab · Setiap bab tersedia dalam format PDF untuk pembacaan mendalam</p>
     </div>
   </footer>
+
+  <script>
+    // Pastikan semua kandungan nampak walau animasi tak jalan (cth. reduce-motion / cetakan).
+    window.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+    });
+  </script>
 
 </body>
 </html>
