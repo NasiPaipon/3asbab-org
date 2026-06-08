@@ -1,2481 +1,1302 @@
-
-    <<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA | 3asbab.org</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --max-width: 920px;
-      --border-light: #e2e8f0;
-      --bg-soft: #fafcff;
-      --muted: #4a5568;
-      --accent: #0f7b4a;
-      --accent-light: #e6f4ed;
-      --text-dark: #1a202c;
-      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
-      --pdf-accent: #0f7b4a;
-      --pdf-accent-soft: #e6f4ed;
-      --pdf-border: #d9e2ec;
-      --pdf-text: #1f2937;
-      --pdf-muted: #5b6573;
-      --pdf-paper: #fffefb;
-    }
-    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif; background: white; color: var(--text-dark); line-height: 1.7; scroll-behavior: smooth; }
-    .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 clamp(1.2rem, 4vw, 1.8rem); }
-    .topbar { border-bottom: 1px solid var(--border-light); position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); }
-    .topbar nav { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; padding: 0.75rem 0; }
-    .topbar a { text-decoration: none; font-size: 0.9rem; color: var(--text-dark); }
-    .brand { font-weight: 700; margin-right: 0.5rem; }
-    header { padding: 1.5rem 0 0.5rem 0; }
-    h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.25; margin: 0.25rem 0 0.5rem; }
-    .meta { color: var(--muted); font-size: 0.85rem; border-left: 3px solid var(--accent); padding-left: 0.75rem; }
-    .jump { border-bottom: 1px solid var(--border-light); position: sticky; top: 48px; z-index: 15; background: rgba(255,255,255,0.98); }
-    .jump-inner { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.7rem 0; align-items: center; font-size: 0.8rem; }
-    .jump a { padding: 0.2rem 0.7rem; border-radius: 40px; background: var(--bg-soft); border: 1px solid var(--border-light); text-decoration: none; font-weight: 500; transition: 0.1s ease; color: var(--text-dark); }
-    .jump a:hover { border-color: var(--accent); background: var(--accent-light); }
-    main { padding: 1.2rem 0 3rem; }
-    .badge-chapter { display: inline-block; font-weight: 700; font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 0.2rem 0.8rem; border-radius: 30px; margin-bottom: 0.8rem; }
-    h2 { font-size: 1.6rem; margin: 1.8rem 0 0.75rem; border-left: 4px solid var(--accent); padding-left: 0.9rem; font-weight: 600; }
-    h3 { font-size: 1.25rem; margin: 1.2rem 0 0.5rem; font-weight: 600; color: #0b3b2a; }
-    p { margin: 0.6rem 0; }
-    ul, ol { margin: 0.5rem 0 0.8rem 1.4rem; }
-    li { margin: 0.3rem 0; }
-    .section-card { background: var(--bg-soft); border-radius: 1.2rem; padding: 1.2rem 1.4rem; margin: 1.2rem 0; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
-    .arabic { font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif; font-size: 1.6rem; line-height: 1.8; direction: rtl; text-align: right; margin: 0.8rem 0; color: #1e293b; }
-    .translation { background: #f8fafc; padding: 0.6rem 1rem; border-radius: 0.8rem; margin: 0.5rem 0 1rem; border-left: 3px solid var(--accent); font-size: 0.95rem; }
-    blockquote { background: var(--accent-light); border-radius: 0.8rem; padding: 0.8rem 1.2rem; margin: 1rem 0; font-style: normal; }
-    .insight-box { background: #f1f5f9; padding: 0.8rem 1.2rem; border-radius: 1rem; margin: 1rem 0; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
-    th, td { border: 1px solid var(--border-light); padding: 0.6rem; text-align: left; vertical-align: top; }
-    th { background: #f1f5f9; font-weight: 600; }
-    hr { margin: 1.5rem 0; border: 0; height: 1px; background: var(--border-light); }
-    .footnote { font-size: 0.8rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px dashed var(--border-light); padding-top: 1rem; }
-    .toplink { font-size: 0.75rem; margin-top: 0.8rem; display: inline-block; }
-    footer { border-top: 1px solid var(--border-light); padding: 1.5rem 0; color: var(--muted); font-size: 0.8rem; margin-top: 1rem; }
-    .pdf-toolbar { display: flex; justify-content: flex-end; gap: 10px; margin: 14px 0 8px; }
-    .btn-pdf { appearance: none; border: 1px solid var(--pdf-border); background: #fff; color: var(--pdf-text); padding: 10px 14px; border-radius: 999px; cursor: pointer; font: inherit; font-size: 0.95rem; font-weight: 600; transition: 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-    .btn-pdf:hover { border-color: var(--pdf-accent); background: var(--pdf-accent-soft); }
-    .btn-pdf:active { transform: translateY(1px); }
-    .no-print { display: block; }
-    .pdf-only { display: none; }
-    .pdf-exporting .pdf-only { display: block !important; }
-    .pdf-exporting .no-print, .pdf-exporting .pdf-toolbar, .pdf-exporting .topbar, .pdf-exporting .jump, .pdf-exporting .toplink { display: none !important; }
-    .pdf-shell { background: #fff; }
-    .pdf-cover { display: none; }
-    .pdf-cover-inner { min-height: 260mm; padding: 28mm 18mm 24mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--pdf-paper); color: var(--pdf-text); }
-    .pdf-cover-top { border-top: 4px solid var(--pdf-accent); padding-top: 12mm; }
-    .pdf-cover-brand { font-size: 0.95rem; letter-spacing: .12em; text-transform: uppercase; color: var(--pdf-muted); margin-bottom: 10mm; }
-    .pdf-cover-series { font-size: 1.1rem; font-weight: 700; margin: 0 0 6mm; }
-    .pdf-cover-title { font-size: 2rem; line-height: 1.2; margin: 0 0 5mm; font-weight: 800; }
-    .pdf-cover-subtitle { font-size: 1rem; color: var(--pdf-muted); margin: 0; }
-    .pdf-cover-bottom { border-top: 1px solid var(--pdf-border); padding-top: 8mm; font-size: 0.95rem; color: var(--pdf-muted); }
-    .pdf-meta-page { display: none; }
-    .pdf-meta-inner { min-height: 240mm; padding: 20mm 16mm; background: #fff; color: var(--pdf-text); }
-    .pdf-meta-inner h2 { border: 0; padding: 0; margin: 0 0 10mm; font-size: 1.4rem; }
-    .pdf-meta-list p { margin: 0 0 6mm; }
-    .pdf-break { break-before: page; page-break-before: always; }
-    .pdf-avoid-break { break-inside: avoid; page-break-inside: avoid; }
-    @media print {
-      body { margin: 0; padding: 0; }
-      .no-print, .pdf-toolbar, .topbar, .jump, .toplink { display: none !important; }
-      .pdf-only, .pdf-cover, .pdf-meta-page { display: block !important; }
-      .section-card, blockquote, .insight-box { break-inside: avoid; page-break-inside: avoid; }
-      h2, h3 { break-after: avoid; page-break-after: avoid; }
-    }
-    @media (max-width: 640px) {
-      .section-card { padding: 1rem; }
-      .arabic { font-size: 1.3rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Bab 1 — Pembunuhan Fahaman Asbab Lama | 3asbab.org</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --max: 880px;
+    --ink:#1a2420; --ink-soft:#41504a; --ink-faint:#6f7d76;
+    --paper:#fbfaf5; --paper-warm:#f4f1e8; --line:#e3ddcf;
+    --emerald:#0f5c3c; --emerald-dk:#0a3d28; --emerald-lt:#e7f0ea;
+    --gold:#b1842f; --gold-soft:#f0e4c6; --rose:#9a3b2e;
+    --shadow:0 2px 14px rgba(15,60,40,.06); --shadow-lg:0 18px 50px rgba(15,60,40,.13);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family:'Spectral',Georgia,serif; background:var(--paper); color:var(--ink);
+    line-height:1.78; font-size:1.06rem; font-weight:400; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  body::before { content:''; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5;
+    background-image:radial-gradient(circle at 1px 1px, rgba(120,100,60,.045) 1px, transparent 0); background-size:22px 22px; }
+  .wrap { max-width:var(--max); margin:0 auto; padding:0 clamp(1.3rem,5vw,2.2rem); position:relative; z-index:1; }
+  .topbar { border-bottom:1px solid var(--line); position:sticky; top:0; z-index:30; background:rgba(251,250,245,.9); backdrop-filter:blur(10px); }
+  .topbar nav { display:flex; gap:1.4rem; align-items:center; padding:.85rem 0; font-size:.85rem; }
+  .topbar a { text-decoration:none; color:var(--ink-soft); transition:color .15s; letter-spacing:.01em; }
+  .topbar a:hover { color:var(--emerald); }
+  .topbar .brand { font-family:'Fraunces',serif; font-weight:700; font-size:1rem; color:var(--emerald); margin-right:auto; letter-spacing:-.01em; }
+  .topbar .cur { color:var(--ink); font-weight:600; }
+  .hero { position:relative; background:linear-gradient(155deg,var(--emerald) 0%,var(--emerald-dk) 100%); color:#fff; overflow:hidden; padding:clamp(3rem,9vw,5.5rem) 0 clamp(5rem,11vw,7rem); }
+  .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 50% at 78% 6%, rgba(177,132,47,.34) 0%, transparent 60%),radial-gradient(ellipse 60% 55% at 10% 100%, rgba(255,255,255,.07) 0%, transparent 55%); pointer-events:none; }
+  .hero::after { content:''; position:absolute; left:0; right:0; bottom:0; height:130px; background-image:radial-gradient(120% 100% at 50% 100%, transparent 60%, rgba(255,255,255,.04) 61%, transparent 62%),radial-gradient(120% 100% at 30% 100%, transparent 65%, rgba(255,255,255,.05) 66%, transparent 67%); pointer-events:none; }
+  .hero .wrap { position:relative; z-index:2; }
+  .hero-bismillah { font-family:'Amiri',serif; direction:rtl; font-size:clamp(1.5rem,4.5vw,2.1rem); color:var(--gold-soft); opacity:.92; margin-bottom:1.8rem; font-weight:400; }
+  .hero-kicker { display:inline-block; font-family:'Spectral',serif; font-size:.76rem; letter-spacing:.26em; text-transform:uppercase; color:var(--gold-soft); border:1px solid rgba(240,228,198,.35); padding:.35rem 1rem; border-radius:999px; margin-bottom:1.6rem; }
+  .hero h1 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.2rem,6.5vw,3.7rem); line-height:1.1; letter-spacing:-.015em; margin-bottom:1.1rem; max-width:16ch; }
+  .hero h1 em { font-style:italic; color:var(--gold-soft); font-weight:400; }
+  .hero-sub { font-size:clamp(1rem,2.4vw,1.18rem); color:rgba(255,255,255,.8); font-weight:300; max-width:48ch; font-style:italic; }
+  .hero-tags { margin-top:2rem; display:flex; gap:.6rem; flex-wrap:wrap; }
+  .hero-tags span { font-size:.76rem; letter-spacing:.05em; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.16); color:rgba(255,255,255,.88); padding:.3rem .85rem; border-radius:999px; }
+  .jump { border-bottom:1px solid var(--line); position:sticky; top:49px; z-index:25; background:rgba(244,241,232,.96); backdrop-filter:blur(8px); }
+  .jump-inner { display:flex; flex-wrap:wrap; gap:.45rem; padding:.7rem 0; align-items:center; }
+  .jump-label { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin-right:.4rem; }
+  .jump a { font-size:.82rem; font-weight:500; padding:.22rem .72rem; border-radius:999px; background:#fff; border:1px solid var(--line); text-decoration:none; color:var(--ink-soft); transition:.14s ease; }
+  .jump a:hover { border-color:var(--emerald); background:var(--emerald-lt); color:var(--emerald-dk); }
+  .pdf-toolbar { display:flex; justify-content:flex-end; padding:1.4rem 0 0; }
+  .btn-pdf { appearance:none; cursor:pointer; font:inherit; font-size:.9rem; font-weight:600; color:var(--emerald-dk); background:#fff; border:1px solid var(--line); border-radius:999px; padding:.6rem 1.2rem; transition:.15s ease; box-shadow:var(--shadow); }
+  .btn-pdf:hover { border-color:var(--emerald); background:var(--emerald-lt); transform:translateY(-1px); }
+  main { padding:2.4rem 0 4rem; }
+  .section-card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:clamp(1.5rem,4vw,2.4rem); margin:1.6rem 0; box-shadow:var(--shadow); position:relative; }
+  .opening { background:linear-gradient(160deg,var(--paper-warm),#fff); border:1px solid var(--gold-soft); text-align:center; padding:clamp(2rem,5vw,3rem); }
+  .opening .seal { font-family:'Fraunces',serif; font-size:.74rem; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; }
+  .opening h2.opening-title { font-family:'Fraunces',serif; font-weight:600; border:0; padding:0; font-size:clamp(1.4rem,4vw,2rem); line-height:1.2; margin-bottom:.7rem; color:var(--emerald-dk); }
+  .opening p.opening-sub { color:var(--ink-soft); font-style:italic; font-size:1.05rem; }
+  .badge-chapter { display:inline-block; font-family:'Fraunces',serif; font-weight:600; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); background:var(--gold-soft); padding:.28rem .9rem; border-radius:999px; margin-bottom:.9rem; }
+  h2 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.4rem,3.6vw,1.8rem); line-height:1.25; letter-spacing:-.01em; color:var(--emerald-dk); margin-bottom:1rem; padding-bottom:.7rem; border-bottom:2px solid var(--emerald-lt); }
+  h3 { font-family:'Fraunces',serif; font-weight:600; font-size:1.18rem; color:var(--ink); margin:1.5rem 0 .5rem; }
+  p { margin:.7rem 0; }
+  ul, ol { margin:.6rem 0 1rem 1.3rem; }
+  li { margin:.4rem 0; padding-left:.2rem; }
+  li::marker { color:var(--emerald); }
+  strong { color:var(--ink); font-weight:600; }
+  em { font-style:italic; }
+  .arabic { font-family:'Amiri',serif; direction:rtl; text-align:center; font-size:clamp(1.7rem,5vw,2.3rem); line-height:2.1; color:var(--emerald-dk); margin:1.4rem 0 .6rem; font-weight:400; }
+  .translation { background:var(--emerald-lt); border-left:3px solid var(--emerald); border-radius:0 12px 12px 0; padding:.85rem 1.2rem; margin:.6rem 0 1.2rem; font-size:.98rem; color:var(--ink-soft); }
+  blockquote { background:linear-gradient(135deg,var(--emerald-lt),transparent); border:1px solid var(--emerald-lt); border-left:4px solid var(--emerald); border-radius:0 14px 14px 0; padding:1rem 1.4rem; margin:1.2rem 0; }
+  blockquote p { margin:.35rem 0; }
+  .insight-box { background:var(--paper-warm); border:1px dashed var(--gold); border-radius:14px; padding:1.1rem 1.4rem; margin:1.2rem 0; }
+  .insight-box > p:first-child { color:var(--emerald-dk); }
+  table { width:100%; border-collapse:collapse; margin:1.2rem 0; font-size:.95rem; }
+  th, td { border:1px solid var(--line); padding:.7rem .8rem; text-align:left; vertical-align:top; }
+  th { background:var(--emerald-lt); color:var(--emerald-dk); font-weight:600; font-family:'Fraunces',serif; }
+  tr:nth-child(even) td { background:var(--paper); }
+  hr { border:0; height:1px; background:var(--line); margin:1.8rem 0; }
+  .footnote { font-size:.86rem; color:var(--ink-faint); margin-top:1.6rem; border-top:1px dashed var(--line); padding-top:1rem; }
+  .footnote p { margin:.35rem 0; }
+  .footnote strong { color:var(--emerald-dk); }
+  .toplink { display:inline-block; margin-top:1.2rem; font-size:.78rem; color:var(--ink-faint); text-decoration:none; letter-spacing:.04em; transition:color .15s; }
+  .toplink:hover { color:var(--emerald); }
+  footer { border-top:1px solid var(--line); background:var(--paper-warm); padding:2.2rem 0; text-align:center; font-size:.85rem; color:var(--ink-faint); }
+  footer .foot-nav { display:flex; justify-content:center; gap:1.5rem; margin-bottom:1rem; }
+  footer a { color:var(--emerald); text-decoration:none; font-weight:500; }
+  footer a:hover { text-decoration:underline; }
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity:0; transform:translateY(16px); animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    .hero-bismillah { animation:rise .8s ease .05s both; }
+    .hero-kicker { animation:rise .8s ease .15s both; }
+    .hero h1 { animation:rise .8s ease .25s both; }
+    .hero-sub { animation:rise .8s ease .38s both; }
+    .hero-tags { animation:rise .8s ease .5s both; }
+    @keyframes rise { to { opacity:1; transform:translateY(0); } }
+  }
+  @media print {
+    body { background:#fff; font-size:11pt; }
+    body::before { display:none; }
+    .topbar, .jump, .pdf-toolbar, .toplink, .hero-tags { display:none !important; }
+    .hero { background:#fff !important; color:var(--ink) !important; padding:0 0 1rem; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .hero::before, .hero::after { display:none; }
+    .hero-bismillah { color:var(--emerald) !important; }
+    .hero-kicker { color:var(--gold) !important; border-color:var(--gold) !important; }
+    .hero h1 { color:var(--emerald-dk) !important; }
+    .hero h1 em { color:var(--gold) !important; }
+    .hero-sub { color:var(--ink-soft) !important; }
+    .section-card { box-shadow:none; break-inside:avoid; page-break-inside:avoid; border-color:var(--line); }
+    .arabic, .translation, blockquote, .insight-box, th, td { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    h2, h3 { break-after:avoid; page-break-after:avoid; }
+  }
+</style>
 </head>
 <body>
 
-  <div class="topbar no-print">
+  <div class="topbar">
     <div class="wrap">
       <nav>
         <span class="brand">3asbab.org</span>
-        <a href="index.html">🏠 Home</a>
-        <a href="bab-0.html">← Prev</a>
-        <a href="bab-1.html" style="font-weight:600;">Bab 1</a>
-        <a href="bab-2.html">Next →</a>
+        <a href="index.html">Indeks</a>
+        <a href="bab-00.html">&lsaquo; Sebelum</a>
+        <span class="cur">Bab 1</span>
+        <a href="bab-02.html">Seterusnya &rsaquo;</a>
       </nav>
     </div>
   </div>
 
-  <div class="wrap no-print">
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-bismillah">&#1576;&#1616;&#1587;&#1618;&#1605;&#1616; &#1575;&#1604;&#1604;&#1617;&#1614;&#1607;&#1616; &#1575;&#1604;&#1585;&#1617;&#1614;&#1581;&#1618;&#1605;&#1614;&#1648;&#1606;&#1616; &#1575;&#1604;&#1585;&#1617;&#1614;&#1581;&#1616;&#1610;&#1605;&#1616;</div>
+      <span class="hero-kicker">Bab 1 &middot; Pembunuhan Fahaman Lama</span>
+      <h1>Pembunuhan <em>Fahaman Asbab Lama</em></h1>
+      <p class="hero-sub">Meruntuhkan asas fahaman sebab lama dan menggantikannya dengan reset Tauhidi.</p>
+      <div class="hero-tags">
+        <span>Tauhidi</span>
+        <span>Pembinaan Iman</span>
+        <span>Arkib Baca</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="jump">
+    <div class="wrap">
+      <div class="jump-inner">
+        <span class="jump-label">Lompat</span>
+        <a href="#s1">1.1</a>
+        <a href="#s2">1.2</a>
+        <a href="#s3">1.3</a>
+        <a href="#s4">1.4</a>
+        <a href="#s5">1.5</a>
+        <a href="#s6">1.6</a>
+        <a href="#s7">1.7</a>
+        <a href="#s8">1.8</a>
+        <a href="#s9">1.9</a>
+        <a href="#s10">1.10</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
     <div class="pdf-toolbar">
-      <button class="btn-pdf" onclick="downloadPDF()">📄 Download PDF</button>
+      <button class="btn-pdf" onclick="window.print()">Muat turun PDF</button>
     </div>
   </div>
 
-  <div id="pdf-shell" class="pdf-shell">
+  <main class="wrap">
 
-    <div class="pdf-cover pdf-only">
-      <div class="pdf-cover-inner">
-        <div class="pdf-cover-top">
-          <div class="pdf-cover-brand">3asbab.org</div>
-          <div class="pdf-cover-series">Kerangka 3 Asbab</div>
-          <h1 class="pdf-cover-title" id="pdf-cover-title">Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA</h1>
-          <p class="pdf-cover-subtitle" id="pdf-cover-subtitle">Meruntuhkan asas fahaman sebab lama dan menggantikannya dengan reset Tauhidi</p>
-        </div>
-        <div class="pdf-cover-bottom">
-          <div id="pdf-cover-footer-line1">Edisi PDF untuk bacaan berfokus dan cetakan</div>
-          <div id="pdf-cover-footer-line2">© 3asbab.org</div>
-        </div>
+    <section class="section-card opening reveal">
+      <div class="seal">Kerangka 3 Asbab</div>
+      <h2 class="opening-title">Pembunuhan Fahaman Asbab Lama</h2>
+      <p class="opening-sub">Reset Tauhidi terhadap cara lama memahami sebab, hasil, dan kesan.</p>
+    </section>
+
+    <!-- 1.1 -->
+    <section class="section-card reveal" id="s1">
+      <span class="badge-chapter">Bab 1.1</span>
+      <h2>1.1 Pembunuhan Fahaman Asbab Lama</h2>
+
+      <h3>Pengenalan: Mengapa Fahaman Asbab Lama Perlu Dihapus</h3>
+      <p>Setiap zaman memiliki "tuhan kecil" yang diagungkan tanpa disedari.</p>
+      <p>Pada zaman Firaun, manusia mengagungkan kuasa manusia. Pada zaman moden, manusia mengagungkan <strong>Asbab Fitrah</strong> dan <strong>Asbab Zulumat</strong> — iaitu sebab-sebab ciptaan yang kelihatan kuat di mata manusia.</p>
+      <p>Manusia tidak lagi sujud kepada patung, tetapi aktiviti hati mereka tunduk kepada:</p>
+      <ul>
+        <li>modal,</li>
+        <li>strategi,</li>
+        <li>sistem,</li>
+        <li>data,</li>
+        <li>pengaruh,</li>
+        <li>formula kejayaan.</li>
+      </ul>
+      <p>Keadaan ini berlaku bukan pada zahir amal semata-mata, tetapi di dalam pusat pergantungan — apabila aktiviti hati menetapkan kuasa memberi kesan pada Asbab Fitrah dan Asbab Zulumat, bukan pada Allah.</p>
+      <p><strong>Dalil Tauhidi:</strong></p>
+      <div class="arabic">اللَّهُ خَالِقُ كُلِّ شَيْءٍ</div>
+      <div class="translation">"Allah menciptakan segala sesuatu."<span class="ref">Az-Zumar 39:62 【1】</span></div>
+      <p>Namun dalam praktik kehidupan, aktiviti hati manusia sering bergerak kepada keyakinan bahawa:</p>
+      <ul>
+        <li>usaha memberi kejayaan, bukan izin Allah;</li>
+        <li>modal membuka rezeki, bukan pemberian Allah;</li>
+        <li>strategi menentukan natijah, bukan janji Allah;</li>
+        <li>sistem memberi kestabilan, bukan ketaatan.</li>
+      </ul>
+      <p>Inilah <strong>Fahaman Asbab Lama</strong>: apabila Asbab Fitrah dan Asbab Zulumat dinaikkan sebagai pusat pergantungan aktiviti hati, lalu diiktikadkan mempunyai kuasa memberi kesan.</p>
+      <p>Fahaman ini mesti dibunuh terlebih dahulu, kerana iman tidak boleh hidup di atas hati yang masih dipenuhi "berhala keyakinan".</p>
+
+      <hr>
+      <h3>1.1.2 Dua Pusat Pergantungan: Allah atau Asbab</h3>
+      <p>Aktiviti hati manusia hanya mampu memiliki satu pusat pergantungan:</p>
+      <ul>
+        <li>Apabila aktiviti hati tunduk kepada Allah, Asbab Fitrah dan Asbab Zulumat kembali ke posisi alat.</li>
+        <li>Apabila aktiviti hati tunduk kepada Asbab Fitrah dan Asbab Zulumat, pertolongan Allah tidak dizahirkan — walaupun amal zahir masih berjalan.</li>
+      </ul>
+      <div class="arabic">وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ</div>
+      <div class="translation">"Barang siapa bertawakkal kepada Allah, maka Allah mencukupinya."<span class="ref">At-Talaq 65:3 【2】</span></div>
+      <p>Namun apabila aktiviti hati berkata:</p>
+      <ul>
+        <li>"Jika aku tiada modal, aku tidak boleh maju,"</li>
+        <li>"Jika orang tidak menyokong, usaha ini pasti gagal,"</li>
+      </ul>
+      <p>maka makna <em>lā ilāha illā Allāh</em> telah rosak — bukan pada lafaz, tetapi pada arah rasa dan keyakinan aktiviti hati, kerana kuasa memberi kesan telah disandarkan kepada makhluk dan sistem.</p>
+      <p>Doa masih dibaca, amal masih dibuat, tetapi pusat pergantungan aktiviti hati telah berpindah.</p>
+
+      <hr>
+      <h3>1.1.3 Kesalahan Tersembunyi: Amal Tanpa Nafy dan Isbat</h3>
+      <p>Ramai manusia melakukan amal tanpa disiplin Nafy dan Isbat.</p>
+      <p>Mereka bekerja, berdoa dan berdakwah — tetapi:</p>
+      <ul>
+        <li>tidak menafikan kuasa memberi kesan pada Asbab Fitrah dan Asbab Zulumat (Nafy),</li>
+        <li>tidak menetapkan bahawa hanya Allah memberi kesan melalui janji-Nya (Isbat).</li>
+      </ul>
+      <p>Akibatnya, amal menjadi kering dan tidak menarik nusrah.</p>
+      <div class="arabic">وَمَن يُشْرِكْ بِاللَّهِ فَقَدْ ضَلَّ ضَلَالًا بَعِيدًا</div>
+      <div class="translation">"Sesiapa yang mensyirikkan Allah, maka sesungguhnya dia telah tersesat sejauh-jauhnya."<span class="ref">An-Nisa' 4:116 【3】</span></div>
+      <p>Syirik halus bukan menyembah patung, tetapi memberi kuasa memberi kesan kepada Asbab Fitrah dan Asbab Zulumat.</p>
+      <p>Rasulullah ﷺ bersabda:</p>
+      <blockquote><p>"I'qilhā wa tawakkal." — "Ikatlah untamu, kemudian bertawakkallah." 【4】</p></blockquote>
+      <p>Hadith ini bukan membahagi kuasa antara usaha dan Allah, tetapi menetapkan tertib Tauhidi:</p>
+      <ol>
+        <li>mengambil sebab sebagai alat tanpa kuasa,</li>
+        <li>menyerahkan kesan sepenuhnya kepada Allah.</li>
+      </ol>
+      <p><strong>Definisi Tawakkal (Kerangka 3 Asbab):</strong> Tawakkal ialah aktiviti rasa dalam hati yang memutuskan pergantungan kepada Asbab Fitrah dan Asbab Zulumat, sambil berpegang kepada Asbab Mutlak (Asli &amp; Terbitan) dan mengambil sebab yang dibenarkan syarak mengikut tertib Rasulullah ﷺ, lalu menyerahkan natijah sepenuhnya kepada Allah serta redha terhadap keputusan-Nya.</p>
+
+      <hr>
+      <h3>1.1.4 Sirah Laut Merah: Pembunuhan Fahaman Asbab Lama Melalui Amal</h3>
+      <p>Di tepi Laut Merah, Nabi Musa عليه السلام tidak diberikan teori, tetapi diperintahkan amal yang menyalahi logik Asbab Fitrah.</p>
+      <div class="arabic">فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ فَانفَلَقَ</div>
+      <div class="translation">"Maka Kami wahyukan kepada Musa: Pukullah laut itu dengan tongkatmu, lalu terbelahlah ia."<span class="ref">Asy-Syu'ara' 26:63 【5】</span></div>
+      <ul>
+        <li>Tongkat bukan sumber kuasa.</li>
+        <li>Laut bukan penentu nasib.</li>
+        <li>Firaun bukan pemilik keputusan.</li>
+      </ul>
+      <p>Yang memberi kesan hanyalah Allah — dan janji Allah dizahirkan selepas amal, bukan sebelum.</p>
+      <p><strong>Tertib Tauhidi:</strong></p>
+      <ol>
+        <li>Nafy — menafikan kuasa memberi kesan pada Asbab Fitrah (laut) dan Asbab Zulumat (Firaun).</li>
+        <li>Isbat — menetapkan hanya Allah memberi kesan.</li>
+        <li>Amal — melaksanakan perintah walau bertentangan logik.</li>
+        <li>Nusrah Allah — turun selepas amal.</li>
+      </ol>
+      <p>Nabi Musa memukul laut bukan kerana percaya kepada tongkat, tetapi kerana aktiviti hati baginda tunduk sepenuhnya kepada perkhabaran Allah — tanpa menjadikan bukti zahir atau logik sebagai hakim.</p>
+
+      <hr>
+      <h3>1.1.5 Umat Akhir Zaman: Hidup Dalam Fahaman Asbab Lama</h3>
+      <p>Firaun telah mati, tetapi falsafah Firaun hidup dalam sistem:</p>
+      <ul>
+        <li>dahulu: "Aku tuhan kamu yang paling tinggi,"</li>
+        <li>kini: "Manusia menentukan masa depannya sendiri."</li>
+      </ul>
+      <p>Asbab Zulumat tampil dalam bentuk baharu:</p>
+      <ul>
+        <li>data, KPI, formula, branding, dominasi ekonomi, pemikiran "self-made".</li>
+      </ul>
+      <div class="arabic">أَفَرَأَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَىٰهُ</div>
+      <div class="translation">"Tidakkah engkau melihat orang yang menjadikan hawa nafsunya sebagai tuhannya?"<span class="ref">Al-Jathiyah 45:23 【6】</span></div>
+      <p>Selagi aktiviti hati percaya bahawa kejayaan datang daripada strategi, bukan ketaatan; selagi itu iman tidak menjadi pusat.</p>
+
+      <hr>
+      <h3>1.1.6 Peranan Dakwah dalam Membunuh Fahaman Asbab Lama</h3>
+      <p>Tiada ilmu yang mampu membunuh Fahaman Asbab Lama melainkan Asbab Mutlak Asli, iaitu dakwah.</p>
+      <div class="arabic">وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ</div>
+      <div class="translation">"Siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah?"<span class="ref">Fussilat 41:33 【7】</span></div>
+      <p>Dakwah sebagai Asbab Mutlak Asli membawa janji Allah untuk:</p>
+      <ul>
+        <li>memecahkan pergantungan aktiviti hati kepada makhluk,</li>
+        <li>menghidupkan aktiviti rasa iman,</li>
+        <li>memindahkan pusat pergantungan kepada Allah.</li>
+      </ul>
+      <p>Dakwah bukan kerja pendakwah; dakwah ialah mekanisme Allah untuk memecahkan kebergantungan aktiviti hati kepada sebab.</p>
+
+      <hr>
+      <h3>1.1.7 Analisis Tauhidi</h3>
+      <table>
+        <thead><tr><th>Komponen</th><th>Penjelasan</th></tr></thead>
+        <tbody>
+          <tr><td>Fahaman Asbab Lama</td><td>Asbab Fitrah dan Asbab Zulumat yang diiktikadkan memberi kesan</td></tr>
+          <tr><td>Akar Masalah</td><td>Aktiviti hati yang tidak melakukan Nafy dan Isbat</td></tr>
+          <tr><td>Akibat</td><td>Janji Allah tidak dizahirkan; aktiviti hati dikawal sebab</td></tr>
+          <tr><td>Penyelesaian</td><td>Mengambil Asbab Mutlak Asli (dakwah) dengan disiplin Nafy–Isbat</td></tr>
+          <tr><td>Tanda Kesembuhan</td><td>Amal terasa ringan, hati tenang, sebab kembali ke posisi alat</td></tr>
+        </tbody>
+      </table>
+
+      <hr>
+      <h3>1.1.8 Kesimpulan Tauhidi Bab 1.1</h3>
+      <blockquote><p>"Fahaman Asbab Lama tidak mati dengan hujah, tetapi mati apabila seseorang mengambil Asbab Mutlak Asli dengan aktiviti hati yang melakukan Nafy dan Isbat."</p></blockquote>
+      <p>Fungsi Bab 1.1 ialah membunuh 'tuhan-tuhan kecil' dalam hati — iaitu kepercayaan bahawa manusia, sistem atau formula boleh memberi kesan tanpa izin Allah.</p>
+      <p>Selepas pembunuhan ini, iman boleh hidup — iaitu aktiviti hati yang tunduk kepada Allah melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ, dan iman ini hanya stabil selepas lulus ujian mujahadah dan sabar.</p>
+
+      <div class="footnote">
+        <p><strong>Nota Kaki</strong></p>
+        <p>【1】 Az-Zumar 39:62 — Penegasan Tauhidi bahawa semua sebab ialah makhluk ciptaan Allah, bukan pemilik kuasa memberi kesan.</p>
+        <p>【2】 At-Talaq 65:3 — Janji Allah bahawa kecukupan datang daripada tawakkal yang benar, bukan daripada sebab.</p>
+        <p>【3】 An-Nisa' 4:116 — Syirik halus berlaku apabila kuasa memberi kesan disandarkan kepada selain Allah.</p>
+        <p>【4】 Riwayat at-Tirmizi — Tertib Tauhidi: sebab diambil sebagai alat tanpa kuasa, kesan diserahkan kepada Allah.</p>
+        <p>【5】 Asy-Syu'ara' 26:63 — Nusrah Allah turun selepas amal yang mengikuti perintah, bukan selepas logik dipuaskan.</p>
+        <p>【6】 Al-Jathiyah 45:23 — Nafsu dan sistem menjadi "ilah" apabila ditaati sebagai penentu, lalu menguasai pusat pergantungan aktiviti hati.</p>
+        <p>【7】 Fussilat 41:33 — Dakwah sebagai Asbab Mutlak Asli yang memindahkan pergantungan aktiviti hati kepada Allah.</p>
       </div>
-    </div>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
 
-    <div class="pdf-meta-page pdf-only pdf-break">
-      <div class="pdf-meta-inner">
-        <h2>Maklumat Dokumen</h2>
-        <div class="pdf-meta-list">
-          <p><strong>Judul:</strong> <span id="pdf-meta-title">Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA</span></p>
-          <p><strong>Siri:</strong> Kerangka 3 Asbab</p>
-          <p><strong>Laman:</strong> 3asbab.org</p>
-          <p><strong>Kegunaan:</strong> Bacaan berfokus, muat turun, dan cetakan peribadi</p>
-          <p><strong>Nota:</strong> Dokumen ini disediakan dalam format PDF untuk memudahkan pembacaan di luar skrin telefon dan dalam bentuk kertas.</p>
-        </div>
+    <!-- 1.2 -->
+    <section class="section-card reveal" id="s2">
+      <span class="badge-chapter">Bab 1.2</span>
+      <h2>1.2 Sejarah Kejatuhan Keyakinan Tauhidi</h2>
+
+      <h3>1.2.1 Pendahuluan: Iman Pernah Menjadi Pusat Kehidupan</h3>
+      <p>Ada satu masa dalam sejarah manusia di mana iman bukan sekadar pegangan akidah, tetapi aktiviti hati yang hidup — aktiviti rasa yang sentiasa bergerak kepada Allah dengan cinta, takut, harap, yakin, percaya dan tawakkal, lalu memimpin seluruh keputusan hidup.</p>
+      <p>Pada zaman Rasulullah ﷺ dan para Sahabat, Tauhid tidak dipindahkan ke kepala, tetapi berakar di dalam hati. Aktiviti hati mereka tunduk kepada Allah melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ, tanpa menjadikan penglihatan, bukti zahir atau logik sebagai hakim iman.</p>
+      <p>Sebab itu:</p>
+      <ul>
+        <li>Mereka berdagang dengan yakin rezeki ditentukan oleh Allah, bukan pasaran (Asbab Fitrah).</li>
+        <li>Mereka berperang dengan yakin kemenangan ditentukan oleh Allah, bukan bilangan tentera (Asbab Fitrah).</li>
+        <li>Mereka berdakwah dengan yakin hidayah diturunkan oleh Allah, bukan hasil strategi (Asbab Fitrah dan Asbab Zulumat).</li>
+      </ul>
+      <div class="arabic">إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
+      <div class="translation">"Jika kamu menolong (agama) Allah, nescaya Allah akan menolong kamu dan meneguhkan pendirianmu."<span class="ref">Muhammad 47:7 【1】</span></div>
+      <p>Apabila aktiviti hati seperti ini hidup:</p>
+      <ul>
+        <li>Asbab Fitrah kembali ke posisi alat di bawah kehendak Allah.</li>
+        <li>Asbab Zulumat gagal memperdaya pusat pergantungan hati.</li>
+        <li>Asbab Mutlak (Asli &amp; Terbitan) diambil sebagai jalan utama: dakwah, mujahadah, sabar, solat dan doa.</li>
+      </ul>
+      <p>Tamadun yang lahir ketika itu bukan hasil teknologi, tetapi hasil hati yang yakin kepada janji Allah.</p>
+      <p>Kejatuhan bermula apabila generasi selepas para Sahabat:</p>
+      <ul>
+        <li>menggantikan yakin dengan logik,</li>
+        <li>menggantikan amal dengan teori,</li>
+        <li>menggantikan pengorbanan dengan perbahasan,</li>
+      </ul>
+      <p>lalu iman beransur-ansur berubah menjadi maklumat, bukan lagi aktiviti hati yang memimpin keputusan hidup.</p>
+
+      <hr>
+      <h3>1.2.2 Tahap 1 — Daripada Aktiviti Hati kepada Teori</h3>
+      <p>Selepas kewafatan Rasulullah ﷺ, Islam tersebar dengan pantas ke Andalus dan India. Namun di sebalik perkembangan itu, muncul satu bahaya yang halus:</p>
+      <blockquote><p>Ilmu berkembang lebih cepat daripada iman.</p></blockquote>
+      <p>Generasi para Sahabat membina iman bukan melalui maklumat, tetapi melalui Asbab Mutlak (Asli) mengikut tertib Rasulullah ﷺ:</p>
+      <ul>
+        <li>ilmu yang sedikit tetapi diamalkan,</li>
+        <li>amal yang disusuli dakwah,</li>
+        <li>dakwah yang menuntut mujahadah,</li>
+        <li>mujahadah yang diluluskan dengan sabar,</li>
+      </ul>
+      <p>lalu Allah menumbuhkan iman sebagai aktiviti hati yang hidup. 【2】</p>
+      <p>Diriwayatkan bahawa Ibn 'Umar r.a. mengambil masa yang panjang dengan Surah al-Baqarah kerana ayat-ayatnya dihidupkan dalam amal dan dakwah, bukan disimpan sebagai hafalan semata-mata. 【3】</p>
+      <p><strong>Tertib pendidikan rohani Rasulullah ﷺ:</strong></p>
+      <blockquote><p>Ilmu → Amal → Dakwah → Mujahadah → Sabar → Redha</p></blockquote>
+      <p>Ini bukan rantaian psikologi, tetapi tertib pengambilan Asbab Mutlak (Asli &amp; Terbitan) yang Allah letakkan janji pertumbuhan iman padanya.</p>
+      <div class="arabic">قَدْ أَفْلَحَ مَن زَكَّاهَا ۝ وَقَدْ خَابَ مَن دَسَّاهَا</div>
+      <div class="translation">ash-Shams 91:9–10 【4】</div>
+      <p>Apabila zaman berganti:</p>
+      <ul>
+        <li>ilmu dibukukan,</li>
+        <li>perbahasan berkembang,</li>
+      </ul>
+      <p>namun tazkiyah melalui Asbab Mutlak (Asli) dilemahkan.</p>
+      <p><strong>Tanda awal kejatuhan:</strong></p>
+      <ul>
+        <li>Tauhid menjadi teori.</li>
+        <li>Manusia menerangkan Allah, tetapi aktiviti hati tidak lagi tunduk kepada Allah.</li>
+      </ul>
+      <p>Apabila dakwah sebagai Asbab Mutlak Asli dihentikan, mujahadah pun melemah; dan apabila mujahadah melemah, iman tidak lagi bertambah dengan janji Allah.</p>
+
+      <hr>
+      <h3>1.2.3 Tahap 2 — Infiltrasi Falsafah Yunani: Akal Mengadili Wahyu</h3>
+      <p>Apabila empayar Islam berkembang ke wilayah Rom dan Parsi, umat bertemu tradisi falsafah Yunani — satu kerangka yang menjadikan akal sebagai hakim tertinggi.</p>
+      <p>Pada awalnya, falsafah diterjemah untuk memahami sains dan perubatan (Asbab Fitrah). Namun perlahan-lahan, ia menjadi bingkai penilaian:</p>
+      <blockquote><p>Wahyu dinilai melalui logik, bukan logik ditundukkan kepada wahyu.</p></blockquote>
+      <div class="arabic">يُرِيدُونَ لِيُطْفِئُوا نُورَ اللَّهِ بِأَفْوَاهِهِمْ</div>
+      <div class="translation">at-Tawbah 9:32 【5】</div>
+      <p><strong>Kesan Utama (Analisis Tauhidi)</strong></p>
+      <h3>1) Dakwah dilemahkan</h3>
+      <p>Apabila dakwah sebagai Asbab Mutlak Asli dilemahkan:</p>
+      <ul>
+        <li>iman terputus daripada saluran pertumbuhan,</li>
+        <li>ilmu agama terapung sebagai teori.</li>
+      </ul>
+      <div class="arabic">وَمَنْ أَحْسَنُ قَوْلًا مِّمَّنْ دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا</div>
+      <div class="translation">Fussilat 41:33 【6】</div>
+      <h3>2) Iman ditukar menjadi logik</h3>
+      <p>Tanpa dakwah dan mujahadah, aktiviti hati tidak lagi dilatih untuk cinta, takut, harap dan yakin kepada Allah. Iman ditakrif sebagai kesimpulan rasional, bukan aktiviti hati yang tunduk.</p>
+      <div class="arabic">وَالَّذِينَ آمَنُوا أَشَدُّ حُبًّا لِّلَّهِ</div>
+      <div class="translation">al-Baqarah 2:165 【7】</div>
+      <h3>3) Mukjizat ditundukkan kepada Asbab Fitrah</h3>
+      <p>Apabila logik Asbab Fitrah dijadikan hakim, perkara ghaib ditafsir agar "masuk akal", lalu iman kepada ghaib menjadi iman bersyarat.</p>
+      <h3>4) Penyucian hati dilemahkan</h3>
+      <p>Asbab Mutlak (Asli) seperti dakwah, mujahadah dan sabar ditinggalkan, lalu Asbab Zulumat seperti ujub, riya' dan cinta dunia menguasai hati.</p>
+
+      <hr>
+      <h3>1.2.4 Tahap 3 — Sekularisme &amp; Sains Moden: Wahyu Ditundukkan kepada Data</h3>
+      <p>Sekularisme memisahkan Allah daripada pusat pergantungan hati — bukan dengan menolak agama, tetapi dengan mengangkat Asbab Fitrah sebagai hakim.</p>
+      <div class="arabic">نَسُوا اللَّهَ فَأَنسَاهُمْ أَنفُسَهُمْ</div>
+      <div class="translation">al-Hashr 59:19 【8】</div>
+      <p>Lahirlah iman statistik:</p>
+      <ul>
+        <li>hati hanya tenang bila angka menyokong,</li>
+        <li>iman goyah bila data bercanggah,</li>
+      </ul>
+      <p>sedangkan iman Tauhidi ialah aktiviti hati yang tunduk kepada perkhabaran Rasulullah ﷺ walau natijah belum terlihat.</p>
+      <p>Apabila dakwah sebagai Asbab Mutlak Asli dipadamkan:</p>
+      <ul>
+        <li>sistem berjalan tanpa nur,</li>
+        <li>masyarakat bergerak tanpa iman.</li>
+      </ul>
+
+      <hr>
+      <h3>1.2.5 Rumusan Tauhidi Kejatuhan</h3>
+      <p>Kejatuhan umat bukan kerana kurang ilmu, tetapi kerana:</p>
+      <ul>
+        <li>meninggalkan Asbab Mutlak (Asli): dakwah, mujahadah dan sabar,</li>
+        <li>memindahkan pusat pergantungan hati kepada Asbab Fitrah dan Asbab Zulumat.</li>
+      </ul>
+      <p>Iman hanya kembali hidup apabila aktiviti hati:</p>
+      <ul>
+        <li>menafikan kuasa Asbab Fitrah dan Asbab Zulumat,</li>
+        <li>menetapkan hanya Allah memberi kesan,</li>
+        <li>tunduk sepenuhnya kepada perkhabaran Rasulullah ﷺ,</li>
+        <li>dan lulus ujian mujahadah serta sabar yang Allah jadikan jalan pertumbuhan iman. 【9】</li>
+      </ul>
+
+      <div class="footnote">
+        <p><strong>Nota Kaki</strong></p>
+        <p>【1】 Muhammad 47:7 — Nusrah Allah terikat pada menolong agama-Nya, bukan pada kekuatan sebab.</p>
+        <p>【2】 Prinsip Asbab Mutlak Asli: iman tumbuh melalui dakwah, mujahadah dan sabar.</p>
+        <p>【3】 Riwayat Malik, al-Muwatta', Kitab al-Qur'an, no. 1832.</p>
+        <p>【4】 ash-Shams 91:9–10 — Kejayaan dikaitkan dengan penyucian hati.</p>
+        <p>【5】 at-Tawbah 9:32 — Hujah manusia tidak memadamkan cahaya wahyu.</p>
+        <p>【6】 Fussilat 41:33 — Dakwah sebagai Asbab Mutlak Asli tertinggi.</p>
+        <p>【7】 al-Baqarah 2:165 — Iman sebagai aktiviti rasa cinta kepada Allah.</p>
+        <p>【8】 al-Hashr 59:19 — Lupa Allah memindahkan pusat pergantungan hati kepada sebab.</p>
+        <p>【9】 Muhammad 47:31 &amp; al-'Ankabut 29:69 — Iman ditumbuhkan selepas mujahadah dan sabar.</p>
       </div>
-    </div>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
 
-    <header class="wrap" id="top">
-      <div class="meta">📖 Kerangka 3 Asbab — Arkib Baca Sahaja</div>
-      <h1>Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA</h1>
-      <div class="meta">Reset Tauhidi terhadap cara lama memahami sebab, hasil, dan kesan | Tauhidi &amp; Pembinaan Iman</div>
-    </header>
+    <!-- 1.3 -->
+    <section class="section-card reveal" id="s3">
+      <span class="badge-chapter">Bab 1.3</span>
+      <h2>1.3 Asbab Lama Dalam Kehidupan Moden: Cermin untuk Hati</h2>
 
-    <div class="jump no-print">
-      <div class="wrap">
-        <div class="jump-inner">
-          <strong>🧭 Lompat ke:</strong>
-          <a href="#1-1">1.1</a>
-          <a href="#1-2">1.2</a>
-          <a href="#1-3">1.3</a>
-          <a href="#1-4">1.4</a>
-          <a href="#1-5">1.5</a>
-          <a href="#1-6">1.6</a>
-          <a href="#1-7">1.7</a>
-          <a href="#1-8">1.8</a>
-          <a href="#1-9">1.9</a>
-          <a href="#1-10">1.10</a>
-        </div>
+      <div class="insight-box">
+        <p><strong>(Versi Audit Tauhidi — Dibetulkan Istilah &amp; Diselaraskan dengan Definisi Iman)</strong></p>
+        <p>Bab ini bukan untuk mencari salah orang lain, tetapi sebagai cermin untuk aktiviti hati — sejauh mana Asbab Fitrah dan Asbab Zulumat telah mengambil tempat yang sepatutnya diisi oleh Asbab Mutlak (Asli &amp; Terbitan).</p>
+        <p>Selagi contoh-contoh ini hanya dilihat di luar — "itu masalah orang lain" — Bab 1.3 tidak berfungsi.</p>
+        <p>Bab ini hanya hidup apabila seseorang mula bertanya:</p>
+        <blockquote><p>"Dalam contoh ini, aktiviti hati aku berpaut kepada apa?" 【1】</p></blockquote>
       </div>
+
+      <hr>
+      <h3>1.3.1 Bisnes &amp; Rezeki: Modal Sebagai "Tuhan Kecil"</h3>
+      <p><strong>Naratif Asbab Lama (bisnes moden)</strong></p>
+      <p>Rezeki dianggap datang daripada:</p>
+      <ul><li>modal, pelabur, lokasi,</li><li>branding, algoritma, influencer,</li><li>pelanggan tetap.</li></ul>
+      <p><strong>Dialog aktiviti hati:</strong></p>
+      <ul><li>"Kalau tak ada modal, tak boleh hidup."</li><li>"Kalau lokasi tak strategik, habislah."</li><li>"Kalau pemasaran gagal, bisnes mati."</li></ul>
+      <p>Semua ini berada dalam lingkungan:</p>
+      <ul><li>Asbab Fitrah (ilmu, strategi, lokasi),</li><li>Asbab Zulumat (trend, rating, standard pasaran).</li></ul>
+      <p>Apabila aktiviti hati bergantung kepada semua ini, Asbab Fitrah dan Asbab Zulumat telah dinaikkan sebagai penentu, bukan lagi alat.</p>
+      <p><strong>Naratif Tauhidi</strong></p>
+      <p>Rezeki ialah keputusan Allah.</p>
+      <p>Iman sebagai aktiviti hati bergerak kepada Allah dengan cinta, takut, harap, yakin, percaya dan tawakkal — tunduk kepada perkhabaran Rasulullah ﷺ, lalu Allah menumbuhkan iman selepas lulus ujian mujahadah dan sabar. 【2】</p>
+      <p><strong>Asbab Mutlak (Asli &amp; Terbitan) dalam medan bisnes:</strong></p>
+      <ul><li>dakwah kepada pelanggan,</li><li>amanah dan akhlak,</li><li>mujahadah meninggalkan yang haram dan syubhah,</li><li>sabar ketika turun naik,</li><li>doa dan solat,</li><li>suasana iman di tempat kerja.</li></ul>
+      <p>Asbab Fitrah dan Asbab Zulumat tetap digunakan — tetapi sebagai alat, bukan pusat pergantungan.</p>
+      <blockquote><p><strong>Ringkasan:</strong> Asbab Lama: "Rezeki = Modal + Pasaran." Tauhidi: "Rezeki = Keputusan Allah; modal hanyalah alat ujian." 【3】</p></blockquote>
+
+      <hr>
+      <h3>1.3.2 Pendidikan: Ijazah Menjadi Penentu Masa Depan</h3>
+      <p><strong>Naratif Asbab Lama</strong></p>
+      <p>Ijazah dianggap:</p>
+      <ul><li>penjamin masa depan,</li><li>simbol maruah,</li><li>tiket status sosial.</li></ul>
+      <p><strong>Dialog aktiviti hati:</strong></p>
+      <ul><li>"Kalau pointer rendah, masa depan gelap."</li><li>"Kalau tak masuk universiti ternama, hidup gagal."</li></ul>
+      <p>Ini mengikat hati kepada:</p>
+      <ul><li>Asbab Zulumat (sistem nilai buatan manusia),</li><li>dan Asbab Fitrah (usaha akademik).</li></ul>
+      <p><strong>Naratif Tauhidi</strong></p>
+      <p>Nilai manusia bukan pada sijil, tetapi pada taqwa.</p>
+      <p>Aktiviti hati tidak tunduk kepada ranking, tetapi tunduk kepada Allah melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ — lalu iman bertambah selepas mujahadah dan sabar. 【4】</p>
+      <p><strong>Asbab Mutlak (Asli &amp; Terbitan) dalam pendidikan:</strong></p>
+      <ul><li>niat kerana Allah,</li><li>dakwah kepada rakan,</li><li>mujahadah meninggalkan maksiat,</li><li>sabar dalam tekanan akademik,</li><li>doa ibu bapa.</li></ul>
+      <p>Ijazah kekal sebagai Asbab Fitrah dan Asbab Zulumat — alat, bukan penentu mulia-hina.</p>
+      <blockquote><p><strong>Ringkasan:</strong> Asbab Lama: "Masa depan = Sijil." Tauhidi: "Masa depan = Redha Allah; sijil hanyalah alat." 【5】</p></blockquote>
+
+      <hr>
+      <h3>1.3.3 Keluarga: Duit Sebagai Gantian Dakwah</h3>
+      <p><strong>Naratif Asbab Lama</strong></p>
+      <p>Kasih sayang diukur dengan:</p>
+      <ul><li>percutian,</li><li>hadiah,</li><li>gaya hidup.</li></ul>
+      <p><strong>Dialog aktiviti hati:</strong></p>
+      <ul><li>"Kalau aku tak mampu beri standard hidup, aku gagal."</li><li>"Kalau aku tak kaya, anak tak hormat aku."</li></ul>
+      <p>Ini menaikkan:</p>
+      <ul><li>Asbab Zulumat (standard masyarakat),</li><li>dan Asbab Fitrah (nafkah),</li></ul>
+      <p>ke tempat yang sepatutnya dipimpin oleh Asbab Mutlak.</p>
+      <p><strong>Naratif Tauhidi</strong></p>
+      <p>Keluarga ialah gelanggang pembinaan iman.</p>
+      <p>Aktiviti hati ibu bapa bergerak kepada Allah — membina suasana yang tunduk kepada Allah — dan iman anak dibina melalui mujahadah dan sabar dalam rumah. 【6】</p>
+      <p><strong>Asbab Mutlak (Asli &amp; Terbitan) dalam rumahtangga:</strong></p>
+      <ul><li>dakwah lembut dalam rumah,</li><li>solat berjemaah,</li><li>membaca al-Qur'an bersama,</li><li>doa malam,</li><li>mujahadah menjaga akhlak,</li><li>sabar dalam ujian keluarga,</li><li>menjadikan rumah mini-masjid.</li></ul>
+      <p>Duit ialah Asbab Fitrah — khidmat, bukan pusat kasih sayang.</p>
+      <blockquote><p><strong>Ringkasan:</strong> Asbab Lama: "Kasih sayang = Duit." Tauhidi: "Kasih sayang = Membimbing keluarga kepada Allah." 【7】</p></blockquote>
+
+      <hr>
+      <h3>1.3.4 Media Sosial: Like Sebagai Neraca Nilai</h3>
+      <p><strong>Naratif Asbab Lama</strong></p>
+      <p>Like, share dan view menjadi:</p>
+      <ul><li>ukuran betul-salah,</li><li>ukuran harga diri,</li><li>bukti keberkesanan.</li></ul>
+      <p>Ini semua berada dalam lingkungan Asbab Zulumat.</p>
+      <p><strong>Dialog aktiviti hati:</strong></p>
+      <ul><li>"Kalau tak viral, dakwah aku gagal."</li><li>"Kalau view rendah, Allah tak terima."</li></ul>
+      <p><strong>Naratif Tauhidi</strong></p>
+      <p>Like bukan tanda redha Allah.</p>
+      <p>Aktiviti hati tunduk kepada Allah melalui perkhabaran Rasulullah ﷺ — walaupun kebenaran tidak popular — dan iman bertambah melalui mujahadah dan sabar. 【8】</p>
+      <p><strong>Asbab Mutlak (Asli &amp; Terbitan) dalam medan digital:</strong></p>
+      <ul><li>niat dakwah,</li><li>sabar ketika kebenaran tidak disukai,</li><li>mujahadah melawan kandungan haram,</li><li>syura sebelum menerbitkan kandungan,</li><li>doa agar Allah menjadikan tulisan sebagai hidayah.</li></ul>
+      <blockquote><p><strong>Ringkasan:</strong> Asbab Lama: "Nilai = Viral." Tauhidi: "Nilai = Ketaatan; platform hanyalah gelanggang ujian." 【9】</p></blockquote>
+
+      <hr>
+      <h3>1.3.5 Politik &amp; NGO: Undi Sebagai Penyelamat</h3>
+      <p><strong>Naratif Asbab Lama</strong></p>
+      <p>Undi dan kerusi dianggap penentu:</p>
+      <ul><li>masa depan Islam,</li><li>jatuh bangun syariah,</li><li>selamat atau binasanya umat.</li></ul>
+      <p>Ini ialah Asbab Zulumat.</p>
+      <p><strong>Naratif Tauhidi</strong></p>
+      <p>Nusrah datang daripada Allah.</p>
+      <p>Aktiviti hati tidak tunduk kepada sistem, tetapi tunduk kepada Allah melalui tertib Rasulullah ﷺ — iman masyarakat dibina melalui dakwah, mujahadah dan sabar. 【10】</p>
+      <p><strong>Asbab Mutlak (Asli &amp; Terbitan) dalam perjuangan:</strong></p>
+      <ul><li>dakwah menghidupkan iman masyarakat,</li><li>mujahadah mengorbankan harta dan diri,</li><li>sabar menjaga sunnah,</li><li>syura,</li><li>doa jamaah.</li></ul>
+      <p>Sistem hanya boleh menjadi khidmat, bukan pusat pergantungan.</p>
+      <blockquote><p><strong>Ringkasan:</strong> Asbab Lama: "Selamatkan Islam = Kuasai sistem." Tauhidi: "Selamatkan iman = Hidupkan dakwah." 【11】</p></blockquote>
+
+      <hr>
+      <h3>1.3.6 Ibadah: Solat Menjadi Teknik Tenang</h3>
+      <p><strong>Naratif Asbab Lama</strong></p>
+      <p>Solat dijadikan:</p>
+      <ul><li>terapi emosi,</li><li>teknik ketenangan.</li></ul>
+      <p>Ini menjadikan kesan Asbab Fitrah sebagai motif ibadah.</p>
+      <p><strong>Naratif Tauhidi</strong></p>
+      <p>Solat ialah Asbab Mutlak Asli — ketaatan, bukan teknik.</p>
+      <p>Aktiviti hati tunduk kepada Allah kerana perintah-Nya. Ketenangan hanyalah kesan dalam lingkungan Asbab Fitrah — bukan tujuan dan bukan hakim iman. 【12】</p>
+      <blockquote><p><strong>Ringkasan:</strong> Asbab Lama: "Solat untuk tenang." Tauhidi: "Solat kerana Allah; tenang hanyalah rahmat sampingan."</p></blockquote>
+
+      <hr>
+      <h3>1.3.7 Jadual Ringkas Analisis Tauhidi</h3>
+      <table>
+        <thead><tr><th>Bidang</th><th>Pusat Asbab Lama</th><th>Asbab Mutlak (Asli &amp; Terbitan)</th></tr></thead>
+        <tbody>
+          <tr><td>Bisnes</td><td>Modal, pasaran</td><td>Dakwah, amanah, mujahadah, sabar, doa</td></tr>
+          <tr><td>Pendidikan</td><td>Sijil, ranking</td><td>Niat, dakwah, mujahadah, sabar</td></tr>
+          <tr><td>Keluarga</td><td>Duit, standard</td><td>Dakwah rumah, solat, sabar</td></tr>
+          <tr><td>Media sosial</td><td>Like, view</td><td>Niat dakwah, mujahadah, sabar</td></tr>
+          <tr><td>Politik</td><td>Undi, kerusi</td><td>Dakwah, mujahadah, sabar, syura</td></tr>
+          <tr><td>Ibadah</td><td>Tenang</td><td>Ketaatan, redha, janji Allah</td></tr>
+        </tbody>
+      </table>
+
+      <hr>
+      <h3>1.3.8 Kesimpulan Tauhidi Bab 1.3</h3>
+      <p>Asbab Lama hidup apabila Asbab Fitrah dan Asbab Zulumat diletakkan di pusat pergantungan aktiviti hati, manakala Asbab Mutlak (Asli &amp; Terbitan) ditolak ke pinggir.</p>
+      <p>Bab 1.3 ialah:</p>
+      <ul><li>cermin untuk hati,</li><li>loceng amaran,</li><li>pintu kepada Bab 1.4.</li></ul>
+      <blockquote><p>"Selagi aktiviti hati percaya sebab memberi kesan sendiri, selagi itu Asbab Lama hidup." 【13】</p></blockquote>
+
+      <div class="footnote">
+        <p><strong>Nota Kaki</strong></p>
+        <p>【1】 Fungsi Bab 1.3: audit pusat pergantungan aktiviti hati, bukan menilai orang lain.</p>
+        <p>【2】 Definisi iman Kerangka 3 Asbab: iman ialah aktiviti hati yang tunduk kepada Allah melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ, dan terhasil selepas mujahadah serta sabar.</p>
+        <p>【3】 Tauhid rezeki: rezeki keputusan Allah; Asbab Fitrah dan Asbab Zulumat hanyalah alat ujian.</p>
+        <p>【4】 Iman dalam pendidikan: ketaatan mendahului penilaian logik dan bukti zahir.</p>
+        <p>【5】 Redha Allah sebagai ukuran masa depan sebenar.</p>
+        <p>【6】 Rumah sebagai gelanggang pembinaan iman melalui Asbab Mutlak (Asli &amp; Terbitan).</p>
+        <p>【7】 Nafkah ialah Asbab Fitrah yang wajib, tetapi tidak boleh menggantikan dakwah rumah.</p>
+        <p>【8】 Populariti bukan neraca redha; mujahadah dan sabar menumbuhkan iman.</p>
+        <p>【9】 Platform digital sebagai Asbab Zulumat yang tidak boleh menjadi hakim nilai.</p>
+        <p>【10】 Nusrah Allah terikat dengan dakwah, mujahadah dan sabar — bukan sistem.</p>
+        <p>【11】 Sistem sebagai khidmat, bukan pusat pergantungan iman.</p>
+        <p>【12】 Solat sebagai Asbab Mutlak Asli: ketaatan mendahului kesan emosi.</p>
+        <p>【13】 Rumusan Tauhidi Bab 1.3: Asbab Lama hidup pada pergantungan hati, bukan pada alat zahir.</p>
+      </div>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 1.4 -->
+    <section class="section-card reveal" id="s4">
+      <span class="badge-chapter">Bab 1.4</span>
+      <h2>1.4 Materialisme: Jerat Asbab Zulumat</h2>
+
+      <div class="insight-box">
+        <p><strong>(Persetujuan manusia sebagai "tuhan baharu" → nilai menjadi relatif)</strong></p>
+        <p>Materialisme ialah antara jerat Asbab Zulumat yang paling besar dalam sejarah moden.</p>
+        <p>Jika sains sering menjerat manusia melalui pengagungan Asbab Fitrah, maka materialisme menjerat manusia melalui pengagungan Asbab Zulumat — iaitu cara hidup yang lahir daripada persetujuan manusia, bukan daripada wahyu.</p>
+      </div>
+      <div class="arabic">أَفَرَأَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَاهُ</div>
+      <div class="translation">"Tidakkah engkau melihat orang yang menjadikan hawa nafsunya sebagai tuhannya?"<span class="ref">al-Jathiyah 45:23 【1】</span></div>
+      <p>Materialisme tidak memaksa manusia menyembah patung, tetapi memaksa aktiviti hati tunduk kepada nilai ciptaan manusia sendiri.</p>
+
+      <hr>
+      <h3>1.4.1 Persetujuan Masyarakat sebagai "Tuhan Baharu"</h3>
+      <p>Dalam Kerangka 3 Asbab, Asbab Zulumat bermula apabila manusia bersetuju mengangkat sesuatu nilai sebagai penentu hidup, contohnya:</p>
+      <ul><li>"lebih banyak harta = lebih berjaya,"</li><li>"populariti = kebenaran,"</li><li>"siapa kuat ekonomi, dialah berkuasa,"</li><li>"nilai moral ditentukan majoriti,"</li><li>"keuntungan lebih penting daripada halal-haram."</li></ul>
+      <p>Semua ini bukan wahyu, tetapi persetujuan manusia yang kemudian menjadi:</p>
+      <ul><li>sistem,</li><li>budaya,</li><li>undang-undang,</li><li>"akal sihat" versi masyarakat.</li></ul>
+      <p><strong>Definisi rasmi Asbab Zulumat (Kerangka 3 Asbab):</strong> Asbab Zulumat ialah sebab yang wujud sebagai ciptaan Allah dari sudut hakikat, tetapi berfungsi sebagai penentu hidup kerana persetujuan manusia, bukan kerana wahyu.</p>
+      <p>Dunia moden tidak menyebut secara terang "kami sembah harta", tetapi dunia menyebut melalui slogan hidup:</p>
+      <ul><li>"Hidup mesti kejar duit."</li><li>"Kalau miskin, tiada nilai."</li><li>"Siapa kuasai pasaran, dialah pemenang."</li></ul>
+      <p>Inilah "aqidah masyarakat", bukan aqidah para Nabi.</p>
+
+      <hr>
+      <h3>1.4.2 Nilai Wahyu Dihina, Nilai Manusia Dinaikkan</h3>
+      <p>Materialisme membunuh nilai tetap wahyu. Segala nilai mula berubah mengikut:</p>
+      <ul><li>ekonomi,</li><li>pasaran,</li><li>budaya,</li><li>majoriti,</li><li>undang-undang manusia,</li><li>statistik sosial.</li></ul>
+      <p><strong>Contoh realiti moden:</strong></p>
+      <ul><li>riba dinamakan "interest" dan dianggap perlu,</li><li>zina dinamakan "kebebasan peribadi",</li><li>menutup aurat dilabel kolot atau ekstrem,</li><li>homoseksual dinamakan hak asasi,</li><li>membunuh bayi dalam kandungan dinamakan "bodily autonomy".</li></ul>
+      <p>Semua istilah ini lahir kerana dunia berkata begitu, bukan kerana Allah berkata begitu.</p>
+      <div class="arabic">وَإِن تُطِعْ أَكْثَرَ مَن فِي الْأَرْضِ يُضِلُّوكَ عَن سَبِيلِ اللَّهِ</div>
+      <div class="translation">"Jika kamu ikut majoriti manusia, mereka akan menyesatkan kamu dari jalan Allah."<span class="ref">al-An'am 6:116 【2】</span></div>
+      <p>Materialisme menukar majoriti menjadi "sumber hukum". Apa yang ramai setuju → itulah "betul".</p>
+
+      <hr>
+      <h3>1.4.3 Bagaimana Materialisme Menjerat Aktiviti Hati</h3>
+      <p>Materialisme tidak bermula di bank atau pasaran saham. Ia bermula dalam aktiviti hati.</p>
+      <p>Ia mengubah pusat pergantungan manusia:</p>
+      <ul><li>harta menjadi sumber keselamatan,</li><li>kemewahan menjadi ukuran bahagia,</li><li>pangkat menjadi ukuran mulia,</li><li>populariti menjadi ukuran berjaya,</li><li>angka menjadi ukuran nilai diri.</li></ul>
+      <p>Lalu manusia:</p>
+      <ul><li>bekerja kerana dunia, bukan kerana Allah,</li><li>beramal kerana imej, bukan kerana iman,</li><li>bersedekah untuk pengikut, bukan untuk pahala,</li><li>membuat keputusan berdasarkan untung-rugi, bukan redha Allah.</li></ul>
+      <p>Aktiviti hati mula bergantung kepada:</p>
+      <ul><li>pasaran, pelanggan, majikan,</li><li>rating, data, pengaruh manusia.</li></ul>
+      <p>Padahal Allah berfirman:</p>
+      <div class="arabic">مَا عِندَكُمْ يَنفَدُ وَمَا عِندَ اللَّهِ بَاقٍ</div>
+      <div class="translation">"Apa yang ada di sisi kamu akan habis. Apa yang di sisi Allah kekal."<span class="ref">an-Nahl 16:96 【3】</span></div>
+      <p>Materialisme menipu manusia supaya percaya penuh kepada yang fana' dan melupakan yang kekal.</p>
+
+      <hr>
+      <h3>1.4.4 Mengapa Materialisme Mengalahkan Umat Islam</h3>
+      <p>Materialisme menang bukan kerana ia kuat, tetapi kerana umat Islam berhenti membina iman dengan Asbab Mutlak (Asli &amp; Terbitan).</p>
+      <p>Para Sahabat membina dunia dengan iman. Umat moden cuba membina iman dengan materialisme.</p>
+      <p>Materialisme masuk ketika:</p>
+      <ul><li>dakwah dilemahkan,</li><li>mujahadah hilang,</li><li>sabar tidak diamalkan,</li><li>sistem dibina tanpa nur,</li><li>aktiviti hati tidak lagi diikat pada ayat Allah.</li></ul>
+      <p>Umat mula:</p>
+      <ul><li>mengejar kekayaan seperti Qarun,</li><li>mengejar pengaruh seperti Firaun,</li><li>meniru sistem seperti Barat,</li></ul>
+      <p>kemudian mahu semua itu disahkan sebagai "Islamik".</p>
+      <div class="arabic">كَلَّا إِنَّ الْإِنسَانَ لَيَطْغَىٰ ۝ أَن رَّآهُ اسْتَغْنَىٰ</div>
+      <div class="translation">"Tidak! Sesungguhnya manusia benar-benar melampaui batas apabila dia melihat dirinya serba cukup."<span class="ref">al-'Alaq 96:6–7 【4】</span></div>
+      <p>Materialisme bermula apabila aktiviti hati merasa: "Aku cukup tanpa Allah."</p>
+
+      <hr>
+      <h3>1.4.5 Analisis Tauhidi: Mengapa Materialisme Termasuk Asbab Zulumat</h3>
+      <p><strong>Mengapa materialisme wajib diletakkan dalam kotak Asbab Zulumat, bukan Asbab Fitrah?</strong></p>
+      <ol>
+        <li><strong>Ia hidup melalui persetujuan manusia, bukan wahyu</strong>
+          <ul><li>dari sudut hakikat: tetap ciptaan Allah,</li><li>dari sudut fungsi: hidup kerana persetujuan masyarakat.</li></ul></li>
+        <li><strong>Ia bergerak dalam ekosistem nilai manusia, bukan janji Allah</strong>
+          <ul><li>harga naik turun → aktiviti hati naik turun,</li><li>rating naik turun → maruah naik turun,</li><li>semuanya bergantung suasana, bukan bergantung janji Allah.</li></ul></li>
+        <li><strong>Ia hidup dengan logik dunia, bukan cahaya Tauhid</strong>
+          <ul><li>keputusan dibuat atas "ROI", bukan redha Allah,</li><li>benar-salah ditimbang dengan untung-rugi segera, bukan neraca akhirat.</li></ul></li>
+        <li><strong>Ia menghasilkan kesan palsu</strong>
+          <ul><li>pada sisi Asbab Fitrah: nampak maju, kuat, kaya,</li><li>pada sisi Asbab Mutlak (Asli &amp; Terbitan): kosong nilai di sisi Allah jika tidak berpaut pada ketaatan.</li></ul></li>
+      </ol>
+      <p>Materialisme bukan neutral. Ia Asbab Zulumat yang tersusun — menghisap iman perlahan-lahan tanpa disedari.</p>
+
+      <hr>
+      <h3>1.4.6 Rumusan Tauhidi Bab 1.4</h3>
+      <ul>
+        <li>Materialisme ialah jerat besar Asbab Zulumat zaman moden.</li>
+        <li>Ia menjadikan manusia pengikut sistem, bukan pengikut Allah.</li>
+        <li>Ia menjadikan nilai moral tunduk kepada pasaran dan majoriti.</li>
+        <li>Ia menukar pusat aktiviti hati daripada iman kepada dunia.</li>
+        <li>Ia memaksa manusia menjadi hamba alat, bukan hamba Allah.</li>
+      </ul>
+      <blockquote><p>Materialisme tidak bermula dengan harta, tetapi bermula apabila aktiviti hati yakin bahawa dunia lebih menentukan hidup daripada Allah.</p></blockquote>
+      <p>Seluruh Bab 1.4 wujud untuk:</p>
+      <ul><li>memecahkan jerat ini,</li><li>supaya iman kembali menjadi pusat,</li><li>dan Asbab Fitrah serta Asbab Zulumat kembali ke tempat alat, di bawah pimpinan Asbab Mutlak (Asli &amp; Terbitan).</li></ul>
+
+      <div class="footnote">
+        <p><strong>Nota Kaki Bab 1.4</strong></p>
+        <p>【1】 al-Jathiyah 45:23 — Hawa nafsu menjadi "ilah" apabila diikut sebagai penentu hidup.</p>
+        <p>【2】 al-An'am 6:116 — Majoriti tidak menentukan kebenaran; ikut majoriti boleh menyesatkan.</p>
+        <p>【3】 an-Nahl 16:96 — Yang ada pada manusia akan habis; yang di sisi Allah kekal.</p>
+        <p>【4】 al-'Alaq 96:6–7 — Manusia melampaui batas apabila merasa cukup; akar kesombongan materialisme.</p>
+      </div>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 1.5 -->
+    <section class="section-card reveal" id="s5">
+      <span class="badge-chapter">Bab 1.5</span>
+      <h2>1.5 Peranan Syaitan &amp; Ego</h2>
+
+      <div class="insight-box">
+        <p><strong>(Syaitan meniup, ego menerima — lalu menolak Asbab Mutlak (Asli &amp; Terbitan))</strong></p>
+        <p>Materialisme, sainsisme, liberalisme, dan kerosakan worldview moden tidak akan hidup jika dua musuh ini tidak bekerja serentak:</p>
+        <ol><li>Syaitan — meniup, menghias, membisik, memutar rasa dan sangkaan.</li><li>Ego (nafs) — menerima, membesarkan, mempertahankan, dan mahu menjadi pusat.</li></ol>
+        <p>Gabungan ini melahirkan penolakan terhadap Asbab Mutlak Asli (perintah Allah) dan Asbab Mutlak Terbitan (amal sunnah Rasulullah ﷺ).</p>
+      </div>
+
+      <hr>
+      <h3>1.5.1 Syaitan Tidak Mampu Memaksa — Hanya Mampu Meniup</h3>
+      <p>Syaitan tidak mempunyai kuasa menentukan apa-apa. Dia hanya meniup dan menghias, lalu menunggu aktiviti hati manusia menerima.</p>
+      <p><strong>Tugas syaitan:</strong></p>
+      <ul><li>meniup rasa "kau betul",</li><li>menghias dunia supaya nampak lebih "real" daripada akhirat,</li><li>membesarkan logik Asbab Fitrah di mata manusia,</li><li>membesarkan persetujuan Asbab Zulumat sebagai "kebenaran sosial",</li><li>menenggelamkan janji Allah,</li><li>membuat manusia memandang remeh Asbab Mutlak (Asli &amp; Terbitan).</li></ul>
+      <div class="arabic">إِنَّ الشَّيْطَانَ لَكُمْ عَدُوٌّ فَاتَّخِذُوهُ عَدُوًّا</div>
+      <div class="translation">"Sesungguhnya syaitan itu musuh bagi kamu; maka jadikanlah dia musuh."<span class="ref">Fatir 35:6 【1】</span></div>
+      <blockquote><p>Bisikan utamanya ialah: "Asbab Fitrah dan Asbab Zulumat lebih 'real' daripada janji Allah."</p></blockquote>
+
+      <hr>
+      <h3>1.5.2 Kesombongan Iblis: Penolakan Pertama terhadap Asbab Mutlak Asli</h3>
+      <p>Iblis enggan sujud bukan kerana tidak faham perintah, tetapi kerana tidak mahu tunduk kepada Asbab Mutlak Asli — perintah Allah.</p>
+      <div class="arabic">أَبَىٰ وَاسْتَكْبَرَ</div>
+      <div class="translation">"Dia enggan dan dia sombong."<span class="ref">al-Baqarah 2:34 【2】</span></div>
+      <p>Inilah penyakit pertama: kesombongan terhadap perintah Allah.</p>
+      <p>Dan inilah penyakit manusia apabila mereka:</p>
+      <ul><li>menolak perintah kerana "logik",</li><li>menolak sunnah kerana "moden",</li><li>menolak dakwah kerana "sibuk",</li><li>menolak mujahadah kerana "selesa",</li><li>menolak sabar kerana "mahu segera".</li></ul>
+      <p>Semua ini ialah penolakan terhadap Asbab Mutlak Asli dan Asbab Mutlak Terbitan.</p>
+
+      <hr>
+      <h3>1.5.3 Ego Menolak Asbab Mutlak Kerana Ia Menuntut Tunduk</h3>
+      <p>Asbab Mutlak Asli hadir sebagai:</p>
+      <ul><li>perintah, larangan,</li><li>janji Allah,</li><li>ujian,</li><li>pengorbanan.</li></ul>
+      <p>Asbab Mutlak Terbitan hadir sebagai:</p>
+      <ul><li>solat, zikir,</li><li>dakwah,</li><li>mujahadah, sabar,</li><li>syura, taubat.</li></ul>
+      <p>Semua ini berat kepada ego bukan kerana tidak masuk akal, tetapi kerana ia menuntut tunduk.</p>
+      <p><strong>Ego mahu:</strong></p>
+      <ul><li>mengawal,</li><li>menjadi pusat,</li><li>menjadi penentu natijah.</li></ul>
+      <div class="arabic">فَلَا تُزَكُّوا أَنفُسَكُمْ</div>
+      <div class="translation">"Jangan kamu membela (mengangkat) diri kamu."<span class="ref">an-Najm 53:32 【3】</span></div>
+      <p>Ego mahu dirinya tinggi; Asbab Mutlak (Asli &amp; Terbitan) menundukkan ego.</p>
+
+      <hr>
+      <h3>1.5.4 Dua Bentuk Penolakan (Syaitan + Ego)</h3>
+      <h3>1) Penolakan Intelektual</h3>
+      <p>Akal dijadikan hakim terhadap wahyu:</p>
+      <ul><li>mempertikaikan hadith,</li><li>meragui janji Allah,</li><li>mengutamakan logik Asbab Fitrah,</li><li>mengangkat persetujuan Asbab Zulumat,</li><li>menilai agama seperti menilai data.</li></ul>
+      <p>Ini ialah penolakan terhadap Asbab Mutlak Asli dengan alasan "pemikiran".</p>
+      <h3>2) Penolakan Emosi</h3>
+      <p>Aktiviti hati tidak mahu tunduk:</p>
+      <ul><li>malas beramal,</li><li>malu ikut sunnah,</li><li>tidak suka syarat agama,</li><li>tidak mahu sabar,</li><li>tidak mahu mujahadah.</li></ul>
+      <p>Ini ialah penolakan terhadap Asbab Mutlak Terbitan pada lapisan rasa dan kehendak.</p>
+
+      <hr>
+      <h3>1.5.5 Bagaimana Syaitan Membesarkan Ego</h3>
+      <p>Syaitan tidak mencipta dosa; syaitan hanya membesarkan "aku":</p>
+      <ul><li>sedikit ilmu → jadi sombong,</li><li>sedikit harta → jadi angkuh,</li><li>sedikit kejayaan → jadi congkak,</li><li>sedikit pengaruh → jadi riya',</li><li>sedikit ujian → jadi putus asa.</li></ul>
+      <div class="arabic">وَلَا تَتَّبِعِ الْهَوَىٰ فَيُضِلَّكَ عَن سَبِيلِ اللَّهِ</div>
+      <div class="translation">"Jangan ikut hawa nafsu; nanti ia menyesatkanmu dari jalan Allah."<span class="ref">Sad 38:26 【4】</span></div>
+      <p>Ego ialah pintu paling lembut untuk menolak Asbab Mutlak (Asli &amp; Terbitan).</p>
+
+      <hr>
+      <h3>1.5.6 Tauhid Menghancurkan Syaitan &amp; Ego</h3>
+      <p>Kerangka 3 Asbab memerangi dua musuh ini melalui tiga tiang:</p>
+      <h3>1) Nafy</h3>
+      <p>Menafikan kuasa memberi kesan pada makhluk:</p>
+      <ul><li>Asbab Fitrah tidak menentukan,</li><li>Asbab Zulumat tidak menentukan,</li><li>syaitan tidak menentukan,</li><li>ego tidak menentukan.</li></ul>
+      <h3>2) Isbat</h3>
+      <p>Menetapkan bahawa hanya Allah memberi kesan:</p>
+      <ul><li>Allah menentukan natijah,</li><li>Allah memberi hidayah,</li><li>Allah membolak-balik hati,</li><li>Allah menghidupkan iman sebagai aktiviti hati,</li><li>Allah menunaikan janji-Nya melalui Asbab Mutlak Asli dan mengalirkannya dalam Asbab Mutlak Terbitan.</li></ul>
+      <h3>3) Ittiba' Rasulullah ﷺ</h3>
+      <p>Mengambil Asbab Mutlak Terbitan mengikut tertib baginda ﷺ:</p>
+      <ul><li>dakwah memecahkan pergantungan hati,</li><li>mujahadah menundukkan ego,</li><li>sabar menstabilkan ketaatan,</li><li>syura mematikan pendapat diri.</li></ul>
+      <div class="arabic">إِنَّهُ لَيْسَ لَهُ سُلْطَانٌ عَلَى الَّذِينَ آمَنُوا وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ</div>
+      <div class="translation">"Syaitan tidak mempunyai kuasa ke atas orang yang beriman dan bertawakkal kepada Allah."<span class="ref">an-Nahl 16:99 【5】</span></div>
+      <p>Ini selari dengan definisi iman K3A:</p>
+      <blockquote><p>Iman ialah aktiviti rasa dalam hati (cinta, takut, harap, yakin, percaya, tawakkal) yang tunduk kepada Allah, dan tunduk itu berlaku melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ tanpa menjadikan bukti zahir atau logik sebagai hakim; iman ini tumbuh selepas ujian mujahadah dan sabar.</p></blockquote>
+
+      <hr>
+      <h3>1.5.7 Rumusan Tauhidi Bab 1.5</h3>
+      <ul>
+        <li>Syaitan hanya meniup; ego yang menerima.</li>
+        <li>Penolakan wahyu bermula pada aktiviti hati, bukan semata-mata pada akal.</li>
+        <li>Iblis ialah contoh pertama penolakan Asbab Mutlak Asli.</li>
+        <li>Ego membenci Asbab Mutlak (Asli &amp; Terbitan) kerana ia menuntut pengorbanan dan tunduk.</li>
+        <li>Syaitan membesarkan "aku", lalu memadamkan "Allah".</li>
+        <li>Nafy mematahkan pergantungan kepada Asbab Fitrah dan Asbab Zulumat.</li>
+        <li>Isbat menghidupkan yakin kepada janji Allah.</li>
+        <li>Ittiba' menghidupkan Asbab Mutlak Terbitan dalam kehidupan.</li>
+      </ul>
+      <blockquote><p><strong>Kesimpulan:</strong> Musuh iman bukan dunia luar semata-mata, tetapi syaitan yang meniup dan ego yang membesar di dalam hati.</p></blockquote>
+
+      <div class="footnote">
+        <p><strong>Nota Kaki Bab 1.5</strong></p>
+        <p>【1】 Fatir 35:6 — Syaitan musuh; arahan mengambilnya sebagai musuh.</p>
+        <p>【2】 al-Baqarah 2:34 — Iblis enggan dan sombong; contoh penolakan perintah Allah.</p>
+        <p>【3】 an-Najm 53:32 — Larangan mengangkat diri; akar penyakit ego.</p>
+        <p>【4】 Sad 38:26 — Hawa nafsu menyesatkan dari jalan Allah; ego sebagai pintu penyelewengan.</p>
+        <p>【5】 an-Nahl 16:99 — Syaitan tiada kuasa (sultan) ke atas orang beriman yang bertawakkal.</p>
+      </div>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 1.6 -->
+    <section class="section-card reveal" id="s6">
+      <span class="badge-chapter">Bab 1.6</span>
+      <h2>1.6 Ilmu Menjadi Hijab</h2>
+
+      <div class="insight-box">
+        <p><strong>(Ilmu tanpa Asbab Mutlak (Asli &amp; Terbitan) → gelap pada iman)</strong></p>
+        <p>Dalam Kerangka 3 Asbab, ilmu ialah Asbab Fitrah — berguna sebagai alat, tetapi tidak menentukan apa-apa.</p>
+        <p>Ilmu hanya menjadi bercahaya apabila ia dipautkan kepada:</p>
+        <ul><li>Asbab Mutlak Asli (wahyu, perintah Allah),</li><li>Asbab Mutlak Terbitan (sunnah Rasulullah ﷺ, dakwah, mujahadah, sabar, dan seluruh tertib amal).</li></ul>
+        <p>Apabila ilmu terpisah daripada Asbab Mutlak (Asli &amp; Terbitan), ia berubah fungsi:</p>
+        <ul><li>ilmu menjadi hijab,</li><li>pandai tetapi tidak tunduk,</li><li>tahu tetapi tidak taat,</li><li>cerah pada maklumat tetapi gelap pada iman.</li></ul>
+        <p>Kerana iman bukan maklumat. Iman ialah aktiviti rasa dalam hati yang hidup dan sentiasa bergerak kepada Allah — cinta, takut, harap, yakin, percaya, dan tawakkal — dan tunduk itu berlaku melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ tanpa menjadikan penglihatan, bukti zahir, atau logik sebagai hakim iman. Iman ini ditumbuhkan Allah selepas ujian mujahadah dan sabar. 【5】</p>
+      </div>
+
+      <hr>
+      <h3>1.6.1 Ilmu Yang Terputus Daripada Asbab Mutlak Hilang Cahaya</h3>
+      <div class="arabic">اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ</div>
+      <div class="translation">"Allah adalah cahaya langit dan bumi."<span class="ref">an-Nur 24:35 【1】</span></div>
+      <p>Cahaya bukan datang daripada maklumat, tetapi daripada Allah — dan Allah menurunkan cahaya itu melalui Asbab Mutlak (Asli &amp; Terbitan).</p>
+      <p>Ilmu menjadi bercahaya apabila:</p>
+      <ul><li>ia kembali kepada Allah,</li><li>ia bergerak dalam tertib Rasulullah ﷺ,</li><li>ia membina iman sebagai aktiviti hati dan melahirkan amal.</li></ul>
+      <p>Namun jika ilmu berpaut kepada:</p>
+      <ul><li>logik, data, eksperimen sebagai Asbab Fitrah yang dijadikan hakim, atau</li><li>nilai majoriti, ideologi, budaya sebagai Asbab Zulumat yang dijadikan neraca,</li></ul>
+      <p>maka ilmu itu menjadi hijab yang membutakan hati.</p>
+
+      <hr>
+      <h3>1.6.2 Ilmu Tanpa Asbab Mutlak Melahirkan Keangkuhan</h3>
+      <p>Antara contoh ilmu yang terputus daripada Asbab Mutlak (Asli &amp; Terbitan):</p>
+      <ul><li>belajar sains sebagai Asbab Fitrah tetapi memandang sunnah rendah,</li><li>belajar agama tetapi meninggalkan dakwah,</li><li>belajar tafsir tanpa mujahadah,</li><li>belajar hadith tetapi ego tidak patah.</li></ul>
+      <div class="arabic">فَرِحُوا بِمَا عِندَهُم مِّنَ الْعِلْمِ</div>
+      <div class="translation">"Mereka gembira dengan ilmu yang ada pada mereka."<span class="ref">Ghafir 40:83 【2】</span></div>
+      <p>Mereka bukan jahil — mereka berilmu. Tetapi apabila ilmu tidak dipautkan kepada Asbab Mutlak (Asli &amp; Terbitan), ilmu itu menutup mata hati.</p>
+
+      <hr>
+      <h3>1.6.3 Semakin Banyak Ilmu, Semakin Jauh Jika Tidak Dipautkan Kepada Asbab Mutlak</h3>
+      <p>Ilmu yang tidak berpaut kepada Asbab Mutlak Asli dan Asbab Mutlak Terbitan sering melahirkan:</p>
+      <ul><li>sombong,</li><li>keras hati,</li><li>kuat berhujah,</li><li>lemah tawakkal,</li><li>skeptik terhadap janji Allah,</li><li>menilai agama seperti menilai eksperimen.</li></ul>
+      <p>Ia menyentuh zahir, tetapi tidak menghidupkan batin.</p>
+      <div class="arabic">يَعْلَمُونَ ظَاهِرًا مِّنَ الْحَيَاةِ الدُّنْيَا</div>
+      <div class="translation">"Mereka hanya mengetahui yang zahir daripada kehidupan dunia."<span class="ref">ar-Rum 30:7 【3】</span></div>
+      <p>Ini ialah gambaran ilmu yang berlegar di sekitar Asbab Fitrah semata-mata, lalu memutuskan manusia daripada akhirat.</p>
+
+      <hr>
+      <h3>1.6.4 Ulama' Hakiki: Ilmu Bersambung Dengan Asbab Mutlak</h3>
+      <div class="arabic">إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ</div>
+      <div class="translation">"Yang paling takut kepada Allah ialah para ulama'."<span class="ref">Fatir 35:28 【4】</span></div>
+      <p>Tanda ilmu bersambung dengan Asbab Mutlak (Asli &amp; Terbitan) ialah:</p>
+      <ul><li>takut kepada Allah,</li><li>tunduk kepada perintah,</li><li>patuh sunnah,</li><li>aktif dalam dakwah,</li><li>mujahadah melawan nafs,</li><li>sabar menanggung ujian.</li></ul>
+      <p>Jika banyak ilmu tetapi sedikit takut dan sedikit tunduk, itu tanda ilmu terputus daripada Asbab Mutlak (Asli &amp; Terbitan).</p>
+
+      <hr>
+      <h3>1.6.5 Ilmu Tanpa Amal: Hilang Tertib Tauhidi</h3>
+      <p>Rasulullah ﷺ berdoa:</p>
+      <blockquote><p>اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عِلْمٍ لَا يَنْفَعُ — "Ya Allah, aku berlindung daripada ilmu yang tidak bermanfaat." (HR Muslim) 【5】</p></blockquote>
+      <p>Dalam Kerangka 3 Asbab, ilmu hanya bermanfaat apabila ia melahirkan:</p>
+      <ul><li>dakwah,</li><li>mujahadah,</li><li>sabar,</li><li>iman sebagai aktiviti hati,</li><li>amal,</li><li>perubahan hati dan suasana.</li></ul>
+      <p>Jika ilmu tidak menggerakkan seseorang kepada Asbab Mutlak Terbitan, ilmu itu hanyalah maklumat yang menebalkan ego.</p>
+
+      <hr>
+      <h3>1.6.6 Kerangka 3 Asbab Menghidupkan Ilmu</h3>
+      <p>Kerangka 3 Asbab menyusun ilmu dengan tertib Tauhidi:</p>
+      <h3>1) Nafy</h3>
+      <p>Menafikan kuasa memberi kesan pada makhluk:</p>
+      <ul><li>ilmu (Asbab Fitrah) tidak menentukan,</li><li>data (Asbab Fitrah) tidak menentukan,</li><li>logik (Asbab Fitrah) tidak menentukan,</li><li>nilai majoriti (Asbab Zulumat) tidak menentukan.</li></ul>
+      <h3>2) Isbat</h3>
+      <p>Menetapkan hanya Allah memberi kesan:</p>
+      <ul><li>Allah membuka hati,</li><li>Allah menghidupkan iman sebagai aktiviti hati,</li><li>Allah memberi cahaya pada ilmu,</li><li>Allah menunaikan janji-Nya melalui Asbab Mutlak (Asli &amp; Terbitan).</li></ul>
+      <h3>3) Ittiba' Rasulullah ﷺ</h3>
+      <p>Menjadikan ilmu hidup melalui tertib amal:</p>
+      <blockquote><p>Dakwah → Mujahadah → Sabar → (Allah tumbuhkan) Iman → Amal</p></blockquote>
+      <p>Inilah jalan ilmu menjadi nur — kerana iman tumbuh selepas lulus ujian mujahadah dan sabar.</p>
+
+      <hr>
+      <h3>1.6.7 Rumusan Tauhidi Bab 1.6</h3>
+      <ul>
+        <li>Ilmu tanpa Asbab Mutlak (Asli &amp; Terbitan) menjadi hijab yang menutup hati.</li>
+        <li>Ilmu tanpa dakwah dan mujahadah membesarkan ego.</li>
+        <li>Cahaya ilmu bukan pada banyaknya maklumat, tetapi pada hubungannya dengan Allah.</li>
+        <li>Ilmu yang tidak melahirkan iman sebagai aktiviti hati bukan cahaya — tetapi kegelapan.</li>
+        <li>Ilmu hanya bercahaya apabila ia berpaut kepada Asbab Mutlak Asli dan Asbab Mutlak Terbitan.</li>
+      </ul>
+
+      <div class="footnote">
+        <p><strong>Nota Kaki Bab 1.6</strong></p>
+        <p>【1】 an-Nur 24:35 — Allah sumber cahaya; ilmu mendapat nur apabila dipautkan kepada jalan ketaatan.</p>
+        <p>【2】 Ghafir 40:83 — kegembiraan dengan ilmu sendiri boleh menjadi hijab apabila tidak tunduk kepada Allah.</p>
+        <p>【3】 ar-Rum 30:7 — ilmu zahir yang memutuskan manusia daripada akhirat; tanda ilmu terkurung pada Asbab Fitrah.</p>
+        <p>【4】 Fatir 35:28 — ulama' hakiki ditandai dengan khasyah (takut yang menundukkan) kepada Allah.</p>
+        <p>【5】 HR Muslim — doa Nabi ﷺ daripada ilmu yang tidak bermanfaat; selari dengan prinsip bahawa ilmu bermanfaat ialah yang menggerakkan kepada Asbab Mutlak (Asli &amp; Terbitan) dan Allah menumbuhkan iman selepas mujahadah &amp; sabar.</p>
+      </div>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 1.7 -->
+    <section class="section-card reveal" id="s7">
+      <span class="badge-chapter">Bab 1.7</span>
+      <h2>1.7 Sunnatullah vs "Hukum Alam"</h2>
+
+      <div class="insight-box">
+        <p><strong>(Tiada "hukum alam" dalam Tauhid dari sudut Asbab Mutlak Asli)</strong></p>
+        <p>Dalam dunia moden, manusia diajar bahawa terdapat "hukum alam" yang wajib berlaku:</p>
+        <ul><li>api mesti membakar,</li><li>air mesti menenggelamkan,</li><li>graviti mesti menarik,</li><li>besi mesti tenggelam,</li><li>bilangan besar mesti menang.</li></ul>
+        <p>Namun dalam Kerangka 3 Asbab, istilah "hukum alam" tidak wujud dari sudut Tauhid, kerana:</p>
+        <ul><li>alam tidak memiliki kuasa,</li><li>Asbab Fitrah tidak memberi kesan sendiri,</li><li>semua kesan berlaku hanya dengan izin Allah.</li></ul>
+        <p>Dalam Tauhid, yang wujud hanyalah tiga kategori Asbab, dan masing-masing mempunyai kedudukan yang berbeza.</p>
+      </div>
+
+      <hr>
+      <h3>1.7.1 Kedudukan Asbab dalam Tauhid</h3>
+      <h3>1. Asbab Fitrah</h3>
+      <ul><li>Pola ciptaan Allah yang konsisten,</li><li>Neutral dari sudut iman,</li><li>Boleh digantung, dibalikkan, atau diubah,</li><li>Tidak mengandungi janji Allah,</li><li>Tidak menentukan hakikat.</li></ul>
+      <h3>2. Asbab Mutlak Asli (Sunnatullah)</h3>
+      <ul><li>Ketetapan Allah dalam wahyu,</li><li>Mengandungi janji Allah,</li><li>Tidak berubah,</li><li>Menentukan hakikat,</li><li>Menjadi asas iman, dakwah, mujahadah, dan sabar.</li></ul>
+      <div class="arabic">وَلَن تَجِدَ لِسُنَّتِ اللَّهِ تَبْدِيلًا</div>
+      <div class="translation">"Dan engkau tidak akan mendapati sebarang perubahan pada sunnatullah."<span class="ref">Fatir 35:43 【1】</span></div>
+      <p><strong>Kesimpulan asas Tauhidi:</strong></p>
+      <ul><li>Sunnatullah = Asbab Mutlak Asli, bukan sains.</li><li>Asbab Fitrah hanyalah alat ujian.</li><li>Asbab Zulumat gugur apabila iman hidup.</li></ul>
+
+      <hr>
+      <h3>1.7.2 Mengapa "Hukum Alam" Tidak Wujud dari Sudut Asbab Mutlak Asli</h3>
+      <p>"Hukum alam" hanyalah pemerhatian berulang manusia, bukan ketetapan Tauhidi.</p>
+      <p><strong>Contoh prinsip Tauhid:</strong></p>
+      <ul><li>Api membakar hanya apabila Allah izinkan.</li><li>Air menenggelamkan hanya apabila Allah izinkan.</li><li>Bilangan besar menang hanya apabila Allah izinkan.</li></ul>
+      <p>Al-Qur'an membatalkan kepercayaan bahawa alam mempunyai kuasa sendiri.</p>
+      <p><strong>Api tidak membakar — Asbab Fitrah digantung</strong></p>
+      <div class="arabic">قُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا</div>
+      <div class="translation">"Wahai api, jadilah engkau sejuk dan selamat."<span class="ref">al-Anbiya' 21:69 【2】</span></div>
+      <p><strong>Laut tidak menenggelamkan — Asbab Fitrah dibalikkan</strong></p>
+      <div class="arabic">فَانفَلَقَ فَكَانَ كُلُّ فِرْقٍ كَالطَّوْدِ الْعَظِيمِ</div>
+      <div class="translation">"Maka laut itu terbelah, setiap bahagian seperti gunung yang besar."<span class="ref">Asy-Syu'ara' 26:63 【3】</span></div>
+      <p><strong>Bilangan kecil menang — logik dunia ditundukkan</strong></p>
+      <div class="arabic">كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً</div>
+      <div class="translation">"Berapa banyak kelompok kecil mengalahkan kelompok besar."<span class="ref">al-Baqarah 2:249 【4】</span></div>
+      <p><strong>Kesimpulan Tauhidi:</strong></p>
+      <ul><li>Tiada satu pun Asbab Fitrah yang wajib memberi kesan.</li><li>Yang wajib berlaku hanyalah janji Allah dalam Asbab Mutlak Asli.</li></ul>
+
+      <hr>
+      <h3>1.7.3 Bezakan Asbab Fitrah dan Asbab Mutlak Asli</h3>
+      <p><strong>Asbab Fitrah</strong></p>
+      <ul><li>Ciptaan Allah</li><li>Neutral</li><li>Konsisten secara kebiasaan</li><li>Boleh digantung atau dibalikkan</li><li>Tidak mengandungi janji Allah</li></ul>
+      <p><strong>Asbab Mutlak Asli (Sunnatullah)</strong></p>
+      <ul><li>Wahyu dan janji Allah</li><li>Tidak berubah</li><li>Menentukan hakikat</li><li>Berfungsi walaupun melawan logik dunia</li><li>Asas kepada iman, dakwah, mujahadah, dan sabar</li></ul>
+      <p><strong>Contoh Asbab Mutlak Asli (semua berdalil):</strong></p>
+      <ul><li>"Jika kamu menolong agama Allah, Allah menolong kamu" (47:7)</li><li>"Bertaqwalah, Allah beri jalan keluar" (65:2)</li><li>"Bersabarlah, Allah bersama kamu" (8:46)</li><li>"Jangan takut, Aku bersama kamu" (20:46)</li></ul>
+
+      <hr>
+      <h3>1.7.4 Punca Kekeliruan Manusia</h3>
+      <p>Manusia keliru kerana:</p>
+      <ol><li>Melihat pola Asbab Fitrah berulang → menyangka ia kuasa.</li><li>Melihat konsistensi alam → menamakannya "hukum alam".</li><li>Menjadikan pemerhatian sebagai sumber kebenaran → bukan wahyu.</li></ol>
+      <p>Dalam Tauhid:</p>
+      <ul><li>Pola berulang ≠ kuasa.</li><li>Kuasa hanya milik Allah.</li></ul>
+      <p><strong>Contoh kekeliruan:</strong></p>
+      <ul><li>Tsunami → "kuasa alam", padahal izin Allah.</li><li>Badar → "bilangan tentukan kemenangan", padahal nusrah Allah.</li><li>Rezeki → "hasil usaha", padahal pemberian Allah.</li></ul>
+      <p>Ini berlaku apabila Asbab Fitrah digunakan tanpa Nafy, lalu diyakini berkuasa.</p>
+
+      <hr>
+      <h3>1.7.5 Hubungan Sunnatullah dengan Iman</h3>
+      <p>Iman bukan keyakinan kepada hukum alam.</p>
+      <p>Iman ialah:</p>
+      <ul><li>aktiviti rasa dalam hati (cinta, takut, harap, yakin, percaya, tawakkal),</li><li>tunduk sepenuhnya kepada perkhabaran Rasulullah ﷺ,</li><li>walaupun natijah zahir menyalahi logik Asbab Fitrah,</li><li>dan iman ini ditumbuhkan Allah selepas ujian mujahadah dan sabar.</li></ul>
+      <p>Orang yang hidup dengan Asbab Mutlak Asli:</p>
+      <ul><li>tidak takut dunia,</li><li>tidak tunduk kepada logik,</li><li>tidak bergantung kepada angka,</li><li>berjalan di atas janji Allah.</li></ul>
+
+      <hr>
+      <h3>1.7.6 Rumusan Tauhidi Bab 1.7</h3>
+      <ul>
+        <li>"Hukum alam" tidak wujud dari sudut Asbab Mutlak Asli.</li>
+        <li>Yang wujud hanyalah Asbab Fitrah sebagai alat ujian.</li>
+        <li>Sunnatullah = Asbab Mutlak Asli dalam wahyu yang tidak berubah.</li>
+        <li>Alam tidak memberi kesan — Allah memberi kesan.</li>
+        <li>Asbab Fitrah tunduk kepada Asbab Mutlak Asli, bukan sebaliknya.</li>
+        <li>Orang yang memuliakan "hukum alam" sedang berpaut kepada Asbab Fitrah.</li>
+        <li>Orang yang berpaut kepada Sunnatullah hidup seperti para Nabi.</li>
+      </ul>
+      <blockquote><p><strong>Ringkas Tauhidi:</strong> Sunnatullah = janji Allah. "Hukum alam" = sangkaan manusia. Yang memberi kesan hanyalah Allah — bukan alam, bukan sebab.</p></blockquote>
+
+      <div class="footnote">
+        <p><strong>Nota Kaki Bab 1.7</strong></p>
+        <p>【1】 Fatir 35:43 — Sunnatullah ialah ketetapan Allah dalam wahyu yang tidak berubah.</p>
+        <p>【2】 al-Anbiya' 21:69 — api tidak memberi kesan tanpa izin Allah.</p>
+        <p>【3】 Asy-Syu'ara' 26:63 — laut tidak memberi kesan tanpa izin Allah.</p>
+        <p>【4】 al-Baqarah 2:249 — bilangan bukan penentu kemenangan; nusrah datang daripada Allah.</p>
+      </div>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 1.8 -->
+    <section class="section-card reveal" id="s8">
+      <span class="badge-chapter">Bab 1.8</span>
+      <h2>1.8 Nafy Kuasa Makhluk, Isbat Kuasa Allah</h2>
+
+      <div class="insight-box">
+        <p><strong>(Operasi Tauhid dalam hati: memutuskan sandaran kepada makhluk dan mengikat hati kepada Allah)</strong></p>
+        <p>Inti Tauhid bukan teori, bukan slogan, dan bukan hujah akal. Tauhid ialah operasi hati.</p>
+        <p>Tauhid hidup apabila:</p>
+        <ul><li>Nafy memutuskan hati daripada kebergantungan kepada makhluk, dan</li><li>Isbat mengikat hati sepenuhnya kepada Allah sebagai satu-satunya pemberi kesan.</li></ul>
+        <p>Dalam Kerangka 3 Asbab:</p>
+        <ul><li><strong>Nafy</strong> = menafikan kuasa memberi kesan pada Asbab Fitrah dan Asbab Zulumat.</li><li><strong>Isbat</strong> = menetapkan bahawa hanya Allah memberi manfaat, mudarat, hidup, mati, rezeki, kemenangan, dan hidayat.</li></ul>
+        <p>Tanpa Nafy → Isbat berubah menjadi syirik halus. Tanpa Isbat → Nafy berubah menjadi kekosongan. Tauhid hanya hidup apabila Nafy dan Isbat berjalan serentak.</p>
+      </div>
+
+      <hr>
+      <h3>1.8.1 NAFY: Menafikan Kuasa Memberi Kesan Pada Makhluk</h3>
+      <p>Nafy bukan menolak sebab, tetapi menafikan kuasa sebab.</p>
+      <p>Hati mesti dinafikan daripada keyakinan bahawa:</p>
+      <ul><li>api memberi kesan sendiri,</li><li>pisau memberi kesan sendiri,</li><li>duit memberi rezeki,</li><li>doktor memberi kesembuhan,</li><li>teknologi memberi keselamatan,</li><li>strategi memberi kemenangan,</li><li>angka memberi kejayaan,</li><li>manusia menentukan nasib.</li></ul>
+      <div class="arabic">وَمَا رَمَيْتَ إِذْ رَمَيْتَ</div>
+      <div class="translation">"Bukan engkau yang melempar ketika engkau melempar."<span class="ref">al-Anfal 8:17 【1】</span></div>
+      <p>Ayat ini menetapkan kaedah Tauhid:</p>
+      <ul><li>perbuatan berlaku melalui makhluk,</li><li>kesan berlaku hanya dengan Allah.</li></ul>
+      <p>Nafy mengosongkan hati daripada sandaran kepada seluruh Asbab Fitrah dan Asbab Zulumat.</p>
+
+      <hr>
+      <h3>1.8.2 ISBAT: Menetapkan Allah Sebagai Satu-Satunya Pemberi Kesan</h3>
+      <p>Isbat ialah mengisi hati dengan keyakinan bahawa:</p>
+      <ul><li>Allah memberi rezeki,</li><li>Allah mengangkat dan merendahkan,</li><li>Allah memberi kemenangan dan kekalahan,</li><li>Allah menyembuhkan dan menguji,</li><li>Allah membuka dan menutup hati.</li></ul>
+      <div class="arabic">وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ</div>
+      <div class="translation">"Allah menciptakan kamu dan apa yang kamu lakukan."<span class="ref">as-Saffat 37:96 【2】</span></div>
+      <div class="arabic">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ</div>
+      <div class="translation">"Allah, tiada Tuhan selain Dia, Yang Maha Hidup lagi Maha Berdiri Sendiri."<span class="ref">al-Baqarah 2:255 【3】</span></div>
+      <p>Isbat bukan sekadar pengakuan lidah, tetapi pengisian hati sehingga makhluk tidak lagi berkuasa ke atas rasa.</p>
+
+      <hr>
+      <h3>1.8.3 NAFY–ISBAT: Operasi Para Nabi</h3>
+      <p>Seluruh perjalanan para Nabi ialah operasi Nafy–Isbat.</p>
+      <p><strong>1. NAFY — mematahkan keyakinan terhadap makhluk</strong></p>
+      <ul><li>Firaun,</li><li>Namrud,</li><li>sistem ekonomi,</li><li>teknologi,</li><li>kekuatan bilangan,</li><li>struktur kuasa.</li></ul>
+      <p><strong>2. ISBAT — mengikat hati kepada Allah</strong></p>
+      <ul><li>janji Allah,</li><li>jalan dakwah,</li><li>mujahadah,</li><li>sabar,</li><li>nusrah.</li></ul>
+      <p><strong>Contoh para Nabi:</strong></p>
+      <p><strong>Nabi Ibrahim عليه السلام</strong></p>
+      <ul><li>Nafy → api (Asbab Fitrah) tiada kuasa</li><li>Isbat → Allah menjadikan api sejuk 【4】</li></ul>
+      <p><strong>Nabi Musa عليه السلام</strong></p>
+      <ul><li>Nafy → laut (Asbab Fitrah) bukan penentu</li><li>Isbat → Allah membuka laut 【5】</li></ul>
+      <p><strong>Nabi Muhammad ﷺ</strong></p>
+      <ul><li>Nafy → bilangan dan senjata bukan faktor</li><li>Isbat → kemenangan Badar dari Allah 【6】</li></ul>
+
+      <hr>
+      <h3>1.8.4 Tanpa Nafy: Syirik Halus Dalam Hati</h3>
+      <p>Jika seseorang:</p>
+      <ul><li>solat tetapi yakin duit menentukan,</li><li>berdakwah tetapi yakin strategi menentukan,</li><li>belajar tetapi yakin markah menentukan,</li><li>bekerja tetapi yakin manusia menentukan,</li></ul>
+      <p>maka hatinya masih berpaut kepada Asbab Fitrah, bukan Tauhid.</p>
+      <p>Syirik moden tidak datang sebagai berhala, tetapi sebagai:</p>
+      <ul><li>data,</li><li>KPI,</li><li>angka,</li><li>sainsisme,</li><li>materialisme,</li><li>konsep "hukum alam".</li></ul>
+      <p>Semua ini mesti dinafikan sebelum hati mampu melakukan Isbat.</p>
+
+      <hr>
+      <h3>1.8.5 Tanpa Isbat: Nafy Menjadi Kosong</h3>
+      <p>Jika seseorang:</p>
+      <ul><li>menolak dunia,</li><li>menolak teknologi,</li><li>menolak logik,</li><li>menolak sains,</li></ul>
+      <p>tetapi tidak mengisi hati dengan Allah, maka:</p>
+      <ul><li>Nafy menjadi penolakan kosong,</li><li>hati kehilangan kiblat,</li><li>Tauhid tidak terbina.</li></ul>
+      <p>Dalam Kerangka 3 Asbab, Nafy wajib diikuti Isbat.</p>
+
+      <hr>
+      <h3>1.8.6 Rantaian Nafy–Isbat Dalam Pembinaan Iman</h3>
+      <p><strong>Rantaian Tauhidi dalam jiwa:</strong></p>
+      <ol>
+        <li>Nafy — putuskan sandaran kepada makhluk</li>
+        <li>Isbat — ikat hati kepada Allah</li>
+        <li>Ittiba' Rasulullah ﷺ — masuk tertib dakwah</li>
+        <li>Mujahadah — mematahkan ego</li>
+        <li>Sabar — menanggung ujian</li>
+        <li>Allah menumbuhkan iman</li>
+        <li>Iman melahirkan amal dan redha</li>
+      </ol>
+      <div class="insight-box">
+        <p><strong>Iman ialah:</strong></p>
+        <ul><li>aktiviti rasa dalam hati (cinta, takut, harap, yakin, percaya, tawakkal),</li><li>tunduk sepenuhnya kepada perkhabaran Rasulullah ﷺ,</li><li>tanpa menjadikan bukti zahir atau logik sebagai hakim,</li><li>dan iman ini ditumbuhkan Allah selepas lulus ujian mujahadah dan sabar.</li></ul>
+      </div>
+
+      <hr>
+      <h3>1.8.7 Rumusan Tauhidi Bab 1.8</h3>
+      <ul>
+        <li>Nafy memutuskan kebergantungan kepada makhluk.</li>
+        <li>Isbat mengikat hati kepada Allah.</li>
+        <li>Nafy tanpa Isbat = kosong.</li>
+        <li>Isbat tanpa Nafy = syirik halus.</li>
+        <li>Tauhid ialah operasi hati, bukan slogan.</li>
+        <li>Tauhid hidup apabila "Tiada makhluk memberi kesan" bertemu dengan "Hanya Allah memberi kesan."</li>
+      </ul>
+
+      <div class="footnote">
+        <p><strong>Nota Kaki Bab 1.8</strong></p>
+        <p>【1】 al-Anfal 8:17 — penafian kuasa makhluk dan penetapan kuasa Allah.</p>
+        <p>【2】 as-Saffat 37:96 — Allah pencipta perbuatan dan kesannya.</p>
+        <p>【3】 al-Baqarah 2:255 — Allah Al-Hayy Al-Qayyum, tidak bergantung kepada makhluk.</p>
+        <p>【4】 al-Anbiya' 21:69 — Asbab Fitrah (api) dinafikan, kuasa Allah ditetapkan.</p>
+        <p>【5】 asy-Syu'ara' 26:63 — laut terbelah dengan izin Allah.</p>
+        <p>【6】 Ali 'Imran 3:123–124 — nusrah Badar datang daripada Allah.</p>
+      </div>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 1.9 -->
+    <section class="section-card reveal" id="s9">
+      <span class="badge-chapter">Bab 1.9</span>
+      <h2>1.9 Dua Cahaya — Wahyu &amp; Hati</h2>
+
+      <h3>1.9.0 Mukadimah Tauhidi: Dua Cahaya — Wahyu &amp; Hati</h3>
+      <p>Penerimaan atau penolakan terhadap kebenaran tidak ditentukan oleh kekuatan hujah, bukan kerana pendekatan, dan bukan kerana tahap intelektual.</p>
+      <p>Ia berlaku kerana <strong>pertemuan atau tidak bertemunya dua cahaya</strong>.</p>
+
+      <hr>
+      <h3>1. Cahaya Wahyu</h3>
+      <p>Cahaya Wahyu ialah nur yang Allah turunkan melalui:</p>
+      <ul><li>al-Qur'an (Asbab Mutlak Asli),</li><li>Sunnah dan Sirah Rasulullah ﷺ,</li><li>amal dakwah, mujahadah dan sabar (Asbab Mutlak Terbitan),</li><li>suasana masjid dan jamaah.</li></ul>
+      <p>Cahaya ini bukan ciptaan manusia, dan tidak lahir daripada pemikiran atau pengalaman.</p>
+      <p>Ia hanya <strong>diterima apabila seseorang berada dalam tertib para Nabi</strong>:</p>
+      <ul><li>dakwah,</li><li>mujahadah,</li><li>sabar,</li><li>amal ijtima'i dalam jamaah.</li></ul>
+      <p>Kerangka 3 Asbab tidak mencipta cahaya ini — ia hanya <strong>menyusun tertib supaya cahaya wahyu dapat difahami dengan jelas</strong>.</p>
+
+      <hr>
+      <h3>2. Cahaya Hati</h3>
+      <p>Cahaya Hati ialah <strong>kesediaan hati untuk menerima hidayat daripada Allah</strong>.</p>
+      <p><strong>Hati yang hidup:</strong></p>
+      <ul><li>tunduk kepada wahyu tanpa syarat,</li><li>menerima tertib Rasulullah ﷺ,</li><li>tidak menjadikan logik sebagai penentu ketaatan.</li></ul>
+      <p><strong>Hati yang tertutup:</strong></p>
+      <ul><li>melihat kebenaran tetapi tidak tunduk,</li><li>menangguhkan penerimaan,</li><li>mempertahankan keadaan diri.</li></ul>
+
+      <hr>
+      <h3>Prinsip Dua Cahaya (Dikunci)</h3>
+      <ul><li>Cahaya Wahyu + Cahaya Hati → terus nampak</li><li>Jika salah satu tiada → tetap gelap</li></ul>
+      <p>Penolakan bukan kerana kebenaran tidak jelas — tetapi kerana <strong>hati tidak menerima</strong>.</p>
+      <div class="arabic">ثُمَّ قَسَتْ قُلُوبُكُم مِّنۢ بَعْدِ ذَٰلِكَ فَهِيَ كَالْحِجَارَةِ</div>
+      <div class="translation">"Selepas itu hati kamu menjadi keras seperti batu."<span class="ref">al-Baqarah 2:74</span></div>
+      <p>Kebenaran tidak bergantung kepada majoriti — ia bergantung kepada <strong>hati yang hidup</strong>.</p>
+
+      <hr>
+      <h3>1.9.1 Kerangka 3 Asbab: Penterjemah Antara Wahyu &amp; Hati</h3>
+      <p>Cahaya Wahyu ibarat <strong>lampu</strong>. Cahaya Hati ibarat <strong>mata</strong>.</p>
+      <p>Lampu paling terang tidak memberi manfaat jika mata tidak melihat.</p>
+      <h3>Peranan Cahaya Wahyu</h3>
+      <p>Cahaya Wahyu menerangkan:</p>
+      <ul><li>hakikat Asbab Fitrah, Asbab Zulumat, dan Asbab Mutlak,</li><li>tertib amal para Nabi,</li><li>jalan Muhajirin dan Ansar,</li><li>syarat turunnya nusrah,</li><li>mekanisme transformasi Asbab.</li></ul>
+      <p>Ia menunjukkan realiti sebagaimana yang Allah tetapkan — bukan sebagaimana yang manusia sangka.</p>
+      <h3>Peranan Cahaya Hati</h3>
+      <p>Cahaya Hati menentukan sama ada seseorang:</p>
+      <ul><li>menerima atau menolak,</li><li>tunduk atau menangguh,</li><li>bergerak atau berhenti.</li></ul>
+      <p>Jika hati tidak hidup:</p>
+      <ul><li>tertib wahyu kelihatan berat,</li><li>kebenaran terasa jauh,</li><li>perubahan dirasakan sebagai beban.</li></ul>
+      <p>Jika hati hidup:</p>
+      <ul><li>kebenaran menjadi jelas,</li><li>tertib wahyu menjadi ringan,</li><li>amal menjadi mudah.</li></ul>
+
+      <hr>
+      <h3>1.9.2 Keadaan Hati: Penentu Penerimaan</h3>
+      <p>Perbezaan manusia dalam menerima kebenaran bukan kerana perbezaan maklumat — tetapi kerana <strong>keadaan hati</strong>.</p>
+      <h3>Hati yang Tertutup</h3>
+      <div class="arabic">بَلْ رَانَ عَلَىٰ قُلُوبِهِم</div>
+      <div class="translation">"Telah berkarat di atas hati mereka."<span class="ref">al-Mutaffifin 83:14</span></div>
+      <div class="arabic">خَتَمَ اللَّهُ عَلَىٰ قُلُوبِهِم</div>
+      <div class="translation">"Allah mengunci hati mereka."<span class="ref">al-Baqarah 2:7</span></div>
+      <p>Apabila hati tertutup:</p>
+      <ul><li>kebenaran tidak memberi kesan,</li><li>wahyu tidak menembusi,</li><li>perubahan tidak berlaku.</li></ul>
+      <h3>Hati yang Hidup</h3>
+      <p>Hati yang hidup:</p>
+      <ul><li>menerima kebenaran walaupun belum memahami sepenuhnya,</li><li>tunduk walaupun belum melihat hasil,</li><li>bergerak kerana yakin kepada Allah.</li></ul>
+      <p>Hati seperti ini melihat dengan cahaya wahyu — bukan dengan sangkaan sendiri.</p>
+
+      <hr>
+      <h3>1.9.3 Rumusan Tauhidi Bab 1.9</h3>
+      <ul>
+        <li>Penerimaan kebenaran ditentukan oleh keadaan hati, bukan kekuatan hujah.</li>
+        <li>Cahaya wahyu mesti bertemu cahaya hati.</li>
+        <li>Wahyu tidak dihakimi oleh akal atau sistem — tetapi diterima dengan hati yang tunduk.</li>
+        <li>Asbab Mutlak mengatasi Asbab Fitrah dan Asbab Zulumat.</li>
+        <li>Apabila hati hidup, kebenaran menjadi jelas tanpa paksaan.</li>
+      </ul>
+      <blockquote><p>Bila cahaya wahyu bertemu cahaya hati → terus nampak. Bila salah satu tiada → tetap gelap.</p></blockquote>
+
+      <div class="footnote">
+        <p><strong>Nota Kaki</strong></p>
+        <p>【1】 al-Baqarah 2:74 — hati menjadi keras apabila kebenaran ditolak.</p>
+        <p>【2】 al-Mutaffifin 83:14 — dosa menggelapkan hati.</p>
+        <p>【3】 al-Baqarah 2:7 — hati terkunci apabila penolakan berulang.</p>
+      </div>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 1.10 -->
+    <section class="section-card reveal" id="s10">
+      <span class="badge-chapter">Bab 1.10</span>
+      <h2>1.10 Salah Tafsir &amp; Salah Guna Kerangka 3 Asbab</h2>
+
+      <p>Tidak ada kebenaran yang Allah turunkan melainkan manusia boleh menyalahgunakannya. Wahyu sendiri boleh disalah tafsir — apatah lagi ilmu yang menghuraikan wahyu.</p>
+      <p>Kerangka 3 Asbab juga begitu: ia boleh menjadi ubat, dan boleh menjadi racun — bergantung kepada keadaan iman, iaitu aktiviti hati yang hidup (cinta, takut, harap, yakin, percaya, tawakkal) yang tunduk kepada Allah melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ, tanpa menjadikan bukti zahir atau logik sebagai hakim iman; dan iman ini ditumbuhkan Allah selepas lulus ujian mujahadah dan sabar.</p>
+      <p>Tujuan bab ini ialah membersihkan salah faham sebelum masuk Bab 1.11 (Pembinaan Iman).</p>
+
+      <hr>
+      <h3>1.10.1 Menjadikan Kerangka 3 Asbab Sebagai Senjata</h3>
+      <p>Ini kesalahan paling awal dan paling berbahaya.</p>
+      <p>Ada yang apabila memahami sedikit, terus:</p>
+      <ul><li>menyerang orang lain,</li><li>menghukum keluarga,</li><li>menuduh orang syirik kerana menggunakan sebab,</li><li>merasa dirinya lebih "tauhidi" daripada orang lain.</li></ul>
+      <p>Ini bertentangan dengan tertib Nabi ﷺ.</p>
+      <p>Kerangka 3 Asbab bukan pedang untuk memotong manusia. Kerangka 3 Asbab ialah lampu untuk menerangi jalan manusia.</p>
+      <blockquote><p><strong>Prinsip Tauhidi:</strong> Cahaya digunakan untuk menunjuk jalan — bukan membakar manusia.</p></blockquote>
+      <div class="arabic">فَلَا تُزَكُّوا أَنفُسَكُمْ</div>
+      <div class="translation">"Jangan kamu menyucikan (mengangkat) diri kamu."<span class="ref">an-Najm 53:32 【1】</span></div>
+      <p>Rasulullah ﷺ menyucikan manusia dengan kasih, bukan dengan tuduhan. Begitu juga tertib Kerangka 3 Asbab: ilmu untuk menyembuhkan diri, bukan merendahkan orang lain.</p>
+
+      <hr>
+      <h3>1.10.2 Melarikan Diri Daripada Asbab Fitrah (Anti-Usaha)</h3>
+      <p>Kesalahan kedua: menyangka Kerangka 3 Asbab mengajar bahawa usaha tidak perlu.</p>
+      <blockquote><p>"Kalau semua sebab mesti dinafikan, maka duduk sahaja tunggu janji Allah."</p></blockquote>
+      <p>Ini penyelewengan besar.</p>
+      <p>Kerangka 3 Asbab mengajar:</p>
+      <ul><li>mengambil Asbab Fitrah sebagai alat,</li><li>mengikut tertib syarak dan sunnah,</li><li>tidak menggantung hati kepada Asbab Fitrah.</li></ul>
+      <p><strong>Kesalahan yang sering berlaku:</strong></p>
+      <ul><li>tidak mahu bekerja — atas nama tawakkal,</li><li>tidak mahu merancang — atas nama "Asbab Mutlak",</li><li>tidak mahu belajar — atas nama yakin,</li><li>tidak mahu berusaha — atas nama iman.</li></ul>
+      <p>Ini bukan tawakkal. Ini malas + ego + salah tafsir.</p>
+      <blockquote><p><strong>Prinsip Tauhidi:</strong> Asbab Fitrah diambil sebagai alat; aktiviti hati berpaut hanya kepada Allah.</p></blockquote>
+
+      <hr>
+      <h3>1.10.3 Salah Faham Seolah-olah Kerangka 3 Asbab Anti-Sains</h3>
+      <p>Ada yang menyangka Kerangka 3 Asbab bermaksud:</p>
+      <ul><li>menolak teknologi,</li><li>menolak perubatan,</li><li>menolak ubat,</li><li>menolak sains moden,</li><li>menolak sistem ekonomi.</li></ul>
+      <p>Ini salah.</p>
+      <p>Sains dan teknologi termasuk dalam Asbab Fitrah — alat ciptaan Allah. Ia menjadi gelap apabila Asbab Fitrah dijadikan hakim, atau apabila disandarkan kuasa memberi kesan.</p>
+      <p>Kerangka 3 Asbab:</p>
+      <ul><li>tidak memusuhi sains,</li><li>tidak memusuhi teknologi,</li><li>tidak memusuhi ekonomi,</li></ul>
+      <p>tetapi menundukkan semuanya di bawah wahyu, dan mengembalikan pusat pergantungan aktiviti hati kepada Allah.</p>
+      <blockquote><p><strong>Rumusan:</strong> Kita bukan anti-sains; kita menolak "sains-jadi-hakim-wahyu".</p></blockquote>
+
+      <hr>
+      <h3>1.10.4 Salah Faham Paling Halus: Dakwaan Diri</h3>
+      <p>Inilah kesalahan paling halus.</p>
+      <p>Ada manusia merasa:</p>
+      <ul><li>dirinya paling faham,</li><li>dirinya lebih lurus,</li><li>dirinya "ahli Asbab Mutlak",</li><li>dirinya penjaga tauhid.</li></ul>
+      <p>Ini penyakit Iblis dalam bentuk paling lembut:</p>
+      <blockquote><p>"Aku lebih baik…"</p></blockquote>
+      <div class="arabic">فَلَا تُزَكُّوا أَنفُسَكُمْ</div>
+      <div class="translation">"Jangan kamu menyucikan (mengangkat) diri kamu."<span class="ref">an-Najm 53:32 【1】</span></div>
+      <div class="arabic">وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ اللَّهِ</div>
+      <div class="translation">"Segala nikmat yang ada pada kamu adalah daripada Allah."<span class="ref">an-Nahl 16:53 【2】</span></div>
+      <p>Kerangka 3 Asbab melarang semua self-claim. Semua kebaikan mesti dipulangkan kepada Allah melalui disiplin Nafy–Isbat: menafikan pujian daripada diri, menetapkan kebaikan itu daripada Allah.</p>
+      <blockquote><p><strong>Prinsip Tauhidi:</strong> Orang yang benar-benar faham Kerangka 3 Asbab ialah yang paling takut kepada Allah — bukan yang paling banyak mengangkat dirinya.</p></blockquote>
+
+      <hr>
+      <h3>1.10.5 Rawatan &amp; Pembetulan Mengikut Tertib Nabi ﷺ</h3>
+      <p>Setiap salah tafsir mesti dirawat dengan Nafy–Isbat–Ittiba'.</p>
+      <h3>1) Rawat dengan Nafy</h3>
+      <ul><li>menafikan kuasa diri,</li><li>menafikan kelebihan diri,</li><li>menafikan "aku lebih tahu".</li></ul>
+      <p>Nafy mematahkan ego.</p>
+      <h3>2) Rawat dengan Isbat</h3>
+      <ul><li>menetapkan hanya Allah memberi kesan,</li><li>menetapkan ilmu ini milik Allah,</li><li>menetapkan hidayah milik Allah.</li></ul>
+      <p>Isbat menyucikan niat.</p>
+      <h3>3) Kembalikan kepada Ittiba' Rasulullah ﷺ</h3>
+      <p>Ilmu hanya hidup apabila aktiviti hati dibawa masuk ke tertib Nabi ﷺ melalui:</p>
+      <ul><li>dakwah (keluar dari diri),</li><li>mujahadah (mematahkan nafs),</li><li>sabar (menunggu janji Allah),</li><li>solat khusyuk (membersihkan hati).</li></ul>
+      <p>Tanpa tertib ini, ilmu mudah menjadi hijab.</p>
+      <h3>4) Sertakan Suasana</h3>
+      <p>Ilmu lebih mudah hidup apabila berada dalam:</p>
+      <ul><li>suasana masjid,</li><li>suasana jamaah,</li><li>suasana dakwah,</li><li>suasana amal.</li></ul>
+      <h3>5) Tegakkan Prinsip Tanpa Menghukum</h3>
+      <p>Kerangka 3 Asbab ialah alat menyucikan diri, bukan alat mencela manusia.</p>
+      <div class="arabic">وَلَا تَلْمِزُوا أَنفُسَكُمْ</div>
+      <div class="translation">"Jangan kamu mencela sesama kamu."<span class="ref">al-Hujurat 49:11 【3】</span></div>
+      <p>Kebenaran disampaikan dengan kasih — itu rawatan tertinggi.</p>
+
+      <hr>
+      <h3>1.10.6 Rumusan Tauhidi Bab 1.10</h3>
+      <ul>
+        <li>Kerangka 3 Asbab tidak boleh dijadikan senjata.</li>
+        <li>Kerangka 3 Asbab bukan alasan untuk lari daripada Asbab Fitrah.</li>
+        <li>Kerangka 3 Asbab bukan anti-sains; ia menundukkan Asbab Fitrah di bawah wahyu.</li>
+        <li>Dakwaan diri mematikan cahaya Asbab Mutlak (Asli &amp; Terbitan).</li>
+        <li>Rawatan terbaik ialah kembali kepada Nafy–Isbat–Ittiba'.</li>
+        <li>Ilmu mesti disambungkan kepada dakwah, mujahadah, sabar, dan suasana.</li>
+        <li>Bab ini membasuh salah tafsir sebelum pembangunan iman dimulakan.</li>
+      </ul>
+
+      <div class="footnote">
+        <p><strong>Nota Kaki Bab 1.10</strong></p>
+        <p>【1】 an-Najm 53:32 — larangan mengangkat diri; asas rawatan dakwaan diri dalam disiplin Nafy–Isbat.</p>
+        <p>【2】 an-Nahl 16:53 — semua nikmat daripada Allah; menutup pintu self-claim dan memulangkan kebaikan kepada Allah.</p>
+        <p>【3】 al-Hujurat 49:11 — larangan mencela manusia; kebenaran disampaikan dengan kasih, bukan penghinaan.</p>
+      </div>
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-nav">
+        <a href="bab-00.html">‹ Bab 0</a>
+        <a href="index.html">Indeks Bab</a>
+        <a href="bab-02.html">Bab 2 ›</a>
+      </div>
+      <p>3asbab.org · Kerangka 3 Asbab · Setiap bab tersedia dalam format PDF untuk pembacaan mendalam</p>
     </div>
-
-    <main class="wrap">
-
-      <section class="section-card" id="1-1">
-        <div class="badge-chapter">🟥 BAB 1.1</div>
-
-  <h2>1.1 Pembunuhan Fahaman Asbab Lama</h2>
-
-  <h3>1.1 Pengenalan: Mengapa Fahaman Asbab Lama Perlu Dihapus</h3>
-
-  <p>Setiap zaman memiliki “tuhan kecil” yang diagungkan tanpa disedari.</p>
-
-  <p>Pada zaman Firaun, manusia mengagungkan kuasa manusia. Pada zaman moden, manusia mengagungkan <strong>Asbab Fitrah</strong> dan <strong>Asbab Zulumat</strong> — iaitu sebab-sebab ciptaan yang kelihatan kuat di mata manusia.</p>
-
-  <p>Manusia tidak lagi sujud kepada patung, tetapi aktiviti hati mereka tunduk kepada:</p>
-  <ul>
-    <li>modal,</li>
-    <li>strategi,</li>
-    <li>sistem,</li>
-    <li>data,</li>
-    <li>pengaruh,</li>
-    <li>formula kejayaan.</li>
-  </ul>
-
-  <p>Keadaan ini berlaku bukan pada zahir amal semata-mata, tetapi di dalam pusat pergantungan — apabila aktiviti hati menetapkan kuasa memberi kesan pada Asbab Fitrah dan Asbab Zulumat, bukan pada Allah.</p>
-
-  <p><strong>Dalil Tauhidi:</strong></p>
-
-  <div class="arabic">﴿ اللَّهُ خَالِقُ كُلِّ شَيْءٍ ﴾</div>
-  <div class="translation">
-    “Allah menciptakan segala sesuatu.”<br>
-    (Az-Zumar 39:62)【1】
-  </div>
-
-  <p>Namun dalam praktik kehidupan, aktiviti hati manusia sering bergerak kepada keyakinan bahawa:</p>
-  <ul>
-    <li>usaha memberi kejayaan, bukan izin Allah;</li>
-    <li>modal membuka rezeki, bukan pemberian Allah;</li>
-    <li>strategi menentukan natijah, bukan janji Allah;</li>
-    <li>sistem memberi kestabilan, bukan ketaatan.</li>
-  </ul>
-
-  <p>Inilah <strong>Fahaman Asbab Lama</strong>: apabila Asbab Fitrah dan Asbab Zulumat dinaikkan sebagai pusat pergantungan aktiviti hati, lalu diiktikadkan mempunyai kuasa memberi kesan.</p>
-
-  <p>Fahaman ini mesti dibunuh terlebih dahulu, kerana iman tidak boleh hidup di atas hati yang masih dipenuhi “berhala keyakinan”.</p>
-
-  <hr>
-
-  <h3>1.1.2 Dua Pusat Pergantungan: Allah atau Asbab</h3>
-
-  <p>Aktiviti hati manusia hanya mampu memiliki satu pusat pergantungan:</p>
-  <ul>
-    <li>Apabila aktiviti hati tunduk kepada Allah, Asbab Fitrah dan Asbab Zulumat kembali ke posisi alat.</li>
-    <li>Apabila aktiviti hati tunduk kepada Asbab Fitrah dan Asbab Zulumat, pertolongan Allah tidak dizahirkan — walaupun amal zahir masih berjalan.</li>
-  </ul>
-
-  <div class="arabic">﴿ وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ ﴾</div>
-  <div class="translation">
-    “Barang siapa bertawakkal kepada Allah, maka Allah mencukupinya.”<br>
-    (At-Ṭalāq 65:3)【2】
-  </div>
-
-  <p>Namun apabila aktiviti hati berkata:</p>
-  <ul>
-    <li>“Jika aku tiada modal, aku tidak boleh maju,”</li>
-    <li>“Jika orang tidak menyokong, usaha ini pasti gagal,”</li>
-  </ul>
-
-  <p>maka makna <em>lā ilāha illā Allāh</em> telah rosak — bukan pada lafaz, tetapi pada arah rasa dan keyakinan aktiviti hati, kerana kuasa memberi kesan telah disandarkan kepada makhluk dan sistem.</p>
-
-  <p>Doa masih dibaca, amal masih dibuat, tetapi pusat pergantungan aktiviti hati telah berpindah.</p>
-
-  <hr>
-
-  <h3>1.1.3 Kesalahan Tersembunyi: Amal Tanpa Nafy dan Isbat</h3>
-
-  <p>Ramai manusia melakukan amal tanpa disiplin Nafy dan Isbat.</p>
-
-  <p>Mereka bekerja, berdoa dan berdakwah — tetapi:</p>
-  <ul>
-    <li>tidak menafikan kuasa memberi kesan pada Asbab Fitrah dan Asbab Zulumat (Nafy),</li>
-    <li>tidak menetapkan bahawa hanya Allah memberi kesan melalui janji-Nya (Isbat).</li>
-  </ul>
-
-  <p>Akibatnya, amal menjadi kering dan tidak menarik nusrah.</p>
-
-  <div class="arabic">﴿ وَمَن يُشْرِكْ بِاللَّهِ فَقَدْ ضَلَّ ضَلَالًا بَعِيدًا ﴾</div>
-  <div class="translation">
-    “Sesiapa yang mensyirikkan Allah, maka sesungguhnya dia telah tersesat sejauh-jauhnya.”<br>
-    (An-Nisāʾ 4:116)【3】
-  </div>
-
-  <p>Syirik halus bukan menyembah patung, tetapi memberi kuasa memberi kesan kepada Asbab Fitrah dan Asbab Zulumat.</p>
-
-  <p>Rasulullah ﷺ bersabda:</p>
-
-  <blockquote>
-    <p>“I‘qilhā wa tawakkal.”<br>
-    “Ikatlah untamu, kemudian bertawakkallah.”【4】</p>
-  </blockquote>
-
-  <p>Hadith ini bukan membahagi kuasa antara usaha dan Allah, tetapi menetapkan tertib Tauhidi:</p>
-  <ol>
-    <li>mengambil sebab sebagai alat tanpa kuasa,</li>
-    <li>menyerahkan kesan sepenuhnya kepada Allah.</li>
-  </ol>
-
-  <p><strong>Definisi Tawakkal (Kerangka 3 Asbab):</strong><br>
-  Tawakkal ialah aktiviti rasa dalam hati yang memutuskan pergantungan kepada Asbab Fitrah dan Asbab Zulumat, sambil berpegang kepada Asbab Mutlak (Asli &amp; Terbitan) dan mengambil sebab yang dibenarkan syarak mengikut tertib Rasulullah ﷺ, lalu menyerahkan natijah sepenuhnya kepada Allah serta redha terhadap keputusan-Nya.</p>
-
-  <hr>
-
-  <h3>1.1.4 Sirah Laut Merah: Pembunuhan Fahaman Asbab Lama Melalui Amal</h3>
-
-  <p>Di tepi Laut Merah, Nabi Musa عليه السلام tidak diberikan teori, tetapi diperintahkan amal yang menyalahi logik Asbab Fitrah.</p>
-
-  <div class="arabic">﴿ فَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنِ اضْرِب بِّعَصَاكَ الْبَحْرَ فَٱنفَلَقَ ﴾</div>
-  <div class="translation">
-    “Maka Kami wahyukan kepada Musa: Pukullah laut itu dengan tongkatmu, lalu terbelahlah ia.”<br>
-    (Asy-Syuʿarāʾ 26:63)【5】
-  </div>
-
-  <ul>
-    <li>Tongkat bukan sumber kuasa.</li>
-    <li>Laut bukan penentu nasib.</li>
-    <li>Firaun bukan pemilik keputusan.</li>
-  </ul>
-
-  <p>Yang memberi kesan hanyalah Allah — dan janji Allah dizahirkan selepas amal, bukan sebelum.</p>
-
-  <p><strong>Tertib Tauhidi:</strong></p>
-  <ol>
-    <li>Nafy — menafikan kuasa memberi kesan pada Asbab Fitrah (laut) dan Asbab Zulumat (Firaun).</li>
-    <li>Isbat — menetapkan hanya Allah memberi kesan.</li>
-    <li>Amal — melaksanakan perintah walau bertentangan logik.</li>
-    <li>Nusrah Allah — turun selepas amal.</li>
-  </ol>
-
-  <p>Nabi Musa memukul laut bukan kerana percaya kepada tongkat, tetapi kerana aktiviti hati baginda tunduk sepenuhnya kepada perkhabaran Allah — tanpa menjadikan bukti zahir atau logik sebagai hakim.</p>
-
-  <hr>
-
-  <h3>1.1.5 Umat Akhir Zaman: Hidup Dalam Fahaman Asbab Lama</h3>
-
-  <p>Firaun telah mati, tetapi falsafah Firaun hidup dalam sistem:</p>
-  <ul>
-    <li>dahulu: “Aku tuhan kamu yang paling tinggi,”</li>
-    <li>kini: “Manusia menentukan masa depannya sendiri.”</li>
-  </ul>
-
-  <p>Asbab Zulumat tampil dalam bentuk baharu:</p>
-  <ul>
-    <li>data, KPI, formula, branding, dominasi ekonomi, pemikiran “self-made”.</li>
-  </ul>
-
-  <div class="arabic">﴿ أَفَرَءَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَىٰهُ ﴾</div>
-  <div class="translation">
-    “Tidakkah engkau melihat orang yang menjadikan hawa nafsunya sebagai tuhannya?”<br>
-    (Al-Jāthiyah 45:23)【6】
-  </div>
-
-  <p>Selagi aktiviti hati percaya bahawa kejayaan datang daripada strategi, bukan ketaatan; selagi itu iman tidak menjadi pusat.</p>
-
-  <hr>
-
-  <h3>1.1.6 Peranan Dakwah dalam Membunuh Fahaman Asbab Lama</h3>
-
-  <p>Tiada ilmu yang mampu membunuh Fahaman Asbab Lama melainkan Asbab Mutlak Asli, iaitu dakwah.</p>
-
-  <div class="arabic">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّن دَعَا إِلَى اللَّهِ ﴾</div>
-  <div class="translation">
-    “Siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah?”<br>
-    (Fuṣṣilat 41:33)【7】
-  </div>
-
-  <p>Dakwah sebagai Asbab Mutlak Asli membawa janji Allah untuk:</p>
-  <ul>
-    <li>memecahkan pergantungan aktiviti hati kepada makhluk,</li>
-    <li>menghidupkan aktiviti rasa iman,</li>
-    <li>memindahkan pusat pergantungan kepada Allah.</li>
-  </ul>
-
-  <p>Dakwah bukan kerja pendakwah; dakwah ialah mekanisme Allah untuk memecahkan kebergantungan aktiviti hati kepada sebab.</p>
-
-  <hr>
-
-  <h3>1.1.7 Analisis Tauhidi</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Komponen</th>
-        <th>Penjelasan</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Fahaman Asbab Lama</td>
-        <td>Asbab Fitrah dan Asbab Zulumat yang diiktikadkan memberi kesan</td>
-      </tr>
-      <tr>
-        <td>Akar Masalah</td>
-        <td>Aktiviti hati yang tidak melakukan Nafy dan Isbat</td>
-      </tr>
-      <tr>
-        <td>Akibat</td>
-        <td>Janji Allah tidak dizahirkan; aktiviti hati dikawal sebab</td>
-      </tr>
-      <tr>
-        <td>Penyelesaian</td>
-        <td>Mengambil Asbab Mutlak Asli (dakwah) dengan disiplin Nafy–Isbat</td>
-      </tr>
-      <tr>
-        <td>Tanda Kesembuhan</td>
-        <td>Amal terasa ringan, hati tenang, sebab kembali ke posisi alat</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <hr>
-
-  <h3>1.1.8 Kesimpulan Tauhidi Bab 1.1</h3>
-
-  <blockquote>
-    <p>“Fahaman Asbab Lama tidak mati dengan hujah, tetapi mati apabila seseorang mengambil Asbab Mutlak Asli dengan aktiviti hati yang melakukan Nafy dan Isbat.”</p>
-  </blockquote>
-
-  <p>Fungsi Bab 1.1 ialah membunuh ‘tuhan-tuhan kecil’ dalam hati — iaitu kepercayaan bahawa manusia, sistem atau formula boleh memberi kesan tanpa izin Allah.</p>
-
-  <p>Selepas pembunuhan ini, iman boleh hidup — iaitu aktiviti hati yang tunduk kepada Allah melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ, dan iman ini hanya stabil selepas lulus ujian mujahadah dan sabar.</p>
-
-  <hr>
-
-  <div class="footnote" id="footnotes-1-1">
-    <p><strong>Nota Kaki</strong></p>
-    <p>【1】 Az-Zumar 39:62 — Penegasan Tauhidi bahawa semua sebab ialah makhluk ciptaan Allah, bukan pemilik kuasa memberi kesan.</p>
-    <p>【2】 At-Ṭalāq 65:3 — Janji Allah bahawa kecukupan datang daripada tawakkal yang benar, bukan daripada sebab.</p>
-    <p>【3】 An-Nisāʾ 4:116 — Syirik halus berlaku apabila kuasa memberi kesan disandarkan kepada selain Allah.</p>
-    <p>【4】 Riwayat at-Tirmiżī — Tertib Tauhidi: sebab diambil sebagai alat tanpa kuasa, kesan diserahkan kepada Allah.</p>
-    <p>【5】 Asy-Syuʿarāʾ 26:63 — Nusrah Allah turun selepas amal yang mengikuti perintah, bukan selepas logik dipuaskan.</p>
-    <p>【6】 Al-Jāthiyah 45:23 — Nafsu dan sistem menjadi “ilah” apabila ditaati sebagai penentu, lalu menguasai pusat pergantungan aktiviti hati.</p>
-    <p>【7】 Fuṣṣilat 41:33 — Dakwah sebagai Asbab Mutlak Asli yang memindahkan pergantungan aktiviti hati kepada Allah.</p>
-  </div>
-</section>
-<section class="section-card" id="1-2">
-  <div class="badge-chapter">🟥 1.2</div>
-
-  <h2>1.2 Sejarah Kejatuhan Keyakinan Tauhidi</h2>
-
-  <h3>1.2.1 Pendahuluan: Iman Pernah Menjadi Pusat Kehidupan</h3>
-
-  <p>Ada satu masa dalam sejarah manusia di mana iman bukan sekadar pegangan akidah, tetapi aktiviti hati yang hidup — aktiviti rasa yang sentiasa bergerak kepada Allah dengan cinta, takut, harap, yakin, percaya dan tawakkal, lalu memimpin seluruh keputusan hidup.</p>
-
-  <p>Pada zaman Rasulullah ﷺ dan para Sahabat, Tauhid tidak dipindahkan ke kepala, tetapi berakar di dalam hati. Aktiviti hati mereka tunduk kepada Allah melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ, tanpa menjadikan penglihatan, bukti zahir atau logik sebagai hakim iman.</p>
-
-  <p>Sebab itu:</p>
-  <ul>
-    <li>Mereka berdagang dengan yakin rezeki ditentukan oleh Allah, bukan pasaran (Asbab Fitrah).</li>
-    <li>Mereka berperang dengan yakin kemenangan ditentukan oleh Allah, bukan bilangan tentera (Asbab Fitrah).</li>
-    <li>Mereka berdakwah dengan yakin hidayah diturunkan oleh Allah, bukan hasil strategi (Asbab Fitrah dan Asbab Zulumat).</li>
-  </ul>
-
-  <div class="arabic">﴿ إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ ﴾</div>
-  <div class="translation">
-    “Jika kamu menolong (agama) Allah, nescaya Allah akan menolong kamu dan meneguhkan pendirianmu.”<br>
-    (Muḥammad 47:7)【1】
-  </div>
-
-  <p>Apabila aktiviti hati seperti ini hidup:</p>
-  <ul>
-    <li>Asbab Fitrah kembali ke posisi alat di bawah kehendak Allah.</li>
-    <li>Asbab Zulumat gagal memperdaya pusat pergantungan hati.</li>
-    <li>Asbab Mutlak (Asli &amp; Terbitan) diambil sebagai jalan utama: dakwah, mujahadah, sabar, solat dan doa.</li>
-  </ul>
-
-  <p>Tamadun yang lahir ketika itu bukan hasil teknologi, tetapi hasil hati yang yakin kepada janji Allah.</p>
-
-  <p>Kejatuhan bermula apabila generasi selepas para Sahabat:</p>
-  <ul>
-    <li>menggantikan yakin dengan logik,</li>
-    <li>menggantikan amal dengan teori,</li>
-    <li>menggantikan pengorbanan dengan perbahasan,</li>
-  </ul>
-
-  <p>lalu iman beransur-ansur berubah menjadi maklumat, bukan lagi aktiviti hati yang memimpin keputusan hidup.</p>
-
-  <hr>
-
-  <h3>1.2.2 Tahap 1 — Daripada Aktiviti Hati kepada Teori</h3>
-
-  <p>Selepas kewafatan Rasulullah ﷺ, Islam tersebar dengan pantas ke Andalus dan India. Namun di sebalik perkembangan itu, muncul satu bahaya yang halus:</p>
-
-  <blockquote>
-    <p>Ilmu berkembang lebih cepat daripada iman.</p>
-  </blockquote>
-
-  <p>Generasi para Sahabat membina iman bukan melalui maklumat, tetapi melalui Asbab Mutlak (Asli) mengikut tertib Rasulullah ﷺ:</p>
-  <ul>
-    <li>ilmu yang sedikit tetapi diamalkan,</li>
-    <li>amal yang disusuli dakwah,</li>
-    <li>dakwah yang menuntut mujahadah,</li>
-    <li>mujahadah yang diluluskan dengan sabar,</li>
-  </ul>
-
-  <p>lalu Allah menumbuhkan iman sebagai aktiviti hati yang hidup.【2】</p>
-
-  <p>Diriwayatkan bahawa Ibn ‘Umar r.a. mengambil masa yang panjang dengan Surah al-Baqarah kerana ayat-ayatnya dihidupkan dalam amal dan dakwah, bukan disimpan sebagai hafalan semata-mata.【3】</p>
-
-  <p><strong>Tertib pendidikan rohani Rasulullah ﷺ:</strong></p>
-  <blockquote>
-    <p>Ilmu → Amal → Dakwah → Mujahadah → Sabar → Redha</p>
-  </blockquote>
-
-  <p>Ini bukan rantaian psikologi, tetapi tertib pengambilan Asbab Mutlak (Asli &amp; Terbitan) yang Allah letakkan janji pertumbuhan iman padanya.</p>
-
-  <div class="arabic">﴿ قَدْ أَفْلَحَ مَن زَكَّاهَا ۝ وَقَدْ خَابَ مَن دَسَّاهَا ﴾</div>
-  <div class="translation">
-    (ash-Shams 91:9–10)【4】
-  </div>
-
-  <p>Apabila zaman berganti:</p>
-  <ul>
-    <li>ilmu dibukukan,</li>
-    <li>perbahasan berkembang,</li>
-  </ul>
-
-  <p>namun tazkiyah melalui Asbab Mutlak (Asli) dilemahkan.</p>
-
-  <p><strong>Tanda awal kejatuhan:</strong></p>
-  <ul>
-    <li>Tauhid menjadi teori.</li>
-    <li>Manusia menerangkan Allah, tetapi aktiviti hati tidak lagi tunduk kepada Allah.</li>
-  </ul>
-
-  <p>Apabila dakwah sebagai Asbab Mutlak Asli dihentikan, mujahadah pun melemah; dan apabila mujahadah melemah, iman tidak lagi bertambah dengan janji Allah.</p>
-
-  <hr>
-
-  <h3>1.2.3 Tahap 2 — Infiltrasi Falsafah Yunani: Akal Mengadili Wahyu</h3>
-
-  <p>Apabila empayar Islam berkembang ke wilayah Rom dan Parsi, umat bertemu tradisi falsafah Yunani — satu kerangka yang menjadikan akal sebagai hakim tertinggi.</p>
-
-  <p>Pada awalnya, falsafah diterjemah untuk memahami sains dan perubatan (Asbab Fitrah). Namun perlahan-lahan, ia menjadi bingkai penilaian:</p>
-
-  <blockquote>
-    <p>Wahyu dinilai melalui logik, bukan logik ditundukkan kepada wahyu.</p>
-  </blockquote>
-
-  <div class="arabic">﴿ يُرِيدُونَ لِيُطْفِئُوا نُورَ اللَّهِ بِأَفْوَاهِهِمْ ﴾</div>
-  <div class="translation">
-    (at-Tawbah 9:32)【5】
-  </div>
-
-  <p><strong>Kesan Utama (Analisis Tauhidi)</strong></p>
-
-  <h3>1) Dakwah dilemahkan</h3>
-  <p>Apabila dakwah sebagai Asbab Mutlak Asli dilemahkan:</p>
-  <ul>
-    <li>iman terputus daripada saluran pertumbuhan,</li>
-    <li>ilmu agama terapung sebagai teori.</li>
-  </ul>
-
-  <div class="arabic">﴿ وَمَنْ أَحْسَنُ قَوْلًا مِمَّنْ دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا ﴾</div>
-  <div class="translation">
-    (Fuṣṣilat 41:33)【6】
-  </div>
-
-  <h3>2) Iman ditukar menjadi logik</h3>
-  <p>Tanpa dakwah dan mujahadah, aktiviti hati tidak lagi dilatih untuk cinta, takut, harap dan yakin kepada Allah. Iman ditakrif sebagai kesimpulan rasional, bukan aktiviti hati yang tunduk.</p>
-
-  <div class="arabic">﴿ وَالَّذِينَ آمَنُوا أَشَدُّ حُبًّا لِلَّهِ ﴾</div>
-  <div class="translation">
-    (al-Baqarah 2:165)【7】
-  </div>
-
-  <h3>3) Mukjizat ditundukkan kepada Asbab Fitrah</h3>
-  <p>Apabila logik Asbab Fitrah dijadikan hakim, perkara ghaib ditafsir agar “masuk akal”, lalu iman kepada ghaib menjadi iman bersyarat.</p>
-
-  <h3>4) Penyucian hati dilemahkan</h3>
-  <p>Asbab Mutlak (Asli) seperti dakwah, mujahadah dan sabar ditinggalkan, lalu Asbab Zulumat seperti ujub, riya’ dan cinta dunia menguasai hati.</p>
-
-  <hr>
-
-  <h3>1.2.4 Tahap 3 — Sekularisme &amp; Sains Moden: Wahyu Ditundukkan kepada Data</h3>
-
-  <p>Sekularisme memisahkan Allah daripada pusat pergantungan hati — bukan dengan menolak agama, tetapi dengan mengangkat Asbab Fitrah sebagai hakim.</p>
-
-  <div class="arabic">﴿ نَسُوا اللَّهَ فَأَنسَاهُمْ أَنفُسَهُمْ ﴾</div>
-  <div class="translation">
-    (al-Ḥashr 59:19)【8】
-  </div>
-
-  <p>Lahirlah iman statistik:</p>
-  <ul>
-    <li>hati hanya tenang bila angka menyokong,</li>
-    <li>iman goyah bila data bercanggah,</li>
-  </ul>
-
-  <p>sedangkan iman Tauhidi ialah aktiviti hati yang tunduk kepada perkhabaran Rasulullah ﷺ walau natijah belum terlihat.</p>
-
-  <p>Apabila dakwah sebagai Asbab Mutlak Asli dipadamkan:</p>
-  <ul>
-    <li>sistem berjalan tanpa nur,</li>
-    <li>masyarakat bergerak tanpa iman.</li>
-  </ul>
-
-  <hr>
-
-  <h3>1.2.5 Rumusan Tauhidi Kejatuhan</h3>
-
-  <p>Kejatuhan umat bukan kerana kurang ilmu, tetapi kerana:</p>
-  <ul>
-    <li>meninggalkan Asbab Mutlak (Asli): dakwah, mujahadah dan sabar,</li>
-    <li>memindahkan pusat pergantungan hati kepada Asbab Fitrah dan Asbab Zulumat.</li>
-  </ul>
-
-  <p>Iman hanya kembali hidup apabila aktiviti hati:</p>
-  <ul>
-    <li>menafikan kuasa Asbab Fitrah dan Asbab Zulumat,</li>
-    <li>menetapkan hanya Allah memberi kesan,</li>
-    <li>tunduk sepenuhnya kepada perkhabaran Rasulullah ﷺ,</li>
-    <li>dan lulus ujian mujahadah serta sabar yang Allah jadikan jalan pertumbuhan iman.【9】</li>
-  </ul>
-
-  <hr>
-
-  <div class="footnote" id="footnotes-1-2">
-    <p><strong>Nota Kaki</strong></p>
-    <p>【1】 Muḥammad 47:7 — Nusrah Allah terikat pada menolong agama-Nya, bukan pada kekuatan sebab.</p>
-    <p>【2】 Prinsip Asbab Mutlak Asli: iman tumbuh melalui dakwah, mujahadah dan sabar.</p>
-    <p>【3】 Riwayat Mālik, al-Muwaṭṭaʾ, Kitāb al-Qurʾān, no. 1832.</p>
-    <p>【4】 ash-Shams 91:9–10 — Kejayaan dikaitkan dengan penyucian hati.</p>
-    <p>【5】 at-Tawbah 9:32 — Hujah manusia tidak memadamkan cahaya wahyu.</p>
-    <p>【6】 Fuṣṣilat 41:33 — Dakwah sebagai Asbab Mutlak Asli tertinggi.</p>
-    <p>【7】 al-Baqarah 2:165 — Iman sebagai aktiviti rasa cinta kepada Allah.</p>
-    <p>【8】 al-Ḥashr 59:19 — Lupa Allah memindahkan pusat pergantungan hati kepada sebab.</p>
-    <p>【9】 Muḥammad 47:31 &amp; al-‘Ankabūt 29:69 — Iman ditumbuhkan selepas mujahadah dan sabar.</p>
-  </div>
-</section>
-
-
-
-<section class="section-card" id="1-3">
-  <div class="badge-chapter">🟥 1.3</div>
-
-  <h2>1.3 Asbab Lama Dalam Kehidupan Moden: Cermin untuk Hati</h2>
-
-  <div class="insight-box">
-    <p><strong>(Versi Audit Tauhidi — Dibetulkan Istilah &amp; Diselaraskan dengan Definisi Iman)</strong></p>
-    <p>Bab ini bukan untuk mencari salah orang lain, tetapi sebagai cermin untuk aktiviti hati — sejauh mana Asbab Fitrah dan Asbab Zulumat telah mengambil tempat yang sepatutnya diisi oleh Asbab Mutlak (Asli &amp; Terbitan).</p>
-    <p>Selagi contoh-contoh ini hanya dilihat di luar — “itu masalah orang lain” — Bab 1.3 tidak berfungsi.</p>
-    <p>Bab ini hanya hidup apabila seseorang mula bertanya:</p>
-    <blockquote>
-      <p>“Dalam contoh ini, aktiviti hati aku berpaut kepada apa?”【1】</p>
-    </blockquote>
-  </div>
-
-  <hr>
-
-  <h3>1.3.1 Bisnes &amp; Rezeki: Modal Sebagai “Tuhan Kecil”</h3>
-
-  <p><strong>Naratif Asbab Lama (bisnes moden)</strong></p>
-  <p>Rezeki dianggap datang daripada:</p>
-  <ul>
-    <li>modal, pelabur, lokasi,</li>
-    <li>branding, algoritma, influencer,</li>
-    <li>pelanggan tetap.</li>
-  </ul>
-
-  <p><strong>Dialog aktiviti hati:</strong></p>
-  <ul>
-    <li>“Kalau tak ada modal, tak boleh hidup.”</li>
-    <li>“Kalau lokasi tak strategik, habislah.”</li>
-    <li>“Kalau pemasaran gagal, bisnes mati.”</li>
-  </ul>
-
-  <p>Semua ini berada dalam lingkungan:</p>
-  <ul>
-    <li>Asbab Fitrah (ilmu, strategi, lokasi),</li>
-    <li>Asbab Zulumat (trend, rating, standard pasaran).</li>
-  </ul>
-
-  <p>Apabila aktiviti hati bergantung kepada semua ini, Asbab Fitrah dan Asbab Zulumat telah dinaikkan sebagai penentu, bukan lagi alat.</p>
-
-  <p><strong>Naratif Tauhidi</strong></p>
-  <p>Rezeki ialah keputusan Allah.</p>
-  <p>Iman sebagai aktiviti hati bergerak kepada Allah dengan cinta, takut, harap, yakin, percaya dan tawakkal — tunduk kepada perkhabaran Rasulullah ﷺ, lalu Allah menumbuhkan iman selepas lulus ujian mujahadah dan sabar.【2】</p>
-
-  <p><strong>Asbab Mutlak (Asli &amp; Terbitan) dalam medan bisnes:</strong></p>
-  <ul>
-    <li>dakwah kepada pelanggan,</li>
-    <li>amanah dan akhlak,</li>
-    <li>mujahadah meninggalkan yang haram dan syubhah,</li>
-    <li>sabar ketika turun naik,</li>
-    <li>doa dan solat,</li>
-    <li>suasana iman di tempat kerja.</li>
-  </ul>
-
-  <p>Asbab Fitrah dan Asbab Zulumat tetap digunakan — tetapi sebagai alat, bukan pusat pergantungan.</p>
-
-  <blockquote>
-    <p><strong>Ringkasan:</strong><br>
-    Asbab Lama: “Rezeki = Modal + Pasaran.”<br>
-    Tauhidi: “Rezeki = Keputusan Allah; modal hanyalah alat ujian.”【3】</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>1.3.2 Pendidikan: Ijazah Menjadi Penentu Masa Depan</h3>
-
-  <p><strong>Naratif Asbab Lama</strong></p>
-  <p>Ijazah dianggap:</p>
-  <ul>
-    <li>penjamin masa depan,</li>
-    <li>simbol maruah,</li>
-    <li>tiket status sosial.</li>
-  </ul>
-
-  <p><strong>Dialog aktiviti hati:</strong></p>
-  <ul>
-    <li>“Kalau pointer rendah, masa depan gelap.”</li>
-    <li>“Kalau tak masuk universiti ternama, hidup gagal.”</li>
-  </ul>
-
-  <p>Ini mengikat hati kepada:</p>
-  <ul>
-    <li>Asbab Zulumat (sistem nilai buatan manusia),</li>
-    <li>dan Asbab Fitrah (usaha akademik).</li>
-  </ul>
-
-  <p><strong>Naratif Tauhidi</strong></p>
-  <p>Nilai manusia bukan pada sijil, tetapi pada taqwa.</p>
-  <p>Aktiviti hati tidak tunduk kepada ranking, tetapi tunduk kepada Allah melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ — lalu iman bertambah selepas mujahadah dan sabar.【4】</p>
-
-  <p><strong>Asbab Mutlak (Asli &amp; Terbitan) dalam pendidikan:</strong></p>
-  <ul>
-    <li>niat kerana Allah,</li>
-    <li>dakwah kepada rakan,</li>
-    <li>mujahadah meninggalkan maksiat,</li>
-    <li>sabar dalam tekanan akademik,</li>
-    <li>doa ibu bapa.</li>
-  </ul>
-
-  <p>Ijazah kekal sebagai Asbab Fitrah dan Asbab Zulumat — alat, bukan penentu mulia-hina.</p>
-
-  <blockquote>
-    <p><strong>Ringkasan:</strong><br>
-    Asbab Lama: “Masa depan = Sijil.”<br>
-    Tauhidi: “Masa depan = Redha Allah; sijil hanyalah alat.”【5】</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>1.3.3 Keluarga: Duit Sebagai Gantian Dakwah</h3>
-
-  <p><strong>Naratif Asbab Lama</strong></p>
-  <p>Kasih sayang diukur dengan:</p>
-  <ul>
-    <li>percutian,</li>
-    <li>hadiah,</li>
-    <li>gaya hidup.</li>
-  </ul>
-
-  <p><strong>Dialog aktiviti hati:</strong></p>
-  <ul>
-    <li>“Kalau aku tak mampu beri standard hidup, aku gagal.”</li>
-    <li>“Kalau aku tak kaya, anak tak hormat aku.”</li>
-  </ul>
-
-  <p>Ini menaikkan:</p>
-  <ul>
-    <li>Asbab Zulumat (standard masyarakat),</li>
-    <li>dan Asbab Fitrah (nafkah),</li>
-  </ul>
-  <p>ke tempat yang sepatutnya dipimpin oleh Asbab Mutlak.</p>
-
-  <p><strong>Naratif Tauhidi</strong></p>
-  <p>Keluarga ialah gelanggang pembinaan iman.</p>
-  <p>Aktiviti hati ibu bapa bergerak kepada Allah — membina suasana yang tunduk kepada Allah — dan iman anak dibina melalui mujahadah dan sabar dalam rumah.【6】</p>
-
-  <p><strong>Asbab Mutlak (Asli &amp; Terbitan) dalam rumahtangga:</strong></p>
-  <ul>
-    <li>dakwah lembut dalam rumah,</li>
-    <li>solat berjemaah,</li>
-    <li>membaca al-Qur’an bersama,</li>
-    <li>doa malam,</li>
-    <li>mujahadah menjaga akhlak,</li>
-    <li>sabar dalam ujian keluarga,</li>
-    <li>menjadikan rumah mini-masjid.</li>
-  </ul>
-
-  <p>Duit ialah Asbab Fitrah — khidmat, bukan pusat kasih sayang.</p>
-
-  <blockquote>
-    <p><strong>Ringkasan:</strong><br>
-    Asbab Lama: “Kasih sayang = Duit.”<br>
-    Tauhidi: “Kasih sayang = Membimbing keluarga kepada Allah.”【7】</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>1.3.4 Media Sosial: Like Sebagai Neraca Nilai</h3>
-
-  <p><strong>Naratif Asbab Lama</strong></p>
-  <p>Like, share dan view menjadi:</p>
-  <ul>
-    <li>ukuran betul-salah,</li>
-    <li>ukuran harga diri,</li>
-    <li>bukti keberkesanan.</li>
-  </ul>
-
-  <p>Ini semua berada dalam lingkungan Asbab Zulumat.</p>
-
-  <p><strong>Dialog aktiviti hati:</strong></p>
-  <ul>
-    <li>“Kalau tak viral, dakwah aku gagal.”</li>
-    <li>“Kalau view rendah, Allah tak terima.”</li>
-  </ul>
-
-  <p><strong>Naratif Tauhidi</strong></p>
-  <p>Like bukan tanda redha Allah.</p>
-  <p>Aktiviti hati tunduk kepada Allah melalui perkhabaran Rasulullah ﷺ — walaupun kebenaran tidak popular — dan iman bertambah melalui mujahadah dan sabar.【8】</p>
-
-  <p><strong>Asbab Mutlak (Asli &amp; Terbitan) dalam medan digital:</strong></p>
-  <ul>
-    <li>niat dakwah,</li>
-    <li>sabar ketika kebenaran tidak disukai,</li>
-    <li>mujahadah melawan kandungan haram,</li>
-    <li>syura sebelum menerbitkan kandungan,</li>
-    <li>doa agar Allah menjadikan tulisan sebagai hidayah.</li>
-  </ul>
-
-  <blockquote>
-    <p><strong>Ringkasan:</strong><br>
-    Asbab Lama: “Nilai = Viral.”<br>
-    Tauhidi: “Nilai = Ketaatan; platform hanyalah gelanggang ujian.”【9】</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>1.3.5 Politik &amp; NGO: Undi Sebagai Penyelamat</h3>
-
-  <p><strong>Naratif Asbab Lama</strong></p>
-  <p>Undi dan kerusi dianggap penentu:</p>
-  <ul>
-    <li>masa depan Islam,</li>
-    <li>jatuh bangun syariah,</li>
-    <li>selamat atau binasanya umat.</li>
-  </ul>
-
-  <p>Ini ialah Asbab Zulumat.</p>
-
-  <p><strong>Naratif Tauhidi</strong></p>
-  <p>Nusrah datang daripada Allah.</p>
-  <p>Aktiviti hati tidak tunduk kepada sistem, tetapi tunduk kepada Allah melalui tertib Rasulullah ﷺ — iman masyarakat dibina melalui dakwah, mujahadah dan sabar.【10】</p>
-
-  <p><strong>Asbab Mutlak (Asli &amp; Terbitan) dalam perjuangan:</strong></p>
-  <ul>
-    <li>dakwah menghidupkan iman masyarakat,</li>
-    <li>mujahadah mengorbankan harta dan diri,</li>
-    <li>sabar menjaga sunnah,</li>
-    <li>syura,</li>
-    <li>doa jamaah.</li>
-  </ul>
-
-  <p>Sistem hanya boleh menjadi khidmat, bukan pusat pergantungan.</p>
-
-  <blockquote>
-    <p><strong>Ringkasan:</strong><br>
-    Asbab Lama: “Selamatkan Islam = Kuasai sistem.”<br>
-    Tauhidi: “Selamatkan iman = Hidupkan dakwah.”【11】</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>1.3.6 Ibadah: Solat Menjadi Teknik Tenang</h3>
-
-  <p><strong>Naratif Asbab Lama</strong></p>
-  <p>Solat dijadikan:</p>
-  <ul>
-    <li>terapi emosi,</li>
-    <li>teknik ketenangan.</li>
-  </ul>
-
-  <p>Ini menjadikan kesan Asbab Fitrah sebagai motif ibadah.</p>
-
-  <p><strong>Naratif Tauhidi</strong></p>
-  <p>Solat ialah Asbab Mutlak Asli — ketaatan, bukan teknik.</p>
-  <p>Aktiviti hati tunduk kepada Allah kerana perintah-Nya. Ketenangan hanyalah kesan dalam lingkungan Asbab Fitrah — bukan tujuan dan bukan hakim iman.【12】</p>
-
-  <blockquote>
-    <p><strong>Ringkasan:</strong><br>
-    Asbab Lama: “Solat untuk tenang.”<br>
-    Tauhidi: “Solat kerana Allah; tenang hanyalah rahmat sampingan.”</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>1.3.7 Jadual Ringkas Analisis Tauhidi</h3>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Bidang</th>
-        <th>Pusat Asbab Lama</th>
-        <th>Asbab Mutlak (Asli &amp; Terbitan)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Bisnes</td>
-        <td>Modal, pasaran</td>
-        <td>Dakwah, amanah, mujahadah, sabar, doa</td>
-      </tr>
-      <tr>
-        <td>Pendidikan</td>
-        <td>Sijil, ranking</td>
-        <td>Niat, dakwah, mujahadah, sabar</td>
-      </tr>
-      <tr>
-        <td>Keluarga</td>
-        <td>Duit, standard</td>
-        <td>Dakwah rumah, solat, sabar</td>
-      </tr>
-      <tr>
-        <td>Media sosial</td>
-        <td>Like, view</td>
-        <td>Niat dakwah, mujahadah, sabar</td>
-      </tr>
-      <tr>
-        <td>Politik</td>
-        <td>Undi, kerusi</td>
-        <td>Dakwah, mujahadah, sabar, syura</td>
-      </tr>
-      <tr>
-        <td>Ibadah</td>
-        <td>Tenang</td>
-        <td>Ketaatan, redha, janji Allah</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <hr>
-
-  <h3>1.3.8 Kesimpulan Tauhidi Bab 1.3</h3>
-
-  <p>Asbab Lama hidup apabila Asbab Fitrah dan Asbab Zulumat diletakkan di pusat pergantungan aktiviti hati, manakala Asbab Mutlak (Asli &amp; Terbitan) ditolak ke pinggir.</p>
-
-  <p>Bab 1.3 ialah:</p>
-  <ul>
-    <li>cermin untuk hati,</li>
-    <li>loceng amaran,</li>
-    <li>pintu kepada Bab 1.4.</li>
-  </ul>
-
-  <blockquote>
-    <p>“Selagi aktiviti hati percaya sebab memberi kesan sendiri, selagi itu Asbab Lama hidup.”【13】</p>
-  </blockquote>
-
-  <hr>
-
-  <div class="footnote" id="footnotes-1-3">
-    <p><strong>Nota Kaki</strong></p>
-    <p>【1】 Fungsi Bab 1.3: audit pusat pergantungan aktiviti hati, bukan menilai orang lain.</p>
-    <p>【2】 Definisi iman Kerangka 3 Asbab: iman ialah aktiviti hati yang tunduk kepada Allah melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ, dan terhasil selepas mujahadah serta sabar.</p>
-    <p>【3】 Tauhid rezeki: rezeki keputusan Allah; Asbab Fitrah dan Asbab Zulumat hanyalah alat ujian.</p>
-    <p>【4】 Iman dalam pendidikan: ketaatan mendahului penilaian logik dan bukti zahir.</p>
-    <p>【5】 Redha Allah sebagai ukuran masa depan sebenar.</p>
-    <p>【6】 Rumah sebagai gelanggang pembinaan iman melalui Asbab Mutlak (Asli &amp; Terbitan).</p>
-    <p>【7】 Nafkah ialah Asbab Fitrah yang wajib, tetapi tidak boleh menggantikan dakwah rumah.</p>
-    <p>【8】 Populariti bukan neraca redha; mujahadah dan sabar menumbuhkan iman.</p>
-    <p>【9】 Platform digital sebagai Asbab Zulumat yang tidak boleh menjadi hakim nilai.</p>
-    <p>【10】 Nusrah Allah terikat dengan dakwah, mujahadah dan sabar — bukan sistem.</p>
-    <p>【11】 Sistem sebagai khidmat, bukan pusat pergantungan iman.</p>
-    <p>【12】 Solat sebagai Asbab Mutlak Asli: ketaatan mendahului kesan emosi.</p>
-    <p>【13】 Rumusan Tauhidi Bab 1.3: Asbab Lama hidup pada pergantungan hati, bukan pada alat zahir.</p>
-  </div>
-</section>
-
-<section class="section-card" id="1-4">
-  <div class="badge-chapter">🟥 1.4</div>
-
-  <h2>1.4 Materialisme: Jerat Asbab Zulumat</h2>
-
-  <div class="insight-box">
-    <p><strong>(Persetujuan manusia sebagai “tuhan baharu” → nilai menjadi relatif)</strong></p>
-    <p>Materialisme ialah antara jerat Asbab Zulumat yang paling besar dalam sejarah moden.</p>
-    <p>Jika sains sering menjerat manusia melalui pengagungan Asbab Fitrah, maka materialisme menjerat manusia melalui pengagungan Asbab Zulumat — iaitu cara hidup yang lahir daripada persetujuan manusia, bukan daripada wahyu.</p>
-  </div>
-
-  <div class="arabic">أَفَرَءَيْتَ مَنِ اتَّخَذَ إِلَٰهَهُ هَوَاهُ</div>
-  <div class="translation">
-    “Tidakkah engkau melihat orang yang menjadikan hawa nafsunya sebagai tuhannya?”<br>
-    (al-Jāthiyah 45:23)【1】
-  </div>
-
-  <p>Materialisme tidak memaksa manusia menyembah patung, tetapi memaksa aktiviti hati tunduk kepada nilai ciptaan manusia sendiri.</p>
-
-  <hr>
-
-  <h3>1.4.1 Persetujuan Masyarakat sebagai “Tuhan Baharu”</h3>
-
-  <p>Dalam Kerangka 3 Asbab, Asbab Zulumat bermula apabila manusia bersetuju mengangkat sesuatu nilai sebagai penentu hidup, contohnya:</p>
-  <ul>
-    <li>“lebih banyak harta = lebih berjaya,”</li>
-    <li>“populariti = kebenaran,”</li>
-    <li>“siapa kuat ekonomi, dialah berkuasa,”</li>
-    <li>“nilai moral ditentukan majoriti,”</li>
-    <li>“keuntungan lebih penting daripada halal-haram.”</li>
-  </ul>
-
-  <p>Semua ini bukan wahyu, tetapi persetujuan manusia yang kemudian menjadi:</p>
-  <ul>
-    <li>sistem,</li>
-    <li>budaya,</li>
-    <li>undang-undang,</li>
-    <li>“akal sihat” versi masyarakat.</li>
-  </ul>
-
-  <p><strong>Definisi rasmi Asbab Zulumat (Kerangka 3 Asbab):</strong><br>
-  Asbab Zulumat ialah sebab yang wujud sebagai ciptaan Allah dari sudut hakikat, tetapi berfungsi sebagai penentu hidup kerana persetujuan manusia, bukan kerana wahyu.</p>
-
-  <p>Dunia moden tidak menyebut secara terang “kami sembah harta”, tetapi dunia menyebut melalui slogan hidup:</p>
-  <ul>
-    <li>“Hidup mesti kejar duit.”</li>
-    <li>“Kalau miskin, tiada nilai.”</li>
-    <li>“Siapa kuasai pasaran, dialah pemenang.”</li>
-  </ul>
-
-  <p>Inilah “aqidah masyarakat”, bukan aqidah para Nabi.</p>
-
-  <hr>
-
-  <h3>1.4.2 Nilai Wahyu Dihina, Nilai Manusia Dinaikkan</h3>
-
-  <p>Materialisme membunuh nilai tetap wahyu. Segala nilai mula berubah mengikut:</p>
-  <ul>
-    <li>ekonomi,</li>
-    <li>pasaran,</li>
-    <li>budaya,</li>
-    <li>majoriti,</li>
-    <li>undang-undang manusia,</li>
-    <li>statistik sosial.</li>
-  </ul>
-
-  <p><strong>Contoh realiti moden:</strong></p>
-  <ul>
-    <li>riba dinamakan “interest” dan dianggap perlu,</li>
-    <li>zina dinamakan “kebebasan peribadi”,</li>
-    <li>menutup aurat dilabel kolot atau ekstrem,</li>
-    <li>homoseksual dinamakan hak asasi,</li>
-    <li>membunuh bayi dalam kandungan dinamakan “bodily autonomy”.</li>
-  </ul>
-
-  <p>Semua istilah ini lahir kerana dunia berkata begitu, bukan kerana Allah berkata begitu.</p>
-
-  <div class="arabic">وَإِن تُطِعْ أَكْثَرَ مَن فِي الْأَرْضِ يُضِلُّوكَ عَن سَبِيلِ اللَّهِ</div>
-  <div class="translation">
-    “Jika kamu ikut majoriti manusia, mereka akan menyesatkan kamu dari jalan Allah.”<br>
-    (al-An‘ām 6:116)【2】
-  </div>
-
-  <p>Materialisme menukar majoriti menjadi “sumber hukum”. Apa yang ramai setuju → itulah “betul”.</p>
-
-  <hr>
-
-  <h3>1.4.3 Bagaimana Materialisme Menjerat Aktiviti Hati</h3>
-
-  <p>Materialisme tidak bermula di bank atau pasaran saham. Ia bermula dalam aktiviti hati.</p>
-
-  <p>Ia mengubah pusat pergantungan manusia:</p>
-  <ul>
-    <li>harta menjadi sumber keselamatan,</li>
-    <li>kemewahan menjadi ukuran bahagia,</li>
-    <li>pangkat menjadi ukuran mulia,</li>
-    <li>populariti menjadi ukuran berjaya,</li>
-    <li>angka menjadi ukuran nilai diri.</li>
-  </ul>
-
-  <p>Lalu manusia:</p>
-  <ul>
-    <li>bekerja kerana dunia, bukan kerana Allah,</li>
-    <li>beramal kerana imej, bukan kerana iman,</li>
-    <li>bersedekah untuk pengikut, bukan untuk pahala,</li>
-    <li>membuat keputusan berdasarkan untung-rugi, bukan redha Allah.</li>
-  </ul>
-
-  <p>Aktiviti hati mula bergantung kepada:</p>
-  <ul>
-    <li>pasaran, pelanggan, majikan,</li>
-    <li>rating, data, pengaruh manusia.</li>
-  </ul>
-
-  <p>Padahal Allah berfirman:</p>
-
-  <div class="arabic">مَا عِندَكُمْ يَنفَدُ وَمَا عِندَ اللَّهِ بَاقٍ</div>
-  <div class="translation">
-    “Apa yang ada di sisi kamu akan habis. Apa yang di sisi Allah kekal.”<br>
-    (an-Naḥl 16:96)【3】
-  </div>
-
-  <p>Materialisme menipu manusia supaya percaya penuh kepada yang fana’ dan melupakan yang kekal.</p>
-
-  <hr>
-
-  <h3>1.4.4 Mengapa Materialisme Mengalahkan Umat Islam</h3>
-
-  <p>Materialisme menang bukan kerana ia kuat, tetapi kerana umat Islam berhenti membina iman dengan Asbab Mutlak (Asli &amp; Terbitan).</p>
-
-  <p>Para Sahabat membina dunia dengan iman. Umat moden cuba membina iman dengan materialisme.</p>
-
-  <p>Materialisme masuk ketika:</p>
-  <ul>
-    <li>dakwah dilemahkan,</li>
-    <li>mujahadah hilang,</li>
-    <li>sabar tidak diamalkan,</li>
-    <li>sistem dibina tanpa nur,</li>
-    <li>aktiviti hati tidak lagi diikat pada ayat Allah.</li>
-  </ul>
-
-  <p>Umat mula:</p>
-  <ul>
-    <li>mengejar kekayaan seperti Qarun,</li>
-    <li>mengejar pengaruh seperti Firaun,</li>
-    <li>meniru sistem seperti Barat,</li>
-  </ul>
-  <p>kemudian mahu semua itu disahkan sebagai “Islamik”.</p>
-
-  <div class="arabic">كَلَّا إِنَّ الْإِنسَانَ لَيَطْغَىٰ<br>أَن رَّآهُ اسْتَغْنَىٰ</div>
-  <div class="translation">
-    “Tidak! Sesungguhnya manusia benar-benar melampaui batas apabila dia melihat dirinya serba cukup.”<br>
-    (al-‘Alaq 96:6–7)【4】
-  </div>
-
-  <p>Materialisme bermula apabila aktiviti hati merasa: “Aku cukup tanpa Allah.”</p>
-
-  <hr>
-
-  <h3>1.4.5 Analisis Tauhidi: Mengapa Materialisme Termasuk Asbab Zulumat</h3>
-
-  <p><strong>Mengapa materialisme wajib diletakkan dalam kotak Asbab Zulumat, bukan Asbab Fitrah?</strong></p>
-
-  <ol>
-    <li>
-      <strong>Ia hidup melalui persetujuan manusia, bukan wahyu</strong>
-      <ul>
-        <li>dari sudut hakikat: tetap ciptaan Allah,</li>
-        <li>dari sudut fungsi: hidup kerana persetujuan masyarakat.</li>
-      </ul>
-    </li>
-    <li>
-      <strong>Ia bergerak dalam ekosistem nilai manusia, bukan janji Allah</strong>
-      <ul>
-        <li>harga naik turun → aktiviti hati naik turun,</li>
-        <li>rating naik turun → maruah naik turun,</li>
-        <li>semuanya bergantung suasana, bukan bergantung janji Allah.</li>
-      </ul>
-    </li>
-    <li>
-      <strong>Ia hidup dengan logik dunia, bukan cahaya Tauhid</strong>
-      <ul>
-        <li>keputusan dibuat atas “ROI”, bukan redha Allah,</li>
-        <li>benar-salah ditimbang dengan untung-rugi segera, bukan neraca akhirat.</li>
-      </ul>
-    </li>
-    <li>
-      <strong>Ia menghasilkan kesan palsu</strong>
-      <ul>
-        <li>pada sisi Asbab Fitrah: nampak maju, kuat, kaya,</li>
-        <li>pada sisi Asbab Mutlak (Asli &amp; Terbitan): kosong nilai di sisi Allah jika tidak berpaut pada ketaatan.</li>
-      </ul>
-    </li>
-  </ol>
-
-  <p>Materialisme bukan neutral. Ia Asbab Zulumat yang tersusun — menghisap iman perlahan-lahan tanpa disedari.</p>
-
-  <hr>
-
-  <h3>1.4.6 Rumusan Tauhidi Bab 1.4</h3>
-
-  <ul>
-    <li>Materialisme ialah jerat besar Asbab Zulumat zaman moden.</li>
-    <li>Ia menjadikan manusia pengikut sistem, bukan pengikut Allah.</li>
-    <li>Ia menjadikan nilai moral tunduk kepada pasaran dan majoriti.</li>
-    <li>Ia menukar pusat aktiviti hati daripada iman kepada dunia.</li>
-    <li>Ia memaksa manusia menjadi hamba alat, bukan hamba Allah.</li>
-  </ul>
-
-  <blockquote>
-    <p>Materialisme tidak bermula dengan harta, tetapi bermula apabila aktiviti hati yakin bahawa dunia lebih menentukan hidup daripada Allah.</p>
-  </blockquote>
-
-  <p>Seluruh Bab 1.4 wujud untuk:</p>
-  <ul>
-    <li>memecahkan jerat ini,</li>
-    <li>supaya iman kembali menjadi pusat,</li>
-    <li>dan Asbab Fitrah serta Asbab Zulumat kembali ke tempat alat, di bawah pimpinan Asbab Mutlak (Asli &amp; Terbitan).</li>
-  </ul>
-
-  <hr>
-
-  <div class="footnote" id="footnotes-1-4">
-    <p><strong>Nota Kaki Bab 1.4</strong></p>
-    <p>【1】 al-Jāthiyah 45:23 — Hawa nafsu menjadi “ilah” apabila diikut sebagai penentu hidup.</p>
-    <p>【2】 al-An‘ām 6:116 — Majoriti tidak menentukan kebenaran; ikut majoriti boleh menyesatkan.</p>
-    <p>【3】 an-Naḥl 16:96 — Yang ada pada manusia akan habis; yang di sisi Allah kekal.</p>
-    <p>【4】 al-‘Alaq 96:6–7 — Manusia melampaui batas apabila merasa cukup; akar kesombongan materialisme.</p>
-  </div>
-</section>
-
-<section class="section-card" id="1-5">
-  <div class="badge-chapter">🟥 BAB 1.5</div>
-
-  <h2>1.5 Peranan Syaitan &amp; Ego</h2>
-
-  <div class="insight-box">
-    <p><strong>(Syaitan meniup, ego menerima — lalu menolak Asbab Mutlak (Asli &amp; Terbitan))</strong></p>
-    <p>Materialisme, sainsisme, liberalisme, dan kerosakan worldview moden tidak akan hidup jika dua musuh ini tidak bekerja serentak:</p>
-    <ol>
-      <li>Syaitan — meniup, menghias, membisik, memutar rasa dan sangkaan.</li>
-      <li>Ego (nafs) — menerima, membesarkan, mempertahankan, dan mahu menjadi pusat.</li>
-    </ol>
-    <p>Gabungan ini melahirkan penolakan terhadap Asbab Mutlak Asli (perintah Allah) dan Asbab Mutlak Terbitan (amal sunnah Rasulullah ﷺ).</p>
-  </div>
-
-  <hr>
-
-  <h3>1.5.1 Syaitan Tidak Mampu Memaksa — Hanya Mampu Meniup</h3>
-
-  <p>Syaitan tidak mempunyai kuasa menentukan apa-apa. Dia hanya meniup dan menghias, lalu menunggu aktiviti hati manusia menerima.</p>
-
-  <p><strong>Tugas syaitan:</strong></p>
-  <ul>
-    <li>meniup rasa “kau betul”,</li>
-    <li>menghias dunia supaya nampak lebih “real” daripada akhirat,</li>
-    <li>membesarkan logik Asbab Fitrah di mata manusia,</li>
-    <li>membesarkan persetujuan Asbab Zulumat sebagai “kebenaran sosial”,</li>
-    <li>menenggelamkan janji Allah,</li>
-    <li>membuat manusia memandang remeh Asbab Mutlak (Asli &amp; Terbitan).</li>
-  </ul>
-
-  <div class="arabic">إِنَّ الشَّيْطَانَ لَكُمْ عَدُوٌّ فَاتَّخِذُوهُ عَدُوًّا</div>
-  <div class="translation">
-    “Sesungguhnya syaitan itu musuh bagi kamu; maka jadikanlah dia musuh.”<br>
-    (Fāṭir 35:6)【1】
-  </div>
-
-  <blockquote>
-    <p>Bisikan utamanya ialah:<br>
-    “Asbab Fitrah dan Asbab Zulumat lebih ‘real’ daripada janji Allah.”</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>1.5.2 Kesombongan Iblis: Penolakan Pertama terhadap Asbab Mutlak Asli</h3>
-
-  <p>Iblis enggan sujud bukan kerana tidak faham perintah, tetapi kerana tidak mahu tunduk kepada Asbab Mutlak Asli — perintah Allah.</p>
-
-  <div class="arabic">أَبَىٰ وَاسْتَكْبَرَ</div>
-  <div class="translation">
-    “Dia enggan dan dia sombong.”<br>
-    (al-Baqarah 2:34)【2】
-  </div>
-
-  <p>Inilah penyakit pertama: kesombongan terhadap perintah Allah.</p>
-
-  <p>Dan inilah penyakit manusia apabila mereka:</p>
-  <ul>
-    <li>menolak perintah kerana “logik”,</li>
-    <li>menolak sunnah kerana “moden”,</li>
-    <li>menolak dakwah kerana “sibuk”,</li>
-    <li>menolak mujahadah kerana “selesa”,</li>
-    <li>menolak sabar kerana “mahu segera”.</li>
-  </ul>
-
-  <p>Semua ini ialah penolakan terhadap Asbab Mutlak Asli dan Asbab Mutlak Terbitan.</p>
-
-  <hr>
-
-  <h3>1.5.3 Ego Menolak Asbab Mutlak Kerana Ia Menuntut Tunduk</h3>
-
-  <p>Asbab Mutlak Asli hadir sebagai:</p>
-  <ul>
-    <li>perintah, larangan,</li>
-    <li>janji Allah,</li>
-    <li>ujian,</li>
-    <li>pengorbanan.</li>
-  </ul>
-
-  <p>Asbab Mutlak Terbitan hadir sebagai:</p>
-  <ul>
-    <li>solat, zikir,</li>
-    <li>dakwah,</li>
-    <li>mujahadah, sabar,</li>
-    <li>syura, taubat.</li>
-  </ul>
-
-  <p>Semua ini berat kepada ego bukan kerana tidak masuk akal, tetapi kerana ia menuntut tunduk.</p>
-
-  <p><strong>Ego mahu:</strong></p>
-  <ul>
-    <li>mengawal,</li>
-    <li>menjadi pusat,</li>
-    <li>menjadi penentu natijah.</li>
-  </ul>
-
-  <div class="arabic">فَلَا تُزَكُّوا أَنفُسَكُمْ</div>
-  <div class="translation">
-    “Jangan kamu membela (mengangkat) diri kamu.”<br>
-    (an-Najm 53:32)【3】
-  </div>
-
-  <p>Ego mahu dirinya tinggi; Asbab Mutlak (Asli &amp; Terbitan) menundukkan ego.</p>
-
-  <hr>
-
-  <h3>1.5.4 Dua Bentuk Penolakan (Syaitan + Ego)</h3>
-
-  <h3>1) Penolakan Intelektual</h3>
-  <p>Akal dijadikan hakim terhadap wahyu:</p>
-  <ul>
-    <li>mempertikaikan hadith,</li>
-    <li>meragui janji Allah,</li>
-    <li>mengutamakan logik Asbab Fitrah,</li>
-    <li>mengangkat persetujuan Asbab Zulumat,</li>
-    <li>menilai agama seperti menilai data.</li>
-  </ul>
-
-  <p>Ini ialah penolakan terhadap Asbab Mutlak Asli dengan alasan “pemikiran”.</p>
-
-  <h3>2) Penolakan Emosi</h3>
-  <p>Aktiviti hati tidak mahu tunduk:</p>
-  <ul>
-    <li>malas beramal,</li>
-    <li>malu ikut sunnah,</li>
-    <li>tidak suka syarat agama,</li>
-    <li>tidak mahu sabar,</li>
-    <li>tidak mahu mujahadah.</li>
-  </ul>
-
-  <p>Ini ialah penolakan terhadap Asbab Mutlak Terbitan pada lapisan rasa dan kehendak.</p>
-
-  <hr>
-
-  <h3>1.5.5 Bagaimana Syaitan Membesarkan Ego</h3>
-
-  <p>Syaitan tidak mencipta dosa; syaitan hanya membesarkan “aku”:</p>
-  <ul>
-    <li>sedikit ilmu → jadi sombong,</li>
-    <li>sedikit harta → jadi angkuh,</li>
-    <li>sedikit kejayaan → jadi congkak,</li>
-    <li>sedikit pengaruh → jadi riya’,</li>
-    <li>sedikit ujian → jadi putus asa.</li>
-  </ul>
-
-  <div class="arabic">وَلَا تَتَّبِعِ الْهَوَىٰ فَيُضِلَّكَ عَن سَبِيلِ اللَّهِ</div>
-  <div class="translation">
-    “Jangan ikut hawa nafsu; nanti ia menyesatkanmu dari jalan Allah.”<br>
-    (Ṣād 38:26)【4】
-  </div>
-
-  <p>Ego ialah pintu paling lembut untuk menolak Asbab Mutlak (Asli &amp; Terbitan).</p>
-
-  <hr>
-
-  <h3>1.5.6 Tauhid Menghancurkan Syaitan &amp; Ego</h3>
-
-  <p>Kerangka 3 Asbab memerangi dua musuh ini melalui tiga tiang:</p>
-
-  <h3>1) Nafy</h3>
-  <p>Menafikan kuasa memberi kesan pada makhluk:</p>
-  <ul>
-    <li>Asbab Fitrah tidak menentukan,</li>
-    <li>Asbab Zulumat tidak menentukan,</li>
-    <li>syaitan tidak menentukan,</li>
-    <li>ego tidak menentukan.</li>
-  </ul>
-
-  <h3>2) Isbat</h3>
-  <p>Menetapkan bahawa hanya Allah memberi kesan:</p>
-  <ul>
-    <li>Allah menentukan natijah,</li>
-    <li>Allah memberi hidayah,</li>
-    <li>Allah membolak-balik hati,</li>
-    <li>Allah menghidupkan iman sebagai aktiviti hati,</li>
-    <li>Allah menunaikan janji-Nya melalui Asbab Mutlak Asli dan mengalirkannya dalam Asbab Mutlak Terbitan.</li>
-  </ul>
-
-  <h3>3) Ittiba’ Rasulullah ﷺ</h3>
-  <p>Mengambil Asbab Mutlak Terbitan mengikut tertib baginda ﷺ:</p>
-  <ul>
-    <li>dakwah memecahkan pergantungan hati,</li>
-    <li>mujahadah menundukkan ego,</li>
-    <li>sabar menstabilkan ketaatan,</li>
-    <li>syura mematikan pendapat diri.</li>
-  </ul>
-
-  <div class="arabic">إِنَّهُ لَيْسَ لَهُ سُلْطَانٌ عَلَى الَّذِينَ آمَنُوا وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ</div>
-  <div class="translation">
-    “Syaitan tidak mempunyai kuasa ke atas orang yang beriman dan bertawakkal kepada Allah.”<br>
-    (an-Naḥl 16:99)【5】
-  </div>
-
-  <p>Ini selari dengan definisi iman K3A:</p>
-  <blockquote>
-    <p>Iman ialah aktiviti rasa dalam hati (cinta, takut, harap, yakin, percaya, tawakkal) yang tunduk kepada Allah, dan tunduk itu berlaku melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ tanpa menjadikan bukti zahir atau logik sebagai hakim; iman ini tumbuh selepas ujian mujahadah dan sabar.</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>1.5.7 Rumusan Tauhidi Bab 1.5</h3>
-
-  <ul>
-    <li>Syaitan hanya meniup; ego yang menerima.</li>
-    <li>Penolakan wahyu bermula pada aktiviti hati, bukan semata-mata pada akal.</li>
-    <li>Iblis ialah contoh pertama penolakan Asbab Mutlak Asli.</li>
-    <li>Ego membenci Asbab Mutlak (Asli &amp; Terbitan) kerana ia menuntut pengorbanan dan tunduk.</li>
-    <li>Syaitan membesarkan “aku”, lalu memadamkan “Allah”.</li>
-    <li>Nafy mematahkan pergantungan kepada Asbab Fitrah dan Asbab Zulumat.</li>
-    <li>Isbat menghidupkan yakin kepada janji Allah.</li>
-    <li>Ittiba’ menghidupkan Asbab Mutlak Terbitan dalam kehidupan.</li>
-  </ul>
-
-  <blockquote>
-    <p><strong>Kesimpulan:</strong><br>
-    Musuh iman bukan dunia luar semata-mata, tetapi syaitan yang meniup dan ego yang membesar di dalam hati.</p>
-  </blockquote>
-
-  <hr>
-
-  <div class="footnote" id="footnotes-1-5">
-    <p><strong>Nota Kaki Bab 1.5</strong></p>
-    <p>【1】 Fāṭir 35:6 — Syaitan musuh; arahan mengambilnya sebagai musuh.</p>
-    <p>【2】 al-Baqarah 2:34 — Iblis enggan dan sombong; contoh penolakan perintah Allah.</p>
-    <p>【3】 an-Najm 53:32 — Larangan mengangkat diri; akar penyakit ego.</p>
-    <p>【4】 Ṣād 38:26 — Hawa nafsu menyesatkan dari jalan Allah; ego sebagai pintu penyelewengan.</p>
-    <p>【5】 an-Naḥl 16:99 — Syaitan tiada سلطَان (kuasa) ke atas orang beriman yang bertawakkal.</p>
-  </div>
-</section>
-
-<section class="section-card" id="1-6">
-  <div class="badge-chapter">🟥 1.6</div>
-
-  <h2>1.6 Ilmu Menjadi Hijab</h2>
-
-  <div class="insight-box">
-    <p><strong>(Ilmu tanpa Asbab Mutlak (Asli &amp; Terbitan) → gelap pada iman)</strong></p>
-    <p>Dalam Kerangka 3 Asbab, ilmu ialah Asbab Fitrah — berguna sebagai alat, tetapi tidak menentukan apa-apa.</p>
-    <p>Ilmu hanya menjadi bercahaya apabila ia dipautkan kepada:</p>
-    <ul>
-      <li>Asbab Mutlak Asli (wahyu, perintah Allah),</li>
-      <li>Asbab Mutlak Terbitan (sunnah Rasulullah ﷺ, dakwah, mujahadah, sabar, dan seluruh tertib amal).</li>
-    </ul>
-    <p>Apabila ilmu terpisah daripada Asbab Mutlak (Asli &amp; Terbitan), ia berubah fungsi:</p>
-    <ul>
-      <li>ilmu menjadi hijab,</li>
-      <li>pandai tetapi tidak tunduk,</li>
-      <li>tahu tetapi tidak taat,</li>
-      <li>cerah pada maklumat tetapi gelap pada iman.</li>
-    </ul>
-    <p>Kerana iman bukan maklumat.</p>
-    <p>Iman ialah aktiviti rasa dalam hati yang hidup dan sentiasa bergerak kepada Allah — cinta, takut, harap, yakin, percaya, dan tawakkal — dan tunduk itu berlaku melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ tanpa menjadikan penglihatan, bukti zahir, atau logik sebagai hakim iman. Iman ini ditumbuhkan Allah selepas ujian mujahadah dan sabar.【5】</p>
-  </div>
-
-  <hr>
-
-  <h3>1.6.1 Ilmu Yang Terputus Daripada Asbab Mutlak Hilang Cahaya</h3>
-
-  <div class="arabic">اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ</div>
-  <div class="translation">
-    “Allah adalah cahaya langit dan bumi.”<br>
-    (an-Nūr 24:35)【1】
-  </div>
-
-  <p>Cahaya bukan datang daripada maklumat, tetapi daripada Allah — dan Allah menurunkan cahaya itu melalui Asbab Mutlak (Asli &amp; Terbitan).</p>
-
-  <p>Ilmu menjadi bercahaya apabila:</p>
-  <ul>
-    <li>ia kembali kepada Allah,</li>
-    <li>ia bergerak dalam tertib Rasulullah ﷺ,</li>
-    <li>ia membina iman sebagai aktiviti hati dan melahirkan amal.</li>
-  </ul>
-
-  <p>Namun jika ilmu berpaut kepada:</p>
-  <ul>
-    <li>logik, data, eksperimen sebagai Asbab Fitrah yang dijadikan hakim, atau</li>
-    <li>nilai majoriti, ideologi, budaya sebagai Asbab Zulumat yang dijadikan neraca,</li>
-  </ul>
-
-  <p>maka ilmu itu menjadi hijab yang membutakan hati.</p>
-
-  <hr>
-
-  <h3>1.6.2 Ilmu Tanpa Asbab Mutlak Melahirkan Keangkuhan</h3>
-
-  <p>Antara contoh ilmu yang terputus daripada Asbab Mutlak (Asli &amp; Terbitan):</p>
-  <ul>
-    <li>belajar sains sebagai Asbab Fitrah tetapi memandang sunnah rendah,</li>
-    <li>belajar agama tetapi meninggalkan dakwah,</li>
-    <li>belajar tafsir tanpa mujahadah,</li>
-    <li>belajar hadith tetapi ego tidak patah.</li>
-  </ul>
-
-  <div class="arabic">فَرِحُوا بِمَا عِندَهُم مِّنَ الْعِلْمِ</div>
-  <div class="translation">
-    “Mereka gembira dengan ilmu yang ada pada mereka.”<br>
-    (Ghāfir 40:83)【2】
-  </div>
-
-  <p>Mereka bukan jahil — mereka berilmu.</p>
-  <p>Tetapi apabila ilmu tidak dipautkan kepada Asbab Mutlak (Asli &amp; Terbitan), ilmu itu menutup mata hati.</p>
-
-  <hr>
-
-  <h3>1.6.3 Semakin Banyak Ilmu, Semakin Jauh Jika Tidak Dipautkan Kepada Asbab Mutlak</h3>
-
-  <p>Ilmu yang tidak berpaut kepada Asbab Mutlak Asli dan Asbab Mutlak Terbitan sering melahirkan:</p>
-  <ul>
-    <li>sombong,</li>
-    <li>keras hati,</li>
-    <li>kuat berhujah,</li>
-    <li>lemah tawakkal,</li>
-    <li>skeptik terhadap janji Allah,</li>
-    <li>menilai agama seperti menilai eksperimen.</li>
-  </ul>
-
-  <p>Ia menyentuh zahir, tetapi tidak menghidupkan batin.</p>
-
-  <div class="arabic">يَعْلَمُونَ ظَاهِرًا مِنَ الْحَيَاةِ الدُّنْيَا</div>
-  <div class="translation">
-    “Mereka hanya mengetahui yang zahir daripada kehidupan dunia.”<br>
-    (ar-Rūm 30:7)【3】
-  </div>
-
-  <p>Ini ialah gambaran ilmu yang berlegar di sekitar Asbab Fitrah semata-mata, lalu memutuskan manusia daripada akhirat.</p>
-
-  <hr>
-
-  <h3>1.6.4 Ulama’ Hakiki: Ilmu Bersambung Dengan Asbab Mutlak</h3>
-
-  <div class="arabic">إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ</div>
-  <div class="translation">
-    “Yang paling takut kepada Allah ialah para ulama’.”<br>
-    (Fāṭir 35:28)【4】
-  </div>
-
-  <p>Tanda ilmu bersambung dengan Asbab Mutlak (Asli &amp; Terbitan) ialah:</p>
-  <ul>
-    <li>takut kepada Allah,</li>
-    <li>tunduk kepada perintah,</li>
-    <li>patuh sunnah,</li>
-    <li>aktif dalam dakwah,</li>
-    <li>mujahadah melawan nafs,</li>
-    <li>sabar menanggung ujian.</li>
-  </ul>
-
-  <p>Jika banyak ilmu tetapi sedikit takut dan sedikit tunduk, itu tanda ilmu terputus daripada Asbab Mutlak (Asli &amp; Terbitan).</p>
-
-  <hr>
-
-  <h3>1.6.5 Ilmu Tanpa Amal: Hilang Tertib Tauhidi</h3>
-
-  <p>Rasulullah ﷺ berdoa:</p>
-
-  <blockquote>
-    <p>اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عِلْمٍ لَا يَنْفَعُ<br>
-    “Ya Allah, aku berlindung daripada ilmu yang tidak bermanfaat.”<br>
-    (HR Muslim)【5】</p>
-  </blockquote>
-
-  <p>Dalam Kerangka 3 Asbab, ilmu hanya bermanfaat apabila ia melahirkan:</p>
-  <ul>
-    <li>dakwah,</li>
-    <li>mujahadah,</li>
-    <li>sabar,</li>
-    <li>iman sebagai aktiviti hati,</li>
-    <li>amal,</li>
-    <li>perubahan hati dan suasana.</li>
-  </ul>
-
-  <p>Jika ilmu tidak menggerakkan seseorang kepada Asbab Mutlak Terbitan, ilmu itu hanyalah maklumat yang menebalkan ego.</p>
-
-  <hr>
-
-  <h3>1.6.6 Kerangka 3 Asbab Menghidupkan Ilmu</h3>
-
-  <p>Kerangka 3 Asbab menyusun ilmu dengan tertib Tauhidi:</p>
-
-  <h3>1) Nafy</h3>
-  <p>Menafikan kuasa memberi kesan pada makhluk:</p>
-  <ul>
-    <li>ilmu (Asbab Fitrah) tidak menentukan,</li>
-    <li>data (Asbab Fitrah) tidak menentukan,</li>
-    <li>logik (Asbab Fitrah) tidak menentukan,</li>
-    <li>nilai majoriti (Asbab Zulumat) tidak menentukan.</li>
-  </ul>
-
-  <h3>2) Isbat</h3>
-  <p>Menetapkan hanya Allah memberi kesan:</p>
-  <ul>
-    <li>Allah membuka hati,</li>
-    <li>Allah menghidupkan iman sebagai aktiviti hati,</li>
-    <li>Allah memberi cahaya pada ilmu,</li>
-    <li>Allah menunaikan janji-Nya melalui Asbab Mutlak (Asli &amp; Terbitan).</li>
-  </ul>
-
-  <h3>3) Ittiba’ Rasulullah ﷺ</h3>
-  <p>Menjadikan ilmu hidup melalui tertib amal:</p>
-
-  <blockquote>
-    <p>Dakwah → Mujahadah → Sabar → (Allah tumbuhkan) Iman → Amal</p>
-  </blockquote>
-
-  <p>Inilah jalan ilmu menjadi nur — kerana iman tumbuh selepas lulus ujian mujahadah dan sabar.</p>
-
-  <hr>
-
-  <h3>1.6.7 Rumusan Tauhidi Bab 1.6</h3>
-
-  <ul>
-    <li>Ilmu tanpa Asbab Mutlak (Asli &amp; Terbitan) menjadi hijab yang menutup hati.</li>
-    <li>Ilmu tanpa dakwah dan mujahadah membesarkan ego.</li>
-    <li>Cahaya ilmu bukan pada banyaknya maklumat, tetapi pada hubungannya dengan Allah.</li>
-    <li>Ilmu yang tidak melahirkan iman sebagai aktiviti hati bukan cahaya — tetapi kegelapan.</li>
-    <li>Ilmu hanya bercahaya apabila ia berpaut kepada Asbab Mutlak Asli dan Asbab Mutlak Terbitan.</li>
-  </ul>
-
-  <hr>
-
-  <div class="footnote" id="footnotes-1-6">
-    <p><strong>Nota Kaki Bab 1.6</strong></p>
-    <p>【1】 an-Nūr 24:35 — Allah sumber cahaya; ilmu mendapat nur apabila dipautkan kepada jalan ketaatan.</p>
-    <p>【2】 Ghāfir 40:83 — kegembiraan dengan ilmu sendiri boleh menjadi hijab apabila tidak tunduk kepada Allah.</p>
-    <p>【3】 ar-Rūm 30:7 — ilmu zahir yang memutuskan manusia daripada akhirat; tanda ilmu terkurung pada Asbab Fitrah.</p>
-    <p>【4】 Fāṭir 35:28 — ulama’ hakiki ditandai dengan خشية (takut yang menundukkan) kepada Allah.</p>
-    <p>【5】 HR Muslim — doa Nabi ﷺ daripada ilmu yang tidak bermanfaat; selari dengan prinsip bahawa ilmu bermanfaat ialah yang menggerakkan kepada Asbab Mutlak (Asli &amp; Terbitan) dan Allah menumbuhkan iman selepas mujahadah &amp; sabar.</p>
-  </div>
-</section>
-
-<section class="section-card" id="1-7">
-  <div class="badge-chapter">🟥 1.7</div>
-
-  <h2>1.7 Sunnatullah vs “Hukum Alam”</h2>
-
-  <div class="insight-box">
-    <p><strong>(Tiada “hukum alam” dalam Tauhid dari sudut Asbab Mutlak Asli)</strong></p>
-    <p>Dalam dunia moden, manusia diajar bahawa terdapat “hukum alam” yang wajib berlaku:</p>
-    <ul>
-      <li>api mesti membakar,</li>
-      <li>air mesti menenggelamkan,</li>
-      <li>graviti mesti menarik,</li>
-      <li>besi mesti tenggelam,</li>
-      <li>bilangan besar mesti menang.</li>
-    </ul>
-    <p>Namun dalam Kerangka 3 Asbab, istilah “hukum alam” tidak wujud dari sudut Tauhid, kerana:</p>
-    <ul>
-      <li>alam tidak memiliki kuasa,</li>
-      <li>Asbab Fitrah tidak memberi kesan sendiri,</li>
-      <li>semua kesan berlaku hanya dengan izin Allah.</li>
-    </ul>
-    <p>Dalam Tauhid, yang wujud hanyalah tiga kategori Asbab, dan masing-masing mempunyai kedudukan yang berbeza.</p>
-  </div>
-
-  <hr>
-
-  <h3>1.7.1 Kedudukan Asbab dalam Tauhid</h3>
-
-  <h3>1️⃣ Asbab Fitrah</h3>
-  <ul>
-    <li>Pola ciptaan Allah yang konsisten,</li>
-    <li>Neutral dari sudut iman,</li>
-    <li>Boleh digantung, dibalikkan, atau diubah,</li>
-    <li>Tidak mengandungi janji Allah,</li>
-    <li>Tidak menentukan hakikat.</li>
-  </ul>
-
-  <h3>2️⃣ Asbab Mutlak Asli (Sunnatullah)</h3>
-  <ul>
-    <li>Ketetapan Allah dalam wahyu,</li>
-    <li>Mengandungi janji Allah,</li>
-    <li>Tidak berubah,</li>
-    <li>Menentukan hakikat,</li>
-    <li>Menjadi asas iman, dakwah, mujahadah, dan sabar.</li>
-  </ul>
-
-  <div class="arabic">وَلَن تَجِدَ لِسُنَّتِ اللَّهِ تَبْدِيلًا</div>
-  <div class="translation">
-    “Dan engkau tidak akan mendapati sebarang perubahan pada sunnatullah.”<br>
-    (Fāṭir 35:43)【1】
-  </div>
-
-  <p><strong>Kesimpulan asas Tauhidi:</strong></p>
-  <ul>
-    <li>Sunnatullah = Asbab Mutlak Asli, bukan sains.</li>
-    <li>Asbab Fitrah hanyalah alat ujian.</li>
-    <li>Asbab Zulumat gugur apabila iman hidup.</li>
-  </ul>
-
-  <hr>
-
-  <h3>1.7.2 Mengapa “Hukum Alam” Tidak Wujud dari Sudut Asbab Mutlak Asli</h3>
-
-  <p>“Hukum alam” hanyalah pemerhatian berulang manusia, bukan ketetapan Tauhidi.</p>
-
-  <p><strong>Contoh prinsip Tauhid:</strong></p>
-  <ul>
-    <li>Api membakar hanya apabila Allah izinkan.</li>
-    <li>Air menenggelamkan hanya apabila Allah izinkan.</li>
-    <li>Bilangan besar menang hanya apabila Allah izinkan.</li>
-  </ul>
-
-  <p>Al-Qur’an membatalkan kepercayaan bahawa alam mempunyai kuasa sendiri.</p>
-
-  <p><strong>Api tidak membakar — Asbab Fitrah digantung</strong></p>
-  <div class="arabic">قُلْنَا يَا نَارُ كُونِي بَرْدًا وَسَلَامًا</div>
-  <div class="translation">
-    “Wahai api, jadilah engkau sejuk dan selamat.”<br>
-    (al-Anbiyā’ 21:69)【2】
-  </div>
-
-  <p><strong>Laut tidak menenggelamkan — Asbab Fitrah dibalikkan</strong></p>
-  <div class="arabic">فَانفَلَقَ فَكَانَ كُلُّ فِرْقٍ كَالطَّوْدِ الْعَظِيمِ</div>
-  <div class="translation">
-    “Maka laut itu terbelah, setiap bahagian seperti gunung yang besar.”<br>
-    (Asy-Syu‘arā’ 26:63)【3】
-  </div>
-
-  <p><strong>Bilangan kecil menang — logik dunia ditundukkan</strong></p>
-  <div class="arabic">كَم مِّن فِئَةٍ قَلِيلَةٍ غَلَبَتْ فِئَةً كَثِيرَةً</div>
-  <div class="translation">
-    “Berapa banyak kelompok kecil mengalahkan kelompok besar.”<br>
-    (al-Baqarah 2:249)【4】
-  </div>
-
-  <p><strong>Kesimpulan Tauhidi:</strong></p>
-  <ul>
-    <li>Tiada satu pun Asbab Fitrah yang wajib memberi kesan.</li>
-    <li>Yang wajib berlaku hanyalah janji Allah dalam Asbab Mutlak Asli.</li>
-  </ul>
-
-  <hr>
-
-  <h3>1.7.3 Bezakan Asbab Fitrah dan Asbab Mutlak Asli</h3>
-
-  <p><strong>🔹 Asbab Fitrah</strong></p>
-  <ul>
-    <li>Ciptaan Allah</li>
-    <li>Neutral</li>
-    <li>Konsisten secara kebiasaan</li>
-    <li>Boleh digantung atau dibalikkan</li>
-    <li>Tidak mengandungi janji Allah</li>
-  </ul>
-
-  <p><strong>🔹 Asbab Mutlak Asli (Sunnatullah)</strong></p>
-  <ul>
-    <li>Wahyu dan janji Allah</li>
-    <li>Tidak berubah</li>
-    <li>Menentukan hakikat</li>
-    <li>Berfungsi walaupun melawan logik dunia</li>
-    <li>Asas kepada iman, dakwah, mujahadah, dan sabar</li>
-  </ul>
-
-  <p><strong>Contoh Asbab Mutlak Asli (semua berdalil):</strong></p>
-  <ul>
-    <li>“Jika kamu menolong agama Allah, Allah menolong kamu” (47:7)</li>
-    <li>“Bertaqwalah, Allah beri jalan keluar” (65:2)</li>
-    <li>“Bersabarlah, Allah bersama kamu” (8:46)</li>
-    <li>“Jangan takut, Aku bersama kamu” (20:46)</li>
-  </ul>
-
-  <hr>
-
-  <h3>1.7.4 Punca Kekeliruan Manusia</h3>
-
-  <p>Manusia keliru kerana:</p>
-  <ol>
-    <li>Melihat pola Asbab Fitrah berulang → menyangka ia kuasa.</li>
-    <li>Melihat konsistensi alam → menamakannya “hukum alam”.</li>
-    <li>Menjadikan pemerhatian sebagai sumber kebenaran → bukan wahyu.</li>
-  </ol>
-
-  <p>Dalam Tauhid:</p>
-  <ul>
-    <li>Pola berulang ≠ kuasa.</li>
-    <li>Kuasa hanya milik Allah.</li>
-  </ul>
-
-  <p><strong>Contoh kekeliruan:</strong></p>
-  <ul>
-    <li>Tsunami → “kuasa alam”, padahal izin Allah.</li>
-    <li>Badar → “bilangan tentukan kemenangan”, padahal nusrah Allah.</li>
-    <li>Rezeki → “hasil usaha”, padahal pemberian Allah.</li>
-  </ul>
-
-  <p>Ini berlaku apabila Asbab Fitrah digunakan tanpa Nafy, lalu diyakini berkuasa.</p>
-
-  <hr>
-
-  <h3>1.7.5 Hubungan Sunnatullah dengan Iman</h3>
-
-  <p>Iman bukan keyakinan kepada hukum alam.</p>
-
-  <p>Iman ialah:</p>
-  <ul>
-    <li>aktiviti rasa dalam hati (cinta, takut, harap, yakin, percaya, tawakkal),</li>
-    <li>tunduk sepenuhnya kepada perkhabaran Rasulullah ﷺ,</li>
-    <li>walaupun natijah zahir menyalahi logik Asbab Fitrah,</li>
-    <li>dan iman ini ditumbuhkan Allah selepas ujian mujahadah dan sabar.</li>
-  </ul>
-
-  <p>Orang yang hidup dengan Asbab Mutlak Asli:</p>
-  <ul>
-    <li>tidak takut dunia,</li>
-    <li>tidak tunduk kepada logik,</li>
-    <li>tidak bergantung kepada angka,</li>
-    <li>berjalan di atas janji Allah.</li>
-  </ul>
-
-  <hr>
-
-  <h3>1.7.6 Rumusan Tauhidi Bab 1.7</h3>
-
-  <ul>
-    <li>“Hukum alam” tidak wujud dari sudut Asbab Mutlak Asli.</li>
-    <li>Yang wujud hanyalah Asbab Fitrah sebagai alat ujian.</li>
-    <li>Sunnatullah = Asbab Mutlak Asli dalam wahyu yang tidak berubah.</li>
-    <li>Alam tidak memberi kesan — Allah memberi kesan.</li>
-    <li>Asbab Fitrah tunduk kepada Asbab Mutlak Asli, bukan sebaliknya.</li>
-    <li>Orang yang memuliakan “hukum alam” sedang berpaut kepada Asbab Fitrah.</li>
-    <li>Orang yang berpaut kepada Sunnatullah hidup seperti para Nabi.</li>
-  </ul>
-
-  <blockquote>
-    <p><strong>Ringkas Tauhidi:</strong><br>
-    Sunnatullah = janji Allah.<br>
-    “Hukum alam” = sangkaan manusia.<br>
-    Yang memberi kesan hanyalah Allah — bukan alam, bukan sebab.</p>
-  </blockquote>
-
-  <hr>
-
-  <div class="footnote" id="footnotes-1-7">
-    <p><strong>Nota Kaki Bab 1.7</strong></p>
-    <p>【1】 Fāṭir 35:43 — Sunnatullah ialah ketetapan Allah dalam wahyu yang tidak berubah.</p>
-    <p>【2】 al-Anbiyā’ 21:69 — api tidak memberi kesan tanpa izin Allah.</p>
-    <p>【3】 Asy-Syu‘arā’ 26:63 — laut tidak memberi kesan tanpa izin Allah.</p>
-    <p>【4】 al-Baqarah 2:249 — bilangan bukan penentu kemenangan; nusrah datang daripada Allah.</p>
-  </div>
-</section>
-
-<section class="section-card" id="1-8">
-  <div class="badge-chapter">🟥 1.8</div>
-
-  <h2>1.8 Nafy Kuasa Mahluk, Isbat Kuasa Allah</h2>
-
-  <div class="insight-box">
-    <p><strong>(Operasi Tauhid dalam hati: memutuskan sandaran kepada makhluk dan mengikat hati kepada Allah)</strong></p>
-    <p>Inti Tauhid bukan teori, bukan slogan, dan bukan hujah akal. Tauhid ialah operasi hati.</p>
-    <p>Tauhid hidup apabila:</p>
-    <ul>
-      <li>Nafy memutuskan hati daripada kebergantungan kepada makhluk, dan</li>
-      <li>Isbat mengikat hati sepenuhnya kepada Allah sebagai satu-satunya pemberi kesan.</li>
-    </ul>
-    <p>Dalam Kerangka 3 Asbab:</p>
-    <ul>
-      <li><strong>Nafy</strong> = menafikan kuasa memberi kesan pada Asbab Fitrah dan Asbab Zulumat.</li>
-      <li><strong>Isbat</strong> = menetapkan bahawa hanya Allah memberi manfaat, mudarat, hidup, mati, rezeki, kemenangan, dan hidayat.</li>
-    </ul>
-    <p>Tanpa Nafy → Isbat berubah menjadi syirik halus.</p>
-    <p>Tanpa Isbat → Nafy berubah menjadi kekosongan.</p>
-    <p>Tauhid hanya hidup apabila Nafy dan Isbat berjalan serentak.</p>
-  </div>
-
-  <hr>
-
-  <h3>1.8.1 NAFY: Menafikan Kuasa Memberi Kesan Pada Mahluk</h3>
-
-  <p>Nafy bukan menolak sebab, tetapi menafikan kuasa sebab.</p>
-
-  <p>Hati mesti dinafikan daripada keyakinan bahawa:</p>
-  <ul>
-    <li>api memberi kesan sendiri,</li>
-    <li>pisau memberi kesan sendiri,</li>
-    <li>duit memberi rezeki,</li>
-    <li>doktor memberi kesembuhan,</li>
-    <li>teknologi memberi keselamatan,</li>
-    <li>strategi memberi kemenangan,</li>
-    <li>angka memberi kejayaan,</li>
-    <li>manusia menentukan nasib.</li>
-  </ul>
-
-  <div class="arabic">وَمَا رَمَيْتَ إِذْ رَمَيْتَ</div>
-  <div class="translation">
-    “Bukan engkau yang melempar ketika engkau melempar.”<br>
-    (al-Anfāl 8:17)【1】
-  </div>
-
-  <p>Ayat ini menetapkan kaedah Tauhid:</p>
-  <ul>
-    <li>perbuatan berlaku melalui makhluk,</li>
-    <li>kesan berlaku hanya dengan Allah.</li>
-  </ul>
-
-  <p>Nafy mengosongkan hati daripada sandaran kepada seluruh Asbab Fitrah dan Asbab Zulumat.</p>
-
-  <hr>
-
-  <h3>1.8.2 ISBAT: Menetapkan Allah Sebagai Satu-Satunya Pemberi Kesan</h3>
-
-  <p>Isbat ialah mengisi hati dengan keyakinan bahawa:</p>
-  <ul>
-    <li>Allah memberi rezeki,</li>
-    <li>Allah mengangkat dan merendahkan,</li>
-    <li>Allah memberi kemenangan dan kekalahan,</li>
-    <li>Allah menyembuhkan dan menguji,</li>
-    <li>Allah membuka dan menutup hati.</li>
-  </ul>
-
-  <div class="arabic">وَاللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ</div>
-  <div class="translation">
-    “Allah menciptakan kamu dan apa yang kamu lakukan.”<br>
-    (aṣ-Ṣāffāt 37:96)【2】
-  </div>
-
-  <div class="arabic">اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ</div>
-  <div class="translation">
-    “Allah, tiada Tuhan selain Dia, Yang Maha Hidup lagi Maha Berdiri Sendiri.”<br>
-    (al-Baqarah 2:255)【3】
-  </div>
-
-  <p>Isbat bukan sekadar pengakuan lidah, tetapi pengisian hati sehingga makhluk tidak lagi berkuasa ke atas rasa.</p>
-
-  <hr>
-
-  <h3>1.8.3 NAFY–ISBAT: Operasi Para Nabi</h3>
-
-  <p>Seluruh perjalanan para Nabi ialah operasi Nafy–Isbat.</p>
-
-  <p><strong>1️⃣ NAFY — mematahkan keyakinan terhadap makhluk</strong></p>
-  <ul>
-    <li>Firaun,</li>
-    <li>Namrud,</li>
-    <li>sistem ekonomi,</li>
-    <li>teknologi,</li>
-    <li>kekuatan bilangan,</li>
-    <li>struktur kuasa.</li>
-  </ul>
-
-  <p><strong>2️⃣ ISBAT — mengikat hati kepada Allah</strong></p>
-  <ul>
-    <li>janji Allah,</li>
-    <li>jalan dakwah,</li>
-    <li>mujahadah,</li>
-    <li>sabar,</li>
-    <li>nusrah.</li>
-  </ul>
-
-  <p><strong>Contoh para Nabi:</strong></p>
-
-  <p><strong>Nabi Ibrahim عليه السلام</strong></p>
-  <ul>
-    <li>Nafy → api (Asbab Fitrah) tiada kuasa</li>
-    <li>Isbat → Allah menjadikan api sejuk【4】</li>
-  </ul>
-
-  <p><strong>Nabi Musa عليه السلام</strong></p>
-  <ul>
-    <li>Nafy → laut (Asbab Fitrah) bukan penentu</li>
-    <li>Isbat → Allah membuka laut【5】</li>
-  </ul>
-
-  <p><strong>Nabi Muhammad ﷺ</strong></p>
-  <ul>
-    <li>Nafy → bilangan dan senjata bukan faktor</li>
-    <li>Isbat → kemenangan Badar dari Allah【6】</li>
-  </ul>
-
-  <hr>
-
-  <h3>1.8.4 Tanpa Nafy: Syirik Halus Dalam Hati</h3>
-
-  <p>Jika seseorang:</p>
-  <ul>
-    <li>solat tetapi yakin duit menentukan,</li>
-    <li>berdakwah tetapi yakin strategi menentukan,</li>
-    <li>belajar tetapi yakin markah menentukan,</li>
-    <li>bekerja tetapi yakin manusia menentukan,</li>
-  </ul>
-
-  <p>maka hatinya masih berpaut kepada Asbab Fitrah, bukan Tauhid.</p>
-
-  <p>Syirik moden tidak datang sebagai berhala, tetapi sebagai:</p>
-  <ul>
-    <li>data,</li>
-    <li>KPI,</li>
-    <li>angka,</li>
-    <li>sainsisme,</li>
-    <li>materialisme,</li>
-    <li>konsep “hukum alam”.</li>
-  </ul>
-
-  <p>Semua ini mesti dinafikan sebelum hati mampu melakukan Isbat.</p>
-
-  <hr>
-
-  <h3>1.8.5 Tanpa Isbat: Nafy Menjadi Kosong</h3>
-
-  <p>Jika seseorang:</p>
-  <ul>
-    <li>menolak dunia,</li>
-    <li>menolak teknologi,</li>
-    <li>menolak logik,</li>
-    <li>menolak sains,</li>
-  </ul>
-
-  <p>tetapi tidak mengisi hati dengan Allah, maka:</p>
-  <ul>
-    <li>Nafy menjadi penolakan kosong,</li>
-    <li>hati kehilangan kiblat,</li>
-    <li>Tauhid tidak terbina.</li>
-  </ul>
-
-  <p>Dalam Kerangka 3 Asbab, Nafy wajib diikuti Isbat.</p>
-
-  <hr>
-
-  <h3>1.8.6 Rantaian Nafy–Isbat Dalam Pembinaan Iman</h3>
-
-  <p><strong>Rantaian Tauhidi dalam jiwa:</strong></p>
-  <ol>
-    <li>Nafy — putuskan sandaran kepada makhluk</li>
-    <li>Isbat — ikat hati kepada Allah</li>
-    <li>Ittiba’ Rasulullah ﷺ — masuk tertib dakwah</li>
-    <li>Mujahadah — mematahkan ego</li>
-    <li>Sabar — menanggung ujian</li>
-    <li>Allah menumbuhkan iman</li>
-    <li>Iman melahirkan amal dan redha</li>
-  </ol>
-
-  <div class="insight-box">
-    <p><strong>📌 Iman ialah:</strong></p>
-    <ul>
-      <li>aktiviti rasa dalam hati (cinta, takut, harap, yakin, percaya, tawakkal),</li>
-      <li>tunduk sepenuhnya kepada perkhabaran Rasulullah ﷺ,</li>
-      <li>tanpa menjadikan bukti zahir atau logik sebagai hakim,</li>
-      <li>dan iman ini ditumbuhkan Allah selepas lulus ujian mujahadah dan sabar.</li>
-    </ul>
-  </div>
-
-  <hr>
-
-  <h3>1.8.7 Rumusan Tauhidi Bab 1.8</h3>
-
-  <ul>
-    <li>Nafy memutuskan kebergantungan kepada makhluk.</li>
-    <li>Isbat mengikat hati kepada Allah.</li>
-    <li>Nafy tanpa Isbat = kosong.</li>
-    <li>Isbat tanpa Nafy = syirik halus.</li>
-    <li>Tauhid ialah operasi hati, bukan slogan.</li>
-    <li>Tauhid hidup apabila:<br>
-      “Tiada makhluk memberi kesan”<br>
-      bertemu dengan<br>
-      “Hanya Allah memberi kesan.”</li>
-  </ul>
-
-  <hr>
-
-  <div class="footnote" id="footnotes-1-8">
-    <p><strong>Nota Kaki Bab 1.8</strong></p>
-    <p>【1】 al-Anfāl 8:17 — penafian kuasa makhluk dan penetapan kuasa Allah.</p>
-    <p>【2】 aṣ-Ṣāffāt 37:96 — Allah pencipta perbuatan dan kesannya.</p>
-    <p>【3】 al-Baqarah 2:255 — Allah Al-Ḥayy Al-Qayyūm, tidak bergantung kepada makhluk.</p>
-    <p>【4】 al-Anbiyā’ 21:69 — Asbab Fitrah (api) dinafikan, kuasa Allah ditetapkan.</p>
-    <p>【5】 asy-Syu‘arā’ 26:63 — laut terbelah dengan izin Allah.</p>
-    <p>【6】 Āli ‘Imrān 3:123–124 — nusrah Badar datang daripada Allah.</p>
-  </div>
-</section>
-
-<!-- ============================== BAB 1.9 ============================== -->
-<section class="section-card" id="1-9">
-
-  <div class="badge-chapter">🟥 BAB 1.9</div>
-  <h2>1.9 — Dua Cahaya — Wahyu & Hati</h2>
-
-  <!-- ============================== 1.9.0 ============================== -->
-  <h3>1.9.0 Mukadimah Tauhidi: Dua Cahaya — Wahyu & Hati</h3>
-
-  <p>Penerimaan atau penolakan terhadap kebenaran tidak ditentukan oleh kekuatan hujah, bukan kerana pendekatan, dan bukan kerana tahap intelektual.</p>
-
-  <p>Ia berlaku kerana <strong>pertemuan atau tidak bertemunya dua cahaya</strong>.</p>
-
-  <hr>
-
-  <h3>1️⃣ Cahaya Wahyu</h3>
-
-  <p>Cahaya Wahyu ialah nur yang Allah turunkan melalui:</p>
-  <ul>
-    <li>al-Qur’an (Asbab Mutlak Asli),</li>
-    <li>Sunnah dan Sirah Rasulullah ﷺ,</li>
-    <li>amal dakwah, mujahadah dan sabar (Asbab Mutlak Terbitan),</li>
-    <li>suasana masjid dan jamaah.</li>
-  </ul>
-
-  <p>Cahaya ini bukan ciptaan manusia, dan tidak lahir daripada pemikiran atau pengalaman.</p>
-
-  <p>Ia hanya <strong>diterima apabila seseorang berada dalam tertib para Nabi</strong>:</p>
-  <ul>
-    <li>dakwah,</li>
-    <li>mujahadah,</li>
-    <li>sabar,</li>
-    <li>amal ijtima’i dalam jamaah.</li>
-  </ul>
-
-  <p>Kerangka 3 Asbab tidak mencipta cahaya ini — ia hanya <strong>menyusun tertib supaya cahaya wahyu dapat difahami dengan jelas</strong>.</p>
-
-  <hr>
-
-  <h3>2️⃣ Cahaya Hati</h3>
-
-  <p>Cahaya Hati ialah <strong>kesediaan hati untuk menerima hidayat daripada Allah</strong>.</p>
-
-  <p><strong>Hati yang hidup:</strong></p>
-  <ul>
-    <li>tunduk kepada wahyu tanpa syarat,</li>
-    <li>menerima tertib Rasulullah ﷺ,</li>
-    <li>tidak menjadikan logik sebagai penentu ketaatan.</li>
-  </ul>
-
-  <p><strong>Hati yang tertutup:</strong></p>
-  <ul>
-    <li>melihat kebenaran tetapi tidak tunduk,</li>
-    <li>menangguhkan penerimaan,</li>
-    <li>mempertahankan keadaan diri.</li>
-  </ul>
-
-  <hr>
-
-  <h3>Prinsip Dua Cahaya (Dikunci)</h3>
-
-  <ul>
-    <li>Cahaya Wahyu + Cahaya Hati → terus nampak</li>
-    <li>Jika salah satu tiada → tetap gelap</li>
-  </ul>
-
-  <p>Penolakan bukan kerana kebenaran tidak jelas — tetapi kerana <strong>hati tidak menerima</strong>.</p>
-
-  <div class="arabic">ثُمَّ قَسَتْ قُلُوبُكُم مِّنۢ بَعْدِ ذَٰلِكَ فَهِىَ كَالْحِجَارَةِ</div>
-  <div class="translation">“Selepas itu hati kamu menjadi keras seperti batu.” — al-Baqarah 2:74</div>
-
-  <p>Kebenaran tidak bergantung kepada majoriti — ia bergantung kepada <strong>hati yang hidup</strong>.</p>
-
-  <hr>
-
-  <!-- ============================== 1.9.1 ============================== -->
-  <h3>1.9.1 Kerangka 3 Asbab: Penterjemah Antara Wahyu & Hati</h3>
-
-  <p>Cahaya Wahyu ibarat <strong>lampu</strong>.<br>
-  Cahaya Hati ibarat <strong>mata</strong>.</p>
-
-  <p>Lampu paling terang tidak memberi manfaat jika mata tidak melihat.</p>
-
-  <h3>Peranan Cahaya Wahyu</h3>
-
-  <p>Cahaya Wahyu menerangkan:</p>
-  <ul>
-    <li>hakikat Asbab Fitrah, Asbab Zulumat, dan Asbab Mutlak,</li>
-    <li>tertib amal para Nabi,</li>
-    <li>jalan Muhajirin dan Ansar,</li>
-    <li>syarat turunnya nusrah,</li>
-    <li>mekanisme transformasi Asbab.</li>
-  </ul>
-
-  <p>Ia menunjukkan realiti sebagaimana yang Allah tetapkan — bukan sebagaimana yang manusia sangka.</p>
-
-  <h3>Peranan Cahaya Hati</h3>
-
-  <p>Cahaya Hati menentukan sama ada seseorang:</p>
-  <ul>
-    <li>menerima atau menolak,</li>
-    <li>tunduk atau menangguh,</li>
-    <li>bergerak atau berhenti.</li>
-  </ul>
-
-  <p>Jika hati tidak hidup:</p>
-  <ul>
-    <li>tertib wahyu kelihatan berat,</li>
-    <li>kebenaran terasa jauh,</li>
-    <li>perubahan dirasakan sebagai beban.</li>
-  </ul>
-
-  <p>Jika hati hidup:</p>
-  <ul>
-    <li>kebenaran menjadi jelas,</li>
-    <li>tertib wahyu menjadi ringan,</li>
-    <li>amal menjadi mudah.</li>
-  </ul>
-
-  <hr>
-
-  <!-- ============================== 1.9.2 ============================== -->
-  <h3>1.9.2 Keadaan Hati: Penentu Penerimaan</h3>
-
-  <p>Perbezaan manusia dalam menerima kebenaran bukan kerana perbezaan maklumat — tetapi kerana <strong>keadaan hati</strong>.</p>
-
-  <h3>Hati yang Tertutup</h3>
-
-  <div class="arabic">بَلْ رَانَ عَلَىٰ قُلُوبِهِم</div>
-  <div class="translation">“Telah berkarat di atas hati mereka.” — al-Muṭaffifīn 83:14</div>
-
-  <div class="arabic">خَتَمَ اللَّهُ عَلَىٰ قُلُوبِهِم</div>
-  <div class="translation">“Allah mengunci hati mereka.” — al-Baqarah 2:7</div>
-
-  <p>Apabila hati tertutup:</p>
-  <ul>
-    <li>kebenaran tidak memberi kesan,</li>
-    <li>wahyu tidak menembusi,</li>
-    <li>perubahan tidak berlaku.</li>
-  </ul>
-
-  <h3>Hati yang Hidup</h3>
-
-  <p>Hati yang hidup:</p>
-  <ul>
-    <li>menerima kebenaran walaupun belum memahami sepenuhnya,</li>
-    <li>tunduk walaupun belum melihat hasil,</li>
-    <li>bergerak kerana yakin kepada Allah.</li>
-  </ul>
-
-  <p>Hati seperti ini melihat dengan cahaya wahyu — bukan dengan sangkaan sendiri.</p>
-
-  <hr>
-
-  <!-- ============================== 1.9.3 ============================== -->
-  <h3>1.9.3 Rumusan Tauhidi Bab 1.9</h3>
-
-  <ul>
-    <li>Penerimaan kebenaran ditentukan oleh keadaan hati, bukan kekuatan hujah.</li>
-    <li>Cahaya wahyu mesti bertemu cahaya hati.</li>
-    <li>Wahyu tidak dihakimi oleh akal atau sistem — tetapi diterima dengan hati yang tunduk.</li>
-    <li>Asbab Mutlak mengatasi Asbab Fitrah dan Asbab Zulumat.</li>
-    <li>Apabila hati hidup, kebenaran menjadi jelas tanpa paksaan.</li>
-  </ul>
-
-  <blockquote>
-    Bila cahaya wahyu bertemu cahaya hati → terus nampak<br>
-    Bila salah satu tiada → tetap gelap
-  </blockquote>
-
-  <!-- ============================== FOOTNOTE ============================== -->
-  <div class="footnote">
-    <strong>Nota Kaki:</strong><br>
-    【1】 al-Baqarah 2:74 — hati menjadi keras apabila kebenaran ditolak<br>
-    【2】 al-Muṭaffifīn 83:14 — dosa menggelapkan hati<br>
-    【3】 al-Baqarah 2:7 — hati terkunci apabila penolakan berulang
-  </div>
-
-  <a href="#top" class="toplink no-print">↑ Kembali ke atas</a>
-
-</section>
-<!-- ============================== /BAB 1.9 ============================== -->
-<section class="section-card" id="1-10">
-  <div class="badge-chapter">🟥 BAB 1.10</div>
-
-  <h2>1.10 Salah Tafsir &amp; Salah Guna Kerangka 3 Asbab</h2>
-
-  <hr>
-
-  <p>Tidak ada kebenaran yang Allah turunkan melainkan manusia boleh menyalahgunakannya. Wahyu sendiri boleh disalah tafsir — apatah lagi ilmu yang menghuraikan wahyu.</p>
-
-  <p>Kerangka 3 Asbab juga begitu: ia boleh menjadi ubat, dan boleh menjadi racun — bergantung kepada keadaan iman, iaitu aktiviti hati yang hidup (cinta, takut, harap, yakin, percaya, tawakkal) yang tunduk kepada Allah melalui penerimaan penuh terhadap perkhabaran Rasulullah ﷺ, tanpa menjadikan bukti zahir atau logik sebagai hakim iman; dan iman ini ditumbuhkan Allah selepas lulus ujian mujahadah dan sabar.</p>
-
-  <p>Tujuan bab ini ialah membersihkan salah faham sebelum masuk Bab 1.11 (Pembinaan Iman).</p>
-
-  <hr>
-
-  <h3>1.10.1 Menjadikan Kerangka 3 Asbab Sebagai Senjata</h3>
-
-  <p>Ini kesalahan paling awal dan paling berbahaya.</p>
-
-  <p>Ada yang apabila memahami sedikit, terus:</p>
-  <ul>
-    <li>menyerang orang lain,</li>
-    <li>menghukum keluarga,</li>
-    <li>menuduh orang syirik kerana menggunakan sebab,</li>
-    <li>merasa dirinya lebih “tauhidi” daripada orang lain.</li>
-  </ul>
-
-  <p>Ini bertentangan dengan tertib Nabi ﷺ.</p>
-
-  <p>Kerangka 3 Asbab bukan pedang untuk memotong manusia. Kerangka 3 Asbab ialah lampu untuk menerangi jalan manusia.</p>
-
-  <blockquote>
-    <p><strong>Prinsip Tauhidi:</strong><br>
-    Cahaya digunakan untuk menunjuk jalan — bukan membakar manusia.</p>
-  </blockquote>
-
-  <div class="arabic">فَلَا تُزَكُّوا أَنفُسَكُمْ</div>
-  <div class="translation">
-    “Jangan kamu menyucikan (mengangkat) diri kamu.”<br>
-    (an-Najm 53:32)【1】
-  </div>
-
-  <p>Rasulullah ﷺ menyucikan manusia dengan kasih, bukan dengan tuduhan. Begitu juga tertib Kerangka 3 Asbab: ilmu untuk menyembuhkan diri, bukan merendahkan orang lain.</p>
-
-  <hr>
-
-  <h3>1.10.2 Melarikan Diri Daripada Asbab-Asbab Fitrah (Anti-Usaha)</h3>
-
-  <p>Kesalahan kedua: menyangka Kerangka 3 Asbab mengajar bahawa usaha tidak perlu.</p>
-
-  <blockquote>
-    <p>“Kalau semua sebab mesti dinafikan, maka duduk sahaja tunggu janji Allah.”</p>
-  </blockquote>
-
-  <p>Ini penyelewengan besar.</p>
-
-  <p>Kerangka 3 Asbab mengajar:</p>
-  <ul>
-    <li>mengambil Asbab-Asbab Fitrah sebagai alat,</li>
-    <li>mengikut tertib syarak dan sunnah,</li>
-    <li>tidak menggantung hati kepada Asbab-Asbab Fitrah.</li>
-  </ul>
-
-  <p><strong>Kesalahan yang sering berlaku:</strong></p>
-  <ul>
-    <li>tidak mahu bekerja — atas nama tawakkal,</li>
-    <li>tidak mahu merancang — atas nama “Asbab-Asbab Mutlak”,</li>
-    <li>tidak mahu belajar — atas nama yakin,</li>
-    <li>tidak mahu berusaha — atas nama iman.</li>
-  </ul>
-
-  <p>Ini bukan tawakkal. Ini malas + ego + salah tafsir.</p>
-
-  <blockquote>
-    <p><strong>Prinsip Tauhidi:</strong><br>
-    Asbab-Asbab Fitrah diambil sebagai alat; aktiviti hati berpaut hanya kepada Allah.</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>1.10.3 Salah Faham Seolah-olah Kerangka 3 Asbab Anti-Sains</h3>
-
-  <p>Ada yang menyangka Kerangka 3 Asbab bermaksud:</p>
-  <ul>
-    <li>menolak teknologi,</li>
-    <li>menolak perubatan,</li>
-    <li>menolak ubat,</li>
-    <li>menolak sains moden,</li>
-    <li>menolak sistem ekonomi.</li>
-  </ul>
-
-  <p>Ini salah.</p>
-
-  <p>Sains dan teknologi termasuk dalam Asbab-Asbab Fitrah — alat ciptaan Allah. Ia menjadi gelap apabila Asbab-Asbab Fitrah dijadikan hakim, atau apabila disandarkan kuasa memberi kesan.</p>
-
-  <p>Kerangka 3 Asbab:</p>
-  <ul>
-    <li>tidak memusuhi sains,</li>
-    <li>tidak memusuhi teknologi,</li>
-    <li>tidak memusuhi ekonomi,</li>
-  </ul>
-
-  <p>tetapi menundukkan semuanya di bawah wahyu, dan mengembalikan pusat pergantungan aktiviti hati kepada Allah.</p>
-
-  <blockquote>
-    <p><strong>Rumusan:</strong><br>
-    Kita bukan anti-sains; kita menolak “sains-jadi-hakim-wahyu”.</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>1.10.4 Salah Faham Paling Halus: Dakwaan Diri</h3>
-
-  <p>Inilah kesalahan paling halus.</p>
-
-  <p>Ada manusia merasa:</p>
-  <ul>
-    <li>dirinya paling faham,</li>
-    <li>dirinya lebih lurus,</li>
-    <li>dirinya “ahli Asbab-Asbab Mutlak”,</li>
-    <li>dirinya penjaga tauhid.</li>
-  </ul>
-
-  <p>Ini penyakit Iblis dalam bentuk paling lembut:</p>
-
-  <blockquote>
-    <p>“Aku lebih baik…”</p>
-  </blockquote>
-
-  <div class="arabic">فَلَا تُزَكُّوا أَنفُسَكُمْ</div>
-  <div class="translation">
-    “Jangan kamu menyucikan (mengangkat) diri kamu.”<br>
-    (an-Najm 53:32)【1】
-  </div>
-
-  <div class="arabic">وَمَا بِكُم مِّن نِّعْمَةٍ فَمِنَ اللَّهِ</div>
-  <div class="translation">
-    “Segala nikmat yang ada pada kamu adalah daripada Allah.”<br>
-    (an-Naḥl 16:53)【2】
-  </div>
-
-  <p>Kerangka 3 Asbab melarang semua self-claim. Semua kebaikan mesti dipulangkan kepada Allah melalui disiplin Nafy–Isbat: menafikan pujian daripada diri, menetapkan kebaikan itu daripada Allah.</p>
-
-  <blockquote>
-    <p><strong>Prinsip Tauhidi:</strong><br>
-    Orang yang benar-benar faham Kerangka 3 Asbab ialah yang paling takut kepada Allah — bukan yang paling banyak mengangkat dirinya.</p>
-  </blockquote>
-
-  <hr>
-
-  <h3>1.10.5 Rawatan &amp; Pembetulan Mengikut Tertib Nabi ﷺ</h3>
-
-  <p>Setiap salah tafsir mesti dirawat dengan Nafy–Isbat–Ittiba’.</p>
-
-  <h3>1) Rawat dengan Nafy</h3>
-  <ul>
-    <li>menafikan kuasa diri,</li>
-    <li>menafikan kelebihan diri,</li>
-    <li>menafikan “aku lebih tahu”.</li>
-  </ul>
-
-  <p>Nafy mematahkan ego.</p>
-
-  <h3>2) Rawat dengan Isbat</h3>
-  <ul>
-    <li>menetapkan hanya Allah memberi kesan,</li>
-    <li>menetapkan ilmu ini milik Allah,</li>
-    <li>menetapkan hidayah milik Allah.</li>
-  </ul>
-
-  <p>Isbat menyucikan niat.</p>
-
-  <h3>3) Kembalikan kepada Ittiba’ Rasulullah ﷺ</h3>
-
-  <p>Ilmu hanya hidup apabila aktiviti hati dibawa masuk ke tertib Nabi ﷺ melalui:</p>
-  <ul>
-    <li>dakwah (keluar dari diri),</li>
-    <li>mujahadah (mematahkan nafs),</li>
-    <li>sabar (menunggu janji Allah),</li>
-    <li>solat khusyuk (membersihkan hati).</li>
-  </ul>
-
-  <p>Tanpa tertib ini, ilmu mudah menjadi hijab.</p>
-
-  <h3>4) Sertakan Suasana</h3>
-
-  <p>Ilmu lebih mudah hidup apabila berada dalam:</p>
-  <ul>
-    <li>suasana masjid,</li>
-    <li>suasana jamaah,</li>
-    <li>suasana dakwah,</li>
-    <li>suasana amal.</li>
-  </ul>
-
-  <h3>5) Tegakkan Prinsip Tanpa Menghukum</h3>
-
-  <p>Kerangka 3 Asbab ialah alat menyucikan diri, bukan alat mencela manusia.</p>
-
-  <div class="arabic">وَلَا تَلْمِزُوا أَنفُسَكُمْ</div>
-  <div class="translation">
-    “Jangan kamu mencela sesama kamu.”<br>
-    (al-Ḥujurāt 49:11)【3】
-  </div>
-
-  <p>Kebenaran disampaikan dengan kasih — itu rawatan tertinggi.</p>
-
-  <hr>
-
-  <h3>1.10.6 Rumusan Tauhidi Bab 1.10</h3>
-
-  <ul>
-    <li>Kerangka 3 Asbab tidak boleh dijadikan senjata.</li>
-    <li>Kerangka 3 Asbab bukan alasan untuk lari daripada Asbab-Asbab Fitrah.</li>
-    <li>Kerangka 3 Asbab bukan anti-sains; ia menundukkan Asbab-Asbab Fitrah di bawah wahyu.</li>
-    <li>Dakwaan diri mematikan cahaya Asbab-Asbab Mutlak (Asli &amp; Terbitan).</li>
-    <li>Rawatan terbaik ialah kembali kepada Nafy–Isbat–Ittiba’.</li>
-    <li>Ilmu mesti disambungkan kepada dakwah, mujahadah, sabar, dan suasana.</li>
-    <li>Bab ini membasuh salah tafsir sebelum pembangunan iman dimulakan.</li>
-  </ul>
-
-  <hr>
-
-  <div class="footnote" id="footnotes-1-10">
-    <p><strong>Nota Kaki Bab 1.10 (Format Muktamad)</strong></p>
-    <p>【1】 an-Najm 53:32 — larangan mengangkat diri; asas rawatan dakwaan diri dalam disiplin Nafy–Isbat.</p>
-    <p>【2】 an-Naḥl 16:53 — semua nikmat daripada Allah; menutup pintu self-claim dan memulangkan kebaikan kepada Allah.</p>
-    <p>【3】 al-Ḥujurāt 49:11 — larangan mencela manusia; kebenaran disampaikan dengan kasih, bukan penghinaan.</p>
-  </div>
-</section>
-
-   </footer>
-
-  </div>
-
-  <script>
-    function downloadPDF() {
-      const btn = document.querySelector('.btn-pdf');
-      const originalText = btn.innerHTML;
-      btn.innerHTML = '⏳ Menyediakan PDF...';
-      btn.disabled = true;
-      const coverTitle = document.getElementById('pdf-cover-title');
-      const coverSubtitle = document.getElementById('pdf-cover-subtitle');
-      const metaTitle = document.getElementById('pdf-meta-title');
-      if (coverTitle) coverTitle.innerHTML = 'Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA';
-      if (coverSubtitle) coverSubtitle.textContent = 'Meruntuhkan asas fahaman sebab lama dan menggantikannya dengan reset Tauhidi';
-      if (metaTitle) metaTitle.textContent = 'Bab 1 — PEMBUNUHAN FAHAMAN ASBAB LAMA';
-      setTimeout(() => {
-        window.print();
-        setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 500);
-      }, 100);
-    }
-  </script>
+  </footer>
 
 </body>
 </html>
