@@ -1,1 +1,217 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Peta Ringkas K3A — Kehidupan yang Baik | 3asbab.org</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#faf7f2; --warm:#f3ede3; --ink:#1c1810; --ink-2:#3d3426; --ink-3:#6b5d4e;
+    --gold:#b8892a; --gold-lt:#e8c97a; --gold-soft:#f3e6c4;
+    --emerald:#1f5c3e; --emerald-lt:#2d7a53; --emerald-dk:#163f2b;
+    --rule:rgba(100,80,50,.15);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--cream);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.7;-webkit-text-size-adjust:100%;}
 
+  .topbar{border-bottom:1px solid var(--rule);background:rgba(250,247,242,.95);backdrop-filter:blur(8px);position:sticky;top:0;z-index:30;}
+  .topbar nav{display:flex;gap:1.2rem;align-items:center;max-width:760px;margin:0 auto;padding:.8rem 20px;font-size:.86rem;}
+  .topbar a{color:var(--ink-3);text-decoration:none;transition:color .15s;}
+  .topbar a:hover{color:var(--emerald);}
+  .topbar .brand{font-family:'Playfair Display',serif;font-weight:700;color:var(--emerald);margin-right:auto;font-size:1rem;}
+  .topbar .cur{color:var(--ink);font-weight:600;}
+
+  .hero{background:var(--emerald);text-align:center;padding:44px 24px 50px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 120%,rgba(184,137,42,.25) 0%,transparent 70%);pointer-events:none;}
+  .hero .bismillah{font-family:'Amiri',serif;color:var(--gold-lt);font-size:1.1rem;margin-bottom:14px;opacity:.92;}
+  .hero h1{font-family:'Playfair Display',serif;color:#fff;font-weight:700;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.18;margin-bottom:12px;}
+  .hero p{max-width:520px;margin:0 auto;color:rgba(255,255,255,.82);font-weight:300;font-size:1rem;}
+
+  .wrap{max-width:680px;margin:0 auto;padding:40px 20px 72px;}
+
+  .matlamat{border-radius:16px;background:linear-gradient(135deg,var(--emerald) 0%,var(--emerald-lt) 100%);padding:26px 24px 28px;color:#fff;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(31,92,62,.2);margin-bottom:14px;}
+  .matlamat::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 90% 25%,rgba(232,201,122,.2) 0%,transparent 70%);pointer-events:none;}
+  .matlamat .eyebrow{font-family:'Amiri',serif;color:var(--gold-lt);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;}
+  .matlamat h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.55rem;margin-bottom:6px;line-height:1.15;}
+  .matlamat>p{color:rgba(255,255,255,.85);font-weight:300;font-size:.94rem;margin-bottom:18px;}
+  .branches{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media(max-width:520px){.branches{grid-template-columns:1fr;}}
+  .branch{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:14px 15px;}
+  .branch h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--gold-lt);margin-bottom:5px;}
+  .branch p{font-size:.86rem;color:rgba(255,255,255,.88);font-weight:300;line-height:1.5;}
+
+  .leadin{text-align:center;color:var(--ink-3);font-size:.92rem;font-style:italic;margin:18px 0 26px;}
+
+  .ladder{position:relative;}
+  .step{position:relative;display:flex;gap:18px;align-items:flex-start;}
+  .rail{flex-shrink:0;display:flex;flex-direction:column;align-items:center;width:44px;}
+  .dot{width:44px;height:44px;border-radius:50%;background:var(--emerald);color:#fff;display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 3px 10px rgba(31,92,62,.25);}
+  .dot svg{width:20px;height:20px;fill:none;stroke:var(--gold-lt);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+  .dot.root{background:var(--gold);} .dot.root svg{stroke:#fff;}
+  .line{flex:1;width:2px;background:linear-gradient(var(--gold),var(--gold-lt));min-height:54px;margin:2px 0;}
+  .step:last-child .line{display:none;}
+
+  .node{flex:1;background:#fff;border:1px solid var(--rule);border-radius:14px;padding:17px 20px;margin-bottom:8px;box-shadow:0 2px 12px rgba(30,40,30,.05);}
+  .node.top{border-color:rgba(184,137,42,.4);box-shadow:0 4px 18px rgba(184,137,42,.12);}
+  .node.root{background:var(--warm);border-color:rgba(184,137,42,.4);}
+  .node .role{font-family:'Playfair Display',serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+  .node h2{font-family:'Playfair Display',serif;font-weight:600;font-size:1.3rem;color:var(--emerald-dk);line-height:1.2;margin-bottom:4px;}
+  .node .arab{font-family:'Amiri',serif;direction:rtl;font-size:1.8rem;color:var(--emerald);line-height:1.6;margin:2px 0 6px;}
+  .node .sub{font-size:.94rem;color:var(--ink-3);font-weight:300;}
+
+  .between{display:flex;gap:18px;align-items:stretch;}
+  .between .rail{flex-shrink:0;width:44px;display:flex;justify-content:center;}
+  .between .rail .line{width:2px;background:linear-gradient(var(--gold),var(--gold-lt));min-height:100%;}
+  .conn{flex:1;margin:-2px 0 6px;}
+  .conn .pill{display:inline-flex;align-items:center;gap:.45rem;background:var(--gold-soft);color:#7a5a18;border:1px solid rgba(184,137,42,.3);border-radius:999px;padding:.3rem .9rem;font-size:.86rem;font-weight:500;}
+  .conn .pill .lbl{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);}
+  .conn .detail{margin-top:7px;font-size:.87rem;color:var(--ink-3);line-height:1.55;}
+  .conn .detail b{color:var(--ink-2);font-weight:600;}
+
+  .footnote{margin-top:30px;text-align:center;font-size:.85rem;color:var(--ink-3);font-style:italic;line-height:1.6;}
+  .footnote a{color:var(--emerald);}
+
+  footer{border-top:1px solid var(--rule);padding:24px 20px;text-align:center;font-size:.82rem;color:var(--ink-3);}
+  footer a{color:var(--emerald);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <nav>
+    <span class="brand">3asbab.org</span>
+    <a href="index.html">Indeks</a>
+    <a href="peta.html">Peta Penuh</a>
+    <span class="cur">Peta Ringkas</span>
+  </nav>
+</div>
+
+<div class="hero">
+  <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+  <h1>Kehidupan yang Baik</h1>
+  <p>Setiap manusia mahukan kehidupan yang baik. Inilah jalannya — dan dari mana ia datang.</p>
+</div>
+
+<div class="wrap">
+
+  <div class="matlamat">
+    <div class="eyebrow">Matlamat Hidup Manusia</div>
+    <h2>Keredhaan Allah</h2>
+    <p>Matlamat hidup manusia ialah mendapatkan keredhaan Allah. Keredhaan Allah ada dua.</p>
+    <div class="branches">
+      <div class="branch">
+        <h3>Redha di Dunia</h3>
+        <p>Khusus untuk umat Rasulullah ﷺ — diberikan di dunia kepada Muhajirin, Ansar, dan mereka yang mengikut jejak langkah serta pengorbanan Muhajirin dan Ansar.</p>
+      </div>
+      <div class="branch">
+        <h3>Redha di Akhirat</h3>
+        <p>Keredhaan yang satu lagi — hanya diberikan kepada penduduk syurga.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="leadin">Baca dari atas ke bawah — apa yang anda mahu, dan dari mana ia lahir.</p>
+
+  <div class="ladder">
+
+    <div class="step">
+      <div class="rail">
+        <div class="dot"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-8.5A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6.5C19 16.65 12 21 12 21z"/></svg></div>
+        <div class="line"></div>
+      </div>
+      <div class="node top">
+        <div class="role">Apa yang anda mahu · Natijah</div>
+        <h2>Kehidupan yang Baik</h2>
+        <div class="sub">Kehidupan yang baik ialah natijah amal yang baik — iaitu kehidupan di syurga.</div>
+      </div>
+    </div>
+
+    <div class="between">
+      <div class="rail"><div class="line"></div></div>
+      <div class="conn">
+        <span class="pill"><span class="lbl">Antara</span>Nusrah Allah</span>
+        <div class="detail">Antara <b>amal Rasulullah ﷺ</b> dan <b>kehidupan yang baik</b> — adanya Nusrah (pertolongan) Allah.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="rail"><div class="dot"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div class="line"></div></div>
+      <div class="node">
+        <div class="role">Amal yang baik</div>
+        <h2>Amal Rasulullah ﷺ</h2>
+        <div class="sub">Amal yang baik ialah amal Rasulullah ﷺ. Amal yang baik lahir daripada hati yang baik.</div>
+      </div>
+    </div>
+
+    <div class="between">
+      <div class="rail"><div class="line"></div></div>
+      <div class="conn">
+        <span class="pill"><span class="lbl">Antara</span>Kefahaman Agama</span>
+        <div class="detail">Antara <b>hati yang mencintai Allah</b> dan <b>amal Rasulullah ﷺ</b> — adanya kefahaman agama.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="rail"><div class="dot"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-8.5A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6.5C19 16.65 12 21 12 21z"/></svg></div><div class="line"></div></div>
+      <div class="node">
+        <div class="role">Hati yang baik</div>
+        <h2>Hati yang Mencintai Allah</h2>
+        <div class="sub">Hati yang baik ialah hati yang mencintai Allah. Hati yang baik lahir daripada percakapan yang baik.</div>
+      </div>
+    </div>
+
+    <div class="between">
+      <div class="rail"><div class="line"></div></div>
+      <div class="conn">
+        <span class="pill"><span class="lbl">Antara</span>Mujahadah &amp; Sabar</span>
+        <div class="detail">
+          Antara <b>dakwah</b> dan <b>hati yang mencintai Allah</b> — itulah mujahadah dan sabar.<br>
+          Di dalam <b>mujahadah</b> ada pengorbanan harta dan diri. Di dalam <b>sabar</b> ada istiqamah.
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="rail"><div class="dot"><svg viewBox="0 0 24 24"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div><div class="line"></div></div>
+      <div class="node">
+        <div class="role">Percakapan yang paling baik</div>
+        <h2>Dakwah</h2>
+        <div class="sub">Seruan mengajak manusia kepada Allah — percakapan yang paling baik. Percakapan yang baik mestilah di dalam kerangka kalimah yang baik.</div>
+      </div>
+    </div>
+
+    <div class="between">
+      <div class="rail"><div class="line"></div></div>
+      <div class="conn">
+        <span class="pill"><span class="lbl">Antara</span>Al-Quran</span>
+        <div class="detail">Antara kalimah <b>La ilaha illallah</b> dan <b>dakwah</b> — itulah Al-Quran.</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="rail"><div class="dot root"><svg viewBox="0 0 24 24"><path d="M12 2v20M5 9l7-7 7 7"/></svg></div></div>
+      <div class="node root">
+        <div class="role">Akar · Asas segala kebaikan</div>
+        <div class="arab">لَا إِلَٰهَ إِلَّا اللَّه</div>
+        <div class="sub">Kalimah yang baik ialah La ilaha illallah. Setiap percakapan yang baik mesti berada dalam kerangka kalimah ini.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footnote">
+    Inilah jalan ringkas Kerangka 3 Asbab. Untuk butiran penuh setiap simpul dan dalilnya, lihat <a href="peta.html">Peta Penuh K3A</a>.
+  </p>
+
+</div>
+
+<footer>
+  <p>3asbab.org &nbsp;·&nbsp; <a href="index.html">Indeks</a> &nbsp;·&nbsp; <a href="peta.html">Peta Penuh</a></p>
+</footer>
+
+</body>
+</html>
