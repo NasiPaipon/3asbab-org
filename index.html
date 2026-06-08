@@ -262,7 +262,7 @@
       line-height: 1.5;
     }
 
-    /* ── FEATURED PETA CARD (atas, sebelum senarai bab) ── */
+    /* ── FEATURED PETA CARDS (atas, sebelum senarai bab) ── */
     .peta-feature {
       display: flex;
       align-items: center;
@@ -325,6 +325,27 @@
       transition: transform .15s;
     }
     .peta-feature:hover .pf-arrow { transform: translateX(4px); }
+
+    /* secondary (Peta Penuh) — lighter, outline */
+    .peta-feature.secondary {
+      margin-top: 14px;
+      background: #fff;
+      color: var(--ink);
+      border: 1px solid var(--rule);
+      box-shadow: 0 2px 12px rgba(30,40,30,.05);
+    }
+    .peta-feature.secondary::before { display: none; }
+    .peta-feature.secondary:hover { box-shadow: 0 8px 26px rgba(30,60,40,.1); }
+    .peta-feature.secondary .pf-icon {
+      background: var(--warm);
+      border: 1px solid var(--rule);
+    }
+    .peta-feature.secondary .pf-icon svg { stroke: var(--emerald); }
+    .peta-feature.secondary .pf-eyebrow { color: var(--gold); }
+    .peta-feature.secondary h3 { color: var(--emerald); font-size: 1.2rem; }
+    .peta-feature.secondary p { color: var(--ink-3); }
+    .peta-feature.secondary .pf-arrow { color: var(--gold); }
+
     @media (max-width: 520px) {
       .peta-feature { flex-direction: column; text-align: center; gap: 14px; }
       .peta-feature .pf-arrow { display: none; }
@@ -390,14 +411,28 @@
       </p>
     </div>
 
-    <a href="peta.html" class="peta-feature">
+    <!-- Peta Ringkas — kad utama -->
+    <a href="peta-ringkas.html" class="peta-feature">
+      <div class="pf-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-8.5A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6.5C19 16.65 12 21 12 21z"/></svg>
+      </div>
+      <div class="pf-text">
+        <div class="pf-eyebrow">Mulakan di Sini</div>
+        <h3>Peta Ringkas — Jalan ke Kehidupan yang Baik</h3>
+        <p>Satu rantaian mudah dibaca: dari kehidupan yang baik yang anda mahukan, turun ke akarnya — kalimah La ilaha illallah.</p>
+      </div>
+      <span class="pf-arrow">→</span>
+    </a>
+
+    <!-- Peta Penuh — kad kedua -->
+    <a href="peta.html" class="peta-feature secondary">
       <div class="pf-icon">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><line x1="9.5" y1="10.5" x2="6.3" y2="7.3"/><line x1="14.5" y1="10.5" x2="17.7" y2="7.3"/><line x1="9.5" y1="13.5" x2="6.3" y2="16.7"/><line x1="14.5" y1="13.5" x2="17.7" y2="16.7"/></svg>
       </div>
       <div class="pf-text">
         <div class="pf-eyebrow">Peta Interaktif</div>
-        <h3>Peta K3A</h3>
-        <p>Lihat keseluruhan kerangka dalam satu pandangan — 71 simpul &amp; hubungannya. Ketik mana-mana simpul untuk membaca takrif &amp; dalilnya.</p>
+        <h3>Peta Penuh K3A</h3>
+        <p>Keseluruhan kerangka — 71 simpul &amp; hubungannya. Ketik mana-mana simpul untuk membaca takrif &amp; dalilnya.</p>
       </div>
       <span class="pf-arrow">→</span>
     </a>
@@ -643,7 +678,7 @@
   </div><!-- /wrap -->
 
   <footer>
-    <p>3asbab.org &nbsp;·&nbsp; Setiap bab tersedia dalam format PDF untuk pembacaan mendalam &nbsp;·&nbsp; <a href="peta.html">Peta K3A</a> &nbsp;·&nbsp; <a href="glossary.html">Glossary</a></p>
+    <p>3asbab.org &nbsp;·&nbsp; <a href="peta-ringkas.html">Peta Ringkas</a> &nbsp;·&nbsp; <a href="peta.html">Peta Penuh</a> &nbsp;·&nbsp; <a href="glossary.html">Glossary</a></p>
   </footer>
 
 </body>
