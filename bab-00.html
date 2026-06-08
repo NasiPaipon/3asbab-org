@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ms">
 <head>
 <meta charset="UTF-8">
@@ -11,334 +10,332 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-:root {
-–max: 880px;
-–ink:        #1a2420;
-–ink-soft:   #41504a;
-–ink-faint:  #6f7d76;
-–paper:      #fbfaf5;
-–paper-warm: #f4f1e8;
-–line:       #e3ddcf;
-–emerald:    #0f5c3c;
-–emerald-dk: #0a3d28;
-–emerald-lt: #e7f0ea;
-–gold:       #b1842f;
-–gold-soft:  #f0e4c6;
-–rose:       #9a3b2e;
-–shadow:     0 2px 14px rgba(15,60,40,.06);
-–shadow-lg:  0 18px 50px rgba(15,60,40,.13);
-}
+  :root {
+    --max: 880px;
+    --ink:        #1a2420;
+    --ink-soft:   #41504a;
+    --ink-faint:  #6f7d76;
+    --paper:      #fbfaf5;
+    --paper-warm: #f4f1e8;
+    --line:       #e3ddcf;
+    --emerald:    #0f5c3c;
+    --emerald-dk: #0a3d28;
+    --emerald-lt: #e7f0ea;
+    --gold:       #b1842f;
+    --gold-soft:  #f0e4c6;
+    --rose:       #9a3b2e;
+    --shadow:     0 2px 14px rgba(15,60,40,.06);
+    --shadow-lg:  0 18px 50px rgba(15,60,40,.13);
+  }
 
-html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; }
 
-body {
-font-family: ‘Spectral’, Georgia, serif;
-background: var(–paper);
-color: var(–ink);
-line-height: 1.78;
-font-size: 1.06rem;
-font-weight: 400;
--webkit-font-smoothing: antialiased;
-text-rendering: optimizeLegibility;
-}
+  body {
+    font-family: 'Spectral', Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.78;
+    font-size: 1.06rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
 
-/* subtle paper grain */
-body::before {
-content: ‘’;
-position: fixed; inset: 0;
-pointer-events: none;
-z-index: 0;
-opacity: .5;
-background-image: radial-gradient(circle at 1px 1px, rgba(120,100,60,.045) 1px, transparent 0);
-background-size: 22px 22px;
-}
+  /* subtle paper grain */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: .5;
+    background-image: radial-gradient(circle at 1px 1px, rgba(120,100,60,.045) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
 
-.wrap { max-width: var(–max); margin: 0 auto; padding: 0 clamp(1.3rem, 5vw, 2.2rem); position: relative; z-index: 1; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.3rem, 5vw, 2.2rem); position: relative; z-index: 1; }
 
-/* ── TOPBAR ── */
-.topbar {
-border-bottom: 1px solid var(–line);
-position: sticky; top: 0; z-index: 30;
-background: rgba(251,250,245,.9);
-backdrop-filter: blur(10px);
-}
-.topbar nav { display: flex; gap: 1.4rem; align-items: center; padding: .85rem 0; font-size: .85rem; }
-.topbar a { text-decoration: none; color: var(–ink-soft); transition: color .15s; letter-spacing: .01em; }
-.topbar a:hover { color: var(–emerald); }
-.topbar .brand {
-font-family: ‘Fraunces’, serif; font-weight: 700; font-size: 1rem;
-color: var(–emerald); margin-right: auto; letter-spacing: -.01em;
-}
-.topbar .cur { color: var(–ink); font-weight: 600; }
+  /* ── TOPBAR ── */
+  .topbar {
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 30;
+    background: rgba(251,250,245,.9);
+    backdrop-filter: blur(10px);
+  }
+  .topbar nav { display: flex; gap: 1.4rem; align-items: center; padding: .85rem 0; font-size: .85rem; }
+  .topbar a { text-decoration: none; color: var(--ink-soft); transition: color .15s; letter-spacing: .01em; }
+  .topbar a:hover { color: var(--emerald); }
+  .topbar .brand {
+    font-family: 'Fraunces', serif; font-weight: 700; font-size: 1rem;
+    color: var(--emerald); margin-right: auto; letter-spacing: -.01em;
+  }
+  .topbar .cur { color: var(--ink); font-weight: 600; }
 
-/* ── HERO ── */
-.hero {
-position: relative;
-background:
-linear-gradient(155deg, var(–emerald) 0%, var(–emerald-dk) 100%);
-color: #fff;
-overflow: hidden;
-padding: clamp(3rem, 9vw, 5.5rem) 0 clamp(5rem, 11vw, 7rem);
-}
-.hero::before {
-content: ‘’;
-position: absolute; inset: 0;
-background:
-radial-gradient(ellipse 70% 50% at 78% 6%, rgba(177,132,47,.34) 0%, transparent 60%),
-radial-gradient(ellipse 60% 55% at 10% 100%, rgba(255,255,255,.07) 0%, transparent 55%);
-pointer-events: none;
-}
-/* faint waves echoing the Red Sea */
-.hero::after {
-content: ‘’;
-position: absolute; left: 0; right: 0; bottom: 0; height: 130px;
-background-image:
-radial-gradient(120% 100% at 50% 100%, transparent 60%, rgba(255,255,255,.04) 61%, transparent 62%),
-radial-gradient(120% 100% at 30% 100%, transparent 65%, rgba(255,255,255,.05) 66%, transparent 67%);
-pointer-events: none;
-}
-.hero .wrap { position: relative; z-index: 2; }
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    background:
+      linear-gradient(155deg, var(--emerald) 0%, var(--emerald-dk) 100%);
+    color: #fff;
+    overflow: hidden;
+    padding: clamp(3rem, 9vw, 5.5rem) 0 clamp(5rem, 11vw, 7rem);
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 78% 6%, rgba(177,132,47,.34) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 55% at 10% 100%, rgba(255,255,255,.07) 0%, transparent 55%);
+    pointer-events: none;
+  }
+  /* faint waves echoing the Red Sea */
+  .hero::after {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0; height: 130px;
+    background-image:
+      radial-gradient(120% 100% at 50% 100%, transparent 60%, rgba(255,255,255,.04) 61%, transparent 62%),
+      radial-gradient(120% 100% at 30% 100%, transparent 65%, rgba(255,255,255,.05) 66%, transparent 67%);
+    pointer-events: none;
+  }
+  .hero .wrap { position: relative; z-index: 2; }
 
-.hero-bismillah {
-font-family: ‘Amiri’, serif;
-direction: rtl;
-font-size: clamp(1.5rem, 4.5vw, 2.1rem);
-color: var(–gold-soft);
-opacity: .92;
-margin-bottom: 1.8rem;
-font-weight: 400;
-}
-.hero-kicker {
-display: inline-block;
-font-family: ‘Spectral’, serif;
-font-size: .76rem;
-letter-spacing: .26em;
-text-transform: uppercase;
-color: var(–gold-soft);
-border: 1px solid rgba(240,228,198,.35);
-padding: .35rem 1rem;
-border-radius: 999px;
-margin-bottom: 1.6rem;
-}
-.hero h1 {
-font-family: ‘Fraunces’, serif;
-font-weight: 600;
-font-size: clamp(2.2rem, 6.5vw, 3.7rem);
-line-height: 1.1;
-letter-spacing: -.015em;
-margin-bottom: 1.1rem;
-max-width: 16ch;
-}
-.hero h1 em { font-style: italic; color: var(–gold-soft); font-weight: 400; }
-.hero-sub {
-font-size: clamp(1rem, 2.4vw, 1.18rem);
-color: rgba(255,255,255,.8);
-font-weight: 300;
-max-width: 46ch;
-font-style: italic;
-}
-.hero-tags { margin-top: 2rem; display: flex; gap: .6rem; flex-wrap: wrap; }
-.hero-tags span {
-font-size: .76rem; letter-spacing: .05em;
-background: rgba(255,255,255,.1);
-border: 1px solid rgba(255,255,255,.16);
-color: rgba(255,255,255,.88);
-padding: .3rem .85rem; border-radius: 999px;
-}
+  .hero-bismillah {
+    font-family: 'Amiri', serif;
+    direction: rtl;
+    font-size: clamp(1.5rem, 4.5vw, 2.1rem);
+    color: var(--gold-soft);
+    opacity: .92;
+    margin-bottom: 1.8rem;
+    font-weight: 400;
+  }
+  .hero-kicker {
+    display: inline-block;
+    font-family: 'Spectral', serif;
+    font-size: .76rem;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    border: 1px solid rgba(240,228,198,.35);
+    padding: .35rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 1.6rem;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(2.2rem, 6.5vw, 3.7rem);
+    line-height: 1.1;
+    letter-spacing: -.015em;
+    margin-bottom: 1.1rem;
+    max-width: 16ch;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-soft); font-weight: 400; }
+  .hero-sub {
+    font-size: clamp(1rem, 2.4vw, 1.18rem);
+    color: rgba(255,255,255,.8);
+    font-weight: 300;
+    max-width: 46ch;
+    font-style: italic;
+  }
+  .hero-tags { margin-top: 2rem; display: flex; gap: .6rem; flex-wrap: wrap; }
+  .hero-tags span {
+    font-size: .76rem; letter-spacing: .05em;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.16);
+    color: rgba(255,255,255,.88);
+    padding: .3rem .85rem; border-radius: 999px;
+  }
 
-/* ── JUMP NAV ── */
-.jump {
-border-bottom: 1px solid var(–line);
-position: sticky; top: 49px; z-index: 25;
-background: rgba(244,241,232,.96);
-backdrop-filter: blur(8px);
-}
-.jump-inner { display: flex; flex-wrap: wrap; gap: .45rem; padding: .7rem 0; align-items: center; }
-.jump-label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(–ink-faint); margin-right: .4rem; }
-.jump a {
-font-size: .82rem; font-weight: 500;
-padding: .22rem .72rem; border-radius: 999px;
-background: #fff; border: 1px solid var(–line);
-text-decoration: none; color: var(–ink-soft);
-transition: .14s ease;
-}
-.jump a:hover { border-color: var(–emerald); background: var(–emerald-lt); color: var(–emerald-dk); }
+  /* ── JUMP NAV ── */
+  .jump {
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 49px; z-index: 25;
+    background: rgba(244,241,232,.96);
+    backdrop-filter: blur(8px);
+  }
+  .jump-inner { display: flex; flex-wrap: wrap; gap: .45rem; padding: .7rem 0; align-items: center; }
+  .jump-label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); margin-right: .4rem; }
+  .jump a {
+    font-size: .82rem; font-weight: 500;
+    padding: .22rem .72rem; border-radius: 999px;
+    background: #fff; border: 1px solid var(--line);
+    text-decoration: none; color: var(--ink-soft);
+    transition: .14s ease;
+  }
+  .jump a:hover { border-color: var(--emerald); background: var(--emerald-lt); color: var(--emerald-dk); }
 
-/* ── PDF TOOLBAR ── */
-.pdf-toolbar { display: flex; justify-content: flex-end; padding: 1.4rem 0 0; }
-.btn-pdf {
-appearance: none; cursor: pointer; font: inherit;
-font-size: .9rem; font-weight: 600;
-color: var(–emerald-dk); background: #fff;
-border: 1px solid var(–line); border-radius: 999px;
-padding: .6rem 1.2rem; transition: .15s ease; box-shadow: var(–shadow);
-}
-.btn-pdf:hover { border-color: var(–emerald); background: var(–emerald-lt); transform: translateY(-1px); }
-.btn-pdf:active { transform: translateY(0); }
+  /* ── PDF TOOLBAR ── */
+  .pdf-toolbar { display: flex; justify-content: flex-end; padding: 1.4rem 0 0; }
+  .btn-pdf {
+    appearance: none; cursor: pointer; font: inherit;
+    font-size: .9rem; font-weight: 600;
+    color: var(--emerald-dk); background: #fff;
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: .6rem 1.2rem; transition: .15s ease; box-shadow: var(--shadow);
+  }
+  .btn-pdf:hover { border-color: var(--emerald); background: var(--emerald-lt); transform: translateY(-1px); }
+  .btn-pdf:active { transform: translateY(0); }
 
-/* ── MAIN ── */
-main { padding: 2.4rem 0 4rem; }
+  /* ── MAIN ── */
+  main { padding: 2.4rem 0 4rem; }
 
-.section-card {
-background: #fff;
-border: 1px solid var(–line);
-border-radius: 18px;
-padding: clamp(1.5rem, 4vw, 2.4rem);
-margin: 1.6rem 0;
-box-shadow: var(–shadow);
-position: relative;
-}
+  .section-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: clamp(1.5rem, 4vw, 2.4rem);
+    margin: 1.6rem 0;
+    box-shadow: var(--shadow);
+    position: relative;
+  }
 
-/* opening card — distinct treatment */
-.opening {
-background: linear-gradient(160deg, var(–paper-warm), #fff);
-border: 1px solid var(–gold-soft);
-text-align: center;
-padding: clamp(2rem, 5vw, 3rem);
-}
-.opening .seal {
-font-family: ‘Fraunces’, serif;
-font-size: .74rem; letter-spacing: .28em; text-transform: uppercase;
-color: var(–gold); margin-bottom: 1rem;
-}
-.opening h2.opening-title {
-font-family: ‘Fraunces’, serif; font-weight: 600; border: 0; padding: 0;
-font-size: clamp(1.4rem, 4vw, 2rem); line-height: 1.2; margin-bottom: .7rem;
-color: var(–emerald-dk);
-}
-.opening p.opening-sub { color: var(–ink-soft); font-style: italic; font-size: 1.05rem; }
+  /* opening card — distinct treatment */
+  .opening {
+    background: linear-gradient(160deg, var(--paper-warm), #fff);
+    border: 1px solid var(--gold-soft);
+    text-align: center;
+    padding: clamp(2rem, 5vw, 3rem);
+  }
+  .opening .seal {
+    font-family: 'Fraunces', serif;
+    font-size: .74rem; letter-spacing: .28em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+  }
+  .opening h2.opening-title {
+    font-family: 'Fraunces', serif; font-weight: 600; border: 0; padding: 0;
+    font-size: clamp(1.4rem, 4vw, 2rem); line-height: 1.2; margin-bottom: .7rem;
+    color: var(--emerald-dk);
+  }
+  .opening p.opening-sub { color: var(--ink-soft); font-style: italic; font-size: 1.05rem; }
 
-.sec-num {
-display: inline-block;
-font-family: ‘Fraunces’, serif; font-weight: 600;
-font-size: .8rem; letter-spacing: .06em;
-color: var(–gold);
-margin-bottom: .5rem;
-}
+  .sec-num {
+    display: inline-block;
+    font-family: 'Fraunces', serif; font-weight: 600;
+    font-size: .8rem; letter-spacing: .06em;
+    color: var(--gold);
+    margin-bottom: .5rem;
+  }
 
-h2 {
-font-family: ‘Fraunces’, serif;
-font-weight: 600;
-font-size: clamp(1.4rem, 3.6vw, 1.8rem);
-line-height: 1.25;
-letter-spacing: -.01em;
-color: var(–emerald-dk);
-margin-bottom: 1rem;
-padding-bottom: .7rem;
-border-bottom: 2px solid var(–emerald-lt);
-}
-h3 {
-font-family: ‘Fraunces’, serif;
-font-weight: 600; font-size: 1.18rem;
-color: var(–ink); margin: 1.5rem 0 .5rem;
-}
-p { margin: .7rem 0; }
-ul, ol { margin: .6rem 0 1rem 1.3rem; }
-li { margin: .4rem 0; padding-left: .2rem; }
-li::marker { color: var(–emerald); }
-strong { color: var(–ink); font-weight: 600; }
-em { font-style: italic; }
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(1.4rem, 3.6vw, 1.8rem);
+    line-height: 1.25;
+    letter-spacing: -.01em;
+    color: var(--emerald-dk);
+    margin-bottom: 1rem;
+    padding-bottom: .7rem;
+    border-bottom: 2px solid var(--emerald-lt);
+  }
+  h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600; font-size: 1.18rem;
+    color: var(--ink); margin: 1.5rem 0 .5rem;
+  }
+  p { margin: .7rem 0; }
+  ul, ol { margin: .6rem 0 1rem 1.3rem; }
+  li { margin: .4rem 0; padding-left: .2rem; }
+  li::marker { color: var(--emerald); }
+  strong { color: var(--ink); font-weight: 600; }
+  em { font-style: italic; }
 
-/* arabic ayah block */
-.arabic {
-font-family: ‘Amiri’, serif;
-direction: rtl; text-align: center;
-font-size: clamp(1.7rem, 5vw, 2.3rem);
-line-height: 2.1;
-color: var(–emerald-dk);
-margin: 1.4rem 0 .6rem;
-font-weight: 400;
-}
-.translation {
-background: var(–emerald-lt);
-border-left: 3px solid var(–emerald);
-border-radius: 0 12px 12px 0;
-padding: .85rem 1.2rem;
-margin: .6rem 0 1.2rem;
-font-size: .98rem;
-color: var(–ink-soft);
-}
-.translation .ref { display: block; margin-top: .35rem; font-size: .82rem; color: var(–emerald); font-weight: 600; font-style: normal; }
+  /* arabic ayah block */
+  .arabic {
+    font-family: 'Amiri', serif;
+    direction: rtl; text-align: center;
+    font-size: clamp(1.7rem, 5vw, 2.3rem);
+    line-height: 2.1;
+    color: var(--emerald-dk);
+    margin: 1.4rem 0 .6rem;
+    font-weight: 400;
+  }
+  .translation {
+    background: var(--emerald-lt);
+    border-left: 3px solid var(--emerald);
+    border-radius: 0 12px 12px 0;
+    padding: .85rem 1.2rem;
+    margin: .6rem 0 1.2rem;
+    font-size: .98rem;
+    color: var(--ink-soft);
+  }
+  .translation .ref { display: block; margin-top: .35rem; font-size: .82rem; color: var(--emerald); font-weight: 600; font-style: normal; }
 
-blockquote {
-background: linear-gradient(135deg, var(–emerald-lt), transparent);
-border: 1px solid var(–emerald-lt);
-border-left: 4px solid var(–emerald);
-border-radius: 0 14px 14px 0;
-padding: 1rem 1.4rem;
-margin: 1.2rem 0;
-}
-blockquote p { margin: .35rem 0; }
+  blockquote {
+    background: linear-gradient(135deg, var(--emerald-lt), transparent);
+    border: 1px solid var(--emerald-lt);
+    border-left: 4px solid var(--emerald);
+    border-radius: 0 14px 14px 0;
+    padding: 1rem 1.4rem;
+    margin: 1.2rem 0;
+  }
+  blockquote p { margin: .35rem 0; }
 
-.insight-box {
-background: var(–paper-warm);
-border: 1px dashed var(–gold);
-border-radius: 14px;
-padding: 1.1rem 1.4rem;
-margin: 1.2rem 0;
-}
-.insight-box > p:first-child { color: var(–emerald-dk); }
+  .insight-box {
+    background: var(--paper-warm);
+    border: 1px dashed var(--gold);
+    border-radius: 14px;
+    padding: 1.1rem 1.4rem;
+    margin: 1.2rem 0;
+  }
+  .insight-box > p:first-child { color: var(--emerald-dk); }
 
-hr { border: 0; height: 1px; background: var(–line); margin: 1.8rem 0; }
+  hr { border: 0; height: 1px; background: var(--line); margin: 1.8rem 0; }
 
-.toplink {
-display: inline-block; margin-top: 1.2rem;
-font-size: .78rem; color: var(–ink-faint);
-text-decoration: none; letter-spacing: .04em;
-transition: color .15s;
-}
-.toplink:hover { color: var(–emerald); }
+  .toplink {
+    display: inline-block; margin-top: 1.2rem;
+    font-size: .78rem; color: var(--ink-faint);
+    text-decoration: none; letter-spacing: .04em;
+    transition: color .15s;
+  }
+  .toplink:hover { color: var(--emerald); }
 
-/* footer */
-footer {
-border-top: 1px solid var(–line);
-background: var(–paper-warm);
-padding: 2.2rem 0;
-text-align: center;
-font-size: .85rem;
-color: var(–ink-faint);
-}
-footer .foot-nav { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
-footer a { color: var(–emerald); text-decoration: none; font-weight: 500; }
-footer a:hover { text-decoration: underline; }
+  /* footer */
+  footer {
+    border-top: 1px solid var(--line);
+    background: var(--paper-warm);
+    padding: 2.2rem 0;
+    text-align: center;
+    font-size: .85rem;
+    color: var(--ink-faint);
+  }
+  footer .foot-nav { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
+  footer a { color: var(--emerald); text-decoration: none; font-weight: 500; }
+  footer a:hover { text-decoration: underline; }
 
-/* ── load animation ── */
-@media (prefers-reduced-motion: no-preference) {
-.reveal { opacity: 0; transform: translateY(16px); animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
-.hero-bismillah { animation: rise .8s ease .05s both; }
-.hero-kicker   { animation: rise .8s ease .15s both; }
-.hero h1       { animation: rise .8s ease .25s both; }
-.hero-sub      { animation: rise .8s ease .38s both; }
-.hero-tags     { animation: rise .8s ease .5s both; }
-@keyframes rise { to { opacity: 1; transform: translateY(0); } }
-}
+  /* ── load animation ── */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity: 0; transform: translateY(16px); animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    .hero-bismillah { animation: rise .8s ease .05s both; }
+    .hero-kicker   { animation: rise .8s ease .15s both; }
+    .hero h1       { animation: rise .8s ease .25s both; }
+    .hero-sub      { animation: rise .8s ease .38s both; }
+    .hero-tags     { animation: rise .8s ease .5s both; }
+    @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+  }
 
-/* ── PDF EXPORT ── */
-.pdf-only { display: none; }
-@media print {
-body { background: #fff; font-size: 11pt; }
-body::before { display: none; }
-.topbar, .jump, .pdf-toolbar, .toplink, .hero-tags { display: none !important; }
-.pdf-only { display: block !important; }
-.hero { background: #fff !important; color: var(–ink) !important; padding: 0 0 1rem; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-.hero::before, .hero::after { display: none; }
-.hero-bismillah { color: var(–emerald) !important; }
-.hero-kicker { color: var(–gold) !important; border-color: var(–gold) !important; }
-.hero h1 { color: var(–emerald-dk) !important; }
-.hero h1 em { color: var(–gold) !important; }
-.hero-sub { color: var(–ink-soft) !important; }
-.section-card { box-shadow: none; break-inside: avoid; page-break-inside: avoid; border-color: var(–line); }
-.arabic, .translation, blockquote, .insight-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-h2, h3 { break-after: avoid; page-break-after: avoid; }
-.pdf-break { break-before: page; page-break-before: always; }
-}
+  /* ── PDF EXPORT ── */
+  .pdf-only { display: none; }
+  @media print {
+    body { background: #fff; font-size: 11pt; }
+    body::before { display: none; }
+    .topbar, .jump, .pdf-toolbar, .toplink, .hero-tags { display: none !important; }
+    .pdf-only { display: block !important; }
+    .hero { background: #fff !important; color: var(--ink) !important; padding: 0 0 1rem; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .hero::before, .hero::after { display: none; }
+    .hero-bismillah { color: var(--emerald) !important; }
+    .hero-kicker { color: var(--gold) !important; border-color: var(--gold) !important; }
+    .hero h1 { color: var(--emerald-dk) !important; }
+    .hero h1 em { color: var(--gold) !important; }
+    .hero-sub { color: var(--ink-soft) !important; }
+    .section-card { box-shadow: none; break-inside: avoid; page-break-inside: avoid; border-color: var(--line); }
+    .arabic, .translation, blockquote, .insight-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    h2, h3 { break-after: avoid; page-break-after: avoid; }
+    .pdf-break { break-before: page; page-break-before: always; }
+  }
 </style>
-
 </head>
 <body>
 
   <!-- TOPBAR -->
-
   <div class="topbar">
     <div class="wrap">
       <nav>
@@ -352,7 +349,6 @@ h2, h3 { break-after: avoid; page-break-after: avoid; }
   </div>
 
   <!-- HERO -->
-
   <header class="hero" id="top">
     <div class="wrap">
       <div class="hero-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
@@ -368,7 +364,6 @@ h2, h3 { break-after: avoid; page-break-after: avoid; }
   </header>
 
   <!-- JUMP NAV -->
-
   <div class="jump">
     <div class="wrap">
       <div class="jump-inner">
@@ -394,323 +389,320 @@ h2, h3 { break-after: avoid; page-break-after: avoid; }
 
   <main class="wrap">
 
-```
-<!-- OPENING -->
-<section class="section-card opening reveal">
-  <div class="seal">Kerangka 3 Asbab</div>
-  <h2 class="opening-title">Mukadimah: Laut Merah &amp; Reset Tauhidi</h2>
-  <p class="opening-sub">Tahkīm al-Usūl — memusnahkan sandaran lama sebelum bina iman.</p>
-</section>
-
-<!-- 0.1 -->
-<section class="section-card reveal" id="s1">
-  <span class="sec-num">0.1</span>
-  <h2>Laut Merah: Pintu Memahami Tauhid</h2>
-
-  <p>Ada detik apabila Allah sengaja menutup semua jalan supaya manusia berhenti melihat dengan neraca Asbab Fitrah dan Asbab Zulumat, lalu kembali melihat dengan neraca Tauhid.</p>
-
-  <p>Bayangkan Bani Israel:</p>
-  <ul>
-    <li>di hadapan: Laut Merah — halangan zahir yang pada kebiasaan Asbab Fitrah "mustahil jadi jalan",</li>
-    <li>di belakang: Firaun — sistem kuasa, tentera, propaganda yang pada kebiasaan Asbab Zulumat "nampak mematikan",</li>
-    <li>di tengah: hati manusia — tempat sandaran sebenar sedang diuji.</li>
-  </ul>
-
-  <p>Ketika itu, keluar suara manusia yang menjadikan sebab sebagai penentu:</p>
-  <ul>
-    <li>"Air tak boleh jadi jalan." (Asbab Fitrah dijadikan hakim)</li>
-    <li>"Kuasa manusia menentukan nasib." (Asbab Zulumat dijadikan penentu)</li>
-  </ul>
-
-  <p>Lalu Allah rakamkan jawapan Nabi Musa عليه السلام — jawapan Tauhidi yang memutuskan pergantungan hati kepada makhluk:</p>
-
-  <div class="arabic">قَالَ كَلَّا ۖ إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ</div>
-  <div class="translation">
-    "Tidak sekali-kali! Sesungguhnya bersama aku Tuhanku; Dia akan memberi petunjuk kepadaku."
-    <span class="ref">asy-Syu'arā' 26:62</span>
-  </div>
-
-  <div class="insight-box">
-    <p><strong>Kerangka Tauhidi ayat ini:</strong></p>
-    <ul>
-      <li><strong>كَلَّا (Kallā)</strong> — Nafy terhadap kuasa Asbab Fitrah &amp; Asbab Zulumat</li>
-      <li><strong>إِنَّ مَعِيَ رَبِّي (Inna ma'iya Rabbī)</strong> — Isbat: hanya Allah memberi kesan</li>
-      <li><strong>سَيَهْدِينِ (Sayahdīn)</strong> — yakin pada petunjuk Allah sebelum terlihat jalan</li>
-    </ul>
-  </div>
-
-  <p>Tongkat diangkat bukan kerana tongkat "berkuasa", tetapi kerana Allah memerintahkan amal. Dan di sini disiplin Kerangka 3 Asbab mesti tegas:</p>
-
-  <blockquote>
-    <p>Kesan bukan lahir daripada teknik atau objek.</p>
-    <p>Kesan berlaku kerana Allah meletakkan janji-Nya pada iman dan amal soleh yang ditetapkan syariat.</p>
-  </blockquote>
-
-  <p>Maka pembelahan laut bukan kemenangan logik, bukan kemenangan strategi — tetapi nusrah kerana ketaatan kepada Asbab Mutlak Asli: perintah Allah melalui Nabi.</p>
-
-  <a class="toplink" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- 0.2 -->
-<section class="section-card reveal" id="s2">
-  <span class="sec-num">0.2</span>
-  <h2>Simbol 3 Asbab dalam Peristiwa Laut Merah</h2>
-
-  <p>Peristiwa Laut Merah ialah "kelas pertama" untuk mengunci kedudukan tiga jenis Asbab yang wujud serentak dalam hidup manusia:</p>
-
-  <h3>1) Asbab Fitrah — Laut di hadapan</h3>
-  <p>Air pada kebiasaan Asbab Fitrah menenggelamkan. Ujiannya bukan pada air — ujiannya pada hati: adakah hati melihat air sebagai "pemilik kuasa", atau sekadar makhluk yang ditadbir Allah?</p>
-
-  <h3>2) Asbab Zulumat — Firaun di belakang</h3>
-  <p>Firaun melambangkan sistem yang lahir daripada persetujuan manusia: kuasa, undang-undang zalim, propaganda, ketakutan sosial. Asbab Zulumat menjadi "tuhan kecil" bukan kerana ia haq, tetapi kerana manusia memberi keyakinan kepadanya.</p>
-
-  <h3>3) Asbab Mutlak Asli — Perintah Allah pada Nabi</h3>
-  <p>Pukulan tongkat bukan taktik perang. Ia ketaatan kepada wahyu. Di sinilah pintu nusrah terbuka — kerana Allah meletakkan janji-Nya pada amal yang Dia tetapkan.</p>
-
-  <div class="insight-box">
-    <p><strong>Ringkasan posisi:</strong></p>
-    <ul>
-      <li>Di hadapan: Laut → Asbab Fitrah</li>
-      <li>Di belakang: Firaun → Asbab Zulumat</li>
-      <li>Di atas hati Nabi: Perintah Allah → Asbab Mutlak Asli</li>
-    </ul>
-  </div>
-
-  <p>Tujuan Allah bukan sekadar menyelamatkan tubuh — tetapi membetulkan neraca keyakinan: siapa yang berkuasa memberi kesan? Bukan laut, bukan Firaun — Allah.</p>
-
-  <a class="toplink" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- 0.3 -->
-<section class="section-card reveal" id="s3">
-  <span class="sec-num">0.3</span>
-  <h2>Musa عليه السلام vs Firaun: Pertembungan Tiga Asbab</h2>
-
-  <p>Reaksi spontan Bani Israel: "Kita akan ditangkap!" Itu bukan sekadar emosi — itu pendedahan arah sandaran:</p>
-  <ul>
-    <li>Asbab Fitrah dijadikan penentu ("laut mustahil")</li>
-    <li>Asbab Zulumat dijadikan penentu ("Firaun pasti menang")</li>
-    <li>Bila sebab jadi pusat → iman jadi rapuh</li>
-  </ul>
-
-  <p>Dan inilah peta umat hari ini:</p>
-  <ul>
-    <li>tiada modal → putus asa (sebab dihukum sebagai "tuhan")</li>
-    <li>ada modal → ujub (sebab dihormati sebagai "penentu")</li>
-    <li>doa lambat → sangsi (Allah diukur dengan natijah segera)</li>
-    <li>strategi hebat → bersandar (sebab ditunduk kepada hati)</li>
-  </ul>
-
-  <p>Masalah bukan kurang ilmu. Masalahnya: Asbab Fitrah dan Asbab Zulumat naik ke tempat yang hanya layak untuk Allah dalam hati.</p>
-
-  <a class="toplink" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- 0.4 -->
-<section class="section-card reveal" id="s4">
-  <span class="sec-num">0.4</span>
-  <h2>Amal Nabi: Pukulan Tongkat sebagai Amal Tauhidi</h2>
-
-  <p>Ucapan Nabi Musa عليه السلام ialah "manual ringkas" untuk menegakkan tertib Tauhidi:</p>
-  <ul>
-    <li>Nafy: menafikan kuasa Asbab Fitrah &amp; Asbab Zulumat</li>
-    <li>Isbat: menetapkan hanya Allah memberi kesan</li>
-    <li>Ittiba': melangkah dengan amal yang diperintah wahyu</li>
-  </ul>
-
-  <p>Disiplin penting Kerangka 3 Asbab: bukan "yakin sebelum nampak" semata-mata — tetapi amal mesti wujud, dan amal itu mesti mengikut tertib wahyu.</p>
-
-  <p>Pukulan tongkat ialah contoh:</p>
-  <ul>
-    <li>pada neraca Asbab Fitrah: "tidak masuk akal"</li>
-    <li>pada neraca Asbab Zulumat: "bunuh diri"</li>
-    <li>pada neraca Tauhidi: ketaatan yang membuka janji Allah</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- 0.5 -->
-<section class="section-card reveal" id="s5">
-  <span class="sec-num">0.5</span>
-  <h2>Dari Laut Merah ke Hati: Reset Tauhidi</h2>
-
-  <p>Pembelahan laut ialah pelanggaran yang Allah jadikan untuk mematahkan sangkaan halus: "makhluk memberi kesan dengan sendirinya."</p>
-
-  <div class="insight-box">
-    <p><strong>Prinsip Kerangka 3 Asbab (dibetulkan ikut definisi):</strong></p>
-    <ul>
-      <li>Asbab Fitrah berlaku dengan izin &amp; kehendak Allah (bukan janji Allah)</li>
-      <li>Asbab Zulumat wujud kerana persetujuan manusia, namun tetap di bawah qada' dan izin Allah</li>
-      <li>Asbab Mutlak Asli berlaku kerana janji Allah pada iman dan amal soleh yang ditetapkan syariat</li>
-    </ul>
-  </div>
-
-  <p><strong>Reset Tauhidi bermaksud:</strong></p>
-  <ul>
-    <li>bukan menolak Asbab Fitrah, tetapi menafikan kuasanya</li>
-    <li>bukan takut Asbab Zulumat, tetapi menafikan "ketuhanannya"</li>
-    <li>bukan berhenti usaha, tetapi usaha tanpa pergantungan hati</li>
-    <li>bukan "tinggalkan dunia", tetapi menundukkan Asbab Fitrah &amp; Asbab Zulumat supaya jadi khidmat kepada Asbab Mutlak</li>
-  </ul>
-
-  <p>Dan dari sini terbuka pintu bab-bab seterusnya: bagaimana Asbab Fitrah dan Asbab Zulumat — jika dibenarkan syarak — boleh ditransformasikan menjadi Asbab Mutlak Terbitan (asbab dunia yang tunduk kepada tertib amal).</p>
-
-  <a class="toplink" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- 0.6 -->
-<section class="section-card reveal" id="s6">
-  <span class="sec-num">0.6</span>
-  <h2>Manhaj Istidlal Kerangka 3 Asbab</h2>
-
-  <p>Kerangka 3 Asbab hanya hidup jika dibaca dengan tertib wahyu, bukan tertib logik moden.</p>
-
-  <h3>0.6.1 Rantaian Dalil (Tartib Istidlal Tauhidi)</h3>
-  <ol>
-    <li>Al-Qur'an: neraca tertinggi</li>
-    <li>Sunnah &amp; Sirah Rasulullah ﷺ: tafsir praktikal wahyu</li>
-    <li>Athar Sahabat: aplikasi hidup Tauhid dalam masyarakat</li>
-    <li>Ijma': pagar menjaga agama</li>
-    <li>Qiyas yang berpaut kepada wahyu: bukan qiyas yang memahkotakan Asbab Fitrah</li>
-  </ol>
-  <p>Tujuannya satu: membebaskan hati daripada pergantungan kepada sebab, bukan membina falsafah baru.</p>
-
-  <hr>
-
-  <h3>0.6.2 Kaedah Membaca Sejarah &amp; Realiti</h3>
-  <p>Semua peristiwa dibaca melalui tiga lapisan serentak:</p>
-  <ul>
-    <li>Asbab Fitrah: zahir (data, angka, teknologi) — alat, bukan penentu</li>
-    <li>Asbab Zulumat: persetujuan manusia (budaya, sistem, ideologi) — dominan zahir, bukan hakim</li>
-    <li>Asbab Mutlak Asli: amal yang Allah janji (dakwah, sabar, solat, mujahadah, syura, amal masjid) — penentu sebenar di sisi Allah</li>
-  </ul>
-  <p><strong>Contoh disiplin bacaan:</strong></p>
-  <ul>
-    <li>Badar: nusrah kerana Asbab Mutlak, bukan kerana strategi semata-mata</li>
-    <li>Hunain: tergelincir hati kepada angka (Asbab Fitrah) → Allah didahulukan semula</li>
-    <li>Zaman moden: bukan teknologi musuh, tetapi keyakinan kepada teknologi melebihi janji Allah</li>
-  </ul>
-
-  <hr>
-
-  <h3>0.6.3 Prinsip Istidlal Tauhidi (dikunci)</h3>
-  <ul>
-    <li>wahyu menghakimi sains, bukan sebaliknya</li>
-    <li>nilai ditentukan oleh Asbab Mutlak; Asbab Fitrah &amp; Zulumat hanyalah alat</li>
-    <li>natijah bukan dalil kebenaran; tertib amal menentukan nilai di sisi Allah</li>
-    <li>sirah lebih tinggi dari teori kerana ia cara wahyu hidup</li>
-  </ul>
-
-  <a class="toplink" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- 0.7 -->
-<section class="section-card reveal" id="s7">
-  <span class="sec-num">0.7</span>
-  <h2>Kedudukan Kerangka Ini dalam Tradisi Ilmu Islam</h2>
-
-  <p>Kerangka 3 Asbab tidak datang untuk menggantikan turath, dan tidak dibina untuk mencipta agama baharu.</p>
-  <p>Ia hanyalah satu usaha untuk menyusun semula bahan-bahan wahyu, sirah, dan pengalaman amal ke dalam satu kerangka yang memperlihatkan hubungan hidup antara iman, hati, amal, jamaah, dan sistem.</p>
-  <p>Istilah seperti <em>Asbab Mutlak</em>, <em>Asbab Fitrah</em>, dan <em>Asbab Zulumat</em> bukan aqidah baru, tetapi alat untuk menghimpunkan makna yang telah sedia ada dalam al-Qur'an, sunnah, dan sirah ke dalam bentuk yang lebih mudah difahami pada zaman ini.</p>
-
-  <div class="insight-box">
-    <p><strong>Prinsip penting:</strong></p>
-    <ul>
-      <li>Yang dinilai bukan "baru atau lama" pada istilah</li>
-      <li>Tetapi: adakah makna yang dihimpunkan itu sah di sisi wahyu?</li>
-      <li>Jika selari dengan al-Qur'an, sunnah, dan sirah, maka istilah hanyalah alat susun makna</li>
-    </ul>
-  </div>
-
-  <p>Sebagaimana para ulama menyusun istilah dalam pelbagai disiplin untuk menjelaskan ilmu, maka kerangka ini juga bergerak dalam semangat yang sama: bukan menambah agama, tetapi menzahirkan susunan makna agar lebih jelas dibaca.</p>
-
-  <p>Kerangka ini juga tidak bertujuan untuk membahaskan iman sekadar pada definisi, tetapi untuk menjawab satu persoalan yang sering tidak disentuh secara operasional:</p>
-
-  <blockquote>
-    <p>Bagaimana iman benar-benar hidup di dalam hati manusia sehingga ia melahirkan amal, jamaah, dan sistem yang tunduk kepada Allah?</p>
-  </blockquote>
-
-  <p>Kerana iman bukan sekadar diketahui, tetapi mesti hidup sebagai rasa tunduk kepada Allah. Rasa itu pula bukan emosi bebas, tetapi penerimaan penuh yakin terhadap perkhabaran Rasulullah ﷺ tanpa meletakkan bukti zahir sebagai penentu — dibina melalui dakwah, mujahadah, dan sabar.</p>
-
-  <p>Dalam membahaskan sebab (asbab), Kerangka 3 Asbab menafikan kuasa Asbab Fitrah dan Asbab Zulumat dengan mengisbatkan bahawa hanya Allah yang berkuasa — tetapi tidak menafikan amalnya. Amal itu pula mestilah dibuat dengan ittiba' Rasulullah ﷺ:</p>
-  <ul>
-    <li>amalnya diambil sebagai ketaatan, bukan ditinggalkan,</li>
-    <li>kuasa dinafikan daripada sebab itu sendiri,</li>
-    <li>hanya Allah ditetapkan sebagai pemberi kesan,</li>
-    <li>dan amal itu mengikut cara Rasulullah ﷺ (ittiba').</li>
-  </ul>
-
-  <p>Kerangka ini juga tidak terikat dengan mana-mana label gerakan, tetapi berusaha menghidupkan tertib yang ditunjukkan oleh Rasulullah ﷺ: dakwah, pengorbanan, mesyuarat, sabar, dan ittiba'. Di mana sahaja tertib ini hidup, di situlah ruh Kerangka 3 Asbab hidup.</p>
-
-  <blockquote>
-    <p><strong>Rumus:</strong> Kerangka 3 Asbab ialah alat membaca semula hubungan antara wahyu, hati, amal, dan sistem — bukan agama baru, bukan label baru, dan bukan platform untuk menang hujah.</p>
-  </blockquote>
-
-  <a class="toplink" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- 0.8 -->
-<section class="section-card reveal" id="s8">
-  <span class="sec-num">0.8</span>
-  <h2>Sempadan Kerangka 3 Asbab: Apa yang Ia Bukan</h2>
-
-  <p>Kerangka 3 Asbab bukan untuk menambah label — ia untuk memulihkan sandaran.</p>
-  <ol>
-    <li>Bukan mazhab baharu (bukan fiqh/akidah baru)</li>
-    <li>Bukan falsafah debat (bukan bahan meja bulat)</li>
-    <li>Bukan anti-sains (sains Asbab Fitrah: alat, bukan hakim)</li>
-    <li>Bukan anti-asbab (ambil sebab, jangan bergantung)</li>
-    <li>Bukan senjata menghukum orang (ia cermin diri, bukan pedang)</li>
-    <li>Bukan ideologi politik (bina iman → amal → suasana → jamaah → barulah sistem)</li>
-  </ol>
-
-  <blockquote>
-    <p><strong>Rumus:</strong> Kerangka 3 Asbab ialah peta untuk menundukkan sebab di bawah iman dan amal, bukan platform untuk menang hujah.</p>
-  </blockquote>
-
-  <a class="toplink" href="#top">↑ Kembali ke atas</a>
-</section>
-
-<!-- 0.9 -->
-<section class="section-card reveal" id="s9">
-  <span class="sec-num">0.9</span>
-  <h2>Kesimpulan: Bila Iman Jadi Pusat, Sebab Tunduk</h2>
-
-  <p>Laut Merah ialah peta semua zaman:</p>
-  <ul>
-    <li>Asbab Fitrah di hadapan (halangan zahir)</li>
-    <li>Asbab Zulumat di belakang (tekanan manusia &amp; sistem)</li>
-    <li>Asbab Mutlak Asli di atas (perintah Allah yang tidak berubah)</li>
-  </ul>
-
-  <p>Ujian sebenar bukan pada laut. Bukan pada Firaun. Ujian sebenar pada hati: siapa yang dijadikan pusat?</p>
-  <p>Jika sebab jadi pusat → Asbab Fitrah menghalang, Asbab Zulumat menekan. Jika iman dan Asbab Mutlak jadi pusat → Asbab Fitrah tunduk, Asbab Zulumat pecah, Allah memimpin.</p>
-
-  <p>Bab 0 ini bukan pengenalan kosong. Ia pembersihan tapak: supaya seluruh kerangka selepas ini berdiri atas sandaran yang betul.</p>
-
-  <div class="insight-box">
-    <p><strong>Rumusan akhir Bab 0:</strong></p>
-    <ul>
-      <li>Laut Merah = halangan Asbab Fitrah</li>
-      <li>Firaun = tekanan Asbab Zulumat</li>
-      <li>Tongkat Musa = amal taat kepada Asbab Mutlak Asli</li>
-      <li>Pembelahan laut = nusrah kerana Allah meletakkan janji-Nya pada amal yang Dia perintah</li>
-    </ul>
-  </div>
-
-  <blockquote>
-    <p>"Bila iman jadi pusat, sebab tunduk. Bila sebab jadi pusat, iman tenggelam."</p>
-  </blockquote>
-
-  <a class="toplink" href="#top">↑ Kembali ke atas</a>
-</section>
-```
+    <!-- OPENING -->
+    <section class="section-card opening reveal">
+      <div class="seal">Kerangka 3 Asbab</div>
+      <h2 class="opening-title">Mukadimah: Laut Merah &amp; Reset Tauhidi</h2>
+      <p class="opening-sub">Tahkīm al-Usūl — memusnahkan sandaran lama sebelum bina iman.</p>
+    </section>
+
+    <!-- 0.1 -->
+    <section class="section-card reveal" id="s1">
+      <span class="sec-num">0.1</span>
+      <h2>Laut Merah: Pintu Memahami Tauhid</h2>
+
+      <p>Ada detik apabila Allah sengaja menutup semua jalan supaya manusia berhenti melihat dengan neraca Asbab Fitrah dan Asbab Zulumat, lalu kembali melihat dengan neraca Tauhid.</p>
+
+      <p>Bayangkan Bani Israel:</p>
+      <ul>
+        <li>di hadapan: Laut Merah — halangan zahir yang pada kebiasaan Asbab Fitrah "mustahil jadi jalan",</li>
+        <li>di belakang: Firaun — sistem kuasa, tentera, propaganda yang pada kebiasaan Asbab Zulumat "nampak mematikan",</li>
+        <li>di tengah: hati manusia — tempat sandaran sebenar sedang diuji.</li>
+      </ul>
+
+      <p>Ketika itu, keluar suara manusia yang menjadikan sebab sebagai penentu:</p>
+      <ul>
+        <li>"Air tak boleh jadi jalan." (Asbab Fitrah dijadikan hakim)</li>
+        <li>"Kuasa manusia menentukan nasib." (Asbab Zulumat dijadikan penentu)</li>
+      </ul>
+
+      <p>Lalu Allah rakamkan jawapan Nabi Musa عليه السلام — jawapan Tauhidi yang memutuskan pergantungan hati kepada makhluk:</p>
+
+      <div class="arabic">قَالَ كَلَّا ۖ إِنَّ مَعِيَ رَبِّي سَيَهْدِينِ</div>
+      <div class="translation">
+        "Tidak sekali-kali! Sesungguhnya bersama aku Tuhanku; Dia akan memberi petunjuk kepadaku."
+        <span class="ref">asy-Syu'arā' 26:62</span>
+      </div>
+
+      <div class="insight-box">
+        <p><strong>Kerangka Tauhidi ayat ini:</strong></p>
+        <ul>
+          <li><strong>كَلَّا (Kallā)</strong> — Nafy terhadap kuasa Asbab Fitrah &amp; Asbab Zulumat</li>
+          <li><strong>إِنَّ مَعِيَ رَبِّي (Inna ma'iya Rabbī)</strong> — Isbat: hanya Allah memberi kesan</li>
+          <li><strong>سَيَهْدِينِ (Sayahdīn)</strong> — yakin pada petunjuk Allah sebelum terlihat jalan</li>
+        </ul>
+      </div>
+
+      <p>Tongkat diangkat bukan kerana tongkat "berkuasa", tetapi kerana Allah memerintahkan amal. Dan di sini disiplin Kerangka 3 Asbab mesti tegas:</p>
+
+      <blockquote>
+        <p>Kesan bukan lahir daripada teknik atau objek.</p>
+        <p>Kesan berlaku kerana Allah meletakkan janji-Nya pada iman dan amal soleh yang ditetapkan syariat.</p>
+      </blockquote>
+
+      <p>Maka pembelahan laut bukan kemenangan logik, bukan kemenangan strategi — tetapi nusrah kerana ketaatan kepada Asbab Mutlak Asli: perintah Allah melalui Nabi.</p>
+
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 0.2 -->
+    <section class="section-card reveal" id="s2">
+      <span class="sec-num">0.2</span>
+      <h2>Simbol 3 Asbab dalam Peristiwa Laut Merah</h2>
+
+      <p>Peristiwa Laut Merah ialah "kelas pertama" untuk mengunci kedudukan tiga jenis Asbab yang wujud serentak dalam hidup manusia:</p>
+
+      <h3>1) Asbab Fitrah — Laut di hadapan</h3>
+      <p>Air pada kebiasaan Asbab Fitrah menenggelamkan. Ujiannya bukan pada air — ujiannya pada hati: adakah hati melihat air sebagai "pemilik kuasa", atau sekadar makhluk yang ditadbir Allah?</p>
+
+      <h3>2) Asbab Zulumat — Firaun di belakang</h3>
+      <p>Firaun melambangkan sistem yang lahir daripada persetujuan manusia: kuasa, undang-undang zalim, propaganda, ketakutan sosial. Asbab Zulumat menjadi "tuhan kecil" bukan kerana ia haq, tetapi kerana manusia memberi keyakinan kepadanya.</p>
+
+      <h3>3) Asbab Mutlak Asli — Perintah Allah pada Nabi</h3>
+      <p>Pukulan tongkat bukan taktik perang. Ia ketaatan kepada wahyu. Di sinilah pintu nusrah terbuka — kerana Allah meletakkan janji-Nya pada amal yang Dia tetapkan.</p>
+
+      <div class="insight-box">
+        <p><strong>Ringkasan posisi:</strong></p>
+        <ul>
+          <li>Di hadapan: Laut → Asbab Fitrah</li>
+          <li>Di belakang: Firaun → Asbab Zulumat</li>
+          <li>Di atas hati Nabi: Perintah Allah → Asbab Mutlak Asli</li>
+        </ul>
+      </div>
+
+      <p>Tujuan Allah bukan sekadar menyelamatkan tubuh — tetapi membetulkan neraca keyakinan: siapa yang berkuasa memberi kesan? Bukan laut, bukan Firaun — Allah.</p>
+
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 0.3 -->
+    <section class="section-card reveal" id="s3">
+      <span class="sec-num">0.3</span>
+      <h2>Musa عليه السلام vs Firaun: Pertembungan Tiga Asbab</h2>
+
+      <p>Reaksi spontan Bani Israel: "Kita akan ditangkap!" Itu bukan sekadar emosi — itu pendedahan arah sandaran:</p>
+      <ul>
+        <li>Asbab Fitrah dijadikan penentu ("laut mustahil")</li>
+        <li>Asbab Zulumat dijadikan penentu ("Firaun pasti menang")</li>
+        <li>Bila sebab jadi pusat → iman jadi rapuh</li>
+      </ul>
+
+      <p>Dan inilah peta umat hari ini:</p>
+      <ul>
+        <li>tiada modal → putus asa (sebab dihukum sebagai "tuhan")</li>
+        <li>ada modal → ujub (sebab dihormati sebagai "penentu")</li>
+        <li>doa lambat → sangsi (Allah diukur dengan natijah segera)</li>
+        <li>strategi hebat → bersandar (sebab ditunduk kepada hati)</li>
+      </ul>
+
+      <p>Masalah bukan kurang ilmu. Masalahnya: Asbab Fitrah dan Asbab Zulumat naik ke tempat yang hanya layak untuk Allah dalam hati.</p>
+
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 0.4 -->
+    <section class="section-card reveal" id="s4">
+      <span class="sec-num">0.4</span>
+      <h2>Amal Nabi: Pukulan Tongkat sebagai Amal Tauhidi</h2>
+
+      <p>Ucapan Nabi Musa عليه السلام ialah "manual ringkas" untuk menegakkan tertib Tauhidi:</p>
+      <ul>
+        <li>Nafy: menafikan kuasa Asbab Fitrah &amp; Asbab Zulumat</li>
+        <li>Isbat: menetapkan hanya Allah memberi kesan</li>
+        <li>Ittiba': melangkah dengan amal yang diperintah wahyu</li>
+      </ul>
+
+      <p>Disiplin penting Kerangka 3 Asbab: bukan "yakin sebelum nampak" semata-mata — tetapi amal mesti wujud, dan amal itu mesti mengikut tertib wahyu.</p>
+
+      <p>Pukulan tongkat ialah contoh:</p>
+      <ul>
+        <li>pada neraca Asbab Fitrah: "tidak masuk akal"</li>
+        <li>pada neraca Asbab Zulumat: "bunuh diri"</li>
+        <li>pada neraca Tauhidi: ketaatan yang membuka janji Allah</li>
+      </ul>
+
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 0.5 -->
+    <section class="section-card reveal" id="s5">
+      <span class="sec-num">0.5</span>
+      <h2>Dari Laut Merah ke Hati: Reset Tauhidi</h2>
+
+      <p>Pembelahan laut ialah pelanggaran yang Allah jadikan untuk mematahkan sangkaan halus: "makhluk memberi kesan dengan sendirinya."</p>
+
+      <div class="insight-box">
+        <p><strong>Prinsip Kerangka 3 Asbab (dibetulkan ikut definisi):</strong></p>
+        <ul>
+          <li>Asbab Fitrah berlaku dengan izin &amp; kehendak Allah (bukan janji Allah)</li>
+          <li>Asbab Zulumat wujud kerana persetujuan manusia, namun tetap di bawah qada' dan izin Allah</li>
+          <li>Asbab Mutlak Asli berlaku kerana janji Allah pada iman dan amal soleh yang ditetapkan syariat</li>
+        </ul>
+      </div>
+
+      <p><strong>Reset Tauhidi bermaksud:</strong></p>
+      <ul>
+        <li>bukan menolak Asbab Fitrah, tetapi menafikan kuasanya</li>
+        <li>bukan takut Asbab Zulumat, tetapi menafikan "ketuhanannya"</li>
+        <li>bukan berhenti usaha, tetapi usaha tanpa pergantungan hati</li>
+        <li>bukan "tinggalkan dunia", tetapi menundukkan Asbab Fitrah &amp; Asbab Zulumat supaya jadi khidmat kepada Asbab Mutlak</li>
+      </ul>
+
+      <p>Dan dari sini terbuka pintu bab-bab seterusnya: bagaimana Asbab Fitrah dan Asbab Zulumat — jika dibenarkan syarak — boleh ditransformasikan menjadi Asbab Mutlak Terbitan (asbab dunia yang tunduk kepada tertib amal).</p>
+
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 0.6 -->
+    <section class="section-card reveal" id="s6">
+      <span class="sec-num">0.6</span>
+      <h2>Manhaj Istidlal Kerangka 3 Asbab</h2>
+
+      <p>Kerangka 3 Asbab hanya hidup jika dibaca dengan tertib wahyu, bukan tertib logik moden.</p>
+
+      <h3>0.6.1 Rantaian Dalil (Tartib Istidlal Tauhidi)</h3>
+      <ol>
+        <li>Al-Qur'an: neraca tertinggi</li>
+        <li>Sunnah &amp; Sirah Rasulullah ﷺ: tafsir praktikal wahyu</li>
+        <li>Athar Sahabat: aplikasi hidup Tauhid dalam masyarakat</li>
+        <li>Ijma': pagar menjaga agama</li>
+        <li>Qiyas yang berpaut kepada wahyu: bukan qiyas yang memahkotakan Asbab Fitrah</li>
+      </ol>
+      <p>Tujuannya satu: membebaskan hati daripada pergantungan kepada sebab, bukan membina falsafah baru.</p>
+
+      <hr>
+
+      <h3>0.6.2 Kaedah Membaca Sejarah &amp; Realiti</h3>
+      <p>Semua peristiwa dibaca melalui tiga lapisan serentak:</p>
+      <ul>
+        <li>Asbab Fitrah: zahir (data, angka, teknologi) — alat, bukan penentu</li>
+        <li>Asbab Zulumat: persetujuan manusia (budaya, sistem, ideologi) — dominan zahir, bukan hakim</li>
+        <li>Asbab Mutlak Asli: amal yang Allah janji (dakwah, sabar, solat, mujahadah, syura, amal masjid) — penentu sebenar di sisi Allah</li>
+      </ul>
+      <p><strong>Contoh disiplin bacaan:</strong></p>
+      <ul>
+        <li>Badar: nusrah kerana Asbab Mutlak, bukan kerana strategi semata-mata</li>
+        <li>Hunain: tergelincir hati kepada angka (Asbab Fitrah) → Allah didahulukan semula</li>
+        <li>Zaman moden: bukan teknologi musuh, tetapi keyakinan kepada teknologi melebihi janji Allah</li>
+      </ul>
+
+      <hr>
+
+      <h3>0.6.3 Prinsip Istidlal Tauhidi (dikunci)</h3>
+      <ul>
+        <li>wahyu menghakimi sains, bukan sebaliknya</li>
+        <li>nilai ditentukan oleh Asbab Mutlak; Asbab Fitrah &amp; Zulumat hanyalah alat</li>
+        <li>natijah bukan dalil kebenaran; tertib amal menentukan nilai di sisi Allah</li>
+        <li>sirah lebih tinggi dari teori kerana ia cara wahyu hidup</li>
+      </ul>
+
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 0.7 -->
+    <section class="section-card reveal" id="s7">
+      <span class="sec-num">0.7</span>
+      <h2>Kedudukan Kerangka Ini dalam Tradisi Ilmu Islam</h2>
+
+      <p>Kerangka 3 Asbab tidak datang untuk menggantikan turath, dan tidak dibina untuk mencipta agama baharu.</p>
+      <p>Ia hanyalah satu usaha untuk menyusun semula bahan-bahan wahyu, sirah, dan pengalaman amal ke dalam satu kerangka yang memperlihatkan hubungan hidup antara iman, hati, amal, jamaah, dan sistem.</p>
+      <p>Istilah seperti <em>Asbab Mutlak</em>, <em>Asbab Fitrah</em>, dan <em>Asbab Zulumat</em> bukan aqidah baru, tetapi alat untuk menghimpunkan makna yang telah sedia ada dalam al-Qur'an, sunnah, dan sirah ke dalam bentuk yang lebih mudah difahami pada zaman ini.</p>
+
+      <div class="insight-box">
+        <p><strong>Prinsip penting:</strong></p>
+        <ul>
+          <li>Yang dinilai bukan "baru atau lama" pada istilah</li>
+          <li>Tetapi: adakah makna yang dihimpunkan itu sah di sisi wahyu?</li>
+          <li>Jika selari dengan al-Qur'an, sunnah, dan sirah, maka istilah hanyalah alat susun makna</li>
+        </ul>
+      </div>
+
+      <p>Sebagaimana para ulama menyusun istilah dalam pelbagai disiplin untuk menjelaskan ilmu, maka kerangka ini juga bergerak dalam semangat yang sama: bukan menambah agama, tetapi menzahirkan susunan makna agar lebih jelas dibaca.</p>
+
+      <p>Kerangka ini juga tidak bertujuan untuk membahaskan iman sekadar pada definisi, tetapi untuk menjawab satu persoalan yang sering tidak disentuh secara operasional:</p>
+
+      <blockquote>
+        <p>Bagaimana iman benar-benar hidup di dalam hati manusia sehingga ia melahirkan amal, jamaah, dan sistem yang tunduk kepada Allah?</p>
+      </blockquote>
+
+      <p>Kerana iman bukan sekadar diketahui, tetapi mesti hidup sebagai rasa tunduk kepada Allah. Rasa itu pula bukan emosi bebas, tetapi penerimaan penuh yakin terhadap perkhabaran Rasulullah ﷺ tanpa meletakkan bukti zahir sebagai penentu — dibina melalui dakwah, mujahadah, dan sabar.</p>
+
+      <p>Dalam membahaskan sebab (asbab), Kerangka 3 Asbab menafikan kuasa Asbab Fitrah dan Asbab Zulumat dengan mengisbatkan bahawa hanya Allah yang berkuasa — tetapi tidak menafikan amalnya. Amal itu pula mestilah dibuat dengan ittiba' Rasulullah ﷺ:</p>
+      <ul>
+        <li>amalnya diambil sebagai ketaatan, bukan ditinggalkan,</li>
+        <li>kuasa dinafikan daripada sebab itu sendiri,</li>
+        <li>hanya Allah ditetapkan sebagai pemberi kesan,</li>
+        <li>dan amal itu mengikut cara Rasulullah ﷺ (ittiba').</li>
+      </ul>
+
+      <p>Kerangka ini juga tidak terikat dengan mana-mana label gerakan, tetapi berusaha menghidupkan tertib yang ditunjukkan oleh Rasulullah ﷺ: dakwah, pengorbanan, mesyuarat, sabar, dan ittiba'. Di mana sahaja tertib ini hidup, di situlah ruh Kerangka 3 Asbab hidup.</p>
+
+      <blockquote>
+        <p><strong>Rumus:</strong> Kerangka 3 Asbab ialah alat membaca semula hubungan antara wahyu, hati, amal, dan sistem — bukan agama baru, bukan label baru, dan bukan platform untuk menang hujah.</p>
+      </blockquote>
+
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 0.8 -->
+    <section class="section-card reveal" id="s8">
+      <span class="sec-num">0.8</span>
+      <h2>Sempadan Kerangka 3 Asbab: Apa yang Ia Bukan</h2>
+
+      <p>Kerangka 3 Asbab bukan untuk menambah label — ia untuk memulihkan sandaran.</p>
+      <ol>
+        <li>Bukan mazhab baharu (bukan fiqh/akidah baru)</li>
+        <li>Bukan falsafah debat (bukan bahan meja bulat)</li>
+        <li>Bukan anti-sains (sains Asbab Fitrah: alat, bukan hakim)</li>
+        <li>Bukan anti-asbab (ambil sebab, jangan bergantung)</li>
+        <li>Bukan senjata menghukum orang (ia cermin diri, bukan pedang)</li>
+        <li>Bukan ideologi politik (bina iman → amal → suasana → jamaah → barulah sistem)</li>
+      </ol>
+
+      <blockquote>
+        <p><strong>Rumus:</strong> Kerangka 3 Asbab ialah peta untuk menundukkan sebab di bawah iman dan amal, bukan platform untuk menang hujah.</p>
+      </blockquote>
+
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
+
+    <!-- 0.9 -->
+    <section class="section-card reveal" id="s9">
+      <span class="sec-num">0.9</span>
+      <h2>Kesimpulan: Bila Iman Jadi Pusat, Sebab Tunduk</h2>
+
+      <p>Laut Merah ialah peta semua zaman:</p>
+      <ul>
+        <li>Asbab Fitrah di hadapan (halangan zahir)</li>
+        <li>Asbab Zulumat di belakang (tekanan manusia &amp; sistem)</li>
+        <li>Asbab Mutlak Asli di atas (perintah Allah yang tidak berubah)</li>
+      </ul>
+
+      <p>Ujian sebenar bukan pada laut. Bukan pada Firaun. Ujian sebenar pada hati: siapa yang dijadikan pusat?</p>
+      <p>Jika sebab jadi pusat → Asbab Fitrah menghalang, Asbab Zulumat menekan. Jika iman dan Asbab Mutlak jadi pusat → Asbab Fitrah tunduk, Asbab Zulumat pecah, Allah memimpin.</p>
+
+      <p>Bab 0 ini bukan pengenalan kosong. Ia pembersihan tapak: supaya seluruh kerangka selepas ini berdiri atas sandaran yang betul.</p>
+
+      <div class="insight-box">
+        <p><strong>Rumusan akhir Bab 0:</strong></p>
+        <ul>
+          <li>Laut Merah = halangan Asbab Fitrah</li>
+          <li>Firaun = tekanan Asbab Zulumat</li>
+          <li>Tongkat Musa = amal taat kepada Asbab Mutlak Asli</li>
+          <li>Pembelahan laut = nusrah kerana Allah meletakkan janji-Nya pada amal yang Dia perintah</li>
+        </ul>
+      </div>
+
+      <blockquote>
+        <p>"Bila iman jadi pusat, sebab tunduk. Bila sebab jadi pusat, iman tenggelam."</p>
+      </blockquote>
+
+      <a class="toplink" href="#top">↑ Kembali ke atas</a>
+    </section>
 
   </main>
 
   <!-- FOOTER -->
-
   <footer>
     <div class="wrap">
       <div class="foot-nav">
