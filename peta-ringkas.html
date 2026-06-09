@@ -11,7 +11,7 @@
   :root{
     --cream:#faf7f2; --warm:#f3ede3; --ink:#1c1810; --ink-2:#3d3426; --ink-3:#6b5d4e;
     --gold:#b8892a; --gold-lt:#e8c97a; --gold-soft:#f3e6c4;
-    --emerald:#1f5c3e; --emerald-lt:#2d7a53; --emerald-dk:#163f2b;
+    --emerald:#1f5c3e; --emerald-lt:#2d7a53; --emerald-dk:#163f2b; --emerald-soft:#e7f0ea;
     --rule:rgba(100,80,50,.15);
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -24,59 +24,98 @@
   .topbar .brand{font-family:'Playfair Display',serif;font-weight:700;color:var(--emerald);margin-right:auto;font-size:1rem;}
   .topbar .cur{color:var(--ink);font-weight:600;}
 
-  .hero{background:var(--emerald);text-align:center;padding:44px 24px 50px;position:relative;overflow:hidden;}
+  .hero{background:var(--emerald);text-align:center;padding:42px 24px 46px;position:relative;overflow:hidden;}
   .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 120%,rgba(184,137,42,.25) 0%,transparent 70%);pointer-events:none;}
-  .hero .bismillah{font-family:'Amiri',serif;color:var(--gold-lt);font-size:1.1rem;margin-bottom:14px;opacity:.92;}
-  .hero h1{font-family:'Playfair Display',serif;color:#fff;font-weight:700;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.18;margin-bottom:12px;}
-  .hero p{max-width:520px;margin:0 auto;color:rgba(255,255,255,.82);font-weight:300;font-size:1rem;}
+  .hero .bismillah{font-family:'Amiri',serif;color:var(--gold-lt);font-size:1.1rem;margin-bottom:12px;opacity:.92;}
+  .hero h1{font-family:'Playfair Display',serif;color:#fff;font-weight:700;font-size:clamp(1.7rem,5vw,2.5rem);line-height:1.18;margin-bottom:10px;}
+  .hero p{max-width:520px;margin:0 auto;color:rgba(255,255,255,.82);font-weight:300;font-size:.98rem;}
 
-  .wrap{max-width:680px;margin:0 auto;padding:40px 20px 72px;}
+  .wrap{max-width:660px;margin:0 auto;padding:30px 16px 70px;}
 
-  .matlamat{border-radius:16px;background:linear-gradient(135deg,var(--emerald) 0%,var(--emerald-lt) 100%);padding:26px 24px 28px;color:#fff;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(31,92,62,.2);margin-bottom:14px;}
+  /* definisi kehidupan baik */
+  .definisi{background:#fff;border:1px solid rgba(184,137,42,.35);border-radius:16px;padding:22px 22px 20px;margin-bottom:18px;box-shadow:0 4px 18px rgba(184,137,42,.1);position:relative;}
+  .definisi .eyebrow{font-family:'Playfair Display',serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;}
+  .definisi h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.35rem;color:var(--emerald-dk);line-height:1.2;margin-bottom:8px;}
+  .definisi .takrif{font-size:.98rem;color:var(--ink-2);line-height:1.65;margin-bottom:14px;}
+  .definisi .dalil-def{background:var(--emerald-soft);border-left:3px solid var(--emerald);border-radius:0 12px 12px 0;padding:12px 15px;}
+  .definisi .dalil-def .arab{font-family:'Amiri',serif;direction:rtl;text-align:right;font-size:1.4rem;line-height:1.95;color:var(--emerald-dk);margin-bottom:7px;}
+  .definisi .dalil-def .trj{font-size:.9rem;color:var(--ink-2);font-style:italic;line-height:1.55;}
+  .definisi .dalil-def .ref{display:block;margin-top:6px;font-size:.8rem;color:var(--emerald);font-weight:600;}
+  @media(max-width:520px){
+    .definisi .dalil-def .arab{font-size:1.2rem;}
+  }
+
+  .matlamat{border-radius:16px;background:linear-gradient(135deg,var(--emerald) 0%,var(--emerald-lt) 100%);padding:22px 22px 22px;color:#fff;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(31,92,62,.2);margin-bottom:8px;cursor:pointer;}
   .matlamat::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 90% 25%,rgba(232,201,122,.2) 0%,transparent 70%);pointer-events:none;}
-  .matlamat .eyebrow{font-family:'Amiri',serif;color:var(--gold-lt);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;}
-  .matlamat h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.55rem;margin-bottom:6px;line-height:1.15;}
-  .matlamat>p{color:rgba(255,255,255,.85);font-weight:300;font-size:.94rem;margin-bottom:18px;}
-  .branches{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .matlamat .eyebrow{font-family:'Amiri',serif;color:var(--gold-lt);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;}
+  .matlamat h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.4rem;margin-bottom:5px;line-height:1.15;}
+  .matlamat>p{color:rgba(255,255,255,.85);font-weight:300;font-size:.9rem;margin-bottom:14px;}
+  .branches{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
   @media(max-width:520px){.branches{grid-template-columns:1fr;}}
-  .branch{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:14px 15px;}
-  .branch h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--gold-lt);margin-bottom:5px;}
-  .branch p{font-size:.86rem;color:rgba(255,255,255,.88);font-weight:300;line-height:1.5;}
+  .branch{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:12px 13px;}
+  .branch h3{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:600;color:var(--gold-lt);margin-bottom:4px;}
+  .branch p{font-size:.82rem;color:rgba(255,255,255,.88);font-weight:300;line-height:1.5;}
 
-  .leadin{text-align:center;color:var(--ink-3);font-size:.92rem;font-style:italic;margin:18px 0 26px;}
+  .leadin{text-align:center;color:var(--ink-3);font-size:.88rem;font-style:italic;margin:18px 0 6px;}
+  .tap-hint{text-align:center;color:var(--gold);font-size:.78rem;letter-spacing:.04em;margin-bottom:14px;}
 
-  .ladder{position:relative;}
-  .step{position:relative;display:flex;gap:18px;align-items:flex-start;}
-  .rail{flex-shrink:0;display:flex;flex-direction:column;align-items:center;width:44px;}
-  .dot{width:44px;height:44px;border-radius:50%;background:var(--emerald);color:#fff;display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 3px 10px rgba(31,92,62,.25);}
-  .dot svg{width:20px;height:20px;fill:none;stroke:var(--gold-lt);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-  .dot.root{background:var(--gold);} .dot.root svg{stroke:#fff;}
-  .line{flex:1;width:2px;background:linear-gradient(var(--gold),var(--gold-lt));min-height:54px;margin:2px 0;}
-  .step:last-child .line{display:none;}
+  .colhead{display:grid;grid-template-columns:1fr 34px 1fr;gap:10px;align-items:center;margin-bottom:6px;}
+  .colhead span{font-family:'Playfair Display',serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-align:center;}
 
-  .node{flex:1;background:#fff;border:1px solid var(--rule);border-radius:14px;padding:17px 20px;margin-bottom:8px;box-shadow:0 2px 12px rgba(30,40,30,.05);}
-  .node.top{border-color:rgba(184,137,42,.4);box-shadow:0 4px 18px rgba(184,137,42,.12);}
-  .node.root{background:var(--warm);border-color:rgba(184,137,42,.4);}
-  .node .role{font-family:'Playfair Display',serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
-  .node h2{font-family:'Playfair Display',serif;font-weight:600;font-size:1.3rem;color:var(--emerald-dk);line-height:1.2;margin-bottom:4px;}
-  .node .arab{font-family:'Amiri',serif;direction:rtl;font-size:1.8rem;color:var(--emerald);line-height:1.6;margin:2px 0 6px;}
-  .node .sub{font-size:.94rem;color:var(--ink-3);font-weight:300;}
+  .rung{display:grid;grid-template-columns:1fr 34px 1fr;gap:10px;align-items:stretch;cursor:pointer;}
+  .cell{background:#fff;border:1px solid var(--rule);border-radius:13px;padding:13px 14px;box-shadow:0 2px 10px rgba(30,40,30,.05);display:flex;flex-direction:column;justify-content:center;text-align:center;transition:box-shadow .15s,transform .12s;}
+  .rung:hover .cell{box-shadow:0 5px 16px rgba(30,60,40,.12);}
+  .cell.right{background:var(--emerald);border-color:var(--emerald);}
+  .cell .tag{font-family:'Playfair Display',serif;font-size:.66rem;font-weight:700;color:var(--gold);letter-spacing:.05em;margin-bottom:3px;}
+  .cell.right .tag{color:var(--gold-lt);}
+  .cell .lbl{font-family:'Playfair Display',serif;font-weight:600;font-size:1.02rem;color:var(--emerald-dk);line-height:1.2;}
+  .cell.right .lbl{color:#fff;}
+  .cell .arab{font-family:'Amiri',serif;direction:rtl;font-size:1.5rem;color:#fff;line-height:1.5;}
+  .eqcol{display:flex;align-items:center;justify-content:center;}
+  .eq{width:30px;height:30px;border-radius:50%;background:var(--gold-soft);border:1px solid rgba(184,137,42,.35);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:600;}
 
-  .between{display:flex;gap:18px;align-items:stretch;}
-  .between .rail{flex-shrink:0;width:44px;display:flex;justify-content:center;}
-  .between .rail .line{width:2px;background:linear-gradient(var(--gold),var(--gold-lt));min-height:100%;}
-  .conn{flex:1;margin:-2px 0 6px;}
-  .conn .pill{display:inline-flex;align-items:center;gap:.45rem;background:var(--gold-soft);color:#7a5a18;border:1px solid rgba(184,137,42,.3);border-radius:999px;padding:.3rem .9rem;font-size:.86rem;font-weight:500;}
-  .conn .pill .lbl{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);}
-  .conn .detail{margin-top:7px;font-size:.87rem;color:var(--ink-3);line-height:1.55;}
-  .conn .detail b{color:var(--ink-2);font-weight:600;}
+  .between{display:flex;justify-content:center;padding:9px 0;}
+  .between .pill{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold-soft);color:#7a5a18;border:1px solid rgba(184,137,42,.3);border-radius:999px;padding:.32rem .95rem;font-size:.88rem;font-weight:500;box-shadow:0 2px 8px rgba(184,137,42,.12);cursor:pointer;transition:background .15s;}
+  .between .pill:hover{background:#ecdcb0;}
+  .between .pill .k{width:22px;height:22px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:.72rem;flex-shrink:0;}
+  .between .pill .chev{font-size:.7rem;color:var(--gold);transition:transform .2s;}
+  .between .pill.open .chev{transform:rotate(180deg);}
 
-  .footnote{margin-top:30px;text-align:center;font-size:.85rem;color:var(--ink-3);font-style:italic;line-height:1.6;}
+  .topnode .cell.right{box-shadow:0 4px 18px rgba(31,92,62,.22);}
+  .rootnode .cell{background:var(--warm);border-color:rgba(184,137,42,.4);}
+  .rootnode .cell.right{background:var(--emerald);}
+
+  /* dalil reveal */
+  .reveal{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .reveal.open{max-height:1400px;}
+  .dalil{background:var(--emerald-soft);border-left:3px solid var(--emerald);border-radius:0 12px 12px 0;padding:12px 15px;margin:8px 0;}
+  .dalil .arab{font-family:'Amiri',serif;direction:rtl;text-align:right;font-size:1.4rem;line-height:1.95;color:var(--emerald-dk);margin-bottom:7px;}
+  .dalil .trj{font-size:.9rem;color:var(--ink-2);font-style:italic;line-height:1.55;}
+  .dalil .ref{display:block;margin-top:6px;font-size:.8rem;color:var(--emerald);font-weight:600;}
+  .dalil .dlabel{font-family:'Playfair Display',serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-weight:600;}
+  .dalil.sokong{background:#f6f1e6;border-left-color:var(--gold);}
+  .dalil.sokong .arab{color:#5e4a16;font-size:1.25rem;}
+  .dalil.sokong .ref{color:var(--gold);}
+  .reveal-rung{padding:0 2px;}
+
+  .footnote{margin-top:28px;text-align:center;font-size:.85rem;color:var(--ink-3);font-style:italic;line-height:1.6;}
   .footnote a{color:var(--emerald);}
 
   footer{border-top:1px solid var(--rule);padding:24px 20px;text-align:center;font-size:.82rem;color:var(--ink-3);}
   footer a{color:var(--emerald);text-decoration:none;}
   footer a:hover{text-decoration:underline;}
+
+  @media(max-width:520px){
+    .wrap{padding:24px 12px 60px;}
+    .rung,.colhead{grid-template-columns:1fr 26px 1fr;gap:7px;}
+    .cell{padding:11px 9px;border-radius:11px;}
+    .cell .lbl{font-size:.86rem;}
+    .cell .arab{font-size:1.2rem;}
+    .eq{width:24px;height:24px;font-size:.85rem;}
+    .between .pill{font-size:.8rem;padding:.28rem .7rem;}
+    .dalil .arab{font-size:1.2rem;}
+    .dalil.sokong .arab{font-size:1.08rem;}
+  }
 </style>
 </head>
 <body>
@@ -93,114 +132,195 @@
 <div class="hero">
   <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
   <h1>Kehidupan yang Baik</h1>
-  <p>Setiap manusia mahukan kehidupan yang baik. Inilah jalannya — dan dari mana ia datang.</p>
+  <p>Setiap manusia mahukan kehidupan yang baik. Inilah hakikatnya — dan dari mana ia datang.</p>
 </div>
 
 <div class="wrap">
 
-  <div class="matlamat">
+  <!-- definisi kehidupan baik -->
+  <div class="definisi">
+    <div class="eyebrow">Definisi</div>
+    <h2>Apakah Kehidupan yang Baik?</h2>
+    <p class="takrif">Kehidupan yang baik ialah kehidupan yang dikelilingi oleh orang-orang yang baik.</p>
+    <div class="dalil-def">
+      <div class="arab">وَمَن يُطِعِ اللَّهَ وَالرَّسُولَ فَأُولَٰئِكَ مَعَ الَّذِينَ أَنْعَمَ اللَّهُ عَلَيْهِم مِّنَ النَّبِيِّينَ وَالصِّدِّيقِينَ وَالشُّهَدَاءِ وَالصَّالِحِينَ ۚ وَحَسُنَ أُولَٰئِكَ رَفِيقًا</div>
+      <div class="trj">"Dan sesiapa yang taat kepada Allah dan Rasul, mereka itu akan bersama orang-orang yang Allah kurniakan nikmat ke atas mereka — dari kalangan para Nabi, para Siddiqin, para Syuhada, dan orang-orang soleh. Dan amatlah baiknya mereka itu sebagai teman."</div>
+      <span class="ref">An-Nisa 4:69</span>
+    </div>
+  </div>
+
+  <!-- matlamat crown (tappable) -->
+  <div class="matlamat" data-toggle="m">
     <div class="eyebrow">Matlamat Hidup Manusia</div>
     <h2>Keredhaan Allah</h2>
     <p>Matlamat hidup manusia ialah mendapatkan keredhaan Allah. Keredhaan Allah ada dua.</p>
     <div class="branches">
       <div class="branch">
         <h3>Redha di Dunia</h3>
-        <p>Khusus untuk umat Rasulullah ﷺ — diberikan di dunia kepada Muhajirin, Ansar, dan mereka yang mengikut jejak langkah serta pengorbanan Muhajirin dan Ansar.</p>
+        <p>Diberikan di dunia kepada Muhajirin, Ansar, dan mereka yang mengikut jejak serta pengorbanan mereka.</p>
       </div>
       <div class="branch">
         <h3>Redha di Akhirat</h3>
-        <p>Keredhaan yang satu lagi — hanya diberikan kepada penduduk syurga.</p>
+        <p>Hanya diberikan kepada penduduk syurga.</p>
       </div>
     </div>
   </div>
-
-  <p class="leadin">Baca dari atas ke bawah — apa yang anda mahu, dan dari mana ia lahir.</p>
-
-  <div class="ladder">
-
-    <div class="step">
-      <div class="rail">
-        <div class="dot"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-8.5A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6.5C19 16.65 12 21 12 21z"/></svg></div>
-        <div class="line"></div>
-      </div>
-      <div class="node top">
-        <div class="role">Apa yang anda mahu · Natijah</div>
-        <h2>Kehidupan yang Baik</h2>
-        <div class="sub">Kehidupan yang baik ialah natijah amal yang baik — iaitu kehidupan di syurga.</div>
-      </div>
+  <div class="reveal" id="m">
+    <div class="dalil">
+      <div class="dlabel">Redha di Dunia</div>
+      <div class="arab">وَالسَّابِقُونَ الْأَوَّلُونَ مِنَ الْمُهَاجِرِينَ وَالْأَنْصَارِ وَالَّذِينَ اتَّبَعُوهُم بِإِحْسَانٍ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ وَأَعَدَّ لَهُمْ جَنَّاتٍ تَجْرِي تَحْتَهَا الْأَنْهَارُ خَالِدِينَ فِيهَا أَبَدًا ۚ ذَٰلِكَ الْفَوْزُ الْعَظِيمُ</div>
+      <div class="trj">"Dan orang-orang yang terdahulu lagi pertama (memeluk Islam) dari kalangan Muhajirin dan Ansar, serta orang-orang yang mengikut mereka dengan kebaikan (ihsan) — Allah redha kepada mereka dan mereka redha kepada-Nya, dan Dia menyediakan untuk mereka syurga yang mengalir di bawahnya sungai-sungai, kekal di dalamnya selama-lamanya. Itulah kemenangan yang besar."</div>
+      <span class="ref">At-Taubah 9:100</span>
     </div>
-
-    <div class="between">
-      <div class="rail"><div class="line"></div></div>
-      <div class="conn">
-        <span class="pill"><span class="lbl">Antara</span>Nusrah Allah</span>
-        <div class="detail">Antara <b>amal Rasulullah ﷺ</b> dan <b>kehidupan yang baik</b> — adanya Nusrah (pertolongan) Allah.</div>
-      </div>
+    <div class="dalil">
+      <div class="dlabel">Redha di Akhirat</div>
+      <div class="arab">إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ أُولَٰئِكَ هُمْ خَيْرُ الْبَرِيَّةِ ۝ جَزَاؤُهُمْ عِندَ رَبِّهِمْ جَنَّاتُ عَدْنٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ خَالِدِينَ فِيهَا أَبَدًا ۖ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِيَ رَبَّهُ</div>
+      <div class="trj">"Sesungguhnya orang yang beriman dan beramal soleh, merekalah sebaik-baik makhluk. Balasan mereka di sisi Tuhan mereka ialah syurga Adn yang mengalir di bawahnya sungai-sungai, kekal selama-lamanya. Allah redha kepada mereka dan mereka redha kepada-Nya. Itu untuk orang yang takut kepada Tuhannya."</div>
+      <span class="ref">Al-Bayyinah 98:7–8</span>
     </div>
+  </div>
 
-    <div class="step">
-      <div class="rail"><div class="dot"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div class="line"></div></div>
-      <div class="node">
-        <div class="role">Amal yang baik</div>
-        <h2>Amal Rasulullah ﷺ</h2>
-        <div class="sub">Amal yang baik ialah amal Rasulullah ﷺ. Amal yang baik lahir daripada hati yang baik.</div>
-      </div>
+  <p class="leadin">Baca dari atas ke bawah — kiri ialah sifat yang baik, kanan ialah hakikatnya.</p>
+  <p class="tap-hint">▸ Ketik mana-mana pasangan atau penghubung untuk lihat dalilnya</p>
+
+  <div class="colhead">
+    <span>Yang Baik</span><span></span><span>Hakikatnya</span>
+  </div>
+
+  <!-- 1 = A -->
+  <div class="rung topnode" data-toggle="r1">
+    <div class="cell left"><span class="tag">1</span><div class="lbl">Kehidupan yang Baik</div></div>
+    <div class="eqcol"><div class="eq">=</div></div>
+    <div class="cell right"><span class="tag">A</span><div class="lbl">Kehidupan di Syurga</div></div>
+  </div>
+  <div class="reveal reveal-rung" id="r1">
+    <div class="dalil">
+      <div class="arab">وَإِنَّ الدَّارَ الْآخِرَةَ لَهِيَ الْحَيَوَانُ لَوْ كَانُوا يَعْلَمُونَ</div>
+      <div class="trj">"Dan sesungguhnya negeri akhirat itulah kehidupan yang sebenar, kalaulah mereka mengetahui."</div>
+      <span class="ref">Al-‘Ankabut 29:64</span>
     </div>
+  </div>
 
-    <div class="between">
-      <div class="rail"><div class="line"></div></div>
-      <div class="conn">
-        <span class="pill"><span class="lbl">Antara</span>Kefahaman Agama</span>
-        <div class="detail">Antara <b>hati yang mencintai Allah</b> dan <b>amal Rasulullah ﷺ</b> — adanya kefahaman agama.</div>
-      </div>
+  <div class="between"><span class="pill" data-toggle="w"><span class="k">W</span>Nusrah Allah<span class="chev">▾</span></span></div>
+  <div class="reveal" id="w">
+    <div class="dalil">
+      <div class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا إِن تَنصُرُوا اللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ</div>
+      <div class="trj">"Wahai orang yang beriman, jika kamu menolong (agama) Allah, nescaya Dia menolong kamu dan meneguhkan kedudukan kamu."</div>
+      <span class="ref">Muhammad 47:7</span>
     </div>
-
-    <div class="step">
-      <div class="rail"><div class="dot"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-8.5A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6.5C19 16.65 12 21 12 21z"/></svg></div><div class="line"></div></div>
-      <div class="node">
-        <div class="role">Hati yang baik</div>
-        <h2>Hati yang Mencintai Allah</h2>
-        <div class="sub">Hati yang baik ialah hati yang mencintai Allah. Hati yang baik lahir daripada percakapan yang baik.</div>
-      </div>
+    <div class="dalil sokong">
+      <div class="arab">مَنْ عَمِلَ صَالِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَلَنُحْيِيَنَّهُ حَيَاةً طَيِّبَةً</div>
+      <div class="trj">"Sesiapa beramal soleh, lelaki atau perempuan, sedang dia beriman, pasti Kami hidupkan dia dengan kehidupan yang baik." (A–B)</div>
+      <span class="ref">An-Nahl 16:97</span>
     </div>
+  </div>
 
-    <div class="between">
-      <div class="rail"><div class="line"></div></div>
-      <div class="conn">
-        <span class="pill"><span class="lbl">Antara</span>Mujahadah &amp; Sabar</span>
-        <div class="detail">
-          Antara <b>dakwah</b> dan <b>hati yang mencintai Allah</b> — itulah mujahadah dan sabar.<br>
-          Di dalam <b>mujahadah</b> ada pengorbanan harta dan diri. Di dalam <b>sabar</b> ada istiqamah.
-        </div>
-      </div>
+  <!-- 2 = B -->
+  <div class="rung" data-toggle="r2">
+    <div class="cell left"><span class="tag">2</span><div class="lbl">Amal yang Baik</div></div>
+    <div class="eqcol"><div class="eq">=</div></div>
+    <div class="cell right"><span class="tag">B</span><div class="lbl">Amal Rasulullah ﷺ</div></div>
+  </div>
+  <div class="reveal reveal-rung" id="r2">
+    <div class="dalil">
+      <div class="arab">لَّقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ</div>
+      <div class="trj">"Sesungguhnya pada diri Rasulullah itu ada contoh teladan yang baik bagi kamu."</div>
+      <span class="ref">Al-Ahzab 33:21</span>
     </div>
+  </div>
 
-    <div class="step">
-      <div class="rail"><div class="dot"><svg viewBox="0 0 24 24"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div><div class="line"></div></div>
-      <div class="node">
-        <div class="role">Percakapan yang paling baik</div>
-        <h2>Dakwah</h2>
-        <div class="sub">Seruan mengajak manusia kepada Allah — percakapan yang paling baik. Percakapan yang baik mestilah di dalam kerangka kalimah yang baik.</div>
-      </div>
+  <div class="between"><span class="pill" data-toggle="x"><span class="k">X</span>Kefahaman Agama<span class="chev">▾</span></span></div>
+  <div class="reveal" id="x">
+    <div class="dalil">
+      <div class="arab">مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ</div>
+      <div class="trj">"Sesiapa yang Allah kehendaki kebaikan baginya, Dia memberinya kefahaman dalam agama." (Hadith — Bukhari &amp; Muslim)</div>
+      <span class="ref">Hadith</span>
     </div>
-
-    <div class="between">
-      <div class="rail"><div class="line"></div></div>
-      <div class="conn">
-        <span class="pill"><span class="lbl">Antara</span>Al-Quran</span>
-        <div class="detail">Antara kalimah <b>La ilaha illallah</b> dan <b>dakwah</b> — itulah Al-Quran.</div>
-      </div>
+    <div class="dalil sokong">
+      <div class="arab">أَلَا وَإِنَّ فِي الْجَسَدِ مُضْغَةً، إِذَا صَلَحَتْ صَلَحَ الْجَسَدُ كُلُّهُ، وَإِذَا فَسَدَتْ فَسَدَ الْجَسَدُ كُلُّهُ، أَلَا وَهِيَ الْقَلْبُ</div>
+      <div class="trj">"Ketahuilah, dalam jasad ada seketul daging — apabila ia baik, baiklah seluruh jasad; apabila ia rosak, rosaklah seluruh jasad. Ketahuilah, ia adalah hati." (B–C, Hadith)</div>
+      <span class="ref">Hadith — Bukhari &amp; Muslim</span>
     </div>
+  </div>
 
-    <div class="step">
-      <div class="rail"><div class="dot root"><svg viewBox="0 0 24 24"><path d="M12 2v20M5 9l7-7 7 7"/></svg></div></div>
-      <div class="node root">
-        <div class="role">Akar · Asas segala kebaikan</div>
-        <div class="arab">لَا إِلَٰهَ إِلَّا اللَّه</div>
-        <div class="sub">Kalimah yang baik ialah La ilaha illallah. Setiap percakapan yang baik mesti berada dalam kerangka kalimah ini.</div>
-      </div>
+  <!-- 3 = C -->
+  <div class="rung" data-toggle="r3">
+    <div class="cell left"><span class="tag">3</span><div class="lbl">Hati yang Baik</div></div>
+    <div class="eqcol"><div class="eq">=</div></div>
+    <div class="cell right"><span class="tag">C</span><div class="lbl">Hati yang Mencintai Allah</div></div>
+  </div>
+  <div class="reveal reveal-rung" id="r3">
+    <div class="dalil">
+      <div class="arab">وَالَّذِينَ آمَنُوا أَشَدُّ حُبًّا لِّلَّهِ</div>
+      <div class="trj">"Dan orang-orang yang beriman lebih mendalam cinta mereka kepada Allah."</div>
+      <span class="ref">Al-Baqarah 2:165</span>
     </div>
+  </div>
 
+  <div class="between"><span class="pill" data-toggle="y"><span class="k">Y</span>Mujahadah &amp; Sabar<span class="chev">▾</span></span></div>
+  <div class="reveal" id="y">
+    <div class="dalil">
+      <div class="arab">وَلَنَبْلُوَنَّكُمْ حَتَّىٰ نَعْلَمَ الْمُجَاهِدِينَ مِنكُمْ وَالصَّابِرِينَ وَنَبْلُوَ أَخْبَارَكُمْ</div>
+      <div class="trj">"Dan sesungguhnya Kami akan menguji kamu sehingga Kami mengetahui orang yang berjihad dan yang bersabar di antara kamu, dan Kami menguji hal-hal kamu."</div>
+      <span class="ref">Muhammad 47:31</span>
+    </div>
+    <div class="dalil sokong">
+      <div class="arab">لَا يَسْتَقِيمُ إِيمَانُ عَبْدٍ حَتَّى يَسْتَقِيمَ قَلْبُهُ، وَلَا يَسْتَقِيمُ قَلْبُهُ حَتَّى يَسْتَقِيمَ لِسَانُهُ</div>
+      <div class="trj">"Tidak lurus iman seseorang hamba sehingga lurus hatinya, dan tidak lurus hatinya sehingga lurus lidahnya." (C–D, Hadith — Ahmad)</div>
+      <span class="ref">Hadith — Ahmad</span>
+    </div>
+    <div class="dalil sokong">
+      <div class="arab">قُلْ هَٰذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ</div>
+      <div class="trj">"Katakanlah: Inilah jalanku; aku menyeru kepada Allah." (4–3)</div>
+      <span class="ref">Yusuf 12:108</span>
+    </div>
+  </div>
+
+  <!-- 4 = D -->
+  <div class="rung" data-toggle="r4">
+    <div class="cell left"><span class="tag">4</span><div class="lbl">Percakapan yang Baik</div></div>
+    <div class="eqcol"><div class="eq">=</div></div>
+    <div class="cell right"><span class="tag">D</span><div class="lbl">Dakwah</div></div>
+  </div>
+  <div class="reveal reveal-rung" id="r4">
+    <div class="dalil">
+      <div class="arab">وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا وَقَالَ إِنَّنِي مِنَ الْمُسْلِمِينَ</div>
+      <div class="trj">"Dan siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah, beramal soleh, dan berkata: Sesungguhnya aku dari kalangan orang Islam."</div>
+      <span class="ref">Fussilat 41:33</span>
+    </div>
+  </div>
+
+  <div class="between"><span class="pill" data-toggle="z"><span class="k">Z</span>Al-Quran<span class="chev">▾</span></span></div>
+  <div class="reveal" id="z">
+    <div class="dalil">
+      <div class="arab">وَنَزَّلْنَا عَلَيْكَ الْكِتَابَ تِبْيَانًا لِّكُلِّ شَيْءٍ</div>
+      <div class="trj">"Dan Kami turunkan kepadamu Kitab (Al-Quran) sebagai penjelasan bagi segala sesuatu."</div>
+      <span class="ref">An-Nahl 16:89</span>
+    </div>
+    <div class="dalil sokong">
+      <div class="arab">خَيْرُ مَا قُلْتُ أَنَا وَالنَّبِيُّونَ مِنْ قَبْلِي: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ</div>
+      <div class="trj">"Sebaik-baik yang aku dan para nabi sebelumku ucapkan ialah: La ilaha illallah, satu-satunya, tiada sekutu bagi-Nya." (D–E, Hadith)</div>
+      <span class="ref">Hadith</span>
+    </div>
+    <div class="dalil sokong">
+      <div class="arab">وَمَا أَرْسَلْنَا مِن قَبْلِكَ مِن رَّسُولٍ إِلَّا نُوحِي إِلَيْهِ أَنَّهُ لَا إِلَٰهَ إِلَّا أَنَا فَاعْبُدُونِ</div>
+      <div class="trj">"Dan tidaklah Kami mengutus seorang rasul pun sebelummu melainkan Kami wahyukan kepadanya bahawa tiada tuhan selain Aku, maka sembahlah Aku." (5–4)</div>
+      <span class="ref">Al-Anbiya 21:25</span>
+    </div>
+  </div>
+
+  <!-- 5 = E -->
+  <div class="rung rootnode" data-toggle="r5">
+    <div class="cell left"><span class="tag">5</span><div class="lbl">Kalimah yang Baik</div></div>
+    <div class="eqcol"><div class="eq">=</div></div>
+    <div class="cell right"><span class="tag">E</span><div class="arab">لَا إِلَٰهَ إِلَّا اللَّه</div></div>
+  </div>
+  <div class="reveal reveal-rung" id="r5">
+    <div class="dalil">
+      <div class="arab">الْكَلِمَةُ الطَّيِّبَةُ: لَا إِلَٰهَ إِلَّا اللَّه</div>
+      <div class="trj">"Kalimah yang baik (kalimah tayyibah) ialah La ilaha illallah." (rujuk Ibrahim 14:24 — kalimah tayyibah)</div>
+      <span class="ref">Ibrahim 14:24</span>
+    </div>
   </div>
 
   <p class="footnote">
@@ -212,6 +332,20 @@
 <footer>
   <p>3asbab.org &nbsp;·&nbsp; <a href="index.html">Indeks</a> &nbsp;·&nbsp; <a href="peta.html">Peta Penuh</a></p>
 </footer>
+
+<script>
+  document.querySelectorAll('[data-toggle]').forEach(function(el){
+    el.addEventListener('click', function(){
+      var id = el.getAttribute('data-toggle');
+      var panel = document.getElementById(id);
+      if(!panel) return;
+      var isOpen = panel.classList.toggle('open');
+      var pill = el.querySelector('.pill') || el;
+      if(el.classList.contains('pill')) el.classList.toggle('open', isOpen);
+      var p2 = el.querySelector('.pill'); if(p2) p2.classList.toggle('open', isOpen);
+    });
+  });
+</script>
 
 </body>
 </html>
