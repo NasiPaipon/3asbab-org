@@ -54,7 +54,6 @@
       pointer-events: none;
     }
 
-    /* decorative Arabic calligraphy-inspired arc */
     .hero-arc {
       position: absolute;
       bottom: -2px; left: 0; right: 0;
@@ -81,9 +80,7 @@
       margin-bottom: 22px;
     }
 
-    .hero h1 span {
-      color: var(--gold-lt);
-    }
+    .hero h1 span { color: var(--gold-lt); }
 
     .hero-desc {
       max-width: 560px;
@@ -92,24 +89,6 @@
       font-size: 1.05rem;
       font-weight: 300;
     }
-
-    .hero-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--gold);
-      color: #fff;
-      font-family: 'Source Serif 4', serif;
-      font-size: 1rem;
-      font-weight: 500;
-      text-decoration: none;
-      padding: 14px 32px;
-      border-radius: 4px;
-      transition: background .2s, transform .15s;
-      letter-spacing: .01em;
-    }
-    .hero-cta:hover { background: #9a7220; transform: translateY(-2px); }
-    .hero-cta svg { flex-shrink: 0; }
 
     /* ── WRAPPER ── */
     .wrap {
@@ -157,11 +136,7 @@
     }
 
     /* ── BAB LIST ── */
-    .bab-list {
-      list-style: none;
-      display: grid;
-      gap: 0;
-    }
+    .bab-list { list-style: none; display: grid; gap: 0; }
 
     .bab-item {
       border-bottom: 1px solid var(--rule);
@@ -209,7 +184,6 @@
     }
     .bab-item:hover .bab-arrow { opacity: 1; transform: translateX(3px); }
 
-    /* group break label */
     .bab-group {
       padding: 22px 10px 6px;
       font-size: .72rem;
@@ -262,7 +236,7 @@
       line-height: 1.5;
     }
 
-    /* ── FEATURED PETA CARDS (atas, sebelum senarai bab) ── */
+    /* ── FEATURED PETA CARD ── */
     .peta-feature {
       display: flex;
       align-items: center;
@@ -325,27 +299,6 @@
       transition: transform .15s;
     }
     .peta-feature:hover .pf-arrow { transform: translateX(4px); }
-
-    /* secondary (Peta Penuh) — lighter, outline */
-    .peta-feature.secondary {
-      margin-top: 14px;
-      background: #fff;
-      color: var(--ink);
-      border: 1px solid var(--rule);
-      box-shadow: 0 2px 12px rgba(30,40,30,.05);
-    }
-    .peta-feature.secondary::before { display: none; }
-    .peta-feature.secondary:hover { box-shadow: 0 8px 26px rgba(30,60,40,.1); }
-    .peta-feature.secondary .pf-icon {
-      background: var(--warm);
-      border: 1px solid var(--rule);
-    }
-    .peta-feature.secondary .pf-icon svg { stroke: var(--emerald); }
-    .peta-feature.secondary .pf-eyebrow { color: var(--gold); }
-    .peta-feature.secondary h3 { color: var(--emerald); font-size: 1.2rem; }
-    .peta-feature.secondary p { color: var(--ink-3); }
-    .peta-feature.secondary .pf-arrow { color: var(--gold); }
-
     @media (max-width: 520px) {
       .peta-feature { flex-direction: column; text-align: center; gap: 14px; }
       .peta-feature .pf-arrow { display: none; }
@@ -364,9 +317,7 @@
 
     /* ── ANIMATIONS ── */
     @media (prefers-reduced-motion: no-preference) {
-      .bab-item {
-        animation: fadeUp .4s ease both;
-      }
+      .bab-item { animation: fadeUp .4s ease both; }
       .bab-item:nth-child(1)  { animation-delay: .03s }
       .bab-item:nth-child(2)  { animation-delay: .06s }
       .bab-item:nth-child(3)  { animation-delay: .09s }
@@ -420,19 +371,6 @@
         <div class="pf-eyebrow">Mulakan di Sini</div>
         <h3>Peta Ringkas — Jalan ke Kehidupan yang Baik</h3>
         <p>Satu rantaian mudah dibaca: dari kehidupan yang baik yang anda mahukan, turun ke akarnya — kalimah La ilaha illallah.</p>
-      </div>
-      <span class="pf-arrow">→</span>
-    </a>
-
-    <!-- Peta Penuh — kad kedua -->
-    <a href="peta.html" class="peta-feature secondary">
-      <div class="pf-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><line x1="9.5" y1="10.5" x2="6.3" y2="7.3"/><line x1="14.5" y1="10.5" x2="17.7" y2="7.3"/><line x1="9.5" y1="13.5" x2="6.3" y2="16.7"/><line x1="14.5" y1="13.5" x2="17.7" y2="16.7"/></svg>
-      </div>
-      <div class="pf-text">
-        <div class="pf-eyebrow">Peta Interaktif</div>
-        <h3>Peta Penuh K3A</h3>
-        <p>Keseluruhan kerangka — 71 simpul &amp; hubungannya. Ketik mana-mana simpul untuk membaca takrif &amp; dalilnya.</p>
       </div>
       <span class="pf-arrow">→</span>
     </a>
@@ -678,7 +616,7 @@
   </div><!-- /wrap -->
 
   <footer>
-    <p>3asbab.org &nbsp;·&nbsp; <a href="peta-ringkas.html">Peta Ringkas</a> &nbsp;·&nbsp; <a href="peta.html">Peta Penuh</a> &nbsp;·&nbsp; <a href="glossary.html">Glossary</a></p>
+    <p>3asbab.org &nbsp;·&nbsp; <a href="peta-ringkas.html">Peta Ringkas</a> &nbsp;·&nbsp; <a href="glossary.html">Glossary</a></p>
   </footer>
 
 </body>
