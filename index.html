@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="ms">
 <head>
   <meta charset="utf-8" />
@@ -240,9 +241,9 @@
     .peta-feature {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
       margin-top: 44px;
-      padding: 26px 26px;
+      padding: 28px 28px;
       border-radius: 12px;
       text-decoration: none;
       color: #fff;
@@ -269,7 +270,7 @@
       display: flex; align-items: center; justify-content: center;
     }
     .peta-feature .pf-icon svg { width: 30px; height: 30px; fill: none; stroke: var(--gold-lt); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-    .peta-feature .pf-text { flex: 1; }
+    .peta-feature .pf-text { flex: 1; min-width: 0; }
     .peta-feature .pf-eyebrow {
       font-family: 'Amiri', serif;
       font-size: .8rem;
@@ -283,14 +284,15 @@
       font-size: 1.4rem;
       font-weight: 700;
       color: #fff;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
       line-height: 1.15;
     }
-    .peta-feature p {
+    .peta-feature > .pf-text > p {
       font-size: .92rem;
       color: rgba(255,255,255,.85);
       font-weight: 300;
       line-height: 1.5;
+      margin-bottom: 4px;
     }
     .peta-feature .pf-arrow {
       flex-shrink: 0;
@@ -299,9 +301,48 @@
       transition: transform .15s;
     }
     .peta-feature:hover .pf-arrow { transform: translateX(4px); }
+
+    /* Rantaian preview di dalam kad */
+    .pf-chain {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 7px 8px;
+      margin: 14px 0 12px;
+    }
+    .pf-chip {
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .01em;
+      color: #fff;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 20px;
+      padding: 5px 12px;
+      white-space: nowrap;
+      line-height: 1.3;
+    }
+    .pf-chip-gold {
+      color: #2a2210;
+      background: var(--gold-lt);
+      border-color: var(--gold-lt);
+      font-weight: 600;
+    }
+    .pf-chain-arrow {
+      color: rgba(255,255,255,.5);
+      font-size: .85rem;
+    }
+    .pf-cta {
+      font-size: .86rem !important;
+      color: var(--gold-lt) !important;
+      font-weight: 500 !important;
+      margin-top: 2px !important;
+    }
+
     @media (max-width: 520px) {
-      .peta-feature { flex-direction: column; text-align: center; gap: 14px; }
+      .peta-feature { flex-direction: column; text-align: center; gap: 16px; }
       .peta-feature .pf-arrow { display: none; }
+      .pf-chain { justify-content: center; }
     }
 
     /* ── FOOTER ── */
@@ -362,20 +403,35 @@
       </p>
     </div>
 
-    <!-- Peta Ringkas — kad utama -->
-    <a href="peta-ringkas.html" class="peta-feature">
-      <div class="pf-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-8.5A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6.5C19 16.65 12 21 12 21z"/></svg>
-      </div>
-      <div class="pf-text">
-        <div class="pf-eyebrow">Mulakan di Sini</div>
-        <h3>Peta Ringkas — Jalan ke Kehidupan yang Baik</h3>
-        <p>Satu rantaian mudah dibaca: dari kehidupan yang baik yang anda mahukan, turun ke akarnya — kalimah La ilaha illallah.</p>
-      </div>
-      <span class="pf-arrow">→</span>
-    </a>
+```
+<!-- Peta Ringkas — kad utama (dengan preview rantaian) -->
+<a href="peta-ringkas.html" class="peta-feature">
+  <div class="pf-icon">
+    <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-8.5A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6.5C19 16.65 12 21 12 21z"/></svg>
+  </div>
+  <div class="pf-text">
+    <div class="pf-eyebrow">Mulakan di Sini</div>
+    <h3>Peta Ringkas — Jalan ke Kehidupan yang Baik</h3>
+    <p>Nak kehidupan yang baik? Ini rantaian sebab-akibatnya, turun satu-satu sampai ke akar:</p>
+
+    <div class="pf-chain">
+      <span class="pf-chip">Kehidupan Baik</span>
+      <span class="pf-chain-arrow">↓</span>
+      <span class="pf-chip">Redha Allah</span>
+      <span class="pf-chain-arrow">↓</span>
+      <span class="pf-chip">Iman &amp; Amal Soleh</span>
+      <span class="pf-chain-arrow">↓</span>
+      <span class="pf-chip pf-chip-gold">La ilaha illallah</span>
+    </div>
+
+    <p class="pf-cta">Lihat rantaian penuh, langkah demi langkah →</p>
+  </div>
+  <span class="pf-arrow">→</span>
+</a>
+```
 
 <!-- ── BAB LIST ── -->
+
 <div class="section-heading">
   <h2>Senarai Bab</h2>
   <div class="rule-line"></div>
@@ -594,6 +650,7 @@
 </ul>
 
 <!-- ── UTILITY CARDS ── -->
+
 <div class="utility-row">
   <a href="glossary.html" class="u-card">
     <div class="u-icon">
@@ -611,7 +668,6 @@
     <p>Belum pernah baca? Mulakan dengan Bab 0 — Mukaddimah.</p>
   </a>
 </div>
-
 
   </div><!-- /wrap -->
 
