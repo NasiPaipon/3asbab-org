@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="ms">
 <head>
 <meta charset="utf-8" />
@@ -17,106 +18,130 @@
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   body{background:var(--cream);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.7;-webkit-text-size-adjust:100%;}
 
-  .topbar{border-bottom:1px solid var(--rule);background:rgba(250,247,242,.95);backdrop-filter:blur(8px);position:sticky;top:0;z-index:30;}
-  .topbar nav{display:flex;gap:1.2rem;align-items:center;max-width:760px;margin:0 auto;padding:.8rem 20px;font-size:.86rem;}
-  .topbar a{color:var(--ink-3);text-decoration:none;transition:color .15s;}
-  .topbar a:hover{color:var(--emerald);}
-  .topbar .brand{font-family:'Playfair Display',serif;font-weight:700;color:var(--emerald);margin-right:auto;font-size:1rem;}
-  .topbar .cur{color:var(--ink);font-weight:600;}
+.topbar{border-bottom:1px solid var(–rule);background:rgba(250,247,242,.95);backdrop-filter:blur(8px);position:sticky;top:0;z-index:30;}
+.topbar nav{display:flex;gap:1.2rem;align-items:center;max-width:760px;margin:0 auto;padding:.8rem 20px;font-size:.86rem;}
+.topbar a{color:var(–ink-3);text-decoration:none;transition:color .15s;}
+.topbar a:hover{color:var(–emerald);}
+.topbar .brand{font-family:‘Playfair Display’,serif;font-weight:700;color:var(–emerald);margin-right:auto;font-size:1rem;}
+.topbar .cur{color:var(–ink);font-weight:600;}
 
-  .hero{background:var(--emerald);text-align:center;padding:42px 24px 46px;position:relative;overflow:hidden;}
-  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 120%,rgba(184,137,42,.25) 0%,transparent 70%);pointer-events:none;}
-  .hero .bismillah{font-family:'Amiri',serif;color:var(--gold-lt);font-size:1.1rem;margin-bottom:12px;opacity:.92;}
-  .hero h1{font-family:'Playfair Display',serif;color:#fff;font-weight:700;font-size:clamp(1.7rem,5vw,2.5rem);line-height:1.18;margin-bottom:10px;}
-  .hero p{max-width:520px;margin:0 auto;color:rgba(255,255,255,.82);font-weight:300;font-size:.98rem;}
+.hero{background:var(–emerald);text-align:center;padding:42px 24px 46px;position:relative;overflow:hidden;}
+.hero::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 120%,rgba(184,137,42,.25) 0%,transparent 70%);pointer-events:none;}
+.hero .bismillah{font-family:‘Amiri’,serif;color:var(–gold-lt);font-size:1.1rem;margin-bottom:12px;opacity:.92;}
+.hero h1{font-family:‘Playfair Display’,serif;color:#fff;font-weight:700;font-size:clamp(1.7rem,5vw,2.5rem);line-height:1.18;margin-bottom:10px;}
+.hero p{max-width:520px;margin:0 auto;color:rgba(255,255,255,.82);font-weight:300;font-size:.98rem;}
 
-  .wrap{max-width:660px;margin:0 auto;padding:30px 16px 70px;}
+.wrap{max-width:660px;margin:0 auto;padding:30px 16px 70px;}
 
-  /* definisi kehidupan baik */
-  .definisi{background:#fff;border:1px solid rgba(184,137,42,.35);border-radius:16px;padding:22px 22px 20px;margin-bottom:18px;box-shadow:0 4px 18px rgba(184,137,42,.1);position:relative;}
-  .definisi .eyebrow{font-family:'Playfair Display',serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;}
-  .definisi h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.35rem;color:var(--emerald-dk);line-height:1.2;margin-bottom:8px;}
-  .definisi .takrif{font-size:.98rem;color:var(--ink-2);line-height:1.65;margin-bottom:14px;}
-  .definisi .dalil-def{background:var(--emerald-soft);border-left:3px solid var(--emerald);border-radius:0 12px 12px 0;padding:12px 15px;}
-  .definisi .dalil-def .arab{font-family:'Amiri',serif;direction:rtl;text-align:right;font-size:1.4rem;line-height:1.95;color:var(--emerald-dk);margin-bottom:7px;}
-  .definisi .dalil-def .trj{font-size:.9rem;color:var(--ink-2);font-style:italic;line-height:1.55;}
-  .definisi .dalil-def .ref{display:block;margin-top:6px;font-size:.8rem;color:var(--emerald);font-weight:600;}
-  @media(max-width:520px){
-    .definisi .dalil-def .arab{font-size:1.2rem;}
-  }
+/* definisi kehidupan baik */
+.definisi{background:#fff;border:1px solid rgba(184,137,42,.35);border-radius:16px;padding:22px 22px 20px;margin-bottom:18px;box-shadow:0 4px 18px rgba(184,137,42,.1);position:relative;}
+.definisi .eyebrow{font-family:‘Playfair Display’,serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(–gold);margin-bottom:7px;}
+.definisi h2{font-family:‘Playfair Display’,serif;font-weight:700;font-size:1.35rem;color:var(–emerald-dk);line-height:1.2;margin-bottom:8px;}
+.definisi .takrif{font-size:.98rem;color:var(–ink-2);line-height:1.65;margin-bottom:14px;}
+.definisi .dalil-def{background:var(–emerald-soft);border-left:3px solid var(–emerald);border-radius:0 12px 12px 0;padding:12px 15px;}
+.definisi .dalil-def .arab{font-family:‘Amiri’,serif;direction:rtl;text-align:right;font-size:1.4rem;line-height:1.95;color:var(–emerald-dk);margin-bottom:7px;}
+.definisi .dalil-def .trj{font-size:.9rem;color:var(–ink-2);font-style:italic;line-height:1.55;}
+.definisi .dalil-def .ref{display:block;margin-top:6px;font-size:.8rem;color:var(–emerald);font-weight:600;}
+@media(max-width:520px){
+.definisi .dalil-def .arab{font-size:1.2rem;}
+}
 
-  .matlamat{border-radius:16px;background:linear-gradient(135deg,var(--emerald) 0%,var(--emerald-lt) 100%);padding:22px 22px 22px;color:#fff;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(31,92,62,.2);margin-bottom:8px;cursor:pointer;}
-  .matlamat::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 90% 25%,rgba(232,201,122,.2) 0%,transparent 70%);pointer-events:none;}
-  .matlamat .eyebrow{font-family:'Amiri',serif;color:var(--gold-lt);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;}
-  .matlamat h2{font-family:'Playfair Display',serif;font-weight:700;font-size:1.4rem;margin-bottom:5px;line-height:1.15;}
-  .matlamat>p{color:rgba(255,255,255,.85);font-weight:300;font-size:.9rem;margin-bottom:14px;}
-  .branches{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-  @media(max-width:520px){.branches{grid-template-columns:1fr;}}
-  .branch{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:12px 13px;}
-  .branch h3{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:600;color:var(--gold-lt);margin-bottom:4px;}
-  .branch p{font-size:.82rem;color:rgba(255,255,255,.88);font-weight:300;line-height:1.5;}
+.matlamat{border-radius:16px;background:linear-gradient(135deg,var(–emerald) 0%,var(–emerald-lt) 100%);padding:22px 22px 20px;color:#fff;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(31,92,62,.2);margin-bottom:8px;cursor:pointer;transition:box-shadow .15s,transform .12s;}
+.matlamat:hover{box-shadow:0 10px 36px rgba(31,92,62,.28);}
+.matlamat::before{content:’’;position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 90% 25%,rgba(232,201,122,.2) 0%,transparent 70%);pointer-events:none;}
+.matlamat .eyebrow-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:5px;}
+.matlamat .eyebrow{font-family:‘Amiri’,serif;color:var(–gold-lt);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;}
+.matlamat h2{font-family:‘Playfair Display’,serif;font-weight:700;font-size:1.4rem;margin-bottom:5px;line-height:1.15;}
+.matlamat>p{color:rgba(255,255,255,.85);font-weight:300;font-size:.9rem;margin-bottom:14px;}
+.branches{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+@media(max-width:520px){.branches{grid-template-columns:1fr;}}
+.branch{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:12px 13px;}
+.branch h3{font-family:‘Playfair Display’,serif;font-size:.95rem;font-weight:600;color:var(–gold-lt);margin-bottom:4px;}
+.branch p{font-size:.82rem;color:rgba(255,255,255,.88);font-weight:300;line-height:1.5;}
 
-  .leadin{text-align:center;color:var(--ink-3);font-size:.88rem;font-style:italic;margin:18px 0 6px;}
-  .tap-hint{text-align:center;color:var(--gold);font-size:.78rem;letter-spacing:.04em;margin-bottom:14px;}
+/* penunjuk “boleh diklik” seragam — dipakai pada .matlamat dan setiap .rung */
+.tap-indicator{
+display:inline-flex;align-items:center;gap:5px;
+font-family:‘Amiri’,serif;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;
+color:var(–gold-lt);flex-shrink:0;
+}
+.tap-indicator .chev{font-size:.68rem;transition:transform .2s ease;display:inline-block;}
+.matlamat.open .tap-indicator .chev{transform:rotate(180deg);}
 
-  .colhead{display:grid;grid-template-columns:1fr 34px 1fr;gap:10px;align-items:center;margin-bottom:6px;}
-  .colhead span{font-family:'Playfair Display',serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-align:center;}
+.leadin{text-align:center;color:var(–ink-3);font-size:.88rem;font-style:italic;margin:18px 0 6px;}
+.tap-hint{text-align:center;color:var(–gold);font-size:.78rem;letter-spacing:.04em;margin-bottom:14px;}
 
-  .rung{display:grid;grid-template-columns:1fr 34px 1fr;gap:10px;align-items:stretch;cursor:pointer;}
-  .cell{background:#fff;border:1px solid var(--rule);border-radius:13px;padding:13px 14px;box-shadow:0 2px 10px rgba(30,40,30,.05);display:flex;flex-direction:column;justify-content:center;text-align:center;transition:box-shadow .15s,transform .12s;}
-  .rung:hover .cell{box-shadow:0 5px 16px rgba(30,60,40,.12);}
-  .cell.right{background:var(--emerald);border-color:var(--emerald);}
-  .cell .tag{font-family:'Playfair Display',serif;font-size:.66rem;font-weight:700;color:var(--gold);letter-spacing:.05em;margin-bottom:3px;}
-  .cell.right .tag{color:var(--gold-lt);}
-  .cell .lbl{font-family:'Playfair Display',serif;font-weight:600;font-size:1.02rem;color:var(--emerald-dk);line-height:1.2;}
-  .cell.right .lbl{color:#fff;}
-  .cell .arab{font-family:'Amiri',serif;direction:rtl;font-size:1.5rem;color:#fff;line-height:1.5;}
-  .eqcol{display:flex;align-items:center;justify-content:center;}
-  .eq{width:30px;height:30px;border-radius:50%;background:var(--gold-soft);border:1px solid rgba(184,137,42,.35);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:600;}
+.colhead{display:grid;grid-template-columns:1fr 34px 1fr;gap:10px;align-items:center;margin-bottom:6px;}
+.colhead span{font-family:‘Playfair Display’,serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(–gold);text-align:center;}
 
-  .between{display:flex;justify-content:center;padding:9px 0;}
-  .between .pill{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold-soft);color:#7a5a18;border:1px solid rgba(184,137,42,.3);border-radius:999px;padding:.32rem .95rem;font-size:.88rem;font-weight:500;box-shadow:0 2px 8px rgba(184,137,42,.12);cursor:pointer;transition:background .15s;}
-  .between .pill:hover{background:#ecdcb0;}
-  .between .pill .k{width:22px;height:22px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:.72rem;flex-shrink:0;}
-  .between .pill .chev{font-size:.7rem;color:var(--gold);transition:transform .2s;}
-  .between .pill.open .chev{transform:rotate(180deg);}
+.rung{display:grid;grid-template-columns:1fr 34px 1fr;gap:10px;align-items:stretch;cursor:pointer;padding:2px 2px 0;border-radius:16px;transition:background .15s;}
+.rung:hover{background:rgba(184,137,42,.06);}
+.cell{background:#fff;border:1px solid var(–rule);border-radius:13px;padding:13px 26px 13px 14px;box-shadow:0 2px 10px rgba(30,40,30,.05);display:flex;flex-direction:column;justify-content:center;text-align:center;transition:box-shadow .15s,transform .12s;position:relative;}
+.rung:hover .cell{box-shadow:0 5px 16px rgba(30,60,40,.12);}
+.cell.right{background:var(–emerald);border-color:var(–emerald);}
+.cell .tag{font-family:‘Playfair Display’,serif;font-size:.66rem;font-weight:700;color:var(–gold);letter-spacing:.05em;margin-bottom:3px;}
+.cell.right .tag{color:var(–gold-lt);}
+.cell .lbl{font-family:‘Playfair Display’,serif;font-weight:600;font-size:1.02rem;color:var(–emerald-dk);line-height:1.2;}
+.cell.right .lbl{color:#fff;}
+.cell .arab{font-family:‘Amiri’,serif;direction:rtl;font-size:1.5rem;color:#fff;line-height:1.5;}
 
-  .topnode .cell.right{box-shadow:0 4px 18px rgba(31,92,62,.22);}
-  .rootnode .cell{background:var(--warm);border-color:rgba(184,137,42,.4);}
-  .rootnode .cell.right{background:var(--emerald);}
+/* simbol arahan klik — terus dalam penjuru setiap kotak */
+.cell .cell-chev{
+position:absolute; top:9px; right:11px;
+font-size:1.05rem; color:var(–gold); opacity:.75;
+transition:transform .2s ease, opacity .15s ease;
+line-height:1;
+}
+.cell.right .cell-chev{ color:var(–gold-lt); opacity:.9; }
+.rung:hover .cell-chev{ opacity:1; }
+.rung.open .cell-chev{ transform:rotate(180deg); opacity:1; }
+.eqcol{display:flex;align-items:center;justify-content:center;}
+.eq{width:30px;height:30px;border-radius:50%;background:var(–gold-soft);border:1px solid rgba(184,137,42,.35);color:var(–gold);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:600;}
 
-  /* dalil reveal */
-  .reveal{max-height:0;overflow:hidden;transition:max-height .3s ease;}
-  .reveal.open{max-height:1400px;}
-  .dalil{background:var(--emerald-soft);border-left:3px solid var(--emerald);border-radius:0 12px 12px 0;padding:12px 15px;margin:8px 0;}
-  .dalil .arab{font-family:'Amiri',serif;direction:rtl;text-align:right;font-size:1.4rem;line-height:1.95;color:var(--emerald-dk);margin-bottom:7px;}
-  .dalil .trj{font-size:.9rem;color:var(--ink-2);font-style:italic;line-height:1.55;}
-  .dalil .ref{display:block;margin-top:6px;font-size:.8rem;color:var(--emerald);font-weight:600;}
-  .dalil .dlabel{font-family:'Playfair Display',serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-weight:600;}
-  .dalil.sokong{background:#f6f1e6;border-left-color:var(--gold);}
-  .dalil.sokong .arab{color:#5e4a16;font-size:1.25rem;}
-  .dalil.sokong .ref{color:var(--gold);}
-  .reveal-rung{padding:0 2px;}
+.between{display:flex;justify-content:center;padding:9px 0;}
+.between .pill{display:inline-flex;align-items:center;gap:.5rem;background:var(–gold-soft);color:#7a5a18;border:1px solid rgba(184,137,42,.3);border-radius:999px;padding:.32rem .95rem;font-size:.88rem;font-weight:500;box-shadow:0 2px 8px rgba(184,137,42,.12);cursor:pointer;transition:background .15s;}
+.between .pill:hover{background:#ecdcb0;}
+.between .pill .k{width:22px;height:22px;border-radius:50%;background:var(–gold);color:#fff;display:flex;align-items:center;justify-content:center;font-family:‘Playfair Display’,serif;font-weight:700;font-size:.72rem;flex-shrink:0;}
+.between .pill .chev{font-size:.7rem;color:var(–gold);transition:transform .2s;}
+.between .pill.open .chev{transform:rotate(180deg);}
 
-  .footnote{margin-top:28px;text-align:center;font-size:.85rem;color:var(--ink-3);font-style:italic;line-height:1.6;}
-  .footnote a{color:var(--emerald);}
+.topnode .cell.right{box-shadow:0 4px 18px rgba(31,92,62,.22);}
+.rootnode .cell{background:var(–warm);border-color:rgba(184,137,42,.4);}
+.rootnode .cell.right{background:var(–emerald);}
 
-  footer{border-top:1px solid var(--rule);padding:24px 20px;text-align:center;font-size:.82rem;color:var(--ink-3);}
-  footer a{color:var(--emerald);text-decoration:none;}
-  footer a:hover{text-decoration:underline;}
+/* dalil reveal */
+.reveal{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.reveal.open{max-height:1400px;}
+.dalil{background:var(–emerald-soft);border-left:3px solid var(–emerald);border-radius:0 12px 12px 0;padding:12px 15px;margin:8px 0;}
+.dalil .arab{font-family:‘Amiri’,serif;direction:rtl;text-align:right;font-size:1.4rem;line-height:1.95;color:var(–emerald-dk);margin-bottom:7px;}
+.dalil .trj{font-size:.9rem;color:var(–ink-2);font-style:italic;line-height:1.55;}
+.dalil .ref{display:block;margin-top:6px;font-size:.8rem;color:var(–emerald);font-weight:600;}
+.dalil .dlabel{font-family:‘Playfair Display’,serif;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(–gold);margin-bottom:6px;font-weight:600;}
+.dalil.sokong{background:#f6f1e6;border-left-color:var(–gold);}
+.dalil.sokong .arab{color:#5e4a16;font-size:1.25rem;}
+.dalil.sokong .ref{color:var(–gold);}
+.reveal-rung{padding:0 2px;}
 
-  @media(max-width:520px){
-    .wrap{padding:24px 12px 60px;}
-    .rung,.colhead{grid-template-columns:1fr 26px 1fr;gap:7px;}
-    .cell{padding:11px 9px;border-radius:11px;}
-    .cell .lbl{font-size:.86rem;}
-    .cell .arab{font-size:1.2rem;}
-    .eq{width:24px;height:24px;font-size:.85rem;}
-    .between .pill{font-size:.8rem;padding:.28rem .7rem;}
-    .dalil .arab{font-size:1.2rem;}
-    .dalil.sokong .arab{font-size:1.08rem;}
-  }
+.footnote{margin-top:28px;text-align:center;font-size:.85rem;color:var(–ink-3);font-style:italic;line-height:1.6;}
+.footnote a{color:var(–emerald);}
+
+footer{border-top:1px solid var(–rule);padding:24px 20px;text-align:center;font-size:.82rem;color:var(–ink-3);}
+footer a{color:var(–emerald);text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+
+@media(max-width:520px){
+.wrap{padding:24px 12px 60px;}
+.rung,.colhead{grid-template-columns:1fr 26px 1fr;gap:7px;}
+.cell{padding:11px 9px;border-radius:11px;}
+.cell .lbl{font-size:.86rem;}
+.cell .arab{font-size:1.2rem;}
+.eq{width:24px;height:24px;font-size:.85rem;}
+.between .pill{font-size:.8rem;padding:.28rem .7rem;}
+.dalil .arab{font-size:1.2rem;}
+.dalil.sokong .arab{font-size:1.08rem;}
+}
 </style>
+
 </head>
 <body>
 
@@ -138,6 +163,7 @@
 <div class="wrap">
 
   <!-- definisi kehidupan baik -->
+
   <div class="definisi">
     <div class="eyebrow">Definisi</div>
     <h2>Apakah Kehidupan yang Baik?</h2>
@@ -150,8 +176,12 @@
   </div>
 
   <!-- matlamat crown (tappable) -->
+
   <div class="matlamat" data-toggle="m">
-    <div class="eyebrow">Matlamat Hidup Manusia</div>
+    <div class="eyebrow-row">
+      <div class="eyebrow">Matlamat Hidup Manusia</div>
+      <span class="tap-indicator">Lihat dalil <span class="chev">▾</span></span>
+    </div>
     <h2>Keredhaan Allah</h2>
     <p>Matlamat hidup manusia ialah mendapatkan keredhaan Allah. Keredhaan Allah ada dua.</p>
     <div class="branches">
@@ -188,10 +218,11 @@
   </div>
 
   <!-- 1 = A -->
+
   <div class="rung topnode" data-toggle="r1">
-    <div class="cell left"><span class="tag">1</span><div class="lbl">Kehidupan yang Baik</div></div>
+    <div class="cell left"><span class="tag">1</span><div class="lbl">Kehidupan yang Baik</div><span class="cell-chev">▾</span></div>
     <div class="eqcol"><div class="eq">=</div></div>
-    <div class="cell right"><span class="tag">A</span><div class="lbl">Kehidupan di Syurga</div></div>
+    <div class="cell right"><span class="tag">A</span><div class="lbl">Kehidupan di Syurga</div><span class="cell-chev">▾</span></div>
   </div>
   <div class="reveal reveal-rung" id="r1">
     <div class="dalil">
@@ -216,10 +247,11 @@
   </div>
 
   <!-- 2 = B -->
+
   <div class="rung" data-toggle="r2">
-    <div class="cell left"><span class="tag">2</span><div class="lbl">Amal yang Baik</div></div>
+    <div class="cell left"><span class="tag">2</span><div class="lbl">Amal yang Baik</div><span class="cell-chev">▾</span></div>
     <div class="eqcol"><div class="eq">=</div></div>
-    <div class="cell right"><span class="tag">B</span><div class="lbl">Amal Rasulullah ﷺ</div></div>
+    <div class="cell right"><span class="tag">B</span><div class="lbl">Amal Rasulullah ﷺ</div><span class="cell-chev">▾</span></div>
   </div>
   <div class="reveal reveal-rung" id="r2">
     <div class="dalil">
@@ -244,10 +276,11 @@
   </div>
 
   <!-- 3 = C -->
+
   <div class="rung" data-toggle="r3">
-    <div class="cell left"><span class="tag">3</span><div class="lbl">Hati yang Baik</div></div>
+    <div class="cell left"><span class="tag">3</span><div class="lbl">Hati yang Baik</div><span class="cell-chev">▾</span></div>
     <div class="eqcol"><div class="eq">=</div></div>
-    <div class="cell right"><span class="tag">C</span><div class="lbl">Hati yang Mencintai Allah</div></div>
+    <div class="cell right"><span class="tag">C</span><div class="lbl">Hati yang Mencintai Allah</div><span class="cell-chev">▾</span></div>
   </div>
   <div class="reveal reveal-rung" id="r3">
     <div class="dalil">
@@ -277,10 +310,11 @@
   </div>
 
   <!-- 4 = D -->
+
   <div class="rung" data-toggle="r4">
-    <div class="cell left"><span class="tag">4</span><div class="lbl">Percakapan yang Baik</div></div>
+    <div class="cell left"><span class="tag">4</span><div class="lbl">Percakapan yang Baik</div><span class="cell-chev">▾</span></div>
     <div class="eqcol"><div class="eq">=</div></div>
-    <div class="cell right"><span class="tag">D</span><div class="lbl">Dakwah</div></div>
+    <div class="cell right"><span class="tag">D</span><div class="lbl">Dakwah</div><span class="cell-chev">▾</span></div>
   </div>
   <div class="reveal reveal-rung" id="r4">
     <div class="dalil">
@@ -310,10 +344,11 @@
   </div>
 
   <!-- 5 = E -->
+
   <div class="rung rootnode" data-toggle="r5">
-    <div class="cell left"><span class="tag">5</span><div class="lbl">Kalimah yang Baik</div></div>
+    <div class="cell left"><span class="tag">5</span><div class="lbl">Kalimah yang Baik</div><span class="cell-chev">▾</span></div>
     <div class="eqcol"><div class="eq">=</div></div>
-    <div class="cell right"><span class="tag">E</span><div class="arab">لَا إِلَٰهَ إِلَّا اللَّه</div></div>
+    <div class="cell right"><span class="tag">E</span><div class="arab">لَا إِلَٰهَ إِلَّا اللَّه</div><span class="cell-chev">▾</span></div>
   </div>
   <div class="reveal reveal-rung" id="r5">
     <div class="dalil">
@@ -340,9 +375,10 @@
       var panel = document.getElementById(id);
       if(!panel) return;
       var isOpen = panel.classList.toggle('open');
-      var pill = el.querySelector('.pill') || el;
       if(el.classList.contains('pill')) el.classList.toggle('open', isOpen);
       var p2 = el.querySelector('.pill'); if(p2) p2.classList.toggle('open', isOpen);
+      // toggle "open" state pada .rung / .matlamat sendiri untuk putar chevron
+      el.classList.toggle('open', isOpen);
     });
   });
 </script>
